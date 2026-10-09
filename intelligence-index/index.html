@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090c0b">
+<meta name="description" content="The Intelligence Index by Artificially Intelligent. Search free scholarly metadata, reference articles, books, and explore the public web.">
+<title>The Intelligence Index | Artificially Intelligent</title>
+<style>
+:root{--bg:#090c0b;--panel:#101512;--ink:#f2f0e9;--muted:#9b9d98;--mint:#b9ffde;--line:rgba(255,255,255,.15);--dim:#c4cdc5}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a,button{color:inherit}button{font:inherit;cursor:pointer}a{text-decoration:none}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:46px 46px;mask-image:linear-gradient(to bottom,#000,transparent 98%)}
+.header,.wrap,.footer{position:relative;z-index:1}
+.header{display:flex;justify-content:space-between;align-items:center;gap:16px;max-width:1500px;margin:auto;padding:19px 26px;border-bottom:1px solid var(--line);font-size:.69rem;text-transform:uppercase;letter-spacing:.17em}
+.header .brand{font-weight:750}.header .brand b{color:var(--mint)}.header a:hover{color:var(--mint)}
+.wrap{max-width:1500px;margin:auto;padding:44px 26px 70px}
+.micro{font-size:.7rem;letter-spacing:.23em;text-transform:uppercase;color:var(--mint);font-weight:600}
+h1{font-size:clamp(3rem,8vw,7.7rem);font-weight:620;line-height:.84;letter-spacing:-.069em;text-transform:uppercase;margin:23px 0}
+.intro{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:end;padding-bottom:33px;border-bottom:1px solid var(--line)}
+.lead{font:1.22rem/1.65 Georgia,"Times New Roman",serif;color:#d7ddd4;max-width:670px}
+.explain{font:.9rem/1.7 Georgia,"Times New Roman",serif;color:#b2bbb1;max-width:490px}
+.pill{display:inline-flex;gap:8px;align-items:center;padding:7px 11px;border:1px solid #b9ffde48;color:var(--mint);font-size:.67rem;text-transform:uppercase;letter-spacing:.12em}
+.dot{width:7px;height:7px;background:var(--mint);border-radius:50%;box-shadow:0 0 10px var(--mint)}
+.search-area{padding:28px 0 19px}
+.search-form{display:flex;align-items:stretch;border:1px solid #b9ffde75;background:#0f1711;max-width:1050px}
+.search-form:focus-within{border-color:var(--mint);box-shadow:0 0 0 2px #b9ffde15}
+.search-form input{min-width:0;flex:1;border:none;outline:0;background:transparent;color:var(--ink);font:1.05rem/1.4 Georgia,serif;padding:19px 21px}
+.search-form button{background:var(--mint);color:#08120c;border:0;padding:0 24px;font-weight:750;font-size:.73rem;text-transform:uppercase;letter-spacing:.12em}
+.search-form button:hover,.search-form button:focus-visible{background:#ddffee}
+.search-form button:disabled{opacity:.68;cursor:wait}
+.quick{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:17px 0 8px}
+.quick>span{color:var(--muted);font-size:.71rem;text-transform:uppercase;letter-spacing:.16em;margin-right:5px}
+.quick button{border:1px solid var(--line);background:#ffffff05;color:#cbd4cb;padding:8px 12px;font-size:.76rem}
+.quick button:hover{border-color:var(--mint);color:var(--mint)}
+.tabs{display:flex;flex-wrap:wrap;border-bottom:1px solid var(--line);gap:5px;margin-top:20px}
+.tab{background:transparent;border:0;border-bottom:2px solid transparent;color:var(--muted);padding:13px 17px;text-transform:uppercase;letter-spacing:.12em;font-size:.7rem}
+.tab[aria-selected="true"]{color:var(--mint);border-color:var(--mint)}
+.tab:hover{color:var(--ink)}
+.results{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:26px;margin-top:23px;align-items:start}
+.meta{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.h2{margin:7px 0 14px;font:normal 2.15rem/1.15 Georgia,"Times New Roman",serif;letter-spacing:-.045em}
+.helper{color:var(--muted);font-size:.79rem;line-height:1.65}
+.section{margin:25px 0 36px}
+.section-head{border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:12px;padding-bottom:11px;margin-bottom:13px}
+.section-head h3{font-size:.76rem;font-weight:650;text-transform:uppercase;letter-spacing:.14em;margin:0}
+.section-head small{color:var(--muted);font-size:.73rem}
+.cards{display:grid;gap:10px}
+.result{border:1px solid var(--line);background:var(--panel);padding:20px 22px;transition:border-color .16s ease}
+.result:hover{border-color:#b9ffde65}
+.result-top{display:flex;justify-content:space-between;gap:10px;align-items:start;font-size:.68rem;text-transform:uppercase;letter-spacing:.14em;color:var(--mint)}
+.result h4{font:normal 1.33rem/1.27 Georgia,"Times New Roman",serif;margin:13px 0 7px}
+.result p{color:#b7bfb7;font-size:.85rem;line-height:1.6;margin:9px 0 13px}
+.result .info{font-size:.71rem;color:var(--muted);line-height:1.55}
+.result a{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);padding:9px 12px;margin-top:14px;color:var(--mint);font-size:.7rem;text-transform:uppercase;letter-spacing:.12em}
+.result a:hover{border-color:var(--mint)}
+.source-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:12px 0}
+.source-link{display:flex;flex-direction:column;gap:6px;border:1px solid var(--line);background:var(--panel);padding:18px;transition:border-color .15s}
+.source-link:hover{border-color:var(--mint)}
+.source-link strong{font-size:.94rem}.source-link small{font-size:.77rem;color:var(--muted);line-height:1.55}
+.source-link .go{color:var(--mint);font-size:.75rem;text-transform:uppercase;letter-spacing:.12em;margin-top:7px}
+.aside{border:1px solid var(--line);background:#0d110f;padding:23px}
+.aside h3{font:normal 1.45rem Georgia,serif;margin:9px 0 10px}
+.aside p{color:var(--muted);font-size:.83rem;line-height:1.7}
+.aside a{display:block;border:1px solid var(--line);padding:11px 12px;margin:9px 0;font-size:.76rem}
+.aside a:hover{border-color:var(--mint);color:var(--mint)}
+.aside hr{border:0;border-top:1px solid var(--line);margin:20px 0}
+.message{border:1px solid var(--line);padding:23px;color:#c0c9c0;background:var(--panel);font:.93rem/1.7 Georgia,serif}
+.message a{color:var(--mint);text-decoration:underline}
+.footer{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;max-width:1500px;margin:auto;padding:20px 26px;border-top:1px solid var(--line);color:#ffffff75;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase}
+[hidden]{display:none!important}
+@media(max-width:1060px){.results,.intro{grid-template-columns:1fr}.aside{order:2}}
+@media(max-width:620px){.header{padding:16px}.wrap{padding:30px 16px 50px}h1{font-size:clamp(2.7rem,13vw,5rem)}.lead{font-size:1.04rem}.search-form input{padding:15px;font-size:.94rem}.search-form button{padding:0 15px}.tab{padding:11px;font-size:.63rem}.source-links{grid-template-columns:1fr}.footer{padding:16px}}
+</style>
+</head>
+<body>
+<header class="header"><a class="brand" href="../">ARTIFICIALLY <b>INTELLIGENT</b></a><a href="../">← RETURN TO ARCHIVE</a></header>
+<main class="wrap">
+<div class="micro">✣ RESEARCH TOOLS / IDX_001</div>
+<section class="intro">
+ <div><h1>THE<br>INTELLIGENCE<br>INDEX</h1><p class="lead">Search the web. Examine the evidence. Explore the connections.</p><span class="pill"><span class="dot"></span>Free, live research discovery</span></div>
+ <div><div class="micro">AN OPEN RESEARCH ENVIRONMENT</div><p class="explain">Investigate consciousness, technology, philosophy, culture, and everything beyond. Search live scholarly records, reference articles, and books on this page. Broader public web searches open directly in established search engines.</p><p class="helper">Results come from independent public providers. Search coverage is not the entire internet, and an indexed record is not the same as an accessible full text.</p></div>
+</section>
+<section class="search-area" aria-label="Search research sources">
+ <form id="search-form" class="search-form" role="search"><input id="query" type="search" required minlength="2" maxlength="160" autocomplete="off" placeholder="Enter any question, topic, or title..." aria-label="Search topic"><button id="submit" type="submit">SEARCH ↗</button></form>
+ <div class="quick"><span>Explore a topic</span><button type="button" data-example="human consciousness">Human consciousness</button><button type="button" data-example="machine learning">Machine learning</button><button type="button" data-example="quantum consciousness">Quantum consciousness</button><button type="button" data-example="digital identity">Digital identity</button></div>
+</section>
+<div class="tabs" role="tablist" aria-label="Search source categories">
+ <button class="tab" role="tab" aria-selected="true" data-tab="all">All sources</button><button class="tab" role="tab" aria-selected="false" data-tab="papers">Scholarly papers</button><button class="tab" role="tab" aria-selected="false" data-tab="encyclopedia">Encyclopedia</button><button class="tab" role="tab" aria-selected="false" data-tab="books">Books</button><button class="tab" role="tab" aria-selected="false" data-tab="web">Wider web ↗</button>
+</div>
+<div class="results">
+ <div><div class="meta"><div><div class="micro" id="result-eyebrow">SEARCH INDEX / READY</div><h2 class="h2" id="result-title">Begin your inquiry</h2></div><span class="helper" id="search-status" role="status" aria-live="polite">No query submitted</span></div><div id="results-area"><div class="message">Search for a subject to retrieve real results from free, public research services. No sample or fabricated results are shown.<p style="margin:9px 0 0;font:normal .83rem/1.6 ui-sans-serif,system-ui,sans-serif;color:#9b9d98">Choose Wider web to launch the same query on a full web search engine.</p></div></div></div>
+ <aside class="aside"><div class="micro">CONNECTED SOURCES</div><h3>A broader intelligence network</h3><p>The index queries public metadata from independent research services. Search results link to their original sources so you can evaluate the evidence yourself.</p><hr><div class="micro">PUBLIC WEB</div><div id="sidebar-search"></div><hr><div class="micro">YOUR RESEARCH</div><a href="../#stream">Enter the Data Stream ↗</a><a href="../interactives/consciousness-map.html">Explore the Consciousness Map ↗</a><a href="https://artificialxintelligence.substack.com/" target="_blank" rel="noopener noreferrer">Read The Data Stream on Substack ↗</a><hr><p>No subscription, account, paid API, or private key is required for this version. Public services may have usage limits or occasional connectivity restrictions.</p></aside>
+</div>
+</main>
+<footer class="footer"><span>Product of Amaris.Studio</span><span>Human × Machine Learning / Research Tools</span></footer>
+<script>
+"use strict";
+const input=document.getElementById("query"),form=document.getElementById("search-form"),area=document.getElementById("results-area"),status=document.getElementById("search-status"),title=document.getElementById("result-title"),eyebrow=document.getElementById("result-eyebrow"),submit=document.getElementById("submit");
+const tabs=[...document.querySelectorAll("[data-tab]")];const providers=["papers","encyclopedia","books"];
+const labels={papers:"SCHOLARLY PAPERS / CROSSREF",encyclopedia:"REFERENCE ARTICLES / WIKIPEDIA",books:"BOOKS / OPEN LIBRARY"};
+let active="all",current="",busy=false,requestId=0,controller=null,results={papers:[],encyclopedia:[],books:[]},errors={};
+const cache=new Map();
+function el(tag,cls,text){const x=document.createElement(tag);if(cls)x.className=cls;if(text!==undefined)x.textContent=String(text);return x}
+function safeUrl(url){try{const u=new URL(url);return (u.protocol==="https:"||u.protocol==="http:")?u.href:null}catch{return null}}
+function anchor(url,text,cls){const a=el("a",cls,text);a.href=safeUrl(url)||"#";a.target="_blank";a.rel="noopener noreferrer";return a}
+function webOptions(q){return [
+ {name:"Google",desc:"General public web results",url:"https://www.google.com/search?q="+encodeURIComponent(q)},
+ {name:"DuckDuckGo",desc:"General web search",url:"https://duckduckgo.com/?q="+encodeURIComponent(q)},
+ {name:"Bing",desc:"Another independent search interface",url:"https://www.bing.com/search?q="+encodeURIComponent(q)},
+ {name:"Brave Search",desc:"Broad web search results",url:"https://search.brave.com/search?q="+encodeURIComponent(q)},
+ {name:"OpenAlex",desc:"Explore a research catalog",url:"https://openalex.org/works?search="+encodeURIComponent(q)},
+ {name:"Google Scholar",desc:"Search scholarly literature",url:"https://scholar.google.com/scholar?q="+encodeURIComponent(q)}
+]}
+function updateWebLinks(){const aside=document.getElementById("sidebar-search");aside.replaceChildren();const q=current||input.value.trim()||"consciousness artificial intelligence";webOptions(q).slice(0,4).forEach(s=>aside.append(anchor(s.url,s.name+" ↗")))}
+function addCard(item,kind){const card=el("article","result");const row=el("div","result-top");row.append(el("span","",item.type||kind),el("span","",item.year||""));card.append(row,el("h4","",item.title));if(item.detail)card.append(el("p","",item.detail));if(item.meta)card.append(el("div","info",item.meta));card.append(anchor(item.url||"#","OPEN ORIGINAL SOURCE ↗"));return card}
+function section(kind){const wrap=el("section","section"),head=el("div","section-head"),h=el("h3","",labels[kind]),small=el("small","",results[kind].length+" found");head.append(h,small);wrap.append(head);
+ if(errors[kind]){const msg=el("div","message","Live results are temporarily unavailable: "+errors[kind]+". ");const query=current;const links={papers:"https://search.crossref.org/?q=",encyclopedia:"https://en.wikipedia.org/w/index.php?search=",books:"https://openlibrary.org/search?q="};msg.append(anchor(links[kind]+encodeURIComponent(query),"Search this source directly ↗"));wrap.append(msg)}
+ else if(!results[kind].length){wrap.append(el("div","message","No results found for this search in this source."))}
+ else{const cards=el("div","cards");results[kind].forEach(item=>cards.append(addCard(item,kind)));wrap.append(cards)}
+ return wrap}
+function webPanel(){const wrap=el("section","section");wrap.append(el("div","micro","WIDER WEB / FULL SEARCH ENGINES"),el("h3","h2","Search the public web"));wrap.append(el("p","helper","For broad website discovery, these buttons open your query in an external search engine. The search results appear on that provider's site, not inside The Intelligence Index."));const grid=el("div","source-links");webOptions(current||input.value.trim()||"consciousness artificial intelligence").forEach(s=>{const a=anchor(s.url,"","source-link");a.append(el("strong","",s.name),el("small","",s.desc),el("span","go","SEARCH NOW ↗"));grid.append(a)});wrap.append(grid);return wrap}
+function render(){tabs.forEach(t=>{const selected=t.dataset.tab===active;t.setAttribute("aria-selected",String(selected))});area.replaceChildren();eyebrow.textContent=active==="web"?"RESEARCH INDEX / BROADER WEB":current?"RESEARCH INDEX / RESULTS":"RESEARCH INDEX / READY";title.textContent=current?'Inquiry: "'+current+'"':"Begin your inquiry";
+ if(active==="web"){area.append(webPanel());status.textContent="External web search";return}
+ if(!current){const msg=el("div","message","Search for a subject to retrieve real results from free, public research services. No sample or fabricated results are shown.");area.append(msg);status.textContent="No query submitted";return}
+ if(busy){area.append(el("div","message","Searching public research sources. Please wait..."));status.textContent="Searching";return}
+ const list=active==="all"?providers:[active];list.forEach(k=>area.append(section(k)));let count=list.reduce((n,k)=>n+results[k].length,0);status.textContent=count+" results shown"+(Object.keys(errors).length?" | Some sources unavailable":"")}
+function authors(items){if(!Array.isArray(items))return"";return items.slice(0,3).map(a=>[a.given,a.family].filter(Boolean).join(" ")).filter(Boolean).join(", ")+(items.length>3?" et al.":"")}
+function yearOf(item){const parts=item?.published?.["date-parts"]||item?.issued?.["date-parts"]||[];return parts[0]?.[0]||item?.created?.["date-parts"]?.[0]?.[0]||""}
+async function fetchJSON(url,signal){const response=await fetch(url,{method:"GET",signal,headers:{Accept:"application/json"}});if(!response.ok)throw new Error(response.status===429?"Rate limit reached":response.status===403?"Access restricted":"HTTP "+response.status);return response.json()}
+async function searchCrossref(q,signal){const url="https://api.crossref.org/works?"+new URLSearchParams({query:q,rows:"8",select:"DOI,title,author,published,issued,created,container-title,type,URL"});const data=await fetchJSON(url,signal);return (data.message?.items||[]).map(x=>{const doi=typeof x.DOI==="string"?x.DOI:"";return {title:Array.isArray(x.title)?x.title[0]||"Untitled work":"Untitled work",detail:authors(x.author),year:yearOf(x),type:x.type||"Research record",meta:(x["container-title"]||[])[0]|| (doi?"DOI: "+doi:"Crossref record"),url:doi?"https://doi.org/"+encodeURIComponent(doi):safeUrl(x.URL)}})}
+async function searchWikipedia(q,signal){const url="https://en.wikipedia.org/w/api.php?"+new URLSearchParams({action:"query",list:"search",srsearch:q,srlimit:"8",srprop:"snippet|timestamp",format:"json",origin:"*"});const data=await fetchJSON(url,signal);return (data.query?.search||[]).map(x=>({title:x.title||"Untitled article",detail:String(x.snippet||"").replace(/<[^>]*>/g," ").replace(/\s+/g," ").trim(),year:x.timestamp?String(x.timestamp).slice(0,4):"",type:"Reference article",meta:"Wikipedia | Community-edited reference",url:"https://en.wikipedia.org/wiki/"+encodeURIComponent(String(x.title||"").replace(/ /g,"_"))}))}
+async function searchBooks(q,signal){const url="https://openlibrary.org/search.json?"+new URLSearchParams({q,limit:"8",fields:"key,title,author_name,first_publish_year,edition_count"});const data=await fetchJSON(url,signal);return (data.docs||[]).map(x=>({title:x.title||"Untitled book",detail:Array.isArray(x.author_name)?x.author_name.slice(0,3).join(", "):"",year:x.first_publish_year||"",type:"Book catalog",meta:(x.edition_count||0)+" edition(s) | Open Library",url:String(x.key||"").startsWith("/works/")?"https://openlibrary.org"+x.key:"https://openlibrary.org/search?q="+encodeURIComponent(x.title||q)}))}
+const searchFns={papers:searchCrossref,encyclopedia:searchWikipedia,books:searchBooks};
+async function search(q){const normalized=q.trim().slice(0,160);if(normalized.length<2)return;current=normalized;input.value=normalized;active="all";updateWebLinks();const key=normalized.toLowerCase();if(controller)controller.abort();const id=++requestId;const saved=cache.get(key);
+ if(saved){results=saved.results;errors=saved.errors;busy=false;render();return}
+ controller=new AbortController();const signal=controller.signal;busy=true;submit.disabled=true;render();
+ let timer=setTimeout(()=>controller.abort(),12000);
+ const settled=await Promise.allSettled(providers.map(k=>searchFns[k](normalized,signal)));
+ clearTimeout(timer);if(id!==requestId)return;
+ const nextResults={papers:[],encyclopedia:[],books:[]};const nextErrors={};
+ settled.forEach((res,i)=>{const k=providers[i];if(res.status==="fulfilled")nextResults[k]=res.value;else nextErrors[k]=res.reason?.name==="AbortError"?"Request timed out or was canceled":res.reason?.message||"Unavailable"});
+ results=nextResults;errors=nextErrors;busy=false;submit.disabled=false;
+ if(Object.keys(nextErrors).length===0)cache.set(key,{results,errors});render()
+}
+form.addEventListener("submit",e=>{e.preventDefault();search(input.value)});
+document.querySelectorAll("[data-example]").forEach(b=>b.addEventListener("click",()=>search(b.dataset.example)));
+tabs.forEach(b=>b.addEventListener("click",()=>{active=b.dataset.tab;render()}));
+const initial=new URLSearchParams(location.search).get("q");updateWebLinks();if(initial&&initial.trim().length>=2)search(initial);else render();
+</script>
+</body>
+</html>
