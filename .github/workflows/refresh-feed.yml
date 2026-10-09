@@ -1,0 +1,26 @@
+name: Refresh research RSS feed
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */6 * * *"
+permissions:
+  contents: write
+jobs:
+  build-feed:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Generate RSS from public archive
+        run: python3 scripts/build_feed.py
+      - name: Commit updated feed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add feed.xml
+          if ! git diff --cached --quiet; then
+            git commit -m "Refresh Substack-compatible article feed"
+            git push
+          fi
