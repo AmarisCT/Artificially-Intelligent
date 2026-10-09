@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#090c0b">
+<meta name="description" content="The Consciousness Map, an interactive research network exploring human consciousness, artificial intelligence, cognition, philosophy, and spiritual perspectives.">
+<title>The Consciousness Map | Artificially Intelligent</title>
+<style>
+:root{--bg:#090c0b;--panel:#0f1311;--ink:#f2f0e9;--muted:#9b9d98;--line:rgba(255,255,255,.15);--mint:#b9ffde}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--bg);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+button,input{font:inherit}button,a{color:inherit}button{cursor:pointer}a{text-decoration:none}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:46px 46px;mask-image:linear-gradient(to bottom,black,transparent 95%)}
+main,header,footer{position:relative;z-index:1}
+.top{max-width:1500px;margin:auto;padding:19px 25px;display:flex;align-items:center;justify-content:space-between;gap:16px;border-bottom:1px solid var(--line);text-transform:uppercase;letter-spacing:.17em;font-size:.7rem}
+.top a:hover{color:var(--mint)}.brand{font-weight:650}.brand span{color:var(--mint)}.back{color:var(--muted)}
+.shell{max-width:1500px;margin:auto;padding:42px 25px 70px}
+.eyebrow,.micro{font-size:.69rem;text-transform:uppercase;letter-spacing:.2em;color:var(--mint)}
+.eyebrow{display:flex;gap:10px;align-items:center}.eyebrow i{font-size:1.5rem;font-style:normal}
+.intro{display:grid;grid-template-columns:1.2fr .8fr;gap:45px;border-bottom:1px solid var(--line);padding:22px 0 36px;align-items:end}
+h1{font-weight:650;font-size:clamp(2.9rem,8vw,7.5rem);line-height:.87;letter-spacing:-.065em;text-transform:uppercase;margin:17px 0}
+.deck{font:1.17rem/1.72 Georgia,"Times New Roman",serif;color:#c5c6be;max-width:530px}
+.note{font:.82rem/1.65 ui-sans-serif,system-ui,sans-serif;color:var(--muted)}
+.toplinks{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.toplinks a{border:1px solid var(--line);padding:11px 15px;font-size:.76rem;text-transform:uppercase;letter-spacing:.1em}
+.toplinks a:hover{border-color:var(--mint);color:var(--mint)}
+.controls{display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin:27px 0 20px}
+.filter{background:#ffffff07;border:1px solid var(--line);padding:11px 14px;font-size:.76rem;text-transform:uppercase;letter-spacing:.09em;min-height:42px}
+.filter:hover,.filter:focus-visible{border-color:var(--mint)}
+.filter[aria-pressed="true"]{background:#b9ffde14;border-color:var(--mint);color:var(--mint)}
+.search{margin-left:auto;min-width:225px;flex:1 1 245px;max-width:400px;min-height:42px;background:#ffffff07;border:1px solid var(--line);color:var(--ink);padding:10px 13px;outline:none}
+.search:focus{border-color:var(--mint)}
+.layout{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(320px,.75fr);gap:17px}
+.frame,.details{background:var(--panel);border:1px solid var(--line)}
+.frame{min-width:0;padding:18px}
+.framehead{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:13px;color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.14em}
+.legend{display:flex;gap:13px;flex-wrap:wrap;font-size:.63rem;letter-spacing:.04em;text-transform:none}
+.leg{display:flex;align-items:center;gap:6px}
+.leg:before{content:"";width:19px;height:2px;background:var(--mint)}
+.leg.concept:before{background:#e3e3da;border-top:1px dashed #e3e3da;height:1px}
+.leg.interpret:before{background:#9b9d98;height:1px}
+.mapscroll{overflow:auto;border:1px solid var(--line);background:radial-gradient(circle at 49% 48%,#b9ffde10,transparent 29%),#0b100d;scrollbar-color:#375345 #0b100d}
+.network{min-width:690px;min-height:600px;height:clamp(600px,62vw,760px);position:relative;isolation:isolate}
+.network svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}
+.node{position:absolute;transform:translate(-50%,-50%);min-width:119px;max-width:154px;text-align:left;padding:13px 13px 12px;border:1px solid #ffffff35;background:#101712f7;color:var(--ink);transition:background .2s,border-color .2s,opacity .2s;z-index:2;box-shadow:0 9px 24px #0006}
+.node:hover,.node:focus-visible{border-color:var(--mint)}
+.node.active{border-color:var(--mint);background:#1b2f23;box-shadow:0 0 0 1px #b9ffde32,0 0 30px #b9ffde18}
+.node.dim{opacity:.3}.node small{display:block;font:600 .57rem/1.4 ui-monospace,Consolas,monospace;color:var(--mint);letter-spacing:.13em;text-transform:uppercase;margin-bottom:7px}
+.node strong{display:block;font-size:.9rem;line-height:1.35}.node span{display:block;color:var(--muted);font-size:.66rem;margin-top:7px}
+.edge{stroke-width:.31;vector-effect:non-scaling-stroke;transition:opacity .2s}.edge.highlight{stroke-width:1.3}
+.details{padding:26px;align-self:start;position:sticky;top:12px}
+.index{font:.7rem ui-monospace,Consolas,monospace;color:var(--mint);letter-spacing:.16em}
+.details h2{font:normal clamp(1.9rem,3.5vw,3.3rem)/1.08 Georgia,"Times New Roman",serif;letter-spacing:-.04em;margin:14px 0}
+.question{font:italic 1.12rem/1.6 Georgia,"Times New Roman",serif;color:#e3e5dc;border-left:2px solid var(--mint);padding-left:13px}
+.copy{font:.97rem/1.75 Georgia,"Times New Roman",serif;color:#cacfc8;margin:20px 0}
+.divider{border:0;border-top:1px solid var(--line);margin:22px 0}
+.sectionlabel{font-size:.66rem;letter-spacing:.17em;text-transform:uppercase;color:var(--mint);margin:0 0 10px}
+.status{font-size:.75rem;color:#d8ddd7;display:inline-block;border:1px solid #ffffff31;padding:7px 10px;margin:3px 0 10px}
+.details ul{padding-left:19px;color:#c7cbc5;font:.87rem/1.65 ui-sans-serif,system-ui,sans-serif}
+.details li{margin:8px 0}
+.pathways{display:grid;gap:8px}.pathway{width:100%;text-align:left;background:#ffffff05;border:1px solid var(--line);padding:12px;color:var(--ink);font-size:.85rem}
+.pathway:hover,.pathway:focus-visible{border-color:var(--mint);color:var(--mint)}
+.notebox{padding:17px;border:1px solid var(--line);margin-top:16px;color:var(--muted);font:.8rem/1.65 ui-sans-serif,system-ui,sans-serif}
+.footer{max-width:1500px;margin:0 auto;border-top:1px solid var(--line);padding:18px 25px 25px;color:#ffffff76;font-size:.7rem;text-transform:uppercase;letter-spacing:.17em;display:flex;justify-content:space-between;gap:18px}
+@media(max-width:1000px){.layout,.intro{grid-template-columns:1fr}.details{position:static}.intro{gap:12px}.network{height:620px}.framehead{align-items:flex-start;flex-direction:column}}
+@media(max-width:600px){.top{padding:16px}.shell{padding:30px 16px 55px}.frame{padding:12px}.details{padding:20px}.controls{gap:6px}.filter{font-size:.68rem;padding:10px}.search{max-width:none}.footer{padding:16px;line-height:1.8}.deck{font-size:1rem}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header class="top"><a class="brand" href="../">ARTIFICIALLY <span>INTELLIGENT</span></a><a class="back" href="../">← Return to the archive</a></header>
+<main class="shell">
+<div class="eyebrow"><i>✣</i> 04 / INTERACTIVES / INT_001</div>
+<section class="intro">
+ <div><h1>THE<br>CONSCIOUSNESS<br>MAP</h1><p class="deck">A living network of questions connecting human consciousness, artificial intelligence, cognition, philosophy, and spiritual perspectives.</p></div>
+ <div><p class="micro">AN OPEN INQUIRY</p><p class="note">Explore competing explanations rather than a predetermined conclusion. Connections in this map represent research relationships, not proof that machines possess consciousness or that spiritual accounts have been scientifically established.</p><div class="toplinks"><a href="../#stream">Research archive ↗</a><a href="https://artificialxintelligence.substack.com/" target="_blank" rel="noopener noreferrer">The Data Stream ↗</a></div></div>
+</section>
+<div class="controls" role="group" aria-label="Explore research perspectives">
+<button class="filter" data-filter="all" aria-pressed="true">All connections</button><button class="filter" data-filter="science" aria-pressed="false">Science</button><button class="filter" data-filter="philosophy" aria-pressed="false">Philosophy</button><button class="filter" data-filter="spiritual" aria-pressed="false">Spirituality</button><input id="search" class="search" type="search" placeholder="Search the network..." aria-label="Search research concepts">
+</div>
+<div class="layout">
+<section class="frame" aria-label="Interactive consciousness research network">
+ <div class="framehead"><span>Consciousness network / 09 domains</span><div class="legend"><span class="leg">Empirical</span><span class="leg concept">Conceptual</span><span class="leg interpret">Interpretive</span></div></div>
+ <div class="mapscroll"><div class="network" id="network"><svg id="edges" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"></svg></div></div>
+ <p class="note">Select a concept to examine its questions and relationships. On smaller screens, swipe horizontally to explore the network.</p>
+</section>
+<aside class="details" aria-live="polite">
+ <div class="index" id="number">INT_001 / 01</div><h2 id="title">Human Consciousness</h2><div class="question" id="question"></div><p class="copy" id="description"></p>
+ <hr class="divider"><p class="sectionlabel">Perspective and evidence</p><div class="status" id="status"></div><p class="note" id="evidence"></p>
+ <hr class="divider"><p class="sectionlabel">Questions to investigate</p><ul id="questions"></ul>
+ <hr class="divider"><p class="sectionlabel">Explore connected concepts</p><div class="pathways" id="related"></div>
+ <div class="notebox">Research preview. Concepts and links are curated for exploration. A future research edition can attach primary sources, citations, and related archive articles after editorial review.</div>
+</aside>
+</div>
+</main>
+<footer class="footer"><span>Product of Amaris.Studio</span><span>Human × Machine Learning / Interactive 001</span></footer>
+<script>
+"use strict";
+const data={
+ human:{n:"01",title:"Human Consciousness",kind:"Core inquiry",x:50,y:49,question:"How does subjective experience arise, and what would count as evidence of it?",description:"The map begins with first-person awareness. Perception, attention, selfhood, and memory all contribute to the inquiry, but none alone provides an agreed explanation of why experience feels like something from within.",status:"Empirical inquiry and unresolved explanation",evidence:"Neuroscience can examine mechanisms and correlates of conscious states. The question of how these processes relate to subjective experience remains actively debated.",questions:["What distinguishes consciousness from intelligent behavior?","Which features of experience can science investigate?","Could experience occur in a nonbiological system?"],links:["neuro","philosophy","ai","spiritual"]},
+ neuro:{n:"02",title:"Neuroscience",kind:"Scientific domain",x:25,y:23,question:"Which neural processes accompany conscious experience?",description:"Neuroscience studies conscious states through neural activity, perception, attention, and brain function. Empirical findings help constrain theories while leaving broader philosophical questions open.",status:"Empirical research",evidence:"Brain activity and changes in conscious states can be studied experimentally. A neural correlate is not by itself a complete explanation of subjective experience.",questions:["What are the neural correlates of consciousness?","How do attention and awareness differ?","What can disorders of consciousness reveal?"],links:["human","cognition"]},
+ cognition:{n:"03",title:"Cognitive Science",kind:"Interdisciplinary domain",x:50,y:19,question:"How are perception, attention, memory, and reasoning organized?",description:"Cognitive science connects psychology, computation, and neuroscience. It provides models of information processing and behavior that help us compare biological and artificial systems.",status:"Empirical models and contested interpretations",evidence:"Many cognitive mechanisms are experimentally studied. A useful computational model does not automatically establish subjective awareness.",questions:["What aspects of thinking can be modeled?","Can cognition occur without awareness?","How should we distinguish a model from a mind?"],links:["neuro","ml","memory"]},
+ ml:{n:"04",title:"Machine Learning",kind:"Computational domain",x:77,y:23,question:"What can systems learn, and what does learning tell us about experience?",description:"Machine learning allows systems to learn statistical and computational patterns from data. Powerful learning capabilities create new questions about representation, agency, and the limits of behavioral evidence.",status:"Established methods, open consciousness questions",evidence:"Learning algorithms and model capabilities are measurable. Their relationship to consciousness has not been scientifically established.",questions:["Is computation sufficient for conscious experience?","Does increasing complexity change the question?","What would constitute a meaningful test?"],links:["ai","cognition","emergence"]},
+ ai:{n:"05",title:"Artificial Intelligence",kind:"Artificial systems",x:82,y:46,question:"Can a system appear intelligent without having an inner experience?",description:"Artificial intelligence can perform tasks associated with language, planning, and perception. Intelligence and consciousness, however, are different claims that need different kinds of evidence.",status:"Observable capabilities, disputed implications",evidence:"AI performance can be evaluated. Whether any contemporary system is conscious is unresolved and should not be inferred from fluent language alone.",questions:["What separates intelligence from awareness?","What can behavior reveal about inner states?","How does AI reshape our own understanding of mind?"],links:["human","ml","philosophy","identity"]},
+ emergence:{n:"06",title:"Emergence",kind:"Theory lens",x:78,y:77,question:"Can new properties arise from complex organized systems?",description:"Emergence explores the relationship between parts and wholes. It is frequently invoked in discussions of minds and machines, but its explanatory role depends on the version of the theory being proposed.",status:"Conceptual framework and active scientific debate",evidence:"Emergent patterns can be empirically studied. Claims that emergence generates subjective experience require additional argument and evidence.",questions:["What counts as an emergent property?","Does complexity explain experience or describe it?","Would artificial emergence require a special substrate?"],links:["ml","philosophy","human"]},
+ identity:{n:"07",title:"Identity and Self",kind:"Human and digital identity",x:52,y:82,question:"What makes a person the same person over time?",description:"Selfhood connects subjective experience with narrative, memory, social recognition, and technology. Digital systems can record, reflect, and influence how identity is understood.",status:"Psychological research and philosophical debate",evidence:"Memory and self-perception can be studied empirically. Whether a digital reconstruction preserves personal identity is a philosophical and ethical question.",questions:["Is identity a memory, process, or narrative?","How do algorithms shape the self?","Could a digital copy be the same person?"],links:["human","ai","memory","spiritual"]},
+ spiritual:{n:"08",title:"Spiritual Perspectives",kind:"Metaphysical and contemplative inquiry",x:19,y:78,question:"Might consciousness be more fundamental than its physical expressions?",description:"Spiritual and contemplative traditions offer varied interpretations of awareness, selfhood, and the relationship between mind and reality. These views broaden the inquiry but are not equivalent to scientific demonstration.",status:"Interpretive and metaphysical perspectives",evidence:"First-person contemplative reports can be investigated, but claims of nonlocal or transcendent consciousness are not established scientific findings.",questions:["How do traditions understand the observer?","What is the distinction between experience and metaphysics?","Can subjective reports inform scientific questions?"],links:["human","philosophy","identity"]},
+ philosophy:{n:"09",title:"Philosophy of Mind",kind:"Conceptual inquiry",x:20,y:47,question:"What would it mean for anything, biological or artificial, to be conscious?",description:"Philosophy of mind examines qualia, physicalism, functionalism, dualism, and other accounts of mind. It tests the assumptions behind scientific theories and AI consciousness claims.",status:"Competing philosophical positions",evidence:"Arguments illuminate possibilities and contradictions. They do not by themselves establish whether a particular artificial system has subjective experience.",questions:["What is the hard problem of consciousness?","Is functional similarity enough?","Can subjective experience be verified from outside?"],links:["human","ai","spiritual","emergence"]},
+ memory:{n:"10",title:"Memory and Archives",kind:"Research bridge",x:37,y:71,question:"How do memory and recorded information shape conscious identity?",description:"Memory links biological cognition, personal narrative, and digital archives. It also raises questions about what is preserved when a system stores and reconstructs traces of a person's life.",status:"Empirical research and philosophical interpretation",evidence:"Memory processes are extensively studied, while claims about digitally preserved personhood remain interpretive and ethically contested.",questions:["How does memory support the sense of self?","Can archives reproduce a person?","How is remembering different from storing information?"],links:["identity","cognition","human"]}
+};
+const links=[
+["human","neuro","empirical"],["human","cognition","empirical"],["human","ai","conceptual"],["human","philosophy","conceptual"],["human","spiritual","interpretive"],["human","identity","conceptual"],["human","memory","empirical"],["neuro","cognition","empirical"],["cognition","ml","empirical"],["cognition","memory","empirical"],["ml","ai","empirical"],["ml","emergence","conceptual"],["ai","emergence","conceptual"],["ai","identity","conceptual"],["ai","philosophy","conceptual"],["philosophy","spiritual","interpretive"],["philosophy","emergence","conceptual"],["identity","memory","empirical"],["identity","spiritual","interpretive"]
+];
+const network=document.getElementById("network"),svg=document.getElementById("edges");
+const nodeButtons={},lines=[];let selected="human",filter="all",query="";
+function nodeElement(id,item){const b=document.createElement("button");b.type="button";b.className="node";b.style.left=item.x+"%";b.style.top=item.y+"%";b.dataset.node=id;b.setAttribute("aria-label","Explore "+item.title);const small=document.createElement("small");small.textContent=item.n+" / "+item.kind;const strong=document.createElement("strong");strong.textContent=item.title;const caption=document.createElement("span");caption.textContent="EXPLORE ↗";b.append(small,strong,caption);b.addEventListener("click",()=>show(id));network.appendChild(b);nodeButtons[id]=b}
+Object.entries(data).forEach(([id,item])=>nodeElement(id,item));
+links.forEach(([a,b,type])=>{const line=document.createElementNS("http://www.w3.org/2000/svg","line");line.setAttribute("x1",data[a].x);line.setAttribute("y1",data[a].y);line.setAttribute("x2",data[b].x);line.setAttribute("y2",data[b].y);line.setAttribute("stroke",type==="empirical"?"#b9ffde":type==="conceptual"?"#e3e3da":"#9b9d98");if(type==="conceptual")line.setAttribute("stroke-dasharray","1.3 1");if(type==="interpretive")line.setAttribute("stroke-dasharray",".3 1.6");line.classList.add("edge");svg.appendChild(line);lines.push({a,b,type,line})});
+function matches(id){const d=data[id];const hay=[d.title,d.kind,d.description,d.question,...d.questions].join(" ").toLowerCase();return (!query||hay.includes(query))&&(filter==="all"||(filter==="science"?["neuro","cognition","ml","ai","memory","human"].includes(id):filter==="philosophy"?["philosophy","human","emergence","identity","ai"].includes(id):["spiritual","philosophy","human","identity"].includes(id)))}
+function paint(){Object.keys(nodeButtons).forEach(id=>{const visible=matches(id);nodeButtons[id].hidden=!visible;nodeButtons[id].style.display=visible?"block":"none";nodeButtons[id].classList.toggle("active",id===selected);nodeButtons[id].classList.toggle("dim",visible&&id!==selected&&!data[selected].links.includes(id))});lines.forEach(({a,b,line})=>{const visible=matches(a)&&matches(b);line.style.display=visible?"":"none";const focus=a===selected||b===selected;line.style.opacity=focus?".94":".27";line.classList.toggle("highlight",focus)});document.querySelectorAll("[data-filter]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.filter===filter)))}
+function show(id){selected=id;const d=data[id];document.getElementById("number").textContent="INT_001 / "+d.n+" / "+d.kind.toUpperCase();document.getElementById("title").textContent=d.title;document.getElementById("question").textContent=d.question;document.getElementById("description").textContent=d.description;document.getElementById("status").textContent=d.status;document.getElementById("evidence").textContent=d.evidence;const ul=document.getElementById("questions");ul.replaceChildren();d.questions.forEach(q=>{const li=document.createElement("li");li.textContent=q;ul.append(li)});const next=document.getElementById("related");next.replaceChildren();d.links.forEach(key=>{const b=document.createElement("button");b.type="button";b.className="pathway";b.textContent="→ "+data[key].title;b.addEventListener("click",()=>{filter="all";query="";document.getElementById("search").value="";show(key)});next.append(b)});paint()}
+document.querySelectorAll("[data-filter]").forEach(b=>b.addEventListener("click",()=>{filter=b.dataset.filter;paint()}));document.getElementById("search").addEventListener("input",e=>{query=e.target.value.trim().toLowerCase();paint()});
+show("human");
+</script>
+</body>
+</html>
