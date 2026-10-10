@@ -1,0 +1,224 @@
+{
+  "publication": "Artificially Intelligent",
+  "substack_publication_url": "https://artificialxintelligence.substack.com/",
+  "import_feed_url": "https://amarisct.github.io/Artificially-Intelligent/substack-import/research-in-development.xml",
+  "last_prepared": "2026-10-10",
+  "articles": [
+    {
+      "id": "research-development-what-makes-an-experience-conscious",
+      "slug": "what-makes-an-experience-conscious",
+      "title": "What Makes an Experience Conscious?",
+      "category": "Human Consciousness",
+      "github_url": "https://amarisct.github.io/Artificially-Intelligent/?article=research-development-what-makes-an-experience-conscious#stream",
+      "substack_url": null,
+      "substack_status": "not_imported"
+    },
+    {
+      "id": "research-development-measuring-awareness-evidence-and-its-limits",
+      "slug": "measuring-awareness-evidence-and-its-limits",
+      "title": "Measuring Awareness: Evidence and Its Limits",
+      "category": "Human Consciousness",
+      "github_url": "https://amarisct.github.io/Artificially-Intelligent/?article=research-development-measuring-awareness-evidence-and-its-limits#stream",
+      "substack_url": null,
+      "substack_status": "not_imported"
+    },
+    {
+      "id": "research-development-beyond-biology-could-consciousness-have-another-substrate",
+      "slug": "beyond-biology-could-consciousness-have-another-substrate",
+      "title": "Beyond Biology: Could Consciousness Have Another Substrate?",
+      "category": "Human Consciousness",
+      "github_url": "https://amarisct.github.io/Artificially-Intelligent/?article=research-development-beyond-biology-could-consciousness-have-another-substrate#stream",
+      "substack_url": null,
+      "substack_status": "not_imported"
+    },
+    {
+      "id": "research-development-intelligence-without-awareness",
+      "slug": "intelligence-without-awareness",
+      "title": "Intelligence Without Awareness",
+      "category": "Artificial Intelligence",
+      "github_url": "https://amarisct.github.io/Artificially-Intelligent/?article=research-development-intelligence-without-awareness#stream",
+      "substack_url": null,
+      "substack_status": "not_imported"
+    },
+    {
+      "id": "research-development-how-we-evaluate-machine-reasoning",
+      "slug": "how-we-evaluate-machine-reasoning",
+      "title": "How We Evaluate Machine Reasoning",
+      "category": "Artificial Intelligence",
+      "github_url": "https://amarisct.github.io/Artificially-Intelligent/?article=research-development-how-we-evaluate-machine-reasoning#stream",
+      "substack_url": null,
+      "substack_status": "not_imported"
+    },
+    {
+      "id": "research-development-do-machines-understand-what-they-say",
+      "slug": "do-machines-understand-what-they-say",
+      "title": "Do Machines Understand What They Say?",
+      "category": "Artificial Intelligence",
+      "github_url": "https://amarisct.github.io/Artificially-Intelligent/?article=research-development-do-machines-understand-what-they-say#stream",
+      "substack_url": null,
+      "substack_status": "not_imported"
+    },
+    {
+      "id": "research-development-neural-correlates-of-consciousness",
+      "slug": "neural-correlates-of-consciousness",
+      "title": "Neural Correlates of Consciousness",
+      "category": "Neuroscience & Cognition",
+      "github_url": "https://amarisct.github.io/Artificially-Intelligent/?article=research-development-neural-correlates-of-consciousness#stream",
+      "substack_url": null,
+      "substack_status": "not_imported"
+    },
+    {
+      "id": "research-development-attention-perception-and-the-conscious-mind",
+      "slug": "attention-perception-and-the-conscious-mind",
+      "title": "Attention, Perception, and the Conscious Mind",
+      "category": "Neuroscience & Cognition",
+      "github_url": "https://amarisct.github.io/Artificially-Intelligent/?article=research-development-attention-perception-and-the-conscious-mind#stream",
+      "substack_url": null,
+      "substack_status": "not_imported"
+    },
+    {
+      "id": "research-development-conscious-states-sleep-dreams-and-anesthesia",
+      "slug": "conscious-states-sleep-dreams-and-anesthesia",
+      "title": "Conscious States: Sleep, Dreams, and Anesthesia",
+      "category": "Neuroscience & Cognition",
+      "github_url": "https://amarisct.github.io/Artificially-Intelligent/?article=research-development-conscious-states-sleep-dreams-and-anesthesia#stream",
+      "substack_url": null,
+      "substack_status": "not_imported"
+    },
+    {
+      "id": "research-development-can-consciousness-be-reduced-to-matter",
+      "slug": "can-consciousness-be-reduced-to-matter",
+      "title": "Can Consciousness Be Reduced to Matter?",
+      "category": "Philosophy of Mind",
+      "github_url": "https://amarisct.github.io/Artificially-Intelligent/?article=research-development-can-consciousness-be-reduced-to-matter#stream",
+      "substack_url": null,
+      "substack_status": "not_imported"
+    },
+    {
+      "id": "research-development-simulation-experience-and-the-limits-of-imitation",
+      "slug": "simulation-experience-and-the-limits-of-imitation",
+      "title": "Simulation, Experience, and the Limits of Imitation",
+      "category": "Philosophy of Mind",
+      "github_url": "https://amarisct.github.io/Artificially-Intelligent/?article=research-development-simulation-experience-and-the-limits-of-imitation#stream",
+      "substack_url": null,
+      "substack_status": "not_imported"
+    },
+    {
+      "id": "research-development-the-hard-problem-why-experience-exists",
+      "slug": "the-hard-problem-why-experience-exists",
+      "title": "The Hard Problem: Why Experience Exists",
+      "category": "Philosophy of Mind",
+      "github_url": "https://amarisct.github.io/Artificially-Intelligent/?article=research-development-the-hard-problem-why-experience-exists#stream",
+      "substack_url": null,
+      "substack_status": "not_imported"
+    },
+    {
+      "id": "research-development-is-consciousness-fundamental-to-reality",
+      "slug": "is-consciousness-fundamental-to-reality",
+      "title": "Is Consciousness Fundamental to Reality?",
+      "category": "Spirituality & Metaphysics",
+      "github_url": "https://amarisct.github.io/Artificially-Intelligent/?article=research-development-is-consciousness-fundamental-to-reality#stream",
+      "substack_url": null,
+      "substack_status": "not_imported"
+    },
+    {
+      "id": "research-development-meditation-first-person-experience-and-science",
+      "slug": "meditation-first-person-experience-and-science",
+      "title": "Meditation, First-Person Experience, and Science",
+      "category": "Spirituality & Metaphysics",
+      "github_url": "https://amarisct.github.io/Artificially-Intelligent/?article=research-development-meditation-first-person-experience-and-science#stream",
+      "substack_url": null,
+      "substack_status": "not_imported"
+    },
+    {
+      "id": "research-development-quantum-consciousness-evidence-and-speculation",
+      "slug": "quantum-consciousness-evidence-and-speculation",
+      "title": "Quantum Consciousness: Evidence and Speculation",
+      "category": "Spirituality & Metaphysics",
+      "github_url": "https://amarisct.github.io/Artificially-Intelligent/?article=research-development-quantum-consciousness-evidence-and-speculation#stream",
+      "substack_url": null,
+      "substack_status": "not_imported"
+    },
+    {
+      "id": "research-development-memory-and-the-making-of-the-self",
+      "slug": "memory-and-the-making-of-the-self",
+      "title": "Memory and the Making of the Self",
+      "category": "Memory & Digital Identity",
+      "github_url": "https://amarisct.github.io/Artificially-Intelligent/?article=research-development-memory-and-the-making-of-the-self#stream",
+      "substack_url": null,
+      "substack_status": "not_imported"
+    },
+    {
+      "id": "research-development-the-digital-archive-and-the-living-self",
+      "slug": "the-digital-archive-and-the-living-self",
+      "title": "The Digital Archive and the Living Self",
+      "category": "Memory & Digital Identity",
+      "github_url": "https://amarisct.github.io/Artificially-Intelligent/?article=research-development-the-digital-archive-and-the-living-self#stream",
+      "substack_url": null,
+      "substack_status": "not_imported"
+    },
+    {
+      "id": "research-development-digital-replicas-and-the-question-of-personhood",
+      "slug": "digital-replicas-and-the-question-of-personhood",
+      "title": "Digital Replicas and the Question of Personhood",
+      "category": "Memory & Digital Identity",
+      "github_url": "https://amarisct.github.io/Artificially-Intelligent/?article=research-development-digital-replicas-and-the-question-of-personhood#stream",
+      "substack_url": null,
+      "substack_status": "not_imported"
+    },
+    {
+      "id": "research-development-responsibility-in-an-algorithmic-society",
+      "slug": "responsibility-in-an-algorithmic-society",
+      "title": "Responsibility in an Algorithmic Society",
+      "category": "Ethics & Society",
+      "github_url": "https://amarisct.github.io/Artificially-Intelligent/?article=research-development-responsibility-in-an-algorithmic-society#stream",
+      "substack_url": null,
+      "substack_status": "not_imported"
+    },
+    {
+      "id": "research-development-evaluating-the-social-impact-of-ai",
+      "slug": "evaluating-the-social-impact-of-ai",
+      "title": "Evaluating the Social Impact of AI",
+      "category": "Ethics & Society",
+      "github_url": "https://amarisct.github.io/Artificially-Intelligent/?article=research-development-evaluating-the-social-impact-of-ai#stream",
+      "substack_url": null,
+      "substack_status": "not_imported"
+    },
+    {
+      "id": "research-development-beyond-accuracy-bias-fairness-and-ai",
+      "slug": "beyond-accuracy-bias-fairness-and-ai",
+      "title": "Beyond Accuracy: Bias, Fairness, and AI",
+      "category": "Ethics & Society",
+      "github_url": "https://amarisct.github.io/Artificially-Intelligent/?article=research-development-beyond-accuracy-bias-fairness-and-ai#stream",
+      "substack_url": null,
+      "substack_status": "not_imported"
+    },
+    {
+      "id": "research-development-culture-behind-the-scientific-question",
+      "slug": "culture-behind-the-scientific-question",
+      "title": "Culture Behind the Scientific Question",
+      "category": "Science & Culture",
+      "github_url": "https://amarisct.github.io/Artificially-Intelligent/?article=research-development-culture-behind-the-scientific-question#stream",
+      "substack_url": null,
+      "substack_status": "not_imported"
+    },
+    {
+      "id": "research-development-how-technology-redefines-intelligence",
+      "slug": "how-technology-redefines-intelligence",
+      "title": "How Technology Redefines Intelligence",
+      "category": "Science & Culture",
+      "github_url": "https://amarisct.github.io/Artificially-Intelligent/?article=research-development-how-technology-redefines-intelligence#stream",
+      "substack_url": null,
+      "substack_status": "not_imported"
+    },
+    {
+      "id": "research-development-creativity-at-the-human-machine-boundary",
+      "slug": "creativity-at-the-human-machine-boundary",
+      "title": "Creativity at the Human-Machine Boundary",
+      "category": "Science & Culture",
+      "github_url": "https://amarisct.github.io/Artificially-Intelligent/?article=research-development-creativity-at-the-human-machine-boundary#stream",
+      "substack_url": null,
+      "substack_status": "not_imported"
+    }
+  ]
+}
