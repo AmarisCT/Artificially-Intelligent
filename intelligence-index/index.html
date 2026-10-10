@@ -56,6 +56,25 @@ h1{font-size:clamp(3rem,8vw,7.7rem);font-weight:620;line-height:.84;letter-spaci
 .result .info{font-size:.71rem;color:var(--muted);line-height:1.55}
 .result a{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);padding:9px 12px;margin-top:14px;color:var(--mint);font-size:.7rem;text-transform:uppercase;letter-spacing:.12em}
 .result a:hover{border-color:var(--mint)}
+
+/* Curated discovery paths with authentic links to indexed records */
+.topic-intro{border:1px solid var(--line);padding:20px 22px;background:#111a14;margin:8px 0 23px}
+.topic-intro strong{display:block;font:normal 1.2rem/1.35 Georgia,serif;color:var(--ink);margin:5px 0}
+.topic-intro p{margin:9px 0 0;font-size:.82rem;line-height:1.65;color:var(--muted)}
+.topic-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:15px 0 20px}
+.topic-card{background:#101512;border:1px solid var(--line);padding:19px;display:flex;flex-direction:column;gap:9px}
+.topic-id{font-size:.67rem;letter-spacing:.17em;text-transform:uppercase;color:var(--mint)}
+.topic-card h4{font:normal 1.28rem/1.27 Georgia,serif;margin:0}
+.topic-card p{color:#b8c4b9;font-size:.79rem;line-height:1.6;margin:0;flex:1}
+.topic-open{align-self:flex-start;margin-top:9px;background:transparent;color:var(--mint);border:1px solid #b9ffde57;padding:9px 12px;font-size:.69rem;letter-spacing:.1em;text-transform:uppercase}
+.topic-open:hover,.topic-open:focus-visible{border-color:var(--mint);background:#b9ffde0a}
+.idea-grid{display:grid;gap:9px;margin:15px 0 23px}
+.idea-button{width:100%;text-align:left;background:#ffffff05;border:1px solid var(--line);color:var(--ink);padding:14px 18px;font:normal .97rem/1.45 Georgia,serif}
+.idea-button:hover,.idea-button:focus-visible{border-color:var(--mint)}
+.idea-button span{display:block;font:.65rem ui-monospace,Consolas,monospace;color:var(--mint);letter-spacing:.14em;margin-bottom:8px}
+.topic-more{font-size:.78rem;line-height:1.65;color:var(--muted);margin:13px 0}
+.topic-more a{color:var(--mint)}
+@media(max-width:650px){.topic-grid{grid-template-columns:1fr}}
 .source-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:12px 0}
 .source-link{display:flex;flex-direction:column;gap:6px;border:1px solid var(--line);background:var(--panel);padding:18px;transition:border-color .15s}
 .source-link:hover{border-color:var(--mint)}
@@ -88,7 +107,7 @@ h1{font-size:clamp(3rem,8vw,7.7rem);font-weight:620;line-height:.84;letter-spaci
  <div class="quick"><span>Explore a topic</span><button type="button" data-example="human consciousness">Human consciousness</button><button type="button" data-example="machine learning">Machine learning</button><button type="button" data-example="quantum consciousness">Quantum consciousness</button><button type="button" data-example="digital identity">Digital identity</button></div>
 </section>
 <div class="tabs" role="tablist" aria-label="Search source categories">
- <button class="tab" role="tab" aria-selected="true" data-tab="all">All sources</button><button class="tab" role="tab" aria-selected="false" data-tab="papers">Scholarly papers</button><button class="tab" role="tab" aria-selected="false" data-tab="encyclopedia">Encyclopedia</button><button class="tab" role="tab" aria-selected="false" data-tab="books">Books</button><button class="tab" role="tab" aria-selected="false" data-tab="web">Wider web ↗</button>
+ <button class="tab" role="tab" aria-selected="true" data-tab="all">All sources</button><button class="tab" role="tab" aria-selected="false" data-tab="papers">Scholarly papers</button><button class="tab" role="tab" aria-selected="false" data-tab="encyclopedia">Encyclopedia</button><button class="tab" role="tab" aria-selected="false" data-tab="books">Books</button><button class="tab" role="tab" aria-selected="false" data-tab="topics">Topics & Ideas</button><button class="tab" role="tab" aria-selected="false" data-tab="web">Wider web ↗</button>
 </div>
 <div class="results">
  <div><div class="meta"><div><div class="micro" id="result-eyebrow">SEARCH INDEX / READY</div><h2 class="h2" id="result-title">Begin your inquiry</h2></div><span class="helper" id="search-status" role="status" aria-live="polite">No query submitted</span></div><div id="results-area"><div class="message">Search for a subject to retrieve real results from free, public research services. No sample or fabricated results are shown.<p style="margin:9px 0 0;font:normal .83rem/1.6 ui-sans-serif,system-ui,sans-serif;color:#9b9d98">Choose Wider web to launch the same query on a full web search engine.</p></div></div></div>
@@ -122,8 +141,57 @@ function section(kind){const wrap=el("section","section"),head=el("div","section
  else{const cards=el("div","cards");results[kind].forEach(item=>cards.append(addCard(item,kind)));wrap.append(cards)}
  return wrap}
 function webPanel(){const wrap=el("section","section");wrap.append(el("div","micro","WIDER WEB / FULL SEARCH ENGINES"),el("h3","h2","Search the public web"));wrap.append(el("p","helper","For broad website discovery, these buttons open your query in an external search engine. The search results appear on that provider's site, not inside The Intelligence Index."));const grid=el("div","source-links");webOptions(current||input.value.trim()||"consciousness artificial intelligence").forEach(s=>{const a=anchor(s.url,"","source-link");a.append(el("strong","",s.name),el("small","",s.desc),el("span","go","SEARCH NOW ↗"));grid.append(a)});wrap.append(grid);return wrap}
-function render(){tabs.forEach(t=>{const selected=t.dataset.tab===active;t.setAttribute("aria-selected",String(selected))});area.replaceChildren();eyebrow.textContent=active==="web"?"RESEARCH INDEX / BROADER WEB":current?"RESEARCH INDEX / RESULTS":"RESEARCH INDEX / READY";title.textContent=current?'Inquiry: "'+current+'"':"Begin your inquiry";
+
+const researchThemes=[
+ {title:"Human Consciousness",query:"human consciousness neuroscience",keywords:["conscious","awareness","subjective","mind","qualia"],description:"Subjective experience, theories of awareness, and the relationship between mind and brain.",questions:["What makes an experience conscious?","How could subjective awareness be studied empirically?"]},
+ {title:"Artificial Intelligence",query:"artificial intelligence machine learning",keywords:["artificial intelligence","machine learning","algorithm","llm","generative ai","robot","comput"],description:"Intelligent systems, learning, representation, and the limits of machine cognition.",questions:["Can intelligence exist without consciousness?","How should machine reasoning be evaluated?"]},
+ {title:"Neuroscience & Cognition",query:"neuroscience cognition perception",keywords:["neuroscience","neural","brain","cognit","perception","memory"],description:"Neural processes, perception, attention, cognition, and evidence from brain research.",questions:["What do neural correlates reveal about awareness?","How do attention and perception shape cognition?"]},
+ {title:"Philosophy of Mind",query:"philosophy of mind functionalism",keywords:["philosoph","dualism","physicalism","functionalism","panpsychism","hard problem"],description:"Competing accounts of the mind, personal identity, qualia, and the nature of reality.",questions:["Is consciousness reducible to physical processes?","What distinguishes simulation from experience?"]},
+ {title:"Spirituality & Metaphysics",query:"consciousness spirituality metaphysics",keywords:["spirit","meditation","metaphysic","nondual","mystic","transcenden","quantum consciousness"],description:"Contemplative traditions and metaphysical interpretations, distinguished from scientific evidence.",questions:["Could awareness be a fundamental feature of reality?","How can contemplative accounts be compared with science?"]},
+ {title:"Memory & Digital Identity",query:"digital identity autobiographical memory",keywords:["identity","self","digital","archive","memory","personhood","social media"],description:"Autobiographical memory, algorithms, archived lives, and technologically mediated selfhood.",questions:["How do memories shape the self?","What does a digital archive preserve about a person?"]},
+ {title:"Ethics & Society",query:"artificial intelligence ethics society",keywords:["ethic","bias","privacy","social","human rights","governance","society","labor"],description:"Technological responsibility, governance, privacy, bias, and social effects of AI.",questions:["Who should be accountable for AI decisions?","How can technological benefits and harms be assessed?"]},
+ {title:"Science & Culture",query:"science technology culture history",keywords:["culture","science","technology","history","art","language","religion"],description:"How scientific theories and technologies shape culture, creativity, and historical ideas.",questions:["How do cultural assumptions shape scientific questions?","How do technologies change what societies consider intelligent?"]}
+];
+const archiveReading=[
+ {title:"Is Human Consciousness Connected to Artificial Intelligence?",url:"../?article=5affe752-0d79-40e0-b8b0-c2410aa11a1b",keywords:["conscious","intelligen","artificial","machine","philosoph","mind","neuro"]},
+ {title:"We Are All Archives Now",url:"../?article=2063e8d4-c3e5-4458-a5dc-24c5844bc90b",keywords:["archive","memory","identity","digital","self","culture","data"]}
+];
+function topicHeader(label,sub){const head=el("div","section-head");head.append(el("h3","",label),el("small","",sub));return head}
+function exploreButton(label,q,cls="topic-open"){const b=el("button",cls,label);b.type="button";b.addEventListener("click",()=>search(q,"topics"));return b}
+function relatedThemes(q){if(!q)return researchThemes;const low=q.toLowerCase();const matched=researchThemes.filter(t=>t.keywords.some(k=>low.includes(k)||k.includes(low)));return matched}
+function topicsPanel(){
+ const root=el("div","topics-panel"),q=current.trim(),matched=relatedThemes(q);
+ const introduction=el("div","topic-intro");introduction.append(el("div","micro",q?"TOPIC DISCOVERY / YOUR INQUIRY":"TOPIC DISCOVERY / EXPLORE"));
+ introduction.append(el("strong","",q?"Explore connections around "+q:"Follow an idea into the evidence"));
+ introduction.append(el("p","",q?"The themes and question prompts are editorial suggestions. Articles below are genuine records returned by external research services.":"Select a research theme, follow a question, or search any subject. Relevant articles are retrieved from public sources, not invented."));
+ root.append(introduction);
+ const themes=el("section","section");themes.append(topicHeader(q?"Related research themes":"Research themes",q&&matched.length?matched.length+" curated connections":"Browse by subject"));
+ const cards=el("div","topic-grid");
+ if(matched.length){matched.forEach((t,i)=>{const c=el("article","topic-card");c.append(el("div","topic-id","THEME "+String(i+1).padStart(2,"0")),el("h4","",t.title),el("p","",t.description),exploreButton("SEARCH THIS THEME ↗",t.query));cards.append(c)})}
+ else if(q){const c=el("article","topic-card");c.append(el("div","topic-id","OPEN DISCOVERY"),el("h4","",q),el("p","","No predefined theme matched this query. The live concept links and scholarly results below are based on your search."),exploreButton("EXPLORE "+q.toUpperCase()+" ↗",q));cards.append(c)}
+ themes.append(cards);root.append(themes);
+ const suggestions=el("section","section");suggestions.append(topicHeader("Ideas & questions","Select one to investigate"));const questions=(q&&matched.length?matched:[...researchThemes].slice(0,4)).flatMap(t=>t.questions.map(question=>({question,search:t.query}))).slice(0,6);
+ if(q&&!matched.length){questions.splice(0,questions.length,{question:"What is currently known about "+q+"?",search:q},{question:"What competing explanations exist for "+q+"?",search:q+" research"},{question:"What evidence and criticisms are associated with "+q+"?",search:q+" review"})}
+ const qcards=el("div","idea-grid");questions.forEach((item,i)=>{const b=exploreButton(item.question,item.search,"idea-button");b.prepend(el("span","","INQUIRY "+String(i+1).padStart(2,"0")));qcards.append(b)});suggestions.append(qcards);root.append(suggestions);
+ if(q&&!busy){const entries=results.encyclopedia||[];const wiki=el("section","section");wiki.append(topicHeader("Related concepts","Live Wikipedia results"));
+ if(errors.encyclopedia){const m=el("div","message","Live encyclopedia lookup is unavailable. ");m.append(anchor("https://en.wikipedia.org/w/index.php?search="+encodeURIComponent(q),"Search Wikipedia directly ↗"));wiki.append(m)}
+ else if(entries.length){const list=el("div","cards");entries.slice(0,5).forEach(item=>{const card=el("article","result");card.append(el("div","result-top","ENCYCLOPEDIA / RELATED CONCEPT"),el("h4","",item.title));if(item.detail)card.append(el("p","",item.detail));const actions=el("div","topic-actions");actions.append(anchor(item.url,"READ REFERENCE ↗"),exploreButton("EXPLORE TOPIC",item.title));card.append(actions);list.append(card)});wiki.append(list)}
+ else wiki.append(el("div","message","No encyclopedia concepts were returned for this query."));
+ root.append(wiki);
+ const papers=el("section","section");papers.append(topicHeader("Related research articles","Live scholarly metadata from Crossref"));
+ if(errors.papers){const m=el("div","message","Scholarly results are temporarily unavailable. ");m.append(anchor("https://search.crossref.org/?q="+encodeURIComponent(q),"Search Crossref directly ↗"));papers.append(m)}
+ else if(results.papers?.length){const list=el("div","cards");results.papers.slice(0,6).forEach(item=>list.append(addCard(item,"papers")));papers.append(list)}
+ else papers.append(el("div","message","No research articles were returned for this query."));
+ root.append(papers)}
+ else if(q&&busy){root.append(el("div","message","Searching for related concepts and research articles. Please wait..."))}
+ const reading=archiveReading.filter(item=>!q||item.keywords.some(k=>q.toLowerCase().includes(k)));
+ if(reading.length){const own=el("section","section");own.append(topicHeader("From the Data Stream","Published research archive"));const list=el("div","cards");reading.forEach(item=>{const card=el("article","result");card.append(el("div","result-top","ARTIFICIALLY INTELLIGENT / ARCHIVE"),el("h4","",item.title));card.append(anchor(item.url,"READ ARCHIVE ARTICLE ↗"));list.append(card)});own.append(list);root.append(own)}
+ root.append(el("p","topic-more","Research themes and idea prompts are curated for exploration. The live scholarly and encyclopedia results are retrieved from their original providers and should be checked before drawing conclusions."));
+ return root
+}
+function render(){tabs.forEach(t=>{const selected=t.dataset.tab===active;t.setAttribute("aria-selected",String(selected))});area.replaceChildren();eyebrow.textContent=active==="web"?"RESEARCH INDEX / BROADER WEB":active==="topics"?"RESEARCH INDEX / DISCOVER":current?"RESEARCH INDEX / RESULTS":"RESEARCH INDEX / READY";title.textContent=active==="topics"?(current?'Connections: "'+current+'"':"Topics, ideas & articles"):(current?'Inquiry: "'+current+'"':"Begin your inquiry");
  if(active==="web"){area.append(webPanel());status.textContent="External web search";return}
+ if(active==="topics"){area.append(topicsPanel());status.textContent=current?(busy?"Finding related sources":"Explore connected research"):"Curated research discovery";return}
  if(!current){const msg=el("div","message","Search for a subject to retrieve real results from free, public research services. No sample or fabricated results are shown.");area.append(msg);status.textContent="No query submitted";return}
  if(busy){area.append(el("div","message","Searching public research sources. Please wait..."));status.textContent="Searching";return}
  const list=active==="all"?providers:[active];list.forEach(k=>area.append(section(k)));let count=list.reduce((n,k)=>n+results[k].length,0);status.textContent=count+" results shown"+(Object.keys(errors).length?" | Some sources unavailable":"")}
@@ -134,7 +202,7 @@ async function searchCrossref(q,signal){const url="https://api.crossref.org/work
 async function searchWikipedia(q,signal){const url="https://en.wikipedia.org/w/api.php?"+new URLSearchParams({action:"query",list:"search",srsearch:q,srlimit:"8",srprop:"snippet|timestamp",format:"json",origin:"*"});const data=await fetchJSON(url,signal);return (data.query?.search||[]).map(x=>({title:x.title||"Untitled article",detail:String(x.snippet||"").replace(/<[^>]*>/g," ").replace(/\s+/g," ").trim(),year:x.timestamp?String(x.timestamp).slice(0,4):"",type:"Reference article",meta:"Wikipedia | Community-edited reference",url:"https://en.wikipedia.org/wiki/"+encodeURIComponent(String(x.title||"").replace(/ /g,"_"))}))}
 async function searchBooks(q,signal){const url="https://openlibrary.org/search.json?"+new URLSearchParams({q,limit:"8",fields:"key,title,author_name,first_publish_year,edition_count"});const data=await fetchJSON(url,signal);return (data.docs||[]).map(x=>({title:x.title||"Untitled book",detail:Array.isArray(x.author_name)?x.author_name.slice(0,3).join(", "):"",year:x.first_publish_year||"",type:"Book catalog",meta:(x.edition_count||0)+" edition(s) | Open Library",url:String(x.key||"").startsWith("/works/")?"https://openlibrary.org"+x.key:"https://openlibrary.org/search?q="+encodeURIComponent(x.title||q)}))}
 const searchFns={papers:searchCrossref,encyclopedia:searchWikipedia,books:searchBooks};
-async function search(q){const normalized=q.trim().slice(0,160);if(normalized.length<2)return;current=normalized;input.value=normalized;active="all";updateWebLinks();const key=normalized.toLowerCase();if(controller)controller.abort();const id=++requestId;const saved=cache.get(key);
+async function search(q,preferredTab){const normalized=q.trim().slice(0,160);if(normalized.length<2)return;const previousTab=active;current=normalized;input.value=normalized;active=preferredTab||(previousTab==="topics"?"topics":"all");updateWebLinks();const key=normalized.toLowerCase();if(controller)controller.abort();const id=++requestId;const saved=cache.get(key);
  if(saved){results=saved.results;errors=saved.errors;busy=false;render();return}
  controller=new AbortController();const signal=controller.signal;busy=true;submit.disabled=true;render();
  let timer=setTimeout(()=>controller.abort(),12000);
