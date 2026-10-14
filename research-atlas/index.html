@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090c0b">
+<meta name="description" content="Explore an interactive research atlas connecting artificial intelligence, consciousness, memory, digital identity, language, cognition, and published essays.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://amarisct.github.io/Artificially-Intelligent/research-atlas/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Artificially Intelligent">
+<meta property="og:title" content="Research Atlas | Artificially Intelligent">
+<meta property="og:description" content="An interactive map of ideas linking consciousness, artificial intelligence, memory, identity, and the site's published research.">
+<meta property="og:url" content="https://amarisct.github.io/Artificially-Intelligent/research-atlas/">
+<meta name="twitter:card" content="summary">
+<title>Research Atlas | Artificially Intelligent</title>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Research Atlas","url":"https://amarisct.github.io/Artificially-Intelligent/research-atlas/","description":"Interactive conceptual research map connecting artificial intelligence, consciousness, memory, identity, cognition, language, digital culture, and archives.","isPartOf":{"@type":"WebSite","name":"Artificially Intelligent","url":"https://amarisct.github.io/Artificially-Intelligent/"}}</script>
+<style>
+:root{color-scheme:dark;--bg:#070b0a;--panel:#0c1110;--panel2:#101715;--ink:#f0f2ed;--muted:#94a49a;--sub:#bac7c0;--line:rgba(209,238,218,.15);--mint:#a5f2ce;--blue:#98cbda;--purple:#c2acfa;--rose:#efb4ce}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(ellipse at 81% 9%,#23483a25,transparent 36%),repeating-linear-gradient(0deg,transparent 0 59px,#ffffff05 60px),repeating-linear-gradient(90deg,transparent 0 59px,#ffffff04 60px)}
+a{color:inherit;text-decoration:none}button,input{font:inherit}button{cursor:pointer;color:inherit}button:focus-visible,a:focus-visible,input:focus-visible,[role="button"]:focus-visible{outline:2px solid var(--mint);outline-offset:3px}a:hover{color:var(--mint)}
+button[disabled]{opacity:.5;cursor:not-allowed}.wrap{width:min(1740px,100%);padding-left:clamp(17px,3vw,55px);padding-right:clamp(17px,3vw,55px);margin:0 auto}
+.top{border-bottom:1px solid var(--line);background:#080d0be8;position:relative;z-index:5}.topbar{min-height:74px;display:flex;align-items:center;gap:25px}
+.brand{flex:none;min-width:230px}.brand strong{display:block;font:400 1.48rem/1.05 Georgia,serif;letter-spacing:-.035em}.brand small{display:block;margin-top:5px;font-size:.61rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.topnav{display:flex;gap:clamp(10px,1.6vw,29px);align-items:center;margin-left:auto}.topnav a{font-size:.73rem;color:#bccbc2;white-space:nowrap;border-bottom:2px solid transparent;padding:26px 0}.topnav a[aria-current="page"]{border-color:var(--mint);color:var(--mint)}
+.subscribe{margin-left:12px;border:1px solid #81dcae75;border-radius:40px;padding:10px 16px;white-space:nowrap;font-size:.72rem;color:var(--mint)}.subscribe:hover{background:#a5f2ce14}
+.hero{padding-top:54px;padding-bottom:36px;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(260px,.62fr);gap:60px;align-items:end}
+.kicker{display:block;color:var(--mint);text-transform:uppercase;letter-spacing:.22em;font-size:.66rem;font-weight:700}.hero h1{font:400 clamp(3.5rem,6.9vw,7.8rem)/.98 Georgia,serif;letter-spacing:-.06em;margin:14px 0 16px}.hero .lead{font:1.17rem/1.6 Georgia,serif;color:#c4cdc5;margin:0;max-width:760px}.hero-side{border-left:1px solid var(--line);padding-left:25px}.hero-side p{color:var(--muted);font-size:.86rem;line-height:1.8;margin:12px 0 0}
+.workspace{display:grid;grid-template-columns:minmax(215px,255px) minmax(0,1fr) minmax(270px,317px);gap:12px;align-items:stretch}
+.surface{min-width:0;border:1px solid var(--line);border-radius:11px;background:linear-gradient(145deg,#111a1640,#0b1110 48%);box-shadow:0 12px 60px #0002}
+.sidebar{padding:20px 15px}.sidebar-head{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:0 5px 16px;border-bottom:1px solid var(--line)}
+h2,h3,p{overflow-wrap:break-word}.sidebar h2,.detail h2,.feature-title{font:400 1.25rem/1.25 Georgia,serif;margin:0}.sidebar-head small{font-size:.68rem;color:var(--muted)}
+.searchbox{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:6px;background:#131c187a;color:var(--ink);outline:none;margin:16px 0 13px;font-size:.78rem}.searchbox:focus{border-color:var(--mint)}
+.category-list{display:grid;gap:4px}.category-button{display:flex;gap:12px;align-items:center;text-align:left;width:100%;background:transparent;border:1px solid transparent;padding:9px 10px;border-radius:6px;color:#b9c7be;font-size:.8rem;transition:background .15s,border-color .15s}.category-button:hover{background:#a6ffdf0b;border-color:#dfffea12}.category-button[aria-current="true"]{background:#a5f2ce15;border-color:#a5f2ce35;color:#defeea}.category-button span.name{flex:1}.category-button .dot{width:8px;height:8px;border-radius:50%;background:var(--node-color,var(--mint));box-shadow:0 0 12px var(--node-color,var(--mint))60;flex:none}.category-button .count{font:600 .72rem ui-monospace,monospace;color:#8b9e92}
+.sidebar-note{font-size:.7rem;color:var(--muted);padding:19px 6px 0;margin-top:16px;border-top:1px solid var(--line)}
+.canvas{position:relative;overflow:hidden;display:flex;flex-direction:column;min-height:622px}
+.toolbar{display:flex;align-items:center;flex-wrap:wrap;justify-content:space-between;gap:12px;padding:15px 18px;border-bottom:1px solid var(--line)}
+.tabs{display:inline-flex;padding:3px;border:1px solid var(--line);border-radius:40px;gap:3px}.tab{background:transparent;border:0;border-radius:40px;color:var(--muted);font-size:.7rem;padding:9px 13px}.tab[aria-selected="true"]{background:#a5f2ce12;color:var(--mint)}
+.legend{font:normal .7rem/1.4 ui-monospace,monospace;color:#90a39a}
+.graph{width:100%;flex:1;min-height:514px;position:relative;background:radial-gradient(ellipse at 51% 48%,#37604e23 0%,#12201a17 28%,transparent 70%),repeating-linear-gradient(0deg,transparent 0 49px,#ffffff03 50px),repeating-linear-gradient(90deg,transparent 0 49px,#ffffff03 50px);cursor:grab;touch-action:pan-y}
+.graph.dragging{cursor:grabbing}.graph svg{width:100%;height:100%;position:absolute;inset:0;overflow:visible}
+.edge{fill:none;stroke:#92bdaa;stroke-width:1.45;opacity:.22;transition:opacity .2s,stroke-width .2s}.edge.focused{stroke:var(--mint);opacity:.72;stroke-width:2}.edge.faded{opacity:.09}
+.node{cursor:pointer;outline:none}.node circle.core{stroke-width:1.5;transition:stroke-width .2s;filter:drop-shadow(0 0 16px var(--node-color))}.node.selected circle.core{stroke-width:3;filter:drop-shadow(0 0 25px var(--node-color))}.node.dim{opacity:.21}.node:focus-visible circle.core{stroke-width:4}.node .glow{opacity:.15}.node .label{font:23px Georgia,serif;fill:#f0f2ec;paint-order:stroke fill;stroke:#070b0a;stroke-width:5px;stroke-linejoin:round}.node .label.small{font-size:21px}.node.selected .label{fill:#e2fff1}
+.zoom-controls{position:absolute;bottom:18px;left:18px;display:flex;z-index:2;background:#08100de0;border:1px solid var(--line);border-radius:7px;overflow:hidden}.zoom-controls button{width:40px;height:39px;border:0;background:transparent;font-size:1.2rem;border-right:1px solid var(--line)}.zoom-controls button:last-child{border-right:0;font-size:.85rem}.zoom-controls button:hover{background:#a5f2ce15;color:var(--mint)}
+.graph-caption{position:absolute;bottom:21px;right:17px;text-transform:uppercase;letter-spacing:.14em;color:#a7b7a9;font-size:.59rem;pointer-events:none}
+.paths{display:none;flex:1;padding:25px;overflow:auto}.paths.active{display:block}.path-intro{max-width:650px;color:var(--muted);font-size:.85rem}.path-grid{display:grid;gap:12px;margin-top:25px}.path-item{width:100%;text-align:left;border:1px solid var(--line);background:#ffffff04;border-radius:8px;padding:20px;display:grid;grid-template-columns:54px 1fr;gap:16px}.path-item:hover{border-color:#a5f2ce77}.path-icon{width:49px;height:49px;display:grid;place-items:center;border-radius:50%;border:1px solid #a5f2ce60;background:#a5f2ce0c;color:var(--mint);font:1.4rem Georgia,serif}.path-item strong{font:400 1.35rem/1.3 Georgia,serif;display:block}.path-item small{display:block;margin-top:6px;color:var(--muted);line-height:1.5}
+.detail{padding:23px 20px;min-height:622px}.detail-title{display:flex;align-items:flex-start;gap:11px}.detail-dot{width:10px;height:10px;border-radius:50%;background:var(--mint);flex:none;margin-top:10px;box-shadow:0 0 15px var(--mint)}.detail h2{font-size:1.7rem}.meta{font:normal .62rem ui-monospace,monospace;text-transform:uppercase;letter-spacing:.15em;color:#92a499;margin-top:12px}.description{font:.91rem/1.73 Georgia,serif;color:#c3d0c6;margin:19px 0 22px}.outline-btn{display:block;text-align:center;border:1px solid #a5f2ce84;border-radius:35px;padding:11px;font-size:.7rem;color:var(--mint);text-decoration:none}.outline-btn:hover{background:#a5f2ce13}
+.group-title{display:flex;justify-content:space-between;align-items:center;gap:8px;border-top:1px solid var(--line);padding-top:20px;margin-top:22px;text-transform:uppercase;font-size:.64rem;letter-spacing:.18em;color:#c7d6ca}.group-title a{font-size:.65rem;text-transform:none;letter-spacing:0;color:var(--mint)}
+.article-small{display:block;border-bottom:1px solid #ffffff10;padding:15px 0;text-decoration:none}.article-small:last-child{border:0}.article-small small{display:block;color:var(--mint);font:.65rem ui-monospace,monospace;letter-spacing:.08em}.article-small strong{display:block;font:400 1.05rem/1.28 Georgia,serif;margin-top:7px}.empty{color:var(--muted);font-size:.8rem;padding:14px 0}
+.connection-list{display:grid;gap:9px;margin-top:15px}.connection{border:0;background:transparent;display:flex;gap:9px;align-items:center;text-align:left;width:100%;padding:4px 0;color:#c4d1c5;font-size:.77rem}.connection:hover{color:var(--mint)}.connection i{width:7px;height:7px;background:var(--node-color);border-radius:50%;flex:none}.connection span{flex:1}.connection small{font-size:.61rem;color:var(--muted)}
+.featured{padding:37px 0 68px}.feature-row{display:flex;align-items:baseline;gap:20px;margin-bottom:18px}.feature-row .rule{height:1px;background:var(--line);flex:1}.feature-row a{color:var(--mint);font-size:.72rem}.feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.feature-card{display:grid;grid-template-columns:100px minmax(0,1fr);gap:18px;align-items:start;background:linear-gradient(115deg,#131c19,#0e1311);border:1px solid var(--line);border-radius:9px;padding:16px;min-height:156px}
+.feature-card:hover{border-color:#a5f2ce83}.feature-art{border-radius:6px;min-height:124px;position:relative;overflow:hidden;background:radial-gradient(circle at 45% 45%,#aecbd360,transparent 15%),radial-gradient(circle at 50% 50%,#537d8a44 0,transparent 50%),#111e1c}.feature-art:after{content:"";position:absolute;inset:16px;border:1px solid #a5f2ce69;transform:rotate(28deg);border-radius:32% 68% 63% 37%}.feature-card:nth-child(2) .feature-art{background:radial-gradient(circle at 48% 44%,#bedccc5a,transparent 18%),radial-gradient(circle at 50% 50%,#69577f44,transparent 52%),#14141d}.feature-card small{display:block;font:.62rem ui-monospace,monospace;letter-spacing:.12em;color:var(--mint);text-transform:uppercase;margin:6px 0 9px}.feature-card h3{font:400 1.35rem/1.2 Georgia,serif;margin:0 0 8px}.feature-card p{font-size:.76rem;line-height:1.55;color:var(--muted);margin:0}
+.feature-footer{margin-top:10px;color:var(--mint);font-size:.67rem}
+.info-note{font-size:.72rem;line-height:1.6;color:var(--muted);margin-top:18px}.footer{border-top:1px solid var(--line);padding:24px 0;color:#81978a;text-transform:uppercase;letter-spacing:.15em;font-size:.63rem}.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+@media(max-width:1370px){.workspace{grid-template-columns:225px minmax(0,1fr) 285px}.brand{min-width:auto}.topnav{gap:15px}.node .label{font-size:20px}}
+@media(max-width:1120px){.workspace{grid-template-columns:220px minmax(0,1fr)}.detail{grid-column:1/-1;min-height:0}.sidebar,.canvas{min-height:530px}.canvas{min-height:530px}.graph{min-height:460px}.hero{gap:30px}}
+@media(max-width:740px){.topbar{min-height:0;flex-wrap:wrap;padding-top:18px;padding-bottom:13px;gap:9px}.brand{width:100%}.brand strong{font-size:1.25rem}.topnav{order:3;overflow-x:auto;width:100%;gap:18px;margin:0}.topnav a{padding:9px 0;font-size:.65rem}.subscribe{margin:0 0 0 auto;position:absolute;right:18px;top:22px}.hero{grid-template-columns:1fr;padding-top:29px;padding-bottom:24px;gap:13px}.hero h1{font-size:clamp(3.1rem,13vw,5.2rem)}.hero .lead{font-size:1rem}.hero-side{border:0;padding:0}.hero-side p{font-size:.79rem}.workspace{display:flex;flex-direction:column}.sidebar{min-height:0;padding:13px}.category-list{grid-template-columns:repeat(2,minmax(0,1fr))}.category-button{padding:9px 7px;font-size:.69rem;gap:6px}.category-button .count{display:none}.sidebar-note{display:none}.searchbox{margin:10px 0}.canvas{min-height:430px}.graph{min-height:390px}.node .label{font-size:19px}.toolbar{padding:12px}.detail{padding:20px}.feature-grid{grid-template-columns:1fr}.feature-card{grid-template-columns:90px 1fr}.featured{padding:28px 0 40px}.graph-caption{display:none}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap topbar">
+<a class="brand" href="../"><strong>Artificially Intelligent</strong><small>Human × Machine Learning</small></a>
+<nav class="topnav" aria-label="Primary navigation">
+<a href="../#stream">Data Stream</a>
+<a href="../research/published/">Published Research</a>
+<a href="../intelligence-index/">Intelligence Index</a>
+<a href="./" aria-current="page">Research Atlas</a>
+</nav>
+<a class="subscribe" href="https://artificialxintelligence.substack.com/" target="_blank" rel="noopener noreferrer">Subscribe ↗</a>
+</div></header>
+<main class="wrap">
+<section class="hero" aria-labelledby="atlas-title">
+<div><span class="kicker">A living map of ideas / INT_002</span><h1 id="atlas-title">Research Atlas</h1><p class="lead">Explore the connections between artificial intelligence, consciousness, memory, digital identity, and culture.</p></div>
+<div class="hero-side"><span class="kicker">Follow the curiosity</span><p>Ideas rarely exist in isolation. Begin with a concept, follow its connections, and discover related work from the published research archive.</p></div>
+</section>
+<section class="workspace" aria-label="Interactive research atlas">
+<aside class="surface sidebar" aria-label="Concept explorer">
+<div class="sidebar-head"><h2>Explore by concept</h2><small id="concept-count">8 concepts</small></div>
+<label for="concept-search" class="kicker" style="display:block;margin-top:15px;font-size:.58rem;color:var(--muted)">Search the atlas</label>
+<input id="concept-search" class="searchbox" type="search" placeholder="Concepts, research, ideas..." autocomplete="off">
+<div class="category-list" id="category-list"></div>
+<p class="sidebar-note">Concept links are editorial research pathways, not measured citation or scientific relationships.</p>
+</aside>
+<section class="surface canvas" aria-label="Research visualization">
+<div class="toolbar"><div class="tabs" role="tablist" aria-label="Atlas view">
+<button class="tab" role="tab" id="graph-tab" aria-controls="graph-panel" aria-selected="true">Knowledge Graph</button>
+<button class="tab" role="tab" id="paths-tab" aria-controls="paths-panel" aria-selected="false">Reading Paths</button>
+</div><span class="legend" id="graph-summary">8 concepts · 12 connections</span></div>
+<div id="graph-panel" class="graph" role="tabpanel" aria-labelledby="graph-tab">
+<svg id="atlas-svg" viewBox="0 0 1100 700" aria-label="Concept network. Select a node to explore its related research and connections." role="img">
+<defs><radialGradient id="core-fill"><stop offset="0" stop-color="#d1fbe6" stop-opacity=".73"/><stop offset=".28" stop-color="#93d7b8" stop-opacity=".3"/><stop offset="1" stop-color="#08130e" stop-opacity=".94"/></radialGradient></defs>
+<g id="graph-content"></g></svg>
+<div class="zoom-controls" aria-label="Graph controls">
+<button type="button" id="zoom-in" aria-label="Zoom in">+</button><button type="button" id="zoom-out" aria-label="Zoom out">−</button><button type="button" id="zoom-fit" aria-label="Reset zoom and position">⌖</button>
+</div><div class="graph-caption">Select a node · Drag to pan</div>
+</div>
+<div id="paths-panel" class="paths" role="tabpanel" aria-labelledby="paths-tab" hidden>
+<span class="kicker">Suggested reading paths</span>
+<p class="path-intro">Move from a central question to the concepts that shape it. These pathways are editorial suggestions, not claims of scientific equivalence.</p>
+<div class="path-grid" id="path-grid"></div></div>
+</section>
+<aside class="surface detail" id="detail-panel" aria-live="polite" aria-label="Selected concept">
+<div class="detail-title"><span id="detail-dot" class="detail-dot"></span><h2 id="detail-name">Consciousness</h2></div>
+<div id="detail-meta" class="meta">Research concept</div>
+<p id="detail-description" class="description">Select a concept to explore its connections.</p>
+<a class="outline-btn" id="explore-link" href="../intelligence-index/">Explore in the Intelligence Index ↗</a>
+<div class="group-title"><span>Related published research</span><a href="../research/published/">View all ↗</a></div>
+<div id="related-list"></div>
+<div class="group-title"><span>Connected concepts</span><span style="letter-spacing:0;text-transform:none;font-size:.66rem;color:var(--muted)">Editorial pathways</span></div>
+<div class="connection-list" id="connection-list"></div>
+</aside>
+</section>
+<section class="featured" aria-labelledby="featured-title">
+<div class="feature-row"><h2 class="feature-title" id="featured-title">Featured Research</h2><div class="rule"></div><a href="../research/published/">View all published research ↗</a></div>
+<div class="feature-grid" id="feature-grid"><p class="empty">Loading the published research archive...</p></div>
+<p class="info-note" id="feed-note">Showing published articles only. Unfinished research is not presented as completed work.</p>
+</section>
+<noscript><section class="featured"><h2>Explore our research</h2><p>Enable JavaScript to interact with the Research Atlas. You can read published work at <a href="../research/published/">Published Research</a>, including <a href="../research/published/we-are-all-archives-now/">We Are All Archives Now</a> and <a href="../research/published/is-human-consciousness-connected-to-artificial-intelligence/">Is Human Consciousness Connected to Artificial Intelligence?</a>.</p></section></noscript>
+</main>
+<footer class="footer"><div class="wrap footer-row"><span>Product of Amaris.Studio</span><span>Artificially Intelligent / Human × Machine Learning</span></div></footer>
+<script>
+(function () {
+"use strict";
+const BASE="../research/published/";
+const concepts=[
+{id:"ai",name:"Artificial Intelligence",color:"#9bcfda",x:524,y:344,r:56,description:"Artificial intelligence studies and builds systems that perform tasks associated with learning, inference, perception, and language. Its connection to human experience raises questions about knowledge, agency, and understanding."},
+{id:"consciousness",name:"Consciousness",color:"#a4ecc3",x:560,y:128,r:43,description:"Consciousness names the subjective dimension of experience: what it is like to perceive, think, and be aware. Whether and how this could relate to machine systems remains an open philosophical and scientific question."},
+{id:"memory",name:"Memory",color:"#98c9e7",x:818,y:240,r:39,description:"Memory preserves and reconstructs information across time. Comparing human remembering with computational storage raises questions about continuity, interpretation, and the limits of machine analogy."},
+{id:"identity",name:"Identity",color:"#e7b1d0",x:851,y:500,r:38,description:"Identity concerns the narratives, relationships, records, and experiences through which a person becomes recognizable to themselves and others, including through digital traces."},
+{id:"language",name:"Language",color:"#e7d6ad",x:268,y:339,r:39,description:"Language makes meanings shareable, yet fluent language alone does not establish understanding or awareness. It forms a bridge and a boundary between human communication and machine output."},
+{id:"cognition",name:"Cognition",color:"#c0b1ee",x:307,y:155,r:39,description:"Cognition includes attention, reasoning, learning, and information processing. Studying human cognition offers useful comparisons with AI while also revealing important differences."},
+{id:"culture",name:"Digital Culture",color:"#a3dfb1",x:594,y:551,r:40,description:"Digital culture describes how technologies, platforms, and shared practices shape expression, memory, creativity, and collective life."},
+{id:"archives",name:"Archives",color:"#b0cbd1",x:279,y:543,r:35,description:"Archives preserve selected traces of the past. Digital archives complicate who records, organizes, remembers, and interprets the lives represented in those traces."}
+];
+const links=[
+["ai","consciousness"],["ai","cognition"],["ai","language"],["ai","memory"],["ai","identity"],["ai","culture"],
+["consciousness","cognition"],["consciousness","identity"],["memory","identity"],["memory","archives"],["archives","culture"],["language","culture"]
+];
+const fallback=[
+{id:"2063e8d4-c3e5-4458-a5dc-24c5844bc90b",title:"We Are All Archives Now",url:BASE+"we-are-all-archives-now/",topics:["memory","archives","culture","identity","ai"],excerpt:"On historical archives, digital traces, remembering, and the way AI draws from records of human life."},
+{id:"5affe752-0d79-40e0-b8b0-c2410aa11a1b",title:"Is Human Consciousness Connected to Artificial Intelligence?",url:BASE+"is-human-consciousness-connected-to-artificial-intelligence/",topics:["consciousness","ai","cognition","language","identity"],excerpt:"An exploration of consciousness, machine intelligence, and the differences between simulation and experience."}
+];
+const byId=Object.fromEntries(concepts.map(c=>[c.id,c]));
+const articleById=Object.fromEntries(fallback.map(a=>[a.id,a]));
+let published=fallback.slice();let selected="consciousness",query="",zoom=1,panX=0,panY=0,activeView="graph";
+const $=id=>document.getElementById(id),NS="http://www.w3.org/2000/svg";
+const graph=$("graph-content"),svg=$("atlas-svg"),category=$("category-list");
+const related=$("related-list"),connections=$("connection-list"),featured=$("feature-grid");
+const graphNodes=new Map(),graphEdges=[];
+function svgEl(tag,props={},text){
+  const el=document.createElementNS(NS,tag);
+  for(const [key,value] of Object.entries(props))el.setAttribute(key,String(value));
+  if(text!==undefined)el.textContent=text;
+  return el;
+}
+function makeGraph(){
+  const ambient=svgEl("g",{"aria-hidden":"true"});
+  for(let i=0;i<85;i++){
+    const x=24+((i*277+77)%1049),y=32+((i*173+113)%640),r=(i%8===0)?2.6:1.25;
+    ambient.appendChild(svgEl("circle",{cx:x,cy:y,r,fill:i%4===0?"#b9ffde":"#adc4bc",opacity:".09"}));
+  }
+  graph.appendChild(ambient);
+  const curves=svgEl("g",{"aria-hidden":"true"});
+  for(const [from,to] of links){
+    const a=byId[from],b=byId[to],dx=b.x-a.x,dy=b.y-a.y;
+    const qx=(a.x+b.x)/2-dy*.085,qy=(a.y+b.y)/2+dx*.085;
+    const el=svgEl("path",{d:"M "+a.x+" "+a.y+" Q "+qx+" "+qy+" "+b.x+" "+b.y,class:"edge"});
+    curves.appendChild(el);graphEdges.push({from,to,el});
+  }
+  graph.appendChild(curves);
+  const points=svgEl("g");
+  for(const c of concepts){
+    const g=svgEl("g",{class:"node","data-id":c.id,role:"button",tabindex:"0","aria-label":"Explore "+c.name,style:"--node-color:"+c.color});
+    g.appendChild(svgEl("circle",{cx:c.x,cy:c.y,r:c.r+17,fill:c.color,class:"glow"}));
+    g.appendChild(svgEl("circle",{cx:c.x,cy:c.y,r:c.r,fill:"url(#core-fill)",stroke:c.color,class:"core"}));
+    g.appendChild(svgEl("circle",{cx:c.x-10,cy:c.y-12,r:Math.max(8,c.r*.21),fill:c.color,opacity:".14"}));
+    const tx=c.x+c.r+16,ty=c.y-3;
+    const label=svgEl("text",{x:tx,y:ty,class:"label"+(c.name.length>14?" small":"")});
+    const words=c.name.split(" ");
+    if(words.length>1&&c.name.length>18){
+      const middle=Math.ceil(words.length/2);
+      label.appendChild(svgEl("tspan",{x:tx,dy:"0"},words.slice(0,middle).join(" ")));
+      label.appendChild(svgEl("tspan",{x:tx,dy:"25"},words.slice(middle).join(" ")));
+    }else label.textContent=c.name;
+    g.appendChild(label);
+    g.addEventListener("click",()=>choose(c.id));
+    g.addEventListener("keydown",event=>{
+      if(event.key==="Enter"||event.key===" "){event.preventDefault();choose(c.id)}
+    });
+    points.appendChild(g);graphNodes.set(c.id,g);
+  }
+  graph.appendChild(points);
+  transform();
+}
+function transform(){graph.setAttribute("transform","translate("+(550+panX)+" "+(350+panY)+") scale("+zoom+") translate(-550 -350)")}
+function choose(id){
+  if(!byId[id])return;
+  selected=id;
+  updateEverything();
+  if(window.innerWidth<741){$("detail-panel").scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"nearest"})}
+}
+function activeArticles(id){return published.filter(a=>a.topics.includes(id))}
+function renderSidebar(){
+  category.replaceChildren();
+  const all=document.createElement("button");
+  all.className="category-button";all.type="button";all.setAttribute("aria-current",query===""&&!selected?"true":"false");
+  all.innerHTML='<span class="dot" style="--node-color:#a5f2ce"></span><span class="name">All Concepts</span><span class="count">08</span>';
+  all.onclick=()=>{$("concept-search").value="";query="";selected="";updateEverything()};
+  category.appendChild(all);
+  for(const c of concepts.filter(c=>!query||c.name.toLowerCase().includes(query)||c.description.toLowerCase().includes(query))){
+    const btn=document.createElement("button");btn.type="button";btn.className="category-button";
+    btn.setAttribute("aria-current",String(selected===c.id));
+    btn.style.setProperty("--node-color",c.color);
+    const dot=document.createElement("span");dot.className="dot";
+    const name=document.createElement("span");name.className="name";name.textContent=c.name;
+    const count=document.createElement("span");count.className="count";count.textContent=String(activeArticles(c.id).length).padStart(2,"0");
+    btn.append(dot,name,count);btn.onclick=()=>choose(c.id);category.appendChild(btn);
+  }
+  $("concept-count").textContent=String(concepts.filter(c=>!query||c.name.toLowerCase().includes(query)||c.description.toLowerCase().includes(query)).length)+" concepts";
+  if(category.children.length===1&&query){const el=document.createElement("p");el.className="empty";el.textContent="No matching concepts.";category.appendChild(el)}
+}
+function renderDetail(){
+  const c=byId[selected];
+  $("detail-name").textContent=c?c.name:"Explore the Atlas";
+  $("detail-dot").style.background=c?c.color:"#a5f2ce";
+  $("detail-dot").style.boxShadow="0 0 15px "+(c?c.color:"#a5f2ce");
+  $("detail-meta").textContent=c?"Research concept · "+activeArticles(c.id).length+" related published "+(activeArticles(c.id).length===1?"article":"articles"):"8 connected concepts";
+  $("detail-description").textContent=c?c.description:"Select any concept to reveal its research context, connected ideas, and related published articles.";
+  related.replaceChildren();connections.replaceChildren();
+  const matches=c?activeArticles(c.id):published;
+  if(!matches.length){
+    const msg=document.createElement("p");msg.className="empty";msg.textContent="No published article has been linked to this concept yet.";related.appendChild(msg);
+  }
+  for(const a of matches){
+    const el=document.createElement("a");el.className="article-small";el.href=a.url;
+    const small=document.createElement("small");small.textContent="PUBLISHED RESEARCH";
+    const strong=document.createElement("strong");strong.textContent=a.title;
+    el.append(small,strong);related.appendChild(el);
+  }
+  const connected=c?links.filter(pair=>pair.includes(c.id)).map(pair=>byId[pair[0]===c.id?pair[1]:pair[0]]):concepts;
+  for(const item of connected){
+    const b=document.createElement("button");b.type="button";b.className="connection";
+    b.style.setProperty("--node-color",item.color);
+    const dot=document.createElement("i");
+    const name=document.createElement("span");name.textContent=item.name;
+    const tag=document.createElement("small");tag.textContent="Explore ↗";
+    b.append(dot,name,tag);b.onclick=()=>choose(item.id);connections.appendChild(b);
+  }
+  $("explore-link").href="../intelligence-index/";
+}
+function renderGraphFocus(){
+  for(const [id,el] of graphNodes){
+    el.classList.toggle("selected",selected===id);
+    el.classList.toggle("dim",!!query&&!byId[id].name.toLowerCase().includes(query)&&!byId[id].description.toLowerCase().includes(query));
+    el.setAttribute("aria-pressed",String(selected===id));
+  }
+  for(const edge of graphEdges){
+    const focus=!!selected&&(edge.from===selected||edge.to===selected);
+    edge.el.classList.toggle("focused",focus);
+    edge.el.classList.toggle("faded",!!selected&&!focus);
+  }
+  $("graph-summary").textContent=concepts.length+" concepts · "+links.length+" editorial connections";
+}
+function renderPaths(){
+  const paths=[
+  {id:"consciousness",name:"Can machines be conscious?",desc:"Begin with consciousness, then explore cognition, language, and AI."},
+  {id:"archives",name:"What does technology remember?",desc:"Follow archives into memory, identity, digital culture, and AI."},
+  {id:"identity",name:"Who are we in digital systems?",desc:"Move between identity, memory, consciousness, and culture."}
+  ];
+  const list=$("path-grid");list.replaceChildren();
+  for(let i=0;i<paths.length;i++){
+    const p=paths[i];const btn=document.createElement("button");btn.type="button";btn.className="path-item";
+    const icon=document.createElement("span");icon.className="path-icon";icon.textContent=String(i+1).padStart(2,"0");
+    const copy=document.createElement("span");const title=document.createElement("strong");title.textContent=p.name;
+    const desc=document.createElement("small");desc.textContent=p.desc;copy.append(title,desc);
+    btn.append(icon,copy);btn.onclick=()=>{activeView="graph";setView();choose(p.id)};
+    list.appendChild(btn);
+  }
+}
+function renderFeatured(){
+  featured.replaceChildren();
+  for(const a of published){
+    const el=document.createElement("a");el.className="feature-card";el.href=a.url;
+    const art=document.createElement("div");art.className="feature-art";art.setAttribute("aria-hidden","true");
+    const copy=document.createElement("div"),label=document.createElement("small");
+    label.textContent="PUBLISHED ESSAY";
+    const title=document.createElement("h3");title.textContent=a.title;
+    const desc=document.createElement("p");desc.textContent=a.excerpt||"Explore the complete article in the research archive.";
+    const action=document.createElement("div");action.className="feature-footer";action.textContent="Read article ↗";
+    copy.append(label,title,desc,action);el.append(art,copy);featured.appendChild(el);
+  }
+}
+function updateEverything(){renderSidebar();renderDetail();renderGraphFocus()}
+function setView(){
+  const isGraph=activeView==="graph";
+  $("graph-panel").hidden=!isGraph;$("paths-panel").hidden=isGraph;
+  $("graph-panel").style.display=isGraph?"block":"none";
+  $("paths-panel").classList.toggle("active",!isGraph);
+  $("graph-tab").setAttribute("aria-selected",String(isGraph));
+  $("paths-tab").setAttribute("aria-selected",String(!isGraph));
+}
+$("graph-tab").onclick=()=>{activeView="graph";setView()};
+$("paths-tab").onclick=()=>{activeView="paths";setView()};
+$("zoom-in").onclick=()=>{zoom=Math.min(2,zoom+.16);transform()};
+$("zoom-out").onclick=()=>{zoom=Math.max(.7,zoom-.16);transform()};
+$("zoom-fit").onclick=()=>{zoom=1;panX=0;panY=0;transform()};
+$("concept-search").addEventListener("input",e=>{
+  query=e.target.value.toLowerCase().trim();
+  if(query){const found=concepts.find(c=>c.name.toLowerCase().includes(query));if(found)selected=found.id}
+  updateEverything();
+});
+let gesture=null;
+svg.addEventListener("pointerdown",e=>{
+  if(e.target.closest(".node"))return;
+  gesture={x:e.clientX,y:e.clientY,startX:panX,startY:panY};
+  svg.setPointerCapture(e.pointerId);
+  $("graph-panel").classList.add("dragging");
+});
+svg.addEventListener("pointermove",e=>{
+  if(!gesture)return;
+  const box=svg.getBoundingClientRect();
+  panX=gesture.startX+(e.clientX-gesture.x)*1100/box.width;
+  panY=gesture.startY+(e.clientY-gesture.y)*700/box.height;
+  transform();
+});
+function stopPan(){gesture=null;$("graph-panel").classList.remove("dragging")}
+svg.addEventListener("pointerup",stopPan);svg.addEventListener("pointercancel",stopPan);
+svg.addEventListener("wheel",e=>{
+  if(e.ctrlKey||e.metaKey||e.shiftKey)return;
+  e.preventDefault();zoom=Math.max(.7,Math.min(2,zoom+(e.deltaY<0?.09:-.09)));transform();
+},{passive:false});
+async function updateManifest(){
+  try{
+    const response=await fetch(BASE+"manifest.json",{cache:"no-cache",headers:{Accept:"application/json"}});
+    if(!response.ok)throw new Error("Archive manifest unavailable");
+    const manifest=await response.json();
+    if(!Array.isArray(manifest.articles))throw new Error("Invalid archive manifest");
+    const current=[];
+    for(const entry of manifest.articles){
+      if(typeof entry.id!=="string"||typeof entry.title!=="string"||typeof entry.url!=="string")continue;
+      let parsed;
+      try{parsed=new URL(entry.url,location.href)}catch{continue}
+      if(parsed.origin!==location.origin||!parsed.pathname.startsWith("/Artificially-Intelligent/research/published/"))continue;
+      const curated=articleById[entry.id]||fallback.find(a=>a.title===entry.title);
+      current.push({id:entry.id,title:entry.title,url:parsed.href,topics:curated?curated.topics:[],excerpt:curated?curated.excerpt:""});
+    }
+    published=current;
+    $("feed-note").textContent=current.length+" complete published "+(current.length===1?"article":"articles")+" currently in the archive. Curated topic links are editorial and may be updated as new research is published.";
+    renderFeatured();updateEverything();
+  }catch{
+    $("feed-note").textContent="Showing links to the existing published research archive. Research in development is excluded.";
+  }
+}
+makeGraph();renderPaths();renderFeatured();setView();updateEverything();updateManifest();
+})();
+</script>
+</body>
+</html>
