@@ -112,28 +112,46 @@ function makeGraph(){
 }
 function makeArticleGraph(){
  const old=graph.querySelector("#dynamic-articles");if(old)old.remove();
- const layer=svgEl("g",{id:"dynamic-articles"});articleNodes.clear();articleEdges.length=0;
- const display=published.slice(0,36);
- const segments=display.length||1;
+ const layer=svgEl("g",{id:"dynamic-articles"});
+ const edgeLayer=svgEl("g",{"aria-hidden":"true"}),nodeLayer=svgEl("g");
+ articleNodes.clear();articleEdges.length=0;
+ const display=published.slice(0,36),count=display.length||1,positions=[];
  display.forEach((a,i)=>{
-  const angle=2*Math.PI*i/segments+Math.PI/4;
-  const ring=segments>12?(i%2?315:355):320;
-  const x=540+ring*Math.cos(angle),y=345+Math.min(1.0,ring/320)*260*Math.sin(angle);
+  // A separate lower track keeps early article nodes clear of concept nodes.
+  const angle=2*Math.PI*i/count+Math.PI/4,ring=count>12?(i%2?320:355):335;
+  const x=count<=6?100+(i+1)*900/(count+1):540+ring*Math.cos(angle);
+  const y=count<=6?649:345+Math.min(1,ring/335)*265*Math.sin(angle);
+  positions.push({x,y});
   for(const topic of a.topics.slice(0,3)){
    const c=byId[topic];if(!c)continue;
    const line=svgEl("path",{d:"M "+x+" "+y+" Q "+((x+c.x)/2)+" "+((y+c.y)/2-20)+" "+c.x+" "+c.y,class:"edge article-edge"});
-   line.setAttribute("stroke-dasharray","3 7");layer.appendChild(line);articleEdges.push({articleId:a.id,topic,el:line});
+   line.setAttribute("stroke-dasharray","3 7");
+   edgeLayer.appendChild(line);articleEdges.push({articleId:a.id,topic,el:line});
   }
   const el=svgEl("g",{class:"article-node",role:"button",tabindex:"0","data-article":a.id,"aria-label":"Explore article "+a.title});
-  const title=svgEl("title",{},a.title);el.appendChild(title);
+  el.appendChild(svgEl("title",{},a.title));
   el.appendChild(svgEl("circle",{cx:x,cy:y,r:19,fill:"#162825",stroke:"#a5f2ce","stroke-width":"1.2"}));
   el.appendChild(svgEl("circle",{cx:x,cy:y,r:8,fill:"#a5f2ce",opacity:".38"}));
   el.appendChild(svgEl("text",{x,y:y+4,"text-anchor":"middle",class:"article-mark"},"A"+(i+1)));
   el.addEventListener("click",()=>chooseArticle(a.id));
   el.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();chooseArticle(a.id)}});
-  layer.appendChild(el);articleNodes.set(a.id,el);
+  nodeLayer.appendChild(el);articleNodes.set(a.id,el);
  });
- graph.appendChild(layer);renderGraphFocus();
+ // Dotted article-to-article links are based only on shared concept tags.
+ let pairs=0;
+ for(let i=0;i<display.length&&pairs<60;i++){
+  for(let j=i+1;j<display.length&&pairs<60;j++){
+   const common=display[i].topics.filter(topic=>display[j].topics.includes(topic));
+   if(!common.length)continue;
+   const a=positions[i],b=positions[j];
+   const link=svgEl("path",{d:"M "+a.x+" "+a.y+" Q "+((a.x+b.x)/2)+" "+((a.y+b.y)/2+18)+" "+b.x+" "+b.y,class:"edge article-edge shared-article-link"});
+   link.setAttribute("stroke-dasharray","1 8");
+   edgeLayer.appendChild(link);
+   articleEdges.push({articleId:display[i].id,otherId:display[j].id,shared:common,el:link});
+   pairs++;
+  }
+ }
+ layer.append(edgeLayer,nodeLayer);graph.appendChild(layer);renderGraphFocus();
 }
 function transform(){graph.setAttribute("transform","translate("+(550+panX)+" "+(350+panY)+") scale("+zoom+") translate(-550 -350)")}
 function sidebarButton(c){
@@ -176,7 +194,7 @@ function renderDetail(){
  $("detail-name").textContent=a?a.title:c?c.name:"Explore the Atlas";
  $("detail-dot").style.background=c?c.color:"#a5f2ce";
  $("detail-dot").style.boxShadow="0 0 15px "+(c?c.color:"#a5f2ce");
- const matches=a?[a]:c?activeArticles(c.id):published;
+ const matches=a?published.filter(item=>item.id!==a.id&&item.topics.some(topic=>a.topics.includes(topic))).sort((first,second)=>second.topics.filter(topic=>a.topics.includes(topic)).length-first.topics.filter(topic=>a.topics.includes(topic)).length):c?activeArticles(c.id):published;
  $("detail-meta").textContent=a?"PUBLISHED RESEARCH"+(a.publishedAt?" · "+datedLabel(a.publishedAt):""):c?"RESEARCH CONCEPT · "+matches.length+" LINKED "+(matches.length===1?"ARTICLE":"ARTICLES"):"8 CONNECTED CONCEPTS";
  $("detail-description").textContent=a?(a.excerpt||"A published article in the Artificially Intelligent archive."):c?c.description:"Select a concept or article to explore its connections.";
  $("explore-link").href=a?a.url:"../intelligence-index/?q="+encodeURIComponent(c?c.name:"artificial intelligence");
@@ -184,7 +202,7 @@ function renderDetail(){
  const stream=$("stream-link");
  stream.hidden=!a;stream.href=a?"../?article="+encodeId(a.id):"../#stream";
  related.replaceChildren();connections.replaceChildren();
- if(!matches.length){const msg=document.createElement("p");msg.className="empty";msg.textContent="No published article linked to this concept yet.";related.appendChild(msg)}
+ if(!matches.length){const msg=document.createElement("p");msg.className="empty";msg.textContent=a?"No other published articles share these concept tags yet.":"No published article linked to this concept yet.";related.appendChild(msg)}
  for(const item of matches){
   const link=document.createElement("a");link.className="article-small";link.href=item.url;
   const meta=document.createElement("small");meta.textContent=datedLabel(item.publishedAt);
@@ -220,7 +238,7 @@ function renderGraphFocus(){
   el.setAttribute("aria-pressed",String(active));
  }
  for(const edge of articleEdges){
-  const focus=selectedArticle?edge.articleId===selectedArticle:selected?edge.topic===selected:!query;
+  const focus=selectedArticle?(edge.articleId===selectedArticle||edge.otherId===selectedArticle):selected?(edge.topic===selected||Boolean(edge.shared?.includes(selected))):!query;
   edge.el.classList.toggle("focused",Boolean(focus));edge.el.classList.toggle("faded",!focus);
  }
  const shown=Math.min(36,published.length);
