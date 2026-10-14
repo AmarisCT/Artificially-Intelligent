@@ -79,6 +79,7 @@ def webpage(*, title: str, description: str, url: str, root_rel: str, content: s
 <a href="{root_rel}#stream">Data Stream</a>
 <a href="{root_rel}research/published/">Published research</a>
 <a href="{root_rel}intelligence-index/">Intelligence Index</a>
+<a href="{root_rel}research-atlas/">Research Atlas</a>
 </nav>
 </div></header>
 {content}
@@ -143,6 +144,7 @@ def make():
         page += f'<div class="article-body">{article["body"]}</div></article>'
         page += '<section class="links" aria-label="Related articles"><p class="eyebrow">Continue exploring</p>'
         page += related or '<p><a href="../">Browse published research ↗</a></p>'
+        page += '<p><a href="../../../research-atlas/">Explore the Research Atlas ↗</a></p>'
         page += '</section></main>'
         file = OUTPUT / article["slug"] / "index.html"
         file.parent.mkdir(parents=True, exist_ok=True)
@@ -166,7 +168,7 @@ def make():
     manifest = {"articles": [{"id":x["id"], "title":x["title"], "url":x["url"]} for x in articles]}
     (OUTPUT / "manifest.json").write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     urls = [SITE, SITE + "intelligence-index/", SITE + "interactives/consciousness-map.html",
-            SITE + "research/published/"] + [x["url"] for x in articles]
+            SITE + "research/published/", SITE + "research-atlas/"] + [x["url"] for x in articles]
     ns = "http://www.sitemaps.org/schemas/sitemap/0.9"
     ET.register_namespace("", ns)
     urlset = ET.Element("{" + ns + "}urlset")
