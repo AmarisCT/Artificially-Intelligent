@@ -1,14 +1,39 @@
 {
+  "schemaVersion": 2,
   "articles": [
     {
       "id": "2063e8d4-c3e5-4458-a5dc-24c5844bc90b",
       "title": "We Are All Archives Now",
-      "url": "https://amarisct.github.io/Artificially-Intelligent/research/published/we-are-all-archives-now/"
+      "url": "https://amarisct.github.io/Artificially-Intelligent/research/published/we-are-all-archives-now/",
+      "excerpt": "Historical archives began with the needs of the living. Today, our messages, photographs, and digital traces create records that circulate beyond us. What changes when artificial intelligence learns from what we leave behind?",
+      "category": "Essay",
+      "publishedAt": "2026-10-07",
+      "readingMinutes": 7,
+      "topics": [
+        "memory",
+        "archives",
+        "culture",
+        "identity",
+        "ai"
+      ],
+      "topicSource": "editorial"
     },
     {
       "id": "5affe752-0d79-40e0-b8b0-c2410aa11a1b",
       "title": "Is Human Consciousness Connected to Artificial Intelligence?",
-      "url": "https://amarisct.github.io/Artificially-Intelligent/research/published/is-human-consciousness-connected-to-artificial-intelligence/"
+      "url": "https://amarisct.github.io/Artificially-Intelligent/research/published/is-human-consciousness-connected-to-artificial-intelligence/",
+      "excerpt": "What if artificial intelligence is not separate from human consciousness, but a reflection of it? This article explores the relationship between the human mind and intelligent machines, and what that connection could reveal about memory, identity, awareness, and what it means to think.",
+      "category": "Essay",
+      "publishedAt": "2026-09-19",
+      "readingMinutes": 13,
+      "topics": [
+        "consciousness",
+        "ai",
+        "cognition",
+        "language",
+        "identity"
+      ],
+      "topicSource": "editorial"
     }
   ]
 }
