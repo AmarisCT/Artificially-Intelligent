@@ -87,6 +87,39 @@ def webpage(*, title: str, description: str, url: str, root_rel: str, content: s
 </body></html>
 """
 
+TOPIC_PATTERNS = {
+    "ai": r"\b(?:artificial intelligence|machine learning|machine intelligence|language models?|ai systems?|algorithms?|neural networks?)\b",
+    "consciousness": r"\b(?:consciousness|conscious|awareness|subjective experience|sentien\w*)\b",
+    "memory": r"\b(?:memor(?:y|ies)|remember\w*|forget\w*|recall|retention)\b",
+    "identity": r"\b(?:identit(?:y|ies)|selfhood|personhood|digital self|sense of self)\b",
+    "language": r"\b(?:language|linguistic\w*|communicat\w*|speech|words)\b",
+    "cognition": r"\b(?:cognition|cognitive|reasoning|perception|attention|thought)\b",
+    "culture": r"\b(?:cultur\w*|societ\w*|social media|online platforms?|digital life)\b",
+    "archives": r"\b(?:archiv\w*|records?|documents?|digital traces|historical sources?)\b",
+}
+# These two mappings are reviewed editorial associations, not quantitative citation claims.
+EDITORIAL_TOPICS = {
+    "2063e8d4-c3e5-4458-a5dc-24c5844bc90b": ["memory", "archives", "culture", "identity", "ai"],
+    "5affe752-0d79-40e0-b8b0-c2410aa11a1b": ["consciousness", "ai", "cognition", "language", "identity"],
+}
+
+def infer_topics(identifier: str, title: str, excerpt: str, article_html: str):
+    if identifier in EDITORIAL_TOPICS:
+        return EDITORIAL_TOPICS[identifier], "editorial"
+    # Keyword-based discovery for newly published articles; not a claim of
+    # peer-reviewed conceptual relationships. Favor title and excerpt over body.
+    body = re.sub(r"<[^>]+>", " ", html.unescape(article_html))
+    scored = []
+    for topic, pattern in TOPIC_PATTERNS.items():
+        title_hits = len(re.findall(pattern, title, re.IGNORECASE))
+        excerpt_hits = len(re.findall(pattern, excerpt, re.IGNORECASE))
+        body_hits = len(re.findall(pattern, body, re.IGNORECASE))
+        weight = 5 * title_hits + 3 * excerpt_hits + min(body_hits, 6)
+        if title_hits or excerpt_hits or body_hits >= 3:
+            scored.append((weight, topic))
+    scored.sort(key=lambda item: (-item[0], item[1]))
+    return [topic for _, topic in scored[:5]], "keyword"
+
 def make():
     tree = ET.parse(FEED)
     channel = tree.getroot().find("channel")
@@ -165,7 +198,21 @@ def make():
         webpage(title="Published Research", description="Read published research and essays on consciousness, artificial intelligence, memory, digital identity, and culture.",
                 url=SITE + "research/published/", root_rel="../../", content=listing),
         encoding="utf-8")
-    manifest = {"articles": [{"id":x["id"], "title":x["title"], "url":x["url"]} for x in articles]}
+    manifest_items = []
+    for x in articles:
+        topic_ids, source = infer_topics(x["id"], x["title"], x["description"], x["body"])
+        plain_text = re.sub(r"<[^>]+>", " ", html.unescape(x["body"]))
+        words = len(plain_text.split())
+        manifest_items.append({
+            "id": x["id"], "title": x["title"], "url": x["url"],
+            "excerpt": x["description"],
+            "category": x["category"],
+            "publishedAt": x["date"] or None,
+            "readingMinutes": max(1, round(words / 220)),
+            "topics": topic_ids,
+            "topicSource": source
+        })
+    manifest = {"schemaVersion": 2, "articles": manifest_items}
     (OUTPUT / "manifest.json").write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     urls = [SITE, SITE + "intelligence-index/", SITE + "interactives/consciousness-map.html",
             SITE + "research/published/", SITE + "research-atlas/"] + [x["url"] for x in articles]
