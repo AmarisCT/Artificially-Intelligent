@@ -57,6 +57,10 @@
       <div class="interactives-header"><p class="micro" id="research-tools-heading">05 / Research Tools</p><small>Free public knowledge discovery</small></div>
       <a class="interactive-card" href="intelligence-index/"><span class="id">IDX_001</span><span><strong>The Intelligence Index</strong><small>Search live scholarly papers, encyclopedia articles, and book catalogs. Explore the broader web through external search engines.</small></span><span class="arrow" aria-hidden="true">↗</span></a>
     </section>
+    <section class="interactives" aria-labelledby="published-research-heading">
+      <div class="interactives-header"><p class="micro" id="published-research-heading">06 / Published Research</p><small>Complete articles from the Data Stream</small></div>
+      <a class="interactive-card" href="research/published/"><span class="id">PUB_001</span><span><strong>Published Research Archive</strong><small>Read full research articles on consciousness, artificial intelligence, memory, and digital identity.</small></span><span class="arrow" aria-hidden="true">↗</span></a>
+    </section>
     <footer class="foot"><span>Product of Amaris.Studio</span><span><a href="feed.xml" title="Research articles RSS feed">RSS ↗</a> &nbsp;·&nbsp; Est. 2026 / v1.0</span></footer>
   </main>
 
@@ -70,7 +74,7 @@
     </main>
   </section>
 
-  <dialog id="reader"><div class="reader-head"><span id="reader-id" class="article-id"></span><button class="close" aria-label="Close article">×</button></div><article class="reader-body"><p id="reader-category" class="micro"></p><h2 id="reader-title"></h2><p id="reader-subtitle" class="reader-subtitle"></p><div id="reader-tags" class="tags"></div><div id="reader-copy" class="reader-copy"></div><div id="reader-substack" class="reader-substack"></div></article></dialog>
+  <dialog id="reader"><div class="reader-head"><span id="reader-id" class="article-id"></span><button class="close" aria-label="Close article">×</button></div><article class="reader-body"><p id="reader-category" class="micro"></p><h2 id="reader-title"></h2><p id="reader-subtitle" class="reader-subtitle"></p><div id="reader-tags" class="tags"></div><div id="reader-copy" class="reader-copy"></div><div id="reader-published" class="reader-substack"></div><div id="reader-substack" class="reader-substack"></div></article></dialog>
 
   <script>
     const API='https://artificiallyintelligent.artificiallyint-co.chatgpt.site/api/public/articles';
@@ -103,6 +107,24 @@
     $('#visitor').onclick=enter;$('#home').onclick=leave;if(location.hash==='#stream')enter();
     function escapeHTML(v=''){return String(v).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]))}
     function render(items=articles){$('#count').textContent=String(items.length).padStart(2,'0');if(!items.length){list.innerHTML='<div class="empty">No transmissions match this search.</div>';return}list.innerHTML=items.map((a,i)=>`<button class="article${a.isDevelopment?' development':''}" data-index="${articles.indexOf(a)}"><span class="article-id">${escapeHTML(a.streamId||`DS_${String(i+1).padStart(3,'0')}`)}</span><span><h2>${escapeHTML(a.title)}</h2><p>${escapeHTML(a.excerpt||'')}</p><span class="tags">${(a.concepts||[]).map(t=>`<span class="tag">${escapeHTML(t)}</span>`).join('')}</span></span><time class="date">${a.isDevelopment?'IN DEVELOPMENT':a.publishedAt?new Date(a.publishedAt).toLocaleDateString('en-US',{year:'numeric',month:'short',day:'2-digit'}):'Live'}</time></button>`).join('');list.querySelectorAll('.article').forEach(el=>el.onclick=()=>openArticle(articles[Number(el.dataset.index)]))}
+    const publishedArticleLinks=new Map();
+    fetch('research/published/manifest.json',{headers:{Accept:'application/json'}}).then(r=>{if(!r.ok)throw new Error('Published archive unavailable');return r.json()}).then(m=>{
+      if(!Array.isArray(m.articles))return;
+      m.articles.forEach(item=>{
+        if(typeof item.id!=='string'||typeof item.url!=='string')return;
+        try{
+          const u=new URL(item.url);
+          if(u.origin===location.origin&&u.pathname.startsWith('/Artificially-Intelligent/research/published/'))publishedArticleLinks.set(item.id,u.href)
+        }catch{}
+      });
+      updatePublishedArticleLink()
+    }).catch(()=>{});
+    function updatePublishedArticleLink(){
+      const target=$('#reader-published');target.replaceChildren();
+      const url=currentReaderArticle&&publishedArticleLinks.get(String(currentReaderArticle.id));
+      if(!url)return;
+      const a=document.createElement('a');a.href=url;a.textContent='Read the full article on its own page ↗';target.append(a);
+    }
     const substackArticleLinks=new Map();
     let currentReaderArticle=null;
     function updateSubstackArticleLink(){
@@ -119,7 +141,7 @@
       });
       updateSubstackArticleLink()
     }).catch(()=>{});
-    function openArticle(a){currentReaderArticle=a;updateSubstackArticleLink();$('#reader-id').textContent=a.streamId||'TRANSMISSION';$('#reader-category').textContent=a.category||'Essay';$('#reader-title').textContent=a.title;$('#reader-subtitle').textContent=a.subtitle||'';$('#reader-tags').innerHTML=(a.concepts||[]).map(t=>`<span class="tag">${escapeHTML(t)}</span>`).join('');$('#reader-copy').innerHTML=String(a.body||a.excerpt||'').split(/\n\s*\n/).map(p=>`<p>${escapeHTML(p)}</p>`).join('');reader.showModal()}
+    function openArticle(a){currentReaderArticle=a;updatePublishedArticleLink();updateSubstackArticleLink();$('#reader-id').textContent=a.streamId||'TRANSMISSION';$('#reader-category').textContent=a.category||'Essay';$('#reader-title').textContent=a.title;$('#reader-subtitle').textContent=a.subtitle||'';$('#reader-tags').innerHTML=(a.concepts||[]).map(t=>`<span class="tag">${escapeHTML(t)}</span>`).join('');$('#reader-copy').innerHTML=String(a.body||a.excerpt||'').split(/\n\s*\n/).map(p=>`<p>${escapeHTML(p)}</p>`).join('');reader.showModal()}
     reader.querySelector('.close').onclick=()=>reader.close();reader.onclick=e=>{if(e.target===reader)reader.close()};
     $('#search').oninput=e=>{const q=e.target.value.toLowerCase().trim();render(!q?articles:articles.filter(a=>[a.title,a.subtitle,a.excerpt,a.category,...(a.concepts||[])].join(' ').toLowerCase().includes(q)))};
     $('#nav-index').onclick=()=>$('#search').focus();$('#nav-archive').onclick=()=>window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'});
