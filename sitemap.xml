@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://amarisct.github.io/Artificially-Intelligent/</loc></url>
-  <url><loc>https://amarisct.github.io/Artificially-Intelligent/intelligence-index/</loc></url>
-  <url><loc>https://amarisct.github.io/Artificially-Intelligent/interactives/consciousness-map.html</loc></url>
+  <url>
+    <loc>https://amarisct.github.io/Artificially-Intelligent/</loc>
+  </url>
+  <url>
+    <loc>https://amarisct.github.io/Artificially-Intelligent/intelligence-index/</loc>
+  </url>
+  <url>
+    <loc>https://amarisct.github.io/Artificially-Intelligent/interactives/consciousness-map.html</loc>
+  </url>
+  <url>
+    <loc>https://amarisct.github.io/Artificially-Intelligent/research/published/</loc>
+  </url>
+  <url>
+    <loc>https://amarisct.github.io/Artificially-Intelligent/research/published/we-are-all-archives-now/</loc>
+  </url>
+  <url>
+    <loc>https://amarisct.github.io/Artificially-Intelligent/research/published/is-human-consciousness-connected-to-artificial-intelligence/</loc>
+  </url>
 </urlset>
