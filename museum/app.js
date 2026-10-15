@@ -33,6 +33,20 @@ function artwork(era){
   const spec=ART[era.id],W=800,H=600;let marks=[],msg="";
   const cv=h("canvas",{width:W,height:H,role:"img","aria-label":"Inscription wall. "+spec.rule});const cx=cv.getContext("2d");
   const hue=era.hue;
+  /* Each room has its own kind of mark. */
+  function glyph(m){
+    cx.lineWidth=2;cx.beginPath();
+    if(m.frag){cx.moveTo(-8,6);cx.lineTo(2,-9);cx.lineTo(9,5);cx.closePath();cx.fill();return}
+    switch(era.id){
+      case "tablet":cx.moveTo(-10,-3);cx.lineTo(10,0);cx.lineTo(-10,3);cx.closePath();cx.fill();cx.beginPath();cx.moveTo(10,0);cx.lineTo(26,0);cx.stroke();break; /* cuneiform wedge */
+      case "library":cx.rect(-16,-10,32,20);cx.fill();cx.globalAlpha=.5;cx.strokeStyle="#070706";cx.beginPath();cx.moveTo(-10,-3);cx.lineTo(10,-3);cx.moveTo(-10,3);cx.lineTo(6,3);cx.stroke();break; /* tablet on a shelf */
+      case "domesday":for(let i=-2;i<=1;i++){cx.moveTo(i*7+3,-12);cx.lineTo(i*7+3,12)}cx.moveTo(-16,8);cx.lineTo(14,-8);cx.stroke();break; /* tally */
+      case "print":cx.rect(-7,-13,14,26);cx.fill();cx.fillStyle="#070706";cx.fillRect(-3,-9,6,3);cx.fillRect(-1,-9,2,16);break; /* a piece of type */
+      case "selection":cx.moveTo(-12,-15);cx.lineTo(6,-15);cx.lineTo(13,-8);cx.lineTo(13,15);cx.lineTo(-12,15);cx.closePath();cx.stroke();cx.moveTo(-6,-2);cx.lineTo(7,-2);cx.moveTo(-6,5);cx.lineTo(7,5);cx.stroke();break; /* a record */
+      case "web":cx.moveTo(0,-13);cx.lineTo(13,0);cx.lineTo(0,13);cx.lineTo(-13,0);cx.closePath();cx.fill();break; /* a pixel */
+      case "model":cx.arc(0,0,5,0,6.3);cx.fill();for(let i=0;i<6;i++){const a=i*Math.PI/3;cx.moveTo(Math.cos(a)*7,Math.sin(a)*7);cx.lineTo(Math.cos(a)*15,Math.sin(a)*15)}cx.stroke();break; /* a node */
+      default:cx.arc(0,0,6,0,6.3);cx.fill()}
+  }
   function draw(){
     cx.fillStyle="#070706";cx.fillRect(0,0,W,H);cx.lineWidth=2;cx.strokeStyle="rgba(255,255,255,.07)";
     if(era.id==="library"){for(let r=1;r<6;r++){cx.beginPath();cx.moveTo(40,r*95);cx.lineTo(W-40,r*95);cx.stroke()}}
@@ -42,7 +56,7 @@ function artwork(era){
     for(const m of marks){
       cx.globalAlpha=m.a==null?1:m.a;cx.strokeStyle=m.c||hue;cx.fillStyle=m.c||hue;
       if(m.dot){cx.beginPath();cx.arc(m.x,m.y,m.r||2,0,6.3);cx.fill()}
-      else{cx.save();cx.translate(m.x,m.y);cx.rotate(m.rot||0);cx.beginPath();cx.moveTo(-10,-3);cx.lineTo(10,0);cx.lineTo(-10,3);cx.closePath();cx.fill();cx.beginPath();cx.moveTo(10,0);cx.lineTo(26,0);cx.stroke();cx.restore()}
+      else{cx.save();cx.translate(m.x,m.y);cx.rotate(m.rot||0);glyph(m);cx.restore()}
       if(m.ring){cx.beginPath();cx.arc(m.x,m.y,18,0,6.3);cx.stroke()}
     }
     cx.globalAlpha=1;
