@@ -1,0 +1,300 @@
+{
+ "items": [
+  {
+   "a": "Q001",
+   "b": "Q002",
+   "type": "problem",
+   "typeLabel": "Connected research problem",
+   "why": "Q001 asks which conditions make an experience conscious; Q002 asks why experience exists at all. They are separable questions about the same phenomenon.",
+   "note": "Editorial relation. It describes how the questions connect and does not claim that one causes or answers the other."
+  },
+  {
+   "a": "Q001",
+   "b": "Q003",
+   "type": "method",
+   "typeLabel": "Similar methodological challenge",
+   "why": "Deciding how to measure consciousness depends on a view of what makes an experience conscious.",
+   "note": "Editorial relation. It describes how the questions connect and does not claim that one causes or answers the other."
+  },
+  {
+   "a": "Q001",
+   "b": "Q013",
+   "type": "concept",
+   "typeLabel": "Related concept",
+   "why": "Both concern neural processes associated with conscious experience.",
+   "note": "Editorial relation. It describes how the questions connect and does not claim that one causes or answers the other."
+  },
+  {
+   "a": "Q001",
+   "b": "Q017",
+   "type": "concept",
+   "typeLabel": "Related concept",
+   "why": "Both turn on the difference between conscious and unconscious processing.",
+   "note": "Editorial relation. It describes how the questions connect and does not claim that one causes or answers the other."
+  },
+  {
+   "a": "Q001",
+   "b": "Q014",
+   "type": "concept",
+   "typeLabel": "Related concept",
+   "why": "Several theories relate attention and awareness, and some treat them as dissociable.",
+   "note": "Editorial relation. It describes how the questions connect and does not claim that one causes or answers the other."
+  },
+  {
+   "a": "Q001",
+   "b": "Q005",
+   "type": "problem",
+   "typeLabel": "Connected research problem",
+   "why": "Whether consciousness is fundamental or emergent bears on what could make an experience conscious.",
+   "note": "Editorial relation. It describes how the questions connect and does not claim that one causes or answers the other."
+  },
+  {
+   "a": "Q001",
+   "b": "Q006",
+   "type": "concept",
+   "typeLabel": "Related concept",
+   "why": "Self-awareness is one of the things a theory of consciousness may or may not need to explain.",
+   "note": "Editorial relation. It describes how the questions connect and does not claim that one causes or answers the other."
+  },
+  {
+   "a": "Q002",
+   "b": "Q005",
+   "type": "framework",
+   "typeLabel": "Shared theoretical framework",
+   "why": "Both ask whether physical explanation can be sufficient for consciousness.",
+   "note": "Editorial relation. It describes how the questions connect and does not claim that one causes or answers the other."
+  },
+  {
+   "a": "Q003",
+   "b": "Q009",
+   "type": "method",
+   "typeLabel": "Similar methodological challenge",
+   "why": "Indicators for machine consciousness draw on theories whose empirical tests are contested.",
+   "note": "Editorial relation. It describes how the questions connect and does not claim that one causes or answers the other."
+  },
+  {
+   "a": "Q003",
+   "b": "Q013",
+   "type": "method",
+   "typeLabel": "Similar methodological challenge",
+   "why": "Identifying necessary neural processes relies on the same experimental designs.",
+   "note": "Editorial relation. It describes how the questions connect and does not claim that one causes or answers the other."
+  },
+  {
+   "a": "Q004",
+   "b": "Q005",
+   "type": "problem",
+   "typeLabel": "Connected research problem",
+   "why": "Whether consciousness depends on a biological substrate relates to whether it is fundamental or emergent.",
+   "note": "Editorial relation. It describes how the questions connect and does not claim that one causes or answers the other."
+  },
+  {
+   "a": "Q004",
+   "b": "Q009",
+   "type": "problem",
+   "typeLabel": "Connected research problem",
+   "why": "Evidence of machine consciousness presupposes some view on whether non-biological systems could be conscious.",
+   "note": "Editorial relation. It describes how the questions connect and does not claim that one causes or answers the other."
+  },
+  {
+   "a": "Q007",
+   "b": "Q008",
+   "type": "problem",
+   "typeLabel": "Connected research problem",
+   "why": "Whether intelligence needs consciousness and whether systems understand meaning are often argued together.",
+   "note": "Editorial relation. It describes how the questions connect and does not claim that one causes or answers the other."
+  },
+  {
+   "a": "Q007",
+   "b": "Q009",
+   "type": "problem",
+   "typeLabel": "Connected research problem",
+   "why": "Separating intelligence from consciousness shapes what counts as evidence of the latter.",
+   "note": "Editorial relation. It describes how the questions connect and does not claim that one causes or answers the other."
+  },
+  {
+   "a": "Q007",
+   "b": "Q001",
+   "type": "concept",
+   "typeLabel": "Related concept",
+   "why": "Both ask what consciousness adds to intelligent processing.",
+   "note": "Editorial relation. It describes how the questions connect and does not claim that one causes or answers the other."
+  },
+  {
+   "a": "Q007",
+   "b": "Q025",
+   "type": "concept",
+   "typeLabel": "Related concept",
+   "why": "Both ask which capacities intelligence depends on.",
+   "note": "Editorial relation. It describes how the questions connect and does not claim that one causes or answers the other."
+  },
+  {
+   "a": "Q008",
+   "b": "Q012",
+   "type": "problem",
+   "typeLabel": "Connected research problem",
+   "why": "Both ask whether behavior is enough to attribute understanding.",
+   "note": "Editorial relation. It describes how the questions connect and does not claim that one causes or answers the other."
+  },
+  {
+   "a": "Q008",
+   "b": "Q009",
+   "type": "problem",
+   "typeLabel": "Connected research problem",
+   "why": "What counts as understanding and what counts as consciousness are often confused and sometimes linked.",
+   "note": "Editorial relation. It describes how the questions connect and does not claim that one causes or answers the other."
+  },
+  {
+   "a": "Q009",
+   "b": "Q024",
+   "type": "method",
+   "typeLabel": "Similar methodological challenge",
+   "why": "Evaluating claims of artificial awareness requires the kind of evidence Q009 asks about.",
+   "note": "Editorial relation. It describes how the questions connect and does not claim that one causes or answers the other."
+  },
+  {
+   "a": "Q009",
+   "b": "Q010",
+   "type": "concept",
+   "typeLabel": "Related concept",
+   "why": "Self-modeling features in several theory-derived indicators.",
+   "note": "Editorial relation. It describes how the questions connect and does not claim that one causes or answers the other."
+  },
+  {
+   "a": "Q010",
+   "b": "Q006",
+   "type": "concept",
+   "typeLabel": "Related concept",
+   "why": "Self-representation and self-awareness are closely related concepts.",
+   "note": "Editorial relation. It describes how the questions connect and does not claim that one causes or answers the other."
+  },
+  {
+   "a": "Q010",
+   "b": "Q025",
+   "type": "concept",
+   "typeLabel": "Related concept",
+   "why": "Self-representation may or may not be required for intelligence.",
+   "note": "Editorial relation. It describes how the questions connect and does not claim that one causes or answers the other."
+  },
+  {
+   "a": "Q011",
+   "b": "Q007",
+   "type": "concept",
+   "typeLabel": "Related concept",
+   "why": "Both ask about the relationship between reasoning and other capacities.",
+   "note": "Editorial relation. It describes how the questions connect and does not claim that one causes or answers the other."
+  },
+  {
+   "a": "Q011",
+   "b": "Q023",
+   "type": "problem",
+   "typeLabel": "Connected research problem",
+   "why": "How far machine reasoning resembles human reasoning bears on how responsibility is assigned.",
+   "note": "Editorial relation. It describes how the questions connect and does not claim that one causes or answers the other."
+  },
+  {
+   "a": "Q014",
+   "b": "Q017",
+   "type": "concept",
+   "typeLabel": "Related concept",
+   "why": "Attention is often invoked in distinguishing conscious from unconscious processing.",
+   "note": "Editorial relation. It describes how the questions connect and does not claim that one causes or answers the other."
+  },
+  {
+   "a": "Q013",
+   "b": "Q017",
+   "type": "concept",
+   "typeLabel": "Related concept",
+   "why": "Both concern the neural basis of conscious versus unconscious processing.",
+   "note": "Editorial relation. It describes how the questions connect and does not claim that one causes or answers the other."
+  },
+  {
+   "a": "Q015",
+   "b": "Q006",
+   "type": "concept",
+   "typeLabel": "Related concept",
+   "why": "A continuous sense of self relates to self-awareness.",
+   "note": "Editorial relation. It describes how the questions connect and does not claim that one causes or answers the other."
+  },
+  {
+   "a": "Q015",
+   "b": "Q016",
+   "type": "concept",
+   "typeLabel": "Related concept",
+   "why": "Memory and the sense of self are linked in discussions of identity.",
+   "note": "Editorial relation. It describes how the questions connect and does not claim that one causes or answers the other."
+  },
+  {
+   "a": "Q016",
+   "b": "Q019",
+   "type": "problem",
+   "typeLabel": "Connected research problem",
+   "why": "Both ask how identity depends on memory.",
+   "note": "Editorial relation. It describes how the questions connect and does not claim that one causes or answers the other."
+  },
+  {
+   "a": "Q016",
+   "b": "Q018",
+   "type": "concept",
+   "typeLabel": "Related concept",
+   "why": "Digital preservation of identity raises the same question about what memory contributes.",
+   "note": "Editorial relation. It describes how the questions connect and does not claim that one causes or answers the other."
+  },
+  {
+   "a": "Q018",
+   "b": "Q021",
+   "type": "problem",
+   "typeLabel": "Connected research problem",
+   "why": "Both ask what preserving a person through records would involve.",
+   "note": "Editorial relation. It describes how the questions connect and does not claim that one causes or answers the other."
+  },
+  {
+   "a": "Q018",
+   "b": "Q020",
+   "type": "concept",
+   "typeLabel": "Related concept",
+   "why": "Both concern what artificial or digital records can reproduce of remembering.",
+   "note": "Editorial relation. It describes how the questions connect and does not claim that one causes or answers the other."
+  },
+  {
+   "a": "Q020",
+   "b": "Q016",
+   "type": "concept",
+   "typeLabel": "Related concept",
+   "why": "Which functions of memory matter for identity is relevant to what artificial memory must reproduce.",
+   "note": "Editorial relation. It describes how the questions connect and does not claim that one causes or answers the other."
+  },
+  {
+   "a": "Q019",
+   "b": "Q015",
+   "type": "concept",
+   "typeLabel": "Related concept",
+   "why": "Altered or lost memory bears on the construction of a continuous self.",
+   "note": "Editorial relation. It describes how the questions connect and does not claim that one causes or answers the other."
+  },
+  {
+   "a": "Q022",
+   "b": "Q024",
+   "type": "problem",
+   "typeLabel": "Connected research problem",
+   "why": "Moral consideration depends on how claims about artificial awareness can be evaluated.",
+   "note": "Editorial relation. It describes how the questions connect and does not claim that one causes or answers the other."
+  },
+  {
+   "a": "Q022",
+   "b": "Q009",
+   "type": "problem",
+   "typeLabel": "Connected research problem",
+   "why": "Some views link moral consideration to evidence of consciousness.",
+   "note": "Editorial relation. It describes how the questions connect and does not claim that one causes or answers the other."
+  },
+  {
+   "a": "Q023",
+   "b": "Q022",
+   "type": "concept",
+   "typeLabel": "Related concept",
+   "why": "Both ask how responsibility and moral standing are assigned to or around artificial systems.",
+   "note": "Editorial relation. It describes how the questions connect and does not claim that one causes or answers the other."
+  }
+ ]
+}

@@ -1,0 +1,1708 @@
+{
+ "items": [
+  {
+   "id": "Q001",
+   "slug": "what-makes-an-experience-conscious",
+   "title": "What makes an experience conscious?",
+   "category": "human",
+   "subject": "Human Consciousness",
+   "summary": "Which conditions or processes distinguish a conscious experience from information that is processed without being experienced.",
+   "scope": "Editorial scope note: this question is about the conditions of consciousness. Why experience exists at all is treated separately in Q002.",
+   "status": [
+    "contested",
+    "active"
+   ],
+   "statusJustification": "Contested: the review by Seth and Bayne reports disagreement about what the theories require, and a letter about IIT shows disagreement over its scientific status (as reported by Scientific American). Active: a preregistered adversarial collaboration between proponents of GNWT and IIT has been designed and reported (Melloni et al. 2023; Cogitate Consortium 2025). Editorial judgment, subject to review.",
+   "review": "reviewed-preview",
+   "theories": [
+    "gnwt",
+    "iit",
+    "hot",
+    "rpt",
+    "ast",
+    "pp"
+   ],
+   "concepts": [
+    "subjective-experience",
+    "awareness",
+    "global-availability",
+    "integration",
+    "recurrent-processing",
+    "perception"
+   ],
+   "keywords": [
+    "consciousness",
+    "conscious",
+    "awareness",
+    "perception",
+    "experience"
+   ],
+   "dateCreated": "2026-10-15",
+   "lastReviewed": "2026-10-15",
+   "openProblems": [
+    "Whether current theories can be empirically distinguished.",
+    "Whether results about visual consciousness extend to other kinds of experience."
+   ],
+   "investigation": {
+    "understand": {
+     "text": [
+      "The question asks what it is that makes some mental states conscious, as opposed to states that are processed without being experienced. This is an editorial framing; the sources below approach it through competing scientific theories.",
+      "It can be read in different ways. One reading asks which brain processes accompany consciousness and where and when they occur, which is how the adversarial collaborations below frame it. Another asks why any physical process is accompanied by experience at all; that reading is treated in Q002."
+     ],
+     "terms": [
+      {
+       "term": "Subjective experience",
+       "def": "Nagel's formulation: an organism has conscious mental states if and only if there is something it is like for the organism to be that organism.",
+       "src": [
+        "nagel-1974"
+       ]
+      },
+      {
+       "term": "Conscious access (in GNWT)",
+       "def": "In global neuronal workspace theory, a representation becomes consciously accessible when it is amplified and made available to many specialized processors through a distributed network.",
+       "src": [
+        "mashour-2020",
+        "dehaene-changeux-2011"
+       ]
+      }
+     ]
+    },
+    "know": [
+     {
+      "kind": "review",
+      "text": "Seth and Bayne review four approaches (higher-order theories, global workspace theories, re-entry and predictive processing theories, and integrated information theory), covering what each aims to explain, its neurobiological commitments, and the evidence offered for it.",
+      "src": [
+       "seth-bayne-2022"
+      ]
+     },
+     {
+      "kind": "review",
+      "text": "The same review reports that researchers disagree about what the theories require, and that it is unclear whether current theories can be empirically distinguished.",
+      "src": [
+       "seth-bayne-2022"
+      ]
+     },
+     {
+      "kind": "design",
+      "text": "A preregistered adversarial collaboration between proponents of GNWT and IIT stated contrasting predictions about where and when neural correlates of visual consciousness occur, to be tested with fMRI, M-EEG, and intracranial EEG across independent labs.",
+      "src": [
+       "melloni-2023"
+      ]
+     },
+     {
+      "kind": "empirical",
+      "text": "A report on that kind of test, with 256 human participants, says its results partly align with predictions of each theory while substantially challenging key claims of each. Reported findings include no sustained posterior synchronization and a general lack of ignition at stimulus offset.",
+      "src": [
+       "cogitate-2025"
+      ]
+     }
+    ],
+    "competing": [
+     {
+      "theory": "gnwt",
+      "text": "Proposes that a representation becomes consciously accessible when it is amplified and made available to many specialized processors through a distributed network, with prefrontal and parietal regions emphasized.",
+      "src": [
+       "mashour-2020",
+       "dehaene-changeux-2011"
+      ]
+     },
+     {
+      "theory": "iit",
+      "text": "Holds that consciousness corresponds to a physical system's irreducible cause-effect structure, derived from properties of experience such as unity and specificity.",
+      "src": [
+       "albantakis-2023",
+       "tononi-2004"
+      ]
+     },
+     {
+      "theory": "hot",
+      "text": "Hold that a mental state is conscious when the subject has a higher-order representation of being in that state.",
+      "src": [
+       "lau-rosenthal-2011"
+      ]
+     },
+     {
+      "theory": "rpt",
+      "text": "Associates consciousness with recurrent (feedback) processing in sensory areas rather than with the initial feedforward sweep.",
+      "src": [
+       "closer-rpt"
+      ]
+     },
+     {
+      "theory": "ast",
+      "text": "Proposes that subjective awareness is the brain's simplified model of its own attention.",
+      "src": [
+       "graziano-webb-2015"
+      ]
+     },
+     {
+      "theory": "pp",
+      "text": "Applies the predictive processing framework to consciousness research, for example as a basis for identifying the neural correlates of consciousness.",
+      "src": [
+       "hohwy-seth-2020"
+      ]
+     }
+    ],
+    "competingNote": "These are summaries of how proponents describe their theories. The Theory Chamber compares them side by side; the records there are also awaiting evidence review. The adversarial collaborations above tested one pair (GNWT and IIT); they do not rank the other theories.",
+    "evidence": [
+     "seth-bayne-2022",
+     "melloni-2023",
+     "cogitate-2025",
+     "mashour-2020",
+     "dehaene-changeux-2011",
+     "albantakis-2023",
+     "doerig-2019",
+     "pseudoscience-letter-2023",
+     "tononi-2004",
+     "lau-rosenthal-2011",
+     "closer-rpt",
+     "graziano-webb-2015",
+     "hohwy-seth-2020",
+     "nagel-1974"
+    ],
+    "findings": {
+     "seth-bayne-2022": "Compares four approaches and reports unclear empirical distinguishability.",
+     "melloni-2023": "States contrasting preregistered predictions for GNWT and IIT.",
+     "cogitate-2025": "Reports results that partly align with and substantially challenge both theories.",
+     "mashour-2020": "Presents the global neuronal workspace account.",
+     "dehaene-changeux-2011": "Presents the global neuronal workspace account.",
+     "albantakis-2023": "Presents the IIT account.",
+     "doerig-2019": "Argues that causal structure theories, naming IIT and recurrent processing theory, are either false or outside science.",
+     "pseudoscience-letter-2023": "Reports a letter signed by 124 scholars calling IIT pseudoscience, and reports disagreement with it.",
+     "tononi-2004": "Proposes a theory of what consciousness is and how it might be measured, drawing on two features of experience, its large repertoire of possible states (differentiation) and the unity of each experience (integration). It links the amount of consciousness to a quantity, Φ, describing how much causally effective information a set of elements can integrate, and argues that the theory fits findings such as the importance of the thalamocortical system and the reduction of consciousness in dreamless sleep. It states that the theory implies consciousness is fundamental, graded, and could in principle be built into artificial systems.",
+     "lau-rosenthal-2011": "Argues that conscious awareness depends on higher-order representations, which are mental states that represent oneself as being in a particular state. It compares the view with first-order, global workspace, and recurrent visual processing theories, focusing on evidence that tells them apart. It responds to objections, including that prefrontal activity reflects attention rather than awareness and that prefrontal lesions do not eliminate awareness, and concludes that the higher-order approach, though rooted in philosophy, is empirically testable and has received substantial support.",
+     "closer-rpt": "A web entry describing Lamme's recurrent processing theory: consciousness arises when sensory areas engage in recurrent (feedback) processing, located at the third of four described stages of visual processing. It notes criticisms by Ned Block and a contrast with global workspace theory. The page relies largely on secondary sources (a Stanford Encyclopedia of Philosophy entry and Block's 2023 book) rather than Lamme's papers directly.",
+     "graziano-webb-2015": "Proposes that subjective awareness is the brain's simplified internal model of its own attention, analogous to a body schema. It argues this explains how awareness and attention can dissociate and how people can be aware of internal and external events, states testable predictions, and reviews literature that it describes as supporting some of them. The authors acknowledge disputed points, such as the top-down versus bottom-up distinction and whether awareness can occur without attention, and describe the evidence as suggestive.",
+     "hohwy-seth-2020": "Argues that the search for neural correlates of consciousness needs a principled foundation, and proposes the predictive processing framework for brain function as a candidate. The authors stress that predictive processing is not, at the outset, a theory of consciousness, and present that as an advantage.",
+     "nagel-1974": "States that an organism has conscious mental states if and only if there is something it is like for the organism to be that organism. Argues that reductive analyses in functional, behavioral, or causal terms leave out the subjective character of experience."
+    },
+    "limits": {
+     "seth-bayne-2022": "Abstract-level reading only.",
+     "melloni-2023": "Describes a protocol; the last portion of the page was not read.",
+     "cogitate-2025": "Publisher record only. Results are as reported by the authors and were not independently checked.",
+     "mashour-2020": "Presented as the theory's proponents' account.",
+     "dehaene-changeux-2011": "Presented as the theory's proponents' account.",
+     "albantakis-2023": "Presented as the theory's proponents' account.",
+     "doerig-2019": "Abstract-level reading; a conclusion that is itself disputed.",
+     "pseudoscience-letter-2023": "A news report on a letter, not the letter. It also reports disagreement.",
+     "tononi-2004": "Limitations not yet reviewed for this entry. Open-access page retrieved and summarized.",
+     "lau-rosenthal-2011": "Limitations not yet reviewed for this entry. A repository summary of the paper.",
+     "closer-rpt": "Limitations not yet reviewed for this entry. Web page retrieved and summarized.",
+     "graziano-webb-2015": "Limitations not yet reviewed for this entry. Open-access text retrieved and summarized.",
+     "hohwy-seth-2020": "Limitations not yet reviewed for this entry. Journal page retrieved and summarized.",
+     "nagel-1974": "Limitations not yet reviewed for this entry. A reproduction hosted on a third-party site was read (it carries the original citation but has transcription artifacts). The journal version was not checked."
+    },
+    "unknown": [
+     {
+      "kind": "review",
+      "text": "Whether current theories can be empirically distinguished at all is still described as unclear in the review.",
+      "src": [
+       "seth-bayne-2022"
+      ]
+     },
+     {
+      "kind": "empirical",
+      "text": "The Cogitate report says its results challenge key claims of both tested theories. That does not establish which theory, if any, is correct, and the other theories were not tested in that experiment.",
+      "src": [
+       "cogitate-2025"
+      ]
+     },
+     {
+      "kind": "design",
+      "text": "The collaboration concerned neural correlates of visual consciousness. Whether findings in that setting extend to other kinds of experience is not addressed in the material read.",
+      "src": [
+       "melloni-2023"
+      ]
+     }
+    ],
+    "investigate": [
+     {
+      "kind": "design",
+      "text": "Adversarial collaboration with preregistered, opposing predictions, run across independent labs, has been used for GNWT versus IIT.",
+      "src": [
+       "melloni-2023",
+       "cogitate-2025"
+      ]
+     },
+     {
+      "kind": "review",
+      "text": "Seth and Bayne outline three ways in which theories need to develop for rigorous testing.",
+      "src": [
+       "seth-bayne-2022"
+      ]
+     },
+     {
+      "kind": "speculative",
+      "text": "Other theory pairs could in principle be tested the same way. This is an editorial suggestion, not a published plan.",
+      "src": []
+     }
+    ],
+    "links": {
+     "compare": "gnwt-iit",
+     "theories": [
+      "gnwt",
+      "iit"
+     ],
+     "inquiry": "start",
+     "atlas": "consciousness",
+     "iq": "theories of consciousness",
+     "lab": true
+    }
+   },
+   "related": [
+    "Q002",
+    "Q003",
+    "Q005",
+    "Q006",
+    "Q007",
+    "Q013",
+    "Q014",
+    "Q017"
+   ]
+  },
+  {
+   "id": "Q002",
+   "slug": "why-does-subjective-experience-exist",
+   "title": "Why does subjective experience exist?",
+   "category": "mind",
+   "subject": "Philosophy of Mind",
+   "summary": "Why physical processes in a brain, or any system, should be accompanied by experience from a point of view.",
+   "scope": "Editorial scope note: this is primarily a philosophical question. The sources read are philosophical arguments, not experiments, and this entry does not claim an experiment could settle it.",
+   "status": [
+    "open"
+   ],
+   "statusJustification": "Open: the sources read present this as a standing philosophical problem (Nagel 1974; Chalmers 1995), and none of them reports a resolution. This is an editorial judgment from a small set of sources, subject to review.",
+   "review": "reviewed-preview",
+   "theories": [
+    "ast",
+    "iit"
+   ],
+   "concepts": [
+    "subjective-experience",
+    "emergence",
+    "awareness"
+   ],
+   "keywords": [
+    "subjective",
+    "experience",
+    "consciousness",
+    "hard problem",
+    "mind"
+   ],
+   "dateCreated": "2026-10-15",
+   "lastReviewed": "2026-10-15",
+   "openProblems": [
+    "Whether reductive explanation can account for subjective character."
+   ],
+   "investigation": {
+    "understand": {
+     "text": [
+      "The question asks why experience exists, as distinct from asking which brain processes accompany it (Q001). It is usually discussed as a problem in philosophy of mind.",
+      "Two interpretations are separated in the sources read. One treats experience as something reductive explanation could in principle capture; the other argues that reductive approaches leave out the core of the problem."
+     ],
+     "terms": [
+      {
+       "term": "What it is like",
+       "def": "Nagel: an organism has conscious mental states if and only if there is something it is like for the organism to be that organism.",
+       "src": [
+        "nagel-1974"
+       ]
+      },
+      {
+       "term": "The hard core of the problem",
+       "def": "Chalmers separates this hard core from the more tractable parts of the problem of consciousness and argues the core resists reductive explanation.",
+       "src": [
+        "chalmers-1995"
+       ]
+      }
+     ]
+    },
+    "know": [
+     {
+      "kind": "philosophical",
+      "text": "Nagel argues that analyses of mental states in functional, behavioral, or causal terms leave out the subjective character of experience.",
+      "src": [
+       "nagel-1974"
+      ]
+     },
+     {
+      "kind": "philosophical",
+      "text": "Chalmers argues that reductive approaches cannot capture the hard core of the problem, and that a nonreductive explanation could yield a naturalistic account.",
+      "src": [
+       "chalmers-1995"
+      ]
+     },
+     {
+      "kind": "philosophical",
+      "text": "Chalmers proposes a candidate nonreductive theory built on structural coherence, organizational invariance, and a double-aspect theory of information. This is a proposal, not an established result.",
+      "src": [
+       "chalmers-1995"
+      ]
+     },
+     {
+      "kind": "theoretical",
+      "text": "Attention schema theory proposes that subjective awareness is the brain's simplified internal model of its own attention, and states testable predictions.",
+      "src": [
+       "graziano-webb-2015"
+      ]
+     }
+    ],
+    "competing": [
+     {
+      "theory": "ast",
+      "text": "Proposes that subjective awareness is the brain's simplified model of its own attention.",
+      "src": [
+       "graziano-webb-2015"
+      ]
+     }
+    ],
+    "competingNote": "The Nagel and Chalmers papers argue that reductive accounts miss something. Attention schema theory offers a mechanistic account of awareness. The sources read here do not respond to one another, so this entry does not say how a defender of either side would reply to the other.",
+    "evidence": [
+     "nagel-1974",
+     "chalmers-1995",
+     "graziano-webb-2015"
+    ],
+    "findings": {
+     "nagel-1974": "Argues reductive analyses leave out subjective character.",
+     "chalmers-1995": "Argues the hard core resists reductive explanation and proposes a nonreductive alternative.",
+     "graziano-webb-2015": "Proposes awareness as a model of attention."
+    },
+    "limits": {
+     "nagel-1974": "A philosophical argument, not an empirical study. Read in a reproduction.",
+     "chalmers-1995": "A philosophical argument and proposal. Abstract-level reading.",
+     "graziano-webb-2015": "A theoretical proposal as described by its authors."
+    },
+    "unknown": [
+     {
+      "kind": "philosophical",
+      "text": "Whether reductive or nonreductive approaches are correct is not settled by the sources read, which present positions rather than a resolution.",
+      "src": [
+       "nagel-1974",
+       "chalmers-1995"
+      ]
+     },
+     {
+      "kind": "unreviewed",
+      "text": "Whether a mechanistic account such as attention schema theory addresses the problem Chalmers describes as the hard core has not been reviewed here.",
+      "src": []
+     }
+    ],
+    "investigate": [
+     {
+      "kind": "philosophical",
+      "text": "The sources read proceed by philosophical argument. This entry does not describe an experiment that would settle the question and does not imply that one exists.",
+      "src": [
+       "nagel-1974",
+       "chalmers-1995"
+      ]
+     },
+     {
+      "kind": "theoretical",
+      "text": "Attention schema theory states testable predictions about awareness and attention; those bear on how awareness is modelled, not on whether that settles the philosophical question.",
+      "src": [
+       "graziano-webb-2015"
+      ]
+     }
+    ],
+    "links": {
+     "compare": "ast-gnwt",
+     "theories": [
+      "ast"
+     ],
+     "inquiry": "fundamental",
+     "atlas": "consciousness",
+     "iq": "hard problem of consciousness",
+     "lab": true
+    }
+   },
+   "related": [
+    "Q001",
+    "Q005"
+   ]
+  },
+  {
+   "id": "Q003",
+   "slug": "can-consciousness-be-measured-objectively",
+   "title": "Can consciousness be measured objectively?",
+   "category": "human",
+   "subject": "Human Consciousness",
+   "summary": "Whether the presence, content, or neural basis of consciousness can be assessed by methods that do not rely only on a subject's report or on one theory.",
+   "scope": "Editorial scope note: the sources read focus on identifying neural correlates of consciousness. They do not establish a measure of consciousness itself.",
+   "status": [
+    "active",
+    "contested"
+   ],
+   "statusJustification": "Active: preregistered multi-method studies aimed at neural correlates have been designed and reported (Melloni et al. 2023; Cogitate Consortium 2025). Contested: whether current theories can be empirically distinguished is described as unclear (Seth and Bayne 2022), and the scientific status of IIT is disputed (as reported by Scientific American). Editorial judgment, subject to review.",
+   "review": "reviewed-preview",
+   "theories": [
+    "gnwt",
+    "iit",
+    "pp",
+    "hot"
+   ],
+   "concepts": [
+    "measurement",
+    "neural-activity",
+    "subjective-experience",
+    "perception"
+   ],
+   "keywords": [
+    "measure",
+    "consciousness",
+    "neural",
+    "measurement"
+   ],
+   "dateCreated": "2026-10-15",
+   "lastReviewed": "2026-10-15",
+   "openProblems": [
+    "Which methods, if any, measure consciousness independently of theory.",
+    "Whether findings from visual tasks generalize."
+   ],
+   "investigation": {
+    "understand": {
+     "text": [
+      "'Measured objectively' can mean different things: detecting whether a system is conscious, quantifying how conscious it is, or identifying the neural processes that accompany reported experience. The sources read address the third; this entry does not claim the first two have a method.",
+      "Even the third depends on how conscious and non-conscious trials are identified and on which theory's predictions are being tested."
+     ],
+     "terms": [
+      {
+       "term": "Neural correlates of consciousness",
+       "def": "Hohwy and Seth describe the search for neural correlates of consciousness as needing a principled foundation, which they propose the predictive processing framework could supply.",
+       "src": [
+        "hohwy-seth-2020"
+       ]
+      }
+     ]
+    },
+    "know": [
+     {
+      "kind": "design",
+      "text": "An adversarial collaboration protocol used fMRI, M-EEG, and intracranial EEG across independent labs to test contrasting predictions about the location, decoding, timing, pre-stimulus activity, and connectivity of correlates of visual consciousness.",
+      "src": [
+       "melloni-2023"
+      ]
+     },
+     {
+      "kind": "empirical",
+      "text": "The authors of a report on that approach describe 256 participants and say results partly align with each theory while substantially challenging key claims of both, and they argue for a quantitative framework for systematic theory testing.",
+      "src": [
+       "cogitate-2025"
+      ]
+     },
+     {
+      "kind": "review",
+      "text": "Seth and Bayne consider how empirical debates might distinguish theories and report that it is unclear whether current theories can be empirically distinguished.",
+      "src": [
+       "seth-bayne-2022"
+      ]
+     },
+     {
+      "kind": "theoretical",
+      "text": "Hohwy and Seth stress that predictive processing is not, at the outset, a theory of consciousness, and present that as an advantage for the search for correlates.",
+      "src": [
+       "hohwy-seth-2020"
+      ]
+     },
+     {
+      "kind": "criticism",
+      "text": "A letter signed by 124 scholars, as reported by Scientific American, argued that IIT should be labelled pseudoscience, citing among other points that some core assumptions are untestable. The report also describes researchers who disagree and say IIT makes testable predictions.",
+      "src": [
+       "pseudoscience-letter-2023"
+      ]
+     }
+    ],
+    "competing": [
+     {
+      "theory": "gnwt",
+      "text": "Proposes that a representation becomes consciously accessible when it is amplified and made available to many specialized processors through a distributed network, with prefrontal and parietal regions emphasized.",
+      "src": [
+       "mashour-2020",
+       "dehaene-changeux-2011"
+      ]
+     },
+     {
+      "theory": "iit",
+      "text": "Holds that consciousness corresponds to a physical system's irreducible cause-effect structure, derived from properties of experience such as unity and specificity.",
+      "src": [
+       "albantakis-2023",
+       "tononi-2004"
+      ]
+     },
+     {
+      "theory": "pp",
+      "text": "Applies the predictive processing framework to consciousness research, for example as a basis for identifying the neural correlates of consciousness.",
+      "src": [
+       "hohwy-seth-2020"
+      ]
+     }
+    ],
+    "competingNote": "Each theory implies different things to measure. The collaborations described tested GNWT against IIT; predictive processing and higher-order theories were not part of that test.",
+    "evidence": [
+     "melloni-2023",
+     "cogitate-2025",
+     "seth-bayne-2022",
+     "hohwy-seth-2020",
+     "pseudoscience-letter-2023",
+     "mashour-2020",
+     "dehaene-changeux-2011",
+     "albantakis-2023",
+     "tononi-2004"
+    ],
+    "findings": {
+     "melloni-2023": "Describes a multi-method protocol with preregistered contrasting predictions.",
+     "cogitate-2025": "Reports partial agreement with and challenges to both theories.",
+     "seth-bayne-2022": "Reports unclear empirical distinguishability.",
+     "hohwy-seth-2020": "Argues the search for correlates needs a principled foundation.",
+     "pseudoscience-letter-2023": "Reports a dispute about testability of IIT.",
+     "mashour-2020": "Reviews the tenets and neuroanatomy of the global neuronal workspace hypothesis. It proposes that conscious states involve a non-linear 'ignition' tied to recurrent processing that amplifies and sustains a representation so that many processors can access it. It examines the hypothesis against data on conscious versus nonconscious content and states, especially general anesthesia, and discusses attention and working memory. It lists predictions and acknowledges unresolved issues, such as the interpretation of late components like the P3.",
+     "dehaene-changeux-2011": "Reviews how information becomes consciously accessible (reportable subjective experience), drawing on neuroimaging and neurophysiology studies that minimally contrast conscious and nonconscious processing, and compares these findings with theoretical models, especially the global neuronal workspace. It concludes that conscious access is marked by late amplification of relevant sensory activity, long-distance cortico-cortical synchronization at beta and gamma frequencies, and ignition of a large-scale prefronto-parietal network. It presents the global neuronal workspace as a cortical alternative to Baars's global workspace.",
+     "albantakis-2023": "Presents the current formulation of IIT. It lists a zeroth axiom (experience exists) and five essential properties of experience: intrinsicality, information, integration, exclusion, and composition. Each is translated into a postulate about the physical substrate, which must have cause-effect power, act within itself, select a specific cause-effect state, form an irreducible whole, be bounded by a maximal set of units, and specify a structured cause-effect profile. The paper states that these conditions are necessary and sufficient for consciousness, that IIT yields testable predictions (some already tested), and that the formalism is still a work in progress.",
+     "tononi-2004": "Proposes a theory of what consciousness is and how it might be measured, drawing on two features of experience, its large repertoire of possible states (differentiation) and the unity of each experience (integration). It links the amount of consciousness to a quantity, Φ, describing how much causally effective information a set of elements can integrate, and argues that the theory fits findings such as the importance of the thalamocortical system and the reduction of consciousness in dreamless sleep. It states that the theory implies consciousness is fundamental, graded, and could in principle be built into artificial systems."
+    },
+    "limits": {
+     "melloni-2023": "Describes a protocol; the last portion of the page was not read.",
+     "cogitate-2025": "Publisher record only; results as reported by the authors.",
+     "seth-bayne-2022": "Abstract-level reading.",
+     "hohwy-seth-2020": "Abstract-level reading.",
+     "pseudoscience-letter-2023": "A news report on a letter, not the letter itself.",
+     "mashour-2020": "Limitations not yet reviewed for this entry. Open-access full text retrieved and summarized.",
+     "dehaene-changeux-2011": "Limitations not yet reviewed for this entry. Review text retrieved as a PDF and summarized.",
+     "albantakis-2023": "Limitations not yet reviewed for this entry. Open-access full text retrieved and summarized.",
+     "tononi-2004": "Limitations not yet reviewed for this entry. Open-access page retrieved and summarized."
+    },
+    "unknown": [
+     {
+      "kind": "review",
+      "text": "Whether present methods can distinguish between theories, and so tell which measures are measuring consciousness, is not settled.",
+      "src": [
+       "seth-bayne-2022"
+      ]
+     },
+     {
+      "kind": "unreviewed",
+      "text": "This entry has not reviewed whether any method measures consciousness independently of subjective report.",
+      "src": []
+     }
+    ],
+    "investigate": [
+     {
+      "kind": "design",
+      "text": "Preregistered adversarial collaborations with multiple imaging methods are a published approach.",
+      "src": [
+       "melloni-2023",
+       "cogitate-2025"
+      ]
+     },
+     {
+      "kind": "empirical",
+      "text": "The Cogitate authors argue for a quantitative framework for systematic theory testing.",
+      "src": [
+       "cogitate-2025"
+      ]
+     }
+    ],
+    "links": {
+     "compare": "gnwt-iit",
+     "theories": [
+      "gnwt",
+      "iit"
+     ],
+     "inquiry": "theories",
+     "atlas": "consciousness",
+     "iq": "neural correlates of consciousness",
+     "lab": true
+    }
+   },
+   "related": [
+    "Q001",
+    "Q009",
+    "Q013"
+   ]
+  },
+  {
+   "id": "Q004",
+   "slug": "can-consciousness-exist-independently-of-a-biological-brain",
+   "title": "Can consciousness exist independently of a biological brain?",
+   "category": "human",
+   "subject": "Human Consciousness",
+   "summary": "Whether consciousness requires a biological brain or could occur in other systems.",
+   "scope": "Editorial scope note: this entry has not been researched yet. The summary only states what the question asks.",
+   "status": [
+    "awaiting"
+   ],
+   "statusJustification": "This entry has not yet undergone editorial research review. No findings are reported here.",
+   "review": "awaiting",
+   "theories": [],
+   "concepts": [
+    "substrate",
+    "machine-consciousness"
+   ],
+   "keywords": [
+    "substrate",
+    "brain",
+    "biological"
+   ],
+   "dateCreated": "2026-10-15",
+   "lastReviewed": null,
+   "openProblems": [
+    "Not yet researched."
+   ],
+   "investigation": null,
+   "related": [
+    "Q005",
+    "Q009"
+   ]
+  },
+  {
+   "id": "Q005",
+   "slug": "is-consciousness-a-fundamental-property-of-reality-or-does-it-emerge-f",
+   "title": "Is consciousness a fundamental property of reality, or does it emerge from physical processes?",
+   "category": "mind",
+   "subject": "Philosophy of Mind",
+   "summary": "Whether consciousness is basic or arises from physical organization.",
+   "scope": "Editorial scope note: this entry has not been researched yet. The summary only states what the question asks.",
+   "status": [
+    "awaiting"
+   ],
+   "statusJustification": "This entry has not yet undergone editorial research review. No findings are reported here.",
+   "review": "awaiting",
+   "theories": [
+    "iit"
+   ],
+   "concepts": [
+    "emergence",
+    "subjective-experience"
+   ],
+   "keywords": [
+    "fundamental",
+    "emerge",
+    "physical"
+   ],
+   "dateCreated": "2026-10-15",
+   "lastReviewed": null,
+   "openProblems": [
+    "Not yet researched."
+   ],
+   "investigation": null,
+   "related": [
+    "Q001",
+    "Q002",
+    "Q004"
+   ]
+  },
+  {
+   "id": "Q006",
+   "slug": "how-are-consciousness-and-self-awareness-related",
+   "title": "How are consciousness and self-awareness related?",
+   "category": "human",
+   "subject": "Human Consciousness",
+   "summary": "Whether and how being conscious differs from being aware of oneself.",
+   "scope": "Editorial scope note: this entry has not been researched yet. The summary only states what the question asks.",
+   "status": [
+    "awaiting"
+   ],
+   "statusJustification": "This entry has not yet undergone editorial research review. No findings are reported here.",
+   "review": "awaiting",
+   "theories": [
+    "hot",
+    "ast"
+   ],
+   "concepts": [
+    "self-awareness",
+    "awareness",
+    "metacognition"
+   ],
+   "keywords": [
+    "self",
+    "aware"
+   ],
+   "dateCreated": "2026-10-15",
+   "lastReviewed": null,
+   "openProblems": [
+    "Not yet researched."
+   ],
+   "investigation": null,
+   "related": [
+    "Q001",
+    "Q010",
+    "Q015"
+   ]
+  },
+  {
+   "id": "Q007",
+   "slug": "can-intelligence-exist-without-consciousness",
+   "title": "Can intelligence exist without consciousness?",
+   "category": "ai",
+   "subject": "Artificial Intelligence",
+   "summary": "Whether intelligent behavior requires or is independent of conscious experience.",
+   "scope": "Editorial scope note: this entry has not been researched yet. The summary only states what the question asks.",
+   "status": [
+    "awaiting"
+   ],
+   "statusJustification": "This entry has not yet undergone editorial research review. No findings are reported here.",
+   "review": "awaiting",
+   "theories": [],
+   "concepts": [
+    "intelligence",
+    "subjective-experience"
+   ],
+   "keywords": [
+    "intelligence",
+    "conscious"
+   ],
+   "dateCreated": "2026-10-15",
+   "lastReviewed": null,
+   "openProblems": [
+    "Not yet researched."
+   ],
+   "investigation": null,
+   "related": [
+    "Q001",
+    "Q008",
+    "Q009",
+    "Q011",
+    "Q025"
+   ]
+  },
+  {
+   "id": "Q008",
+   "slug": "can-an-artificial-system-genuinely-understand-meaning",
+   "title": "Can an artificial system genuinely understand meaning?",
+   "category": "ai",
+   "subject": "Artificial Intelligence",
+   "summary": "Whether a computational system can have understanding, as opposed to producing outputs that look as if it does.",
+   "scope": "Editorial scope note: the sources read include a philosophical argument, a proposed behavioral test, and a report of language-model performance. They are different kinds of material and do not answer the question together.",
+   "status": [
+    "contested"
+   ],
+   "statusJustification": "Contested: Searle argues programs alone cannot suffice for intentionality, while Turing proposed replacing the question with an imitation game. The performance report on GPT-3 describes capabilities and does not itself claim understanding. Editorial judgment, subject to review.",
+   "review": "reviewed-preview",
+   "theories": [],
+   "concepts": [
+    "understanding",
+    "intelligence",
+    "information-processing"
+   ],
+   "keywords": [
+    "understand",
+    "language",
+    "meaning",
+    "machine",
+    "ai"
+   ],
+   "dateCreated": "2026-10-15",
+   "lastReviewed": "2026-10-15",
+   "openProblems": [
+    "Whether any behavior could demonstrate understanding.",
+    "Which later responses to Searle and Turing bear on current systems."
+   ],
+   "investigation": {
+    "understand": {
+     "text": [
+      "The question asks whether an artificial system can understand what its inputs and outputs mean, or only manipulate them. It is separated here from the behavioral question in Q012 (is imitation sufficient evidence?) and the consciousness question in Q009.",
+      "Searle's term for what he says is missing is intentionality; Turing's approach sets aside the word 'think' in favor of behavior in a game."
+     ],
+     "terms": [
+      {
+       "term": "Strong AI (Searle)",
+       "def": "The view that programs alone can literally create intentionality.",
+       "src": [
+        "searle-1980"
+       ]
+      },
+      {
+       "term": "Imitation game (Turing)",
+       "def": "A game in which an interrogator, using typed questions and answers, tries to identify which of two hidden players is which; the question becomes whether a machine in one role causes misidentification as often as a human would.",
+       "src": [
+        "turing-1950"
+       ]
+      }
+     ]
+    },
+    "know": [
+     {
+      "kind": "philosophical",
+      "text": "Searle argues that running a program is never by itself enough for intentionality and concludes that strong AI cannot succeed; he says artificial intentionality would require reproducing the brain's causal powers.",
+      "src": [
+       "searle-1980"
+      ]
+     },
+     {
+      "kind": "philosophical",
+      "text": "Turing opens by proposing to consider 'Can machines think?', then replaces it with the imitation game.",
+      "src": [
+       "turing-1950"
+      ]
+     },
+     {
+      "kind": "speculative",
+      "text": "Turing predicted that in about fifty years computers could be programmed so that an average interrogator would have no more than a 70 per cent chance of identifying correctly after five minutes. This was a prediction, not a result.",
+      "src": [
+       "turing-1950"
+      ]
+     },
+     {
+      "kind": "empirical",
+      "text": "Brown et al. report that GPT-3, evaluated without weight updates, performs strongly on translation, question answering, and cloze tasks, still struggles on some datasets, and that human evaluators had difficulty distinguishing its generated news articles from human-written ones. The abstract does not claim understanding.",
+      "src": [
+       "brown-2020"
+      ]
+     }
+    ],
+    "competing": [
+     {
+      "theory": null,
+      "label": "A behavioral approach (Turing)",
+      "text": "Replace the question about thinking with a question about performance in an imitation game.",
+      "src": [
+       "turing-1950"
+      ]
+     },
+     {
+      "theory": null,
+      "label": "A causal-powers argument (Searle)",
+      "text": "Program execution alone is insufficient for intentionality; the causal powers of the brain would have to be reproduced.",
+      "src": [
+       "searle-1980"
+      ]
+     }
+    ],
+    "competingNote": "These two positions answer different questions: one sets aside 'thinking' for a behavioral criterion; the other argues behavior from a program does not entail intentionality. The sources read do not report an experiment between them.",
+    "evidence": [
+     "turing-1950",
+     "searle-1980",
+     "brown-2020"
+    ],
+    "findings": {
+     "turing-1950": "Proposes the imitation game and a prediction about it.",
+     "searle-1980": "Argues programs alone cannot suffice for intentionality.",
+     "brown-2020": "Reports language-model task performance and methodological concerns."
+    },
+    "limits": {
+     "turing-1950": "A philosophical proposal read in a scanned reproduction; not an empirical study.",
+     "searle-1980": "A philosophical argument; abstract-level reading.",
+     "brown-2020": "Abstract-level reading; a report of performance, not of understanding."
+    },
+    "unknown": [
+     {
+      "kind": "philosophical",
+      "text": "Whether performance of any kind could show understanding is the point at issue between the positions above; the sources read do not resolve it.",
+      "src": [
+       "turing-1950",
+       "searle-1980"
+      ]
+     },
+     {
+      "kind": "unreviewed",
+      "text": "Later philosophical and technical responses to these papers have not been reviewed in this entry.",
+      "src": []
+     }
+    ],
+    "investigate": [
+     {
+      "kind": "speculative",
+      "text": "Turing's imitation game is a proposed behavioral test.",
+      "src": [
+       "turing-1950"
+      ]
+     },
+     {
+      "kind": "philosophical",
+      "text": "Searle's argument is a thought experiment about program execution, not an empirical protocol.",
+      "src": [
+       "searle-1980"
+      ]
+     }
+    ],
+    "links": {
+     "compare": null,
+     "theories": [],
+     "inquiry": "behaviour",
+     "atlas": "ai",
+     "iq": "machine understanding",
+     "lab": true
+    }
+   },
+   "related": [
+    "Q007",
+    "Q009",
+    "Q012"
+   ]
+  },
+  {
+   "id": "Q009",
+   "slug": "what-would-count-as-evidence-of-machine-consciousness",
+   "title": "What would count as evidence of machine consciousness?",
+   "category": "ai",
+   "subject": "Artificial Intelligence",
+   "summary": "What observations, if any, should lead us to attribute consciousness to an artificial system.",
+   "scope": "Editorial scope note: the main source read is a preprint abstract proposing one approach; this entry presents it as that, not as a settled method.",
+   "status": [
+    "active",
+    "contested"
+   ],
+   "statusJustification": "Active: Butlin et al. propose assessing AI systems against indicator properties derived from scientific theories. Contested: the theories the indicators come from are themselves in dispute (Seth and Bayne 2022; Cogitate Consortium 2025). This is an editorial judgment, subject to review.",
+   "review": "reviewed-preview",
+   "theories": [
+    "gnwt",
+    "hot",
+    "rpt",
+    "ast",
+    "pp"
+   ],
+   "concepts": [
+    "machine-consciousness",
+    "measurement",
+    "self-modeling",
+    "metacognition"
+   ],
+   "keywords": [
+    "machine",
+    "conscious",
+    "ai",
+    "artificial"
+   ],
+   "dateCreated": "2026-10-15",
+   "lastReviewed": "2026-10-15",
+   "openProblems": [
+    "Whether indicator approaches can be validated.",
+    "Whether behavioral evidence should count."
+   ],
+   "investigation": {
+    "understand": {
+     "text": [
+      "The question asks what evidence would justify saying that an artificial system is conscious. It depends on what consciousness is taken to be (Q001) and on whether behavior is good evidence (Q012).",
+      "One published approach takes leading neuroscientific theories as a starting point and asks what computational properties each would require."
+     ],
+     "terms": [
+      {
+       "term": "Indicator properties",
+       "def": "In Butlin et al., computational properties derived from scientific theories of consciousness, against which AI systems are assessed.",
+       "src": [
+        "butlin-2023"
+       ]
+      }
+     ]
+    },
+    "know": [
+     {
+      "kind": "review",
+      "text": "Butlin et al. argue for studying AI consciousness empirically by assessing existing AI systems against leading neuroscientific theories. They review recurrent processing, global workspace, higher-order, predictive processing, and attention schema theories, derive computational indicator properties, and evaluate several recent AI systems.",
+      "src": [
+       "butlin-2023"
+      ]
+     },
+     {
+      "kind": "review",
+      "text": "They conclude that no current AI systems appear to be conscious, and that there are no obvious barriers to building conscious AI systems.",
+      "src": [
+       "butlin-2023"
+      ]
+     },
+     {
+      "kind": "review",
+      "text": "The theories such an approach draws on are themselves disputed: Seth and Bayne report that researchers disagree about what the theories require and that it is unclear whether they can be empirically distinguished.",
+      "src": [
+       "seth-bayne-2022"
+      ]
+     },
+     {
+      "kind": "criticism",
+      "text": "Doerig et al. argue that causal structure theories, naming IIT and recurrent processing theory, are either false or outside the realm of science.",
+      "src": [
+       "doerig-2019"
+      ]
+     }
+    ],
+    "competing": [
+     {
+      "theory": "gnwt",
+      "text": "Proposes that a representation becomes consciously accessible when it is amplified and made available to many specialized processors through a distributed network, with prefrontal and parietal regions emphasized.",
+      "src": [
+       "mashour-2020",
+       "dehaene-changeux-2011"
+      ]
+     },
+     {
+      "theory": "hot",
+      "text": "Hold that a mental state is conscious when the subject has a higher-order representation of being in that state.",
+      "src": [
+       "lau-rosenthal-2011"
+      ]
+     },
+     {
+      "theory": "rpt",
+      "text": "Associates consciousness with recurrent (feedback) processing in sensory areas rather than with the initial feedforward sweep.",
+      "src": [
+       "closer-rpt"
+      ]
+     },
+     {
+      "theory": "ast",
+      "text": "Proposes that subjective awareness is the brain's simplified model of its own attention.",
+      "src": [
+       "graziano-webb-2015"
+      ]
+     },
+     {
+      "theory": "pp",
+      "text": "Applies the predictive processing framework to consciousness research, for example as a basis for identifying the neural correlates of consciousness.",
+      "src": [
+       "hohwy-seth-2020"
+      ]
+     }
+    ],
+    "competingNote": "Butlin et al. draw indicators from several theories because no single theory is agreed. Which indicators matter depends on which theory is right; the archive does not take a position.",
+    "evidence": [
+     "butlin-2023",
+     "seth-bayne-2022",
+     "cogitate-2025",
+     "doerig-2019",
+     "melloni-2023",
+     "mashour-2020",
+     "dehaene-changeux-2011",
+     "lau-rosenthal-2011",
+     "closer-rpt",
+     "graziano-webb-2015",
+     "hohwy-seth-2020"
+    ],
+    "findings": {
+     "butlin-2023": "Proposes and applies a theory-derived indicator approach.",
+     "seth-bayne-2022": "Reports disagreement about the theories.",
+     "cogitate-2025": "Reports results challenging key claims of GNWT and IIT.",
+     "doerig-2019": "Argues certain theories are false or outside science.",
+     "melloni-2023": "Describes a preregistered adversarial collaboration between proponents of GNWT and IIT, with experiments testing contrasting predictions about where and when neural correlates of visual consciousness occur, using fMRI, M-EEG, and intracranial EEG across independent labs. It states contrasting predictions on the location of the correlates, decoding of conscious content, temporal dynamics, pre-stimulus activity, and functional connectivity.",
+     "mashour-2020": "Reviews the tenets and neuroanatomy of the global neuronal workspace hypothesis. It proposes that conscious states involve a non-linear 'ignition' tied to recurrent processing that amplifies and sustains a representation so that many processors can access it. It examines the hypothesis against data on conscious versus nonconscious content and states, especially general anesthesia, and discusses attention and working memory. It lists predictions and acknowledges unresolved issues, such as the interpretation of late components like the P3.",
+     "dehaene-changeux-2011": "Reviews how information becomes consciously accessible (reportable subjective experience), drawing on neuroimaging and neurophysiology studies that minimally contrast conscious and nonconscious processing, and compares these findings with theoretical models, especially the global neuronal workspace. It concludes that conscious access is marked by late amplification of relevant sensory activity, long-distance cortico-cortical synchronization at beta and gamma frequencies, and ignition of a large-scale prefronto-parietal network. It presents the global neuronal workspace as a cortical alternative to Baars's global workspace.",
+     "lau-rosenthal-2011": "Argues that conscious awareness depends on higher-order representations, which are mental states that represent oneself as being in a particular state. It compares the view with first-order, global workspace, and recurrent visual processing theories, focusing on evidence that tells them apart. It responds to objections, including that prefrontal activity reflects attention rather than awareness and that prefrontal lesions do not eliminate awareness, and concludes that the higher-order approach, though rooted in philosophy, is empirically testable and has received substantial support.",
+     "closer-rpt": "A web entry describing Lamme's recurrent processing theory: consciousness arises when sensory areas engage in recurrent (feedback) processing, located at the third of four described stages of visual processing. It notes criticisms by Ned Block and a contrast with global workspace theory. The page relies largely on secondary sources (a Stanford Encyclopedia of Philosophy entry and Block's 2023 book) rather than Lamme's papers directly.",
+     "graziano-webb-2015": "Proposes that subjective awareness is the brain's simplified internal model of its own attention, analogous to a body schema. It argues this explains how awareness and attention can dissociate and how people can be aware of internal and external events, states testable predictions, and reviews literature that it describes as supporting some of them. The authors acknowledge disputed points, such as the top-down versus bottom-up distinction and whether awareness can occur without attention, and describe the evidence as suggestive.",
+     "hohwy-seth-2020": "Argues that the search for neural correlates of consciousness needs a principled foundation, and proposes the predictive processing framework for brain function as a candidate. The authors stress that predictive processing is not, at the outset, a theory of consciousness, and present that as an advantage."
+    },
+    "limits": {
+     "butlin-2023": "A preprint, read at abstract level; conclusions are the authors'.",
+     "seth-bayne-2022": "Abstract-level reading.",
+     "cogitate-2025": "Publisher record only.",
+     "doerig-2019": "Abstract-level reading; a disputed argument.",
+     "melloni-2023": "Limitations not yet reviewed for this entry. Open-access text retrieved and summarized; the last portion of the page was not read.",
+     "mashour-2020": "Limitations not yet reviewed for this entry. Open-access full text retrieved and summarized.",
+     "dehaene-changeux-2011": "Limitations not yet reviewed for this entry. Review text retrieved as a PDF and summarized.",
+     "lau-rosenthal-2011": "Limitations not yet reviewed for this entry. A repository summary of the paper.",
+     "closer-rpt": "Limitations not yet reviewed for this entry. Web page retrieved and summarized.",
+     "graziano-webb-2015": "Limitations not yet reviewed for this entry. Open-access text retrieved and summarized.",
+     "hohwy-seth-2020": "Limitations not yet reviewed for this entry. Journal page retrieved and summarized."
+    },
+    "unknown": [
+     {
+      "kind": "review",
+      "text": "Whether any indicator approach can be validated while the underlying theories remain contested.",
+      "src": [
+       "seth-bayne-2022"
+      ]
+     },
+     {
+      "kind": "unreviewed",
+      "text": "Whether behavioral evidence should count alongside theory-derived indicators has not been reviewed here (see Q012).",
+      "src": []
+     }
+    ],
+    "investigate": [
+     {
+      "kind": "speculative",
+      "text": "Assess AI systems against indicator properties drawn from several theories, as Butlin et al. propose.",
+      "src": [
+       "butlin-2023"
+      ]
+     },
+     {
+      "kind": "design",
+      "text": "Theory-testing methods developed for human neuroscience, such as adversarial collaboration, are one model for how disputed predictions might be tested.",
+      "src": [
+       "melloni-2023"
+      ]
+     }
+    ],
+    "links": {
+     "compare": "gnwt-iit",
+     "theories": [
+      "gnwt",
+      "hot",
+      "rpt",
+      "ast",
+      "pp"
+     ],
+     "inquiry": "indicators",
+     "atlas": "ai",
+     "iq": "AI consciousness indicators",
+     "lab": true
+    }
+   },
+   "related": [
+    "Q003",
+    "Q004",
+    "Q007",
+    "Q008",
+    "Q010",
+    "Q022",
+    "Q024"
+   ]
+  },
+  {
+   "id": "Q010",
+   "slug": "could-an-ai-system-develop-a-meaningful-representation-of-itself",
+   "title": "Could an AI system develop a meaningful representation of itself?",
+   "category": "ai",
+   "subject": "Artificial Intelligence",
+   "summary": "Whether an artificial system could model itself in a way that matters for its behavior or experience.",
+   "scope": "Editorial scope note: this entry has not been researched yet. The summary only states what the question asks.",
+   "status": [
+    "awaiting"
+   ],
+   "statusJustification": "This entry has not yet undergone editorial research review. No findings are reported here.",
+   "review": "awaiting",
+   "theories": [
+    "ast"
+   ],
+   "concepts": [
+    "self-modeling",
+    "self-awareness"
+   ],
+   "keywords": [
+    "self",
+    "representation"
+   ],
+   "dateCreated": "2026-10-15",
+   "lastReviewed": null,
+   "openProblems": [
+    "Not yet researched."
+   ],
+   "investigation": null,
+   "related": [
+    "Q006",
+    "Q009",
+    "Q025"
+   ]
+  },
+  {
+   "id": "Q011",
+   "slug": "can-machine-reasoning-become-functionally-comparable-to-human-reasonin",
+   "title": "Can machine reasoning become functionally comparable to human reasoning?",
+   "category": "ai",
+   "subject": "Artificial Intelligence",
+   "summary": "Whether machine reasoning could match human reasoning in function.",
+   "scope": "Editorial scope note: this entry has not been researched yet. The summary only states what the question asks.",
+   "status": [
+    "awaiting"
+   ],
+   "statusJustification": "This entry has not yet undergone editorial research review. No findings are reported here.",
+   "review": "awaiting",
+   "theories": [],
+   "concepts": [
+    "intelligence",
+    "information-processing"
+   ],
+   "keywords": [
+    "reasoning",
+    "machine"
+   ],
+   "dateCreated": "2026-10-15",
+   "lastReviewed": null,
+   "openProblems": [
+    "Not yet researched."
+   ],
+   "investigation": null,
+   "related": [
+    "Q007",
+    "Q023"
+   ]
+  },
+  {
+   "id": "Q012",
+   "slug": "is-behavioral-imitation-sufficient-evidence-of-understanding",
+   "title": "Is behavioral imitation sufficient evidence of understanding?",
+   "category": "ai",
+   "subject": "Artificial Intelligence",
+   "summary": "Whether behavior that matches a human's is enough to show understanding.",
+   "scope": "Editorial scope note: this entry has not been researched yet. The summary only states what the question asks.",
+   "status": [
+    "awaiting"
+   ],
+   "statusJustification": "This entry has not yet undergone editorial research review. No findings are reported here.",
+   "review": "awaiting",
+   "theories": [],
+   "concepts": [
+    "understanding"
+   ],
+   "keywords": [
+    "behavior",
+    "imitation",
+    "understanding"
+   ],
+   "dateCreated": "2026-10-15",
+   "lastReviewed": null,
+   "openProblems": [
+    "Not yet researched."
+   ],
+   "investigation": null,
+   "related": [
+    "Q008"
+   ]
+  },
+  {
+   "id": "Q013",
+   "slug": "which-neural-processes-are-necessary-for-conscious-experience",
+   "title": "Which neural processes are necessary for conscious experience?",
+   "category": "neuro",
+   "subject": "Neuroscience and Cognition",
+   "summary": "Which brain processes must occur for an experience to be conscious.",
+   "scope": "Editorial scope note: this entry has not been researched yet. The summary only states what the question asks.",
+   "status": [
+    "awaiting"
+   ],
+   "statusJustification": "This entry has not yet undergone editorial research review. No findings are reported here.",
+   "review": "awaiting",
+   "theories": [
+    "gnwt",
+    "iit",
+    "rpt"
+   ],
+   "concepts": [
+    "neural-activity",
+    "subjective-experience"
+   ],
+   "keywords": [
+    "neural",
+    "brain"
+   ],
+   "dateCreated": "2026-10-15",
+   "lastReviewed": null,
+   "openProblems": [
+    "Not yet researched."
+   ],
+   "investigation": null,
+   "related": [
+    "Q001",
+    "Q003",
+    "Q017"
+   ]
+  },
+  {
+   "id": "Q014",
+   "slug": "what-is-the-relationship-between-attention-and-consciousness",
+   "title": "What is the relationship between attention and consciousness?",
+   "category": "neuro",
+   "subject": "Neuroscience and Cognition",
+   "summary": "How attention relates to conscious experience, and whether they can come apart.",
+   "scope": "Editorial scope note: this entry has not been researched yet. The summary only states what the question asks.",
+   "status": [
+    "awaiting"
+   ],
+   "statusJustification": "This entry has not yet undergone editorial research review. No findings are reported here.",
+   "review": "awaiting",
+   "theories": [
+    "ast",
+    "gnwt"
+   ],
+   "concepts": [
+    "attention",
+    "awareness"
+   ],
+   "keywords": [
+    "attention"
+   ],
+   "dateCreated": "2026-10-15",
+   "lastReviewed": null,
+   "openProblems": [
+    "Not yet researched."
+   ],
+   "investigation": null,
+   "related": [
+    "Q001",
+    "Q017"
+   ]
+  },
+  {
+   "id": "Q015",
+   "slug": "how-does-the-brain-construct-a-continuous-sense-of-self",
+   "title": "How does the brain construct a continuous sense of self?",
+   "category": "neuro",
+   "subject": "Neuroscience and Cognition",
+   "summary": "How a stable sense of self is produced over time.",
+   "scope": "Editorial scope note: this entry has not been researched yet. The summary only states what the question asks.",
+   "status": [
+    "awaiting"
+   ],
+   "statusJustification": "This entry has not yet undergone editorial research review. No findings are reported here.",
+   "review": "awaiting",
+   "theories": [],
+   "concepts": [
+    "self-modeling",
+    "personal-identity",
+    "memory"
+   ],
+   "keywords": [
+    "self",
+    "identity"
+   ],
+   "dateCreated": "2026-10-15",
+   "lastReviewed": null,
+   "openProblems": [
+    "Not yet researched."
+   ],
+   "investigation": null,
+   "related": [
+    "Q006",
+    "Q016",
+    "Q019"
+   ]
+  },
+  {
+   "id": "Q016",
+   "slug": "what-role-does-memory-play-in-maintaining-personal-identity",
+   "title": "What role does memory play in maintaining personal identity?",
+   "category": "neuro",
+   "subject": "Neuroscience and Cognition",
+   "summary": "How memory contributes to personal continuity.",
+   "scope": "Editorial scope note: this entry has not been researched yet. The summary only states what the question asks.",
+   "status": [
+    "awaiting"
+   ],
+   "statusJustification": "This entry has not yet undergone editorial research review. No findings are reported here.",
+   "review": "awaiting",
+   "theories": [],
+   "concepts": [
+    "memory",
+    "personal-identity"
+   ],
+   "keywords": [
+    "memory",
+    "identity"
+   ],
+   "dateCreated": "2026-10-15",
+   "lastReviewed": null,
+   "openProblems": [
+    "Not yet researched."
+   ],
+   "investigation": null,
+   "related": [
+    "Q015",
+    "Q018",
+    "Q019",
+    "Q020"
+   ]
+  },
+  {
+   "id": "Q017",
+   "slug": "how-does-conscious-perception-differ-from-unconscious-information-proc",
+   "title": "How does conscious perception differ from unconscious information processing?",
+   "category": "neuro",
+   "subject": "Neuroscience and Cognition",
+   "summary": "What differs between perceiving consciously and processing information without awareness.",
+   "scope": "Editorial scope note: this entry has not been researched yet. The summary only states what the question asks.",
+   "status": [
+    "awaiting"
+   ],
+   "statusJustification": "This entry has not yet undergone editorial research review. No findings are reported here.",
+   "review": "awaiting",
+   "theories": [
+    "gnwt",
+    "rpt"
+   ],
+   "concepts": [
+    "perception",
+    "information-processing"
+   ],
+   "keywords": [
+    "perception",
+    "unconscious"
+   ],
+   "dateCreated": "2026-10-15",
+   "lastReviewed": null,
+   "openProblems": [
+    "Not yet researched."
+   ],
+   "investigation": null,
+   "related": [
+    "Q001",
+    "Q013",
+    "Q014"
+   ]
+  },
+  {
+   "id": "Q018",
+   "slug": "can-a-digital-representation-preserve-meaningful-aspects-of-someone-s-",
+   "title": "Can a digital representation preserve meaningful aspects of someone's identity?",
+   "category": "memory",
+   "subject": "Memory and Digital Identity",
+   "summary": "Whether digital records or models can preserve aspects of a person that matter.",
+   "scope": "Editorial scope note: this entry has not been researched yet. The summary only states what the question asks.",
+   "status": [
+    "awaiting"
+   ],
+   "statusJustification": "This entry has not yet undergone editorial research review. No findings are reported here.",
+   "review": "awaiting",
+   "theories": [],
+   "concepts": [
+    "digital-records",
+    "personal-identity"
+   ],
+   "keywords": [
+    "digital",
+    "identity",
+    "archive",
+    "records"
+   ],
+   "dateCreated": "2026-10-15",
+   "lastReviewed": null,
+   "openProblems": [
+    "Not yet researched."
+   ],
+   "investigation": null,
+   "related": [
+    "Q016",
+    "Q020",
+    "Q021"
+   ]
+  },
+  {
+   "id": "Q019",
+   "slug": "what-happens-to-personal-identity-when-memory-is-altered-or-lost",
+   "title": "What happens to personal identity when memory is altered or lost?",
+   "category": "memory",
+   "subject": "Memory and Digital Identity",
+   "summary": "How identity is affected when memory changes.",
+   "scope": "Editorial scope note: this entry has not been researched yet. The summary only states what the question asks.",
+   "status": [
+    "awaiting"
+   ],
+   "statusJustification": "This entry has not yet undergone editorial research review. No findings are reported here.",
+   "review": "awaiting",
+   "theories": [],
+   "concepts": [
+    "memory",
+    "personal-identity"
+   ],
+   "keywords": [
+    "memory",
+    "identity"
+   ],
+   "dateCreated": "2026-10-15",
+   "lastReviewed": null,
+   "openProblems": [
+    "Not yet researched."
+   ],
+   "investigation": null,
+   "related": [
+    "Q015",
+    "Q016"
+   ]
+  },
+  {
+   "id": "Q020",
+   "slug": "can-artificial-memory-systems-reproduce-important-functions-of-human-r",
+   "title": "Can artificial memory systems reproduce important functions of human remembering?",
+   "category": "memory",
+   "subject": "Memory and Digital Identity",
+   "summary": "Whether artificial memory systems can do what human remembering does.",
+   "scope": "Editorial scope note: this entry has not been researched yet. The summary only states what the question asks.",
+   "status": [
+    "awaiting"
+   ],
+   "statusJustification": "This entry has not yet undergone editorial research review. No findings are reported here.",
+   "review": "awaiting",
+   "theories": [],
+   "concepts": [
+    "memory",
+    "digital-records",
+    "information-processing"
+   ],
+   "keywords": [
+    "memory",
+    "archive",
+    "machine"
+   ],
+   "dateCreated": "2026-10-15",
+   "lastReviewed": null,
+   "openProblems": [
+    "Not yet researched."
+   ],
+   "investigation": null,
+   "related": [
+    "Q016",
+    "Q018"
+   ]
+  },
+  {
+   "id": "Q021",
+   "slug": "what-does-it-mean-to-preserve-a-person-through-their-digital-records",
+   "title": "What does it mean to preserve a person through their digital records?",
+   "category": "memory",
+   "subject": "Memory and Digital Identity",
+   "summary": "What preserving a person through records would amount to.",
+   "scope": "Editorial scope note: this entry has not been researched yet. The summary only states what the question asks.",
+   "status": [
+    "awaiting"
+   ],
+   "statusJustification": "This entry has not yet undergone editorial research review. No findings are reported here.",
+   "review": "awaiting",
+   "theories": [],
+   "concepts": [
+    "digital-records",
+    "personal-identity",
+    "memory"
+   ],
+   "keywords": [
+    "digital",
+    "records",
+    "archive",
+    "preserve"
+   ],
+   "dateCreated": "2026-10-15",
+   "lastReviewed": null,
+   "openProblems": [
+    "Not yet researched."
+   ],
+   "investigation": null,
+   "related": [
+    "Q018"
+   ]
+  },
+  {
+   "id": "Q022",
+   "slug": "under-what-conditions-if-any-could-an-artificial-system-deserve-moral-",
+   "title": "Under what conditions, if any, could an artificial system deserve moral consideration?",
+   "category": "ethics",
+   "subject": "Ethics and Society",
+   "summary": "What would have to be true of an artificial system for it to matter morally.",
+   "scope": "Editorial scope note: this entry has not been researched yet. The summary only states what the question asks.",
+   "status": [
+    "awaiting"
+   ],
+   "statusJustification": "This entry has not yet undergone editorial research review. No findings are reported here.",
+   "review": "awaiting",
+   "theories": [],
+   "concepts": [
+    "moral-consideration",
+    "machine-consciousness"
+   ],
+   "keywords": [
+    "moral",
+    "ethic",
+    "machine"
+   ],
+   "dateCreated": "2026-10-15",
+   "lastReviewed": null,
+   "openProblems": [
+    "Not yet researched."
+   ],
+   "investigation": null,
+   "related": [
+    "Q009",
+    "Q023",
+    "Q024"
+   ]
+  },
+  {
+   "id": "Q023",
+   "slug": "how-should-responsibility-be-assigned-when-ai-systems-participate-in-c",
+   "title": "How should responsibility be assigned when AI systems participate in consequential decisions?",
+   "category": "ethics",
+   "subject": "Ethics and Society",
+   "summary": "Who is accountable when AI systems take part in consequential decisions.",
+   "scope": "Editorial scope note: this entry has not been researched yet. The summary only states what the question asks.",
+   "status": [
+    "awaiting"
+   ],
+   "statusJustification": "This entry has not yet undergone editorial research review. No findings are reported here.",
+   "review": "awaiting",
+   "theories": [],
+   "concepts": [
+    "responsibility",
+    "intelligence"
+   ],
+   "keywords": [
+    "responsibility",
+    "decision",
+    "accountab"
+   ],
+   "dateCreated": "2026-10-15",
+   "lastReviewed": null,
+   "openProblems": [
+    "Not yet researched."
+   ],
+   "investigation": null,
+   "related": [
+    "Q011",
+    "Q022"
+   ]
+  },
+  {
+   "id": "Q024",
+   "slug": "could-society-develop-meaningful-methods-for-evaluating-claims-of-arti",
+   "title": "Could society develop meaningful methods for evaluating claims of artificial awareness?",
+   "category": "ethics",
+   "subject": "Ethics and Society",
+   "summary": "Whether there could be credible methods for assessing claims that an AI is aware.",
+   "scope": "Editorial scope note: this entry has not been researched yet. The summary only states what the question asks.",
+   "status": [
+    "awaiting"
+   ],
+   "statusJustification": "This entry has not yet undergone editorial research review. No findings are reported here.",
+   "review": "awaiting",
+   "theories": [],
+   "concepts": [
+    "machine-consciousness",
+    "measurement",
+    "moral-consideration"
+   ],
+   "keywords": [
+    "awareness",
+    "claims",
+    "evaluate"
+   ],
+   "dateCreated": "2026-10-15",
+   "lastReviewed": null,
+   "openProblems": [
+    "Not yet researched."
+   ],
+   "investigation": null,
+   "related": [
+    "Q009",
+    "Q022"
+   ]
+  },
+  {
+   "id": "Q025",
+   "slug": "is-self-awareness-necessary-for-intelligence",
+   "title": "Is self-awareness necessary for intelligence?",
+   "category": "ai",
+   "subject": "Artificial Intelligence",
+   "summary": "Whether intelligence requires self-awareness.",
+   "scope": "Editorial scope note: this entry has not been researched yet. The summary only states what the question asks. Added by the archive's editor as a proposed question.",
+   "status": [
+    "awaiting"
+   ],
+   "statusJustification": "This entry has not yet undergone editorial research review. No findings are reported here.",
+   "review": "awaiting",
+   "theories": [],
+   "concepts": [
+    "self-awareness",
+    "intelligence"
+   ],
+   "keywords": [
+    "self",
+    "intelligence"
+   ],
+   "dateCreated": "2026-10-15",
+   "lastReviewed": null,
+   "openProblems": [
+    "Not yet researched."
+   ],
+   "investigation": null,
+   "related": [
+    "Q007",
+    "Q010"
+   ]
+  }
+ ]
+}

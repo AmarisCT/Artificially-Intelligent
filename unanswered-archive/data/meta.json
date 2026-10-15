@@ -1,0 +1,202 @@
+{
+ "generated": "2026-10-15",
+ "statuses": [
+  {
+   "id": "open",
+   "label": "Open Question",
+   "meaning": "No broadly accepted resolution has been established for the question as formulated."
+  },
+  {
+   "id": "active",
+   "label": "Active Research",
+   "meaning": "Current research is investigating the question through identifiable approaches, studies, or scholarly work."
+  },
+  {
+   "id": "contested",
+   "label": "Contested",
+   "meaning": "Substantive disagreement exists concerning the interpretation of evidence, theoretical assumptions, or proposed explanations."
+  },
+  {
+   "id": "partial",
+   "label": "Partially Resolved",
+   "meaning": "Some carefully defined aspects have received substantial evidence or clarification, while others remain unresolved."
+  },
+  {
+   "id": "awaiting",
+   "label": "Awaiting Research Review",
+   "meaning": "The archive entry has not yet undergone sufficient editorial examination."
+  }
+ ],
+ "categories": [
+  {
+   "id": "human",
+   "label": "Human Consciousness",
+   "desc": "Subjective experience, perception, awareness, and the relationship between the brain and consciousness."
+  },
+  {
+   "id": "ai",
+   "label": "Artificial Intelligence",
+   "desc": "Machine intelligence, reasoning, understanding, learning, and potential machine consciousness."
+  },
+  {
+   "id": "neuro",
+   "label": "Neuroscience and Cognition",
+   "desc": "Neural activity, memory, attention, cognition, and the processes associated with conscious experience."
+  },
+  {
+   "id": "mind",
+   "label": "Philosophy of Mind",
+   "desc": "The mind-body relationship, the hard problem, personal identity, and the nature of mental states."
+  },
+  {
+   "id": "memory",
+   "label": "Memory and Digital Identity",
+   "desc": "Human memory, digital records, artificial memory, personal continuity, and technological representations of identity."
+  },
+  {
+   "id": "ethics",
+   "label": "Ethics and Society",
+   "desc": "Moral responsibility, AI accountability, machine agency, and the implications of increasingly sophisticated artificial systems."
+  }
+ ],
+ "kinds": {
+  "empirical": "Empirical finding",
+  "theoretical": "Theoretical argument",
+  "philosophical": "Philosophical interpretation",
+  "criticism": "Criticism",
+  "speculative": "Speculative proposal",
+  "unreviewed": "Unreviewed statement",
+  "review": "Review of the literature",
+  "design": "Study design or protocol"
+ },
+ "relationTypes": {
+  "concept": "Related concept",
+  "framework": "Shared theoretical framework",
+  "method": "Similar methodological challenge",
+  "problem": "Connected research problem"
+ },
+ "concepts": [
+  {
+   "id": "subjective-experience",
+   "name": "Subjective experience"
+  },
+  {
+   "id": "awareness",
+   "name": "Awareness"
+  },
+  {
+   "id": "neural-activity",
+   "name": "Neural activity"
+  },
+  {
+   "id": "information-processing",
+   "name": "Information processing"
+  },
+  {
+   "id": "attention",
+   "name": "Attention"
+  },
+  {
+   "id": "perception",
+   "name": "Perception"
+  },
+  {
+   "id": "integration",
+   "name": "Integration"
+  },
+  {
+   "id": "global-availability",
+   "name": "Global availability"
+  },
+  {
+   "id": "recurrent-processing",
+   "name": "Recurrent processing"
+  },
+  {
+   "id": "prediction",
+   "name": "Prediction"
+  },
+  {
+   "id": "metacognition",
+   "name": "Metacognition"
+  },
+  {
+   "id": "self-modeling",
+   "name": "Self-modeling"
+  },
+  {
+   "id": "machine-consciousness",
+   "name": "Machine consciousness"
+  },
+  {
+   "id": "intelligence",
+   "name": "Intelligence"
+  },
+  {
+   "id": "understanding",
+   "name": "Understanding and meaning"
+  },
+  {
+   "id": "measurement",
+   "name": "Measurement"
+  },
+  {
+   "id": "substrate",
+   "name": "Physical substrate"
+  },
+  {
+   "id": "emergence",
+   "name": "Emergence"
+  },
+  {
+   "id": "memory",
+   "name": "Memory"
+  },
+  {
+   "id": "personal-identity",
+   "name": "Personal identity"
+  },
+  {
+   "id": "digital-records",
+   "name": "Digital records"
+  },
+  {
+   "id": "moral-consideration",
+   "name": "Moral consideration"
+  },
+  {
+   "id": "responsibility",
+   "name": "Responsibility"
+  },
+  {
+   "id": "self-awareness",
+   "name": "Self-awareness"
+  }
+ ],
+ "theories": [
+  {
+   "id": "gnwt",
+   "name": "Global Neuronal Workspace Theory"
+  },
+  {
+   "id": "iit",
+   "name": "Integrated Information Theory"
+  },
+  {
+   "id": "hot",
+   "name": "Higher-Order Theories of Consciousness"
+  },
+  {
+   "id": "rpt",
+   "name": "Recurrent Processing Theory"
+  },
+  {
+   "id": "ast",
+   "name": "Attention Schema Theory"
+  },
+  {
+   "id": "pp",
+   "name": "Predictive Processing and Consciousness"
+  }
+ ]
+}
