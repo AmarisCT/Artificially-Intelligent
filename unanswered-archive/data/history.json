@@ -1,0 +1,98 @@
+{
+ "items": [
+  {
+   "id": "machines-think",
+   "title": "Can machines think?",
+   "intro": "Documented milestones in how the question has been posed. These are scholarly sources; the list is a selection, not a complete history, and it does not yet include earlier philosophical discussion because no verified sources for that have been reviewed.",
+   "related": [
+    "Q008",
+    "Q009",
+    "Q012"
+   ],
+   "entries": [
+    {
+     "date": "1950",
+     "title": "Turing proposes the imitation game",
+     "text": "Opens with 'Can machines think?' and replaces it with a behavioral game played through typed questions and answers.",
+     "src": "turing-1950",
+     "kind": "philosophical"
+    },
+    {
+     "date": "31 August 1955",
+     "title": "The Dartmouth proposal",
+     "text": "Proposes a two-month, ten-person study in summer 1956, resting on the premise that any feature of intelligence could in principle be described precisely enough for a machine to simulate it.",
+     "src": "dartmouth-1955",
+     "kind": "speculative"
+    },
+    {
+     "date": "1980",
+     "title": "Searle's 'Minds, brains, and programs'",
+     "text": "Argues that running a program is never by itself sufficient for intentionality, and that strong AI cannot succeed.",
+     "src": "searle-1980",
+     "kind": "philosophical"
+    },
+    {
+     "date": "2020",
+     "title": "A language model evaluated without weight updates",
+     "text": "Brown et al. report GPT-3's task performance and raise methodological concerns tied to web-scraped training data. The abstract makes no claim about understanding.",
+     "src": "brown-2020",
+     "kind": "empirical"
+    },
+    {
+     "date": "2023",
+     "title": "An indicator approach to AI consciousness",
+     "text": "Butlin et al. propose assessing AI systems against indicator properties derived from scientific theories and conclude that no current AI systems appear to be conscious.",
+     "src": "butlin-2023",
+     "kind": "review"
+    }
+   ]
+  },
+  {
+   "id": "studying-consciousness",
+   "title": "How can consciousness be studied?",
+   "intro": "A selection of documented milestones in how scholars have framed and tested the problem. It is not a complete history.",
+   "related": [
+    "Q001",
+    "Q002",
+    "Q003"
+   ],
+   "entries": [
+    {
+     "date": "1974",
+     "title": "Nagel: 'What Is It Like to Be a Bat?'",
+     "text": "States that an organism has conscious states if and only if there is something it is like to be that organism, and argues reductive analyses leave out subjective character.",
+     "src": "nagel-1974",
+     "kind": "philosophical"
+    },
+    {
+     "date": "1995",
+     "title": "Chalmers: 'Facing Up to the Problem of Consciousness'",
+     "text": "Separates the hard core of the problem from its tractable parts and argues for a nonreductive approach.",
+     "src": "chalmers-1995",
+     "kind": "philosophical"
+    },
+    {
+     "date": "2022",
+     "title": "Seth and Bayne review four theoretical approaches",
+     "text": "Compares higher-order, global workspace, re-entry and predictive processing, and integrated information theories, and considers how they might be distinguished empirically.",
+     "src": "seth-bayne-2022",
+     "kind": "review"
+    },
+    {
+     "date": "2023",
+     "title": "A preregistered adversarial collaboration protocol (GNWT vs IIT)",
+     "text": "States contrasting predictions about where and when the neural correlates of visual consciousness occur.",
+     "src": "melloni-2023",
+     "kind": "design"
+    },
+    {
+     "date": "2025",
+     "title": "Results of an adversarial collaboration reported",
+     "text": "The Cogitate authors report results that partly align with and substantially challenge key claims of both GNWT and IIT.",
+     "src": "cogitate-2025",
+     "kind": "empirical"
+    }
+   ]
+  }
+ ]
+}
