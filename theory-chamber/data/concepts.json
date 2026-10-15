@@ -1,0 +1,100 @@
+{
+ "meta": {
+  "version": 1,
+  "generated": "2026-10-15",
+  "note": "Preview data. All records are Awaiting Evidence Review. Descriptions were drawn from publisher and repository pages retrieved on this date and are not a substitute for the full papers."
+ },
+ "items": [
+  {
+   "id": "subjective-experience",
+   "name": "Subjective experience",
+   "description": "What it is like, from the inside, to perceive, think, and feel.",
+   "atlas": "consciousness",
+   "note": "Working description (editorial). Relationships shown for each theory are labeled and sourced; they are not causal claims."
+  },
+  {
+   "id": "awareness",
+   "name": "Awareness",
+   "description": "Being aware of a stimulus or mental state, as the term is used by the theories here.",
+   "atlas": "consciousness",
+   "note": "Working description (editorial). Relationships shown for each theory are labeled and sourced; they are not causal claims."
+  },
+  {
+   "id": "neural-activity",
+   "name": "Neural activity",
+   "description": "Brain activity that can be recorded and compared across conscious and nonconscious conditions.",
+   "atlas": null,
+   "note": "Working description (editorial). Relationships shown for each theory are labeled and sourced; they are not causal claims."
+  },
+  {
+   "id": "information-processing",
+   "name": "Information processing",
+   "description": "How a system takes in, transforms, and uses information.",
+   "atlas": "cognition",
+   "note": "Working description (editorial). Relationships shown for each theory are labeled and sourced; they are not causal claims."
+  },
+  {
+   "id": "attention",
+   "name": "Attention",
+   "description": "Selective use of limited processing resources.",
+   "atlas": "cognition",
+   "note": "Working description (editorial). Relationships shown for each theory are labeled and sourced; they are not causal claims."
+  },
+  {
+   "id": "perception",
+   "name": "Perception",
+   "description": "Processing of sensory input.",
+   "atlas": "cognition",
+   "note": "Working description (editorial). Relationships shown for each theory are labeled and sourced; they are not causal claims."
+  },
+  {
+   "id": "integration",
+   "name": "Integration",
+   "description": "Unity of information within a system, as the term is used in IIT.",
+   "atlas": null,
+   "note": "Working description (editorial). Relationships shown for each theory are labeled and sourced; they are not causal claims."
+  },
+  {
+   "id": "global-availability",
+   "name": "Global availability",
+   "description": "Making a representation available to many specialized processors at once.",
+   "atlas": null,
+   "note": "Working description (editorial). Relationships shown for each theory are labeled and sourced; they are not causal claims."
+  },
+  {
+   "id": "recurrent-processing",
+   "name": "Recurrent processing",
+   "description": "Feedback activity within and between processing stages.",
+   "atlas": null,
+   "note": "Working description (editorial). Relationships shown for each theory are labeled and sourced; they are not causal claims."
+  },
+  {
+   "id": "prediction",
+   "name": "Prediction",
+   "description": "Generation and updating of predictions about incoming signals.",
+   "atlas": null,
+   "note": "Working description (editorial). Relationships shown for each theory are labeled and sourced; they are not causal claims."
+  },
+  {
+   "id": "metacognition",
+   "name": "Metacognition",
+   "description": "Thinking about one's own mental states.",
+   "atlas": "cognition",
+   "note": "Working description (editorial). Relationships shown for each theory are labeled and sourced; they are not causal claims."
+  },
+  {
+   "id": "self-modeling",
+   "name": "Self-modeling",
+   "description": "A system's internal model of itself or of its own processes.",
+   "atlas": null,
+   "note": "Working description (editorial). Relationships shown for each theory are labeled and sourced; they are not causal claims."
+  },
+  {
+   "id": "machine-consciousness",
+   "name": "Machine consciousness",
+   "description": "Whether artificial systems could be conscious.",
+   "atlas": "ai",
+   "note": "Working description (editorial). Relationships shown for each theory are labeled and sourced; they are not causal claims."
+  }
+ ]
+}

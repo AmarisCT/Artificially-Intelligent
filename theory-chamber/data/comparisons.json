@@ -1,0 +1,112 @@
+{
+ "meta": {
+  "version": 1,
+  "generated": "2026-10-15",
+  "note": "Preview data. All records are Awaiting Evidence Review. Descriptions were drawn from publisher and repository pages retrieved on this date and are not a substitute for the full papers."
+ },
+ "items": [
+  {
+   "a": "gnwt",
+   "b": "iit",
+   "similarities": [
+    {
+     "text": "Both make predictions about neural correlates of visual consciousness that were stated in advance for a joint test.",
+     "sources": [
+      "melloni-2023"
+     ]
+    },
+    {
+     "text": "Both are among the four approaches reviewed in a 2022 survey of theories of consciousness.",
+     "sources": [
+      "seth-bayne-2022"
+     ]
+    }
+   ],
+   "contrasts": [
+    {
+     "aspect": "Location of the neural correlates",
+     "a": "A fronto-parietal network alongside high-level sensory cortex.",
+     "b": "Primarily a posterior 'hot zone'.",
+     "test": "Compare conscious versus nonconscious trials across brain regions with fMRI, M-EEG, and intracranial EEG.",
+     "sources": [
+      "melloni-2023"
+     ]
+    },
+    {
+     "aspect": "Decoding conscious content",
+     "a": "Content should be decodable in prefrontal-parietal areas and high-level sensory cortex.",
+     "b": "Content should be most decodable from posterior cortex.",
+     "test": "Decode stimulus category or content from activity in each region during conscious perception.",
+     "sources": [
+      "melloni-2023"
+     ]
+    },
+    {
+     "aspect": "Temporal dynamics",
+     "a": "A brief ignition at onset; the workspace need not stay active throughout a durable conscious experience.",
+     "b": "The substrate persists across the whole experience.",
+     "test": "Track activity over the duration of a stimulus, including at offset.",
+     "sources": [
+      "melloni-2023"
+     ]
+    },
+    {
+     "aspect": "Pre-stimulus activity",
+     "a": "Higher prefrontal and parietal activity before a stimulus lowers the chance it is perceived.",
+     "b": "Greater excitability or synchrony in posterior and early visual areas raises the chance of perception.",
+     "test": "Relate pre-stimulus activity to whether the stimulus is later reported.",
+     "sources": [
+      "melloni-2023"
+     ]
+    },
+    {
+     "aspect": "Functional connectivity",
+     "a": "Long-range synchronization between prefrontal nodes and category-selective areas.",
+     "b": "Synchronization between category-selective areas and early visual areas.",
+     "test": "Measure synchronization between these region pairs during conscious perception.",
+     "sources": [
+      "melloni-2023"
+     ]
+    }
+   ],
+   "reported": {
+    "text": "A 2025 report of this test described results that partly align with predictions of both theories while substantially challenging key claims of each, including no sustained posterior synchronization and a general lack of ignition at stimulus offset. The authors do not present either theory as proven or disproven.",
+    "sources": [
+     "cogitate-2025"
+    ]
+   },
+   "note": "The contrasts are those stated by the proponents for this specific test."
+  },
+  {
+   "a": "iit",
+   "b": "rpt",
+   "similarities": [
+    {
+     "text": "Both are named in one formal critique as theories that tie consciousness to causal structure.",
+     "sources": [
+      "doerig-2019"
+     ]
+    }
+   ],
+   "contrasts": [],
+   "note": "Specific contrasting predictions: Awaiting Evidence Review."
+  },
+  {
+   "a": "ast",
+   "b": "gnwt",
+   "similarities": [],
+   "contrasts": [
+    {
+     "aspect": "Role of integration or broadcast",
+     "a": "Integration alone does not produce awareness; an attention model must also be computed and bound to content, according to the authors' comparison.",
+     "b": "Not specified in the sources read for this comparison.",
+     "test": "Awaiting Evidence Review.",
+     "sources": [
+      "graziano-webb-2015"
+     ]
+    }
+   ],
+   "note": "One side of this contrast is the AST authors' own framing of global workspace and integration theories, not a statement from GNWT proponents."
+  }
+ ]
+}
