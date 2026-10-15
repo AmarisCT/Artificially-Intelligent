@@ -55,7 +55,7 @@ function sourceBody(s,claims){
   return h("dl",null,
     row("Authors",authorLine(s)),row("Year, venue",[s.year,s.venue,s.volume&&"vol. "+s.volume,s.pages&&"pp. "+s.pages].filter(Boolean).join(" · ")),
     h("dt",null,"DOI or link"),h("dd",null,s.doi?ext("https://doi.org/"+s.doi,s.doi):s.url?ext(s.url,s.url):"None"),
-    h("dt",null,"What was read for this preview"),h("dd",null,h("span",{class:"access"+(/metadata|secondary|summary/.test(s.access)?" low":"")},s.access.replace(/-/g," ")),h("br"),s.read),
+    h("dt",null,"What was read for this record"),h("dd",null,h("span",{class:"access"+(/metadata|secondary|summary/.test(s.access)?" low":"")},s.access.replace(/-/g," ")),h("br"),s.read),
     row("Source-grounded description",s.description),row("Why it is relevant",s.relevance),row("Methodological limitations",s.limitations),
     claims.length?[h("dt",null,"Claims in this chamber that cite it"),h("dd",null,h("ul",{class:"claims"},claims.map(x=>h("li",{class:"claim"},h("span",{class:"kind"},x.t?x.t.abbr+" · "+secLabel(x.sec):"Question"),h("p",null,x.c.text)))))]:[]);
 }
@@ -81,7 +81,7 @@ function route(){
   const el=h("div",{class:"view wrap"});main.replaceChildren(el);view(el);
   $$(".nav a").forEach(a=>{const k=key==="theory"?"library":key==="question"?"questions":key;a.toggleAttribute("aria-current",a.dataset.r===k);if(a.dataset.r===k)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current")});
   const h1=$("h1",el);if(h1){h1.setAttribute("tabindex","-1");}
-  document.title=(h1?h1.textContent+" · ":"")+"The Theory Chamber · Artificially Intelligent";
+  document.title=(h1&&!/Theory Chamber/.test(h1.textContent)?h1.textContent+" · ":"")+"The Theory Chamber · Artificially Intelligent";
   trayRender();window.scrollTo(0,0);
 }
 /* ---------- selection tray ---------- */
@@ -99,7 +99,7 @@ VIEWS.entrance=entrance;
 function entrance(el){
   const stage=h("div",{class:"stage"},h("canvas",{id:"cv","aria-hidden":"true"}),h("div",{class:"core"},"How can different theories explain consciousness, and what evidence would distinguish them?"));
   el.append(h("section",{class:"hero","aria-labelledby":"t"},h("div",{class:"hero-copy"},
-    h("p",{class:"kicker"},"Artificially Intelligent · Research instrument · Preview"),
+    h("p",{class:"kicker"},"Artificially Intelligent · Research instrument"),
     h("h1",{class:"h-xl",id:"t"},"The Theory Chamber"),
     h("p",{class:"sub"},"Competing explanations. Shared questions. An unfinished understanding of consciousness."),
     h("p",{class:"lede"},"Consciousness research contains several competing theoretical frameworks. Each makes different assumptions, predicts different things, and faces different challenges. Here you can compare them side by side, trace each claim to a source, and see where researchers disagree."),
@@ -109,7 +109,7 @@ function entrance(el){
     h("div",null,h("strong",null,"No rankings or scores"),"The chamber does not say which theory is winning, and it shows disagreement rather than smoothing it away."),
     h("div",null,h("strong",null,"Awaiting Evidence Review"),"Every record is a draft until an editor has reviewed it against the full papers."),
     h("div",null,h("strong",null,"Machine consciousness is not claimed"),"AI sections separate conceptual possibility from experimental evidence.")));
-  el.append(h("section",{class:"sec",style:"margin-top:36px"},h("h2",null,"Six frameworks in this preview"),h("div",{class:"chips"},D.theories.map(t=>h("a",{class:"btn",href:"#theory-"+t.id},h("strong",null,t.abbr)," ",t.name)))));
+  el.append(h("section",{class:"sec",style:"margin-top:36px"},h("h2",null,"Six frameworks"),h("div",{class:"chips"},D.theories.map(t=>h("a",{class:"btn",href:"#theory-"+t.id},h("strong",null,t.abbr)," ",t.name)))));
   drawHero($("#cv",el),stage);
 }
 function drawHero(cv,stage){
