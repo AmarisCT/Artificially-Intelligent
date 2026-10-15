@@ -14,7 +14,7 @@ function h(tag,attrs,...kids){const e=document.createElement(tag);for(const k in
 const ext=(href,text,cls)=>h("a",{href,target:"_blank",rel:"noopener noreferrer",class:cls},text);
 const say=t=>{const l=$("#live");l.textContent="";setTimeout(()=>l.textContent=t,30)};
 
-let D=null,ARTICLES=[],SEL=[];
+let D=null,ARTICLES=[],SEL=[],UQ=[];
 const TH=id=>D.theories.find(t=>t.id===id),SRC=id=>D.sources.find(s=>s.id===id),CON=id=>D.concepts.find(c=>c.id===id);
 const claimIdx={},srcClaims={};
 function indexData(){
@@ -29,6 +29,7 @@ async function load(){
     D={theories,sources,concepts,comparisons,questions};
   }
   indexData();
+  if(!window.__TC_DATA__){try{const r=await fetch(ROOT+"unanswered-archive/data/questions.json",{cache:"no-cache"});if(r.ok){const j=await r.json();if(j&&Array.isArray(j.items))UQ=j.items}}catch(e){}}
   if(!window.__TC_DATA__||!ARTICLES.length){try{const r=await fetch(ROOT+"research/published/manifest.json",{cache:"no-cache"});if(r.ok){const m=await r.json();if(m&&Array.isArray(m.articles))ARTICLES=m.articles.filter(a=>a&&/^[a-z0-9-]+$/.test(a.slug||slugOf(a)))}}catch(e){}}
 }
 const slugOf=a=>a.slug||((a.url||"").replace(/\/$/,"").split("/").pop());
@@ -69,6 +70,14 @@ function readingList(t){return h("ul",{class:"claims"},t.reading.map(id=>{const 
 /* ---------- router ---------- */
 const VIEWS={};
 function go(r){if(location.hash.slice(1)===r)route();else location.hash=r}
+/* ---------- Unanswered Archive back-links (stable ids; optional data) ---------- */
+function archiveLinks(theoryIds,compareId){
+  const qs=UQ.filter(q=>(compareId&&q.investigation&&q.investigation.links&&q.investigation.links.compare===compareId)||(q.theories||[]).some(t=>theoryIds.includes(t)));
+  if(!qs.length)return null;
+  return h("section",{class:"sec",id:"ua-links"},h("h2",null,"Related unanswered questions"),
+    h("p",{class:"note",style:"margin-bottom:10px"},"Questions in The Unanswered Archive that name these theories. This is a cross-reference, not a verdict: it does not say the theory answers the question."),
+    h("div",{class:"linklist"},qs.map(q=>h("a",{href:ROOT+"unanswered-archive/#q-"+q.id,target:"_blank",rel:"noopener noreferrer"},h("span",null,q.id+" · "+q.title),h("small",null,q.status.map(x=>({open:"Open Question",active:"Active Research",contested:"Contested",partial:"Partially Resolved",awaiting:"Awaiting Research Review"})[x]||x).join(" · "))))));
+}
 function route(){
   const r=location.hash.slice(1)||"entrance",main=$("#main");
   closeSource();
@@ -80,6 +89,8 @@ function route(){
   else{view=entrance;key="entrance"}
   const el=h("div",{class:"view wrap"});main.replaceChildren(el);view(el);
   $$(".nav a").forEach(a=>{const k=key==="theory"?"library":key==="question"?"questions":key;a.toggleAttribute("aria-current",a.dataset.r===k);if(a.dataset.r===k)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current")});
+  {let ids=null,cid=null;if(name==="theory"&&TH(arg))ids=[arg];else if(name==="compare"){const [x,y]=arg.split("-");if(TH(x)&&TH(y)){ids=[x,y];cid=(findComp(x,y)?findComp(x,y).a+"-"+findComp(x,y).b:null)}}
+   if(ids){const b=archiveLinks(ids,cid);if(b)el.append(b)}}
   const h1=$("h1",el);if(h1){h1.setAttribute("tabindex","-1");}
   document.title=(h1&&!/Theory Chamber/.test(h1.textContent)?h1.textContent+" · ":"")+"The Theory Chamber · Artificially Intelligent";
   trayRender();window.scrollTo(0,0);

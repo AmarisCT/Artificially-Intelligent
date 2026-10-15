@@ -1547,18 +1547,31 @@ document.addEventListener("click",e=>{
   if(location.hash==="#desk")route(true);
 });
 
+const SUPP={tcS:null,tcT:null,uaQ:null,uaS:null,busy:false};
+async function loadSupp(){if(SUPP.busy||SUPP.tcS)return false;SUPP.busy=true;const g=async u=>{try{const r=await fetch(u,{cache:"no-cache"});if(!r.ok)return [];const j=await r.json();return Array.isArray(j.items)?j.items:[]}catch(e){return []}};
+  const [a,b,c,d]=await Promise.all([g("theory-chamber/data/sources.json"),g("theory-chamber/data/theories.json"),g("unanswered-archive/data/questions.json"),g("unanswered-archive/data/question-sources.json")]);SUPP.tcS=a;SUPP.tcT=b;SUPP.uaQ=c;SUPP.uaS=d;SUPP.busy=false;return true}
+const SUPPK=/^(theory|source|cmp|question):/;
+function suppInfo(t,id){
+  if(!SUPP.tcS)return null;
+  if(t==="theory"){const x=(SUPP.tcT||[]).find(y=>y.id===id);return x?{title:x.name,sub:"Theory Chamber · theory",open:`<a class="chip" href="theory-chamber/#theory-${esc(id)}">Open in the Theory Chamber</a>`}:null}
+  if(t==="cmp"){const [a,b]=id.split("-"),A=(SUPP.tcT||[]).find(y=>y.id===a),B=(SUPP.tcT||[]).find(y=>y.id===b);return A&&B?{title:A.abbr+" vs "+B.abbr,sub:"Theory Chamber · comparison",open:`<a class="chip" href="theory-chamber/#compare-${esc(a)}-${esc(b)}">Open the comparison</a>`}:null}
+  if(t==="question"){const x=(SUPP.uaQ||[]).find(y=>y.id===id);return x?{title:x.title,sub:"The Unanswered Archive · "+x.id,open:`<a class="chip" href="unanswered-archive/#q-${esc(id)}">Open the question</a>`}:null}
+  if(t==="source"){const x=(SUPP.uaS||[]).find(y=>y.id===id)||(SUPP.tcS||[]).find(y=>y.id===id);if(!x)return null;const u=x.doi?"https://doi.org/"+x.doi:x.url;return{title:x.title,sub:"Source · "+(x.year||"n.d.")+" · "+(x.venue||""),open:/^https:\/\//.test(u||"")?`<a class="chip" href="${esc(u)}" target="_blank" rel="noopener noreferrer">Open the source ↗</a>`:""}}
+  return null}
 function deskItemInfo(k){
   const [t,id]=[k.slice(0,k.indexOf(":")),k.slice(k.indexOf(":")+1)];
   if(t==="art"){const a=artOf(id);return a?{title:a.title,sub:"Published essay · "+fmtDate(a.publishedAt),open:`<a class="chip" href="#read-${a.slug}">Open essay</a>`}:null}
   if(t==="claim"){const c=CLB[id];if(!c||!ptext(c.a,c.p))return null;return{title:ptext(c.a,c.p).slice(0,160)+(ptext(c.a,c.p).length>160?"…":""),sub:CTYPES[c.t][0]+" · "+artOf(c.a).title,open:`<button class="chip" data-ev="${c.id}">Open in Evidence Explorer</button>`}}
+  if(SUPPK.test(k))return suppInfo(t,id);
   return null;
 }
 function renderDesk(el){
+  if(DESK.items.some(x=>SUPPK.test(x.k))&&!SUPP.tcS)loadSupp().then(ok=>{if(ok&&location.hash==="#desk")route(true)});
   const items=DESK.items.map(x=>({x,i:deskItemInfo(x.k)})).filter(o=>o.i);
   const colls=[...new Set(items.map(o=>o.x.coll.trim()).filter(Boolean))];
   const last=DESK.last&&artOf(DESK.last);
   el.innerHTML=`<div class="wrap"><div class="pagehead"><p class="kicker">Participate · Reading Desk</p><h1 class="h-l">Reading Desk</h1>
-   <p class="lede">Save essays and passages, group them into collections, and keep private notes. No account is needed.</p>
+   <p class="lede">Save essays, passages, theories, sources and questions, group them into collections, and keep private notes. No account is needed.</p>
    <p class="local">Everything here is stored only in this browser on this device. It is never sent anywhere, and clearing your browser's site data removes it. If your browser blocks storage, saving will not persist.</p></div>
    <div class="desk-grid"><div class="dk-list" id="dk-l">
     ${items.length?items.map(({x,i})=>`<article class="dk-item" data-k="${esc(x.k)}"><span class="note">${esc(i.sub)}</span><h3>${esc(i.title)}</h3>
@@ -1595,6 +1608,7 @@ function renderSubmit(el){
   el.innerHTML=`<div class="wrap"><div class="pagehead"><p class="kicker">Participate · Submit a Question</p><h1 class="h-l">Submit a Question</h1>
    <p class="lede">A place for visitors to suggest questions for future research. Submissions would go to a private moderation queue and never publish automatically.</p>
    <p><span class="draft">Layout preview · not connected</span></p>
+   <p class="note">The working form is on <a href="unanswered-archive/#suggest">The Unanswered Archive</a>. It validates and protects against spam, but sending there is also switched off until Architect can receive submissions.</p>
    <p class="note">This page is not connected to anything. There is no server or inbox behind it, so nothing you type here can be sent or saved. A real version needs a place to receive submissions and a moderation process, which the author would choose.</p></div>
    <form class="form" onsubmit="return false" aria-describedby="sub-n">
     <label>Your question<textarea rows="4" disabled placeholder="What would you like the archive to investigate?"></textarea></label>
