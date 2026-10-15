@@ -1,0 +1,1077 @@
+{
+ "meta": {
+  "version": 1,
+  "generated": "2026-10-15",
+  "note": "Preview data. All records are Awaiting Evidence Review. Descriptions were drawn from publisher and repository pages retrieved on this date and are not a substitute for the full papers."
+ },
+ "items": [
+  {
+   "id": "gnwt",
+   "name": "Global Neuronal Workspace Theory",
+   "abbr": "GNWT",
+   "perspectives": [
+    "neuroscience",
+    "cognitive-science"
+   ],
+   "tradition": "Global workspace tradition, developed in cognitive neuroscience",
+   "summary": "Proposes that a representation becomes consciously accessible when it is amplified and made available to many specialized processors through a distributed network, with prefrontal and parietal regions emphasized.",
+   "explanation": [
+    "The theory describes conscious access as a non-linear 'ignition' of a distributed network in which a representation is amplified, sustained, and broadcast so that specialized processors for memory, attention, evaluation, perception, and action can use it.",
+    "It is presented by its proponents as a cortical development of the global workspace idea, and it is one of the two theories tested head to head in the adversarial collaboration reported in 2025."
+   ],
+   "contributors": [
+    "Stanislas Dehaene",
+    "Jean-Pierre Changeux",
+    "Michel Kerszberg"
+   ],
+   "history": [
+    {
+     "id": "gnwt.h1",
+     "text": "A neuronal model of a global workspace for effortful tasks was proposed in 1998; the approach was reviewed in 2011 and again in 2020.",
+     "sources": [
+      "dehaene-1998",
+      "dehaene-changeux-2011",
+      "mashour-2020"
+     ],
+     "review": "awaiting-evidence-review"
+    }
+   ],
+   "proposition": [
+    {
+     "id": "gnwt.p1",
+     "text": "Conscious access occurs when a representation is amplified, sustained, and broadcast to many specialized processors. The workspace is a distributed network, not a single location, and prefrontal and parietal cortices are emphasized.",
+     "sources": [
+      "mashour-2020",
+      "dehaene-changeux-2011"
+     ],
+     "review": "awaiting-evidence-review"
+    }
+   ],
+   "foundations": [
+    {
+     "id": "gnwt.f1",
+     "text": "The review presents the global neuronal workspace as a cortical alternative to Baars's global workspace, in which current conscious content is held in a shared space and broadcast to other processors. Baars speculated about brainstem and thalamic substrates; the GNW proposes a network of long-range pyramidal neurons concentrated in prefrontal, cingulate, and parietal cortices.",
+     "sources": [
+      "dehaene-changeux-2011"
+     ],
+     "review": "awaiting-evidence-review"
+    },
+    {
+     "id": "gnwt.f2",
+     "text": "A two-space model of specialized modular processors plus a global workspace of long-range neurons, recruited mainly when specialized processors cannot handle a task alone.",
+     "sources": [
+      "dehaene-1998"
+     ],
+     "review": "awaiting-evidence-review"
+    }
+   ],
+   "mechanisms": [
+    {
+     "id": "gnwt.m1",
+     "text": "Ignition: a sudden, coherent, non-linear activation of workspace neurons for the current content, tied to recurrent processing, with competing content suppressed.",
+     "sources": [
+      "mashour-2020"
+     ],
+     "review": "awaiting-evidence-review"
+    },
+    {
+     "id": "gnwt.m2",
+     "text": "Long-range, reciprocally connected neurons link specialized modules; attention and binding determine which features join a coherent object that enters awareness.",
+     "sources": [
+      "mashour-2020"
+     ],
+     "review": "awaiting-evidence-review"
+    },
+    {
+     "id": "gnwt.m3",
+     "text": "The level of consciousness depends on the workspace: anesthesia, sleep, and some brain injuries are described as disrupting long-range communication and reducing ignition.",
+     "sources": [
+      "mashour-2020"
+     ],
+     "review": "awaiting-evidence-review"
+    }
+   ],
+   "predictions": [
+    {
+     "id": "gnwt.pr1",
+     "text": "Conscious trials should show a late, sudden divergence in activity (roughly 200 ms or later) spreading to prefrontal and parietal areas, while nonconscious trials show only early, decaying activity.",
+     "sources": [
+      "mashour-2020"
+     ],
+     "review": "awaiting-evidence-review"
+    },
+    {
+     "id": "gnwt.pr2",
+     "text": "Local sensory responses can occur without awareness, whereas global responses such as the P3 should appear only when a stimulus is consciously perceived.",
+     "sources": [
+      "mashour-2020"
+     ],
+     "review": "awaiting-evidence-review"
+    },
+    {
+     "id": "gnwt.pr3",
+     "text": "Under anesthesia, sleep, or pathological unconsciousness, long-range frontal-parietal connectivity and the brain's dynamic repertoire should be reduced.",
+     "sources": [
+      "mashour-2020"
+     ],
+     "review": "awaiting-evidence-review"
+    },
+    {
+     "id": "gnwt.pr4",
+     "text": "For the adversarial test, the proponents' predictions included decodability of conscious content in prefrontal-parietal areas as well as high-level sensory cortex, a brief ignition at onset, and long-range synchronization between prefrontal nodes and category-selective areas.",
+     "sources": [
+      "melloni-2023"
+     ],
+     "review": "awaiting-evidence-review"
+    }
+   ],
+   "evidence": [
+    {
+     "id": "gnwt.e1",
+     "text": "Review of studies contrasting conscious and nonconscious processing concludes that conscious access is marked by late amplification of relevant sensory activity, long-distance cortico-cortical synchronization at beta and gamma frequencies, and ignition of a prefronto-parietal network.",
+     "sources": [
+      "dehaene-changeux-2011"
+     ],
+     "review": "awaiting-evidence-review",
+     "kind": "indirect"
+    },
+    {
+     "id": "gnwt.e2",
+     "text": "A preregistered adversarial test with 256 participants reported results that partly align with predictions of both GNWT and IIT while substantially challenging key claims of each.",
+     "sources": [
+      "cogitate-2025"
+     ],
+     "review": "awaiting-evidence-review",
+     "kind": "direct"
+    }
+   ],
+   "criticisms": [
+    {
+     "id": "gnwt.c1",
+     "text": "The proponents' own review notes that it is unresolved whether late components such as the P3 reflect awareness or post-perceptual processing, and that an earlier negativity may be a better marker.",
+     "sources": [
+      "mashour-2020"
+     ],
+     "review": "awaiting-evidence-review"
+    },
+    {
+     "id": "gnwt.c2",
+     "text": "The review notes that most evidence is correlational, that causal tests are limited, that the distinction between phenomenal and access consciousness remains untested, and that animal findings may not transfer directly to humans.",
+     "sources": [
+      "mashour-2020"
+     ],
+     "review": "awaiting-evidence-review"
+    },
+    {
+     "id": "gnwt.c3",
+     "text": "The adversarial test reports a general lack of ignition at stimulus offset and limited prefrontal representation of certain conscious dimensions, which the authors describe as challenging claims of the theory.",
+     "sources": [
+      "cogitate-2025"
+     ],
+     "review": "awaiting-evidence-review"
+    }
+   ],
+   "openQuestions": [
+    {
+     "id": "gnwt.q1",
+     "text": "Whether late activity reflects awareness itself or later processing of what was perceived is described as unresolved.",
+     "sources": [
+      "mashour-2020"
+     ],
+     "review": "awaiting-evidence-review"
+    },
+    {
+     "id": "gnwt.q2",
+     "text": "It is unclear how current theories relate to each other, or whether they can be empirically distinguished; the authors are optimistic that iterative testing will help.",
+     "sources": [
+      "seth-bayne-2022"
+     ],
+     "review": "awaiting-evidence-review"
+    }
+   ],
+   "ai": [
+    {
+     "id": "gnwt.a1",
+     "text": "A 2023 report derives computational indicator properties from several theories, including global workspace theory, and concludes that no current AI systems appear to be conscious while seeing no obvious barriers to building conscious AI systems. This is a conceptual assessment, not an experiment showing a system is conscious.",
+     "sources": [
+      "butlin-2023"
+     ],
+     "review": "awaiting-evidence-review",
+     "kind": "conceptual"
+    }
+   ],
+   "reading": [
+    "dehaene-changeux-2011",
+    "mashour-2020",
+    "dehaene-1998",
+    "cogitate-2025",
+    "melloni-2023",
+    "seth-bayne-2022"
+   ],
+   "concepts": [
+    {
+     "concept": "global-availability",
+     "relation": "proposed-mechanism",
+     "sources": [
+      "mashour-2020"
+     ]
+    },
+    {
+     "concept": "attention",
+     "relation": "related-concept",
+     "sources": [
+      "mashour-2020"
+     ]
+    },
+    {
+     "concept": "neural-activity",
+     "relation": "empirical-prediction",
+     "sources": [
+      "mashour-2020"
+     ]
+    },
+    {
+     "concept": "awareness",
+     "relation": "related-concept",
+     "sources": [
+      "dehaene-changeux-2011"
+     ]
+    },
+    {
+     "concept": "machine-consciousness",
+     "relation": "related-concept",
+     "sources": [
+      "butlin-2023"
+     ]
+    }
+   ],
+   "atlas": [
+    "consciousness",
+    "cognition"
+   ],
+   "essayMentions": [
+    {
+     "slug": "is-human-consciousness-connected-to-artificial-intelligence",
+     "paragraph": 2
+    }
+   ],
+   "review": {
+    "status": "awaiting-evidence-review",
+    "lastReviewed": null
+   }
+  },
+  {
+   "id": "iit",
+   "name": "Integrated Information Theory",
+   "abbr": "IIT",
+   "perspectives": [
+    "neuroscience",
+    "philosophy"
+   ],
+   "tradition": "Starts from the properties of experience and derives requirements on a physical substrate",
+   "summary": "Holds that consciousness corresponds to a physical system's irreducible cause-effect structure, derived from properties of experience such as unity and specificity.",
+   "explanation": [
+    "Beginning with a statement that experience exists and five essential properties of experience, the theory translates each into a postulate about the physical substrate and measures how irreducible its cause-effect structure is.",
+    "The theory is contested: it was one of the two theories tested in a 2025 adversarial collaboration, and a 2023 open letter by other researchers disputed its scientific status."
+   ],
+   "contributors": [
+    "Giulio Tononi",
+    "Christof Koch",
+    "Melanie Boly",
+    "Marcello Massimini",
+    "Larissa Albantakis"
+   ],
+   "history": [
+    {
+     "id": "iit.h1",
+     "text": "An information integration theory with a quantity Φ was proposed in 2004; a review of the theory appeared in 2016; a formulation called IIT 4.0 was published in 2023.",
+     "sources": [
+      "tononi-2004",
+      "tononi-2016",
+      "albantakis-2023"
+     ],
+     "review": "awaiting-evidence-review"
+    }
+   ],
+   "proposition": [
+    {
+     "id": "iit.p1",
+     "text": "Consciousness corresponds to a system's cause-effect structure that is irreducible to that of its parts. In IIT 4.0 the authors state that the postulated conditions on a physical substrate are necessary and sufficient for consciousness. The earlier formulation tied the amount of consciousness to Φ, the causally effective information a set of elements integrates.",
+     "sources": [
+      "albantakis-2023",
+      "tononi-2004"
+     ],
+     "review": "awaiting-evidence-review"
+    }
+   ],
+   "foundations": [
+    {
+     "id": "iit.f1",
+     "text": "IIT starts from a zeroth axiom (experience exists) and five properties of experience it treats as essential: intrinsicality, information, integration, exclusion, and composition. The paper states that completeness of the axioms rests on introspection and reasoning and that alternative properties are conceivable.",
+     "sources": [
+      "albantakis-2023"
+     ],
+     "review": "awaiting-evidence-review"
+    },
+    {
+     "id": "iit.f2",
+     "text": "The 2004 formulation drew on two features of experience: differentiation (a large repertoire of possible states) and integration (unity).",
+     "sources": [
+      "tononi-2004"
+     ],
+     "review": "awaiting-evidence-review"
+    }
+   ],
+   "mechanisms": [
+    {
+     "id": "iit.m1",
+     "text": "Each axiom maps to a postulate: the substrate must have cause-effect power, act within itself, select a specific cause-effect state, form an irreducible whole, be bounded by a maximal set of units, and specify a structured cause-effect profile.",
+     "sources": [
+      "albantakis-2023"
+     ],
+     "review": "awaiting-evidence-review"
+    }
+   ],
+   "predictions": [
+    {
+     "id": "iit.pr1",
+     "text": "The paper states that IIT makes testable predictions about the presence and the quality of experience and that some have been tested empirically.",
+     "sources": [
+      "albantakis-2023"
+     ],
+     "review": "awaiting-evidence-review"
+    },
+    {
+     "id": "iit.pr2",
+     "text": "For the adversarial test, the proponents' predictions included correlates primarily in a posterior 'hot zone', content most decodable from posterior cortex, a substrate that persists across the experience, and synchronization between category-selective and early visual areas.",
+     "sources": [
+      "melloni-2023"
+     ],
+     "review": "awaiting-evidence-review"
+    }
+   ],
+   "evidence": [
+    {
+     "id": "iit.e1",
+     "text": "The 2004 paper argues that the theory fits neurobiological findings such as the importance of the thalamocortical system and the reduction of consciousness in dreamless sleep. This is the author's interpretation.",
+     "sources": [
+      "tononi-2004"
+     ],
+     "review": "awaiting-evidence-review",
+     "kind": "interpretation"
+    },
+    {
+     "id": "iit.e2",
+     "text": "A preregistered adversarial test reported results that partly align with predictions of both theories while substantially challenging key claims of each.",
+     "sources": [
+      "cogitate-2025"
+     ],
+     "review": "awaiting-evidence-review",
+     "kind": "direct"
+    }
+   ],
+   "criticisms": [
+    {
+     "id": "iit.c1",
+     "text": "The unfolding argument contends that theories tying consciousness to causal structure, including IIT, are either false or outside the realm of science.",
+     "sources": [
+      "doerig-2019"
+     ],
+     "review": "awaiting-evidence-review"
+    },
+    {
+     "id": "iit.c2",
+     "text": "In the adversarial test, the authors report no sustained posterior synchronization, which they say contradicts the claim that network connectivity specifies consciousness.",
+     "sources": [
+      "cogitate-2025"
+     ],
+     "review": "awaiting-evidence-review"
+    },
+    {
+     "id": "iit.c3",
+     "text": "A 2023 open letter, as reported by Scientific American, argued that IIT should be labelled pseudoscience, citing untestable core assumptions. The report also records researchers who say IIT makes testable predictions and that one was tested. The word 'pseudoscience' is the letter's, and the dispute is ongoing.",
+     "sources": [
+      "pseudoscience-letter-2023"
+     ],
+     "review": "awaiting-evidence-review"
+    },
+    {
+     "id": "iit.c4",
+     "text": "The IIT 4.0 authors describe the theory as still a work in progress and note that their formal examples use small simulated networks.",
+     "sources": [
+      "albantakis-2023"
+     ],
+     "review": "awaiting-evidence-review"
+    }
+   ],
+   "openQuestions": [
+    {
+     "id": "iit.q1",
+     "text": "Which of IIT's predictions can be tested directly, and which depend on assumptions that cannot, is disputed between researchers.",
+     "sources": [
+      "pseudoscience-letter-2023",
+      "albantakis-2023"
+     ],
+     "review": "awaiting-evidence-review"
+    },
+    {
+     "id": "iit.q2",
+     "text": "It is unclear how current theories relate to each other, or whether they can be empirically distinguished.",
+     "sources": [
+      "seth-bayne-2022"
+     ],
+     "review": "awaiting-evidence-review"
+    }
+   ],
+   "ai": [
+    {
+     "id": "iit.a1",
+     "text": "The 2004 paper states that the theory implies consciousness could in principle be built into artificial systems. What IIT implies for particular kinds of hardware or software is not established in the sources read here and is Awaiting Evidence Review. IIT is not among the theories named in the 2023 AI consciousness report's abstract.",
+     "sources": [
+      "tononi-2004",
+      "butlin-2023"
+     ],
+     "review": "awaiting-evidence-review",
+     "kind": "conceptual"
+    }
+   ],
+   "reading": [
+    "albantakis-2023",
+    "tononi-2004",
+    "tononi-2016",
+    "cogitate-2025",
+    "melloni-2023",
+    "doerig-2019",
+    "seth-bayne-2022"
+   ],
+   "concepts": [
+    {
+     "concept": "integration",
+     "relation": "proposed-mechanism",
+     "sources": [
+      "albantakis-2023",
+      "tononi-2004"
+     ]
+    },
+    {
+     "concept": "subjective-experience",
+     "relation": "related-concept",
+     "sources": [
+      "albantakis-2023"
+     ]
+    },
+    {
+     "concept": "information-processing",
+     "relation": "related-concept",
+     "sources": [
+      "tononi-2004"
+     ]
+    },
+    {
+     "concept": "neural-activity",
+     "relation": "empirical-prediction",
+     "sources": [
+      "melloni-2023"
+     ]
+    },
+    {
+     "concept": "machine-consciousness",
+     "relation": "related-concept",
+     "sources": [
+      "tononi-2004"
+     ]
+    }
+   ],
+   "atlas": [
+    "consciousness"
+   ],
+   "essayMentions": [
+    {
+     "slug": "is-human-consciousness-connected-to-artificial-intelligence",
+     "paragraph": 2
+    }
+   ],
+   "review": {
+    "status": "awaiting-evidence-review",
+    "lastReviewed": null
+   }
+  },
+  {
+   "id": "hot",
+   "name": "Higher-Order Theories of Consciousness",
+   "abbr": "HOT",
+   "perspectives": [
+    "philosophy",
+    "neuroscience"
+   ],
+   "tradition": "A family of theories rooted in philosophy of mind, now tested empirically",
+   "summary": "Hold that a mental state is conscious when the subject has a higher-order representation of being in that state.",
+   "explanation": [
+    "The family is treated as one entry here because the sources read for this preview describe the shared core idea. The distinct higher-order approaches have not yet been reviewed and are not separated; see the note on that gap below."
+   ],
+   "contributors": [
+    "David Rosenthal",
+    "Hakwan Lau"
+   ],
+   "history": [
+    {
+     "id": "hot.h1",
+     "text": "Lau and Rosenthal reviewed empirical support for the approach in 2011, describing it as rooted in philosophy.",
+     "sources": [
+      "lau-rosenthal-2011"
+     ],
+     "review": "awaiting-evidence-review"
+    }
+   ],
+   "proposition": [
+    {
+     "id": "hot.p1",
+     "text": "Conscious awareness depends on higher-order representations: mental states that represent oneself as being in a particular state.",
+     "sources": [
+      "lau-rosenthal-2011"
+     ],
+     "review": "awaiting-evidence-review"
+    }
+   ],
+   "foundations": [
+    {
+     "id": "hot.f1",
+     "text": "The authors describe the approach as rooted in philosophy but empirically testable.",
+     "sources": [
+      "lau-rosenthal-2011"
+     ],
+     "review": "awaiting-evidence-review"
+    }
+   ],
+   "mechanisms": [
+    {
+     "id": "hot.m1",
+     "text": "Prefrontal activity is discussed as relevant evidence, and the authors respond to objections that it reflects attention rather than awareness and that prefrontal lesions do not eliminate awareness. Details of the proposed mechanism were not extracted from the summary read.",
+     "sources": [
+      "lau-rosenthal-2011"
+     ],
+     "review": "awaiting-evidence-review"
+    }
+   ],
+   "predictions": [],
+   "evidence": [
+    {
+     "id": "hot.e1",
+     "text": "The authors conclude that the higher-order approach has received substantial support, comparing it with first-order, global workspace, and recurrent processing theories on evidence that tells them apart. This is the proponents' assessment.",
+     "sources": [
+      "lau-rosenthal-2011"
+     ],
+     "review": "awaiting-evidence-review",
+     "kind": "interpretation"
+    }
+   ],
+   "criticisms": [
+    {
+     "id": "hot.c1",
+     "text": "Objections the authors address include that prefrontal activity reflects attention rather than awareness, and that prefrontal lesions do not eliminate awareness.",
+     "sources": [
+      "lau-rosenthal-2011"
+     ],
+     "review": "awaiting-evidence-review"
+    }
+   ],
+   "openQuestions": [
+    {
+     "id": "hot.q1",
+     "text": "It is unclear how current theories relate to each other, or whether they can be empirically distinguished.",
+     "sources": [
+      "seth-bayne-2022"
+     ],
+     "review": "awaiting-evidence-review"
+    }
+   ],
+   "ai": [
+    {
+     "id": "hot.a1",
+     "text": "The 2023 AI consciousness report lists higher-order theories among those from which it derives computational indicator properties, and concludes that no current AI systems appear to be conscious. This is a conceptual assessment, not experimental evidence.",
+     "sources": [
+      "butlin-2023"
+     ],
+     "review": "awaiting-evidence-review",
+     "kind": "conceptual"
+    }
+   ],
+   "reading": [
+    "lau-rosenthal-2011",
+    "seth-bayne-2022"
+   ],
+   "concepts": [
+    {
+     "concept": "awareness",
+     "relation": "proposed-mechanism",
+     "sources": [
+      "lau-rosenthal-2011"
+     ]
+    },
+    {
+     "concept": "perception",
+     "relation": "related-concept",
+     "sources": [
+      "lau-rosenthal-2011"
+     ]
+    },
+    {
+     "concept": "machine-consciousness",
+     "relation": "related-concept",
+     "sources": [
+      "butlin-2023"
+     ]
+    }
+   ],
+   "atlas": [
+    "consciousness",
+    "cognition"
+   ],
+   "essayMentions": [
+    {
+     "slug": "is-human-consciousness-connected-to-artificial-intelligence",
+     "paragraph": 2
+    }
+   ],
+   "gaps": [
+    "Distinguishing the separate higher-order approaches",
+    "Specific empirical predictions"
+   ],
+   "review": {
+    "status": "awaiting-evidence-review",
+    "lastReviewed": null
+   }
+  },
+  {
+   "id": "rpt",
+   "name": "Recurrent Processing Theory",
+   "abbr": "RPT",
+   "perspectives": [
+    "neuroscience"
+   ],
+   "tradition": "Visual neuroscience; associated with Victor Lamme",
+   "summary": "Associates consciousness with recurrent (feedback) processing in sensory areas rather than with the initial feedforward sweep.",
+   "explanation": [
+    "This record is provisional. The primary papers were available only as bibliographic records, so the account below comes from a secondary web entry and a formal critique and must be checked against Lamme's own papers."
+   ],
+   "contributors": [
+    "Victor Lamme"
+   ],
+   "history": [
+    {
+     "id": "rpt.h1",
+     "text": "Lamme published 'Towards a true neural stance on consciousness' in Trends in Cognitive Sciences in 2006; a 2010 paper is also cited by the secondary entry (not verified here).",
+     "sources": [
+      "lamme-2006",
+      "closer-rpt"
+     ],
+     "review": "awaiting-evidence-review"
+    }
+   ],
+   "proposition": [
+    {
+     "id": "rpt.p1",
+     "text": "According to a secondary web entry, consciousness arises when sensory brain areas engage in recurrent (feedback) processing, which the entry places at the third of four described stages of visual processing.",
+     "sources": [
+      "closer-rpt"
+     ],
+     "review": "awaiting-evidence-review"
+    }
+   ],
+   "foundations": [],
+   "mechanisms": [
+    {
+     "id": "rpt.m1",
+     "text": "Recurrent processing within and between sensory areas, as opposed to feedforward activity alone, as summarized by the secondary entry.",
+     "sources": [
+      "closer-rpt"
+     ],
+     "review": "awaiting-evidence-review"
+    }
+   ],
+   "predictions": [],
+   "evidence": [],
+   "criticisms": [
+    {
+     "id": "rpt.c1",
+     "text": "The unfolding argument names recurrent processing theory alongside IIT as a theory tied to causal structure and contends such theories are either false or outside the realm of science.",
+     "sources": [
+      "doerig-2019"
+     ],
+     "review": "awaiting-evidence-review"
+    },
+    {
+     "id": "rpt.c2",
+     "text": "The secondary entry reports Ned Block's view that recurrent activity is sufficient only given background conditions, and notes a contrast with global workspace theory. Not verified against primary sources.",
+     "sources": [
+      "closer-rpt"
+     ],
+     "review": "awaiting-evidence-review"
+    }
+   ],
+   "openQuestions": [
+    {
+     "id": "rpt.q1",
+     "text": "It is unclear how current theories relate to each other, or whether they can be empirically distinguished.",
+     "sources": [
+      "seth-bayne-2022"
+     ],
+     "review": "awaiting-evidence-review"
+    }
+   ],
+   "ai": [
+    {
+     "id": "rpt.a1",
+     "text": "The 2023 AI consciousness report lists recurrent processing theory among those from which it derives computational indicator properties. This is a conceptual assessment.",
+     "sources": [
+      "butlin-2023"
+     ],
+     "review": "awaiting-evidence-review",
+     "kind": "conceptual"
+    }
+   ],
+   "reading": [
+    "lamme-2006",
+    "doerig-2019",
+    "seth-bayne-2022"
+   ],
+   "concepts": [
+    {
+     "concept": "recurrent-processing",
+     "relation": "proposed-mechanism",
+     "sources": [
+      "closer-rpt"
+     ]
+    },
+    {
+     "concept": "perception",
+     "relation": "related-concept",
+     "sources": [
+      "closer-rpt"
+     ]
+    },
+    {
+     "concept": "machine-consciousness",
+     "relation": "related-concept",
+     "sources": [
+      "butlin-2023"
+     ]
+    }
+   ],
+   "atlas": [
+    "consciousness"
+   ],
+   "essayMentions": [
+    {
+     "slug": "is-human-consciousness-connected-to-artificial-intelligence",
+     "paragraph": 2
+    }
+   ],
+   "gaps": [
+    "Primary-source abstract and claims",
+    "Empirical predictions",
+    "Supporting studies"
+   ],
+   "review": {
+    "status": "awaiting-evidence-review",
+    "lastReviewed": null
+   }
+  },
+  {
+   "id": "ast",
+   "name": "Attention Schema Theory",
+   "abbr": "AST",
+   "perspectives": [
+    "neuroscience"
+   ],
+   "tradition": "Cognitive neuroscience; control-theoretic account of awareness",
+   "summary": "Proposes that subjective awareness is the brain's simplified model of its own attention.",
+   "explanation": [
+    "The theory treats attention as competition among signals for limited processing resources, and awareness as a schematic model the brain builds of that process, comparable to a body schema."
+   ],
+   "contributors": [
+    "Michael S. A. Graziano",
+    "Taylor W. Webb"
+   ],
+   "history": [
+    {
+     "id": "ast.h1",
+     "text": "A mechanistic statement of the theory was published in Frontiers in Psychology in 2015.",
+     "sources": [
+      "graziano-webb-2015"
+     ],
+     "review": "awaiting-evidence-review"
+    }
+   ],
+   "proposition": [
+    {
+     "id": "ast.p1",
+     "text": "Subjective awareness is the brain's internal model of its own attention process.",
+     "sources": [
+      "graziano-webb-2015"
+     ],
+     "review": "awaiting-evidence-review"
+    }
+   ],
+   "foundations": [
+    {
+     "id": "ast.f1",
+     "text": "Attention is described as biased competition between signals, and the attention schema is likened to the body schema, which supports motor control.",
+     "sources": [
+      "graziano-webb-2015"
+     ],
+     "review": "awaiting-evidence-review"
+    }
+   ],
+   "mechanisms": [
+    {
+     "id": "ast.m1",
+     "text": "The brain constructs a schematic, non-mechanistic model of attention that includes the self, the attended object, and the link between them. The authors argue this model leads the brain to conclude it has a non-physical property, awareness, and that the model is useful for controlling attention.",
+     "sources": [
+      "graziano-webb-2015"
+     ],
+     "review": "awaiting-evidence-review"
+    }
+   ],
+   "predictions": [
+    {
+     "id": "ast.pr1",
+     "text": "Without awareness, attention should still occur but be poorly controlled.",
+     "sources": [
+      "graziano-webb-2015"
+     ],
+     "review": "awaiting-evidence-review"
+    },
+    {
+     "id": "ast.pr2",
+     "text": "Awareness should be graded, matching the graded nature of attention.",
+     "sources": [
+      "graziano-webb-2015"
+     ],
+     "review": "awaiting-evidence-review"
+    },
+    {
+     "id": "ast.pr3",
+     "text": "Awareness should apply to the same domains as attention, including internal content such as emotions and thoughts.",
+     "sources": [
+      "graziano-webb-2015"
+     ],
+     "review": "awaiting-evidence-review"
+    }
+   ],
+   "evidence": [
+    {
+     "id": "ast.e1",
+     "text": "The authors review studies in which unaware stimuli captured attention or biased judgments more than aware ones, and describe the evidence as highly suggestive. These studies were cited by the authors and not independently checked here.",
+     "sources": [
+      "graziano-webb-2015"
+     ],
+     "review": "awaiting-evidence-review",
+     "kind": "indirect"
+    }
+   ],
+   "criticisms": [
+    {
+     "id": "ast.c1",
+     "text": "The authors acknowledge that the top-down versus bottom-up attention distinction is contested, that some claims of attention without awareness are controversial, and that whether awareness can occur without attention is unresolved.",
+     "sources": [
+      "graziano-webb-2015"
+     ],
+     "review": "awaiting-evidence-review"
+    },
+    {
+     "id": "ast.c2",
+     "text": "The authors note that because brain models are imperfect, the theory accounts for illusions but makes error-based explanations harder to falsify.",
+     "sources": [
+      "graziano-webb-2015"
+     ],
+     "review": "awaiting-evidence-review"
+    }
+   ],
+   "openQuestions": [
+    {
+     "id": "ast.q1",
+     "text": "Whether awareness can occur without attention is described as unresolved.",
+     "sources": [
+      "graziano-webb-2015"
+     ],
+     "review": "awaiting-evidence-review"
+    },
+    {
+     "id": "ast.q2",
+     "text": "It is unclear how current theories relate to each other, or whether they can be empirically distinguished.",
+     "sources": [
+      "seth-bayne-2022"
+     ],
+     "review": "awaiting-evidence-review"
+    }
+   ],
+   "ai": [
+    {
+     "id": "ast.a1",
+     "text": "The 2023 AI consciousness report lists attention schema theory among those from which it derives computational indicator properties. This is a conceptual assessment.",
+     "sources": [
+      "butlin-2023"
+     ],
+     "review": "awaiting-evidence-review",
+     "kind": "conceptual"
+    }
+   ],
+   "reading": [
+    "graziano-webb-2015",
+    "seth-bayne-2022"
+   ],
+   "concepts": [
+    {
+     "concept": "attention",
+     "relation": "proposed-mechanism",
+     "sources": [
+      "graziano-webb-2015"
+     ]
+    },
+    {
+     "concept": "self-modeling",
+     "relation": "proposed-mechanism",
+     "sources": [
+      "graziano-webb-2015"
+     ]
+    },
+    {
+     "concept": "awareness",
+     "relation": "related-concept",
+     "sources": [
+      "graziano-webb-2015"
+     ]
+    },
+    {
+     "concept": "machine-consciousness",
+     "relation": "related-concept",
+     "sources": [
+      "butlin-2023"
+     ]
+    }
+   ],
+   "atlas": [
+    "consciousness",
+    "cognition"
+   ],
+   "essayMentions": [],
+   "review": {
+    "status": "awaiting-evidence-review",
+    "lastReviewed": null
+   }
+  },
+  {
+   "id": "pp",
+   "name": "Predictive Processing and Consciousness",
+   "abbr": "PP",
+   "perspectives": [
+    "neuroscience"
+   ],
+   "tradition": "A broad framework for brain function applied to consciousness science; not one unified theory of consciousness",
+   "summary": "Applies the predictive processing framework to consciousness research, for example as a basis for identifying the neural correlates of consciousness.",
+   "explanation": [
+    "Predictive processing is treated here as a framework that different authors apply to consciousness, not as a single accepted theory. One cited paper stresses that it is not, at the outset, a theory of consciousness."
+   ],
+   "contributors": [
+    "Jakob Hohwy",
+    "Anil Seth"
+   ],
+   "history": [
+    {
+     "id": "pp.h1",
+     "text": "Hohwy and Seth proposed the framework as a systematic basis for identifying neural correlates of consciousness in 2020.",
+     "sources": [
+      "hohwy-seth-2020"
+     ],
+     "review": "awaiting-evidence-review"
+    }
+   ],
+   "proposition": [
+    {
+     "id": "pp.p1",
+     "text": "The predictive processing framework for brain function is proposed as a principled foundation for identifying neural correlates of consciousness and mapping them to the structure of experience. The authors stress it is not, at the outset, a theory of consciousness.",
+     "sources": [
+      "hohwy-seth-2020"
+     ],
+     "review": "awaiting-evidence-review"
+    }
+   ],
+   "foundations": [],
+   "mechanisms": [],
+   "predictions": [],
+   "evidence": [],
+   "criticisms": [],
+   "openQuestions": [
+    {
+     "id": "pp.q1",
+     "text": "It is unclear how current theories relate to each other, or whether they can be empirically distinguished.",
+     "sources": [
+      "seth-bayne-2022"
+     ],
+     "review": "awaiting-evidence-review"
+    }
+   ],
+   "ai": [
+    {
+     "id": "pp.a1",
+     "text": "The 2023 AI consciousness report lists predictive processing among the theories from which it derives computational indicator properties. This is a conceptual assessment.",
+     "sources": [
+      "butlin-2023"
+     ],
+     "review": "awaiting-evidence-review",
+     "kind": "conceptual"
+    }
+   ],
+   "reading": [
+    "hohwy-seth-2020",
+    "seth-bayne-2022"
+   ],
+   "concepts": [
+    {
+     "concept": "prediction",
+     "relation": "proposed-mechanism",
+     "sources": [
+      "hohwy-seth-2020"
+     ]
+    },
+    {
+     "concept": "neural-activity",
+     "relation": "related-concept",
+     "sources": [
+      "hohwy-seth-2020"
+     ]
+    },
+    {
+     "concept": "perception",
+     "relation": "related-concept",
+     "sources": [
+      "seth-bayne-2022"
+     ]
+    },
+    {
+     "concept": "machine-consciousness",
+     "relation": "related-concept",
+     "sources": [
+      "butlin-2023"
+     ]
+    }
+   ],
+   "atlas": [
+    "consciousness",
+    "cognition"
+   ],
+   "essayMentions": [],
+   "gaps": [
+    "Specific mechanisms",
+    "Empirical predictions",
+    "Supporting studies",
+    "Criticisms"
+   ],
+   "review": {
+    "status": "awaiting-evidence-review",
+    "lastReviewed": null
+   }
+  }
+ ]
+}

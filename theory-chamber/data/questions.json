@@ -1,0 +1,182 @@
+{
+ "meta": {
+  "version": 1,
+  "generated": "2026-10-15",
+  "note": "Preview data. All records are Awaiting Evidence Review. Descriptions were drawn from publisher and repository pages retrieved on this date and are not a substitute for the full papers."
+ },
+ "items": [
+  {
+   "id": "q-evidence",
+   "q": "What would count as evidence of subjective experience?",
+   "theories": [
+    "gnwt",
+    "iit",
+    "hot",
+    "rpt",
+    "ast",
+    "pp"
+   ],
+   "notes": [
+    {
+     "id": "q1.1",
+     "text": "Researchers disagree about what the theories require, and it is unclear whether current theories can be empirically distinguished.",
+     "sources": [
+      "seth-bayne-2022"
+     ],
+     "review": "awaiting-evidence-review"
+    },
+    {
+     "id": "q1.2",
+     "text": "A preregistered test of two theories reported results that partly align with each and substantially challenge key claims of each.",
+     "sources": [
+      "cogitate-2025"
+     ],
+     "review": "awaiting-evidence-review"
+    }
+   ],
+   "criticisms": [
+    "iit.c3",
+    "iit.c1",
+    "gnwt.c2"
+   ],
+   "atlas": "consciousness",
+   "inquiry": "start",
+   "iq": "theories of consciousness evidence"
+  },
+  {
+   "id": "q-substrate",
+   "q": "Can consciousness exist independently of biological neural systems?",
+   "theories": [
+    "iit",
+    "gnwt",
+    "hot",
+    "rpt",
+    "ast",
+    "pp"
+   ],
+   "notes": [
+    {
+     "id": "q2.1",
+     "text": "The 2023 AI consciousness report concludes that no current AI systems appear to be conscious and finds no obvious barriers to building conscious AI systems. The report is a preprint.",
+     "sources": [
+      "butlin-2023"
+     ],
+     "review": "awaiting-evidence-review"
+    },
+    {
+     "id": "q2.2",
+     "text": "The 2004 IIT paper states that the theory implies consciousness could in principle be built into artificial systems.",
+     "sources": [
+      "tononi-2004"
+     ],
+     "review": "awaiting-evidence-review"
+    }
+   ],
+   "criticisms": [
+    "iit.c1"
+   ],
+   "atlas": "ai",
+   "inquiry": "intel",
+   "iq": "machine consciousness theories"
+  },
+  {
+   "id": "q-mechanism",
+   "q": "Can similar behavior emerge from fundamentally different mechanisms?",
+   "theories": [
+    "gnwt",
+    "iit",
+    "ast"
+   ],
+   "notes": [],
+   "criticisms": [],
+   "atlas": "cognition",
+   "inquiry": "intel",
+   "iq": "behavior mechanism consciousness",
+   "awaiting": true
+  },
+  {
+   "id": "q-processing",
+   "q": "What distinguishes information processing from conscious experience?",
+   "theories": [
+    "gnwt",
+    "iit",
+    "hot",
+    "ast"
+   ],
+   "notes": [
+    {
+     "id": "q4.1",
+     "text": "Different theories locate the difference differently: in broadcast to many processors (GNWT), in irreducible cause-effect structure (IIT), in higher-order representation (HOT), or in a model of attention (AST).",
+     "sources": [
+      "mashour-2020",
+      "albantakis-2023",
+      "lau-rosenthal-2011",
+      "graziano-webb-2015"
+     ],
+     "review": "awaiting-evidence-review"
+    }
+   ],
+   "criticisms": [
+    "gnwt.c2",
+    "iit.c1"
+   ],
+   "atlas": "cognition",
+   "inquiry": "intel",
+   "iq": "information processing consciousness"
+  },
+  {
+   "id": "q-test",
+   "q": "What would a meaningful test of machine consciousness require?",
+   "theories": [
+    "gnwt",
+    "hot",
+    "rpt",
+    "ast",
+    "pp"
+   ],
+   "notes": [
+    {
+     "id": "q5.1",
+     "text": "One report proposes assessing AI systems against indicator properties derived from several theories. Those indicators depend on theories that remain unsettled.",
+     "sources": [
+      "butlin-2023",
+      "seth-bayne-2022"
+     ],
+     "review": "awaiting-evidence-review"
+    }
+   ],
+   "criticisms": [
+    "gnwt.c2"
+   ],
+   "atlas": "ai",
+   "inquiry": "indicators",
+   "iq": "AI consciousness indicators"
+  },
+  {
+   "id": "q-distinguish",
+   "q": "Can competing theories make experimentally distinguishable predictions?",
+   "theories": [
+    "gnwt",
+    "iit"
+   ],
+   "notes": [
+    {
+     "id": "q6.1",
+     "text": "A preregistered protocol states contrasting predictions of GNWT and IIT, and a 2025 report describes the first results.",
+     "sources": [
+      "melloni-2023",
+      "cogitate-2025"
+     ],
+     "review": "awaiting-evidence-review"
+    }
+   ],
+   "criticisms": [
+    "iit.c3",
+    "gnwt.c3"
+   ],
+   "atlas": "consciousness",
+   "inquiry": "theories",
+   "iq": "adversarial collaboration consciousness"
+  }
+ ]
+}
