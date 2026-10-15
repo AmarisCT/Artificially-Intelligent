@@ -8,7 +8,7 @@ function h(tag,attrs,...kids){const e=document.createElement(tag);for(const k in
   for(const kid of kids.flat(Infinity)){if(kid==null||kid===false)continue;e.append(kid.nodeType?kid:document.createTextNode(String(kid)))}return e}
 const ext=(href,text,cls)=>h("a",{href,target:"_blank",rel:"noopener noreferrer",class:cls},text);
 const say=t=>{const l=$("#live");l.textContent="";setTimeout(()=>l.textContent=t,30)};
-let D=null,ARTICLES=[];
+let D=null,ARTICLES=[],CFG={submitEndpoint:null};
 const QS=id=>D.questions.find(q=>q.id===id),SRC=id=>D.sources.find(s=>s.id===id),CAT=id=>D.meta.categories.find(c=>c.id===id),ST=id=>D.meta.statuses.find(s=>s.id===id);
 const CON=id=>(D.meta.concepts.find(c=>c.id===id)||{name:id}).name,TH=id=>(D.meta.theories.find(t=>t.id===id)||{name:id}).name;
 const slugOf=a=>(a.slug||String(a.url||"").replace(/\/+$/,"").split("/").pop());
@@ -18,6 +18,8 @@ async function load(){
     const [meta,qs,rl,so,hi]=await Promise.all(["meta","questions","question-relations","question-sources","history"].map(g));
     D={meta,questions:qs.items,relations:rl.items,sources:so.items,history:hi.items};
     try{const r=await fetch(ROOT+"research/published/manifest.json",{cache:"no-cache"});if(r.ok){const m=await r.json();if(m&&Array.isArray(m.articles))ARTICLES=m.articles}}catch(e){}}
+  if(window.__UA_CONFIG__)CFG=window.__UA_CONFIG__;else{try{const r=await fetch("config.json",{cache:"no-cache"});if(r.ok)CFG=await r.json()}catch(e){}}
+  if(!(typeof CFG.submitEndpoint==="string"&&/^https:\/\//.test(CFG.submitEndpoint)))CFG.submitEndpoint=null;
   ARTICLES=ARTICLES.filter(a=>a&&a.title&&/^[a-z0-9-]+$/.test(slugOf(a)));
 }
 /* ---------- Reading Desk (browser-local, same store as the main site; only own entries are touched) ---------- */
@@ -82,7 +84,7 @@ function library(){
   inp.addEventListener("input",()=>{LIB.q=inp.value;draw()});sel.addEventListener("change",()=>{LIB.sort=sel.value;draw()});st.addEventListener("change",()=>{LIB.st=st.value;draw()});
   const n=h("div",{class:"wrap"},h("p",{class:"kicker"},"The Question Library"),h("h1",{class:"h-l"},"Questions under investigation"),
    h("p",{class:"lede",style:"margin-top:12px"},"Each entry is a research record, not an FAQ item. Statuses describe the state of the question; none is a final answer."),
-   h("div",{class:"tools"},h("label",null,"Search",inp),h("label",null,"Status",st),h("label",null,"Sort",sel)),cats,count,list);
+   h("div",{class:"tools"},h("label",null,"Search",inp),h("label",null,"Status",st),h("label",null,"Sort",sel)),cats,count,list,suggestBlock());
   draw();return n}
 function qcard(q){
   return h("article",{class:"qcard"+(q.review!=="awaiting"?" rev":"")},
@@ -187,12 +189,51 @@ function status(){
      h("li",null,"Summaries cite the sources they rest on, and each source states what was and was not read. AI-written explanations are not treated as verified scholarship."),
      h("li",null,"Revision log: 15 October 2026 · first preview, 25 questions, 5 with reviewed investigations, 2 history timelines."),
      h("li",null,"A public route for reporting corrections has not been set up yet, so this page does not offer one."))),
-   h("section",{class:"sec"},h("h2",null,"Suggest a question"),h("div",{class:"disabled"},h("p",{style:"margin:0 0 10px"},h("strong",null,"Not available yet.")),h("p",{class:"note"},"Visitor suggestions need a secure submission service with validation, spam prevention and moderation, and none is connected. Rather than show a form that does nothing, this feature is switched off. Nothing would be published without review."),h("p",{style:"margin-top:10px"},h("input",{type:"text",disabled:true,placeholder:"Your question (disabled)","aria-label":"Question (disabled)"})," ",h("button",{class:"btn",disabled:true,type:"button"},"Submit (disabled)")))));
+   suggestBlock());
+}
+
+/* ---------- Suggest a question ---------- */
+function suggestBlock(){
+  const live=!!CFG.submitEndpoint,t0=Date.now(),MIN=15,MAX=400;
+  const ta=h("textarea",{id:"sq",rows:"4",maxlength:String(MAX),required:true,"aria-describedby":"sq-help sq-count",placeholder:"Write one clear question that you think belongs in the archive."});
+  const cnt=h("span",{id:"sq-count",class:"note"},"0 / "+MAX);
+  const cat=h("select",{id:"sq-cat","aria-label":"Subject (optional)"},[h("option",{value:""},"Subject: not sure"),...D.meta.categories.map(c=>h("option",{value:c.id},c.label))]);
+  const hp=h("input",{type:"text",name:"website",tabindex:"-1",autocomplete:"off","aria-hidden":"true",style:"position:absolute;left:-9999px;width:1px;height:1px"});
+  const ok=h("input",{type:"checkbox",id:"sq-ok"});
+  const msg=h("p",{class:"note",role:"status","aria-live":"polite"},"");
+  const send=h("button",{class:"btn primary",type:"submit",disabled:!live},live?"Send question":"Sending not connected yet");
+  const copy=h("button",{class:"btn",type:"button"},"Copy my question");
+  ta.addEventListener("input",()=>{cnt.textContent=ta.value.length+" / "+MAX});
+  copy.addEventListener("click",async()=>{const v=ta.value.trim();if(!v){msg.textContent="Type a question first.";return}try{await navigator.clipboard.writeText(v);msg.textContent="Copied. You can send it to the site's author yourself."}catch(e){msg.textContent="Could not copy. Select the text and copy it manually."}});
+  const f=h("form",{class:"disabled-ok",novalidate:true},
+    h("label",{for:"sq",style:"display:block;margin-bottom:6px"},"Your question"),ta,h("div",{class:"meta",style:"justify-content:space-between;margin:4px 0 12px"},h("span",{id:"sq-help",class:"note"},"Between "+MIN+" and "+MAX+" characters. Please do not include personal information."),cnt),
+    h("div",{class:"tools",style:"grid-template-columns:1fr;margin:0 0 12px"},h("label",null,"Subject (optional)",cat)),hp,
+    h("label",{style:"display:flex;gap:10px;align-items:flex-start;margin-bottom:14px"},ok,h("span",null,"I understand this question will be reviewed before anything is published, may be edited or declined, and that I have not included personal information.")),
+    h("div",{class:"chips"},send,copy),msg);
+  f.addEventListener("submit",async e=>{e.preventDefault();
+    const v=ta.value.trim().replace(/\s+/g," ");
+    if(!live){msg.textContent="Sending is not connected yet, so nothing was sent.";return}
+    if(hp.value){msg.textContent="Received.";return}
+    if(v.length<MIN){msg.textContent="Please write at least "+MIN+" characters.";return}
+    if(v.length>MAX){msg.textContent="Please keep it under "+MAX+" characters.";return}
+    if(!/[a-z]/i.test(v)||/https?:\/\//i.test(v)){msg.textContent="Please write a question in words, without links.";return}
+    if(!ok.checked){msg.textContent="Please tick the box to confirm.";return}
+    if(Date.now()-t0<3000){msg.textContent="Please take a moment to check your question, then send again.";return}
+    send.disabled=true;msg.textContent="Sending…";
+    try{const r=await fetch(CFG.submitEndpoint,{method:"POST",headers:{"Content-Type":"application/json"},credentials:"omit",referrerPolicy:"no-referrer",body:JSON.stringify({question:v,category:cat.value||null,consent:true,hp:"",elapsedMs:Date.now()-t0})});
+      if(r.ok){ta.value="";cnt.textContent="0 / "+MAX;ok.checked=false;msg.textContent="Received. It will be reviewed before anything is published. Nothing about the question changes the archive until then."}
+      else msg.textContent=r.status===429?"Too many submissions just now. Please try again later.":"The question could not be sent ("+r.status+"). Your text is still here, so you can try again or copy it.";
+    }catch(err){msg.textContent="The question could not be sent. Your text is still here, so you can try again or copy it."}
+    send.disabled=false});
+  return h("section",{class:"sec",id:"suggest-block"},h("h2",null,"Suggest a question"),
+    h("div",{class:"panel"},
+      live?h("p",{class:"note",style:"margin-bottom:12px"},"Questions are sent to the archive's editor for review. Nothing is published automatically."):
+           h("p",{class:"note",style:"margin-bottom:12px"},h("strong",null,"Sending is not connected yet. "),"The form works, but no receiving service exists, so nothing can be delivered and nothing is stored. You can write your question and copy it. Once the archive's backend can receive and moderate submissions, this switches on without changes to the form."),f))
 }
 function route(){
   if(!D)return;const hs=(location.hash||"#entrance").slice(1);let n,r="entrance";
   if(hs.startsWith("q-")){n=question(hs.slice(2));r="library"}else if(hs==="library"){n=library();r="library"}else if(hs==="network"){n=network();r="network"}
-  else if(hs==="history"||hs.startsWith("history-")){n=history(hs.slice(8));r="history"}else if(hs==="status"){n=status();r="status"}else if(hs==="entrance"||!hs)n=entrance();else n=notFound();
+  else if(hs==="history"||hs.startsWith("history-")){n=history(hs.slice(8));r="history"}else if(hs==="status"){n=status();r="status"}else if(hs==="suggest"){n=h("div",{class:"wrap"},h("p",{class:"kicker"},"Participate"),h("h1",{class:"h-l"},"Suggest a question"),suggestBlock());r="suggest"}else if(hs==="entrance"||!hs)n=entrance();else n=notFound();
   $("#main").replaceChildren(n);$$(".nav a").forEach(a=>a.dataset.r===r?a.setAttribute("aria-current","page"):a.removeAttribute("aria-current"));
   const t=n.querySelector("h1");document.title=(r==="entrance"?"":(t?t.textContent+" · ":""))+"The Unanswered Archive · Artificially Intelligent";window.scrollTo(0,0);$("#main").focus({preventScroll:true})}
 addEventListener("hashchange",route);

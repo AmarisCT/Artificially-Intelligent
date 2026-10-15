@@ -55,3 +55,7 @@ svg .n{cursor:pointer}svg .n circle{fill:#0f1412;stroke:var(--line2);stroke-widt
 .stats{display:flex;gap:26px;flex-wrap:wrap;color:var(--muted);font-size:.88rem}.stats b{color:var(--ink);font-family:var(--serif);font-size:1.5rem;font-weight:400}
 .sr-only-list{margin-top:18px}
 .rel button.r{display:grid;gap:2px;border:1px solid var(--line);padding:12px 14px;border-radius:3px;width:100%;color:inherit}.rel button.r:hover{border-color:var(--mint)}
+#suggest-block textarea{width:100%;background:var(--panel2);border:1px solid var(--line2);border-radius:3px;padding:12px;font:inherit;color:var(--ink);resize:vertical;min-height:110px}
+#suggest-block select{background:var(--panel2);border:1px solid var(--line2);border-radius:3px;padding:10px;min-height:44px;color:var(--ink)}
+#suggest-block input[type=checkbox]{width:20px;height:20px;margin-top:3px;accent-color:#b5f2d6}
+#suggest-block button[disabled]{opacity:.55;cursor:not-allowed}
