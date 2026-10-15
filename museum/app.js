@@ -90,6 +90,78 @@ function artwork(era){
   draw();status();return box;
 }
 
+
+/* ---------- A different activity in each room ---------- */
+const shuf=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+const frame=(title,intro,...body)=>h("div",{class:"act"},h("p",{class:"kicker"},"Activity"),h("h3",null,title),h("p",{class:"note",style:"margin:6px 0 14px"},intro),...body);
+const btn=(t,f,c)=>h("button",{class:"btn"+(c?" "+c:""),type:"button",onclick:f},t);
+
+function actTablet(){
+  const items=[["Malt",0],["Barley groats",0]],out=h("div",{class:"out","aria-live":"polite"});
+  const rows=items.map(it=>{const n=h("output",null,"0");return h("div",{class:"row"},h("span",{class:"lab"},it[0]),btn("−",()=>{it[1]=Math.max(0,it[1]-1);n.textContent=it[1]}),n,btn("+",()=>{it[1]=Math.min(12,it[1]+1);n.textContent=it[1]}))});
+  const press=()=>{out.replaceChildren(h("div",{class:"clay"},items.filter(i=>i[1]).map(i=>h("p",null,h("b",null,i[0]),"  ","▸".repeat(i[1])+"  ("+i[1]+")"))),
+    h("p",{class:"note"},items.some(i=>i[1])?"Pressed. Three thousand years on, this is all a reader has: names of goods and numbers. Nothing here says who received them, when, or why. The Met says the script carried no grammatical elements, so it could not say it in sentences.":"Nothing pressed yet."))};
+  return frame("Keep the temple's ledger","Record what was handed out. Your tablet may only hold names of goods and numbers, as the Met describes for this period. (The goods are those named in the Met's title.)",...rows,btn("Press into the clay",press,"primary"),out);
+}
+function actLibrary(){
+  const N=8;let texts=0,phase=0,halves=[],pick=null,done=0;const stage=h("div",{class:"stage","aria-live":"polite"}),status=h("p",{class:"note"},"");
+  const shapes=["◆","▲","●","■","★","✚","⬟","⬢"];
+  function render(){
+    stage.replaceChildren();
+    if(phase===0){stage.append(h("div",{class:"shelf"},Array.from({length:texts},(_,i)=>h("span",{class:"vol"},shapes[i]))));status.textContent=texts+" of "+N+" texts gathered.";
+      stage.append(btn("Send an agent for a text",()=>{texts++;if(texts>=N)phase=1;render()},"primary"))}
+    if(phase===1){status.textContent="The shelves are full. Now Nineveh falls.";stage.append(btn("Nineveh falls (612 BC)",()=>{halves=shuf(Array.from({length:N},(_,i)=>[i,"L"]).concat(Array.from({length:N},(_,i)=>[i,"R"])));phase=2;done=0;pick=null;render()},"primary"))}
+    if(phase===2){status.textContent="Every text is broken in two. Pair the halves: "+done+" of "+N+" restored.";
+      stage.append(h("div",{class:"shards"},halves.map((m,k)=>m?h("button",{class:"shard"+(pick===k?" on":""),type:"button","aria-pressed":String(pick===k),"aria-label":"Fragment "+shapes[m[0]]+(m[1]==="L"?" left half":" right half"),onclick:()=>{if(pick===null){pick=k}else if(pick===k){pick=null}else{const a=halves[pick];if(a[0]===m[0]&&a[1]!==m[1]){halves[pick]=null;halves[k]=null;done++;pick=null;if(done===N){phase=3}}else pick=k}render()}},shapes[m[0]]+(m[1]==="L"?"◖":"◗")):h("span",{class:"shard gone"},"✓"))));}
+    if(phase===3){status.textContent="";stage.append(h("p",null,"All "+N+" restored here. The British Museum says the real library was sifted, smashed and dumped, and its project is still working out how many tablets there were and how much survives."),btn("Start again",()=>{texts=0;phase=0;render()}))}
+  }
+  render();
+  return frame("Gather, lose, and piece back together","Be the king's agent: collect eight texts. Then the library falls and you sift the pieces. (An exercise: the texts are placeholders.)",stage,status);
+}
+function actDomesday(){
+  const T=["In Edward the Confessor's time (TRE)","When King William granted it","In 1086"];
+  const st=T.map(()=>({teams:2,mill:false,val:10}));const out=h("div",{"aria-live":"polite"});
+  const stepper=(o,k,lab,min,max)=>{const n=h("output",null,String(o[k]));return h("span",{class:"row"},h("span",{class:"lab"},lab),btn("−",()=>{o[k]=Math.max(min,o[k]-1);n.textContent=o[k]}),n,btn("+",()=>{o[k]=Math.min(max,o[k]+1);n.textContent=o[k]}))};
+  const forms=T.map((t,i)=>h("fieldset",{class:"fs"},h("legend",null,t),stepper(st[i],"teams","Plough teams",0,9),stepper(st[i],"val","Value",0,99),h("label",{class:"row"},h("input",{type:"checkbox",onchange:e=>st[i].mill=e.target.checked})," A mill")));
+  const record=()=>out.replaceChildren(h("table",null,h("thead",null,h("tr",null,h("th",null,"Asked about"),h("th",null,"Plough teams"),h("th",null,"Mill"),h("th",null,"Value"))),h("tbody",null,T.map((t,i)=>h("tr",null,h("td",null,t),h("td",null,st[i].teams),h("td",null,st[i].mill?"yes":"no"),h("td",null,st[i].val))))),
+    h("p",{class:"note"},"Written into the Book. Only what the questions asked is here. Nothing about who lived there beyond the landholder: the National Archives says Domesday is not a census and the people named are almost all landholders."));
+  return frame("Put the same questions three times","You are a commissioner. For one invented manor, answer the fixed questions for each of the three dates. The manor is made up; the question pattern (asked three times, TRE, grant, 1086) is from the National Archives guide.",...forms,btn("Write it into the Book",record,"primary"),out);
+}
+function actPrint(){
+  const inp=h("input",{type:"text",maxlength:"60",value:"What is written once can be read many times",class:"txt","aria-label":"A line to print"});
+  const grid=h("div",{class:"press","aria-hidden":"true"}),sum=h("p",{class:"note",role:"status"},"");let printed=false;
+  const cells=Array.from({length:180},()=>h("i",null));
+  const printIt=()=>{printed=true;cells.forEach(c=>c.className="p");grid.replaceChildren(...cells);sum.textContent="180 copies printed: \""+(inp.value.trim()||"…")+"\"."};
+  const age=()=>{if(!printed){sum.textContent="Print first.";return}const idx=shuf([...cells.keys()]);idx.forEach((k,n)=>{cells[k].className=n<21?"p full":n<49?"p part":"p lost"});sum.textContent="After the centuries: 49 of 180 survive, 21 of them complete, 28 not complete. Those counts are the Library of Congress's figures for the Gutenberg Bible; which copies survive here is random. Your line is on "+49+" copies."};
+  return frame("Print a run","Print 180 copies of a line you choose (the Gutenberg print run was about 180). Then let time pass and see what remains.",h("label",null,"Your line ",inp),h("div",{class:"chips",style:"margin-top:10px"},btn("Print 180 copies",printIt,"primary"),btn("Let the centuries pass",age)),grid,sum);
+}
+function actSelection(){
+  const R=["Minutes of the meeting where a major policy was changed","Visitor parking permits from one year","Third of nine drafts of an annual report","Letters from members of the public about a new law","Duplicate copies of a circular","The staff lunch rota","The signed final contract for a new building","Photographs of a building before it was demolished"];
+  const dec=R.map(()=>null),out=h("p",{role:"status"},"");
+  const rows=R.map((r,i)=>{const k=h("button",{class:"btn",type:"button","aria-pressed":"false"},"Keep"),l=h("button",{class:"btn",type:"button","aria-pressed":"false"},"Let go");
+    const set=v=>{dec[i]=v;k.setAttribute("aria-pressed",String(v==="k"));l.setAttribute("aria-pressed",String(v==="l"));upd()};k.onclick=()=>set("k");l.onclick=()=>set("l");return h("div",{class:"rec"},h("span",null,r),h("span",{class:"chips"},k,l))});
+  const upd=()=>{const n=dec.filter(Boolean).length,kept=dec.filter(x=>x==="k").length;out.textContent=n<R.length?n+" of "+R.length+" decided.":"You kept "+kept+" of "+R.length+" and let "+(R.length-kept)+" go. Nothing here is a right answer. The National Archives says selection looks for historical value to an organisation or society, and applies written criteria and policies. You applied your own."};
+  return frame("Sit at the appraisal desk","Decide which records to keep for good. The records are invented; the question of historical value is the one the National Archives guidance poses.",h("div",{class:"recs"},rows),out);
+}
+function actWeb(){
+  const P=[["A public page of plain HTML","ok"],["A public news page","ok"],["A page driven by forms and scripts","dyn"],["A page behind a login","pw"],["A results page shown only after submitting a form","form"],["A page on a secure server","sec"],["A page whose site blocks crawlers by robots rules","rob"],["A page its owner asked to have removed","own"],["A public blog post","ok"],["A members-only forum thread","pw"],["A dynamic map page","dyn"],["A public archive index","ok"]];
+  const WHY={ok:["Captured","Publicly available, standard HTML archives well."],dyn:["Captured, but not working","Dynamic pages that rely on forms or scripts don't keep their original functionality."],pw:["Not archived","Password-protected pages are not archived."],form:["Not archived","Pages reachable only after submitting a form are not archived."],sec:["Not archived","Pages on secure servers are not archived."],rob:["May be excluded","Pages may be excluded due to robots exclusions."],own:["May be excluded","Pages may be excluded at a site owner's direct request."]};
+  const list=h("ul",{class:"pages"},P.map(p=>h("li",{"data-k":p[1]},h("span",null,p[0]),h("em",{class:"res"}," ")))),sum=h("p",{class:"note",role:"status"},"");
+  const go=()=>{let c=0;[...list.children].forEach(li=>{const w=WHY[li.dataset.k];li.querySelector(".res").textContent=" → "+w[0]+". "+w[1];li.className=w[0].startsWith("Captured")?"cap":"no";if(w[0]==="Captured")c++});sum.replaceChildren("Fully captured: "+c+" of "+P.length+". These rules are from the Internet Archive's help page; the pages are invented. ",srcBtn("ia-wayback"))};
+  return frame("Send the crawler","Twelve invented pages. See what a crawler working by the Internet Archive's stated rules would keep.",list,btn("Send the crawler",go,"primary"),sum);
+}
+function actModel(){
+  const inp=h("textarea",{class:"txt",rows:"2",maxlength:"160","aria-label":"A sentence"},"the archive remembers what the archive can reach");
+  const out=h("div",{"aria-live":"polite"});
+  const fact=n=>{let r=1n;for(let i=2n;i<=BigInt(n);i++)r*=i;return r};
+  const run=()=>{const w=(inp.value.toLowerCase().match(/[\p{L}']+/gu)||[]).slice(0,20);if(!w.length){out.textContent="Type a sentence first.";return}
+    const c={};w.forEach(x=>c[x]=(c[x]||0)+1);let d=fact(w.length);for(const k in c)d/=fact(c[k]);
+    out.replaceChildren(h("p",{class:"note"},"Reduced to counts, your sentence becomes this:"),h("div",{class:"cloud"},Object.entries(c).map(([k,v])=>h("span",{style:"font-size:"+(0.9+v*0.5)+"rem"},k+(v>1?" ×"+v:"")))),
+      h("p",null,"The same counts fit "+d.toLocaleString("en-US")+" different orderings of these words. A record keeps the one you wrote; a count does not."),
+      h("p",{class:"note"},"This is an illustration of the difference between a record and a pattern. It is not how GPT-3 or any model works, and the paper's abstract does not describe that. Whether a model 'remembers' is left open here."))};
+  return frame("Turn a sentence into a pattern","Type a sentence and see what is left when it is reduced to counts.",inp,h("div",{style:"margin-top:10px"},btn("Reduce it to a pattern",run,"primary")),out);
+}
+const ACTS={tablet:actTablet,library:actLibrary,domesday:actDomesday,print:actPrint,selection:actSelection,web:actWeb,model:actModel};
 /* ---------- views ---------- */
 const view=n=>{const m=$("#main");m.replaceChildren(n);document.querySelectorAll(".nav a").forEach(a=>{a.removeAttribute("aria-current");})};
 const setNav=r=>document.querySelectorAll(".nav a").forEach(a=>a.dataset.r===r?a.setAttribute("aria-current","page"):0);
@@ -120,7 +192,7 @@ function room(id){
      e.id==="model"?h("div",{class:"ans",style:"margin-top:20px"},h("p",{class:"kicker"},"An open question"),h("p",null,e.open)):
      h("div",{class:"asks"},answer("What was kept?",e.kept),answer("What was lost?",e.lost),answer("Who decided?",e.decides,"The sources read for this exhibit don't say who decided.")),
      h("div",{class:"reading"},h("p",{class:"kicker"},"This exhibit's reading, not a sourced claim"),h("p",{style:"margin:0"},e.reading))),
-    h("div",null,artwork(e))),
+    h("div",null,ACTS[e.id](),h("details",{class:"wall"},h("summary",null,"Also: leave your mark on the inscription wall"),artwork(e)))),
    h("div",{class:"pn"},i>0?h("a",{class:"btn",href:"#room-"+D.eras[i-1].id},"← "+D.eras[i-1].title):h("a",{class:"btn",href:"#entrance"},"← Entrance"),
      i<D.eras.length-1?h("a",{class:"btn primary",href:"#room-"+D.eras[i+1].id},D.eras[i+1].title+" →"):h("a",{class:"btn primary",href:"#sources"},"All sources →")));
 }
