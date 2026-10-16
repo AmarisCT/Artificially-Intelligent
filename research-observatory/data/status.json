@@ -1,0 +1,39 @@
+{
+ "generated": "2026-10-15",
+ "mode": "seed",
+ "lastSuccessfulUpdate": null,
+ "recordCount": 18,
+ "cache": "cached",
+ "providers": [
+  {
+   "name": "Crossref",
+   "state": "used",
+   "note": "16 seed records retrieved and DOI-checked on 2026-10-15."
+  },
+  {
+   "name": "DataCite (arXiv DOIs)",
+   "state": "used",
+   "note": "2 preprint records retrieved on 2026-10-15."
+  },
+  {
+   "name": "OpenAlex",
+   "state": "planned",
+   "note": "Rate-limited during development, so no OpenAlex records are included yet. The discovery script queries it."
+  },
+  {
+   "name": "arXiv",
+   "state": "planned",
+   "note": "Not reachable from the development environment. Queried by the scheduled script."
+  },
+  {
+   "name": "PubMed",
+   "state": "planned",
+   "note": "Queried by the scheduled script; not yet run."
+  },
+  {
+   "name": "Semantic Scholar",
+   "state": "evaluating",
+   "note": "Terms and rate limits still to be checked before it is added."
+  }
+ ]
+}

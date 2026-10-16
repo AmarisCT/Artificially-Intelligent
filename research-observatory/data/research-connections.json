@@ -1,0 +1,175 @@
+{
+ "meta": {
+  "note": "No verified citation links have been retrieved yet, so none are shown. Shared-author links come from the metadata; topic similarity is automated and preliminary."
+ },
+ "items": [
+  {
+   "a": "P001",
+   "b": "P002",
+   "type": "topic_similarity",
+   "label": "Shared preliminary concepts: Consciousness, Neuroscience",
+   "verified": false
+  },
+  {
+   "a": "P001",
+   "b": "P005",
+   "type": "topic_similarity",
+   "label": "Shared preliminary concepts: Consciousness, Neuroscience",
+   "verified": false
+  },
+  {
+   "a": "P001",
+   "b": "P006",
+   "type": "shared_author",
+   "label": "Shared author: Stanislas Dehaene",
+   "verified": true
+  },
+  {
+   "a": "P001",
+   "b": "P009",
+   "type": "topic_similarity",
+   "label": "Shared preliminary concepts: Attention, Consciousness",
+   "verified": false
+  },
+  {
+   "a": "P001",
+   "b": "P012",
+   "type": "shared_author",
+   "label": "Shared author: Stanislas Dehaene, Jean-Pierre Changeux",
+   "verified": true
+  },
+  {
+   "a": "P001",
+   "b": "P012",
+   "type": "topic_similarity",
+   "label": "Shared preliminary concepts: Attention, Consciousness",
+   "verified": false
+  },
+  {
+   "a": "P001",
+   "b": "P015",
+   "type": "topic_similarity",
+   "label": "Shared preliminary concepts: Attention, Consciousness",
+   "verified": false
+  },
+  {
+   "a": "P002",
+   "b": "P005",
+   "type": "shared_author",
+   "label": "Shared author: Giulio Tononi, Melanie Boly, Marcello Massimini, Christof Koch",
+   "verified": true
+  },
+  {
+   "a": "P002",
+   "b": "P005",
+   "type": "topic_similarity",
+   "label": "Shared preliminary concepts: Consciousness, Neuroscience",
+   "verified": false
+  },
+  {
+   "a": "P002",
+   "b": "P007",
+   "type": "shared_author",
+   "label": "Shared author: Christof Koch",
+   "verified": true
+  },
+  {
+   "a": "P003",
+   "b": "P004",
+   "type": "topic_similarity",
+   "label": "Shared preliminary concepts: Artificial Intelligence, Computing History",
+   "verified": false
+  },
+  {
+   "a": "P005",
+   "b": "P007",
+   "type": "shared_author",
+   "label": "Shared author: Christof Koch",
+   "verified": true
+  },
+  {
+   "a": "P006",
+   "b": "P009",
+   "type": "topic_similarity",
+   "label": "Shared preliminary concepts: Consciousness, Self & Selfhood",
+   "verified": false
+  },
+  {
+   "a": "P006",
+   "b": "P012",
+   "type": "shared_author",
+   "label": "Shared author: Stanislas Dehaene",
+   "verified": true
+  },
+  {
+   "a": "P006",
+   "b": "P017",
+   "type": "topic_similarity",
+   "label": "Shared preliminary concepts: Artificial Intelligence, Consciousness",
+   "verified": false
+  },
+  {
+   "a": "P006",
+   "b": "P018",
+   "type": "topic_similarity",
+   "label": "Shared preliminary concepts: Artificial Intelligence, Consciousness",
+   "verified": false
+  },
+  {
+   "a": "P007",
+   "b": "P017",
+   "type": "shared_author",
+   "label": "Shared author: Liad Mudrik",
+   "verified": true
+  },
+  {
+   "a": "P007",
+   "b": "P017",
+   "type": "topic_similarity",
+   "label": "Shared preliminary concepts: Consciousness, Evidence & Method",
+   "verified": false
+  },
+  {
+   "a": "P009",
+   "b": "P012",
+   "type": "topic_similarity",
+   "label": "Shared preliminary concepts: Attention, Consciousness",
+   "verified": false
+  },
+  {
+   "a": "P009",
+   "b": "P015",
+   "type": "topic_similarity",
+   "label": "Shared preliminary concepts: Attention, Consciousness",
+   "verified": false
+  },
+  {
+   "a": "P012",
+   "b": "P015",
+   "type": "topic_similarity",
+   "label": "Shared preliminary concepts: Attention, Consciousness",
+   "verified": false
+  },
+  {
+   "a": "P013",
+   "b": "P016",
+   "type": "shared_author",
+   "label": "Shared author: Emily M. Bender",
+   "verified": true
+  },
+  {
+   "a": "P013",
+   "b": "P016",
+   "type": "topic_similarity",
+   "label": "Shared preliminary concepts: Language, Machine Learning",
+   "verified": false
+  },
+  {
+   "a": "P017",
+   "b": "P018",
+   "type": "topic_similarity",
+   "label": "Shared preliminary concepts: Artificial Intelligence, Consciousness",
+   "verified": false
+  }
+ ]
+}

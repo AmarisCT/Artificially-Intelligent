@@ -1,0 +1,745 @@
+{
+ "meta": {
+  "version": 1,
+  "generated": "2026-10-15",
+  "collection": "Seed collection",
+  "note": "These records were gathered during development. They are landmark and recent works, not the output of the automatic discovery pipeline."
+ },
+ "items": [
+  {
+   "id": "P001",
+   "doi": "10.1016/j.neuron.2011.03.018",
+   "title": "Experimental and Theoretical Approaches to Conscious Processing",
+   "authors": [
+    "Stanislas Dehaene",
+    "Jean-Pierre Changeux"
+   ],
+   "source": "Neuron",
+   "publisher": "Elsevier BV",
+   "publicationDate": "2011-04",
+   "discoveryDate": "2026-10-15",
+   "abstract": null,
+   "abstractStatus": "not retrieved",
+   "category": [
+    "neuro",
+    "consciousness"
+   ],
+   "concepts": [
+    "consciousness",
+    "neuroscience",
+    "attention"
+   ],
+   "theories": [
+    "gnwt"
+   ],
+   "questions": [
+    "Q001",
+    "Q013"
+   ],
+   "publicationType": "journal-article",
+   "url": "https://doi.org/10.1016/j.neuron.2011.03.018",
+   "reviewStatus": "awaiting editorial review",
+   "summaryStatus": "none (no abstract retrieved)",
+   "classification": "preliminary (assigned from title and metadata, not from a full reading)",
+   "provider": "Crossref",
+   "provenance": "Metadata record retrieved from Crossref on 2026-10-15 and checked against the DOI.",
+   "lastMetadataRefresh": "2026-10-15",
+   "retraction": "not checked",
+   "seed": true
+  },
+  {
+   "id": "P002",
+   "doi": "10.1038/nrn.2016.44",
+   "title": "Integrated information theory: from consciousness to its physical substrate",
+   "authors": [
+    "Giulio Tononi",
+    "Melanie Boly",
+    "Marcello Massimini",
+    "Christof Koch"
+   ],
+   "source": "Nature Reviews Neuroscience",
+   "publisher": "Springer Science and Business Media LLC",
+   "publicationDate": "2016-05-26",
+   "discoveryDate": "2026-10-15",
+   "abstract": null,
+   "abstractStatus": "not retrieved",
+   "category": [
+    "consciousness",
+    "neuro"
+   ],
+   "concepts": [
+    "consciousness",
+    "neuroscience",
+    "emergence"
+   ],
+   "theories": [
+    "iit"
+   ],
+   "questions": [
+    "Q001",
+    "Q003",
+    "Q005"
+   ],
+   "publicationType": "journal-article",
+   "url": "https://doi.org/10.1038/nrn.2016.44",
+   "reviewStatus": "awaiting editorial review",
+   "summaryStatus": "none (no abstract retrieved)",
+   "classification": "preliminary (assigned from title and metadata, not from a full reading)",
+   "provider": "Crossref",
+   "provenance": "Metadata record retrieved from Crossref on 2026-10-15 and checked against the DOI.",
+   "lastMetadataRefresh": "2026-10-15",
+   "retraction": "not checked",
+   "seed": true
+  },
+  {
+   "id": "P003",
+   "doi": "10.1093/mind/LIX.236.433",
+   "title": "Computing Machinery and Intelligence",
+   "authors": [
+    "A. M. Turing"
+   ],
+   "source": "Mind",
+   "publisher": "Oxford University Press (OUP)",
+   "publicationDate": "1950-10-01",
+   "discoveryDate": "2026-10-15",
+   "abstract": null,
+   "abstractStatus": "not retrieved",
+   "category": [
+    "ai",
+    "mind"
+   ],
+   "concepts": [
+    "ai",
+    "intelligence",
+    "computing"
+   ],
+   "theories": [],
+   "questions": [
+    "Q007",
+    "Q008",
+    "Q012"
+   ],
+   "publicationType": "journal-article",
+   "url": "https://doi.org/10.1093/mind/LIX.236.433",
+   "reviewStatus": "awaiting editorial review",
+   "summaryStatus": "none (no abstract retrieved)",
+   "classification": "preliminary (assigned from title and metadata, not from a full reading)",
+   "provider": "Crossref",
+   "provenance": "Metadata record retrieved from Crossref on 2026-10-15 and checked against the DOI.",
+   "lastMetadataRefresh": "2026-10-15",
+   "retraction": "not checked",
+   "seed": true
+  },
+  {
+   "id": "P004",
+   "doi": "10.1017/S0140525X00005756",
+   "title": "Minds, brains, and programs",
+   "authors": [
+    "John R. Searle"
+   ],
+   "source": "Behavioral and Brain Sciences",
+   "publisher": "Cambridge University Press (CUP)",
+   "publicationDate": "1980-09",
+   "discoveryDate": "2026-10-15",
+   "abstract": null,
+   "abstractStatus": "not retrieved",
+   "category": [
+    "ai",
+    "mind"
+   ],
+   "concepts": [
+    "understanding",
+    "ai",
+    "computing"
+   ],
+   "theories": [],
+   "questions": [
+    "Q008",
+    "Q012"
+   ],
+   "publicationType": "journal-article",
+   "url": "https://doi.org/10.1017/S0140525X00005756",
+   "reviewStatus": "awaiting editorial review",
+   "summaryStatus": "none (no abstract retrieved)",
+   "classification": "preliminary (assigned from title and metadata, not from a full reading)",
+   "provider": "Crossref",
+   "provenance": "Metadata record retrieved from Crossref on 2026-10-15 and checked against the DOI.",
+   "lastMetadataRefresh": "2026-10-15",
+   "retraction": "not checked",
+   "seed": true
+  },
+  {
+   "id": "P005",
+   "doi": "10.1038/nrn.2016.22",
+   "title": "Neural correlates of consciousness: progress and problems",
+   "authors": [
+    "Christof Koch",
+    "Marcello Massimini",
+    "Melanie Boly",
+    "Giulio Tononi"
+   ],
+   "source": "Nature Reviews Neuroscience",
+   "publisher": "Springer Science and Business Media LLC",
+   "publicationDate": "2016-04-20",
+   "discoveryDate": "2026-10-15",
+   "abstract": null,
+   "abstractStatus": "not retrieved",
+   "category": [
+    "neuro",
+    "consciousness"
+   ],
+   "concepts": [
+    "neuroscience",
+    "consciousness"
+   ],
+   "theories": [],
+   "questions": [
+    "Q013"
+   ],
+   "publicationType": "journal-article",
+   "url": "https://doi.org/10.1038/nrn.2016.22",
+   "reviewStatus": "awaiting editorial review",
+   "summaryStatus": "none (no abstract retrieved)",
+   "classification": "preliminary (assigned from title and metadata, not from a full reading)",
+   "provider": "Crossref",
+   "provenance": "Metadata record retrieved from Crossref on 2026-10-15 and checked against the DOI.",
+   "lastMetadataRefresh": "2026-10-15",
+   "retraction": "not checked",
+   "seed": true
+  },
+  {
+   "id": "P006",
+   "doi": "10.1126/science.aan8871",
+   "title": "What is consciousness, and could machines have it?",
+   "authors": [
+    "Stanislas Dehaene",
+    "Hakwan Lau",
+    "Sid Kouider"
+   ],
+   "source": "Science",
+   "publisher": "American Association for the Advancement of Science (AAAS)",
+   "publicationDate": "2017-10-27",
+   "discoveryDate": "2026-10-15",
+   "abstract": null,
+   "abstractStatus": "not retrieved",
+   "category": [
+    "consciousness",
+    "machine",
+    "neuro"
+   ],
+   "concepts": [
+    "consciousness",
+    "ai",
+    "self"
+   ],
+   "theories": [
+    "gnwt"
+   ],
+   "questions": [
+    "Q001",
+    "Q009",
+    "Q010"
+   ],
+   "publicationType": "journal-article",
+   "url": "https://doi.org/10.1126/science.aan8871",
+   "reviewStatus": "awaiting editorial review",
+   "summaryStatus": "none (no abstract retrieved)",
+   "classification": "preliminary (assigned from title and metadata, not from a full reading)",
+   "provider": "Crossref",
+   "provenance": "Metadata record retrieved from Crossref on 2026-10-15 and checked against the DOI.",
+   "lastMetadataRefresh": "2026-10-15",
+   "retraction": "not checked",
+   "seed": true
+  },
+  {
+   "id": "P007",
+   "doi": "10.1126/science.abj3259",
+   "title": "Making the hard problem of consciousness easier",
+   "authors": [
+    "Lucia Melloni",
+    "Liad Mudrik",
+    "Michael Pitts",
+    "Christof Koch"
+   ],
+   "source": "Science",
+   "publisher": "American Association for the Advancement of Science (AAAS)",
+   "publicationDate": "2021-05-28",
+   "discoveryDate": "2026-10-15",
+   "abstract": null,
+   "abstractStatus": "not retrieved",
+   "category": [
+    "consciousness",
+    "neuro"
+   ],
+   "concepts": [
+    "consciousness",
+    "method"
+   ],
+   "theories": [
+    "gnwt",
+    "iit"
+   ],
+   "questions": [
+    "Q003"
+   ],
+   "publicationType": "journal-article",
+   "url": "https://doi.org/10.1126/science.abj3259",
+   "reviewStatus": "awaiting editorial review",
+   "summaryStatus": "none (no abstract retrieved)",
+   "classification": "preliminary (assigned from title and metadata, not from a full reading)",
+   "provider": "Crossref",
+   "provenance": "Metadata record retrieved from Crossref on 2026-10-15 and checked against the DOI.",
+   "lastMetadataRefresh": "2026-10-15",
+   "retraction": "not checked",
+   "seed": true
+  },
+  {
+   "id": "P008",
+   "doi": "10.1038/s41583-022-00587-4",
+   "title": "Theories of consciousness",
+   "authors": [
+    "Anil K. Seth",
+    "Tim Bayne"
+   ],
+   "source": "Nature Reviews Neuroscience",
+   "publisher": "Springer Science and Business Media LLC",
+   "publicationDate": "2022-05-03",
+   "discoveryDate": "2026-10-15",
+   "abstract": null,
+   "abstractStatus": "not retrieved",
+   "category": [
+    "consciousness",
+    "mind"
+   ],
+   "concepts": [
+    "consciousness",
+    "mind"
+   ],
+   "theories": [],
+   "questions": [
+    "Q001",
+    "Q003"
+   ],
+   "publicationType": "journal-article",
+   "url": "https://doi.org/10.1038/s41583-022-00587-4",
+   "reviewStatus": "awaiting editorial review",
+   "summaryStatus": "none (no abstract retrieved)",
+   "classification": "preliminary (assigned from title and metadata, not from a full reading)",
+   "provider": "Crossref",
+   "provenance": "Metadata record retrieved from Crossref on 2026-10-15 and checked against the DOI.",
+   "lastMetadataRefresh": "2026-10-15",
+   "retraction": "not checked",
+   "seed": true
+  },
+  {
+   "id": "P009",
+   "doi": "10.3389/fpsyg.2015.00500",
+   "title": "The attention schema theory: a mechanistic account of subjective awareness",
+   "authors": [
+    "Michael S. A. Graziano",
+    "Taylor W. Webb"
+   ],
+   "source": "Frontiers in Psychology",
+   "publisher": "Frontiers Media SA",
+   "publicationDate": "2015-04-23",
+   "discoveryDate": "2026-10-15",
+   "abstract": null,
+   "abstractStatus": "not retrieved",
+   "category": [
+    "consciousness",
+    "cogsci",
+    "neuro"
+   ],
+   "concepts": [
+    "attention",
+    "consciousness",
+    "self"
+   ],
+   "theories": [
+    "ast"
+   ],
+   "questions": [
+    "Q006",
+    "Q014"
+   ],
+   "publicationType": "journal-article",
+   "url": "https://doi.org/10.3389/fpsyg.2015.00500",
+   "reviewStatus": "awaiting editorial review",
+   "summaryStatus": "none (no abstract retrieved)",
+   "classification": "preliminary (assigned from title and metadata, not from a full reading)",
+   "provider": "Crossref",
+   "provenance": "Metadata record retrieved from Crossref on 2026-10-15 and checked against the DOI.",
+   "lastMetadataRefresh": "2026-10-15",
+   "retraction": "not checked",
+   "seed": true
+  },
+  {
+   "id": "P010",
+   "doi": "10.1017/S0140525X12000477",
+   "title": "Whatever next? Predictive brains, situated agents, and the future of cognitive science",
+   "authors": [
+    "Andy Clark"
+   ],
+   "source": "Behavioral and Brain Sciences",
+   "publisher": "Cambridge University Press (CUP)",
+   "publicationDate": "2013-05-10",
+   "discoveryDate": "2026-10-15",
+   "abstract": null,
+   "abstractStatus": "not retrieved",
+   "category": [
+    "cogsci",
+    "mind"
+   ],
+   "concepts": [
+    "perception",
+    "cognition"
+   ],
+   "theories": [
+    "pp"
+   ],
+   "questions": [
+    "Q017"
+   ],
+   "publicationType": "journal-article",
+   "url": "https://doi.org/10.1017/S0140525X12000477",
+   "reviewStatus": "awaiting editorial review",
+   "summaryStatus": "none (no abstract retrieved)",
+   "classification": "preliminary (assigned from title and metadata, not from a full reading)",
+   "provider": "Crossref",
+   "provenance": "Metadata record retrieved from Crossref on 2026-10-15 and checked against the DOI.",
+   "lastMetadataRefresh": "2026-10-15",
+   "retraction": "not checked",
+   "seed": true
+  },
+  {
+   "id": "P011",
+   "doi": "10.1016/j.tics.2006.09.001",
+   "title": "Towards a true neural stance on consciousness",
+   "authors": [
+    "Victor A.F. Lamme"
+   ],
+   "source": "Trends in Cognitive Sciences",
+   "publisher": "Elsevier BV",
+   "publicationDate": "2006-11",
+   "discoveryDate": "2026-10-15",
+   "abstract": null,
+   "abstractStatus": "not retrieved",
+   "category": [
+    "neuro",
+    "consciousness"
+   ],
+   "concepts": [
+    "perception",
+    "neuroscience"
+   ],
+   "theories": [
+    "rpt"
+   ],
+   "questions": [
+    "Q013",
+    "Q017"
+   ],
+   "publicationType": "journal-article",
+   "url": "https://doi.org/10.1016/j.tics.2006.09.001",
+   "reviewStatus": "awaiting editorial review",
+   "summaryStatus": "none (no abstract retrieved)",
+   "classification": "preliminary (assigned from title and metadata, not from a full reading)",
+   "provider": "Crossref",
+   "provenance": "Metadata record retrieved from Crossref on 2026-10-15 and checked against the DOI.",
+   "lastMetadataRefresh": "2026-10-15",
+   "retraction": "not checked",
+   "seed": true
+  },
+  {
+   "id": "P012",
+   "doi": "10.1016/j.neuron.2020.01.026",
+   "title": "Conscious Processing and the Global Neuronal Workspace Hypothesis",
+   "authors": [
+    "George A. Mashour",
+    "Pieter Roelfsema",
+    "Jean-Pierre Changeux",
+    "Stanislas Dehaene"
+   ],
+   "source": "Neuron",
+   "publisher": "Elsevier BV",
+   "publicationDate": "2020-03",
+   "discoveryDate": "2026-10-15",
+   "abstract": null,
+   "abstractStatus": "not retrieved",
+   "category": [
+    "neuro",
+    "consciousness"
+   ],
+   "concepts": [
+    "consciousness",
+    "attention"
+   ],
+   "theories": [
+    "gnwt"
+   ],
+   "questions": [
+    "Q013",
+    "Q014"
+   ],
+   "publicationType": "journal-article",
+   "url": "https://doi.org/10.1016/j.neuron.2020.01.026",
+   "reviewStatus": "awaiting editorial review",
+   "summaryStatus": "none (no abstract retrieved)",
+   "classification": "preliminary (assigned from title and metadata, not from a full reading)",
+   "provider": "Crossref",
+   "provenance": "Metadata record retrieved from Crossref on 2026-10-15 and checked against the DOI.",
+   "lastMetadataRefresh": "2026-10-15",
+   "retraction": "not checked",
+   "seed": true
+  },
+  {
+   "id": "P013",
+   "doi": "10.18653/v1/2020.acl-main.463",
+   "title": "Climbing towards NLU: On Meaning, Form, and Understanding in the Age of Data",
+   "authors": [
+    "Emily M. Bender",
+    "Alexander Koller"
+   ],
+   "source": "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics",
+   "publisher": "Association for Computational Linguistics",
+   "publicationDate": "2020",
+   "discoveryDate": "2026-10-15",
+   "abstract": null,
+   "abstractStatus": "not retrieved",
+   "category": [
+    "ai"
+   ],
+   "concepts": [
+    "language",
+    "understanding",
+    "learning"
+   ],
+   "theories": [],
+   "questions": [
+    "Q008",
+    "Q012"
+   ],
+   "publicationType": "proceedings-article",
+   "url": "https://doi.org/10.18653/v1/2020.acl-main.463",
+   "reviewStatus": "awaiting editorial review",
+   "summaryStatus": "none (no abstract retrieved)",
+   "classification": "preliminary (assigned from title and metadata, not from a full reading)",
+   "provider": "Crossref",
+   "provenance": "Metadata record retrieved from Crossref on 2026-10-15 and checked against the DOI.",
+   "lastMetadataRefresh": "2026-10-15",
+   "retraction": "not checked",
+   "seed": true
+  },
+  {
+   "id": "P014",
+   "doi": "10.1101/lm.94705",
+   "title": "Planting misinformation in the human mind: A 30-year investigation of the malleability of memory",
+   "authors": [
+    "Elizabeth F. Loftus"
+   ],
+   "source": "Learning & Memory",
+   "publisher": "Cold Spring Harbor Laboratory",
+   "publicationDate": "2005-07",
+   "discoveryDate": "2026-10-15",
+   "abstract": null,
+   "abstractStatus": "not retrieved",
+   "category": [
+    "memory",
+    "cogsci"
+   ],
+   "concepts": [
+    "memory",
+    "identity"
+   ],
+   "theories": [],
+   "questions": [
+    "Q016",
+    "Q019"
+   ],
+   "publicationType": "journal-article",
+   "url": "https://doi.org/10.1101/lm.94705",
+   "reviewStatus": "awaiting editorial review",
+   "summaryStatus": "none (no abstract retrieved)",
+   "classification": "preliminary (assigned from title and metadata, not from a full reading)",
+   "provider": "Crossref",
+   "provenance": "Metadata record retrieved from Crossref on 2026-10-15 and checked against the DOI.",
+   "lastMetadataRefresh": "2026-10-15",
+   "retraction": "not checked",
+   "seed": true
+  },
+  {
+   "id": "P015",
+   "doi": "10.1017/S0140525X00038188",
+   "title": "On a confusion about a function of consciousness",
+   "authors": [
+    "Ned Block"
+   ],
+   "source": "Behavioral and Brain Sciences",
+   "publisher": "Cambridge University Press (CUP)",
+   "publicationDate": "1995-06",
+   "discoveryDate": "2026-10-15",
+   "abstract": null,
+   "abstractStatus": "not retrieved",
+   "category": [
+    "consciousness",
+    "mind"
+   ],
+   "concepts": [
+    "consciousness",
+    "attention"
+   ],
+   "theories": [],
+   "questions": [
+    "Q001",
+    "Q002"
+   ],
+   "publicationType": "journal-article",
+   "url": "https://doi.org/10.1017/S0140525X00038188",
+   "reviewStatus": "awaiting editorial review",
+   "summaryStatus": "none (no abstract retrieved)",
+   "classification": "preliminary (assigned from title and metadata, not from a full reading)",
+   "provider": "Crossref",
+   "provenance": "Metadata record retrieved from Crossref on 2026-10-15 and checked against the DOI.",
+   "lastMetadataRefresh": "2026-10-15",
+   "retraction": "not checked",
+   "seed": true
+  },
+  {
+   "id": "P016",
+   "doi": "10.1145/3442188.3445922",
+   "title": "On the Dangers of Stochastic Parrots",
+   "authors": [
+    "Emily M. Bender",
+    "Timnit Gebru",
+    "Angelina McMillan-Major",
+    "Shmargaret Shmitchell"
+   ],
+   "source": "Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency",
+   "publisher": "ACM",
+   "publicationDate": "2021-03-03",
+   "discoveryDate": "2026-10-15",
+   "abstract": null,
+   "abstractStatus": "not retrieved",
+   "category": [
+    "ai",
+    "ethics"
+   ],
+   "concepts": [
+    "learning",
+    "language",
+    "ethics"
+   ],
+   "theories": [],
+   "questions": [
+    "Q008",
+    "Q023"
+   ],
+   "publicationType": "proceedings-article",
+   "url": "https://doi.org/10.1145/3442188.3445922",
+   "reviewStatus": "awaiting editorial review",
+   "summaryStatus": "none (no abstract retrieved)",
+   "classification": "preliminary (assigned from title and metadata, not from a full reading)",
+   "provider": "Crossref",
+   "provenance": "Metadata record retrieved from Crossref on 2026-10-15 and checked against the DOI.",
+   "lastMetadataRefresh": "2026-10-15",
+   "retraction": "not checked",
+   "seed": true
+  },
+  {
+   "id": "P017",
+   "doi": "10.48550/arXiv.2308.08708",
+   "title": "Consciousness in Artificial Intelligence: Insights from the Science of Consciousness",
+   "authors": [
+    "Patrick Butlin",
+    "Robert Long",
+    "Eric Elmoznino",
+    "Yoshua Bengio",
+    "Jonathan Birch",
+    "Axel Constant",
+    "George Deane",
+    "Stephen M. Fleming",
+    "Chris Frith",
+    "Xu Ji",
+    "Ryota Kanai",
+    "Colin Klein",
+    "Grace Lindsay",
+    "Matthias Michel",
+    "Liad Mudrik",
+    "Megan A. K. Peters",
+    "Eric Schwitzgebel",
+    "Jonathan Simon",
+    "Rufin VanRullen"
+   ],
+   "source": "arXiv",
+   "publisher": "arXiv",
+   "publicationDate": "2023-08-17",
+   "discoveryDate": "2026-10-15",
+   "abstract": null,
+   "abstractStatus": "not retrieved",
+   "category": [
+    "machine",
+    "consciousness",
+    "ai"
+   ],
+   "concepts": [
+    "ai",
+    "consciousness",
+    "method"
+   ],
+   "theories": [],
+   "questions": [
+    "Q009",
+    "Q024"
+   ],
+   "publicationType": "preprint",
+   "url": "https://doi.org/10.48550/arXiv.2308.08708",
+   "reviewStatus": "awaiting editorial review",
+   "summaryStatus": "none (no abstract retrieved)",
+   "classification": "preliminary (assigned from title and metadata, not from a full reading)",
+   "provider": "DataCite (arXiv)",
+   "provenance": "Metadata record retrieved from DataCite (arXiv) on 2026-10-15 and checked against the DOI.",
+   "lastMetadataRefresh": "2026-10-15",
+   "retraction": "not checked",
+   "seed": true
+  },
+  {
+   "id": "P018",
+   "doi": "10.48550/arXiv.2303.07103",
+   "title": "Could a Large Language Model be Conscious?",
+   "authors": [
+    "David J. Chalmers"
+   ],
+   "source": "arXiv",
+   "publisher": "arXiv",
+   "publicationDate": "2023-03-04",
+   "discoveryDate": "2026-10-15",
+   "abstract": null,
+   "abstractStatus": "not retrieved",
+   "category": [
+    "machine",
+    "mind",
+    "ai"
+   ],
+   "concepts": [
+    "ai",
+    "consciousness",
+    "language"
+   ],
+   "theories": [],
+   "questions": [
+    "Q009",
+    "Q007"
+   ],
+   "publicationType": "preprint",
+   "url": "https://doi.org/10.48550/arXiv.2303.07103",
+   "reviewStatus": "awaiting editorial review",
+   "summaryStatus": "none (no abstract retrieved)",
+   "classification": "preliminary (assigned from title and metadata, not from a full reading)",
+   "provider": "DataCite (arXiv)",
+   "provenance": "Metadata record retrieved from DataCite (arXiv) on 2026-10-15 and checked against the DOI.",
+   "lastMetadataRefresh": "2026-10-15",
+   "retraction": "not checked",
+   "seed": true
+  }
+ ]
+}

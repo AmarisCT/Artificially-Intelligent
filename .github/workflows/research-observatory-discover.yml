@@ -1,0 +1,45 @@
+name: Research Observatory discovery
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "41 6 * * *"   # once every 24 hours
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run discovery tests
+        working-directory: research-observatory
+        run: python3 scripts/test_discover.py
+      - name: Discover new research (keeps the old dataset if every provider fails)
+        run: python3 research-observatory/scripts/discover_research.py || echo "Discovery did not update the dataset."
+      - name: Commit updated dataset
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research-observatory/data
+          if ! git diff --cached --quiet; then
+            git commit -m "Research Observatory: daily discovery update"
+            git pull --rebase
+            git push
+          fi
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

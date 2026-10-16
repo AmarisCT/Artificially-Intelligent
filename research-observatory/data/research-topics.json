@@ -1,0 +1,137 @@
+{
+ "disciplines": [
+  {
+   "id": "ai",
+   "name": "Artificial Intelligence",
+   "color": "#e0b07a"
+  },
+  {
+   "id": "consciousness",
+   "name": "Consciousness Studies",
+   "color": "#8fe9c4"
+  },
+  {
+   "id": "neuro",
+   "name": "Neuroscience",
+   "color": "#f4a7a0"
+  },
+  {
+   "id": "cogsci",
+   "name": "Cognitive Science",
+   "color": "#9fc9e8"
+  },
+  {
+   "id": "mind",
+   "name": "Philosophy of Mind",
+   "color": "#cfa4f0"
+  },
+  {
+   "id": "memory",
+   "name": "Memory and Identity",
+   "color": "#8fb3f5"
+  },
+  {
+   "id": "machine",
+   "name": "Machine Consciousness",
+   "color": "#bfe58c"
+  },
+  {
+   "id": "ethics",
+   "name": "AI Ethics and Society",
+   "color": "#e8c9a0"
+  }
+ ],
+ "concepts": [
+  {
+   "id": "consciousness",
+   "name": "Consciousness",
+   "atlas": "#dossier-consciousness"
+  },
+  {
+   "id": "ai",
+   "name": "Artificial Intelligence",
+   "atlas": "#dossier-ai"
+  },
+  {
+   "id": "neuroscience",
+   "name": "Neuroscience",
+   "atlas": "#dossier-neuroscience"
+  },
+  {
+   "id": "attention",
+   "name": "Attention",
+   "atlas": "#dossier-attention"
+  },
+  {
+   "id": "emergence",
+   "name": "Emergence",
+   "atlas": "#dossier-emergence"
+  },
+  {
+   "id": "intelligence",
+   "name": "Intelligence",
+   "atlas": "#dossier-intelligence"
+  },
+  {
+   "id": "computing",
+   "name": "Computing History",
+   "atlas": "#dossier-computing"
+  },
+  {
+   "id": "understanding",
+   "name": "Meaning & Understanding",
+   "atlas": "#dossier-understanding"
+  },
+  {
+   "id": "self",
+   "name": "Self & Selfhood",
+   "atlas": "#dossier-self"
+  },
+  {
+   "id": "method",
+   "name": "Evidence & Method",
+   "atlas": "#dossier-method"
+  },
+  {
+   "id": "mind",
+   "name": "Philosophy of Mind",
+   "atlas": "#dossier-mind"
+  },
+  {
+   "id": "perception",
+   "name": "Perception",
+   "atlas": "#dossier-perception"
+  },
+  {
+   "id": "cognition",
+   "name": "Cognition",
+   "atlas": "#dossier-cognition"
+  },
+  {
+   "id": "language",
+   "name": "Language",
+   "atlas": "#dossier-language"
+  },
+  {
+   "id": "learning",
+   "name": "Machine Learning",
+   "atlas": "#dossier-learning"
+  },
+  {
+   "id": "memory",
+   "name": "Memory",
+   "atlas": "#dossier-memory"
+  },
+  {
+   "id": "identity",
+   "name": "Identity",
+   "atlas": "#dossier-identity"
+  },
+  {
+   "id": "ethics",
+   "name": "Ethics & Society",
+   "atlas": "#dossier-ethics"
+  }
+ ],
+ "note": "Disciplines and concepts are preliminary labels assigned from titles and metadata. Keyword similarity is not evidence of a scientific relationship."
+}
