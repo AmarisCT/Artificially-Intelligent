@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - "scripts/build_published.py"
+      - "scripts/build_research_index.py"
       - ".github/workflows/refresh-feed.yml"
   schedule:
     - cron: "17 */6 * * *"
@@ -29,11 +30,15 @@ jobs:
         run: python3 scripts/build_feed.py
       - name: Generate published article pages and sitemaps
         run: python3 scripts/build_published.py
+      - name: Rebuild shared research index (search and Inquiry Engine)
+        run: |
+          python3 scripts/build_research_index.py . --atlas scripts/atlas_dump.json
+          cp scripts/pathway-rules.src.json inquiry-engine/data/pathway-rules.json
       - name: Commit updated feed and research pages
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add feed.xml sitemap.xml sitemap.txt research/published/
+          git add feed.xml sitemap.xml sitemap.txt research/published/ inquiry-engine/data/
           if ! git diff --cached --quiet; then
             git commit -m "Refresh published research pages, sitemaps, and RSS feed"
             git push

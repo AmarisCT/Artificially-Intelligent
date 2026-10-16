@@ -1,0 +1,40 @@
+{
+  "note": "Explainable rules. The engine applies these in order; nothing here is generated or hidden. A step appears only when the index holds real material for it.",
+  "features": {
+    "lexicon": false,
+    "dialogues": false,
+    "thinkers": false,
+    "observatory": true,
+    "theoryChamber": true,
+    "archive": true,
+    "atlas": true,
+    "museum": true
+  },
+  "limits": {"concepts": 6, "questions": 3, "theories": 4, "sources": 8, "articles": 3, "rooms": 2, "branches": 5, "expand": 8, "observatoryPapers": 4},
+  "thresholds": {"closestQuestionTitleSimilarity": 0.34, "minQuestionScore": 3},
+  "defaultOrder": ["understand", "define", "theories", "evidence", "compare", "unknown", "continue"],
+  "reorder": [
+    {"id": "evidence-first", "when": {"queryHasAny": ["evidence", "measure", "measuring", "measurement", "test", "detect", "indicator", "assess"]}, "move": "evidence", "before": "theories",
+     "why": "Your question asks how something would be shown or tested, so the evidence step comes before the theories."},
+    {"id": "ethics-lead", "when": {"primaryCategory": ["ethics"]}, "move": "unknown", "before": "theories",
+     "why": "The closest Archive question is in ethics and society, where the open problems matter more than competing neuroscience theories."},
+    {"id": "memory-lead", "when": {"primaryCategory": ["memory"]}, "move": "continue", "before": "evidence",
+     "why": "The closest Archive question is about memory and digital identity, where the Museum and essays give more context than the paper record."}
+  ],
+  "stepText": {
+    "understand": {"title": "Understand the question", "objective": "Say what is being asked and the ways the question can be read."},
+    "define": {"title": "Define the concepts", "objective": "Look at how the site describes the main terms in the question."},
+    "theories": {"title": "Examine the theories", "objective": "See which theoretical frameworks on this site address the question."},
+    "evidence": {"title": "Investigate the evidence", "objective": "See the publications the site holds on this question, grouped by what kind of work they are."},
+    "compare": {"title": "Compare perspectives", "objective": "See where researchers disagree, as recorded on this site."},
+    "unknown": {"title": "Explore what remains unknown", "objective": "See what the Unanswered Archive lists as open."},
+    "continue": {"title": "Continue the investigation", "objective": "Further reading and related questions drawn from the site."}
+  },
+  "evidenceGroups": [
+    {"id": "empirical", "label": "Empirical findings", "types": ["empirical"]},
+    {"id": "philosophical", "label": "Philosophical arguments", "types": ["philosophical", "critical"]},
+    {"id": "theoretical", "label": "Theoretical proposals and foundations", "types": ["proposal", "foundational"]},
+    {"id": "review", "label": "Reviews and comparisons", "types": ["review", "comparative", "secondary"]},
+    {"id": "unclassified", "label": "Not yet classified by evidence type (Observatory records)", "types": [null]}
+  ]
+}

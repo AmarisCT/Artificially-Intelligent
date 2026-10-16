@@ -1,0 +1,73 @@
+{
+ "items": [
+  {
+   "id": "intelligence-consciousness",
+   "a": "intelligence",
+   "b": "consciousness",
+   "title": "Intelligence vs. Consciousness",
+   "differ": "Intelligence is about what a system can do, such as solving problems or adapting. Consciousness is about whether there is experience. A description of performance does not say anything about experience.",
+   "overlap": "Some theories link flexible behaviour to the mechanisms they say produce consciousness, and some AI assessments draw on those theories.",
+   "debated": "Whether intelligent behaviour needs, or indicates, consciousness.",
+   "src": [
+    "dehaene17",
+    "butlin23",
+    "neisser96"
+   ]
+  },
+  {
+   "id": "sentience-intelligence",
+   "a": "sentience",
+   "b": "intelligence",
+   "title": "Sentience vs. Intelligence",
+   "differ": "Sentience concerns the capacity to feel. Intelligence concerns problem-solving ability. Neither is a measure of the other.",
+   "overlap": "Both appear in discussion of which systems deserve moral consideration.",
+   "debated": "How either bears on moral status.",
+   "src": [
+    "sep-animal",
+    "neisser96"
+   ]
+  },
+  {
+   "id": "awareness-attention",
+   "a": "awareness",
+   "b": null,
+   "bname": "Attention (no entry yet)",
+   "title": "Awareness vs. Attention",
+   "differ": "Attention selects information for processing. Awareness concerns whether it is available to the person. Koch and Tsuchiya argue that they are distinct brain processes.",
+   "overlap": "They usually occur together in everyday experience.",
+   "debated": "How completely they dissociate.",
+   "src": [
+    "koch07"
+   ]
+  },
+  {
+   "id": "memory-storage",
+   "a": "memory",
+   "b": null,
+   "bname": "Storage (no entry yet)",
+   "title": "Memory vs. Storage",
+   "differ": "Storage keeps an exact copy. Human remembering reconstructs the past and can be altered by later information.",
+   "overlap": "Both involve retaining information over time.",
+   "debated": "Whether computer memory systems reproduce the functions of human remembering.",
+   "src": [
+    "loftus05",
+    "sep-memory"
+   ]
+  },
+  {
+   "id": "syntax-semantics",
+   "a": "understanding",
+   "b": "meaning",
+   "bname": null,
+   "title": "Syntax vs. Semantics",
+   "differ": "Syntax concerns the form of symbols and the rules for combining them. Semantics concerns what they mean. Searle argues that rules on symbols are not enough for meaning, and Bender and Koller argue that form alone cannot supply it.",
+   "overlap": "Language use involves both, which is why they are easy to run together.",
+   "debated": "Whether meaning can emerge from form at scale. The entries for Understanding and Meaning discuss this.",
+   "src": [
+    "searle80",
+    "bender20",
+    "harnad90"
+   ]
+  }
+ ]
+}

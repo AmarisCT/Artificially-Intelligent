@@ -1,0 +1,408 @@
+{
+ "consciousness": [
+  {
+   "discipline": "philosophy",
+   "text": "Philosophers separate consciousness of a whole creature from consciousness of a particular mental state, and separate the way an experience feels (phenomenal) from a state's availability for use in thought and action (access). Nagel's phrase, that there is something it is like to be a creature, is a common test for the phenomenal sense.",
+   "sources": [
+    "sep-consciousness",
+    "nagel74",
+    "block95"
+   ],
+   "measured": "Studied through argument, thought experiments and analysis of cases, not by measurement.",
+   "assumes": "That the phenomenal and access senses can come apart, which some researchers deny.",
+   "contested": "Whether phenomenal consciousness exists as a separate thing from access, and how it relates to physical processes."
+  },
+  {
+   "discipline": "neuroscience",
+   "text": "Neuroscientists look for neural processes that accompany conscious experience and compare conscious with unconscious processing. Several competing theories, including workspace, information-integration and recurrent-processing accounts, give different answers about what matters.",
+   "sources": [
+    "seth22",
+    "mashour20",
+    "tononi16",
+    "lamme06"
+   ],
+   "measured": "Contrasts between trials where a stimulus is reported and where it is not, with recordings of brain activity.",
+   "assumes": "That reports, or other markers, are a usable guide to what is experienced.",
+   "contested": "Which theory is correct, and what would count as evidence that decides between them."
+  },
+  {
+   "discipline": "cogsci",
+   "text": "Cognitive scientists ask how consciousness relates to attention, representation and information processing. Koch and Tsuchiya argue that attention and consciousness are separable brain processes.",
+   "sources": [
+    "koch07",
+    "dehaene17"
+   ],
+   "measured": "Behavioural experiments on attention, awareness and report.",
+   "assumes": "That cognitive functions can be studied apart from how they feel.",
+   "contested": "How closely attention and awareness are linked."
+  },
+  {
+   "discipline": "ai",
+   "text": "In AI research the question is whether consciousness-related ideas apply to artificial systems at all. One approach derives indicator properties from scientific theories and asks whether a system has them. Dehaene, Lau and Kouider discuss which functional aspects might in principle be built into a machine.",
+   "sources": [
+    "butlin23",
+    "dehaene17",
+    "chalmers23"
+   ],
+   "measured": "Assessing a system's architecture and behaviour against properties drawn from a chosen theory. The results depend on that theory.",
+   "assumes": "That a theory of human consciousness can be applied to machines, which some theories reject.",
+   "contested": "Whether any such assessment could show that a machine has experience."
+  }
+ ],
+ "intelligence": [
+  {
+   "discipline": "psychology",
+   "text": "Psychologists study intelligence through tests of mental abilities. Spearman proposed a general factor behind performance across tasks, and later reports describe how the concept is measured and where it stays unsettled.",
+   "sources": [
+    "spearman04",
+    "neisser96",
+    "gottfredson97"
+   ],
+   "measured": "Standardised tests, with statistical analysis of how performance on different tasks is related.",
+   "assumes": "That test performance reflects a stable capacity that can be compared between people.",
+   "contested": "Whether there is one general ability or several, and what the tests leave out."
+  },
+  {
+   "discipline": "cogsci",
+   "text": "Cognitive science treats intelligence as a property of systems that represent and compute. It is one of the fields the discipline draws on.",
+   "sources": [
+    "sep-cogsci"
+   ],
+   "measured": "Models of cognitive processes tested against behaviour.",
+   "assumes": "That thinking can be explained by representations and procedures acting on them.",
+   "contested": "Whether that framework is complete."
+  },
+  {
+   "discipline": "ai",
+   "text": "AI research defines intelligence by what a system can do. Turing replaced the question whether machines think with a behavioural game, and Legg and Hutter give a formal definition of machine intelligence in terms of an agent's ability to achieve goals across environments.",
+   "sources": [
+    "turing50",
+    "legg07"
+   ],
+   "measured": "Performance on tasks and benchmarks, or a formal measure over environments.",
+   "assumes": "That good performance is what matters, whatever produces it.",
+   "contested": "Whether task success counts as intelligence, and whether it needs understanding."
+  },
+  {
+   "discipline": "philosophy",
+   "text": "Philosophers ask whether intelligent behaviour is enough for understanding. Searle argues that running a program is not sufficient, which separates behaving intelligently from understanding.",
+   "sources": [
+    "searle80",
+    "sep-chinese-room"
+   ],
+   "measured": "Argument rather than measurement.",
+   "assumes": "That behaviour and understanding can be pulled apart.",
+   "contested": "Whether Searle's argument works. Several families of replies are catalogued in the Stanford entry."
+  }
+ ],
+ "awareness": [
+  {
+   "discipline": "philosophy",
+   "text": "Awareness appears among the senses of consciousness: a mental state is conscious when its owner is aware of it. Some authors use the two words interchangeably, others keep them apart.",
+   "sources": [
+    "sep-consciousness"
+   ],
+   "measured": null,
+   "assumes": "That being aware of a state is part of what makes it conscious, which some reject.",
+   "contested": "Whether awareness is enough for consciousness."
+  },
+  {
+   "discipline": "neuroscience",
+   "text": "Researchers separate awareness from attention. Koch and Tsuchiya review evidence that the two can come apart.",
+   "sources": [
+    "koch07",
+    "lamme06"
+   ],
+   "measured": "Experiments that vary attention and awareness separately.",
+   "assumes": "That the two can be manipulated independently.",
+   "contested": "How far they dissociate."
+  },
+  {
+   "discipline": "cogsci",
+   "text": "The attention schema theory treats awareness as the brain's model of its own attention.",
+   "sources": [
+    "graziano15"
+   ],
+   "measured": null,
+   "assumes": "That awareness is a kind of internal model.",
+   "contested": "Whether a model of attention accounts for experience."
+  },
+  {
+   "discipline": "ai",
+   "text": "Dehaene, Lau and Kouider describe global availability of information and self-monitoring as functional aspects that could in principle be built into machines. Whether this amounts to awareness in the experiential sense is a separate question.",
+   "sources": [
+    "dehaene17"
+   ],
+   "measured": null,
+   "assumes": null,
+   "contested": "Whether functional availability is awareness."
+  }
+ ],
+ "cognition": [
+  {
+   "discipline": "cogsci",
+   "text": "Cognitive science, in the account given by the Stanford Encyclopedia, studies minds and intelligence as interdisciplinary work, and its central hypothesis is that thinking is understood through mental representations and the computational procedures that act on them.",
+   "sources": [
+    "sep-cogsci"
+   ],
+   "measured": null,
+   "assumes": "That thinking involves representations and computation.",
+   "contested": "Whether that picture is accurate. The entry reviews critiques."
+  },
+  {
+   "discipline": "psychology",
+   "text": "The 'cognitive revolution' of the mid twentieth century turned psychology toward internal mental processes. Miller gives a historical account.",
+   "sources": [
+    "miller03"
+   ],
+   "measured": "Behavioural experiments on memory, attention, language and problem solving.",
+   "assumes": null,
+   "contested": null
+  },
+  {
+   "discipline": "neuroscience",
+   "text": "Predictive-processing accounts treat cognition as the brain predicting its inputs and correcting errors. Clark presents the framework and what it might mean for cognitive science.",
+   "sources": [
+    "clark13"
+   ],
+   "measured": null,
+   "assumes": null,
+   "contested": "How much of cognition the framework explains."
+  }
+ ],
+ "subjective-experience": [
+  {
+   "discipline": "philosophy",
+   "text": "Nagel argues that a creature has conscious experience if there is something it is like to be that creature. The Stanford entry on qualia describes the introspectively accessible qualities of mental states and the dispute over whether they are intrinsic, representational or relational.",
+   "sources": [
+    "nagel74",
+    "sep-qualia"
+   ],
+   "measured": null,
+   "assumes": "That there is a first-person fact that third-person description may miss.",
+   "contested": "Whether subjective character is a further feature of the world or can be explained physically."
+  },
+  {
+   "discipline": "neuroscience",
+   "text": "Because experience is private, research relies on what people report and on contrasts between reported and unreported processing.",
+   "sources": [
+    "seth22"
+   ],
+   "measured": "Report-based experiments with neural recording.",
+   "assumes": null,
+   "contested": "Whether report is a reliable guide."
+  },
+  {
+   "discipline": "ai",
+   "text": "The question for artificial systems is whether any could have subjective experience. Butlin and colleagues assess systems against indicator properties, and Chalmers discusses language models in particular. Both are preprints.",
+   "sources": [
+    "butlin23",
+    "chalmers23"
+   ],
+   "measured": null,
+   "assumes": null,
+   "contested": "Whether indicators can show experience."
+  }
+ ],
+ "understanding": [
+  {
+   "discipline": "philosophy",
+   "text": "In epistemology, understanding is contrasted with knowledge. It typically involves a structured grasp of how pieces of information connect, and some authors argue it is valuable in ways knowledge is not. In the philosophy of mind, Searle argues that running a program does not by itself produce understanding.",
+   "sources": [
+    "sep-understanding",
+    "searle80",
+    "sep-chinese-room"
+   ],
+   "measured": "Argument and analysis of cases.",
+   "assumes": "That understanding is more than correct output.",
+   "contested": "Whether understanding needs consciousness, or can be functional."
+  },
+  {
+   "discipline": "ai",
+   "text": "In AI and language research, understanding is judged through language use, task performance and generalisation. Bender and Koller argue that a system trained only on linguistic form has no basis to learn meaning. Turing proposed a behavioural test.",
+   "sources": [
+    "bender20",
+    "turing50"
+   ],
+   "measured": "Task performance, tests of generalisation and probing of internal representations.",
+   "assumes": "That evidence of the right behaviour is evidence of the underlying capacity.",
+   "contested": "Whether behavioural success is sufficient. This is the central dispute."
+  },
+  {
+   "discipline": "cogsci",
+   "text": "Cognitive science asks what representations a system would need to grasp meaning. Harnad's symbol grounding problem asks how symbols can get their meaning from something other than other symbols.",
+   "sources": [
+    "harnad90",
+    "sep-cogsci"
+   ],
+   "measured": null,
+   "assumes": null,
+   "contested": "Whether grounding in the world is necessary."
+  }
+ ],
+ "memory": [
+  {
+   "discipline": "psychology",
+   "text": "Tulving distinguishes episodic memory, remembering particular events, from other kinds. Loftus's long programme of research shows that memories can be altered by later information, so remembering is not replaying a record.",
+   "sources": [
+    "tulving02",
+    "loftus05"
+   ],
+   "measured": "Recall and recognition experiments, including studies of misleading information.",
+   "assumes": "That memory types can be told apart.",
+   "contested": "How the types relate."
+  },
+  {
+   "discipline": "philosophy",
+   "text": "Philosophers ask what makes remembering different from imagining and whether a causal connection to the original experience is required. Constructive accounts challenge a simple causal view.",
+   "sources": [
+    "sep-memory"
+   ],
+   "measured": "Argument and analysis of cases.",
+   "assumes": null,
+   "contested": "Whether the causal theory survives constructive accounts."
+  },
+  {
+   "discipline": "ai",
+   "text": "In computing, memory commonly means stored data. Whether artificial memory systems reproduce important functions of human remembering is an open question in the Unanswered Archive.",
+   "sources": [],
+   "measured": null,
+   "assumes": null,
+   "contested": "Whether storage and retrieval is remembering. No source is attached to this sense yet."
+  }
+ ],
+ "identity": [
+  {
+   "discipline": "philosophy",
+   "text": "The Stanford entry lists the main questions: what makes someone a particular person, what persistence through time involves, and what we are. Psychological-continuity views say we persist through mental relations such as memory. Animalist and bodily views say we persist through biological continuity. Each faces objections the entry describes.",
+   "sources": [
+    "sep-identity"
+   ],
+   "measured": "Argument and thought experiments about cases such as duplication.",
+   "assumes": "That intuitions about cases are evidence.",
+   "contested": "Which view is right, and whether the question has a determinate answer."
+  },
+  {
+   "discipline": "psychology",
+   "text": "Memory is central to psychological-continuity views, so findings that memories are reconstructive bear on them.",
+   "sources": [
+    "sep-identity",
+    "loftus05"
+   ],
+   "measured": null,
+   "assumes": null,
+   "contested": "How reconstruction affects continuity."
+  }
+ ],
+ "agency": [
+  {
+   "discipline": "philosophy",
+   "text": "An agent is a being able to act, and agency is exercising that ability. On the standard view, actions are explained by the agent's mental states causing behaviour. Rival conceptions exist, and empirical work on the sense of agency raises questions about conscious intentions.",
+   "sources": [
+    "sep-agency"
+   ],
+   "measured": null,
+   "assumes": "That intentional states play a causal role.",
+   "contested": "Whether conscious reasons drive action as the standard view says."
+  },
+  {
+   "discipline": "ai",
+   "text": "In AI the word agent often means a system that acts in an environment to reach goals. Legg and Hutter's definition of machine intelligence is built on agents in environments. This usage describes behaviour and does not say that the system has intentions.",
+   "sources": [
+    "legg07"
+   ],
+   "measured": null,
+   "assumes": null,
+   "contested": "Whether this sense is the same as philosophical agency."
+  }
+ ],
+ "artificial-intelligence": [
+  {
+   "discipline": "ai",
+   "text": "The Stanford entry describes AI as the field seeking machines that appear animal-like and, for many researchers, person-like. It surveys logic-based, probabilistic and neural approaches. Turing's 1950 paper is an early landmark, and Legg and Hutter give a formal definition of machine intelligence.",
+   "sources": [
+    "sep-ai",
+    "turing50",
+    "legg07"
+   ],
+   "measured": "Benchmarks and task performance.",
+   "assumes": null,
+   "contested": "What should count as intelligence in a machine."
+  },
+  {
+   "discipline": "philosophy",
+   "text": "Philosophers ask whether such systems could think or understand. Searle's argument targets the claim that running the right program is enough.",
+   "sources": [
+    "searle80",
+    "sep-chinese-room"
+   ],
+   "measured": null,
+   "assumes": null,
+   "contested": "Whether computation alone can yield mind."
+  }
+ ],
+ "sentience": [
+  {
+   "discipline": "philosophy",
+   "text": "The Stanford entry on consciousness lists basic sentience among the senses in which a creature can be conscious.",
+   "sources": [
+    "sep-consciousness"
+   ],
+   "measured": null,
+   "assumes": null,
+   "contested": "Whether sentience needs more than basic responsiveness."
+  },
+  {
+   "discipline": "neuroscience",
+   "text": "The Stanford entry on animal consciousness describes research on which animals are conscious and on proposed behavioural and neural markers. Methods and theories are disputed.",
+   "sources": [
+    "sep-animal"
+   ],
+   "measured": "Behavioural and neural markers, interpreted through a theory.",
+   "assumes": null,
+   "contested": "Which markers are reliable."
+  },
+  {
+   "discipline": "ai",
+   "text": "Butlin and colleagues assess artificial systems against theory-derived indicators of consciousness. They do not establish sentience, and the preprint should be read as one framework.",
+   "sources": [
+    "butlin23"
+   ],
+   "measured": null,
+   "assumes": null,
+   "contested": "Whether indicators can bear on sentience."
+  }
+ ],
+ "meaning": [
+  {
+   "discipline": "philosophy",
+   "text": "The Stanford entry separates semantic theories, which assign meanings to expressions, from metasemantic theories, which explain what makes expressions have those meanings. It surveys classical and alternative approaches.",
+   "sources": [
+    "sep-meaning"
+   ],
+   "measured": null,
+   "assumes": "That meaning can be described systematically.",
+   "contested": "Which approach is right, and whether meaning is fixed by use, causes or conventions."
+  },
+  {
+   "discipline": "cogsci",
+   "text": "Harnad's symbol grounding problem asks how a symbol system could get meaning from anything but other symbols.",
+   "sources": [
+    "harnad90"
+   ],
+   "measured": null,
+   "assumes": null,
+   "contested": "Whether grounding in sensorimotor contact is required."
+  },
+  {
+   "discipline": "ai",
+   "text": "Bender and Koller argue that meaning relates linguistic form to something outside language, and that a model trained only on form has no direct access to it.",
+   "sources": [
+    "bender20"
+   ],
+   "measured": null,
+   "assumes": null,
+   "contested": "Whether large-scale training can give access to meaning in some other way."
+  }
+ ]
+}

@@ -13,7 +13,7 @@ const enc = q => btoa(unescape(encodeURIComponent(q))).replace(/\+/g, "-").repla
 const dec = s => { try { s = s.replace(/-/g, "+").replace(/_/g, "/"); while (s.length % 4) s += "="; return decodeURIComponent(escape(atob(s))); } catch (e) { return ""; } };
 const EXAMPLES = ["Consciousness", "Artificial Intelligence", "Global Neuronal Workspace Theory", "Alan Turing", "Memory and Identity", "Can machines understand language?", "Machine Consciousness", "The Hard Problem of Consciousness", "Predictive Processing"];
 const DESKKEY = "ai_desk_v1";
-const INQ_URL = LINKS.inquiry || null; // set only when the Inquiry Engine is published; otherwise no link is shown
+const INQ_URL = LINKS.inquiry || abs(ROOT + "inquiry-engine/");
 
 let S, META, ST = { q: "", f: { types: new Set(), subjects: new Set(), status: new Set(), sourceTypes: new Set(), from: "", to: "" }, sort: "relevance", view: "context", limit: 10, sel: null, adv: { phrase: "", author: "", concept: "", open: false }, exact: false, filtersOpen: false };
 
@@ -109,7 +109,7 @@ function statusStrip(c, inactive) {
   const L = { article: "essays", concept: "concepts", theory: "theories", comparison: "comparisons", question: "open questions", source: "publications", museum: "museum rooms" };
   return h("div", { class: "strip" }, h("b", null, "What is searchable: "), "records that are published on this site today.",
     h("ul", { class: "counts" }, Object.keys(L).filter(t => c[t]).map(t => h("li", null, h("b", null, c[t]), " " + L[t]))),
-    h("p", { class: "inact" }, "Index built " + META.generated + ". New essays appear after the next rebuild of the index." + (inactive.length ? " Not searchable yet, because they are not published: " + inactive.join(", ") + "." : "")),
+    h("p", { class: "inact" }, "Index built " + META.generated + ". New essays appear after the next rebuild of the index." + (inactive.length ? " Not searchable yet: " + inactive.join(", ") + "." : "")),
     h("p", { class: "inact" }, "Searches run in your browser. Nothing you type is sent anywhere or stored."));
 }
 
@@ -237,7 +237,7 @@ function route() {
 }
 async function load() {
   if (window.__INQ) return window.__INQ;
-  const g = f => fetch("data/" + f).then(r => { if (!r.ok) throw new Error(f); return r.json(); });
+  const g = f => fetch("../inquiry-engine/data/" + f).then(r => { if (!r.ok) throw new Error(f); return r.json(); });
   const [index, vocab, rules] = await Promise.all([g("research-index.json"), g("concept-relations.json"), g("pathway-rules.json")]);
   return { index, vocab, rules };
 }

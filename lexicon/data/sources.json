@@ -1,0 +1,529 @@
+{
+ "meta": {
+  "note": "Every source here was checked on 2026-10-15. DOIs were checked against Crossref or DataCite, and encyclopedia entries were retrieved. Reference-work entries were read as overviews only."
+ },
+ "items": [
+  {
+   "id": "bender20",
+   "type": "proceedings-article",
+   "authors": [
+    "Emily M. Bender",
+    "Alexander Koller"
+   ],
+   "title": "Climbing towards NLU: On Meaning, Form, and Understanding in the Age of Data",
+   "venue": "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics",
+   "year": "2020",
+   "doi": "10.18653/v1/2020.acl-main.463",
+   "url": "https://doi.org/10.18653/v1/2020.acl-main.463",
+   "verification": "Checked against Crossref on 2026-10-15"
+  },
+  {
+   "id": "binet04",
+   "type": "journal-article",
+   "authors": [
+    "Alfred Binet",
+    "Th. Simon"
+   ],
+   "title": "Méthodes nouvelles pour le diagnostic du niveau intellectuel des anormaux",
+   "venue": "L'année psychologique",
+   "year": "1904",
+   "doi": "10.3406/psy.1904.3675",
+   "url": "https://doi.org/10.3406/psy.1904.3675",
+   "verification": "Checked against Crossref on 2026-10-15"
+  },
+  {
+   "id": "block95",
+   "type": "journal-article",
+   "authors": [
+    "Ned Block"
+   ],
+   "title": "On a confusion about a function of consciousness",
+   "venue": "Behavioral and Brain Sciences",
+   "year": "1995",
+   "doi": "10.1017/S0140525X00038188",
+   "url": "https://doi.org/10.1017/S0140525X00038188",
+   "verification": "Checked against Crossref on 2026-10-15"
+  },
+  {
+   "id": "butlin23",
+   "type": "preprint",
+   "authors": [
+    "Patrick Butlin",
+    "Robert Long",
+    "Eric Elmoznino",
+    "Yoshua Bengio",
+    "Jonathan Birch",
+    "Axel Constant",
+    "George Deane",
+    "Stephen M. Fleming",
+    "Chris Frith",
+    "Xu Ji",
+    "Ryota Kanai",
+    "Colin Klein",
+    "Grace Lindsay",
+    "Matthias Michel",
+    "Liad Mudrik",
+    "Megan A. K. Peters",
+    "Eric Schwitzgebel",
+    "Jonathan Simon",
+    "Rufin VanRullen"
+   ],
+   "title": "Consciousness in Artificial Intelligence: Insights from the Science of Consciousness",
+   "venue": "arXiv",
+   "year": "2023",
+   "doi": "10.48550/arXiv.2308.08708",
+   "url": "https://doi.org/10.48550/arXiv.2308.08708",
+   "verification": "Checked against DataCite on 2026-10-15. Preprint, not peer reviewed."
+  },
+  {
+   "id": "chalmers23",
+   "type": "preprint",
+   "authors": [
+    "David J. Chalmers"
+   ],
+   "title": "Could a Large Language Model be Conscious?",
+   "venue": "arXiv",
+   "year": "2023",
+   "doi": "10.48550/arXiv.2303.07103",
+   "url": "https://doi.org/10.48550/arXiv.2303.07103",
+   "verification": "Checked against DataCite on 2026-10-15. Preprint, not peer reviewed."
+  },
+  {
+   "id": "clark13",
+   "type": "journal-article",
+   "authors": [
+    "Andy Clark"
+   ],
+   "title": "Whatever next? Predictive brains, situated agents, and the future of cognitive science",
+   "venue": "Behavioral and Brain Sciences",
+   "year": "2013",
+   "doi": "10.1017/S0140525X12000477",
+   "url": "https://doi.org/10.1017/S0140525X12000477",
+   "verification": "Checked against Crossref on 2026-10-15"
+  },
+  {
+   "id": "dehaene17",
+   "type": "journal-article",
+   "authors": [
+    "Stanislas Dehaene",
+    "Hakwan Lau",
+    "Sid Kouider"
+   ],
+   "title": "What is consciousness, and could machines have it?",
+   "venue": "Science",
+   "year": "2017",
+   "doi": "10.1126/science.aan8871",
+   "url": "https://doi.org/10.1126/science.aan8871",
+   "verification": "Checked against Crossref on 2026-10-15"
+  },
+  {
+   "id": "gottfredson97",
+   "type": "journal-article",
+   "authors": [
+    "Linda S. Gottfredson"
+   ],
+   "title": "Mainstream science on intelligence: An editorial with 52 signatories, history, and bibliography",
+   "venue": "Intelligence",
+   "year": "1997",
+   "doi": "10.1016/S0160-2896(97)90011-8",
+   "url": "https://doi.org/10.1016/S0160-2896(97)90011-8",
+   "verification": "Checked against Crossref on 2026-10-15"
+  },
+  {
+   "id": "graziano15",
+   "type": "journal-article",
+   "authors": [
+    "Michael S. A. Graziano",
+    "Taylor W. Webb"
+   ],
+   "title": "The attention schema theory: a mechanistic account of subjective awareness",
+   "venue": "Frontiers in Psychology",
+   "year": "2015",
+   "doi": "10.3389/fpsyg.2015.00500",
+   "url": "https://doi.org/10.3389/fpsyg.2015.00500",
+   "verification": "Checked against Crossref on 2026-10-15"
+  },
+  {
+   "id": "harnad90",
+   "type": "journal-article",
+   "authors": [
+    "Stevan Harnad"
+   ],
+   "title": "The symbol grounding problem",
+   "venue": "Physica D: Nonlinear Phenomena",
+   "year": "1990",
+   "doi": "10.1016/0167-2789(90)90087-6",
+   "url": "https://doi.org/10.1016/0167-2789(90)90087-6",
+   "verification": "Checked against Crossref on 2026-10-15"
+  },
+  {
+   "id": "koch07",
+   "type": "journal-article",
+   "authors": [
+    "Christof Koch",
+    "Naotsugu Tsuchiya"
+   ],
+   "title": "Attention and consciousness: two distinct brain processes",
+   "venue": "Trends in Cognitive Sciences",
+   "year": "2007",
+   "doi": "10.1016/j.tics.2006.10.012",
+   "url": "https://doi.org/10.1016/j.tics.2006.10.012",
+   "verification": "Checked against Crossref on 2026-10-15"
+  },
+  {
+   "id": "lamme06",
+   "type": "journal-article",
+   "authors": [
+    "Victor A.F. Lamme"
+   ],
+   "title": "Towards a true neural stance on consciousness",
+   "venue": "Trends in Cognitive Sciences",
+   "year": "2006",
+   "doi": "10.1016/j.tics.2006.09.001",
+   "url": "https://doi.org/10.1016/j.tics.2006.09.001",
+   "verification": "Checked against Crossref on 2026-10-15"
+  },
+  {
+   "id": "legg07",
+   "type": "journal-article",
+   "authors": [
+    "Shane Legg",
+    "Marcus Hutter"
+   ],
+   "title": "Universal Intelligence: A Definition of Machine Intelligence",
+   "venue": "Minds and Machines",
+   "year": "2007",
+   "doi": "10.1007/s11023-007-9079-x",
+   "url": "https://doi.org/10.1007/s11023-007-9079-x",
+   "verification": "Checked against Crossref on 2026-10-15"
+  },
+  {
+   "id": "loftus05",
+   "type": "journal-article",
+   "authors": [
+    "Elizabeth F. Loftus"
+   ],
+   "title": "Planting misinformation in the human mind: A 30-year investigation of the malleability of memory",
+   "venue": "Learning & Memory",
+   "year": "2005",
+   "doi": "10.1101/lm.94705",
+   "url": "https://doi.org/10.1101/lm.94705",
+   "verification": "Checked against Crossref on 2026-10-15"
+  },
+  {
+   "id": "mashour20",
+   "type": "journal-article",
+   "authors": [
+    "George A. Mashour",
+    "Pieter Roelfsema",
+    "Jean-Pierre Changeux",
+    "Stanislas Dehaene"
+   ],
+   "title": "Conscious Processing and the Global Neuronal Workspace Hypothesis",
+   "venue": "Neuron",
+   "year": "2020",
+   "doi": "10.1016/j.neuron.2020.01.026",
+   "url": "https://doi.org/10.1016/j.neuron.2020.01.026",
+   "verification": "Checked against Crossref on 2026-10-15"
+  },
+  {
+   "id": "miller03",
+   "type": "journal-article",
+   "authors": [
+    "George A. Miller"
+   ],
+   "title": "The cognitive revolution: a historical perspective",
+   "venue": "Trends in Cognitive Sciences",
+   "year": "2003",
+   "doi": "10.1016/S1364-6613(03)00029-9",
+   "url": "https://doi.org/10.1016/S1364-6613(03)00029-9",
+   "verification": "Checked against Crossref on 2026-10-15"
+  },
+  {
+   "id": "nagel74",
+   "type": "journal-article",
+   "authors": [
+    "Thomas Nagel"
+   ],
+   "title": "What Is It Like to Be a Bat?",
+   "venue": "The Philosophical Review",
+   "year": "1974",
+   "doi": "10.2307/2183914",
+   "url": "https://doi.org/10.2307/2183914",
+   "verification": "Checked against Crossref on 2026-10-15"
+  },
+  {
+   "id": "neisser96",
+   "type": "journal-article",
+   "authors": [
+    "Ulric Neisser",
+    "Gwyneth Boodoo",
+    "Thomas J. Bouchard",
+    "A. Wade Boykin",
+    "Nathan Brody",
+    "Stephen J. Ceci",
+    "Diane F. Halpern",
+    "John C. Loehlin",
+    "Robert Perloff",
+    "Robert J. Sternberg",
+    "Susana Urbina"
+   ],
+   "title": "Intelligence: Knowns and unknowns",
+   "venue": "American Psychologist",
+   "year": "1996",
+   "doi": "10.1037/0003-066X.51.2.77",
+   "url": "https://doi.org/10.1037/0003-066X.51.2.77",
+   "verification": "Checked against Crossref on 2026-10-15"
+  },
+  {
+   "id": "searle80",
+   "type": "journal-article",
+   "authors": [
+    "John R. Searle"
+   ],
+   "title": "Minds, brains, and programs",
+   "venue": "Behavioral and Brain Sciences",
+   "year": "1980",
+   "doi": "10.1017/S0140525X00005756",
+   "url": "https://doi.org/10.1017/S0140525X00005756",
+   "verification": "Checked against Crossref on 2026-10-15"
+  },
+  {
+   "id": "sep-agency",
+   "type": "reference-work",
+   "authors": [
+    "Markus Schlosser"
+   ],
+   "title": "Agency",
+   "venue": "Stanford Encyclopedia of Philosophy",
+   "year": "2015",
+   "doi": null,
+   "url": "https://plato.stanford.edu/entries/agency/",
+   "firstPublished": "August 10, 2015",
+   "revised": "October 28, 2019",
+   "verification": "Entry page retrieved 2026-10-15; title, author and dates read from the page. Only an overview was read, not the whole entry."
+  },
+  {
+   "id": "sep-ai",
+   "type": "reference-work",
+   "authors": [
+    "Naveen Sundar Govindarajulu"
+   ],
+   "title": "Artificial Intelligence",
+   "venue": "Stanford Encyclopedia of Philosophy",
+   "year": "2018",
+   "doi": null,
+   "url": "https://plato.stanford.edu/entries/artificial-intelligence/",
+   "firstPublished": "July 12, 2018",
+   "revised": null,
+   "verification": "Entry page retrieved 2026-10-15; title, author and dates read from the page. Only an overview was read, not the whole entry."
+  },
+  {
+   "id": "sep-animal",
+   "type": "reference-work",
+   "authors": [
+    "Colin Allen",
+    "Jonathan Birch",
+    "Michael Trestman"
+   ],
+   "title": "Animal Consciousness",
+   "venue": "Stanford Encyclopedia of Philosophy",
+   "year": "1995",
+   "doi": null,
+   "url": "https://plato.stanford.edu/entries/consciousness-animal/",
+   "firstPublished": "December 23, 1995",
+   "revised": "January 13, 2026",
+   "verification": "Entry page retrieved 2026-10-15; title, author and dates read from the page. Only an overview was read, not the whole entry."
+  },
+  {
+   "id": "sep-chinese-room",
+   "type": "reference-work",
+   "authors": [
+    "David Cole"
+   ],
+   "title": "The Chinese Room Argument",
+   "venue": "Stanford Encyclopedia of Philosophy",
+   "year": "2004",
+   "doi": null,
+   "url": "https://plato.stanford.edu/entries/chinese-room/",
+   "firstPublished": "March 19, 2004",
+   "revised": "October 23, 2024",
+   "verification": "Entry page retrieved 2026-10-15; title, author and dates read from the page. Only an overview was read, not the whole entry."
+  },
+  {
+   "id": "sep-cogsci",
+   "type": "reference-work",
+   "authors": [
+    "Paul Thagard"
+   ],
+   "title": "Cognitive Science",
+   "venue": "Stanford Encyclopedia of Philosophy",
+   "year": "1996",
+   "doi": null,
+   "url": "https://plato.stanford.edu/entries/cognitive-science/",
+   "firstPublished": "September 23, 1996",
+   "revised": "January 31, 2023",
+   "verification": "Entry page retrieved 2026-10-15; title, author and dates read from the page. Only an overview was read, not the whole entry."
+  },
+  {
+   "id": "sep-consciousness",
+   "type": "reference-work",
+   "authors": [
+    "Robert Van Gulick"
+   ],
+   "title": "Consciousness",
+   "venue": "Stanford Encyclopedia of Philosophy",
+   "year": "2004",
+   "doi": null,
+   "url": "https://plato.stanford.edu/entries/consciousness/",
+   "firstPublished": "June 18, 2004",
+   "revised": "January 14, 2014",
+   "verification": "Entry page retrieved 2026-10-15; title, author and dates read from the page. Only an overview was read, not the whole entry."
+  },
+  {
+   "id": "sep-identity",
+   "type": "reference-work",
+   "authors": [
+    "Eric T. Olson"
+   ],
+   "title": "Personal Identity",
+   "venue": "Stanford Encyclopedia of Philosophy",
+   "year": "2002",
+   "doi": null,
+   "url": "https://plato.stanford.edu/entries/identity-personal/",
+   "firstPublished": "August 20, 2002",
+   "revised": "June 30, 2023",
+   "verification": "Entry page retrieved 2026-10-15; title, author and dates read from the page. Only an overview was read, not the whole entry."
+  },
+  {
+   "id": "sep-meaning",
+   "type": "reference-work",
+   "authors": [
+    "Jeff Speaks"
+   ],
+   "title": "Theories of Meaning",
+   "venue": "Stanford Encyclopedia of Philosophy",
+   "year": "2010",
+   "doi": null,
+   "url": "https://plato.stanford.edu/entries/meaning/",
+   "firstPublished": "January 26, 2010",
+   "revised": "July 31, 2024",
+   "verification": "Entry page retrieved 2026-10-15; title, author and dates read from the page. Only an overview was read, not the whole entry."
+  },
+  {
+   "id": "sep-memory",
+   "type": "reference-work",
+   "authors": [
+    "John Sutton"
+   ],
+   "title": "Memory",
+   "venue": "Stanford Encyclopedia of Philosophy",
+   "year": "2017",
+   "doi": null,
+   "url": "https://plato.stanford.edu/entries/memory/",
+   "firstPublished": "April 24, 2017",
+   "revised": null,
+   "verification": "Entry page retrieved 2026-10-15; title, author and dates read from the page. Only an overview was read, not the whole entry.",
+   "authorsNote": "The page metadata lists John Sutton. A co-author may also be credited; confirm in review."
+  },
+  {
+   "id": "sep-qualia",
+   "type": "reference-work",
+   "authors": [
+    "Michael Tye"
+   ],
+   "title": "Qualia",
+   "venue": "Stanford Encyclopedia of Philosophy",
+   "year": "1997",
+   "doi": null,
+   "url": "https://plato.stanford.edu/entries/qualia/",
+   "firstPublished": "August 20, 1997",
+   "revised": "September 19, 2025",
+   "verification": "Entry page retrieved 2026-10-15; title, author and dates read from the page. Only an overview was read, not the whole entry."
+  },
+  {
+   "id": "sep-understanding",
+   "type": "reference-work",
+   "authors": [
+    "Stephen Grimm"
+   ],
+   "title": "Understanding",
+   "venue": "Stanford Encyclopedia of Philosophy",
+   "year": "2021",
+   "doi": null,
+   "url": "https://plato.stanford.edu/entries/understanding/",
+   "firstPublished": "May 6, 2021",
+   "revised": null,
+   "verification": "Entry page retrieved 2026-10-15; title, author and dates read from the page. Only an overview was read, not the whole entry."
+  },
+  {
+   "id": "seth22",
+   "type": "journal-article",
+   "authors": [
+    "Anil K. Seth",
+    "Tim Bayne"
+   ],
+   "title": "Theories of consciousness",
+   "venue": "Nature Reviews Neuroscience",
+   "year": "2022",
+   "doi": "10.1038/s41583-022-00587-4",
+   "url": "https://doi.org/10.1038/s41583-022-00587-4",
+   "verification": "Checked against Crossref on 2026-10-15"
+  },
+  {
+   "id": "spearman04",
+   "type": "journal-article",
+   "authors": [
+    "C. Spearman"
+   ],
+   "title": "\"General Intelligence,\" Objectively Determined and Measured",
+   "venue": "The American Journal of Psychology",
+   "year": "1904",
+   "doi": "10.2307/1412107",
+   "url": "https://doi.org/10.2307/1412107",
+   "verification": "Checked against Crossref on 2026-10-15"
+  },
+  {
+   "id": "tononi16",
+   "type": "journal-article",
+   "authors": [
+    "Giulio Tononi",
+    "Melanie Boly",
+    "Marcello Massimini",
+    "Christof Koch"
+   ],
+   "title": "Integrated information theory: from consciousness to its physical substrate",
+   "venue": "Nature Reviews Neuroscience",
+   "year": "2016",
+   "doi": "10.1038/nrn.2016.44",
+   "url": "https://doi.org/10.1038/nrn.2016.44",
+   "verification": "Checked against Crossref on 2026-10-15"
+  },
+  {
+   "id": "tulving02",
+   "type": "journal-article",
+   "authors": [
+    "Endel Tulving"
+   ],
+   "title": "Episodic Memory: From Mind to Brain",
+   "venue": "Annual Review of Psychology",
+   "year": "2002",
+   "doi": "10.1146/annurev.psych.53.100901.135114",
+   "url": "https://doi.org/10.1146/annurev.psych.53.100901.135114",
+   "verification": "Checked against Crossref on 2026-10-15"
+  },
+  {
+   "id": "turing50",
+   "type": "journal-article",
+   "authors": [
+    "A. M. Turing"
+   ],
+   "title": "Computing Machinery and Intelligence",
+   "venue": "Mind",
+   "year": "1950",
+   "doi": "10.1093/mind/LIX.236.433",
+   "url": "https://doi.org/10.1093/mind/LIX.236.433",
+   "verification": "Checked against Crossref on 2026-10-15"
+  }
+ ]
+}

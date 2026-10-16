@@ -1,0 +1,924 @@
+{
+ "meta": {
+  "version": 1,
+  "generated": "2026-10-15",
+  "disciplines": {
+   "philosophy": "Philosophy",
+   "neuroscience": "Neuroscience",
+   "cogsci": "Cognitive science",
+   "psychology": "Psychology",
+   "ai": "Artificial intelligence"
+  },
+  "categories": [
+   "Consciousness and Experience",
+   "Artificial Intelligence",
+   "Cognition and Neuroscience",
+   "Philosophy of Mind",
+   "Memory and Identity",
+   "Language and Meaning"
+  ],
+  "note": "First release: 12 entries. All are Awaiting Research Review."
+ },
+ "items": [
+  {
+   "id": "consciousness",
+   "lexId": "LEXICON 001",
+   "slug": "consciousness",
+   "term": "Consciousness",
+   "alt": [
+    "Phenomenal consciousness (one sense)"
+   ],
+   "abbr": null,
+   "category": "Consciousness and Experience",
+   "disciplines": [
+    "philosophy",
+    "neuroscience",
+    "cogsci",
+    "ai"
+   ],
+   "intro": "A word with several related senses: being awake, being aware of something, and there being something it is like to have an experience. Researchers who ask the hard questions about the mind usually mean the last of these.",
+   "multipleMeanings": true,
+   "comparison": {
+    "overlap": "All four fields use the phenomenal sense as the target of the hard question, even when they study something narrower.",
+    "differ": "Philosophy asks what experience is. Neuroscience asks which processes go with it. AI asks whether the question applies to machines. They are not asking the same question."
+   },
+   "history": [
+    {
+     "period": "1974",
+     "who": "Thomas Nagel",
+     "text": "Offered the 'what it is like' criterion for a creature having conscious experience.",
+     "src": "nagel74"
+    },
+    {
+     "period": "1995",
+     "who": "Ned Block",
+     "text": "Distinguished phenomenal from access consciousness and argued that running them together is a confusion.",
+     "src": "block95"
+    },
+    {
+     "period": "2022",
+     "who": "Anil K. Seth and Tim Bayne",
+     "text": "Reviewed the leading scientific theories side by side.",
+     "src": "seth22"
+    }
+   ],
+   "historyNote": null,
+   "interpretations": [
+    {
+     "name": "Competing scientific theories",
+     "text": "Workspace, information-integration, higher-order, recurrent-processing, attention-schema and predictive-processing accounts disagree about what consciousness requires. They are compared in the Theory Chamber, which keeps each theory's claims attributed to its sources.",
+     "src": [
+      "seth22"
+     ]
+    }
+   ],
+   "misconceptions": [
+    {
+     "text": "Being awake is not the same as having experience. The word covers both, and they can be separated in principle.",
+     "src": [
+      "sep-consciousness"
+     ]
+    },
+    {
+     "text": "Intelligence and consciousness are different concepts. One concerns what a system can do, the other whether there is experience. Whether they are linked remains debated.",
+     "src": [
+      "butlin23",
+      "dehaene17"
+     ]
+    }
+   ],
+   "confused": [
+    "awareness",
+    "intelligence",
+    "sentience"
+   ],
+   "theories": [
+    "gnwt",
+    "iit",
+    "hot",
+    "rpt",
+    "ast",
+    "pp"
+   ],
+   "questions": [
+    "Q001",
+    "Q002",
+    "Q003",
+    "Q004",
+    "Q005",
+    "Q006"
+   ],
+   "atlas": [
+    "consciousness",
+    "emergence",
+    "mind",
+    "neuroscience"
+   ],
+   "references": [
+    "sep-consciousness",
+    "nagel74",
+    "block95",
+    "seth22",
+    "dehaene17",
+    "butlin23"
+   ],
+   "status": "Awaiting Research Review",
+   "statusNote": "Drafted 2026-10-15 as original text with cited sources. Definitions have not been through an editorial review, and sources were checked for existence and bibliographic details, not read in full.",
+   "dateAdded": "2026-10-15",
+   "lastReviewed": null,
+   "revisions": [],
+   "articles": []
+  },
+  {
+   "id": "intelligence",
+   "lexId": "LEXICON 002",
+   "slug": "intelligence",
+   "term": "Intelligence",
+   "alt": [
+    "General intelligence",
+    "Machine intelligence"
+   ],
+   "abbr": null,
+   "category": "Cognition and Neuroscience",
+   "disciplines": [
+    "psychology",
+    "cogsci",
+    "ai",
+    "philosophy"
+   ],
+   "intro": "A capacity to solve problems, learn and adapt. Fields define it differently, so the word does not name one measured thing.",
+   "multipleMeanings": true,
+   "comparison": {
+    "overlap": "Psychology, cognitive science and AI all describe intelligence through performance, which makes their definitions compatible at that level.",
+    "differ": "Psychology measures differences between people. AI asks whether any system can reach a level of performance. Philosophy asks whether performance is enough. These are different questions about the same word."
+   },
+   "history": [
+    {
+     "period": "1904",
+     "who": "Charles Spearman",
+     "text": "Argued that a general factor can be identified and measured from performance across tasks.",
+     "src": "spearman04",
+     "kind": "construct"
+    },
+    {
+     "period": "1904",
+     "who": "Alfred Binet and Théodore Simon",
+     "text": "Published new methods for assessing the intellectual level of children, an early basis for intelligence testing.",
+     "src": "binet04",
+     "kind": "construct"
+    },
+    {
+     "period": "1950",
+     "who": "Alan Turing",
+     "text": "Reframed machine thinking as a question about behaviour in an imitation game.",
+     "src": "turing50",
+     "kind": "construct"
+    },
+    {
+     "period": "1996",
+     "who": "Ulric Neisser and colleagues",
+     "text": "An American Psychological Association task force reviewed what was and was not known about intelligence.",
+     "src": "neisser96",
+     "kind": "construct"
+    },
+    {
+     "period": "1997",
+     "who": "Linda S. Gottfredson",
+     "text": "Published an editorial with 52 signatories that offers a definition of intelligence as a general mental capability.",
+     "src": "gottfredson97",
+     "kind": "construct"
+    },
+    {
+     "period": "2007",
+     "who": "Shane Legg and Marcus Hutter",
+     "text": "Proposed a formal definition of machine intelligence.",
+     "src": "legg07",
+     "kind": "construct"
+    }
+   ],
+   "historyNote": "This timeline follows the scientific construct. The word's etymology is not covered in this release.",
+   "interpretations": [
+    {
+     "name": "One general ability or many",
+     "text": "Some accounts centre on a general factor. Others treat intelligence as several abilities. The cited reports describe the disagreement.",
+     "src": [
+      "neisser96"
+     ]
+    }
+   ],
+   "misconceptions": [
+    {
+     "text": "Intelligence is not the same as consciousness. The two are studied separately because performance can be described without saying anything about experience. How they relate is debated.",
+     "src": [
+      "dehaene17",
+      "butlin23"
+     ]
+    },
+    {
+     "text": "Doing well on a task is not automatically understanding. The Chinese Room argument is the best known form of this point.",
+     "src": [
+      "searle80",
+      "sep-chinese-room"
+     ]
+    }
+   ],
+   "confused": [
+    "consciousness",
+    "understanding"
+   ],
+   "theories": [],
+   "questions": [
+    "Q007",
+    "Q011",
+    "Q012",
+    "Q025"
+   ],
+   "atlas": [
+    "intelligence",
+    "ai",
+    "cognition"
+   ],
+   "references": [
+    "spearman04",
+    "neisser96",
+    "gottfredson97",
+    "turing50",
+    "legg07",
+    "searle80"
+   ],
+   "status": "Awaiting Research Review",
+   "statusNote": "Drafted 2026-10-15 as original text with cited sources. Definitions have not been through an editorial review, and sources were checked for existence and bibliographic details, not read in full.",
+   "dateAdded": "2026-10-15",
+   "lastReviewed": null,
+   "revisions": [],
+   "articles": []
+  },
+  {
+   "id": "awareness",
+   "lexId": "LEXICON 003",
+   "slug": "awareness",
+   "term": "Awareness",
+   "alt": [
+    "Conscious awareness"
+   ],
+   "abbr": null,
+   "category": "Consciousness and Experience",
+   "disciplines": [
+    "philosophy",
+    "neuroscience",
+    "cogsci",
+    "ai"
+   ],
+   "intro": "Being aware of something. In some writing it is a synonym for consciousness. In experimental work it usually means that information is available to the person, often shown by report.",
+   "multipleMeanings": true,
+   "comparison": null,
+   "history": [],
+   "historyNote": null,
+   "interpretations": [],
+   "misconceptions": [
+    {
+     "text": "Awareness is not the same as attention. Evidence suggests they can occur separately.",
+     "src": [
+      "koch07"
+     ]
+    }
+   ],
+   "confused": [
+    "consciousness"
+   ],
+   "theories": [
+    "ast",
+    "gnwt",
+    "rpt"
+   ],
+   "questions": [
+    "Q006",
+    "Q014",
+    "Q017"
+   ],
+   "atlas": [
+    "attention",
+    "consciousness",
+    "perception"
+   ],
+   "references": [
+    "sep-consciousness",
+    "koch07",
+    "graziano15",
+    "dehaene17"
+   ],
+   "status": "Awaiting Research Review",
+   "statusNote": "Drafted 2026-10-15 as original text with cited sources. Definitions have not been through an editorial review, and sources were checked for existence and bibliographic details, not read in full.",
+   "dateAdded": "2026-10-15",
+   "lastReviewed": null,
+   "revisions": [],
+   "articles": []
+  },
+  {
+   "id": "cognition",
+   "lexId": "LEXICON 004",
+   "slug": "cognition",
+   "term": "Cognition",
+   "alt": [
+    "Cognitive processing"
+   ],
+   "abbr": null,
+   "category": "Cognition and Neuroscience",
+   "disciplines": [
+    "cogsci",
+    "psychology",
+    "neuroscience"
+   ],
+   "intro": "The mental processes by which information is acquired, represented and used, including perception, memory, reasoning and attention.",
+   "multipleMeanings": true,
+   "comparison": null,
+   "history": [
+    {
+     "period": "mid-1950s",
+     "who": "Cognitive science",
+     "text": "The Stanford entry traces the field's intellectual origins to the mid-1950s.",
+     "src": "sep-cogsci"
+    },
+    {
+     "period": "2003",
+     "who": "George A. Miller",
+     "text": "Wrote a historical perspective on the cognitive revolution.",
+     "src": "miller03"
+    }
+   ],
+   "historyNote": null,
+   "interpretations": [],
+   "misconceptions": [],
+   "confused": [
+    "intelligence"
+   ],
+   "theories": [
+    "ast",
+    "gnwt",
+    "pp"
+   ],
+   "questions": [
+    "Q013",
+    "Q014",
+    "Q015",
+    "Q017"
+   ],
+   "atlas": [
+    "cognition",
+    "attention",
+    "perception"
+   ],
+   "references": [
+    "sep-cogsci",
+    "miller03",
+    "clark13"
+   ],
+   "status": "Awaiting Research Review",
+   "statusNote": "Drafted 2026-10-15 as original text with cited sources. Definitions have not been through an editorial review, and sources were checked for existence and bibliographic details, not read in full.",
+   "dateAdded": "2026-10-15",
+   "lastReviewed": null,
+   "revisions": [],
+   "articles": []
+  },
+  {
+   "id": "subjective-experience",
+   "lexId": "LEXICON 005",
+   "slug": "subjective-experience",
+   "term": "Subjective Experience",
+   "alt": [
+    "Phenomenal experience",
+    "What it is like"
+   ],
+   "abbr": null,
+   "category": "Consciousness and Experience",
+   "disciplines": [
+    "philosophy",
+    "neuroscience",
+    "ai"
+   ],
+   "intro": "The first-person, felt character of mental life: how a colour looks or a pain feels to the one who has it.",
+   "multipleMeanings": false,
+   "comparison": null,
+   "history": [
+    {
+     "period": "1974",
+     "who": "Thomas Nagel",
+     "text": "Gave the 'what it is like' formulation.",
+     "src": "nagel74"
+    }
+   ],
+   "historyNote": null,
+   "interpretations": [],
+   "misconceptions": [
+    {
+     "text": "A system describing its experience in words is not evidence that it has any. Language use and experience are different things.",
+     "src": [
+      "butlin23"
+     ]
+    }
+   ],
+   "confused": [
+    "awareness"
+   ],
+   "theories": [
+    "iit",
+    "hot"
+   ],
+   "questions": [
+    "Q001",
+    "Q002",
+    "Q009"
+   ],
+   "atlas": [
+    "consciousness",
+    "mind"
+   ],
+   "references": [
+    "nagel74",
+    "sep-qualia",
+    "seth22",
+    "butlin23"
+   ],
+   "status": "Awaiting Research Review",
+   "statusNote": "Drafted 2026-10-15 as original text with cited sources. Definitions have not been through an editorial review, and sources were checked for existence and bibliographic details, not read in full.",
+   "dateAdded": "2026-10-15",
+   "lastReviewed": null,
+   "revisions": [],
+   "articles": []
+  },
+  {
+   "id": "understanding",
+   "lexId": "LEXICON 006",
+   "slug": "understanding",
+   "term": "Understanding",
+   "alt": [
+    "Comprehension",
+    "Grasp of meaning"
+   ],
+   "abbr": null,
+   "category": "Language and Meaning",
+   "disciplines": [
+    "philosophy",
+    "ai",
+    "cogsci"
+   ],
+   "intro": "Grasping how things fit together or what something means, as opposed to holding isolated facts or producing fitting outputs. Philosophers and AI researchers use the word in ways that do not match.",
+   "multipleMeanings": true,
+   "comparison": {
+    "overlap": "Both philosophy and AI treat understanding as more than retrieving a stored answer.",
+    "differ": "Philosophy asks what understanding is. AI usually asks how it can be tested. A behavioural test cannot by itself settle the philosophical question, which is why the two uses are not interchangeable."
+   },
+   "history": [
+    {
+     "period": "1950",
+     "who": "Alan Turing",
+     "text": "Proposed testing machine thinking by behaviour.",
+     "src": "turing50"
+    },
+    {
+     "period": "1980",
+     "who": "John Searle",
+     "text": "Argued that program execution does not suffice for understanding.",
+     "src": "searle80"
+    },
+    {
+     "period": "1990",
+     "who": "Stevan Harnad",
+     "text": "Posed the symbol grounding problem.",
+     "src": "harnad90"
+    },
+    {
+     "period": "2020",
+     "who": "Emily Bender and Alexander Koller",
+     "text": "Argued that form alone cannot yield meaning.",
+     "src": "bender20"
+    }
+   ],
+   "historyNote": null,
+   "interpretations": [
+    {
+     "name": "Replies to the Chinese Room",
+     "text": "The Stanford entry groups replies into families, such as the view that the whole system or a virtual mind understands, and the view that a robot linked to the world could.",
+     "src": [
+      "sep-chinese-room"
+     ]
+    }
+   ],
+   "misconceptions": [
+    {
+     "text": "Understanding is not the same as knowing facts. The philosophical literature stresses structure and connection.",
+     "src": [
+      "sep-understanding"
+     ]
+    },
+    {
+     "text": "A fluent answer is not proof of understanding. Whether it counts as evidence is disputed.",
+     "src": [
+      "searle80",
+      "bender20"
+     ]
+    }
+   ],
+   "confused": [
+    "intelligence",
+    "meaning"
+   ],
+   "theories": [],
+   "questions": [
+    "Q008",
+    "Q012"
+   ],
+   "atlas": [
+    "understanding",
+    "language",
+    "mind"
+   ],
+   "references": [
+    "sep-understanding",
+    "searle80",
+    "sep-chinese-room",
+    "bender20",
+    "turing50",
+    "harnad90"
+   ],
+   "status": "Awaiting Research Review",
+   "statusNote": "Drafted 2026-10-15 as original text with cited sources. Definitions have not been through an editorial review, and sources were checked for existence and bibliographic details, not read in full.",
+   "dateAdded": "2026-10-15",
+   "lastReviewed": null,
+   "revisions": [],
+   "articles": []
+  },
+  {
+   "id": "memory",
+   "lexId": "LEXICON 007",
+   "slug": "memory",
+   "term": "Memory",
+   "alt": [
+    "Remembering"
+   ],
+   "abbr": null,
+   "category": "Memory and Identity",
+   "disciplines": [
+    "psychology",
+    "philosophy",
+    "ai"
+   ],
+   "intro": "The retention and use of information from the past. In people it includes remembering events, knowing facts and learned skills. In computing the same word names storage.",
+   "multipleMeanings": true,
+   "comparison": {
+    "overlap": "Both psychology and philosophy treat human remembering as a construction rather than a replay.",
+    "differ": "Computing memory is usually exact storage, so it differs from the reconstructive remembering described by Loftus."
+   },
+   "history": [
+    {
+     "period": "2002",
+     "who": "Endel Tulving",
+     "text": "Reviewed episodic memory from mind to brain.",
+     "src": "tulving02"
+    },
+    {
+     "period": "2005",
+     "who": "Elizabeth Loftus",
+     "text": "Reviewed thirty years of work on the malleability of memory.",
+     "src": "loftus05"
+    }
+   ],
+   "historyNote": null,
+   "interpretations": [],
+   "misconceptions": [
+    {
+     "text": "Memory is not storage. Human remembering is reconstructive, so a stored copy and a memory are different.",
+     "src": [
+      "loftus05",
+      "sep-memory"
+     ]
+    }
+   ],
+   "confused": [],
+   "theories": [],
+   "questions": [
+    "Q016",
+    "Q019",
+    "Q020",
+    "Q021"
+   ],
+   "atlas": [
+    "memory",
+    "identity",
+    "archives"
+   ],
+   "references": [
+    "tulving02",
+    "loftus05",
+    "sep-memory"
+   ],
+   "status": "Awaiting Research Review",
+   "statusNote": "Drafted 2026-10-15 as original text with cited sources. Definitions have not been through an editorial review, and sources were checked for existence and bibliographic details, not read in full.",
+   "dateAdded": "2026-10-15",
+   "lastReviewed": null,
+   "revisions": [],
+   "articles": []
+  },
+  {
+   "id": "identity",
+   "lexId": "LEXICON 008",
+   "slug": "identity",
+   "term": "Personal Identity",
+   "alt": [
+    "Identity",
+    "Identity over time"
+   ],
+   "abbr": null,
+   "category": "Memory and Identity",
+   "disciplines": [
+    "philosophy",
+    "psychology"
+   ],
+   "intro": "What makes a person the same person over time, and what a person is. It is a different topic from digital identity, which concerns accounts and records.",
+   "multipleMeanings": false,
+   "comparison": null,
+   "history": [],
+   "historyNote": null,
+   "interpretations": [
+    {
+     "name": "Psychological continuity or bodily continuity",
+     "text": "The main families of view differ about what persistence consists in.",
+     "src": [
+      "sep-identity"
+     ]
+    }
+   ],
+   "misconceptions": [
+    {
+     "text": "Personal identity and digital identity are different concepts. One concerns what a person is, the other the records and accounts that represent one.",
+     "src": [
+      "sep-identity"
+     ]
+    }
+   ],
+   "confused": [
+    "memory"
+   ],
+   "theories": [],
+   "questions": [
+    "Q015",
+    "Q018",
+    "Q019",
+    "Q021"
+   ],
+   "atlas": [
+    "identity",
+    "self",
+    "memory"
+   ],
+   "references": [
+    "sep-identity",
+    "loftus05"
+   ],
+   "status": "Awaiting Research Review",
+   "statusNote": "Drafted 2026-10-15 as original text with cited sources. Definitions have not been through an editorial review, and sources were checked for existence and bibliographic details, not read in full.",
+   "dateAdded": "2026-10-15",
+   "lastReviewed": null,
+   "revisions": [],
+   "articles": []
+  },
+  {
+   "id": "agency",
+   "lexId": "LEXICON 009",
+   "slug": "agency",
+   "term": "Agency",
+   "alt": [
+    "Agent",
+    "Intentional action"
+   ],
+   "abbr": null,
+   "category": "Philosophy of Mind",
+   "disciplines": [
+    "philosophy",
+    "ai"
+   ],
+   "intro": "The capacity to act, and the exercise of it. Whether a system counts as an agent depends on what the term is taken to require.",
+   "multipleMeanings": true,
+   "comparison": null,
+   "history": [],
+   "historyNote": null,
+   "interpretations": [],
+   "misconceptions": [
+    {
+     "text": "Describing a system as an agent does not show that it has the mental states the philosophical sense of agency involves.",
+     "src": [
+      "sep-agency",
+      "legg07"
+     ]
+    }
+   ],
+   "confused": [],
+   "theories": [],
+   "questions": [
+    "Q022",
+    "Q023"
+   ],
+   "atlas": [
+    "ethics",
+    "ai",
+    "accountability"
+   ],
+   "references": [
+    "sep-agency",
+    "legg07"
+   ],
+   "status": "Awaiting Research Review",
+   "statusNote": "Drafted 2026-10-15 as original text with cited sources. Definitions have not been through an editorial review, and sources were checked for existence and bibliographic details, not read in full.",
+   "dateAdded": "2026-10-15",
+   "lastReviewed": null,
+   "revisions": [],
+   "articles": []
+  },
+  {
+   "id": "artificial-intelligence",
+   "lexId": "LEXICON 010",
+   "slug": "artificial-intelligence",
+   "term": "Artificial Intelligence",
+   "alt": [
+    "AI",
+    "Machine intelligence"
+   ],
+   "abbr": "AI",
+   "category": "Artificial Intelligence",
+   "disciplines": [
+    "ai",
+    "philosophy"
+   ],
+   "intro": "The field that aims to build machines that act intelligently, and the systems it produces. The term names both a research programme and a set of technologies.",
+   "multipleMeanings": true,
+   "comparison": null,
+   "history": [
+    {
+     "period": "1950",
+     "who": "Alan Turing",
+     "text": "Published 'Computing Machinery and Intelligence'.",
+     "src": "turing50"
+    }
+   ],
+   "historyNote": null,
+   "interpretations": [],
+   "misconceptions": [
+    {
+     "text": "Calling a system intelligent does not say it is conscious or that it understands. Those are separate claims.",
+     "src": [
+      "searle80",
+      "butlin23"
+     ]
+    }
+   ],
+   "confused": [
+    "intelligence"
+   ],
+   "theories": [],
+   "questions": [
+    "Q007",
+    "Q009",
+    "Q011",
+    "Q012",
+    "Q025"
+   ],
+   "atlas": [
+    "ai",
+    "learning",
+    "computing"
+   ],
+   "references": [
+    "sep-ai",
+    "turing50",
+    "legg07",
+    "searle80"
+   ],
+   "status": "Awaiting Research Review",
+   "statusNote": "Drafted 2026-10-15 as original text with cited sources. Definitions have not been through an editorial review, and sources were checked for existence and bibliographic details, not read in full.",
+   "dateAdded": "2026-10-15",
+   "lastReviewed": null,
+   "revisions": [],
+   "articles": []
+  },
+  {
+   "id": "sentience",
+   "lexId": "LEXICON 011",
+   "slug": "sentience",
+   "term": "Sentience",
+   "alt": [
+    "Capacity for feeling"
+   ],
+   "abbr": null,
+   "category": "Consciousness and Experience",
+   "disciplines": [
+    "philosophy",
+    "neuroscience",
+    "ai"
+   ],
+   "intro": "The capacity to have experiences that feel good or bad. It is often used when asking which animals, or which machines, could matter morally.",
+   "multipleMeanings": true,
+   "comparison": null,
+   "history": [],
+   "historyNote": null,
+   "interpretations": [],
+   "misconceptions": [
+    {
+     "text": "Intelligence is not sentience. A system can perform well without any claim that it can feel.",
+     "src": [
+      "sep-animal"
+     ]
+    }
+   ],
+   "confused": [
+    "intelligence"
+   ],
+   "theories": [],
+   "questions": [
+    "Q009",
+    "Q022",
+    "Q024"
+   ],
+   "atlas": [
+    "consciousness",
+    "moral"
+   ],
+   "references": [
+    "sep-consciousness",
+    "sep-animal",
+    "butlin23"
+   ],
+   "status": "Awaiting Research Review",
+   "statusNote": "Drafted 2026-10-15 as original text with cited sources. Definitions have not been through an editorial review, and sources were checked for existence and bibliographic details, not read in full.",
+   "dateAdded": "2026-10-15",
+   "lastReviewed": null,
+   "revisions": [],
+   "articles": []
+  },
+  {
+   "id": "meaning",
+   "lexId": "LEXICON 012",
+   "slug": "meaning",
+   "term": "Meaning",
+   "alt": [
+    "Semantic content"
+   ],
+   "abbr": null,
+   "category": "Language and Meaning",
+   "disciplines": [
+    "philosophy",
+    "cogsci",
+    "ai"
+   ],
+   "intro": "What words and sentences stand for, and what makes them stand for it. Theories separate describing meanings from explaining where they come from.",
+   "multipleMeanings": true,
+   "comparison": null,
+   "history": [
+    {
+     "period": "1990",
+     "who": "Stevan Harnad",
+     "text": "Posed the symbol grounding problem.",
+     "src": "harnad90"
+    },
+    {
+     "period": "2020",
+     "who": "Emily Bender and Alexander Koller",
+     "text": "Argued for the distinction between form and meaning in language models.",
+     "src": "bender20"
+    }
+   ],
+   "historyNote": null,
+   "interpretations": [],
+   "misconceptions": [
+    {
+     "text": "Producing words that fit is not the same as meaning something by them. The distinction is disputed for language models.",
+     "src": [
+      "bender20"
+     ]
+    }
+   ],
+   "confused": [
+    "understanding"
+   ],
+   "theories": [],
+   "questions": [
+    "Q008",
+    "Q012"
+   ],
+   "atlas": [
+    "language",
+    "understanding"
+   ],
+   "references": [
+    "sep-meaning",
+    "harnad90",
+    "bender20"
+   ],
+   "status": "Awaiting Research Review",
+   "statusNote": "Drafted 2026-10-15 as original text with cited sources. Definitions have not been through an editorial review, and sources were checked for existence and bibliographic details, not read in full.",
+   "dateAdded": "2026-10-15",
+   "lastReviewed": null,
+   "revisions": [],
+   "articles": []
+  }
+ ]
+}

@@ -1,0 +1,201 @@
+{
+ "types": {
+  "broader": "Broader concept",
+  "narrower": "Narrower concept",
+  "related": "Related concept",
+  "theoretical": "Theoretical connection",
+  "confused": "Commonly confused term",
+  "historical": "Historical influence",
+  "disputed": "Disputed conceptual relationship"
+ },
+ "items": [
+  {
+   "a": "consciousness",
+   "b": "subjective-experience",
+   "type": "related",
+   "note": "Subjective experience is often treated as the core of phenomenal consciousness.",
+   "basis": [
+    "nagel74",
+    "sep-qualia"
+   ]
+  },
+  {
+   "a": "consciousness",
+   "b": "awareness",
+   "type": "confused",
+   "note": "The words are often used interchangeably, but awareness is sometimes kept distinct.",
+   "basis": [
+    "sep-consciousness"
+   ]
+  },
+  {
+   "a": "consciousness",
+   "b": "intelligence",
+   "type": "confused",
+   "note": "One concerns experience and the other performance. Their relationship is debated.",
+   "basis": [
+    "butlin23",
+    "dehaene17"
+   ]
+  },
+  {
+   "a": "consciousness",
+   "b": "sentience",
+   "type": "related",
+   "note": "Basic sentience is among the senses of creature consciousness.",
+   "basis": [
+    "sep-consciousness"
+   ]
+  },
+  {
+   "a": "consciousness",
+   "b": "cognition",
+   "type": "related",
+   "note": "Researchers ask how consciousness relates to attention and information processing.",
+   "basis": [
+    "koch07"
+   ]
+  },
+  {
+   "a": "consciousness",
+   "b": "artificial-intelligence",
+   "type": "disputed",
+   "note": "Whether consciousness-related notions apply to artificial systems is disputed.",
+   "basis": [
+    "butlin23",
+    "dehaene17"
+   ]
+  },
+  {
+   "a": "intelligence",
+   "b": "cognition",
+   "type": "related",
+   "note": "Intelligence is often analysed as a feature of cognition.",
+   "basis": [
+    "sep-cogsci"
+   ]
+  },
+  {
+   "a": "intelligence",
+   "b": "artificial-intelligence",
+   "type": "theoretical",
+   "note": "Machine intelligence is defined through behavioural tests or formal measures.",
+   "basis": [
+    "turing50",
+    "legg07"
+   ]
+  },
+  {
+   "a": "intelligence",
+   "b": "understanding",
+   "type": "confused",
+   "note": "Performing intelligently is not obviously the same as understanding.",
+   "basis": [
+    "searle80"
+   ]
+  },
+  {
+   "a": "understanding",
+   "b": "meaning",
+   "type": "related",
+   "note": "Understanding is commonly analysed as grasping meaning.",
+   "basis": [
+    "sep-meaning",
+    "bender20"
+   ]
+  },
+  {
+   "a": "understanding",
+   "b": "artificial-intelligence",
+   "type": "disputed",
+   "note": "Whether artificial systems understand is the central dispute in the Chinese Room literature.",
+   "basis": [
+    "searle80",
+    "sep-chinese-room",
+    "bender20"
+   ]
+  },
+  {
+   "a": "memory",
+   "b": "cognition",
+   "type": "narrower",
+   "note": "Memory is one kind of cognitive process.",
+   "basis": [
+    "sep-cogsci"
+   ]
+  },
+  {
+   "a": "memory",
+   "b": "identity",
+   "type": "theoretical",
+   "note": "Psychological-continuity views of personal identity rest on memory.",
+   "basis": [
+    "sep-identity",
+    "sep-memory"
+   ]
+  },
+  {
+   "a": "awareness",
+   "b": "cognition",
+   "type": "related",
+   "note": "Awareness is studied alongside attention and other cognitive functions.",
+   "basis": [
+    "koch07"
+   ]
+  },
+  {
+   "a": "agency",
+   "b": "artificial-intelligence",
+   "type": "related",
+   "note": "AI uses 'agent' for systems that act toward goals.",
+   "basis": [
+    "legg07"
+   ]
+  },
+  {
+   "a": "agency",
+   "b": "intelligence",
+   "type": "related",
+   "note": "Formal definitions of machine intelligence are built on agents.",
+   "basis": [
+    "legg07"
+   ]
+  },
+  {
+   "a": "sentience",
+   "b": "subjective-experience",
+   "type": "related",
+   "note": "Sentience is the capacity for felt experience.",
+   "basis": [
+    "sep-animal"
+   ]
+  },
+  {
+   "a": "sentience",
+   "b": "intelligence",
+   "type": "confused",
+   "note": "Capacity to feel and capacity to perform are different.",
+   "basis": [
+    "sep-animal"
+   ]
+  },
+  {
+   "a": "subjective-experience",
+   "b": "awareness",
+   "type": "related",
+   "note": "Awareness and experience are close but not identical concepts.",
+   "basis": [
+    "sep-consciousness"
+   ]
+  },
+  {
+   "a": "meaning",
+   "b": "artificial-intelligence",
+   "type": "disputed",
+   "note": "Whether language models have access to meaning is disputed.",
+   "basis": [
+    "bender20"
+   ]
+  }
+ ]
+}
