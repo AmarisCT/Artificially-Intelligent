@@ -1,0 +1,120 @@
+{
+ "meta": {
+  "schema": 1
+ },
+ "items": [
+  {
+   "id": "S001",
+   "slug": "can-artificial-intelligence-be-conscious",
+   "title": "Can Artificial Intelligence Be Conscious?",
+   "level": "Advanced",
+   "note": "A Research Seminar guides you through primary sources and a disagreement. It is a self-guided study format. It is not an accredited course and carries no credit.",
+   "question": "Is there good scientific or philosophical reason to think an artificial system could be, or could not be, conscious?",
+   "prerequisites": [
+    "C001",
+    "C002"
+   ],
+   "stages": [
+    {
+     "id": "S001-1",
+     "title": "Examine the central question",
+     "body": [
+      "Start by writing what you take the question to mean. Is it about any possible machine, or about today's language models? Is 'conscious' meant as wakefulness, awareness, or experience in Nagel's sense? Many disagreements in this area come from different answers to these questions.",
+      "Compare your wording with the Unanswered Archive entry on what would count as evidence of machine consciousness."
+     ],
+     "task": "Write the question in your own words, naming the sense of 'conscious' you intend.",
+     "links": [
+      [
+       "q",
+       "Q009"
+      ]
+     ]
+    },
+    {
+     "id": "S001-2",
+     "title": "Review foundational concepts",
+     "body": [
+      "Revisit the distinctions from the two courses: intelligence versus consciousness, report versus experience, behaviour versus mechanism. Open the Lexicon entries for consciousness, intelligence and understanding and compare how disciplines define them."
+     ],
+     "task": "Choose one distinction and say how it changes the question.",
+     "links": [
+      [
+       "lex",
+       "consciousness"
+      ],
+      [
+       "lex",
+       "intelligence"
+      ],
+      [
+       "lex",
+       "understanding"
+      ]
+     ]
+    },
+    {
+     "id": "S001-3",
+     "title": "Read selected sources",
+     "body": [
+      "Read the abstracts or full texts of these sources and note each author's main claim. Searle (1980) argues that running a program is not enough for understanding. Butlin and colleagues (2023, preprint) propose assessing AI systems against indicator properties from scientific theories. Chalmers (2023, preprint) weighs whether large language models could be conscious."
+     ],
+     "task": "For each source, write one sentence on its claim and one on the kind of argument it makes (philosophical, review, empirical).",
+     "sources": [
+      "searle80",
+      "butlin-2023",
+      "pub:P018"
+     ]
+    },
+    {
+     "id": "S001-4",
+     "title": "Compare theoretical approaches",
+     "body": [
+      "Different theories imply different answers. Use the Theory Chamber to compare how Global Neuronal Workspace Theory and Integrated Information Theory handle what matters for consciousness. Ask what each would say about a system that processes information flexibly but is built very differently from a brain."
+     ],
+     "task": "Write a short table: theory, what it treats as the key ingredient, what it would say about machines (state if the theory's own sources do not say).",
+     "links": [
+      [
+       "cmp",
+       "gnwt-iit"
+      ]
+     ]
+    },
+    {
+     "id": "S001-5",
+     "title": "Examine methodological limitations",
+     "body": [
+      "List what each source cannot show. A preprint has not been through formal peer review. An indicator approach depends on the theories it draws from. A thought experiment shows what is conceivable and may not settle an empirical question. A language model's statements about itself are not evidence of experience."
+     ],
+     "task": "For one source, list three limits on what it can show.",
+     "sources": [
+      "butlin-2023",
+      "searle80"
+     ]
+    },
+    {
+     "id": "S001-6",
+     "title": "Respond to a critical reflection",
+     "body": [
+      "Consider this challenge: 'If a system behaves in every way as a conscious being would, denying that it is conscious is just prejudice.' Write a reply that treats the strongest version of the objection fairly."
+     ],
+     "task": "Write a 150 to 300 word response. Your reply is saved only in your browser.",
+     "reflect": true
+    },
+    {
+     "id": "S001-7",
+     "title": "Explore further scholarship",
+     "body": [
+      "Continue with the Research Observatory, which lists publications with their evidence types, and with the Inquiry Engine. Newly discovered papers on this topic are suggestions only and have not been reviewed for this seminar."
+     ],
+     "task": "Pick one further source and say how it would change your answer.",
+     "links": [
+      [
+       "obs",
+       ""
+      ]
+     ]
+    }
+   ]
+  }
+ ]
+}

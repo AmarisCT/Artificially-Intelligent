@@ -1,0 +1,133 @@
+{
+ "meta": {
+  "schema": 1,
+  "note": "Terms defined here are for this course only. Lexicon terms are not redefined here; they link to the Lexicon."
+ },
+ "items": {
+  "wakefulness": {
+   "term": "Wakefulness",
+   "text": "The state of being alert and responsive, as opposed to deep sleep or coma. It is one of several senses of 'conscious' and can come apart from having experiences, as in dreaming.",
+   "link": null
+  },
+  "phenomenal": {
+   "term": "Phenomenal consciousness",
+   "text": "The felt, experiential side of mental life: what it is like to see red or feel pain. Used in contrast with access consciousness by Ned Block.",
+   "link": null
+  },
+  "access": {
+   "term": "Access consciousness",
+   "text": "Information that is available for reasoning, report and the control of action. Block proposed it as distinct from phenomenal consciousness; whether they can be separated is debated.",
+   "link": null
+  },
+  "perception": {
+   "term": "Perception",
+   "text": "The process by which the brain turns signals from the senses into an interpretation of the world, using expectation as well as input.",
+   "link": null
+  },
+  "predictive": {
+   "term": "Predictive processing",
+   "text": "A family of ideas in which the brain continually predicts its sensory input and updates the predictions when they are wrong. It is a framework under discussion, not a settled account.",
+   "link": null
+  },
+  "contrastive": {
+   "term": "Contrastive method",
+   "text": "Comparing brain activity when the same stimulus is and is not consciously perceived, to look for activity linked to experience.",
+   "link": null
+  },
+  "attention": {
+   "term": "Attention",
+   "text": "The selection of some information for fuller processing at the expense of other information. Related to, but distinguished by many researchers from, awareness.",
+   "link": null
+  },
+  "ncc": {
+   "term": "Neural correlate of consciousness",
+   "text": "A pattern of brain activity that accompanies a particular conscious experience. The term does not claim the activity produces the experience.",
+   "link": "theory"
+  },
+  "gnwt": {
+   "term": "Global Neuronal Workspace Theory",
+   "text": "A theory proposing that a representation becomes consciously accessible when it is amplified and made available to many specialised processes through a distributed network.",
+   "link": "theory:gnwt"
+  },
+  "iit": {
+   "term": "Integrated Information Theory",
+   "text": "A theory deriving consciousness from properties of experience such as unity and proposing that it corresponds to the cause-effect structure of a physical system.",
+   "link": "theory:iit"
+  },
+  "hot": {
+   "term": "Higher-Order Theories",
+   "text": "Theories holding that a mental state is conscious when the subject has a higher-order representation of being in that state.",
+   "link": "theory:hot"
+  },
+  "rpt": {
+   "term": "Recurrent Processing Theory",
+   "text": "A theory associating consciousness with feedback processing in sensory areas rather than the first feedforward sweep.",
+   "link": "theory:rpt"
+  },
+  "ast": {
+   "term": "Attention Schema Theory",
+   "text": "A theory proposing that subjective awareness is the brain's simplified model of its own attention.",
+   "link": "theory:ast"
+  },
+  "pp": {
+   "term": "Predictive Processing and consciousness",
+   "text": "Approaches applying the predictive processing framework to questions about consciousness.",
+   "link": "theory:pp"
+  },
+  "parameters": {
+   "term": "Parameters",
+   "text": "The adjustable numbers in a model whose values are set by training.",
+   "link": null
+  },
+  "supervised": {
+   "term": "Supervised learning",
+   "text": "Learning from examples that come with the right answers.",
+   "link": null
+  },
+  "unsupervised": {
+   "term": "Unsupervised learning",
+   "text": "Looking for structure in data without labels.",
+   "link": null
+  },
+  "rl": {
+   "term": "Reinforcement learning",
+   "text": "Learning which actions lead to better outcomes from rewards and penalties received after acting.",
+   "link": null
+  },
+  "overfitting": {
+   "term": "Overfitting",
+   "text": "When a model matches its training data so closely, including noise, that it performs worse on new data.",
+   "link": null
+  },
+  "generalisation": {
+   "term": "Generalisation",
+   "text": "How well a model performs on data it has not seen during training.",
+   "link": null
+  },
+  "testset": {
+   "term": "Test set",
+   "text": "Data held back from training and used to measure how well a model generalises.",
+   "link": null
+  },
+  "neuralnet": {
+   "term": "Neural network",
+   "text": "A model made of simple units with adjustable weights, arranged in layers. 'Neural' reflects early inspiration from the brain; it is not a model of real neurons.",
+   "link": null
+  },
+  "lm": {
+   "term": "Language model",
+   "text": "A model that assigns probabilities to what text is likely to come next, used to generate and process text.",
+   "link": null
+  },
+  "tokens": {
+   "term": "Tokens",
+   "text": "The pieces of text, often words or parts of words, that a language model reads and predicts.",
+   "link": null
+  },
+  "benchmark": {
+   "term": "Benchmark",
+   "text": "A standard set of tasks with agreed scoring used to compare systems.",
+   "link": null
+  }
+ }
+}

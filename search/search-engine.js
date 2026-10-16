@@ -8,8 +8,8 @@
   var STOP = new Set(("a an the of to in on at for and or is are be been can could would should do does did it its that this " +
     "what which who whom how why when where with by as from into than then there their they them about over under not no if " +
     "my your our we you i me so such very more most also just").split(" "));
-  var TYPE_ORDER = ["concept", "theory", "article", "question", "comparison", "source", "museum"];
-  var TYPE_LABEL = { concept: "Concept", theory: "Theory", article: "Original essay", question: "Open question", comparison: "Theory comparison", source: "Publication", museum: "Museum room" };
+  var TYPE_ORDER = ["concept", "theory", "article", "course", "lesson", "question", "comparison", "source", "museum"];
+  var TYPE_LABEL = { concept: "Concept", theory: "Theory", article: "Original essay", question: "Open question", comparison: "Theory comparison", source: "Publication", museum: "Museum room", course: "Course", lesson: "Lesson" };
   var GROUP_NOTE = {
     article: "Original essays on this site.",
     concept: "Short working descriptions of concepts, from the Research Atlas and Theory Chamber.",
@@ -17,7 +17,9 @@
     question: "Unresolved questions and their recorded status. These are open problems, not findings.",
     comparison: "Side-by-side theory comparisons.",
     source: "External scholarly publications, with their original links. Not endorsed by this site.",
-    museum: "Rooms in the Museum of Human Memory."
+    museum: "Rooms in the Museum of Human Memory.",
+    course: "Published courses in the Learning Institute. Planned courses are not listed.",
+    lesson: "Lessons in the Learning Institute. They explain ideas and do not settle open questions."
   };
   function norm(s) { return words(s).join(" "); }
   function cstems(s) { return words(s).filter(function (w) { return !STOP.has(w); }).map(stem); }

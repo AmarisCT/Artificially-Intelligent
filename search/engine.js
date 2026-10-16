@@ -217,6 +217,7 @@
       var conceptSet = new Set(rec.terms.map(function (t) { return t.concept; }));
       var arts = rank(rec, qs, ["article"]).filter(function (x) { return x.score >= 3; }).slice(0, L.articles);
       var rooms = rank(rec, qs, ["museum"]).filter(function (x) { return x.score >= 3; }).slice(0, L.rooms);
+      var lessonsRec = rank(rec, qs, ["lesson"]).filter(function (x) { return x.score >= 4; }).slice(0, 3);
       var branches = [];
       var seenB = new Set(top.map(function (x) { return x.id; }));
       var brSrc = new Map();
@@ -250,6 +251,7 @@
       if (unknown.length) steps.unknown = { id: "unknown", items: unknown };
       var cont = []; arts.forEach(function (x) { cont.push({ id: x.id, reasons: x.reasons, group: "essay" }); });
       rooms.forEach(function (x) { cont.push({ id: x.id, reasons: x.reasons, group: "room" }); });
+      lessonsRec.forEach(function (x) { cont.push({ id: x.id, reasons: x.reasons, group: "lesson" }); });
       if (cont.length || branches.length || papers.length) steps.continue = { id: "continue", items: cont, branches: branches.map(function (b) { return { id: b.id, reasons: b.reasons }; }), papers: papers };
 
       // ---- order, with visible reasons
@@ -325,7 +327,7 @@
       var unres = [];
       ids("unknown").forEach(function (u) { var q = R.get(u.id); (u.problems || []).forEach(function (p) { unres.push({ text: p, from: q.title, url: q.url }); }); });
       var reading = [];
-      ids("continue").forEach(function (c) { var r = R.get(c.id); reading.push({ title: r.title, url: r.url, kind: r.type === "article" ? "Essay on this site" : "Museum room" }); });
+      ids("continue").forEach(function (c) { var r = R.get(c.id); reading.push({ title: r.title, url: r.url, kind: r.type === "article" ? "Essay on this site" : r.type === "lesson" ? "Learning Institute lesson" : "Museum room" }); });
       var src = ev.map(function (r) { return { title: r.title, authors: (r.authors || []).join(", "), year: r.year, venue: r.venue, doi: r.doi, url: r.url, kind: r.evidenceLabel }; });
       return {
         question: inq.query,

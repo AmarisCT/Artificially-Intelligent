@@ -1,0 +1,182 @@
+{
+ "meta": {
+  "schema": 1
+ },
+ "edges": [
+  {
+   "a": "C001",
+   "b": "C007",
+   "type": "prerequisite",
+   "why": "The theory lessons in The Science of Consciousness assume the vocabulary and the care about evidence introduced in Introduction to Consciousness."
+  },
+  {
+   "a": "C002",
+   "b": "C006",
+   "type": "recommended",
+   "why": "Comparing human and machine intelligence is easier once you know how AI systems learn and are evaluated."
+  },
+  {
+   "a": "C001",
+   "b": "C006",
+   "type": "recommended",
+   "why": "The comparison also uses ideas about experience, awareness and understanding from Introduction to Consciousness."
+  },
+  {
+   "a": "C001",
+   "b": "C004",
+   "type": "recommended",
+   "why": "Philosophy of Mind builds on the question of what experience is."
+  },
+  {
+   "a": "C004",
+   "b": "C007",
+   "type": "related",
+   "why": "Philosophical positions frame what the scientific theories are trying to explain."
+  },
+  {
+   "a": "C001",
+   "b": "C002",
+   "type": "related",
+   "why": "The two foundational courses are independent and meet in the lessons on machine consciousness."
+  },
+  {
+   "a": "C003",
+   "b": "C001",
+   "type": "related",
+   "why": "Brain and cognition background supports the neuroscience lessons in Introduction to Consciousness."
+  },
+  {
+   "a": "C002",
+   "b": "C008",
+   "type": "recommended",
+   "why": "AI ethics is easier to follow when you know what AI systems can and cannot do."
+  },
+  {
+   "a": "C005",
+   "b": "C006",
+   "type": "related",
+   "why": "Artificial memory systems connect memory and identity to machine intelligence."
+  }
+ ],
+ "compass": {
+  "intro": "The Learning Compass suggests where to begin. It does not measure ability or personality, and your answers stay in your browser. You can skip it at any time.",
+  "questions": [
+   {
+    "id": "ai",
+    "text": "How familiar are you with how artificial intelligence works?",
+    "opts": [
+     [
+      "new",
+      "New to it"
+     ],
+     [
+      "some",
+      "I know the basics"
+     ],
+     [
+      "good",
+      "I know it well"
+     ]
+    ]
+   },
+   {
+    "id": "neuro",
+    "text": "How familiar are you with neuroscience and the brain?",
+    "opts": [
+     [
+      "new",
+      "New to it"
+     ],
+     [
+      "some",
+      "I know the basics"
+     ],
+     [
+      "good",
+      "I know it well"
+     ]
+    ]
+   },
+   {
+    "id": "phil",
+    "text": "How interested are you in philosophy?",
+    "opts": [
+     [
+      "low",
+      "Not very"
+     ],
+     [
+      "mid",
+      "Somewhat"
+     ],
+     [
+      "high",
+      "A lot"
+     ]
+    ]
+   },
+   {
+    "id": "methods",
+    "text": "How comfortable are you reading how a scientific study works?",
+    "opts": [
+     [
+      "new",
+      "Not yet"
+     ],
+     [
+      "some",
+      "Somewhat"
+     ],
+     [
+      "good",
+      "Comfortable"
+     ]
+    ]
+   },
+   {
+    "id": "depth",
+    "text": "How deep would you like to go?",
+    "opts": [
+     [
+      "intro",
+      "A clear introduction"
+     ],
+     [
+      "mid",
+      "Some depth"
+     ],
+     [
+      "deep",
+      "As deep as possible"
+     ]
+    ]
+   },
+   {
+    "id": "goal",
+    "text": "What do you most want to understand?",
+    "opts": [
+     [
+      "consciousness",
+      "What consciousness is"
+     ],
+     [
+      "ai",
+      "How AI works"
+     ],
+     [
+      "machine",
+      "Whether machines could be conscious"
+     ],
+     [
+      "memory",
+      "Memory and identity"
+     ],
+     [
+      "ethics",
+      "Ethics of AI"
+     ]
+    ]
+   }
+  ]
+ }
+}

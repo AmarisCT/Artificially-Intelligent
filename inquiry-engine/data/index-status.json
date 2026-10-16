@@ -7,7 +7,9 @@
   "comparison": 3,
   "source": 32,
   "museum": 7,
-  "article": 2
+  "article": 2,
+  "course": 2,
+  "lesson": 16
  },
  "adapters": [
   {
@@ -44,6 +46,12 @@
    "name": "Museum of Human Memory rooms",
    "active": true,
    "records": 7,
+   "note": "Indexed"
+  },
+  {
+   "name": "Learning Institute lessons (published courses only)",
+   "active": true,
+   "records": 16,
    "note": "Indexed"
   },
   {

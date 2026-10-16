@@ -25,7 +25,7 @@ function deskToggle(k) { const o = deskRead(), i = o.items.findIndex(x => x.k ==
 
 function siteNav() {
   const n = $("#site"); n.textContent = "";
-  [["Atlas", "research-atlas/"], ["Theory Chamber", "theory-chamber/"], ["Unanswered Archive", "unanswered-archive/"], ["Observatory", "research-observatory/"], ["Museum", "museum/"]].forEach(([t, u]) => n.append(h("a", { href: safeHref(abs(ROOT + u)) }, t)));
+  [["Atlas", "research-atlas/"], ["Theory Chamber", "theory-chamber/"], ["Unanswered Archive", "unanswered-archive/"], ["Observatory", "research-observatory/"], ["Museum", "museum/"], ["Learning Institute", "learning-institute/"]].forEach(([t, u]) => n.append(h("a", { href: safeHref(abs(ROOT + u)) }, t)));
   if (INQ_URL) n.append(h("a", { href: safeHref(INQ_URL) }, "Inquiry Engine"));
   n.append(h("a", { href: "#", "aria-current": "page", onclick: e => { e.preventDefault(); ST.q = ""; location.hash = "#"; route(); } }, "Search"));
   window.__GS = GlobalSearch.mount({ engine: S, searchUrl: location.href.split("#")[0], navHost: n, isFullSearchPage: true });
@@ -45,6 +45,7 @@ function meta(r) {
   if (r.type === "article") p.push((r.category || "Essay") + (r.date ? " · " + r.date : "") + (r.readingMinutes ? " · " + r.readingMinutes + " min read" : ""));
   if (r.type === "question") p.push("Status: " + (r.status || []).join(", "));
   if (r.type === "museum" && r.when) p.push(r.when);
+  if (r.type === "course" || r.type === "lesson") p.push((r.course ? r.course + " · " : "") + r.level + " · about " + (r.type === "course" ? Math.round(r.minutes / 6) / 10 + " hours" : r.minutes + " min"));
   return p.join(" ");
 }
 function investigateLink(q) { if (!INQ_URL) return null; return h("a", { class: "btn sm", href: safeHref(INQ_URL.split("#")[0] + "#q-" + enc(q)), target: "_blank", rel: "noopener" }, "Investigate this question →"); }
@@ -106,7 +107,7 @@ function entrance() {
     statusStrip(c, inactive)];
 }
 function statusStrip(c, inactive) {
-  const L = { article: "essays", concept: "concepts", theory: "theories", comparison: "comparisons", question: "open questions", source: "publications", museum: "museum rooms" };
+  const L = { article: "essays", concept: "concepts", theory: "theories", comparison: "comparisons", question: "open questions", source: "publications", museum: "museum rooms", course: "courses", lesson: "lessons" };
   return h("div", { class: "strip" }, h("b", null, "What is searchable: "), "records that are published on this site today.",
     h("ul", { class: "counts" }, Object.keys(L).filter(t => c[t]).map(t => h("li", null, h("b", null, c[t]), " " + L[t]))),
     h("p", { class: "inact" }, "Index built " + META.generated + ". New essays appear after the next rebuild of the index." + (inactive.length ? " Not searchable yet: " + inactive.join(", ") + "." : "")),
@@ -146,6 +147,7 @@ function preview() {
   if (r.type === "theory") { row("Tradition", r.tradition); row("Review status", r.reviewStatus); row("Note", "Listing a theory is not evidence for it. See the Theory Chamber for sources and criticisms."); }
   if (r.type === "source") { row("Authors", (r.authors || []).join(", ") || "Not recorded"); row("Published", [r.year, r.venue].filter(Boolean).join(" · ")); row("Kind of work", r.evidenceLabel); row("DOI", r.doi); row("How the site read it", r.read); row("Limitations (as recorded)", r.limitations); row("Classification", r.classification); }
   if (r.type === "question") { row("Status", (r.status || []).join(", ")); row("Why this status", r.statusJustification); row("Open problems", (r.openProblems || []).slice(0, 3).map(p => "• " + p).join("\n")); }
+  if (r.type === "course" || r.type === "lesson") { row("Level", r.level); row("Part of", r.course); row("Learning objectives", (r.objectives || []).map(o => "• " + o).join("\n")); row("Estimated time", r.type === "course" ? r.minutes + " minutes in all, " + r.lessonCount + " lessons" : r.minutes + " minutes"); }
   if (r.type === "concept") { row("Subjects explored", (r.subjects || []).join(", ")); }
   if (r.type === "museum") { row("Period", r.when); }
   row("Research subjects", (r.subject || []).join(", "));

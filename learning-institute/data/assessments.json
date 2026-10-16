@@ -1,0 +1,1771 @@
+{
+ "meta": {
+  "schema": 1,
+  "note": "Objective checks have feedback for every option. Reflections show discussion points and are never graded."
+ },
+ "items": [
+  {
+   "id": "C001-L01-a1",
+   "type": "mc",
+   "kind": "Comprehension check",
+   "objective": 0,
+   "prompt": "A person is dreaming vividly during sleep. Which statement best fits the distinction drawn in this lesson?",
+   "options": [
+    {
+     "id": "a",
+     "text": "They are not awake, yet they may be having experiences, so wakefulness and experience can come apart.",
+     "fb": "Correct. Dreaming is a standard illustration that being awake and having experiences are different things.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "They must be conscious in every sense, because dreams are experiences.",
+     "fb": "Not quite. Dreams suggest experience, but the person is not awake or aware of the room, so some senses of the word do not apply.",
+     "ok": false
+    },
+    {
+     "id": "c",
+     "text": "They are unconscious in every sense, because they are asleep.",
+     "fb": "Not quite. This ignores the experiential side. Whether dream experience counts is exactly the point of separating the senses.",
+     "ok": false
+    }
+   ],
+   "explain": "The lesson separates wakefulness from experience. Dreaming shows they can differ.",
+   "lessonId": "C001-L01",
+   "courseId": "C001"
+  },
+  {
+   "id": "C001-L01-a2",
+   "type": "ms",
+   "kind": "Comprehension check",
+   "objective": 0,
+   "prompt": "Select all of the following that the lesson presents as senses or aspects of 'conscious'.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Wakefulness",
+     "fb": "Yes. A state of alertness as opposed to deep sleep or coma.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "Awareness of a particular thing",
+     "fb": "Yes. Noticing a sound or a feeling.",
+     "ok": true
+    },
+    {
+     "id": "c",
+     "text": "There being something it is like to have an experience",
+     "fb": "Yes. Nagel's phrase for the sense most researchers find hardest.",
+     "ok": true
+    },
+    {
+     "id": "d",
+     "text": "Being intelligent",
+     "fb": "No. The lesson treats intelligence as a separate topic. See the Lexicon for how the terms differ.",
+     "ok": false
+    }
+   ],
+   "explain": "Intelligence and consciousness are different ideas and the Lexicon treats them separately.",
+   "lessonId": "C001-L01",
+   "courseId": "C001"
+  },
+  {
+   "id": "C001-L01-a3",
+   "type": "mc",
+   "kind": "Interpretation check",
+   "objective": 2,
+   "prompt": "Block's distinction between phenomenal and access consciousness is best described as…",
+   "options": [
+    {
+     "id": "a",
+     "text": "A proposal that information being available for report and control may be a different matter from how experience feels, which some researchers dispute.",
+     "fb": "Correct. It is a proposal, and its status is contested.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "A proven result that feeling and information processing are separate in the brain.",
+     "fb": "No. The lesson says the distinction is debated, not proven.",
+     "ok": false
+    },
+    {
+     "id": "c",
+     "text": "A claim that animals have only one of the two.",
+     "fb": "No. The distinction does not say that.",
+     "ok": false
+    }
+   ],
+   "explain": "It is a proposed distinction with continuing disagreement.",
+   "lessonId": "C001-L01",
+   "courseId": "C001"
+  },
+  {
+   "id": "C001-L01-r",
+   "type": "reflect",
+   "kind": "Reflection (not graded)",
+   "objective": 1,
+   "prompt": "In your own words, explain why a claim that 'a system is conscious' needs a statement of which sense is meant.",
+   "points": [
+    "Names at least two senses (for example wakefulness and experience).",
+    "Explains that evidence for one sense may not support the other.",
+    "Notes that experience is harder to test from outside.",
+    "Does not claim a single correct definition."
+   ],
+   "criteria": [
+    "Did you name which sense you meant?",
+    "Did you give one example where two senses differ?"
+   ],
+   "lessonId": "C001-L01",
+   "courseId": "C001"
+  },
+  {
+   "id": "C001-L02-a1",
+   "type": "mc",
+   "kind": "Comprehension check",
+   "objective": 1,
+   "prompt": "In Chalmers's framing, which of these is an 'easy' problem?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Explaining how the brain focuses attention on one stimulus.",
+     "fb": "Correct. Functions like attention, discrimination and report are the 'easy' ones in his sense.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "Explaining why there is something it is like to see red.",
+     "fb": "That is the hard problem in his framing.",
+     "ok": false
+    },
+    {
+     "id": "c",
+     "text": "Explaining why the universe contains conscious beings at all.",
+     "fb": "That is a still broader question and not the one the lesson contrasts.",
+     "ok": false
+    }
+   ],
+   "explain": "Functions are the 'easy' problems. Why they come with experience is the hard problem.",
+   "lessonId": "C001-L02",
+   "courseId": "C001"
+  },
+  {
+   "id": "C001-L02-a2",
+   "type": "mc",
+   "kind": "Interpretation check",
+   "objective": 0,
+   "prompt": "What is the best reading of Nagel's bat example?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Knowing how a mechanism works may not tell us what the experience is like for the creature that has it.",
+     "fb": "Correct. It points to a gap in third-person description.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "Bats are the only animals that are conscious.",
+     "fb": "No. The example does not claim this.",
+     "ok": false
+    },
+    {
+     "id": "c",
+     "text": "Science can never study consciousness.",
+     "fb": "No. The argument concerns a limit in one kind of explanation.",
+     "ok": false
+    }
+   ],
+   "explain": "The example is about a possible explanatory gap, not a ban on science.",
+   "lessonId": "C001-L02",
+   "courseId": "C001"
+  },
+  {
+   "id": "C001-L02-a3",
+   "type": "ms",
+   "kind": "Limitation check",
+   "objective": 2,
+   "prompt": "A study relies on participants saying whether they saw a flash. Select the limitations this method has when studying experience.",
+   "options": [
+    {
+     "id": "a",
+     "text": "A participant may have an experience they cannot or do not report.",
+     "fb": "Yes. Report and experience can differ.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "A participant may report an experience they did not have, for example from guessing or expectation.",
+     "fb": "Yes. This is a known issue with report.",
+     "ok": true
+    },
+    {
+     "id": "c",
+     "text": "Reports can never be useful.",
+     "fb": "No. Reports are useful. They are just not identical to experience.",
+     "ok": false
+    },
+    {
+     "id": "d",
+     "text": "The method measures access to information as much as experience.",
+     "fb": "Yes. This is why researchers debate how to separate the two.",
+     "ok": true
+    }
+   ],
+   "explain": "Report is valuable evidence with known limits.",
+   "lessonId": "C001-L02",
+   "courseId": "C001"
+  },
+  {
+   "id": "C001-L02-r",
+   "type": "reflect",
+   "kind": "Reflection (not graded)",
+   "objective": 0,
+   "prompt": "Explain in a few sentences what the hard problem is asking, and one reason a philosopher might doubt that it is a separate problem.",
+   "points": [
+    "States the question as why functions are accompanied by experience.",
+    "Gives one skeptical reply, such as that explaining functions may leave nothing further to explain.",
+    "Presents both views as live positions."
+   ],
+   "criteria": [
+    "Did you state the problem without answering it?",
+    "Did you present the skeptical view fairly?"
+   ],
+   "lessonId": "C001-L02",
+   "courseId": "C001"
+  },
+  {
+   "id": "C001-L03-a1",
+   "type": "mc",
+   "kind": "Comprehension check",
+   "objective": 1,
+   "prompt": "What is the point of the contrastive method?",
+   "options": [
+    {
+     "id": "a",
+     "text": "To compare brain activity when the same stimulus is and is not consciously perceived.",
+     "fb": "Correct.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "To compare people with large and small brains.",
+     "fb": "No. It compares conditions, not people's brain sizes.",
+     "ok": false
+    },
+    {
+     "id": "c",
+     "text": "To show that people are always aware of everything in front of them.",
+     "fb": "No. The method relies on the finding that they are not.",
+     "ok": false
+    }
+   ],
+   "explain": "It holds the stimulus constant and varies awareness.",
+   "lessonId": "C001-L03",
+   "courseId": "C001"
+  },
+  {
+   "id": "C001-L03-a2",
+   "type": "mc",
+   "kind": "Limitation check",
+   "objective": 2,
+   "prompt": "A study finds that brain region X is more active on trials where participants reported seeing a stimulus. Which conclusion is best supported by this alone?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Region X activity is associated with reporting a stimulus, but it may reflect the report rather than the experience.",
+     "fb": "Correct. The difference could reflect experience, report preparation, or both.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "Region X is where consciousness is produced.",
+     "fb": "Too strong. A difference does not show where consciousness is produced.",
+     "ok": false
+    },
+    {
+     "id": "c",
+     "text": "Region X plays no role in perception.",
+     "fb": "Not supported. The study does not show this either.",
+     "ok": false
+    }
+   ],
+   "explain": "Correlation with report does not isolate experience.",
+   "lessonId": "C001-L03",
+   "courseId": "C001"
+  },
+  {
+   "id": "C001-L03-a3",
+   "type": "mc",
+   "kind": "Comprehension check",
+   "objective": 2,
+   "prompt": "If some stimuli can influence behaviour without being reported as seen, what follows?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Information processing and conscious perception are not identical.",
+     "fb": "Correct. This is the lesson's conclusion, as reviewed by Dehaene and colleagues.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "Consciousness is an illusion.",
+     "fb": "No. That is a separate philosophical claim, not implied.",
+     "ok": false
+    },
+    {
+     "id": "c",
+     "text": "Behaviour is never influenced by what we see.",
+     "fb": "No. It says the opposite.",
+     "ok": false
+    }
+   ],
+   "explain": "Processing can occur without being reported as conscious.",
+   "lessonId": "C001-L03",
+   "courseId": "C001"
+  },
+  {
+   "id": "C001-L03-r",
+   "type": "reflect",
+   "kind": "Reflection (not graded)",
+   "objective": 0,
+   "prompt": "Why does the lesson say that perception is 'not a window'? Give one example.",
+   "points": [
+    "Mentions interpretation, expectation or filling-in.",
+    "Gives a concrete example such as an illusion or the blind spot.",
+    "Does not overclaim that perception is mere hallucination."
+   ],
+   "criteria": [
+    "Did you separate the world from the experience of it?"
+   ],
+   "lessonId": "C001-L03",
+   "courseId": "C001"
+  },
+  {
+   "id": "C001-L04-a1",
+   "type": "mc",
+   "kind": "Comprehension check",
+   "objective": 0,
+   "prompt": "Which description best fits attention as used in this lesson?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Selecting some information for fuller processing at the expense of other information.",
+     "fb": "Correct.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "Having a subjective experience.",
+     "fb": "No. That describes awareness or experience.",
+     "ok": false
+    },
+    {
+     "id": "c",
+     "text": "Remembering the past.",
+     "fb": "No. That describes memory.",
+     "ok": false
+    }
+   ],
+   "explain": "Attention is selection; awareness is a separate notion.",
+   "lessonId": "C001-L04",
+   "courseId": "C001"
+  },
+  {
+   "id": "C001-L04-a2",
+   "type": "mc",
+   "kind": "Interpretation check",
+   "objective": 1,
+   "prompt": "Koch and Tsuchiya argue that attention and consciousness…",
+   "options": [
+    {
+     "id": "a",
+     "text": "Are different processes that may be separable, though the evidence is debated.",
+     "fb": "Correct.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "Are definitely identical.",
+     "fb": "No.",
+     "ok": false
+    },
+    {
+     "id": "c",
+     "text": "Have nothing to do with each other.",
+     "fb": "No. They usually go together.",
+     "ok": false
+    }
+   ],
+   "explain": "The claim is that they can come apart, with contested evidence.",
+   "lessonId": "C001-L04",
+   "courseId": "C001"
+  },
+  {
+   "id": "C001-L04-a3",
+   "type": "mc",
+   "kind": "Theory comparison",
+   "objective": 2,
+   "prompt": "Which pairing correctly states how a theory in the Theory Chamber relates attention to awareness?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Attention Schema Theory: awareness is the brain's simplified model of its own attention.",
+     "fb": "Correct. This is how the theory is summarised by its proponents.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "Attention Schema Theory: awareness is irrelevant to attention.",
+     "fb": "No. The theory ties the two together.",
+     "ok": false
+    },
+    {
+     "id": "c",
+     "text": "Global Neuronal Workspace Theory: awareness is a simplified model of attention.",
+     "fb": "No. That describes Attention Schema Theory, not GNWT.",
+     "ok": false
+    }
+   ],
+   "explain": "Different theories relate the two in different ways.",
+   "lessonId": "C001-L04",
+   "courseId": "C001"
+  },
+  {
+   "id": "C001-L04-r",
+   "type": "reflect",
+   "kind": "Reflection (not graded)",
+   "objective": 1,
+   "prompt": "Explain why 'awareness requires attention' is a stronger claim than 'awareness and attention usually go together'.",
+   "points": [
+    "Identifies that 'usually' allows exceptions while 'requires' does not.",
+    "Notes that one counterexample would challenge the stronger claim.",
+    "Mentions that the counterexamples are themselves disputed."
+   ],
+   "criteria": [
+    "Did you point to what evidence would challenge each claim?"
+   ],
+   "lessonId": "C001-L04",
+   "courseId": "C001"
+  },
+  {
+   "id": "C001-L05-a1",
+   "type": "mc",
+   "kind": "Comprehension check",
+   "objective": 0,
+   "prompt": "What does 'neural correlate of consciousness' name?",
+   "options": [
+    {
+     "id": "a",
+     "text": "A pattern of brain activity that accompanies a particular conscious experience.",
+     "fb": "Correct. The term does not claim to explain how the experience arises.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "The part of the brain that creates consciousness.",
+     "fb": "No. That claim goes beyond what the term says.",
+     "ok": false
+    },
+    {
+     "id": "c",
+     "text": "A device that measures consciousness.",
+     "fb": "No.",
+     "ok": false
+    }
+   ],
+   "explain": "It names an accompanying pattern, not a cause.",
+   "lessonId": "C001-L05",
+   "courseId": "C001"
+  },
+  {
+   "id": "C001-L05-a2",
+   "type": "ms",
+   "kind": "Limitation check",
+   "objective": 2,
+   "prompt": "Select the reasons that correlation with reported awareness may not identify the basis of experience.",
+   "options": [
+    {
+     "id": "a",
+     "text": "The activity might be a prerequisite for experience rather than the experience itself.",
+     "fb": "Yes.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "The activity might be a consequence of experience, such as preparing to report.",
+     "fb": "Yes.",
+     "ok": true
+    },
+    {
+     "id": "c",
+     "text": "Scientists have no way to record brain activity.",
+     "fb": "No. Several methods exist.",
+     "ok": false
+    },
+    {
+     "id": "d",
+     "text": "Different theories can interpret the same data differently.",
+     "fb": "Yes.",
+     "ok": true
+    }
+   ],
+   "explain": "Association leaves open prerequisite, consequence and interpretation.",
+   "lessonId": "C001-L05",
+   "courseId": "C001"
+  },
+  {
+   "id": "C001-L05-a3",
+   "type": "mc",
+   "kind": "Research scenario",
+   "objective": 1,
+   "prompt": "An adversarial collaboration agrees in advance what results would count against each theory. What is the main benefit?",
+   "options": [
+    {
+     "id": "a",
+     "text": "It reduces the chance that each side reads ambiguous results as support for itself.",
+     "fb": "Correct. Pre-agreed predictions make interpretation harder to bend.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "It guarantees the correct theory will be found.",
+     "fb": "No. It improves a test; it does not guarantee a winner.",
+     "ok": false
+    },
+    {
+     "id": "c",
+     "text": "It removes the need for brain recording.",
+     "fb": "No.",
+     "ok": false
+    }
+   ],
+   "explain": "The design limits post-hoc interpretation.",
+   "lessonId": "C001-L05",
+   "courseId": "C001"
+  },
+  {
+   "id": "C001-L05-r",
+   "type": "reflect",
+   "kind": "Reflection (not graded)",
+   "objective": 1,
+   "prompt": "Write two sentences: one on what an NCC finding can tell us, and one on what it cannot.",
+   "points": [
+    "Can tell: which brain activity accompanies reported experience.",
+    "Cannot (alone): which activity produces experience, or why.",
+    "Notes interpretation depends on assumptions."
+   ],
+   "criteria": [
+    "Did you avoid saying correlation shows cause?"
+   ],
+   "lessonId": "C001-L05",
+   "courseId": "C001"
+  },
+  {
+   "id": "C001-L06-a1",
+   "type": "match",
+   "kind": "Theory comparison",
+   "objective": 0,
+   "prompt": "Match each theory to its core idea.",
+   "pairs": [
+    [
+     "Global Neuronal Workspace Theory",
+     "Information amplified and broadcast across a network"
+    ],
+    [
+     "Attention Schema Theory",
+     "Awareness as a model of attention"
+    ],
+    [
+     "Recurrent Processing Theory",
+     "Feedback activity in sensory areas"
+    ]
+   ],
+   "extra": [
+    "Consciousness depends only on behaviour"
+   ],
+   "explain": "These summaries follow the Theory Chamber's descriptions.",
+   "lessonId": "C001-L06",
+   "courseId": "C001"
+  },
+  {
+   "id": "C001-L06-a2",
+   "type": "mc",
+   "kind": "Comprehension check",
+   "objective": 2,
+   "prompt": "Why does the existence of many theories matter for how to read claims about consciousness?",
+   "options": [
+    {
+     "id": "a",
+     "text": "It shows there is no agreed explanation, so confident claims that one theory is settled deserve scrutiny.",
+     "fb": "Correct.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "It shows consciousness does not exist.",
+     "fb": "No. Disagreement about explanation does not remove the phenomenon.",
+     "ok": false
+    },
+    {
+     "id": "c",
+     "text": "It shows all theories are equally good.",
+     "fb": "No. Evidence can favour some claims over others even when the field is unsettled.",
+     "ok": false
+    }
+   ],
+   "explain": "Unsettled field, so check the strength of any claim.",
+   "lessonId": "C001-L06",
+   "courseId": "C001"
+  },
+  {
+   "id": "C001-L06-a3",
+   "type": "mc",
+   "kind": "Interpretation check",
+   "objective": 1,
+   "prompt": "A news report says a theory was 'slammed as bogus science' in an open letter. What does the report show?",
+   "options": [
+    {
+     "id": "a",
+     "text": "That a dispute exists. It is not itself a finding about the theory's truth.",
+     "fb": "Correct. The report is secondary and the dispute is part of the field.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "That the theory has been disproved.",
+     "fb": "No. A letter is an argument, not an experiment.",
+     "ok": false
+    },
+    {
+     "id": "c",
+     "text": "That the theory is accepted by all scientists.",
+     "fb": "No. The opposite is suggested.",
+     "ok": false
+    }
+   ],
+   "explain": "The source record advises treating it as evidence of a dispute, not a finding.",
+   "lessonId": "C001-L06",
+   "courseId": "C001"
+  },
+  {
+   "id": "C001-L06-r",
+   "type": "reflect",
+   "kind": "Reflection (not graded)",
+   "objective": 1,
+   "prompt": "Choose two theories and say, in a few sentences, what they treat as the key ingredient of consciousness.",
+   "points": [
+    "States each theory's key ingredient accurately.",
+    "Notes how the ingredients differ.",
+    "Avoids saying which is right."
+   ],
+   "criteria": [
+    "Did you describe each theory in terms its proponents would accept?"
+   ],
+   "lessonId": "C001-L06",
+   "courseId": "C001"
+  },
+  {
+   "id": "C001-L07-a1",
+   "type": "mc",
+   "kind": "Comprehension check",
+   "objective": 0,
+   "prompt": "Which of these is presented as unresolved?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Whether consciousness can be measured objectively.",
+     "fb": "Correct. It appears among the Archive's open questions.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "Whether the brain exists.",
+     "fb": "No.",
+     "ok": false
+    },
+    {
+     "id": "c",
+     "text": "Whether people use the word consciousness.",
+     "fb": "No.",
+     "ok": false
+    }
+   ],
+   "explain": "Measurement and necessary neural processes remain open.",
+   "lessonId": "C001-L07",
+   "courseId": "C001"
+  },
+  {
+   "id": "C001-L07-a2",
+   "type": "mc",
+   "kind": "Limitation check",
+   "objective": 2,
+   "prompt": "Why is a language model's statement 'I am conscious' weak evidence?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Such systems can generate fluent statements about experience from patterns in human language whether or not there is experience.",
+     "fb": "Correct.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "Machines cannot produce statements.",
+     "fb": "No.",
+     "ok": false
+    },
+    {
+     "id": "c",
+     "text": "Humans never make false statements about experience.",
+     "fb": "No, and that is not the point.",
+     "ok": false
+    }
+   ],
+   "explain": "The same output would be expected either way.",
+   "lessonId": "C001-L07",
+   "courseId": "C001"
+  },
+  {
+   "id": "C001-L07-a3",
+   "type": "ms",
+   "kind": "Source reading",
+   "objective": 2,
+   "prompt": "Select statements that accurately describe the indicator-property approach to AI consciousness described in the lesson.",
+   "options": [
+    {
+     "id": "a",
+     "text": "It checks AI systems against properties drawn from scientific theories of consciousness.",
+     "fb": "Yes.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "The authors report that no current system was a strong candidate.",
+     "fb": "Yes, according to the abstract.",
+     "ok": true
+    },
+    {
+     "id": "c",
+     "text": "It proves that machines can never be conscious.",
+     "fb": "No. It does not claim that.",
+     "ok": false
+    },
+    {
+     "id": "d",
+     "text": "It depends on the theories it draws from, which are themselves contested.",
+     "fb": "Yes. This is a limitation.",
+     "ok": true
+    }
+   ],
+   "explain": "The approach is useful and conditional.",
+   "lessonId": "C001-L07",
+   "courseId": "C001"
+  },
+  {
+   "id": "C001-L07-r",
+   "type": "reflect",
+   "kind": "Reflection (not graded)",
+   "objective": 2,
+   "prompt": "Write a short paragraph on why 'we do not know' can be a responsible answer to a question about machine consciousness.",
+   "points": [
+    "Explains that evidence and theory are unsettled.",
+    "Distinguishes 'unknown' from 'no'.",
+    "Mentions that overclaiming in either direction is a risk."
+   ],
+   "criteria": [
+    "Did you avoid both overclaiming and dismissal?"
+   ],
+   "lessonId": "C001-L07",
+   "courseId": "C001"
+  },
+  {
+   "id": "C001-L08-a1",
+   "type": "mc",
+   "kind": "Research scenario",
+   "objective": 1,
+   "prompt": "A headline says 'Scientists prove where consciousness lives'. Which first question from the checklist is most useful?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Which sense of consciousness, what was measured, and does the evidence support the strength of the claim?",
+     "fb": "Correct.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "Is the headline well written?",
+     "fb": "Style does not test the claim.",
+     "ok": false
+    },
+    {
+     "id": "c",
+     "text": "Has anyone shared it online?",
+     "fb": "Popularity is not evidence.",
+     "ok": false
+    }
+   ],
+   "explain": "The checklist focuses on sense, measurement and strength.",
+   "lessonId": "C001-L08",
+   "courseId": "C001"
+  },
+  {
+   "id": "C001-L08-a2",
+   "type": "ms",
+   "kind": "Course summary",
+   "objective": 0,
+   "prompt": "Select statements consistent with this course.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Consciousness has several senses that should be kept apart.",
+     "fb": "Yes.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "Report is evidence about experience but is not identical to it.",
+     "fb": "Yes.",
+     "ok": true
+    },
+    {
+     "id": "c",
+     "text": "A single theory has been accepted by all researchers.",
+     "fb": "No.",
+     "ok": false
+    },
+    {
+     "id": "d",
+     "text": "Open questions should be presented as open.",
+     "fb": "Yes.",
+     "ok": true
+    }
+   ],
+   "explain": "These summarise the course's main points.",
+   "lessonId": "C001-L08",
+   "courseId": "C001"
+  },
+  {
+   "id": "C001-L08-a3",
+   "type": "mc",
+   "kind": "Comprehension check",
+   "objective": 2,
+   "prompt": "Why does consciousness remain an active area of investigation?",
+   "options": [
+    {
+     "id": "a",
+     "text": "There is no agreed explanation, and methods for testing theories are still developing.",
+     "fb": "Correct.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "Nobody has studied it.",
+     "fb": "No. It is extensively studied.",
+     "ok": false
+    },
+    {
+     "id": "c",
+     "text": "It has been fully solved.",
+     "fb": "No.",
+     "ok": false
+    }
+   ],
+   "explain": "Active because unsettled and under test.",
+   "lessonId": "C001-L08",
+   "courseId": "C001"
+  },
+  {
+   "id": "C001-L08-r",
+   "type": "reflect",
+   "kind": "Final reflection (not graded)",
+   "objective": 2,
+   "prompt": "Use the checklist on a claim about consciousness that you have recently read or heard. Write what you found.",
+   "points": [
+    "Identifies the sense of consciousness.",
+    "Separates evidence from interpretation.",
+    "States what would change your mind."
+   ],
+   "criteria": [
+    "Did you say what would count against the claim?"
+   ],
+   "lessonId": "C001-L08",
+   "courseId": "C001"
+  },
+  {
+   "id": "C002-L01-a1",
+   "type": "mc",
+   "kind": "Comprehension check",
+   "objective": 0,
+   "prompt": "Which statement best describes how the term 'artificial intelligence' is used?",
+   "options": [
+    {
+     "id": "a",
+     "text": "It names a research field and also the systems it produces, using many different methods.",
+     "fb": "Correct.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "It names one specific algorithm.",
+     "fb": "No.",
+     "ok": false
+    },
+    {
+     "id": "c",
+     "text": "It names only systems that think like humans.",
+     "fb": "No. Many AI systems are narrow and do not claim to think like people.",
+     "ok": false
+    }
+   ],
+   "explain": "AI is a field with several traditions.",
+   "lessonId": "C002-L01",
+   "courseId": "C002"
+  },
+  {
+   "id": "C002-L01-a2",
+   "type": "mc",
+   "kind": "Interpretation check",
+   "objective": 1,
+   "prompt": "Why might two researchers disagree about whether a system is 'intelligent'?",
+   "options": [
+    {
+     "id": "a",
+     "text": "They may be using different definitions of intelligence.",
+     "fb": "Correct. The definition shapes the test.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "One of them must be mistaken about the facts.",
+     "fb": "Not necessarily. The facts can be agreed while the definition differs.",
+     "ok": false
+    },
+    {
+     "id": "c",
+     "text": "Intelligence is not a topic anyone can discuss.",
+     "fb": "No.",
+     "ok": false
+    }
+   ],
+   "explain": "Disagreement can be about the definition, not the facts.",
+   "lessonId": "C002-L01",
+   "courseId": "C002"
+  },
+  {
+   "id": "C002-L01-a3",
+   "type": "ms",
+   "kind": "Comprehension check",
+   "objective": 2,
+   "prompt": "Select the systems that the lesson implies are all called AI despite working differently.",
+   "options": [
+    {
+     "id": "a",
+     "text": "A spam filter",
+     "fb": "Yes.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "A chess engine",
+     "fb": "Yes.",
+     "ok": true
+    },
+    {
+     "id": "c",
+     "text": "A chatbot",
+     "fb": "Yes.",
+     "ok": true
+    },
+    {
+     "id": "d",
+     "text": "A calculator that adds numbers",
+     "fb": "Not discussed as AI here. Ordinary software is not usually called AI.",
+     "ok": false
+    }
+   ],
+   "explain": "The label covers varied methods.",
+   "lessonId": "C002-L01",
+   "courseId": "C002"
+  },
+  {
+   "id": "C002-L01-r",
+   "type": "reflect",
+   "kind": "Reflection (not graded)",
+   "objective": 0,
+   "prompt": "Why might a news article that says 'AI decided' be too vague to evaluate?",
+   "points": [
+    "Notes that AI covers many different systems.",
+    "Asks which system, trained on what, doing what.",
+    "Mentions that decisions involve people and design choices."
+   ],
+   "criteria": [
+    "Did you ask what kind of system was involved?"
+   ],
+   "lessonId": "C002-L01",
+   "courseId": "C002"
+  },
+  {
+   "id": "C002-L02-a1",
+   "type": "mc",
+   "kind": "Comprehension check",
+   "objective": 0,
+   "prompt": "Which event is generally treated as the naming moment of the field?",
+   "options": [
+    {
+     "id": "a",
+     "text": "The 1955 Dartmouth proposal.",
+     "fb": "Correct.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "The 2017 transformer paper.",
+     "fb": "No. That is much later.",
+     "ok": false
+    },
+    {
+     "id": "c",
+     "text": "The 1986 back-propagation paper.",
+     "fb": "No.",
+     "ok": false
+    }
+   ],
+   "explain": "The Dartmouth proposal used the phrase.",
+   "lessonId": "C002-L02",
+   "courseId": "C002"
+  },
+  {
+   "id": "C002-L02-a2",
+   "type": "mc",
+   "kind": "Interpretation check",
+   "objective": 1,
+   "prompt": "What is a key difference between rule-based and learning-based approaches?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Rule-based systems follow knowledge written down by people, learning systems adjust from examples.",
+     "fb": "Correct.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "Learning systems never use rules.",
+     "fb": "No. The distinction is about where the behaviour comes from.",
+     "ok": false
+    },
+    {
+     "id": "c",
+     "text": "Rule-based systems are always more accurate.",
+     "fb": "No.",
+     "ok": false
+    }
+   ],
+   "explain": "Where behaviour comes from differs.",
+   "lessonId": "C002-L02",
+   "courseId": "C002"
+  },
+  {
+   "id": "C002-L02-a3",
+   "type": "mc",
+   "kind": "Limitation check",
+   "objective": 2,
+   "prompt": "A commentator says AI history shows a straight line to human-level minds. Which response is best supported by the lesson?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Different approaches succeeded at different tasks; the path to general intelligence is an open question.",
+     "fb": "Correct.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "They are certainly right.",
+     "fb": "The lesson does not support this.",
+     "ok": false
+    },
+    {
+     "id": "c",
+     "text": "History has no relevance.",
+     "fb": "No. History helps you judge such claims.",
+     "ok": false
+    }
+   ],
+   "explain": "The record is varied, not linear.",
+   "lessonId": "C002-L02",
+   "courseId": "C002"
+  },
+  {
+   "id": "C002-L02-r",
+   "type": "reflect",
+   "kind": "Reflection (not graded)",
+   "objective": 2,
+   "prompt": "Explain one reason to be careful when someone says a new AI method is a 'breakthrough'.",
+   "points": [
+    "Notes that results may be task-specific.",
+    "Mentions earlier cycles of enthusiasm.",
+    "Suggests checking what was actually tested."
+   ],
+   "criteria": [
+    "Did you name what to check?"
+   ],
+   "lessonId": "C002-L02",
+   "courseId": "C002"
+  },
+  {
+   "id": "C002-L03-a1",
+   "type": "mc",
+   "kind": "Comprehension check",
+   "objective": 0,
+   "prompt": "Which set lists the ingredients of a machine learning system?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Data, a model with adjustable parameters, a measure of error, and a procedure to reduce it.",
+     "fb": "Correct.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "A list of rules written by an expert and nothing else.",
+     "fb": "That describes a rule-based system.",
+     "ok": false
+    },
+    {
+     "id": "c",
+     "text": "Only a very large computer.",
+     "fb": "Computing power helps but is not the whole system.",
+     "ok": false
+    }
+   ],
+   "explain": "Data, model, error measure, adjustment.",
+   "lessonId": "C002-L03",
+   "courseId": "C002"
+  },
+  {
+   "id": "C002-L03-a2",
+   "type": "mc",
+   "kind": "Interpretation check",
+   "objective": 1,
+   "prompt": "A model has zero error on its training data but high error on the test set. What is the likely explanation?",
+   "options": [
+    {
+     "id": "a",
+     "text": "It has overfit: it fits noise in the training data and does not generalise.",
+     "fb": "Correct.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "It has learned perfectly.",
+     "fb": "No. Test error shows it has not generalised.",
+     "ok": false
+    },
+    {
+     "id": "c",
+     "text": "The test set is irrelevant.",
+     "fb": "No. The test set is the check.",
+     "ok": false
+    }
+   ],
+   "explain": "Low training error with high test error indicates overfitting.",
+   "lessonId": "C002-L03",
+   "courseId": "C002"
+  },
+  {
+   "id": "C002-L03-a3",
+   "type": "match",
+   "kind": "Concept matching",
+   "objective": 2,
+   "prompt": "Match each kind of learning to its description.",
+   "pairs": [
+    [
+     "Supervised learning",
+     "Learns from examples with right answers"
+    ],
+    [
+     "Unsupervised learning",
+     "Looks for structure without labels"
+    ],
+    [
+     "Reinforcement learning",
+     "Learns from rewards after acting"
+    ]
+   ],
+   "extra": [
+    "Learns without any data"
+   ],
+   "explain": "These are the three standard families.",
+   "lessonId": "C002-L03",
+   "courseId": "C002"
+  },
+  {
+   "id": "C002-L03-r",
+   "type": "reflect",
+   "kind": "Reflection (not graded)",
+   "objective": 1,
+   "prompt": "Why should a system be tested on data it was not trained on?",
+   "points": [
+    "Explains that training data performance can be misleading.",
+    "Mentions generalisation.",
+    "Gives an example where leaked test data inflates results."
+   ],
+   "criteria": [
+    "Did you explain what could go wrong without a test set?"
+   ],
+   "lessonId": "C002-L03",
+   "courseId": "C002"
+  },
+  {
+   "id": "C002-L04-a1",
+   "type": "mc",
+   "kind": "Comprehension check",
+   "objective": 0,
+   "prompt": "Where is a trained network's behaviour stored?",
+   "options": [
+    {
+     "id": "a",
+     "text": "In its weights, adjusted during training.",
+     "fb": "Correct.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "In a list of human-readable rules.",
+     "fb": "No.",
+     "ok": false
+    },
+    {
+     "id": "c",
+     "text": "In a single special unit.",
+     "fb": "No.",
+     "ok": false
+    }
+   ],
+   "explain": "Weights carry what was learned.",
+   "lessonId": "C002-L04",
+   "courseId": "C002"
+  },
+  {
+   "id": "C002-L04-a2",
+   "type": "mc",
+   "kind": "Interpretation check",
+   "objective": 2,
+   "prompt": "In the demonstration, a network with no hidden layer cannot learn XOR. Why?",
+   "options": [
+    {
+     "id": "a",
+     "text": "A single layer can only separate inputs with a straight boundary, and XOR needs more.",
+     "fb": "Correct.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "XOR is too large a task.",
+     "fb": "No. It is tiny. The limit is in what one layer can represent.",
+     "ok": false
+    },
+    {
+     "id": "c",
+     "text": "It was not trained long enough.",
+     "fb": "Longer training does not fix a representational limit.",
+     "ok": false
+    }
+   ],
+   "explain": "Representational limit, not training time.",
+   "lessonId": "C002-L04",
+   "courseId": "C002"
+  },
+  {
+   "id": "C002-L04-a3",
+   "type": "mc",
+   "kind": "Limitation check",
+   "objective": 1,
+   "prompt": "Which statement about learning in neural networks is accurate?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Training adjusts weights to reduce error on examples.",
+     "fb": "Correct.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "Training copies the brain's wiring.",
+     "fb": "No.",
+     "ok": false
+    },
+    {
+     "id": "c",
+     "text": "Training gives the network consciousness.",
+     "fb": "No. Nothing in the method implies this.",
+     "ok": false
+    }
+   ],
+   "explain": "Training is error-driven weight adjustment.",
+   "lessonId": "C002-L04",
+   "courseId": "C002"
+  },
+  {
+   "id": "C002-L04-r",
+   "type": "reflect",
+   "kind": "Reflection (not graded)",
+   "objective": 1,
+   "prompt": "In your own words, describe how a network improves from its mistakes.",
+   "points": [
+    "Mentions comparing output to the right answer.",
+    "Mentions adjusting weights to reduce error.",
+    "Mentions repetition over many examples."
+   ],
+   "criteria": [
+    "Did you describe the loop of predict, compare, adjust?"
+   ],
+   "lessonId": "C002-L04",
+   "courseId": "C002"
+  },
+  {
+   "id": "C002-L05-a1",
+   "type": "mc",
+   "kind": "Comprehension check",
+   "objective": 0,
+   "prompt": "What does a language model fundamentally do?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Predicts the probability of the next token given the preceding text.",
+     "fb": "Correct.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "Looks up the true answer in a database.",
+     "fb": "Not by default. Some systems add retrieval, but prediction is the core mechanism.",
+     "ok": false
+    },
+    {
+     "id": "c",
+     "text": "Thinks about the meaning of each word as a human does.",
+     "fb": "This claim goes beyond what the mechanism shows and is disputed.",
+     "ok": false
+    }
+   ],
+   "explain": "Next-token prediction is the core mechanism.",
+   "lessonId": "C002-L05",
+   "courseId": "C002"
+  },
+  {
+   "id": "C002-L05-a2",
+   "type": "ms",
+   "kind": "Limitation check",
+   "objective": 2,
+   "prompt": "Select the reasons that fluent output from a language model can mislead.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Training aims at plausible text, not verified truth.",
+     "fb": "Yes.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "A model can state falsehoods confidently.",
+     "fb": "Yes.",
+     "ok": true
+    },
+    {
+     "id": "c",
+     "text": "Fluent text is always accurate.",
+     "fb": "No.",
+     "ok": false
+    },
+    {
+     "id": "d",
+     "text": "People tend to read fluent writing as evidence of understanding.",
+     "fb": "Yes. This tendency is part of the concern critics raise.",
+     "ok": true
+    }
+   ],
+   "explain": "Fluency and accuracy come apart.",
+   "lessonId": "C002-L05",
+   "courseId": "C002"
+  },
+  {
+   "id": "C002-L05-a3",
+   "type": "mc",
+   "kind": "Comprehension check",
+   "objective": 1,
+   "prompt": "What is the role of human feedback in training an assistant-style model?",
+   "options": [
+    {
+     "id": "a",
+     "text": "It shapes the model towards answers people judge better.",
+     "fb": "Correct.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "It makes the model conscious.",
+     "fb": "No.",
+     "ok": false
+    },
+    {
+     "id": "c",
+     "text": "It removes the need for any other training.",
+     "fb": "No. It follows earlier training.",
+     "ok": false
+    }
+   ],
+   "explain": "Feedback steers behaviour.",
+   "lessonId": "C002-L05",
+   "courseId": "C002"
+  },
+  {
+   "id": "C002-L05-r",
+   "type": "reflect",
+   "kind": "Reflection (not graded)",
+   "objective": 2,
+   "prompt": "Explain the difference between a system that produces fitting text and one that understands. Say what evidence might distinguish them.",
+   "points": [
+    "States that fitting output alone is compatible with both.",
+    "Suggests tests beyond fluent conversation.",
+    "Notes that the question is debated."
+   ],
+   "criteria": [
+    "Did you propose evidence, not just assert a view?"
+   ],
+   "lessonId": "C002-L05",
+   "courseId": "C002"
+  },
+  {
+   "id": "C002-L06-a1",
+   "type": "mc",
+   "kind": "Comprehension check",
+   "objective": 0,
+   "prompt": "What is a benchmark?",
+   "options": [
+    {
+     "id": "a",
+     "text": "A standard set of tasks with agreed scoring used to compare systems.",
+     "fb": "Correct.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "A proof that a system is intelligent.",
+     "fb": "No.",
+     "ok": false
+    },
+    {
+     "id": "c",
+     "text": "A kind of neural network.",
+     "fb": "No.",
+     "ok": false
+    }
+   ],
+   "explain": "A benchmark is a shared test.",
+   "lessonId": "C002-L06",
+   "courseId": "C002"
+  },
+  {
+   "id": "C002-L06-a2",
+   "type": "ms",
+   "kind": "Limitation check",
+   "objective": 1,
+   "prompt": "Select reasons that a high benchmark score may overstate ability.",
+   "options": [
+    {
+     "id": "a",
+     "text": "The test may overlap with training data.",
+     "fb": "Yes.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "The model may exploit shortcuts.",
+     "fb": "Yes.",
+     "ok": true
+    },
+    {
+     "id": "c",
+     "text": "The benchmark's name may promise more than it measures.",
+     "fb": "Yes.",
+     "ok": true
+    },
+    {
+     "id": "d",
+     "text": "A high score always proves general ability.",
+     "fb": "No.",
+     "ok": false
+    }
+   ],
+   "explain": "Scores are evidence with known weaknesses.",
+   "lessonId": "C002-L06",
+   "courseId": "C002"
+  },
+  {
+   "id": "C002-L06-a3",
+   "type": "mc",
+   "kind": "Interpretation check",
+   "objective": 2,
+   "prompt": "What does the lesson say about the debate over understanding in language models?",
+   "options": [
+    {
+     "id": "a",
+     "text": "It is unresolved, in part because there is no agreed account of understanding.",
+     "fb": "Correct.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "It was settled in favour of one side.",
+     "fb": "No.",
+     "ok": false
+    },
+    {
+     "id": "c",
+     "text": "It is meaningless.",
+     "fb": "No.",
+     "ok": false
+    }
+   ],
+   "explain": "The debate is open.",
+   "lessonId": "C002-L06",
+   "courseId": "C002"
+  },
+  {
+   "id": "C002-L06-r",
+   "type": "reflect",
+   "kind": "Reflection (not graded)",
+   "objective": 1,
+   "prompt": "Pick a benchmark you have heard of. What ability does it claim to measure, and how might a system score well without having that ability?",
+   "points": [
+    "Names the claimed ability.",
+    "Describes a plausible shortcut.",
+    "Suggests a better check."
+   ],
+   "criteria": [
+    "Did you separate the label from the skill?"
+   ],
+   "lessonId": "C002-L06",
+   "courseId": "C002"
+  },
+  {
+   "id": "C002-L07-a1",
+   "type": "mc",
+   "kind": "Comprehension check",
+   "objective": 0,
+   "prompt": "Why are intelligence and consciousness treated as different questions?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Capability can be measured by tasks; experience cannot be read off from task performance.",
+     "fb": "Correct.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "Because they are the same thing.",
+     "fb": "No.",
+     "ok": false
+    },
+    {
+     "id": "c",
+     "text": "Because machines are always conscious.",
+     "fb": "No.",
+     "ok": false
+    }
+   ],
+   "explain": "Different kinds of evidence are involved.",
+   "lessonId": "C002-L07",
+   "courseId": "C002"
+  },
+  {
+   "id": "C002-L07-a2",
+   "type": "mc",
+   "kind": "Interpretation check",
+   "objective": 1,
+   "prompt": "What does Searle's Chinese Room argue?",
+   "options": [
+    {
+     "id": "a",
+     "text": "That running a program is not by itself sufficient for understanding.",
+     "fb": "Correct. The argument is contested.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "That no machine could ever do anything intelligent.",
+     "fb": "No.",
+     "ok": false
+    },
+    {
+     "id": "c",
+     "text": "That all humans fail to understand.",
+     "fb": "No.",
+     "ok": false
+    }
+   ],
+   "explain": "The target is sufficiency of running a program.",
+   "lessonId": "C002-L07",
+   "courseId": "C002"
+  },
+  {
+   "id": "C002-L07-a3",
+   "type": "mc",
+   "kind": "Source reading",
+   "objective": 2,
+   "prompt": "The indicator-property approach to AI consciousness is best described as…",
+   "options": [
+    {
+     "id": "a",
+     "text": "A way to assess systems against properties drawn from scientific theories, whose conclusions depend on those theories.",
+     "fb": "Correct.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "A proof that current systems are conscious.",
+     "fb": "No.",
+     "ok": false
+    },
+    {
+     "id": "c",
+     "text": "A test for intelligence.",
+     "fb": "No.",
+     "ok": false
+    }
+   ],
+   "explain": "It is conditional on its theories.",
+   "lessonId": "C002-L07",
+   "courseId": "C002"
+  },
+  {
+   "id": "C002-L07-r",
+   "type": "reflect",
+   "kind": "Reflection (not graded)",
+   "objective": 1,
+   "prompt": "Write a short response to the claim 'If it talks like it understands, it understands.'",
+   "points": [
+    "Explains that behaviour is evidence but may not settle the question.",
+    "Mentions at least one competing view.",
+    "Notes the lack of consensus."
+   ],
+   "criteria": [
+    "Did you acknowledge the strongest version of the opposing view?"
+   ],
+   "lessonId": "C002-L07",
+   "courseId": "C002"
+  },
+  {
+   "id": "C002-L08-a1",
+   "type": "ms",
+   "kind": "Comprehension check",
+   "objective": 0,
+   "prompt": "Select limitations or risks named in this lesson.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Inaccuracy",
+     "fb": "Yes.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "Worse performance for groups under-represented in the data",
+     "fb": "Yes.",
+     "ok": true
+    },
+    {
+     "id": "c",
+     "text": "Privacy concerns",
+     "fb": "Yes.",
+     "ok": true
+    },
+    {
+     "id": "d",
+     "text": "Machines never make errors",
+     "fb": "No.",
+     "ok": false
+    }
+   ],
+   "explain": "These are standard concerns.",
+   "lessonId": "C002-L08",
+   "courseId": "C002"
+  },
+  {
+   "id": "C002-L08-a2",
+   "type": "mc",
+   "kind": "Comprehension check",
+   "objective": 1,
+   "prompt": "What is a risk management framework for?",
+   "options": [
+    {
+     "id": "a",
+     "text": "To give organisations a structured way to identify, assess and reduce harms.",
+     "fb": "Correct.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "To guarantee a system is safe.",
+     "fb": "No, it does not guarantee safety.",
+     "ok": false
+    },
+    {
+     "id": "c",
+     "text": "To make AI conscious.",
+     "fb": "No.",
+     "ok": false
+    }
+   ],
+   "explain": "A framework structures the work; it is not a guarantee.",
+   "lessonId": "C002-L08",
+   "courseId": "C002"
+  },
+  {
+   "id": "C002-L08-a3",
+   "type": "mc",
+   "kind": "Research scenario",
+   "objective": 2,
+   "prompt": "Which question is listed as open?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Whether an artificial system could deserve moral consideration, and under what conditions.",
+     "fb": "Correct.",
+     "ok": true
+    },
+    {
+     "id": "b",
+     "text": "Whether AI exists.",
+     "fb": "No.",
+     "ok": false
+    },
+    {
+     "id": "c",
+     "text": "Whether people have used AI.",
+     "fb": "No.",
+     "ok": false
+    }
+   ],
+   "explain": "This is in the Unanswered Archive.",
+   "lessonId": "C002-L08",
+   "courseId": "C002"
+  },
+  {
+   "id": "C002-L08-r",
+   "type": "reflect",
+   "kind": "Final reflection (not graded)",
+   "objective": 2,
+   "prompt": "Write a short account of one thing you understand about AI that you did not before, and one question that remains.",
+   "points": [
+    "Names a specific idea from the course.",
+    "Raises a question that is open, not already settled.",
+    "Connects to evidence or a source."
+   ],
+   "criteria": [
+    "Did you identify a question that cannot be answered by looking something up?"
+   ],
+   "lessonId": "C002-L08",
+   "courseId": "C002"
+  }
+ ]
+}

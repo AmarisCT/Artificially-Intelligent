@@ -216,6 +216,10 @@ def make():
     (OUTPUT / "manifest.json").write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     urls = [SITE, SITE + "intelligence-index/", SITE + "interactives/consciousness-map.html",
             SITE + "research/published/", SITE + "research-atlas/", SITE + "theory-chamber/", SITE + "museum/", SITE + "unanswered-archive/", SITE + "research-observatory/", SITE + "search/", SITE + "inquiry-engine/", SITE + "lexicon/"] + [x["url"] for x in articles]
+    li_urls = ROOT / "learning-institute" / "data" / "sitemap-urls.json"
+    if li_urls.exists():
+        # published Learning Institute pages only (the list is written from the published courses; planned courses are never in it)
+        urls += [u for u in json.loads(li_urls.read_text(encoding="utf-8")) if u not in urls]
     ns = "http://www.sitemaps.org/schemas/sitemap/0.9"
     ET.register_namespace("", ns)
     urlset = ET.Element("{" + ns + "}urlset")

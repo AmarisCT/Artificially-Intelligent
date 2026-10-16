@@ -131,7 +131,8 @@ CONCEPT_SUBJECT = {
 }
 CATEGORY_SUBJECT = {"human": "Consciousness", "ai": "Artificial Intelligence", "neuro": "Neuroscience", "mind": "Philosophy", "memory": "Memory", "ethics": "Ethics"}
 SOURCE_TYPE = {"article": "Original essay", "source": "External publication", "question": "Site research record", "theory": "Site research record",
-               "comparison": "Site research record", "concept": "Site research record", "museum": "Site research record"}
+               "comparison": "Site research record", "concept": "Site research record", "museum": "Site research record",
+               "course": "Learning Institute", "lesson": "Learning Institute"}
 
 STOPW = set("a an the of to in on at for and or is are was were be been it its that this with by as from into than then there their they them not no if so such very more most also just which who what when where how why can could would should do does did has have had but about over under between through during while these those his her our your you we i".split())
 
@@ -209,6 +210,8 @@ def enrich(res, vocab, root, uq, theories, manifest, today):
             r["hasFullText"] = bool(body)
         elif r["type"] == "source":
             body = " ".join([r.get("summary") or "", (r.get("limitations") or "")])
+        elif r["type"] in ("course", "lesson"):
+            body = r.pop("_body", "")
         if body:
             r["body"] = body_terms(body)
 
@@ -460,6 +463,25 @@ def build(root: pathlib.Path, atlas_path: pathlib.Path):
              "attribution": "Artificially Intelligent (original essay)", "reviewStatus": "Published essay; topic tags are editorial",
              "topicSource": a.get("topicSource"), "deskKey": None})
 
+    # ---------------- Learning Institute (published courses and their lessons only) ----------------
+    li = root / "learning-institute" / "data"
+    if (li / "courses.json").exists() and (li / "lessons.json").exists():
+        lcourses = [c for c in load(li / "courses.json")["items"] if c.get("status") == "published"]
+        lessons_all = load(li / "lessons.json")["items"]
+        for c in lcourses:
+            ls = [l for l in lessons_all if l["courseId"] == c["id"]]
+            conc = sorted({a for l in ls for a in l["connections"].get("atlas", [])})
+            add({"id": f"course:{c['id']}", "type": "course", "title": c["title"], "summary": clip(c["description"], 420), "concepts": conc,
+                 "url": f"{SITE}learning-institute/#course-{c['id']}", "date": c.get("reviewed"), "level": c["level"], "minutes": c["minutes"], "lessonCount": len(ls),
+                 "objectives": c["objectives"], "attribution": "The Learning Institute", "reviewStatus": c.get("reviewStatus"), "deskKey": f"course:{c['id']}",
+                 "_body": " ".join(c["objectives"] + [c["question"]] + [l["title"] for l in ls])})
+            for l in ls:
+                text = " ".join([l["intro"]] + l["objectives"] + [p for sec in l["sections"] for p in sec["p"]] + [l["reflection"]["prompt"], l["openQuestion"]["text"]])
+                add({"id": f"lesson:{l['id']}", "type": "lesson", "title": l["title"], "summary": clip(l["intro"], 420), "concepts": sorted(set(l["connections"].get("atlas", []))),
+                     "url": f"{SITE}learning-institute/#lesson-{l['id']}", "date": l.get("reviewed"), "course": c["title"], "courseId": c["id"], "level": c["level"], "minutes": l["minutes"],
+                     "objectives": l["objectives"], "attribution": "The Learning Institute, " + c["title"], "reviewStatus": l.get("reviewStatus"), "deskKey": f"lesson:{l['id']}",
+                     "_body": re.sub(r"\{\{[a-z]+:[^|}]+\|([^}]+)\}\}", r"\1", re.sub(r"\[@[^\]]+\]", "", text))})
+
     # concept resources inherit question concepts for retrieval
     for k, r in res.items():
         r["concepts"] = sorted(set(c for c in r.get("concepts", []) if c))
@@ -521,6 +543,7 @@ def adapters(root, counts):
         ("Unanswered Archive questions", "question", "unanswered-archive/data/questions.json", "Archive data"),
         ("Publications (Archive, Theory Chamber, Observatory)", "source", "research-observatory/data/publications.json", "Observatory data"),
         ("Museum of Human Memory rooms", "museum", "museum/data/museum.json", "Museum data"),
+        ("Learning Institute lessons (published courses only)", "lesson", "learning-institute/data/lessons.json", "Learning Institute data"),
         ("Lexicon of Intelligence", None, "lexicon/data/concepts.json", "Not published yet"),
         ("Thinkers Archive", None, "thinkers/data/thinkers.json", "Not published yet"),
         ("Human × Machine Dialogues", None, "dialogues/data/dialogues.json", "Not published yet"),

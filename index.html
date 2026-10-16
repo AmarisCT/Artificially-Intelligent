@@ -490,6 +490,7 @@ a.entry:hover{background:var(--panel);color:var(--ink)}
         <a href="#map" data-nav="map"><b>Consciousness Map</b><small>Competing explanations side by side</small></a></div></div>
       <div class="ng"><button class="ng-b" type="button" aria-expanded="false" aria-haspopup="true">Research</button><div class="ng-m">
         <a href="#library" data-nav="library"><b>Published Research</b><small>Finished essays with sources</small></a>
+        <a href="learning-institute/"><b>The Learning Institute</b><small>Structured courses in consciousness and AI</small></a>
         <a href="inquiry-engine/"><b>Inquiry Engine</b><small>A guided pathway from any question</small></a>
         <a href="lexicon/"><b>Lexicon of Intelligence</b><small>Key terms, defined with sources</small></a>
         <a href="search/"><b>Search the Archive</b><small>One search across every published record</small></a>
@@ -1635,12 +1636,14 @@ document.addEventListener("click",e=>{
 
 const SUPP={tcS:null,tcT:null,uaQ:null,uaS:null,busy:false};
 async function loadSupp(){if(SUPP.busy||SUPP.tcS)return false;SUPP.busy=true;const g=async u=>{try{const r=await fetch(u,{cache:"no-cache"});if(!r.ok)return [];const j=await r.json();return Array.isArray(j.items)?j.items:[]}catch(e){return []}};
-  const [a,b,c,d]=await Promise.all([g("theory-chamber/data/sources.json"),g("theory-chamber/data/theories.json"),g("unanswered-archive/data/questions.json"),g("unanswered-archive/data/question-sources.json")]);SUPP.tcS=a;SUPP.tcT=b;SUPP.uaQ=c;SUPP.uaS=d;SUPP.busy=false;return true}
-const SUPPK=/^(theory|source|cmp|question):/;
+  const [a,b,c,d,e,f]=await Promise.all([g("theory-chamber/data/sources.json"),g("theory-chamber/data/theories.json"),g("unanswered-archive/data/questions.json"),g("unanswered-archive/data/question-sources.json"),g("learning-institute/data/lessons.json"),g("learning-institute/data/courses.json")]);SUPP.tcS=a;SUPP.tcT=b;SUPP.uaQ=c;SUPP.uaS=d;SUPP.liL=e;SUPP.liC=f;SUPP.busy=false;return true}
+const SUPPK=/^(theory|source|cmp|question|lesson|course):/;
 function suppInfo(t,id){
   if(!SUPP.tcS)return null;
   if(t==="theory"){const x=(SUPP.tcT||[]).find(y=>y.id===id);return x?{title:x.name,sub:"Theory Chamber · theory",open:`<a class="chip" href="theory-chamber/#theory-${esc(id)}">Open in the Theory Chamber</a>`}:null}
   if(t==="cmp"){const [a,b]=id.split("-"),A=(SUPP.tcT||[]).find(y=>y.id===a),B=(SUPP.tcT||[]).find(y=>y.id===b);return A&&B?{title:A.abbr+" vs "+B.abbr,sub:"Theory Chamber · comparison",open:`<a class="chip" href="theory-chamber/#compare-${esc(a)}-${esc(b)}">Open the comparison</a>`}:null}
+  if(t==="lesson"){const x=(SUPP.liL||[]).find(y=>y.id===id);return x?{title:x.title,sub:"Learning Institute · lesson",open:`<a class="chip" href="learning-institute/#lesson-${esc(id)}">Open the lesson</a>`}:null}
+  if(t==="course"){const x=(SUPP.liC||[]).find(y=>y.id===id&&y.status==="published");return x?{title:x.title,sub:"Learning Institute · course",open:`<a class="chip" href="learning-institute/#course-${esc(id)}">Open the course</a>`}:null}
   if(t==="question"){const x=(SUPP.uaQ||[]).find(y=>y.id===id);return x?{title:x.title,sub:"The Unanswered Archive · "+x.id,open:`<a class="chip" href="unanswered-archive/#q-${esc(id)}">Open the question</a>`}:null}
   if(t==="source"){const x=(SUPP.uaS||[]).find(y=>y.id===id)||(SUPP.tcS||[]).find(y=>y.id===id);if(!x)return null;const u=x.doi?"https://doi.org/"+x.doi:x.url;return{title:x.title,sub:"Source · "+(x.year||"n.d.")+" · "+(x.venue||""),open:/^https:\/\//.test(u||"")?`<a class="chip" href="${esc(u)}" target="_blank" rel="noopener noreferrer">Open the source ↗</a>`:""}}
   return null}

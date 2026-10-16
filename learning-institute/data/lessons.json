@@ -1,0 +1,2147 @@
+{
+ "meta": {
+  "schema": 1
+ },
+ "items": [
+  {
+   "id": "C001-L01",
+   "n": 1,
+   "title": "Defining consciousness",
+   "intro": "Almost everyone uses the word consciousness, and almost no one means exactly the same thing by it. Before asking how consciousness works, this lesson separates the questions the word can hide.",
+   "objectives": [
+    "List four different things people mean by 'conscious'.",
+    "Explain the difference between wakefulness and experience.",
+    "Say what is at stake in separating phenomenal from access consciousness."
+   ],
+   "sections": [
+    {
+     "h": "One word, several questions",
+     "p": [
+      "Ask five people what {{lex:consciousness|consciousness}} is and you may get five answers: being awake, being aware of your surroundings, knowing yourself, having a stream of thoughts, or simply being someone to whom things happen. These are related, but they are not the same, and a good deal of confusion in public debate comes from sliding between them.",
+      "A useful first step is to sort the meanings. A patient under general anaesthesia is not conscious in the everyday sense of being awake. A person in a deep dreamless sleep is not either. But a person dreaming is unconscious of the room around them while still having vivid experiences. So being awake and having experiences can come apart."
+     ]
+    },
+    {
+     "h": "Four meanings worth keeping apart",
+     "p": [
+      "The first is {{g:wakefulness|wakefulness}}: the state of being alert and responsive, as opposed to being in deep sleep or a coma. The second is {{lex:awareness|awareness}} of something in particular, such as noticing a sound or being aware that you are tired. The third is self-consciousness, which can mean awareness of yourself as a person, or simply embarrassment at being watched. The fourth is the sense most researchers have in mind when they say the subject is hard: that there is something it is like to be you, having an experience.",
+      "That fourth sense comes from the philosopher Thomas Nagel, who proposed that an organism has conscious mental states if there is something it is like to be that organism [@nagel74]. The phrase does not define consciousness in terms of anything else. It points to {{lex:subjective-experience|subjective experience}} and asks us to recognise it."
+     ]
+    },
+    {
+     "h": "Two kinds of consciousness?",
+     "p": [
+      "The philosopher Ned Block argued that two ideas are often run together [@block95]. {{g:phenomenal|Phenomenal consciousness}} is the felt, experiential side: how the red of a tomato looks. {{g:access|Access consciousness}} concerns information that is available for reasoning, report and the control of action. If these are really distinct, then a theory that explains how information becomes available to a whole system might not, by itself, explain why anything is felt. Other researchers dispute that they can be separated in this way; the distinction is itself part of the debate.",
+      "You do not need to settle this to learn from it. The point for now is practical: when you read a claim about consciousness, ask which sense is meant. A claim about wakefulness can be tested at a hospital bedside. A claim about phenomenal consciousness raises harder questions about what could count as evidence."
+     ]
+    },
+    {
+     "h": "A worked example: the anaesthetic",
+     "p": [
+      "Consider what is said about a patient during surgery. Doctors monitor how deeply the patient is anaesthetised, because the aim is that the patient is not awake and does not feel pain. In everyday speech the patient is 'unconscious'. Now suppose a rare case in which a patient cannot move or respond but later reports having heard voices during the operation. Whether such cases happen, and how often, is a medical question. What the example shows is that three questions are in play: was the patient responsive (a behavioural question), was the patient aware of anything (a question about access to information), and was there something it was like for the patient (a question about experience)? A single word covers all three, and an answer to one does not automatically answer the others."
+     ]
+    }
+   ],
+   "concepts": [
+    "consciousness",
+    "awareness",
+    "subjective-experience"
+   ],
+   "activity": {
+    "type": "match",
+    "title": "Which sense of the word?",
+    "prompt": "Match each statement with the sense of 'conscious' it most naturally uses.",
+    "pairs": [
+     [
+      "The patient regained consciousness after surgery.",
+      "Wakefulness"
+     ],
+     [
+      "She was aware of a faint smell of smoke.",
+      "Awareness of something"
+     ],
+     [
+      "There is something it is like to taste coffee.",
+      "Subjective experience"
+     ],
+     [
+      "The report was available to guide his decisions and could be described aloud.",
+      "Access"
+     ]
+    ],
+    "extra": [
+     "Self-knowledge"
+    ],
+    "note": "Several statements could be read more than one way. If you chose differently, think about which reading you would defend."
+   },
+   "connections": {
+    "theories": [],
+    "questions": [
+     "Q001",
+     "Q006"
+    ],
+    "atlas": [
+     "consciousness",
+     "mind"
+    ],
+    "museum": [],
+    "articles": [
+     "art:is-human-consciousness-connected-to-artificial-intelligence"
+    ]
+   },
+   "reflection": {
+    "prompt": "Think of a moment when you were awake but not aware of something that was right in front of you. Which of the senses from this lesson were present, and which were missing?",
+    "points": [
+     "A strong answer separates being awake from being aware of a specific thing.",
+     "It may note that you only know about the missing awareness afterwards, which is itself informative.",
+     "It should avoid claiming the experience proves any theory."
+    ]
+   },
+   "openQuestion": {
+    "id": "Q001",
+    "text": "What makes an experience conscious?"
+   },
+   "investigate": "What is consciousness?",
+   "reading": [
+    "nagel74",
+    "block95",
+    "seth22",
+    "sep-consciousness"
+   ],
+   "check": [
+    "C001-L01-a1",
+    "C001-L01-a2",
+    "C001-L01-a3",
+    "C001-L01-r"
+   ],
+   "misconceptions": [
+    {
+     "wrong": "Consciousness just means being awake.",
+     "right": "Wakefulness is one sense. People can have experiences while asleep, as in dreams, and can be awake while attending to nothing in particular. Researchers who ask the hard questions usually mean experience."
+    },
+    {
+     "wrong": "Philosophers and scientists mean the same thing by the word.",
+     "right": "They often do not. Philosophy tends to ask what experience is, neuroscience asks which processes accompany it, and AI research asks whether the question applies to machines."
+    }
+   ],
+   "courseId": "C001",
+   "words": 578,
+   "minutes": 11,
+   "prev": null,
+   "next": "C001-L02",
+   "reviewStatus": "Awaiting editorial review",
+   "reviewed": "2026-10-16",
+   "version": "1.0.0"
+  },
+  {
+   "id": "C001-L02",
+   "n": 2,
+   "title": "Subjective experience and awareness",
+   "intro": "Why does consciousness seem so much harder to explain than memory or vision? This lesson introduces the first-person point of view and the puzzle often called the hard problem.",
+   "objectives": [
+    "Explain what 'subjective' means in this context.",
+    "Describe the difference between the 'easy' and 'hard' problems of consciousness.",
+    "Say why someone's report of an experience is not the same as the experience."
+   ],
+   "sections": [
+    {
+     "h": "The first-person point of view",
+     "p": [
+      "Some facts about you can be checked by anyone: your height, your heart rate, which words you said. Others seem to be available in full only to you: how the coffee tastes right now, what your headache feels like. {{lex:subjective-experience|Subjective experience}} is this first-person side of mental life.",
+      "Nagel used the example of a bat, which finds its way around by echolocation [@nagel74]. We can learn a great deal about how bat sonar works. Nagel's point was that knowing the mechanism does not obviously tell us what the bat's experience is like, if it has one. The example is meant to show a limit of describing minds only from the outside, not to settle what bats experience."
+     ]
+    },
+    {
+     "h": "Easy problems and the hard problem",
+     "p": [
+      "The philosopher David Chalmers separated problems that are 'easy' from one that is 'hard' [@chalmers-1995]. The easy problems, in his sense, are about functions: how the brain discriminates stimuli, integrates information, focuses attention, or produces reports about its own states. They are far from easy in practice, but they are the kind of problem that scientific explanation of mechanisms seems well suited to. The hard problem is why any of this processing is accompanied by experience at all.",
+      "Not everyone accepts the framing. Some philosophers argue that once the functions are explained, nothing is left over to explain, and that the intuition of a further puzzle is misleading. Others think the puzzle is real. The Lexicon and the Unanswered Archive keep these positions separate rather than choosing one."
+     ]
+    },
+    {
+     "h": "Report is not experience",
+     "p": [
+      "Because experience is private, researchers usually rely on reports: a participant says whether they saw a flash. Reports are useful, but they are not the experience itself. A person might have an experience they cannot describe, or report one they did not have. A good deal of consciousness research is about how to separate what a person experienced from what they were able or willing to report, and the next lessons return to that problem."
+     ]
+    },
+    {
+     "h": "A worked example: pain and its description",
+     "p": [
+      "Imagine that you and a friend both stub your toes. You each say 'that hurt'. A brain scanner shows similar activity in each of you. Does this show that the two experiences feel the same? The scanner shows what is common in the physical process. The words show that you each use the same label. Neither directly shows how it feels to each of you. This is not to suggest that the experiences differ, only that the evidence available to an outsider is of a different kind from the experience itself. It is why researchers who study consciousness are careful about the difference between what a person reports and what a person experiences, and why the problem is described as hard even for something as ordinary as a stubbed toe."
+     ]
+    }
+   ],
+   "concepts": [
+    "subjective-experience",
+    "consciousness",
+    "awareness"
+   ],
+   "activity": {
+    "type": "steps",
+    "title": "A thought experiment: the bat",
+    "prompt": "Work through Nagel's example. Choose a response at each step and read the commentary. Nothing here is graded.",
+    "steps": [
+     {
+      "q": "Scientists map every detail of how a bat's sonar works. What does that tell us?",
+      "opts": [
+       [
+        "Everything about the bat's experience, if it has one.",
+        "This is the assumption Nagel challenges. Knowing the mechanism does not obviously settle what it is like to have it."
+       ],
+       [
+        "A great deal about the mechanism, though perhaps not what the bat's experience is like.",
+        "This is close to Nagel's point: the explanation of the mechanism and the question about experience may be different questions."
+       ],
+       [
+        "Nothing useful.",
+        "Too strong. Studying the mechanism teaches us a lot. The question is whether it is the whole story."
+       ]
+      ]
+     },
+     {
+      "q": "Could imagining yourself hanging upside down and squeaking tell you what it is like to be a bat?",
+      "opts": [
+       [
+        "Yes, imagination is enough.",
+        "Nagel argues imagining yourself behaving like a bat is not the same as knowing what it is like for the bat."
+       ],
+       [
+        "Only partly. It shows what it would be like for me to act like a bat.",
+        "Yes, this is the distinction Nagel draws. Imagining your own experience in a bat's situation is not the bat's experience."
+       ],
+       [
+        "It is a meaningless question.",
+        "Some philosophers say the question is confused. Nagel argued it is real even if we cannot answer it. Both views are part of the debate."
+       ]
+      ]
+     },
+     {
+      "q": "What is the example meant to show?",
+      "opts": [
+       [
+        "That bats are conscious.",
+        "No. Nagel assumes bats probably have experience but the argument does not depend on proving it."
+       ],
+       [
+        "That describing a mind from outside leaves a gap that we do not know how to close.",
+        "Yes. This is how the example is usually used."
+       ],
+       [
+        "That science cannot study the mind.",
+        "No. The claim is about a limit in one kind of explanation, not a rejection of science."
+       ]
+      ]
+     }
+    ]
+   },
+   "connections": {
+    "theories": [],
+    "questions": [
+     "Q002",
+     "Q003"
+    ],
+    "atlas": [
+     "consciousness",
+     "mind",
+     "perception"
+    ],
+    "museum": [],
+    "articles": [
+     "art:is-human-consciousness-connected-to-artificial-intelligence"
+    ]
+   },
+   "reflection": {
+    "prompt": "Describe an experience that you find hard to put into words. What do you think is lost when you describe it to someone else?",
+    "points": [
+     "Distinguishes the experience from the description.",
+     "May note that others can share a word without sharing the experience.",
+     "Avoids concluding that this proves or disproves any theory."
+    ]
+   },
+   "openQuestion": {
+    "id": "Q002",
+    "text": "Why does subjective experience exist?"
+   },
+   "investigate": "Why does subjective experience exist?",
+   "reading": [
+    "nagel74",
+    "chalmers-1995",
+    "sep-qualia",
+    "pub:P007"
+   ],
+   "check": [
+    "C001-L02-a1",
+    "C001-L02-a2",
+    "C001-L02-a3",
+    "C001-L02-r"
+   ],
+   "misconceptions": [
+    {
+     "wrong": "The hard problem says science cannot study consciousness.",
+     "right": "The hard problem is a claim about one kind of question, why processing is accompanied by experience. It does not say that studying mechanisms, such as how attention or report works, is useless. Much of the field does exactly that."
+    },
+    {
+     "wrong": "Everyone agrees there is a hard problem.",
+     "right": "They do not. Some philosophers think the puzzle disappears once the functions are explained. The lesson presents it as a live position, not a settled one."
+    }
+   ],
+   "courseId": "C001",
+   "words": 487,
+   "minutes": 11,
+   "prev": "C001-L01",
+   "next": "C001-L03",
+   "reviewStatus": "Awaiting editorial review",
+   "reviewed": "2026-10-16",
+   "version": "1.0.0"
+  },
+  {
+   "id": "C001-L03",
+   "n": 3,
+   "title": "Consciousness and perception",
+   "intro": "Perception feels like looking through a window. Evidence from psychology and neuroscience suggests it is closer to an active construction. This lesson also introduces the main experimental trick for studying consciousness: holding the stimulus fixed and varying what is experienced.",
+   "objectives": [
+    "Explain why perception is more than receiving signals.",
+    "Describe the 'contrastive' method for studying conscious perception.",
+    "Distinguish processing a stimulus from consciously perceiving it."
+   ],
+   "sections": [
+    {
+     "h": "Perception is not a window",
+     "p": [
+      "{{g:perception|Perception}} is the process by which the brain turns signals from the senses into an interpretation of the world. The signals are incomplete and noisy, and the brain fills in gaps using what it expects. One influential family of ideas, {{g:predictive|predictive processing}}, describes perception as the brain continually predicting its input and updating the predictions when they are wrong [@clark13]. Whether the framework is right in detail is debated. The general lesson that perception depends on interpretation is widely accepted.",
+      "This matters for consciousness because what we are aware of is already an interpretation. When you see a stable, colourful world, you are not seeing raw data."
+     ]
+    },
+    {
+     "h": "Same stimulus, different experience",
+     "p": [
+      "To study consciousness scientifically, researchers want to change what a person experiences without changing what is physically present. In some set-ups a faint image is shown for a very short time so that it is sometimes reported and sometimes not. In others, two different images are shown, one to each eye, and perception tends to alternate between them even though the input stays the same. Comparing brain activity when the same stimulus is reported with when it is not is called the {{g:contrastive|contrastive method}}.",
+      "The method is powerful, but its logic is subtle. The brain activity that differs between 'seen' and 'not seen' trials might be the neural basis of experience. It might also reflect the consequences of seeing, such as getting ready to report. Separating these is a central methodological problem in the field."
+     ]
+    },
+    {
+     "h": "Processing without awareness",
+     "p": [
+      "Studies reviewed by researchers such as Stanislas Dehaene suggest that some stimuli can be processed and can influence behaviour without being reported as seen [@dehaene17]. If so, perception and conscious perception are not identical, and a system that processes information is not thereby shown to be conscious. This idea will matter again when we ask about machines."
+     ]
+    },
+    {
+     "h": "A worked example: the blind spot",
+     "p": [
+      "Each eye has a small region where the optic nerve leaves the retina and there are no light-sensitive cells. You do not see a hole in your visual field, because the brain fills in the gap using the surroundings. You can notice it with a simple demonstration: close one eye, fix your gaze on a mark, and slowly move a small object across the side of your view until it vanishes. The example shows that what you experience is not a direct copy of the input. It also illustrates why researchers separate the stimulus from the experience: the same missing input is present at all times, yet nothing is experienced as missing."
+     ]
+    }
+   ],
+   "concepts": [
+    "cognition",
+    "awareness",
+    "consciousness"
+   ],
+   "activity": {
+    "type": "steps",
+    "title": "Design a contrast",
+    "prompt": "You want to find brain activity linked to seeing a faint image. Choose how to design the comparison.",
+    "steps": [
+     {
+      "q": "What should stay constant between the two conditions?",
+      "opts": [
+       [
+        "The physical image shown.",
+        "Yes. If the image is the same, differences in brain activity are not due to the stimulus itself."
+       ],
+       [
+        "The participant's report.",
+        "If the report were constant you would lose the contrast you are trying to study."
+       ],
+       [
+        "Nothing needs to stay constant.",
+        "Without control, differences could come from anything."
+       ]
+      ]
+     },
+     {
+      "q": "What should differ?",
+      "opts": [
+       [
+        "Whether the participant reports seeing it.",
+        "Yes. This is the contrast, though it brings the problem in the next step."
+       ],
+       [
+        "The brightness of the image.",
+        "That changes the stimulus, so a difference could come from brightness rather than experience."
+       ]
+      ]
+     },
+     {
+      "q": "Why might the difference in brain activity not reveal the basis of experience itself?",
+      "opts": [
+       [
+        "It may reflect preparing to report or other consequences of seeing.",
+        "Yes. This is why researchers debate no-report designs and other controls."
+       ],
+       [
+        "Brain activity is not related to experience at all.",
+        "Too strong. Most researchers think brain activity is related. The issue is which activity."
+       ]
+      ]
+     }
+    ]
+   },
+   "connections": {
+    "theories": [
+     "pp",
+     "rpt"
+    ],
+    "questions": [
+     "Q017",
+     "Q003"
+    ],
+    "atlas": [
+     "perception",
+     "consciousness",
+     "neuroscience"
+    ],
+    "museum": [],
+    "articles": []
+   },
+   "reflection": {
+    "prompt": "Describe an optical illusion you know. What does it show about the difference between what is in the world and what you experience?",
+    "points": [
+     "Separates the physical stimulus from the experienced percept.",
+     "Uses the illusion to show interpretation.",
+     "Does not claim to explain consciousness by it."
+    ]
+   },
+   "openQuestion": {
+    "id": "Q017",
+    "text": "How does conscious perception differ from unconscious information processing?"
+   },
+   "investigate": "How does conscious perception differ from unconscious information processing?",
+   "reading": [
+    "clark13",
+    "dehaene17",
+    "sep-consciousness",
+    "pub:P005"
+   ],
+   "check": [
+    "C001-L03-a1",
+    "C001-L03-a2",
+    "C001-L03-a3",
+    "C001-L03-r"
+   ],
+   "misconceptions": [
+    {
+     "wrong": "If a brain region responds to a stimulus, the person is conscious of it.",
+     "right": "Studies reviewed in this lesson suggest that stimuli can be processed and can influence behaviour without being reported as seen."
+    },
+    {
+     "wrong": "Perception is a passive recording of the world.",
+     "right": "Perception relies on interpretation and expectation as well as signals from the senses. Illusions and filling-in show this."
+    }
+   ],
+   "courseId": "C001",
+   "words": 459,
+   "minutes": 11,
+   "prev": "C001-L02",
+   "next": "C001-L04",
+   "reviewStatus": "Awaiting editorial review",
+   "reviewed": "2026-10-16",
+   "version": "1.0.0"
+  },
+  {
+   "id": "C001-L04",
+   "n": 4,
+   "title": "Consciousness and attention",
+   "intro": "Attention and consciousness seem to go together: what you attend to is usually what you are aware of. This lesson asks whether they are the same thing, and why the answer matters for theories.",
+   "objectives": [
+    "Define attention in a way that differs from awareness.",
+    "Describe why researchers debate whether attention and consciousness can come apart.",
+    "Explain how a theory can make attention central to awareness."
+   ],
+   "sections": [
+    {
+     "h": "Spotlight and awareness",
+     "p": [
+      "{{g:attention|Attention}} is the selection of some information for fuller processing at the expense of other information. You cannot read this sentence and also follow every conversation in the room. Awareness seems to track attention closely, which is why the two are easy to confuse.",
+      "The researchers Christof Koch and Naotsugu Tsuchiya reviewed evidence that they are different processes that can sometimes be separated [@koch07]. Their argument is that there are cases where attention appears to be present without awareness, and cases where awareness appears to occur with little attention. Both kinds of case are contested, and the interpretation of such experiments is a live topic."
+     ]
+    },
+    {
+     "h": "Why the distinction matters",
+     "p": [
+      "If attention and awareness are the same, a theory of attention would explain consciousness. If they can come apart, then explaining how attention works is not enough, and we need a further account of what makes some attended or unattended contents conscious.",
+      "This is why some theories treat the relationship so carefully. The Global Neuronal Workspace Theory describes consciousness in terms of information being amplified and made widely available, a process in which attention is closely involved [@mashour20]. Attention Schema Theory takes a different route: it proposes that the brain builds a simplified model of its own attention, and that what we call awareness is the content of that model [@graziano15]. These are different claims and they have different predictions."
+     ]
+    },
+    {
+     "h": "Keeping the claim small",
+     "p": [
+      "When you read about attention and awareness, check which claim is made. 'Attention and awareness usually go together' is uncontroversial. 'Awareness requires attention' is disputed. 'Awareness is attention' is a stronger claim still. The evidence for each is different."
+     ]
+    },
+    {
+     "h": "A worked example: the crowded room",
+     "p": [
+      "At a busy gathering you can follow one conversation and ignore the others. If someone across the room says your name, you may notice it even though you were not attending to that voice. One reading is that attention filters, but some signals are strong enough to break through. Another is that you were aware of the other voices all along, faintly. A third is that part of the processing happened without awareness and what you noticed was the result. These readings predict different things, and experiments try to tell them apart. The lesson's point is that an ordinary experience can be described in more than one way, and that the choice affects what you think attention and awareness are."
+     ]
+    }
+   ],
+   "concepts": [
+    "awareness",
+    "cognition",
+    "consciousness"
+   ],
+   "activity": {
+    "type": "match",
+    "title": "Three claims, three strengths",
+    "prompt": "Match each claim to how strongly it asserts a link between attention and awareness.",
+    "pairs": [
+     [
+      "They usually occur together.",
+      "Weakest"
+     ],
+     [
+      "Awareness cannot occur without attention.",
+      "Stronger"
+     ],
+     [
+      "Awareness is attention.",
+      "Strongest"
+     ]
+    ],
+    "extra": [],
+    "note": "This ordering helps you notice when a headline claims more than the evidence."
+   },
+   "connections": {
+    "theories": [
+     "gnwt",
+     "ast"
+    ],
+    "questions": [
+     "Q014",
+     "Q006"
+    ],
+    "atlas": [
+     "attention",
+     "consciousness",
+     "perception"
+    ],
+    "museum": [],
+    "articles": []
+   },
+   "reflection": {
+    "prompt": "Recall a time when your attention was drawn away mid-conversation. What, if anything, were you still aware of?",
+    "points": [
+     "Distinguishes what was attended from what was merely registered.",
+     "Notes that memory of the unattended event is unreliable evidence.",
+     "Does not treat the anecdote as settling the scientific debate."
+    ]
+   },
+   "openQuestion": {
+    "id": "Q014",
+    "text": "What is the relationship between attention and consciousness?"
+   },
+   "investigate": "What is the relationship between attention and consciousness?",
+   "reading": [
+    "koch07",
+    "graziano15",
+    "mashour20",
+    "seth22"
+   ],
+   "check": [
+    "C001-L04-a1",
+    "C001-L04-a2",
+    "C001-L04-a3",
+    "C001-L04-r"
+   ],
+   "misconceptions": [
+    {
+     "wrong": "What you attend to is what you are conscious of, so they are the same thing.",
+     "right": "They usually go together. Whether they can be separated is debated, and the evidence on both sides is contested."
+    },
+    {
+     "wrong": "Attention schema theory says attention does not exist.",
+     "right": "The theory proposes that awareness is the brain's simplified model of attention. Attention itself, as a process of selecting information, is not denied."
+    }
+   ],
+   "courseId": "C001",
+   "words": 421,
+   "minutes": 10,
+   "prev": "C001-L03",
+   "next": "C001-L05",
+   "reviewStatus": "Awaiting editorial review",
+   "reviewed": "2026-10-16",
+   "version": "1.0.0"
+  },
+  {
+   "id": "C001-L05",
+   "n": 5,
+   "title": "Neural correlates of consciousness",
+   "intro": "If experience depends on the brain, which parts and processes matter? This lesson introduces the search for neural correlates, and the care needed to say what a correlation shows.",
+   "objectives": [
+    "Define a neural correlate of consciousness.",
+    "Explain why correlation does not identify the basis of experience.",
+    "Name two limitations of studies that search for neural correlates."
+   ],
+   "sections": [
+    {
+     "h": "What is a neural correlate?",
+     "p": [
+      "A {{g:ncc|neural correlate of consciousness}} (NCC) is a pattern of brain activity that goes along with a particular conscious experience. The idea is often framed as the minimal set of neural events that is jointly sufficient for a specific experience [@pub:P005]. Researchers look for correlates using methods that record or image brain activity, such as EEG and fMRI, while participants perceive or report experiences.",
+      "The term deliberately avoids saying that the activity produces experience. It names a pattern that accompanies it, leaving open how they are related."
+     ]
+    },
+    {
+     "h": "Correlation is only the first step",
+     "p": [
+      "Finding that activity A tracks experience B does not show that A is what makes B conscious. A might be a prerequisite that enables experience, such as a general state of arousal. It might be a consequence, such as the brain preparing to report. Or it might be involved in both seeing and not seeing. Review articles on the field emphasise distinguishing these cases [@pub:P005].",
+      "Another difficulty is that different theories read the same data differently. Two theories can agree that a region is active and still disagree about why it matters. This is part of why researchers have turned to adversarial collaborations, in which proponents of rival theories agree in advance on what results would count for or against each [@melloni-2023]."
+     ]
+    },
+    {
+     "h": "What the search has and has not shown",
+     "p": [
+      "The search for NCC has produced a large body of findings about the brain activity that accompanies reported awareness. It has not produced agreement on what produces experience. A recent adversarial test of two leading theories reported results that partly matched predictions of both and substantially challenged key claims of each, without declaring either proven or disproven [@cogitate-2025]. This is typical of an active field: methods are improving, and important questions remain open."
+     ]
+    },
+    {
+     "h": "A worked example: reading a headline",
+     "p": [
+      "Suppose a headline says 'Scientists find the seat of consciousness'. Ask what the study could have shown. It may have compared brain activity when people reported seeing a picture with activity when they did not. If a region differed, the careful description is that the region's activity is associated with reporting a picture. The next questions are whether the region is necessary (would removal or disruption abolish experience, and not just the report?), whether it is sufficient, and whether the result holds in other experiments and with other methods. A headline that moves from 'associated with' to 'is where consciousness lives' has added claims the study did not test."
+     ]
+    }
+   ],
+   "concepts": [
+    "consciousness",
+    "awareness",
+    "cognition"
+   ],
+   "activity": {
+    "type": "claims",
+    "title": "Spot the limitation",
+    "prompt": "Read the claim, then select every limitation that applies.",
+    "claim": "A study scanned brains while people viewed pictures. Region X lit up more when people said they noticed the picture. The authors conclude that Region X is where consciousness is created.",
+    "options": [
+     [
+      "The study shows association with reports, not what produces experience.",
+      true,
+      "Right. A correlation with reports does not show production."
+     ],
+     [
+      "Region X may reflect preparing to report, not experience.",
+      true,
+      "Right. This is the report confound."
+     ],
+     [
+      "Brain imaging cannot be used on humans.",
+      false,
+      "Not a limitation of this claim. Imaging is widely used."
+     ],
+     [
+      "A single study with one set-up may not generalise.",
+      true,
+      "Right. Replication across set-ups matters."
+     ]
+    ]
+   },
+   "connections": {
+    "theories": [
+     "gnwt",
+     "iit",
+     "rpt"
+    ],
+    "questions": [
+     "Q013",
+     "Q003"
+    ],
+    "atlas": [
+     "neuroscience",
+     "consciousness",
+     "perception"
+    ],
+    "museum": [],
+    "articles": []
+   },
+   "reflection": {
+    "prompt": "Suppose a brain scan could tell you reliably whether someone is having an experience. What would still be unexplained?",
+    "points": [
+     "Distinguishes predicting experience from explaining it.",
+     "May mention the hard problem from lesson 2.",
+     "Notes that predicting would still be very useful."
+    ]
+   },
+   "openQuestion": {
+    "id": "Q013",
+    "text": "Which neural processes are necessary for conscious experience?"
+   },
+   "investigate": "Which neural processes are necessary for conscious experience?",
+   "reading": [
+    "pub:P005",
+    "melloni-2023",
+    "cogitate-2025",
+    "seth22"
+   ],
+   "check": [
+    "C001-L05-a1",
+    "C001-L05-a2",
+    "C001-L05-a3",
+    "C001-L05-r"
+   ],
+   "misconceptions": [
+    {
+     "wrong": "A neural correlate is the cause of consciousness.",
+     "right": "The term names an accompanying pattern. It leaves open whether the pattern produces, enables or follows experience."
+    },
+    {
+     "wrong": "Brain scans can read whether someone is conscious.",
+     "right": "They can show activity that tends to accompany reported experience. Interpreting a scan for an individual is a further step with its own limits."
+    }
+   ],
+   "courseId": "C001",
+   "words": 427,
+   "minutes": 10,
+   "prev": "C001-L04",
+   "next": "C001-L06",
+   "reviewStatus": "Awaiting editorial review",
+   "reviewed": "2026-10-16",
+   "version": "1.0.0"
+  },
+  {
+   "id": "C001-L06",
+   "n": 6,
+   "title": "Major scientific and philosophical theories",
+   "intro": "There is no single accepted theory of consciousness. This lesson introduces six that appear in the Theory Chamber, what each is trying to explain, and why listing a theory is not the same as endorsing it.",
+   "objectives": [
+    "State in one sentence the core idea of at least four theories.",
+    "Explain how theories differ in what they treat as the key ingredient.",
+    "Describe why the existence of many theories reflects an unsettled field."
+   ],
+   "sections": [
+    {
+     "h": "Why there are many theories",
+     "p": [
+      "A recent review set out to survey the main scientific approaches side by side and found that they differ in what they take consciousness to depend on, in what evidence they emphasise, and in how they would be tested [@seth22]. The Theory Chamber follows the same idea: it lays out claims, supporting sources and criticisms for each theory without ranking them. Being listed there means a theory is a serious subject of study. It does not mean it has been shown to be correct."
+     ]
+    },
+    {
+     "h": "Six ideas, in brief",
+     "p": [
+      "{{g:gnwt|Global Neuronal Workspace Theory}} proposes that a representation becomes consciously accessible when it is amplified and made available to many specialised processes through a distributed network [@mashour20].",
+      "{{g:iit|Integrated Information Theory}} starts from properties of experience, such as its unity, and proposes that consciousness corresponds to the cause-effect structure of a physical system [@albantakis-2023].",
+      "{{g:hot|Higher-Order Theories}} hold that a mental state is conscious when the subject has a higher-order representation of being in that state [@lau-rosenthal-2011].",
+      "{{g:rpt|Recurrent Processing Theory}} associates consciousness with feedback (recurrent) processing in sensory areas rather than with the first feedforward sweep [@lamme06].",
+      "{{g:ast|Attention Schema Theory}} proposes that subjective awareness is the brain's simplified model of its own attention [@graziano15].",
+      "{{g:pp|Predictive Processing}} approaches apply the idea of the brain as a prediction machine to consciousness, for instance as a basis for identifying its neural correlates [@hohwy-seth-2020]."
+     ]
+    },
+    {
+     "h": "Competition, not a ranking",
+     "p": [
+      "Theories disagree about, for example, whether consciousness depends on widespread broadcast, on the structure of causal interactions, or on how the brain represents itself. These disagreements lead to different predictions, which is why adversarial tests are valuable. One such test of two of the theories reported that key claims of each were challenged, and the authors did not declare either theory proven or disproven [@cogitate-2025]. A dispute over whether one of the theories should be labelled pseudoscience has also been reported; it shows that disagreement exists, and is not itself a finding [@pseudoscience-letter-2023]."
+     ]
+    },
+    {
+     "h": "A worked example: one finding, six readings",
+     "p": [
+      "Imagine a result in which a late burst of widespread activity follows a stimulus that people report seeing, and does not follow one they miss. A workspace theory can read this as the stimulus being broadcast. A recurrent processing theory might say the important event is earlier feedback activity, and that the late burst reflects reporting. A higher-order theory might look for activity that represents the person's own state. A predictive processing account might ask how the activity relates to prediction error. The same observation can be placed in several frameworks. This is why theories are compared on what each predicts in new experiments, not on whether each can be made to fit a result after the fact."
+     ]
+    }
+   ],
+   "concepts": [
+    "consciousness",
+    "cognition",
+    "awareness"
+   ],
+   "activity": {
+    "type": "match",
+    "title": "Match theory to core idea",
+    "prompt": "Match each theory to the idea it puts first.",
+    "pairs": [
+     [
+      "Global Neuronal Workspace Theory",
+      "Widespread broadcast of information"
+     ],
+     [
+      "Integrated Information Theory",
+      "Cause-effect structure of a system"
+     ],
+     [
+      "Higher-Order Theories",
+      "A representation of being in a mental state"
+     ],
+     [
+      "Recurrent Processing Theory",
+      "Feedback processing in sensory areas"
+     ],
+     [
+      "Attention Schema Theory",
+      "A simplified model of attention"
+     ]
+    ],
+    "extra": [
+     "Behaviour alone"
+    ],
+    "note": "Open the Theory Chamber to compare any pair side by side."
+   },
+   "connections": {
+    "theories": [
+     "gnwt",
+     "iit",
+     "hot",
+     "rpt",
+     "ast",
+     "pp"
+    ],
+    "questions": [
+     "Q001",
+     "Q013"
+    ],
+    "atlas": [
+     "consciousness",
+     "neuroscience",
+     "mind"
+    ],
+    "museum": [],
+    "articles": [
+     "art:is-human-consciousness-connected-to-artificial-intelligence"
+    ],
+    "comparisons": [
+     "gnwt-iit",
+     "iit-rpt",
+     "ast-gnwt"
+    ]
+   },
+   "reflection": {
+    "prompt": "Pick one theory. What kind of evidence would make you more or less confident in it?",
+    "points": [
+     "Names a specific prediction of the chosen theory.",
+     "Says what result would count against it.",
+     "Avoids declaring a winner."
+    ]
+   },
+   "openQuestion": {
+    "id": "Q001",
+    "text": "What makes an experience conscious?"
+   },
+   "investigate": "Which theory of consciousness is best supported by evidence?",
+   "reading": [
+    "seth22",
+    "mashour20",
+    "albantakis-2023",
+    "lau-rosenthal-2011",
+    "lamme06",
+    "graziano15",
+    "hohwy-seth-2020",
+    "cogitate-2025"
+   ],
+   "check": [
+    "C001-L06-a1",
+    "C001-L06-a2",
+    "C001-L06-a3",
+    "C001-L06-r"
+   ],
+   "misconceptions": [
+    {
+     "wrong": "The Theory Chamber ranks theories from best to worst.",
+     "right": "It does not. It lays out each theory's claims, sources and criticisms so that you can compare them."
+    },
+    {
+     "wrong": "If a theory is listed in the Chamber, it has been confirmed.",
+     "right": "Listing a theory means it is a serious subject of research. It does not mean the theory is correct."
+    }
+   ],
+   "courseId": "C001",
+   "words": 495,
+   "minutes": 11,
+   "prev": "C001-L05",
+   "next": "C001-L07",
+   "reviewStatus": "Awaiting editorial review",
+   "reviewed": "2026-10-16",
+   "version": "1.0.0"
+  },
+  {
+   "id": "C001-L07",
+   "n": 7,
+   "title": "The limits of current knowledge",
+   "intro": "A good student of any field learns where its knowledge ends. This lesson maps what is not known about consciousness, and how that bears on animals and artificial systems.",
+   "objectives": [
+    "Name three questions that remain unresolved.",
+    "Explain why measuring consciousness in other beings is difficult.",
+    "Describe how uncertainty about theories affects claims about machines."
+   ],
+   "sections": [
+    {
+     "h": "What is not known",
+     "p": [
+      "Researchers do not agree on what makes an experience conscious, whether consciousness can be measured objectively, or which neural processes are necessary for it. The Unanswered Archive records each of these as open questions with the problems that remain. A clear sense of what is unknown is part of understanding the field, not a failure of it."
+     ]
+    },
+    {
+     "h": "Other minds and other animals",
+     "p": [
+      "We rely on behaviour and similarity to judge whether other beings have experiences. Most people infer that other humans do, because they are similar to us and can say so. For animals, reviews of the question consider behaviour, brain structure and evolutionary relationships, and reach graded rather than certain conclusions [@sep-animal]. The difficulty is not carelessness. It is that experience is not directly observable from outside."
+     ]
+    },
+    {
+     "h": "Machines",
+     "p": [
+      "The same difficulty applies to artificial systems, and with an added problem: a system trained on human language can produce fluent statements about experience without that being evidence for it. A group of researchers proposed assessing AI systems by checking them against indicator properties drawn from leading scientific theories, and concluded that no current system was a strong candidate, while noting no obvious barriers to building systems that satisfy more of the indicators [@butlin-2023]. That report is a preprint and its approach depends on the theories it draws on. Another paper by the philosopher David Chalmers examines whether large language models could be conscious and weighs considerations on both sides [@pub:P018], also a preprint.",
+      "The sensible conclusion is not 'yes' or 'no'. It is that claims about machine consciousness are only as strong as the theories and evidence behind them, and those are unsettled."
+     ]
+    },
+    {
+     "h": "A worked example: the octopus and the thermostat",
+     "p": [
+      "People disagree about whether an octopus has experiences, and few people think a thermostat does. What separates those cases? Some answers appeal to behaviour (the octopus learns, explores and responds flexibly), some to biology (a nervous system with many neurons), and some to theory (a view about what kinds of processing matter). Each answer depends on assumptions that are themselves unsettled. If a theory says what matters is the right kind of widespread information sharing, then the answer might depend on a system's architecture. If a theory says it depends on physical structure, a different answer follows. The example shows how a question about other beings is linked to the question about theory, and why the reasoning has to be explicit."
+     ]
+    }
+   ],
+   "concepts": [
+    "consciousness",
+    "sentience",
+    "subjective-experience"
+   ],
+   "activity": {
+    "type": "claims",
+    "title": "How strong is this claim?",
+    "prompt": "Read the claim and select every problem.",
+    "claim": "An AI system said 'I feel happy when you talk to me.' This is evidence that it is conscious.",
+    "options": [
+     [
+      "The statement is a product of text generation and may reflect training on human language.",
+      true,
+      "Right. Fluent self-description is not by itself evidence of experience."
+     ],
+     [
+      "Self-report is the only kind of evidence for consciousness in humans, so it must count fully.",
+      false,
+      "Self-report is one kind of evidence for humans, alongside similarity and context. It is not the only kind."
+     ],
+     [
+      "Claims about the system's inner states are not tested against any theory of consciousness.",
+      true,
+      "Right. Without a theoretical link the statement does not discriminate between possibilities."
+     ],
+     [
+      "The statement could be produced whether or not any experience exists.",
+      true,
+      "Right. A good test should come out differently in the two cases."
+     ]
+    ]
+   },
+   "connections": {
+    "theories": [
+     "gnwt",
+     "iit"
+    ],
+    "questions": [
+     "Q003",
+     "Q009",
+     "Q004"
+    ],
+    "atlas": [
+     "consciousness",
+     "ai",
+     "ethics"
+    ],
+    "museum": [],
+    "articles": [
+     "art:is-human-consciousness-connected-to-artificial-intelligence"
+    ]
+   },
+   "reflection": {
+    "prompt": "What kind of evidence would you need before you were willing to say a non-human system has experiences? Why that evidence?",
+    "points": [
+     "Proposes evidence tied to a reason, not just behaviour.",
+     "Acknowledges uncertainty in the theory behind the evidence.",
+     "Avoids treating self-report as decisive."
+    ]
+   },
+   "openQuestion": {
+    "id": "Q009",
+    "text": "What would count as evidence of machine consciousness?"
+   },
+   "investigate": "What would count as evidence of machine consciousness?",
+   "reading": [
+    "sep-animal",
+    "butlin-2023",
+    "pub:P018",
+    "seth22"
+   ],
+   "check": [
+    "C001-L07-a1",
+    "C001-L07-a2",
+    "C001-L07-a3",
+    "C001-L07-r"
+   ],
+   "misconceptions": [
+    {
+     "wrong": "If a machine says it is conscious, we should believe it.",
+     "right": "Fluent self-description can be produced by systems trained on human language whether or not there is experience. It is not strong evidence on its own."
+    },
+    {
+     "wrong": "If we do not know whether machines are conscious, the answer must be no.",
+     "right": "Not knowing is different from a negative answer. A careful position states what the evidence does and does not support."
+    }
+   ],
+   "courseId": "C001",
+   "words": 421,
+   "minutes": 10,
+   "prev": "C001-L06",
+   "next": "C001-L08",
+   "reviewStatus": "Awaiting editorial review",
+   "reviewed": "2026-10-16",
+   "version": "1.0.0"
+  },
+  {
+   "id": "C001-L08",
+   "n": 8,
+   "title": "Final research reflection",
+   "intro": "This lesson asks you to use what you have learned to evaluate a claim and to plan a small investigation of your own.",
+   "objectives": [
+    "Apply a short checklist to a claim about consciousness.",
+    "Distinguish evidence, interpretation and speculation in a claim.",
+    "Pose a research question you could investigate further."
+   ],
+   "sections": [
+    {
+     "h": "A checklist for any claim",
+     "p": [
+      "Throughout this course the same few questions have helped. Which sense of consciousness is meant? Is the evidence about reports, about brain activity, or about behaviour? What would the claim predict, and what would count against it? Is the source a primary study, a review, a philosophical argument, or a news report? Is the claim a finding, an interpretation, or a speculation?",
+      "These questions do not tell you what is true. They help you notice how much weight a claim can bear."
+     ]
+    },
+    {
+     "h": "Evidence, interpretation, speculation",
+     "p": [
+      "Evidence is what was observed: that activity differed between conditions. Interpretation is what the authors say it means: that the region is part of the basis of awareness. Speculation goes further still: that therefore machines with a similar structure would be conscious. A strong reader keeps track of where in this chain a statement sits."
+     ]
+    },
+    {
+     "h": "Carry on",
+     "p": [
+      "You can take your own question to the Inquiry Engine, which builds a pathway through the site's existing records, or study a source in the Research Seminar. You can also continue to the Foundations of Artificial Intelligence course, which prepares the ground for the machine questions."
+     ]
+    },
+    {
+     "h": "A worked example: applying the checklist",
+     "p": [
+      "Take the sentence 'Brain imaging shows that dogs are conscious.' Which sense is meant? Probably experience. What was measured? Perhaps brain responses in dogs to familiar stimuli. Is that evidence about reports, activity or behaviour? Activity and behaviour, since dogs cannot report. What would the claim predict, and what would count against it? If experience goes with certain brain patterns in humans, similar patterns in dogs might suggest similar processes, though the link between those patterns and experience is itself under study. The source type matters too: a primary study, a review, or a news report. After working through this you may still think dogs are probably conscious, but you will be clear about which part of that belief rests on evidence and which on inference."
+     ]
+    }
+   ],
+   "concepts": [
+    "consciousness",
+    "awareness",
+    "sentience"
+   ],
+   "activity": {
+    "type": "claims",
+    "title": "Sort the statement",
+    "prompt": "Read the passage and select the parts that are interpretation or speculation rather than evidence.",
+    "claim": "Researchers found that a late burst of activity occurred when participants reported seeing a word (1). They argued this burst reflects the word becoming globally available (2). If so, an AI system with a similar broadcast would be conscious (3).",
+    "options": [
+     [
+      "(1) is the observation.",
+      false,
+      "This is the evidence. It describes what was seen in the data."
+     ],
+     [
+      "(2) is an interpretation.",
+      true,
+      "Yes. It is what the authors think the data mean."
+     ],
+     [
+      "(3) is speculation.",
+      true,
+      "Yes. It extends the interpretation beyond what the study tested."
+     ]
+    ]
+   },
+   "connections": {
+    "theories": [
+     "gnwt",
+     "iit",
+     "hot",
+     "rpt",
+     "ast",
+     "pp"
+    ],
+    "questions": [
+     "Q001",
+     "Q002",
+     "Q003",
+     "Q009"
+    ],
+    "atlas": [
+     "consciousness",
+     "method",
+     "ai"
+    ],
+    "museum": [],
+    "articles": [
+     "art:is-human-consciousness-connected-to-artificial-intelligence"
+    ]
+   },
+   "reflection": {
+    "prompt": "Write a research question about consciousness that you could investigate with the Inquiry Engine or the Research Observatory. Then say what kind of evidence would help.",
+    "points": [
+     "The question is specific and answerable in principle.",
+     "It identifies the sense of consciousness at issue.",
+     "It names the kind of source that would count as evidence."
+    ]
+   },
+   "openQuestion": {
+    "id": "Q002",
+    "text": "Why does subjective experience exist?"
+   },
+   "investigate": "What would count as an answer to the hard problem of consciousness?",
+   "reading": [
+    "seth22",
+    "sep-consciousness",
+    "butlin-2023",
+    "cogitate-2025"
+   ],
+   "check": [
+    "C001-L08-a1",
+    "C001-L08-a2",
+    "C001-L08-a3",
+    "C001-L08-r"
+   ],
+   "misconceptions": [
+    {
+     "wrong": "Having a method means the question is answered.",
+     "right": "A method structures the thinking. It does not supply the evidence. The aim of the checklist is to see what a claim rests on."
+    },
+    {
+     "wrong": "Admitting uncertainty is a weakness.",
+     "right": "Stating what is unknown and what would settle it is part of responsible research."
+    }
+   ],
+   "courseId": "C001",
+   "words": 333,
+   "minutes": 10,
+   "prev": "C001-L07",
+   "next": null,
+   "reviewStatus": "Awaiting editorial review",
+   "reviewed": "2026-10-16",
+   "version": "1.0.0"
+  },
+  {
+   "id": "C002-L01",
+   "n": 1,
+   "title": "What artificial intelligence means",
+   "intro": "The phrase artificial intelligence is used for a research field, for a family of technologies, and, in popular writing, for almost any clever software. This lesson sorts out what the term does and does not cover.",
+   "objectives": [
+    "Give two different meanings of 'artificial intelligence'.",
+    "Describe how different definitions of intelligence lead to different tests.",
+    "Explain why 'AI' is not one kind of technology."
+   ],
+   "sections": [
+    {
+     "h": "A field and a set of systems",
+     "p": [
+      "{{lex:artificial-intelligence|Artificial intelligence}} names both a research programme, the attempt to build machines that act intelligently, and the systems that programme produces. The Stanford Encyclopedia of Philosophy entry on the subject treats it as a field with several traditions and goals rather than as a single method [@sep-ai]. That already tells you something: an article that says 'AI did this' is rarely specific enough to know what kind of system is meant.",
+      "An email spam filter, a chess engine, a route planner, a system that recognises faces, and a chatbot are all called AI. They work in different ways, were built with different methods, and fail in different ways."
+     ]
+    },
+    {
+     "h": "What counts as intelligence?",
+     "p": [
+      "{{lex:intelligence|Intelligence}} has no single agreed definition, and the choice of definition shapes what counts as success. Alan Turing proposed replacing the question 'can machines think?' with a behavioural test, an imitation game in which an interrogator tries to tell a machine from a person by conversation [@turing50]. Other researchers have tried to define intelligence formally, for example as an agent's ability to achieve goals across a wide range of environments [@legg07]. A behavioural test and a formal definition ask different things.",
+      "The point is not to pick a winner. It is to see that when someone says a system 'is intelligent', the claim depends on a definition, and that definition may differ from the one you hold."
+     ]
+    },
+    {
+     "h": "Narrow and general",
+     "p": [
+      "Most deployed AI systems are built for particular tasks and perform them well within a limited range. Researchers often distinguish such task-specific systems from the hoped-for goal of more general capability. Whether current systems are moving towards generality, and how to tell, is debated. This course treats those questions as open."
+     ]
+    },
+    {
+     "h": "A worked example: three headlines",
+     "p": [
+      "Consider three headlines: 'AI detects cancer', 'AI writes poetry' and 'AI beats world champion at Go'. In each, 'AI' stands for a different system, built differently, trained on different data, and evaluated differently. The first might be an image classifier trained on labelled scans, the second a language model, the third a system trained by playing games against itself. A result in one of these says little directly about the others. A reader who asks 'which system, what task, how was it tested?' will usually learn more from a story than one who treats 'AI' as one thing."
+     ]
+    }
+   ],
+   "concepts": [
+    "artificial-intelligence",
+    "intelligence",
+    "cognition"
+   ],
+   "activity": {
+    "type": "match",
+    "title": "Sort the system",
+    "prompt": "Match each example to the description that fits it best.",
+    "pairs": [
+     [
+      "A chess engine",
+      "Built for one task, strong within it"
+     ],
+     [
+      "A spam filter",
+      "Learns patterns from labelled examples"
+     ],
+     [
+      "A chatbot",
+      "Generates text in response to input"
+     ],
+     [
+      "The imitation game",
+      "A behavioural test of machine intelligence"
+     ]
+    ],
+    "extra": [
+     "A system that is certainly conscious"
+    ],
+    "note": "Many real systems combine several techniques."
+   },
+   "connections": {
+    "theories": [],
+    "questions": [
+     "Q007",
+     "Q011"
+    ],
+    "atlas": [
+     "ai",
+     "intelligence",
+     "computing"
+    ],
+    "museum": [
+     "model"
+    ],
+    "articles": [
+     "art:is-human-consciousness-connected-to-artificial-intelligence"
+    ]
+   },
+   "reflection": {
+    "prompt": "Write your own working definition of intelligence in one or two sentences. Then name one system that your definition would count as intelligent and one it would not.",
+    "points": [
+     "Gives a definition that can be applied to examples.",
+     "Applies it to at least two examples.",
+     "Notices where the definition is hard to apply."
+    ]
+   },
+   "openQuestion": {
+    "id": "Q011",
+    "text": "Can machine reasoning become functionally comparable to human reasoning?"
+   },
+   "investigate": "What is artificial intelligence?",
+   "reading": [
+    "sep-ai",
+    "turing50",
+    "legg07",
+    "dartmouth-1955"
+   ],
+   "check": [
+    "C002-L01-a1",
+    "C002-L01-a2",
+    "C002-L01-a3",
+    "C002-L01-r"
+   ],
+   "misconceptions": [
+    {
+     "wrong": "AI is a single technology.",
+     "right": "It is a field with several methods. Rule-based systems, statistical learning and neural networks work differently."
+    },
+    {
+     "wrong": "If a system is called intelligent, it can do many things.",
+     "right": "Most systems are built for narrow tasks. A system that is excellent at one task may be unable to do a neighbouring one."
+    }
+   ],
+   "courseId": "C002",
+   "words": 419,
+   "minutes": 10,
+   "prev": null,
+   "next": "C002-L02",
+   "reviewStatus": "Awaiting editorial review",
+   "reviewed": "2026-10-16",
+   "version": "1.0.0"
+  },
+  {
+   "id": "C002-L02",
+   "n": 2,
+   "title": "A brief history of AI research",
+   "intro": "Today's systems are the latest stage of a seventy-year research effort with several competing approaches. Knowing the history helps you see which ideas are new and which are old.",
+   "objectives": [
+    "Place four milestones in order.",
+    "Contrast early rule-based approaches with learning-based approaches.",
+    "Explain why the history does not show a steady march towards human-like minds."
+   ],
+   "sections": [
+    {
+     "h": "The question and the name",
+     "p": [
+      "In 1950 Alan Turing published 'Computing Machinery and Intelligence', which argued that the question whether machines can think should be approached through behaviour [@turing50]. In 1955 a proposal for a summer research project at Dartmouth College, written by John McCarthy and colleagues, used the phrase 'artificial intelligence' and proposed studying how machines could simulate aspects of learning and intelligence [@dartmouth-1955]. That proposal is often treated as the naming moment of the field."
+     ]
+    },
+    {
+     "h": "Rules and learning",
+     "p": [
+      "Early work often tried to write down knowledge and reasoning as explicit rules that a program could follow. Other researchers pursued systems that adjust themselves from examples. A key step for the learning tradition was a method for training networks with several layers, popularised in a 1986 paper on learning by back-propagating errors [@rumelhart86]. Historians describe periods when enthusiasm and funding for AI fell, followed by renewals when new methods or more computing power made new results possible.",
+      "In 2015 a review in the journal Nature described how deep learning, which trains many-layered networks on large data sets, had come to dominate tasks such as image and speech recognition [@lecun15]. In 2017 a paper introduced the transformer architecture, which processes sequences using a mechanism called attention [@vaswani17]. In 2020 researchers reported that a very large language model could perform many tasks from a few examples given in its input [@brown-2020]."
+     ]
+    },
+    {
+     "h": "Reading the history carefully",
+     "p": [
+      "It is tempting to read this as a straight line towards human-like minds. The record does not support that reading. Different approaches succeeded at different tasks, and progress on one often did not carry over to others. Whether recent systems are on a path to general intelligence is an open question, not a conclusion of the history."
+     ]
+    },
+    {
+     "h": "A worked example: two ways to build a spam filter",
+     "p": [
+      "A rule-based filter might say: if the message contains these words, mark it as spam. A person writes and maintains the rules, and spammers can adapt around them. A learning-based filter is shown many messages labelled spam and not spam, and adjusts itself so that it predicts the labels. It may pick up patterns no one wrote down, and it needs new data as spam changes. Both are useful, and the history of AI contains both approaches, sometimes combined. The example shows why the shift from rules to learning mattered: it moved effort from writing knowledge to collecting and checking data."
+     ]
+    }
+   ],
+   "concepts": [
+    "artificial-intelligence",
+    "intelligence",
+    "memory"
+   ],
+   "activity": {
+    "type": "order",
+    "title": "Put the milestones in order",
+    "prompt": "Arrange these milestones from earliest to latest.",
+    "items": [
+     [
+      "1950",
+      "Turing proposes the imitation game"
+     ],
+     [
+      "1955",
+      "Dartmouth proposal names the field"
+     ],
+     [
+      "1986",
+      "Back-propagation paper on training multilayer networks"
+     ],
+     [
+      "2017",
+      "The transformer architecture is introduced"
+     ],
+     [
+      "2020",
+      "A large language model is reported to perform tasks from a few examples"
+     ]
+    ]
+   },
+   "connections": {
+    "theories": [],
+    "questions": [
+     "Q011",
+     "Q012"
+    ],
+    "atlas": [
+     "computing",
+     "ai",
+     "learning"
+    ],
+    "museum": [
+     "model",
+     "print"
+    ],
+    "articles": []
+   },
+   "reflection": {
+    "prompt": "Which part of this history surprised you most, and why does it matter for how you read claims about AI today?",
+    "points": [
+     "Identifies a specific milestone.",
+     "Connects it to caution about hype or about new versus old ideas.",
+     "Avoids claiming a single path to current systems."
+    ]
+   },
+   "openQuestion": {
+    "id": "Q011",
+    "text": "Can machine reasoning become functionally comparable to human reasoning?"
+   },
+   "investigate": "How did artificial intelligence research develop?",
+   "reading": [
+    "turing50",
+    "dartmouth-1955",
+    "rumelhart86",
+    "lecun15",
+    "vaswani17",
+    "brown-2020"
+   ],
+   "check": [
+    "C002-L02-a1",
+    "C002-L02-a2",
+    "C002-L02-a3",
+    "C002-L02-r"
+   ],
+   "misconceptions": [
+    {
+     "wrong": "AI research went in a straight line to today's systems.",
+     "right": "Different approaches succeeded at different tasks and periods. Several ideas were revived after being set aside."
+    },
+    {
+     "wrong": "The 1955 proposal predicted today's systems.",
+     "right": "The proposal set out a research programme. Whether and when its goals would be reached was uncertain then and remains a matter of debate for general intelligence."
+    }
+   ],
+   "courseId": "C002",
+   "words": 418,
+   "minutes": 10,
+   "prev": "C002-L01",
+   "next": "C002-L03",
+   "reviewStatus": "Awaiting editorial review",
+   "reviewed": "2026-10-16",
+   "version": "1.0.0"
+  },
+  {
+   "id": "C002-L03",
+   "n": 3,
+   "title": "Machine learning fundamentals",
+   "intro": "Machine learning replaces hand-written rules with a procedure that adjusts itself using data. This lesson explains the ingredients, and includes a working demonstration of why fitting data too closely can backfire.",
+   "objectives": [
+    "Name the main ingredients of a machine learning system.",
+    "Explain overfitting and why a test set is needed.",
+    "Describe supervised, unsupervised and reinforcement learning in one sentence each."
+   ],
+   "sections": [
+    {
+     "h": "Learning from examples",
+     "p": [
+      "A machine learning system has four ingredients: data, a model with adjustable settings called {{g:parameters|parameters}}, a measure of how wrong the model currently is, and a procedure that adjusts the parameters to reduce that error. The result is a model whose behaviour depends on the data it was trained on, not only on what its designers wrote.",
+      "In {{g:supervised|supervised learning}} the data come with the right answers, such as photographs labelled with what they show. In {{g:unsupervised|unsupervised learning}} there are no labels and the system looks for structure. In {{g:rl|reinforcement learning}} a system acts, receives rewards or penalties, and learns which actions lead to better outcomes."
+     ]
+    },
+    {
+     "h": "Fitting versus generalising",
+     "p": [
+      "A model that matches its training data perfectly has not necessarily learned anything useful. It may have memorised noise. This is called {{g:overfitting|overfitting}}. What matters is {{g:generalisation|generalisation}}: performance on new data that the model has not seen. To check this, practitioners hold back some data as a {{g:testset|test set}} and measure error there.",
+      "The demonstration below fits curves of different flexibility to the same noisy points. Watch what happens to the error on the training points and on the held-back points as the curve becomes more flexible."
+     ]
+    },
+    {
+     "h": "Why this matters beyond the demo",
+     "p": [
+      "The same pattern appears in large systems. A system evaluated on data that overlaps with its training data can look better than it is. The quality of the data also limits the quality of the model: if the data leave out groups of people or situations, the model's behaviour there is unreliable."
+     ]
+    },
+    {
+     "h": "A worked example: learning to recognise handwriting",
+     "p": [
+      "Suppose you want a program to read handwritten digits. In a machine learning approach you collect many images of digits with their correct labels, choose a model with adjustable parameters, and train it to reduce its errors. Then you test it on digits it has not seen, including handwriting styles different from those in the training set. If it does well on the training digits and poorly on new ones, it has not generalised. If it fails on a style that was never in the data, the problem is the data's coverage, not only the model. This shows why the data and the test matter as much as the algorithm."
+     ]
+    }
+   ],
+   "concepts": [
+    "cognition",
+    "intelligence",
+    "artificial-intelligence"
+   ],
+   "activity": {
+    "type": "fit",
+    "title": "Fit explorer",
+    "prompt": "Move the slider to change how flexible the curve is. Blue points are used for fitting, grey points are held back for testing."
+   },
+   "connections": {
+    "theories": [],
+    "questions": [
+     "Q011",
+     "Q020"
+    ],
+    "atlas": [
+     "learning",
+     "ai",
+     "computing"
+    ],
+    "museum": [
+     "model",
+     "selection"
+    ],
+    "articles": []
+   },
+   "reflection": {
+    "prompt": "Explain overfitting using an example from everyday learning, such as revising for an exam by memorising past questions.",
+    "points": [
+     "Maps memorising to fitting training data.",
+     "Maps a new exam question to unseen data.",
+     "Notes that more flexibility is not always better."
+    ]
+   },
+   "openQuestion": {
+    "id": "Q020",
+    "text": "Can artificial memory systems reproduce important functions of human remembering?"
+   },
+   "investigate": "How does a machine learning system learn from data?",
+   "reading": [
+    "lecun15",
+    "sep-ai",
+    "rumelhart86",
+    "pub:P014"
+   ],
+   "check": [
+    "C002-L03-a1",
+    "C002-L03-a2",
+    "C002-L03-a3",
+    "C002-L03-r"
+   ],
+   "misconceptions": [
+    {
+     "wrong": "A model that fits the training data perfectly is a good model.",
+     "right": "It may have fit noise. Performance on held-back data shows whether it generalises."
+    },
+    {
+     "wrong": "More flexible models are always better.",
+     "right": "Flexibility helps up to a point. Beyond it the model fits noise and generalises worse, as the demonstration shows."
+    }
+   ],
+   "courseId": "C002",
+   "words": 404,
+   "minutes": 10,
+   "prev": "C002-L02",
+   "next": "C002-L04",
+   "reviewStatus": "Awaiting editorial review",
+   "reviewed": "2026-10-16",
+   "version": "1.0.0"
+  },
+  {
+   "id": "C002-L04",
+   "n": 4,
+   "title": "Neural networks",
+   "intro": "Neural networks are the basis of most recent progress in AI. They are loosely inspired by the brain but are mathematical models, not artificial brains. This lesson explains the idea and lets you train a very small one.",
+   "objectives": [
+    "Describe a neural network in terms of units, weights and layers.",
+    "Explain in outline how a network learns from its mistakes.",
+    "Say why a network with no hidden layer cannot learn some patterns."
+   ],
+   "sections": [
+    {
+     "h": "Units, weights and layers",
+     "p": [
+      "An artificial {{g:neuralnet|neural network}} consists of simple units that each take numbers in, combine them using adjustable weights, and pass a result on. Units are arranged in layers. Information flows from an input layer, through one or more hidden layers, to an output. 'Neural' reflects early inspiration from neurons, but real neurons are far more complex, and these networks should not be read as models of the brain's detailed workings.",
+      "The behaviour of a network is stored in its weights. Training means adjusting them. The 1986 paper on back-propagation described a way to calculate how each weight contributed to an error so that all of them could be adjusted a little in the direction that reduces it [@rumelhart86]. Repeating this over many examples gradually shapes the network."
+     ]
+    },
+    {
+     "h": "Why layers matter",
+     "p": [
+      "A single unit can separate inputs only along a straight boundary. Some simple patterns cannot be separated that way. The classic example is 'exclusive or' (XOR): output 1 when exactly one of two inputs is 1. A network that adds a hidden layer can represent it. The demonstration below lets you try each case. The point is general: depth gives networks the ability to build more complex features from simpler ones, which is a reason deep networks are effective on images and language [@lecun15]."
+     ]
+    },
+    {
+     "h": "What a network is not",
+     "p": [
+      "A trained network does not contain explicit rules that a person can read off. Its competence is spread across many weights. This is one reason explaining why a network produced a particular output is difficult, a point the final lessons return to."
+     ]
+    },
+    {
+     "h": "A worked example: why the network needs hidden units",
+     "p": [
+      "Think of four inputs: (0,0), (0,1), (1,0), (1,1). For XOR, the answers are 0, 1, 1, 0. A single unit makes one straight cut across this space, with the input points on either side. No single straight line separates (0,1) and (1,0) from (0,0) and (1,1). A network with hidden units can make several cuts and combine them. That is the small-scale version of a general idea: layers let a network build complex distinctions from simple ones. It is also why bigger and deeper networks can capture more patterns, with the caution that more capacity is not the same as better understanding."
+     ]
+    }
+   ],
+   "concepts": [
+    "cognition",
+    "artificial-intelligence",
+    "understanding"
+   ],
+   "activity": {
+    "type": "neuron",
+    "title": "Train a tiny network",
+    "prompt": "Choose a pattern and a network size, then train. Accuracy shows how many of the four possible inputs the network gets right."
+   },
+   "connections": {
+    "theories": [],
+    "questions": [
+     "Q011",
+     "Q008"
+    ],
+    "atlas": [
+     "learning",
+     "ai",
+     "computing",
+     "emergence"
+    ],
+    "museum": [
+     "model"
+    ],
+    "articles": []
+   },
+   "reflection": {
+    "prompt": "Why might calling artificial neural networks 'brain-like' be misleading? Give one similarity and one difference.",
+    "points": [
+     "Similarity: many simple units; learning by adjusting connection strengths.",
+     "Difference: real neurons are far more complex; training differs.",
+     "Does not imply networks are conscious or not."
+    ]
+   },
+   "openQuestion": {
+    "id": "Q008",
+    "text": "Can an artificial system genuinely understand meaning?"
+   },
+   "investigate": "How do neural networks learn?",
+   "reading": [
+    "rumelhart86",
+    "lecun15",
+    "sep-ai",
+    "vaswani17"
+   ],
+   "check": [
+    "C002-L04-a1",
+    "C002-L04-a2",
+    "C002-L04-a3",
+    "C002-L04-r"
+   ],
+   "misconceptions": [
+    {
+     "wrong": "Neural networks work like human brains.",
+     "right": "They were loosely inspired by neurons, but they are mathematical models and differ from brains in many ways."
+    },
+    {
+     "wrong": "A trained network contains rules a person can read.",
+     "right": "Its behaviour is spread across many weights. Explaining a particular output can be hard."
+    }
+   ],
+   "courseId": "C002",
+   "words": 406,
+   "minutes": 10,
+   "prev": "C002-L03",
+   "next": "C002-L05",
+   "reviewStatus": "Awaiting editorial review",
+   "reviewed": "2026-10-16",
+   "version": "1.0.0"
+  },
+  {
+   "id": "C002-L05",
+   "n": 5,
+   "title": "Language models",
+   "intro": "Systems like chatbots are built on language models. This lesson explains in plain terms what these models do, how they are trained, and where their fluency can mislead.",
+   "objectives": [
+    "Explain next-word prediction.",
+    "Describe the role of scale and of training on human feedback.",
+    "Explain why fluent output is not the same as accuracy."
+   ],
+   "sections": [
+    {
+     "h": "Predicting what comes next",
+     "p": [
+      "A {{g:lm|language model}} assigns probabilities to what text is likely to come next. Text is split into pieces called {{g:tokens|tokens}}, and the model predicts the next token given the ones before it. Repeating the step produces text. The demonstration below uses a very small version trained on a short passage so that you can see the principle directly.",
+      "Modern models use the transformer architecture, which lets every position in a text weigh other positions through a mechanism called attention [@vaswani17]. They are trained on vast amounts of text. Researchers reported in 2020 that scaling up such a model made it able to perform many tasks from a few examples placed in the prompt [@brown-2020]."
+     ]
+    },
+    {
+     "h": "From prediction to assistant",
+     "p": [
+      "A model trained only to predict text is not by that fact a helpful assistant. Later stages of training use human feedback to shape the model towards answers people judge to be better, as described in a 2022 paper on following instructions with human feedback [@ouyang22]. This changes behaviour but does not make the model a different kind of thing. Different AI systems are built differently: image classifiers, game-playing agents and language models are not architecturally the same."
+     ]
+    },
+    {
+     "h": "Fluent is not the same as true",
+     "p": [
+      "Because the training goal is plausible text, a language model can produce confident statements that are false. Critics have argued that models trained on form alone do not have access to meaning, and warned about the risks of treating fluent output as understanding [@bender20; @pub:P016]. Others argue that the question of understanding is open and that behaviour on tasks is relevant evidence. This debate returns in the next two lessons."
+     ]
+    },
+    {
+     "h": "A worked example: why a fluent answer can be wrong",
+     "p": [
+      "Suppose you ask a language model for a reference on a narrow topic. The model has learned that references tend to have authors, a title, a journal and a year, and it can produce text with that form. If it does not have a reliable record of a real source, the most probable-looking text can still be a source that does not exist. The sentence reads like a citation because the model has learned what citations look like. Whether the reference is real is a separate matter that the form does not settle. This is why you should check sources independently, especially for claims that matter."
+     ]
+    }
+   ],
+   "concepts": [
+    "understanding",
+    "meaning",
+    "artificial-intelligence"
+   ],
+   "activity": {
+    "type": "bigram",
+    "title": "A very small language model",
+    "prompt": "This model has counted which word follows which in the short passage below. Choose a starting word and generate text, one word at a time."
+   },
+   "connections": {
+    "theories": [],
+    "questions": [
+     "Q008",
+     "Q012"
+    ],
+    "atlas": [
+     "language",
+     "ai",
+     "understanding"
+    ],
+    "museum": [
+     "model"
+    ],
+    "articles": [
+     "art:is-human-consciousness-connected-to-artificial-intelligence"
+    ]
+   },
+   "reflection": {
+    "prompt": "A language model writes a confident paragraph that contains an invented citation. Explain, using this lesson, how that can happen.",
+    "points": [
+     "The model predicts plausible text, not verified facts.",
+     "Fluent form does not guarantee accuracy.",
+     "Suggests checking sources independently."
+    ]
+   },
+   "openQuestion": {
+    "id": "Q008",
+    "text": "Can an artificial system genuinely understand meaning?"
+   },
+   "investigate": "Can machines understand language?",
+   "reading": [
+    "vaswani17",
+    "brown-2020",
+    "ouyang22",
+    "bender20",
+    "pub:P016",
+    "mitchell22"
+   ],
+   "check": [
+    "C002-L05-a1",
+    "C002-L05-a2",
+    "C002-L05-a3",
+    "C002-L05-r"
+   ],
+   "misconceptions": [
+    {
+     "wrong": "A language model looks up facts in a database.",
+     "right": "By default it generates text from patterns learned in training. Some systems add search or retrieval, which changes how they work."
+    },
+    {
+     "wrong": "All AI systems work like chatbots.",
+     "right": "Image classifiers, game-playing systems and language models are built differently and have different strengths and failure modes."
+    }
+   ],
+   "courseId": "C002",
+   "words": 404,
+   "minutes": 10,
+   "prev": "C002-L04",
+   "next": "C002-L06",
+   "reviewStatus": "Awaiting editorial review",
+   "reviewed": "2026-10-16",
+   "version": "1.0.0"
+  },
+  {
+   "id": "C002-L06",
+   "n": 6,
+   "title": "Reasoning and evaluation",
+   "intro": "How do we know what an AI system can do? This lesson looks at benchmarks and tests, what they can and cannot show, and the debate about what counts as understanding.",
+   "objectives": [
+    "Explain what a benchmark is and what it measures.",
+    "Name two reasons a high score may not show what it appears to.",
+    "Summarise the disagreement about whether language models understand."
+   ],
+   "sections": [
+    {
+     "h": "Tests as evidence",
+     "p": [
+      "A {{g:benchmark|benchmark}} is a standard set of tasks with agreed scoring, used to compare systems. Benchmarks make progress measurable, but a score is only as informative as the match between the test and the ability it is meant to reflect. A system might score well because it learned shortcuts, because similar questions appeared in its training data, or because the test measures a narrower skill than its name suggests."
+     ]
+    },
+    {
+     "h": "Reasoning and generalisation",
+     "p": [
+      "People often ask whether a model 'reasons'. A careful answer begins by saying what is being measured: solving a certain kind of problem, producing a correct final answer, producing a valid step-by-step argument, or handling new problem types. These are different. A system might do well on one and poorly on another. Turing's imitation game is a behavioural test that tries to bypass these distinctions, and critics have argued that behavioural tests can be passed by systems that lack what we care about [@turing50; @searle80]."
+     ]
+    },
+    {
+     "h": "A live debate",
+     "p": [
+      "Researchers who have surveyed the debate over whether large language models understand language describe two broad camps: those who think that such systems may have some form of understanding, and those who think that statistical patterns in text cannot amount to it. They note that the debate is hampered by the lack of an agreed account of understanding and of tests that would separate the views [@mitchell22]. This is a pre-print summary of the debate, not a verdict. The lesson's aim is to show how to hold such a debate open."
+     ]
+    },
+    {
+     "h": "A worked example: two systems, the same score",
+     "p": [
+      "Suppose two systems each score 80% on a reading comprehension test. One does so by understanding the passages. The other has learned that the answer is usually in the first sentence, a pattern in this test's design. Their scores are identical. They would behave very differently on a test where the answer is elsewhere. The example shows why researchers build varied tests and look for failure cases, and why a single number can mislead. It also shows why 'understanding' is hard to define through tests alone: different internal routes can produce the same result."
+     ]
+    }
+   ],
+   "concepts": [
+    "understanding",
+    "intelligence",
+    "meaning"
+   ],
+   "activity": {
+    "type": "claims",
+    "title": "Evaluate the claim",
+    "prompt": "Read the claim and select every limitation.",
+    "claim": "A model scored 92% on a reasoning benchmark, so it reasons as well as people do.",
+    "options": [
+     [
+      "The benchmark may measure a narrower skill than 'reasoning'.",
+      true,
+      "Right. Names can overstate."
+     ],
+     [
+      "Similar questions might have appeared in the model's training data.",
+      true,
+      "Right. This can inflate a score."
+     ],
+     [
+      "A high score on one test shows ability on new kinds of problem.",
+      false,
+      "No. Generalisation to new problem types needs its own test."
+     ],
+     [
+      "It is not stated how humans were tested or what 'as well as' means.",
+      true,
+      "Right. The comparison is unspecified."
+     ]
+    ]
+   },
+   "connections": {
+    "theories": [],
+    "questions": [
+     "Q008",
+     "Q011",
+     "Q012"
+    ],
+    "atlas": [
+     "reasoning",
+     "ai",
+     "method"
+    ],
+    "museum": [],
+    "articles": []
+   },
+   "reflection": {
+    "prompt": "Design a test for 'understanding' of a short story by a person or a machine. What would a passing performance show, and what might it fail to show?",
+    "points": [
+     "Proposes a concrete task beyond summarising.",
+     "Says what the task tests.",
+     "Names a limitation, such as shortcuts or prior exposure."
+    ]
+   },
+   "openQuestion": {
+    "id": "Q012",
+    "text": "Is behavioral imitation sufficient evidence of understanding?"
+   },
+   "investigate": "Is behavioural imitation sufficient evidence of understanding?",
+   "reading": [
+    "turing50",
+    "searle80",
+    "sep-chinese-room",
+    "mitchell22",
+    "bender20"
+   ],
+   "check": [
+    "C002-L06-a1",
+    "C002-L06-a2",
+    "C002-L06-a3",
+    "C002-L06-r"
+   ],
+   "misconceptions": [
+    {
+     "wrong": "A high benchmark score means a system has the human ability the benchmark is named after.",
+     "right": "Names can overstate what is measured, and systems can exploit shortcuts or overlap with training data."
+    },
+    {
+     "wrong": "The debate about understanding is only semantic.",
+     "right": "The terms matter, but so does evidence about how systems behave on new problems and what they represent internally. Researchers disagree about both."
+    }
+   ],
+   "courseId": "C002",
+   "words": 378,
+   "minutes": 10,
+   "prev": "C002-L05",
+   "next": "C002-L07",
+   "reviewStatus": "Awaiting editorial review",
+   "reviewed": "2026-10-16",
+   "version": "1.0.0"
+  },
+  {
+   "id": "C002-L07",
+   "n": 7,
+   "title": "Intelligence versus consciousness",
+   "intro": "A system might be very capable and still not be conscious, or the reverse. This lesson explains why the two questions should be kept apart, and what current research says about connecting them.",
+   "objectives": [
+    "Explain why intelligence and consciousness are different questions.",
+    "Summarise two views on whether computation could suffice for consciousness.",
+    "Describe how scientific theories are being used to assess AI systems."
+   ],
+   "sections": [
+    {
+     "h": "Two questions",
+     "p": [
+      "'What can this system do?' is a question about {{lex:intelligence|intelligence}} or capability. 'Does it feel like anything to be this system?' is a question about {{lex:consciousness|consciousness}}. Capability can be measured by tasks. Experience cannot be read off from task performance in the same way. The Unanswered Archive asks whether intelligence can exist without consciousness, and treats it as open."
+     ]
+    },
+    {
+     "h": "Does computation suffice?",
+     "p": [
+      "The philosopher John Searle argued with his Chinese Room thought experiment that running a program is not enough for understanding: a person following rules to manipulate Chinese symbols could produce good answers without understanding Chinese [@searle80]. Many replies have been offered, and the argument remains debated [@sep-chinese-room]. Others hold that if the right kind of information processing is what matters for consciousness, then machines could in principle be conscious. Which view is right depends on which theory of consciousness is right, and that is unsettled."
+     ]
+    },
+    {
+     "h": "Using science to assess AI",
+     "p": [
+      "Because theories of consciousness make different claims about what matters, a research group proposed assessing AI systems against indicator properties drawn from several theories, and reported that no current system was a strong candidate [@butlin-2023]. Dehaene and colleagues likewise distinguished kinds of information processing associated with consciousness in the brain and asked which might be implemented in machines [@dehaene17]. Chalmers examined the question for large language models and weighed considerations for and against [@pub:P018]. These works are proposals and arguments, several are preprints, and none shows that any system is or is not conscious."
+     ]
+    },
+    {
+     "h": "A worked example: capability without a verdict",
+     "p": [
+      "A chess program beats grandmasters. It is, by one definition, highly capable at chess. Does that tell us anything about whether it feels anything while playing? Most people think not. Now consider a conversational system that talks about its feelings. Its outputs are closer to the way a person would describe experience, and for that reason more tempting to take at face value. But a system trained on a great deal of human text may produce such language whatever is going on inside. To get evidence you would need something other than fluency: a theory that links particular properties to experience, and checks of whether the system has those properties. That is what the indicator-property work attempts, with the limits described in the lesson."
+     ]
+    }
+   ],
+   "concepts": [
+    "intelligence",
+    "consciousness",
+    "sentience"
+   ],
+   "activity": {
+    "type": "steps",
+    "title": "The Chinese Room",
+    "prompt": "Follow Searle's thought experiment. Nothing here is graded.",
+    "steps": [
+     {
+      "q": "A person who knows no Chinese follows a rulebook to answer written Chinese questions. Outsiders see fluent answers. What does Searle say?",
+      "opts": [
+       [
+        "The person understands Chinese.",
+        "Searle says no: following rules for symbols does not give understanding."
+       ],
+       [
+        "The system as a whole may understand, even if the person does not.",
+        "This is a well-known reply (the 'systems reply'). Searle did not accept it."
+       ],
+       [
+        "Outputs prove nothing either way.",
+        "Close to the point: good outputs alone may not settle the question."
+       ]
+      ]
+     },
+     {
+      "q": "Is this argument about whether machines can ever be conscious?",
+      "opts": [
+       [
+        "Yes, it proves they cannot.",
+        "The argument targets the claim that running the right program suffices. It does not by itself rule out other designs."
+       ],
+       [
+        "It is about whether running a program is sufficient for understanding.",
+        "Yes, this is the standard reading."
+       ],
+       [
+        "It is about whether people are conscious.",
+        "No."
+       ]
+      ]
+     },
+     {
+      "q": "What does the debate show?",
+      "opts": [
+       [
+        "That the answer depends on contested views about mind and computation.",
+        "Yes. This is why the lesson treats it as open."
+       ],
+       [
+        "That the question is settled.",
+        "No."
+       ]
+      ]
+     }
+    ]
+   },
+   "connections": {
+    "theories": [
+     "gnwt",
+     "iit"
+    ],
+    "questions": [
+     "Q007",
+     "Q009",
+     "Q010"
+    ],
+    "atlas": [
+     "intelligence",
+     "consciousness",
+     "ai",
+     "emergence"
+    ],
+    "museum": [],
+    "articles": [
+     "art:is-human-consciousness-connected-to-artificial-intelligence"
+    ]
+   },
+   "reflection": {
+    "prompt": "Give an example of a system that is very capable at a task. What additional evidence, beyond task performance, would you need before asking whether it is conscious?",
+    "points": [
+     "Separates performance from experience.",
+     "Names evidence tied to a theory.",
+     "Acknowledges uncertainty."
+    ]
+   },
+   "openQuestion": {
+    "id": "Q007",
+    "text": "Can intelligence exist without consciousness?"
+   },
+   "investigate": "Can intelligence exist without consciousness?",
+   "reading": [
+    "searle80",
+    "sep-chinese-room",
+    "butlin-2023",
+    "dehaene17",
+    "pub:P018",
+    "sep-consciousness"
+   ],
+   "check": [
+    "C002-L07-a1",
+    "C002-L07-a2",
+    "C002-L07-a3",
+    "C002-L07-r"
+   ],
+   "misconceptions": [
+    {
+     "wrong": "Intelligent systems must be conscious.",
+     "right": "Capability and experience are different questions. The Archive treats whether intelligence can exist without consciousness as open."
+    },
+    {
+     "wrong": "Searle proved that machines cannot think.",
+     "right": "The Chinese Room argument is a contested argument about whether running a program suffices for understanding. It has attracted many replies."
+    }
+   ],
+   "courseId": "C002",
+   "words": 404,
+   "minutes": 10,
+   "prev": "C002-L06",
+   "next": "C002-L08",
+   "reviewStatus": "Awaiting editorial review",
+   "reviewed": "2026-10-16",
+   "version": "1.0.0"
+  },
+  {
+   "id": "C002-L08",
+   "n": 8,
+   "title": "Limitations, risks, and open questions",
+   "intro": "This lesson closes the course by looking at what AI systems get wrong, how people and institutions try to manage the risks, and which questions remain open.",
+   "objectives": [
+    "Name three kinds of limitation or risk of AI systems.",
+    "Describe what a risk management framework is for.",
+    "List open questions the course has raised."
+   ],
+   "sections": [
+    {
+     "h": "Where systems fall short",
+     "p": [
+      "AI systems can be inaccurate, can perform worse for groups under-represented in their data, can reveal or misuse personal information, and can be hard to explain. They can also be used in ways their builders did not intend. Critics of large language models have raised concerns about training on unvetted data, about social harms, and about the costs of scale [@pub:P016]. Planting convincing but false memories in people is a documented phenomenon in human memory research [@pub:P014], which is one reason to be careful when fluent systems generate plausible but unreliable content."
+     ]
+    },
+    {
+     "h": "Managing risk",
+     "p": [
+      "A risk management framework is a structured way to identify, assess and reduce harms. The U.S. National Institute of Standards and Technology published an AI Risk Management Framework for organisations that design, develop, deploy or use AI systems; it is voluntary, and it organises the work into functions for governing, mapping, measuring and managing risk [@nist23]. Frameworks like this do not make a system safe by themselves, but they give organisations a shared vocabulary and checklist."
+     ]
+    },
+    {
+     "h": "What remains open",
+     "p": [
+      "Whether systems can understand meaning, whether reasoning in machines is comparable to human reasoning, whether any artificial system could be conscious, and under what conditions an artificial system could deserve moral consideration are open questions that the Unanswered Archive tracks. A good student of AI can describe the state of the evidence on each without claiming more than it supports."
+     ]
+    },
+    {
+     "h": "A worked example: a hiring tool",
+     "p": [
+      "Imagine a tool that ranks job applicants, trained on a company's past hiring decisions. If past decisions favoured certain groups, a model trained to imitate them can reproduce that pattern even though no one told it to. Checking requires deciding what fair means (equal selection rates, equal accuracy, something else), measuring it on the relevant groups, and checking again over time. It also requires deciding who is responsible if the tool causes harm. Risk management frameworks encourage organisations to ask such questions before and after deployment. The example shows that many risks come from the data and the setting, not only the algorithm."
+     ]
+    }
+   ],
+   "concepts": [
+    "artificial-intelligence",
+    "agency",
+    "understanding"
+   ],
+   "activity": {
+    "type": "claims",
+    "title": "Risk or hype?",
+    "prompt": "Read the statement and select all the problems.",
+    "claim": "'This AI is fully objective and unbiased because it is a machine.'",
+    "options": [
+     [
+      "Models learn from data produced by people and may reflect its gaps and biases.",
+      true,
+      "Right."
+     ],
+     [
+      "Being a machine guarantees fairness.",
+      false,
+      "No. Being a machine does not guarantee fairness."
+     ],
+     [
+      "'Objective' is not defined and not tested in the claim.",
+      true,
+      "Right."
+     ],
+     [
+      "Measuring fairness requires choosing what to measure and for whom.",
+      true,
+      "Right. Such choices are human decisions."
+     ]
+    ]
+   },
+   "connections": {
+    "theories": [],
+    "questions": [
+     "Q022",
+     "Q023",
+     "Q024",
+     "Q008"
+    ],
+    "atlas": [
+     "ethics",
+     "accountability",
+     "ai",
+     "moral"
+    ],
+    "museum": [],
+    "articles": [
+     "art:is-human-consciousness-connected-to-artificial-intelligence"
+    ]
+   },
+   "reflection": {
+    "prompt": "Choose one AI application you encounter. Who could be harmed if it fails, and what would you want its builders to have checked?",
+    "points": [
+     "Names a specific application.",
+     "Identifies affected people.",
+     "Proposes a concrete check, such as testing on diverse data or human review."
+    ]
+   },
+   "openQuestion": {
+    "id": "Q023",
+    "text": "How should responsibility be assigned when AI systems participate in consequential decisions?"
+   },
+   "investigate": "How should responsibility be assigned when AI systems participate in decisions?",
+   "reading": [
+    "nist23",
+    "pub:P016",
+    "sep-ai",
+    "pub:P014",
+    "mitchell22"
+   ],
+   "check": [
+    "C002-L08-a1",
+    "C002-L08-a2",
+    "C002-L08-a3",
+    "C002-L08-r"
+   ],
+   "misconceptions": [
+    {
+     "wrong": "A machine cannot be biased.",
+     "right": "Systems learn from data produced by people and can reproduce its gaps and biases."
+    },
+    {
+     "wrong": "A risk management framework guarantees safety.",
+     "right": "It structures the work of identifying and reducing risk. It does not make a system safe by itself."
+    }
+   ],
+   "courseId": "C002",
+   "words": 363,
+   "minutes": 10,
+   "prev": "C002-L07",
+   "next": null,
+   "reviewStatus": "Awaiting editorial review",
+   "reviewed": "2026-10-16",
+   "version": "1.0.0"
+  }
+ ]
+}

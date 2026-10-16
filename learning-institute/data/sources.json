@@ -1,0 +1,708 @@
+{
+ "meta": {
+  "schema": 1,
+  "note": "Every record is a source already verified on this site, or was verified for this course. See each record's verification note."
+ },
+ "items": [
+  {
+   "id": "albantakis-2023",
+   "type": "Foundational theoretical paper",
+   "authors": [
+    "Larissa Albantakis",
+    "Leonardo Barbosa",
+    "Graham Findlay",
+    "Matteo Grasso",
+    "Andrew M. Haun",
+    "William Marshall",
+    "William G. P. Mayner",
+    "Alireza Zaeemzadeh",
+    "Melanie Boly",
+    "Bjørn E. Juel",
+    "Shuntaro Sasai",
+    "Keiko Fujii",
+    "Isaac David",
+    "Jeremiah Hendren",
+    "Jonathan P. Lang",
+    "Giulio Tononi"
+   ],
+   "title": "Integrated information theory (IIT) 4.0: Formulating the properties of phenomenal existence in physical terms",
+   "venue": "PLOS Computational Biology",
+   "year": 2023,
+   "doi": "10.1371/journal.pcbi.1011465",
+   "url": "https://doi.org/10.1371/journal.pcbi.1011465",
+   "kind": "Foundational theoretical paper",
+   "preprint": false,
+   "verification": "Open-access full text retrieved and summarized.",
+   "basis": "Research Observatory and Archive record"
+  },
+  {
+   "id": "bender20",
+   "type": "proceedings-article",
+   "authors": [
+    "Emily M. Bender",
+    "Alexander Koller"
+   ],
+   "title": "Climbing towards NLU: On Meaning, Form, and Understanding in the Age of Data",
+   "venue": "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics",
+   "year": "2020",
+   "doi": "10.18653/v1/2020.acl-main.463",
+   "url": "https://doi.org/10.18653/v1/2020.acl-main.463",
+   "kind": "proceedings-article",
+   "verification": "Checked against Crossref on 2026-10-15",
+   "basis": "Lexicon of Intelligence source record"
+  },
+  {
+   "id": "block95",
+   "type": "journal-article",
+   "authors": [
+    "Ned Block"
+   ],
+   "title": "On a confusion about a function of consciousness",
+   "venue": "Behavioral and Brain Sciences",
+   "year": "1995",
+   "doi": "10.1017/S0140525X00038188",
+   "url": "https://doi.org/10.1017/S0140525X00038188",
+   "kind": "journal-article",
+   "verification": "Checked against Crossref on 2026-10-15",
+   "basis": "Lexicon of Intelligence source record"
+  },
+  {
+   "id": "brown-2020",
+   "type": "Empirical finding",
+   "authors": [
+    "Tom B. Brown",
+    "and 30 co-authors"
+   ],
+   "title": "Language Models are Few-Shot Learners",
+   "venue": "arXiv preprint (arXiv:2005.14165)",
+   "year": 2020,
+   "doi": null,
+   "url": "https://arxiv.org/abs/2005.14165",
+   "kind": "Empirical finding",
+   "preprint": true,
+   "verification": "The arXiv abstract page was read. The full paper was not.",
+   "basis": "Research Observatory and Archive record"
+  },
+  {
+   "id": "butlin-2023",
+   "type": "Review of the literature",
+   "authors": [
+    "Patrick Butlin",
+    "Robert Long",
+    "Eric Elmoznino",
+    "Yoshua Bengio",
+    "Jonathan Birch",
+    "Axel Constant",
+    "George Deane",
+    "Stephen M. Fleming",
+    "Chris Frith",
+    "Xu Ji",
+    "Ryota Kanai",
+    "Colin Klein",
+    "Grace Lindsay",
+    "Matthias Michel",
+    "Liad Mudrik",
+    "Megan A. K. Peters",
+    "Eric Schwitzgebel",
+    "Jonathan Simon",
+    "Rufin VanRullen"
+   ],
+   "title": "Consciousness in Artificial Intelligence: Insights from the Science of Consciousness",
+   "venue": "arXiv preprint (arXiv:2308.08708)",
+   "year": 2023,
+   "doi": null,
+   "url": "https://arxiv.org/abs/2308.08708",
+   "kind": "Review of the literature",
+   "preprint": true,
+   "verification": "arXiv abstract page retrieved and paraphrased.",
+   "basis": "Research Observatory and Archive record"
+  },
+  {
+   "id": "chalmers-1995",
+   "type": "Philosophical argument",
+   "authors": [
+    "David J. Chalmers"
+   ],
+   "title": "Facing Up to the Problem of Consciousness",
+   "venue": "Journal of Consciousness Studies",
+   "year": 1995,
+   "doi": null,
+   "url": "https://web-archive.southampton.ac.uk/cogprints.org/316/",
+   "kind": "Philosophical argument",
+   "preprint": false,
+   "verification": "The abstract was read on a repository page, and the citation details on a repository export. The full paper was not read.",
+   "basis": "Research Observatory and Archive record"
+  },
+  {
+   "id": "clark13",
+   "type": "journal-article",
+   "authors": [
+    "Andy Clark"
+   ],
+   "title": "Whatever next? Predictive brains, situated agents, and the future of cognitive science",
+   "venue": "Behavioral and Brain Sciences",
+   "year": "2013",
+   "doi": "10.1017/S0140525X12000477",
+   "url": "https://doi.org/10.1017/S0140525X12000477",
+   "kind": "journal-article",
+   "verification": "Checked against Crossref on 2026-10-15",
+   "basis": "Lexicon of Intelligence source record"
+  },
+  {
+   "id": "cogitate-2025",
+   "type": "Comparison of theories",
+   "authors": [
+    "Cogitate Consortium",
+    "et al. (42 names are listed on the publisher record)"
+   ],
+   "title": "Adversarial testing of global neuronal workspace and integrated information theories of consciousness",
+   "venue": "Nature",
+   "year": 2025,
+   "doi": "10.1038/s41586-025-08888-1",
+   "url": "https://doi.org/10.1038/s41586-025-08888-1",
+   "kind": "Comparison of theories",
+   "preprint": false,
+   "verification": "Publisher record, as retrieved through an institutional repository page.",
+   "basis": "Research Observatory and Archive record"
+  },
+  {
+   "id": "dartmouth-1955",
+   "type": "Theoretical proposal",
+   "authors": [
+    "John McCarthy",
+    "Marvin L. Minsky",
+    "Nathaniel Rochester",
+    "Claude E. Shannon"
+   ],
+   "title": "A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence (31 August 1955)",
+   "venue": "Proposal; republished in AI Magazine",
+   "year": 1955,
+   "doi": null,
+   "url": "https://ojs.aaai.org/index.php/aimagazine/article/view/1904",
+   "kind": "Theoretical proposal",
+   "preprint": false,
+   "verification": "The AAAI republication page was read. Volume and page details were not confirmed.",
+   "basis": "Research Observatory and Archive record"
+  },
+  {
+   "id": "dehaene17",
+   "type": "journal-article",
+   "authors": [
+    "Stanislas Dehaene",
+    "Hakwan Lau",
+    "Sid Kouider"
+   ],
+   "title": "What is consciousness, and could machines have it?",
+   "venue": "Science",
+   "year": "2017",
+   "doi": "10.1126/science.aan8871",
+   "url": "https://doi.org/10.1126/science.aan8871",
+   "kind": "journal-article",
+   "verification": "Checked against Crossref on 2026-10-15",
+   "basis": "Lexicon of Intelligence source record"
+  },
+  {
+   "id": "graziano15",
+   "type": "journal-article",
+   "authors": [
+    "Michael S. A. Graziano",
+    "Taylor W. Webb"
+   ],
+   "title": "The attention schema theory: a mechanistic account of subjective awareness",
+   "venue": "Frontiers in Psychology",
+   "year": "2015",
+   "doi": "10.3389/fpsyg.2015.00500",
+   "url": "https://doi.org/10.3389/fpsyg.2015.00500",
+   "kind": "journal-article",
+   "verification": "Checked against Crossref on 2026-10-15",
+   "basis": "Lexicon of Intelligence source record"
+  },
+  {
+   "id": "hohwy-seth-2020",
+   "type": "Foundational theoretical paper",
+   "authors": [
+    "Jakob Hohwy",
+    "Anil Seth"
+   ],
+   "title": "Predictive processing as a systematic basis for identifying the neural correlates of consciousness",
+   "venue": "Philosophy and the Mind Sciences",
+   "year": 2020,
+   "doi": "10.33735/phimisci.2020.II.64",
+   "url": "https://doi.org/10.33735/phimisci.2020.II.64",
+   "kind": "Foundational theoretical paper",
+   "preprint": false,
+   "verification": "Journal page retrieved and summarized.",
+   "basis": "Research Observatory and Archive record"
+  },
+  {
+   "id": "koch07",
+   "type": "journal-article",
+   "authors": [
+    "Christof Koch",
+    "Naotsugu Tsuchiya"
+   ],
+   "title": "Attention and consciousness: two distinct brain processes",
+   "venue": "Trends in Cognitive Sciences",
+   "year": "2007",
+   "doi": "10.1016/j.tics.2006.10.012",
+   "url": "https://doi.org/10.1016/j.tics.2006.10.012",
+   "kind": "journal-article",
+   "verification": "Checked against Crossref on 2026-10-15",
+   "basis": "Lexicon of Intelligence source record"
+  },
+  {
+   "id": "lamme06",
+   "type": "journal-article",
+   "authors": [
+    "Victor A.F. Lamme"
+   ],
+   "title": "Towards a true neural stance on consciousness",
+   "venue": "Trends in Cognitive Sciences",
+   "year": "2006",
+   "doi": "10.1016/j.tics.2006.09.001",
+   "url": "https://doi.org/10.1016/j.tics.2006.09.001",
+   "kind": "journal-article",
+   "verification": "Checked against Crossref on 2026-10-15",
+   "basis": "Lexicon of Intelligence source record"
+  },
+  {
+   "id": "lau-rosenthal-2011",
+   "type": "Review of the literature",
+   "authors": [
+    "Hakwan Lau",
+    "David Rosenthal"
+   ],
+   "title": "Empirical support for higher-order theories of conscious awareness",
+   "venue": "Trends in Cognitive Sciences",
+   "year": 2011,
+   "doi": "10.1016/j.tics.2011.05.009",
+   "url": "https://doi.org/10.1016/j.tics.2011.05.009",
+   "kind": "Review of the literature",
+   "preprint": false,
+   "verification": "A repository summary of the paper.",
+   "basis": "Research Observatory and Archive record"
+  },
+  {
+   "type": "Journal article",
+   "authors": [
+    "Yann LeCun",
+    "Yoshua Bengio",
+    "Geoffrey Hinton"
+   ],
+   "title": "Deep learning",
+   "venue": "Nature 521, 436-444",
+   "year": 2015,
+   "doi": "10.1038/nature14539",
+   "url": "https://doi.org/10.1038/nature14539",
+   "kind": "Review of the literature",
+   "verification": "Title, authors, journal, year and pages confirmed through the Crossref record on 2026-10-16. Full text not read.",
+   "id": "lecun15",
+   "basis": "Verified for this course"
+  },
+  {
+   "id": "legg07",
+   "type": "journal-article",
+   "authors": [
+    "Shane Legg",
+    "Marcus Hutter"
+   ],
+   "title": "Universal Intelligence: A Definition of Machine Intelligence",
+   "venue": "Minds and Machines",
+   "year": "2007",
+   "doi": "10.1007/s11023-007-9079-x",
+   "url": "https://doi.org/10.1007/s11023-007-9079-x",
+   "kind": "journal-article",
+   "verification": "Checked against Crossref on 2026-10-15",
+   "basis": "Lexicon of Intelligence source record"
+  },
+  {
+   "id": "mashour20",
+   "type": "journal-article",
+   "authors": [
+    "George A. Mashour",
+    "Pieter Roelfsema",
+    "Jean-Pierre Changeux",
+    "Stanislas Dehaene"
+   ],
+   "title": "Conscious Processing and the Global Neuronal Workspace Hypothesis",
+   "venue": "Neuron",
+   "year": "2020",
+   "doi": "10.1016/j.neuron.2020.01.026",
+   "url": "https://doi.org/10.1016/j.neuron.2020.01.026",
+   "kind": "journal-article",
+   "verification": "Checked against Crossref on 2026-10-15",
+   "basis": "Lexicon of Intelligence source record"
+  },
+  {
+   "id": "melloni-2023",
+   "type": "Comparison of theories",
+   "authors": [
+    "Lucia Melloni",
+    "Liad Mudrik",
+    "Michael Pitts",
+    "Katarina Bendtz",
+    "Oscar Ferrante",
+    "Urszula Gorska",
+    "Rony Hirschhorn",
+    "Aya Khalaf",
+    "Csaba Kozma",
+    "Alex Lepauvre",
+    "Ling Liu",
+    "David Mazumder",
+    "David Richter",
+    "Hao Zhou",
+    "Hal Blumenfeld",
+    "Melanie Boly",
+    "David J. Chalmers",
+    "Sasha Devore",
+    "Francis Fallon",
+    "Floris P. de Lange",
+    "Ole Jensen",
+    "Gabriel Kreiman",
+    "Huan Luo",
+    "Theofanis I. Panagiotaropoulos",
+    "Stanislas Dehaene",
+    "Christof Koch",
+    "Giulio Tononi"
+   ],
+   "title": "An adversarial collaboration protocol for testing contrasting predictions of global neuronal workspace and integrated information theory",
+   "venue": "PLOS ONE",
+   "year": 2023,
+   "doi": "10.1371/journal.pone.0268577",
+   "url": "https://doi.org/10.1371/journal.pone.0268577",
+   "kind": "Comparison of theories",
+   "preprint": false,
+   "verification": "Open-access text retrieved and summarized; the last portion of the page was not read.",
+   "basis": "Research Observatory and Archive record"
+  },
+  {
+   "type": "Preprint",
+   "authors": [
+    "Melanie Mitchell",
+    "David C. Krakauer"
+   ],
+   "title": "The Debate Over Understanding in AI's Large Language Models",
+   "venue": "arXiv:2210.13966",
+   "year": 2022,
+   "doi": null,
+   "url": "https://arxiv.org/abs/2210.13966",
+   "kind": "Review of a debate (preprint)",
+   "verification": "Title and arXiv identifier confirmed through web search results on 2026-10-16. Full text not read; cited for its description of the debate as a survey of positions. A journal version has been published (PNAS, 2023); this record cites the arXiv version.",
+   "id": "mitchell22",
+   "basis": "Verified for this course"
+  },
+  {
+   "id": "nagel74",
+   "type": "journal-article",
+   "authors": [
+    "Thomas Nagel"
+   ],
+   "title": "What Is It Like to Be a Bat?",
+   "venue": "The Philosophical Review",
+   "year": "1974",
+   "doi": "10.2307/2183914",
+   "url": "https://doi.org/10.2307/2183914",
+   "kind": "journal-article",
+   "verification": "Checked against Crossref on 2026-10-15",
+   "basis": "Lexicon of Intelligence source record"
+  },
+  {
+   "type": "Report",
+   "authors": [
+    "Elham Tabassi (ed.)"
+   ],
+   "title": "Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+   "venue": "National Institute of Standards and Technology",
+   "year": 2023,
+   "doi": "10.6028/NIST.AI.100-1",
+   "url": "https://doi.org/10.6028/NIST.AI.100-1",
+   "kind": "Government framework",
+   "verification": "Title, editor, publisher and year confirmed through the Crossref record on 2026-10-16. Full text not read; cited for its purpose and structure (govern, map, measure, manage).",
+   "id": "nist23",
+   "basis": "Verified for this course"
+  },
+  {
+   "type": "Preprint",
+   "authors": [
+    "Long Ouyang",
+    "et al."
+   ],
+   "title": "Training language models to follow instructions with human feedback",
+   "venue": "arXiv:2203.02155",
+   "year": 2022,
+   "doi": "10.48550/arXiv.2203.02155",
+   "url": "https://arxiv.org/abs/2203.02155",
+   "kind": "Technical paper (preprint)",
+   "verification": "Title and arXiv identifier confirmed through web search results on 2026-10-16. Abstract page not read in full; cited for the general method of training with human feedback.",
+   "id": "ouyang22",
+   "basis": "Verified for this course"
+  },
+  {
+   "id": "pseudoscience-letter-2023",
+   "type": "Critical response",
+   "authors": [
+    "Scientific American (news report)"
+   ],
+   "title": "Prominent Consciousness Theory Is Slammed as Bogus Science (news report on an open letter)",
+   "venue": "Scientific American, news article",
+   "year": 2023,
+   "doi": null,
+   "url": "https://www.scientificamerican.com/article/prominent-consciousness-theory-is-slammed-as-bogus-science/",
+   "kind": "Critical response",
+   "preprint": false,
+   "verification": "News article retrieved and summarized. The letter itself was not read.",
+   "basis": "Research Observatory and Archive record"
+  },
+  {
+   "id": "pub:P005",
+   "type": "Journal article (evidence type not yet classified)",
+   "authors": [
+    "Christof Koch",
+    "Marcello Massimini",
+    "Melanie Boly",
+    "Giulio Tononi"
+   ],
+   "title": "Neural correlates of consciousness: progress and problems",
+   "venue": "Nature Reviews Neuroscience",
+   "year": 2016,
+   "doi": "10.1038/nrn.2016.22",
+   "url": "https://doi.org/10.1038/nrn.2016.22",
+   "kind": "Journal article (evidence type not yet classified)",
+   "preprint": false,
+   "verification": "Metadata record only; no abstract retrieved.",
+   "basis": "Research Observatory and Archive record"
+  },
+  {
+   "id": "pub:P007",
+   "type": "Journal article (evidence type not yet classified)",
+   "authors": [
+    "Lucia Melloni",
+    "Liad Mudrik",
+    "Michael Pitts",
+    "Christof Koch"
+   ],
+   "title": "Making the hard problem of consciousness easier",
+   "venue": "Science",
+   "year": 2021,
+   "doi": "10.1126/science.abj3259",
+   "url": "https://doi.org/10.1126/science.abj3259",
+   "kind": "Journal article (evidence type not yet classified)",
+   "preprint": false,
+   "verification": "Metadata record only; no abstract retrieved.",
+   "basis": "Research Observatory and Archive record"
+  },
+  {
+   "id": "pub:P014",
+   "type": "Journal article (evidence type not yet classified)",
+   "authors": [
+    "Elizabeth F. Loftus"
+   ],
+   "title": "Planting misinformation in the human mind: A 30-year investigation of the malleability of memory",
+   "venue": "Learning & Memory",
+   "year": 2005,
+   "doi": "10.1101/lm.94705",
+   "url": "https://doi.org/10.1101/lm.94705",
+   "kind": "Journal article (evidence type not yet classified)",
+   "preprint": false,
+   "verification": "Metadata record only; no abstract retrieved.",
+   "basis": "Research Observatory and Archive record"
+  },
+  {
+   "id": "pub:P016",
+   "type": "Conference paper (evidence type not yet classified)",
+   "authors": [
+    "Emily M. Bender",
+    "Timnit Gebru",
+    "Angelina McMillan-Major",
+    "Shmargaret Shmitchell"
+   ],
+   "title": "On the Dangers of Stochastic Parrots",
+   "venue": "Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency",
+   "year": 2021,
+   "doi": "10.1145/3442188.3445922",
+   "url": "https://doi.org/10.1145/3442188.3445922",
+   "kind": "Conference paper (evidence type not yet classified)",
+   "preprint": false,
+   "verification": "Metadata record only; no abstract retrieved.",
+   "basis": "Research Observatory and Archive record"
+  },
+  {
+   "id": "pub:P018",
+   "type": "Preprint (evidence type not yet classified)",
+   "authors": [
+    "David J. Chalmers"
+   ],
+   "title": "Could a Large Language Model be Conscious?",
+   "venue": "arXiv",
+   "year": 2023,
+   "doi": "10.48550/arXiv.2303.07103",
+   "url": "https://doi.org/10.48550/arXiv.2303.07103",
+   "kind": "Preprint (evidence type not yet classified)",
+   "preprint": true,
+   "verification": "Metadata record only; no abstract retrieved.",
+   "basis": "Research Observatory and Archive record"
+  },
+  {
+   "type": "Journal article",
+   "authors": [
+    "David E. Rumelhart",
+    "Geoffrey E. Hinton",
+    "Ronald J. Williams"
+   ],
+   "title": "Learning representations by back-propagating errors",
+   "venue": "Nature 323, 533-536",
+   "year": 1986,
+   "doi": "10.1038/323533a0",
+   "url": "https://doi.org/10.1038/323533a0",
+   "kind": "Foundational technical paper",
+   "verification": "Title, authors, journal, year and pages confirmed through the Crossref record on 2026-10-16. Full text not read; cited for the existence and general content of the method.",
+   "id": "rumelhart86",
+   "basis": "Verified for this course"
+  },
+  {
+   "id": "searle80",
+   "type": "journal-article",
+   "authors": [
+    "John R. Searle"
+   ],
+   "title": "Minds, brains, and programs",
+   "venue": "Behavioral and Brain Sciences",
+   "year": "1980",
+   "doi": "10.1017/S0140525X00005756",
+   "url": "https://doi.org/10.1017/S0140525X00005756",
+   "kind": "journal-article",
+   "verification": "Checked against Crossref on 2026-10-15",
+   "basis": "Lexicon of Intelligence source record"
+  },
+  {
+   "id": "sep-ai",
+   "type": "reference-work",
+   "authors": [
+    "Naveen Sundar Govindarajulu"
+   ],
+   "title": "Artificial Intelligence",
+   "venue": "Stanford Encyclopedia of Philosophy",
+   "year": "2018",
+   "doi": null,
+   "url": "https://plato.stanford.edu/entries/artificial-intelligence/",
+   "kind": "reference-work",
+   "verification": "Entry page retrieved 2026-10-15; title, author and dates read from the page. Only an overview was read, not the whole entry.",
+   "basis": "Lexicon of Intelligence source record"
+  },
+  {
+   "id": "sep-animal",
+   "type": "reference-work",
+   "authors": [
+    "Colin Allen",
+    "Jonathan Birch",
+    "Michael Trestman"
+   ],
+   "title": "Animal Consciousness",
+   "venue": "Stanford Encyclopedia of Philosophy",
+   "year": "1995",
+   "doi": null,
+   "url": "https://plato.stanford.edu/entries/consciousness-animal/",
+   "kind": "reference-work",
+   "verification": "Entry page retrieved 2026-10-15; title, author and dates read from the page. Only an overview was read, not the whole entry.",
+   "basis": "Lexicon of Intelligence source record"
+  },
+  {
+   "id": "sep-chinese-room",
+   "type": "reference-work",
+   "authors": [
+    "David Cole"
+   ],
+   "title": "The Chinese Room Argument",
+   "venue": "Stanford Encyclopedia of Philosophy",
+   "year": "2004",
+   "doi": null,
+   "url": "https://plato.stanford.edu/entries/chinese-room/",
+   "kind": "reference-work",
+   "verification": "Entry page retrieved 2026-10-15; title, author and dates read from the page. Only an overview was read, not the whole entry.",
+   "basis": "Lexicon of Intelligence source record"
+  },
+  {
+   "id": "sep-consciousness",
+   "type": "reference-work",
+   "authors": [
+    "Robert Van Gulick"
+   ],
+   "title": "Consciousness",
+   "venue": "Stanford Encyclopedia of Philosophy",
+   "year": "2004",
+   "doi": null,
+   "url": "https://plato.stanford.edu/entries/consciousness/",
+   "kind": "reference-work",
+   "verification": "Entry page retrieved 2026-10-15; title, author and dates read from the page. Only an overview was read, not the whole entry.",
+   "basis": "Lexicon of Intelligence source record"
+  },
+  {
+   "id": "sep-qualia",
+   "type": "reference-work",
+   "authors": [
+    "Michael Tye"
+   ],
+   "title": "Qualia",
+   "venue": "Stanford Encyclopedia of Philosophy",
+   "year": "1997",
+   "doi": null,
+   "url": "https://plato.stanford.edu/entries/qualia/",
+   "kind": "reference-work",
+   "verification": "Entry page retrieved 2026-10-15; title, author and dates read from the page. Only an overview was read, not the whole entry.",
+   "basis": "Lexicon of Intelligence source record"
+  },
+  {
+   "id": "seth22",
+   "type": "journal-article",
+   "authors": [
+    "Anil K. Seth",
+    "Tim Bayne"
+   ],
+   "title": "Theories of consciousness",
+   "venue": "Nature Reviews Neuroscience",
+   "year": "2022",
+   "doi": "10.1038/s41583-022-00587-4",
+   "url": "https://doi.org/10.1038/s41583-022-00587-4",
+   "kind": "journal-article",
+   "verification": "Checked against Crossref on 2026-10-15",
+   "basis": "Lexicon of Intelligence source record"
+  },
+  {
+   "id": "turing50",
+   "type": "journal-article",
+   "authors": [
+    "A. M. Turing"
+   ],
+   "title": "Computing Machinery and Intelligence",
+   "venue": "Mind",
+   "year": "1950",
+   "doi": "10.1093/mind/LIX.236.433",
+   "url": "https://doi.org/10.1093/mind/LIX.236.433",
+   "kind": "journal-article",
+   "verification": "Checked against Crossref on 2026-10-15",
+   "basis": "Lexicon of Intelligence source record"
+  },
+  {
+   "type": "Preprint",
+   "authors": [
+    "Ashish Vaswani",
+    "Noam Shazeer",
+    "Niki Parmar",
+    "Jakob Uszkoreit",
+    "Llion Jones",
+    "Aidan N. Gomez",
+    "Lukasz Kaiser",
+    "Illia Polosukhin"
+   ],
+   "title": "Attention Is All You Need",
+   "venue": "arXiv:1706.03762",
+   "year": 2017,
+   "doi": null,
+   "url": "https://arxiv.org/abs/1706.03762",
+   "kind": "Foundational technical paper (preprint)",
+   "verification": "Title, authors and submission date confirmed on the arXiv abstract page on 2026-10-16. The work was later published in conference proceedings; this record cites the arXiv version.",
+   "id": "vaswani17",
+   "basis": "Verified for this course"
+  }
+ ]
+}
