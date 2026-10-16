@@ -1,0 +1,75 @@
+{
+ "generated": "2026-10-16",
+ "counts": {
+  "concept": 35,
+  "question": 25,
+  "theory": 6,
+  "comparison": 3,
+  "source": 32,
+  "museum": 7,
+  "article": 2
+ },
+ "adapters": [
+  {
+   "name": "Published essays",
+   "active": true,
+   "records": 2,
+   "note": "Indexed"
+  },
+  {
+   "name": "Research Atlas concepts",
+   "active": true,
+   "records": 35,
+   "note": "Indexed"
+  },
+  {
+   "name": "Theory Chamber theories and comparisons",
+   "active": true,
+   "records": 6,
+   "note": "Indexed"
+  },
+  {
+   "name": "Unanswered Archive questions",
+   "active": true,
+   "records": 25,
+   "note": "Indexed"
+  },
+  {
+   "name": "Publications (Archive, Theory Chamber, Observatory)",
+   "active": true,
+   "records": 32,
+   "note": "Indexed"
+  },
+  {
+   "name": "Museum of Human Memory rooms",
+   "active": true,
+   "records": 7,
+   "note": "Indexed"
+  },
+  {
+   "name": "Lexicon of Intelligence",
+   "active": false,
+   "records": 0,
+   "note": "Not published yet"
+  },
+  {
+   "name": "Thinkers Archive",
+   "active": false,
+   "records": 0,
+   "note": "Not published yet"
+  },
+  {
+   "name": "Human × Machine Dialogues",
+   "active": false,
+   "records": 0,
+   "note": "Not published yet"
+  },
+  {
+   "name": "Public Inquiry Engine pathways",
+   "active": false,
+   "records": 0,
+   "note": "No curated pathways published yet"
+  }
+ ],
+ "refresh": "Rebuilt by scripts/build_research_index.py. New essays appear after the next rebuild."
+}

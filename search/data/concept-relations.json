@@ -1,0 +1,985 @@
+{
+ "note": "Editorial vocabulary. Aliases are search conveniences; they do not claim that two terms mean the same thing. Links are labelled 'same' (one idea, two names in the site's data) or 'near' (closely related, not identical).",
+ "concepts": [
+  {
+   "id": "accountability",
+   "label": "Accountability",
+   "atlas": "accountability",
+   "description": "Accountability asks who answers for decisions in which AI systems take part. The archive records responsibility and the evaluation of awareness claims as unsettled questions.",
+   "aliases": [
+    "accountability"
+   ]
+  },
+  {
+   "id": "ai",
+   "label": "Artificial Intelligence",
+   "atlas": "ai",
+   "description": "Artificial intelligence studies and builds systems that perform tasks associated with learning, inference, perception, and language. Its connection to human experience raises questions about knowledge, agency, and understanding.",
+   "aliases": [
+    "ai",
+    "algorithm",
+    "algorithms",
+    "artificial intelligence",
+    "chatbot",
+    "computer",
+    "computers",
+    "language model",
+    "language models",
+    "llm",
+    "llms",
+    "machine",
+    "machines",
+    "robot"
+   ]
+  },
+  {
+   "id": "archives",
+   "label": "Archives",
+   "atlas": "archives",
+   "description": "Archives preserve selected traces of the past. Digital archives complicate who records, organizes, remembers, and interprets the lives represented in those traces.",
+   "aliases": [
+    "archival",
+    "archive",
+    "archives",
+    "libraries",
+    "library",
+    "records"
+   ]
+  },
+  {
+   "id": "attention",
+   "label": "Attention",
+   "atlas": "attention",
+   "description": "Attention selects some information for further processing. The archive asks how attention and consciousness are related, and whether one can occur without the other.",
+   "tcDescription": "Selective use of limited processing resources.",
+   "aliases": [
+    "attend",
+    "attention",
+    "attentional"
+   ]
+  },
+  {
+   "id": "awareness",
+   "label": "Awareness",
+   "atlas": null,
+   "description": null,
+   "tcDescription": "Being aware of a stimulus or mental state, as the term is used by the theories here.",
+   "atlasNear": "consciousness",
+   "aliases": [
+    "aware",
+    "awareness"
+   ]
+  },
+  {
+   "id": "cognition",
+   "label": "Cognition",
+   "atlas": "cognition",
+   "description": "Cognition includes attention, reasoning, learning, and information processing. Studying human cognition offers useful comparisons with AI while also revealing important differences.",
+   "aliases": [
+    "cognition",
+    "cognitive",
+    "mind's",
+    "think",
+    "thinking",
+    "thinks",
+    "thought"
+   ]
+  },
+  {
+   "id": "computing",
+   "label": "Computing History",
+   "atlas": "computing",
+   "description": "The history of computing is where the question 'Can machines think?' was first posed formally. Turing's imitation game and Searle's reply anchor the scholarly timeline kept in the archive.",
+   "aliases": [
+    "computer science",
+    "computing history",
+    "history of computing",
+    "turing",
+    "turing test"
+   ]
+  },
+  {
+   "id": "consciousness",
+   "label": "Consciousness",
+   "atlas": "consciousness",
+   "description": "Consciousness names the subjective dimension of experience: what it is like to perceive, think, and be aware. Whether and how this could relate to machine systems remains an open philosophical and scientific question.",
+   "aliases": [
+    "conscious",
+    "consciously",
+    "consciousness",
+    "sentience",
+    "sentient"
+   ]
+  },
+  {
+   "id": "culture",
+   "label": "Digital Culture",
+   "atlas": "culture",
+   "description": "Digital culture describes how technologies, platforms, and shared practices shape expression, memory, creativity, and collective life.",
+   "aliases": [
+    "culture",
+    "digital culture",
+    "internet",
+    "platform",
+    "platforms",
+    "web"
+   ]
+  },
+  {
+   "id": "digital",
+   "label": "Digital Minds",
+   "atlas": "digital",
+   "description": "Digital minds gathers questions about digital representations of people and about artificial memory and self-representation. What such systems preserve of a person is left open.",
+   "aliases": [
+    "digital minds"
+   ]
+  },
+  {
+   "id": "digital-records",
+   "label": "Digital records",
+   "atlas": null,
+   "description": null,
+   "aliases": [
+    "digital archive",
+    "digital footprint",
+    "digital records",
+    "digital replica",
+    "digital self",
+    "digital trace",
+    "digital traces",
+    "preserve a person"
+   ]
+  },
+  {
+   "id": "emergence",
+   "label": "Emergence",
+   "atlas": "emergence",
+   "description": "Emergence asks whether consciousness is a fundamental feature of reality or arises from physical processes. The theories compared in the Theory Chamber take different positions.",
+   "aliases": [
+    "emerge",
+    "emergence",
+    "emergent",
+    "emerges",
+    "fundamental"
+   ]
+  },
+  {
+   "id": "ethics",
+   "label": "Ethics & Society",
+   "atlas": "ethics",
+   "description": "Ethics and society ask what we owe to, and how we should hold accountable, increasingly capable artificial systems. The archive treats moral consideration and responsibility as open questions.",
+   "aliases": [
+    "bias",
+    "ethical",
+    "ethics",
+    "ethics & society",
+    "fair",
+    "fairness",
+    "moral",
+    "morality",
+    "societal",
+    "society"
+   ]
+  },
+  {
+   "id": "global-availability",
+   "label": "Global availability",
+   "atlas": null,
+   "description": null,
+   "tcDescription": "Making a representation available to many specialized processors at once.",
+   "aliases": [
+    "broadcast",
+    "global availability",
+    "global workspace",
+    "ignition"
+   ]
+  },
+  {
+   "id": "identity",
+   "label": "Identity",
+   "atlas": "identity",
+   "description": "Identity concerns the narratives, relationships, records, and experiences through which a person becomes recognizable to themselves and others, including through digital traces.",
+   "aliases": [
+    "identity",
+    "who i am",
+    "who we are"
+   ]
+  },
+  {
+   "id": "information-processing",
+   "label": "Information processing",
+   "atlas": null,
+   "description": null,
+   "tcDescription": "How a system takes in, transforms, and uses information.",
+   "atlasNear": "cognition",
+   "aliases": [
+    "computation",
+    "computational",
+    "information processing",
+    "process information"
+   ]
+  },
+  {
+   "id": "integration",
+   "label": "Integration",
+   "atlas": null,
+   "description": null,
+   "tcDescription": "Unity of information within a system, as the term is used in IIT.",
+   "aliases": [
+    "integrated information",
+    "integration"
+   ]
+  },
+  {
+   "id": "intelligence",
+   "label": "Intelligence",
+   "atlas": "intelligence",
+   "description": "Intelligence is the capacity to solve problems, reason, and adapt. The archive asks whether it can be separated from consciousness and from self-awareness.",
+   "aliases": [
+    "intelligence",
+    "intelligent",
+    "smart"
+   ]
+  },
+  {
+   "id": "language",
+   "label": "Language",
+   "atlas": "language",
+   "description": "Language makes meanings shareable, yet fluent language alone does not establish understanding or awareness. It forms a bridge and a boundary between human communication and machine output.",
+   "aliases": [
+    "language",
+    "linguistic",
+    "sentence",
+    "sentences",
+    "speech",
+    "words"
+   ]
+  },
+  {
+   "id": "learning",
+   "label": "Machine Learning",
+   "atlas": "learning",
+   "description": "Machine learning builds systems that improve at tasks from data. Here it is discussed in relation to what such systems do and do not show about understanding, memory, and mind.",
+   "aliases": [
+    "deep learning",
+    "learn from data",
+    "learning",
+    "machine learning",
+    "neural network",
+    "neural networks",
+    "training data"
+   ]
+  },
+  {
+   "id": "machine-consciousness",
+   "label": "Machine consciousness",
+   "atlas": null,
+   "description": null,
+   "tcDescription": "Whether artificial systems could be conscious.",
+   "atlasNear": "ai",
+   "aliases": [
+    "ai conscious",
+    "ai consciousness",
+    "artificial consciousness",
+    "conscious ai",
+    "conscious machine",
+    "machine conscious",
+    "machine consciousness",
+    "machines conscious"
+   ]
+  },
+  {
+   "id": "measurement",
+   "label": "Measurement",
+   "atlas": null,
+   "description": null,
+   "aliases": [
+    "assess",
+    "assessing",
+    "detect",
+    "detecting",
+    "evidence",
+    "indicator",
+    "indicators",
+    "measure",
+    "measured",
+    "measurement",
+    "measuring",
+    "test for"
+   ]
+  },
+  {
+   "id": "memory",
+   "label": "Memory",
+   "atlas": "memory",
+   "description": "Memory preserves and reconstructs information across time. Comparing human remembering with computational storage raises questions about continuity, interpretation, and the limits of machine analogy.",
+   "aliases": [
+    "forget",
+    "forgetting",
+    "memories",
+    "memory",
+    "recall",
+    "remember",
+    "remembering"
+   ]
+  },
+  {
+   "id": "metacognition",
+   "label": "Metacognition",
+   "atlas": null,
+   "description": null,
+   "tcDescription": "Thinking about one's own mental states.",
+   "atlasNear": "cognition",
+   "aliases": [
+    "metacognition",
+    "metacognitive",
+    "thinking about thinking"
+   ]
+  },
+  {
+   "id": "method",
+   "label": "Evidence & Method",
+   "atlas": "method",
+   "description": "Method is how claims about the mind get tested. Adversarial collaboration, evidence classification, and honest 'awaiting review' labels run through this site's research tools.",
+   "aliases": [
+    "adversarial collaboration",
+    "empirical",
+    "evidence & method",
+    "falsifiable",
+    "method",
+    "methodology",
+    "preregistered",
+    "scientific method",
+    "testable"
+   ]
+  },
+  {
+   "id": "mind",
+   "label": "Philosophy of Mind",
+   "atlas": "mind",
+   "description": "Philosophy of mind asks what minds are and how they relate to bodies and brains. Its questions about subjective experience and mental states frame much of what the scientific theories try to explain.",
+   "aliases": [
+    "hard problem",
+    "mental",
+    "mind",
+    "mind body",
+    "minds",
+    "philosophy of mind"
+   ]
+  },
+  {
+   "id": "moral",
+   "label": "Moral Status",
+   "atlas": "moral",
+   "description": "Moral status concerns which beings an agent has duties toward. The archive treats the conditions under which an artificial system could deserve moral consideration as an open question.",
+   "aliases": [
+    "moral status"
+   ]
+  },
+  {
+   "id": "moral-consideration",
+   "label": "Moral consideration",
+   "atlas": null,
+   "description": null,
+   "aliases": [
+    "deserve moral",
+    "deserve rights",
+    "moral consideration",
+    "moral patient",
+    "moral status",
+    "rights",
+    "welfare"
+   ]
+  },
+  {
+   "id": "neural-activity",
+   "label": "Neural activity",
+   "atlas": null,
+   "description": null,
+   "tcDescription": "Brain activity that can be recorded and compared across conscious and nonconscious conditions.",
+   "aliases": [
+    "brain activity",
+    "correlates of consciousness",
+    "neural activity",
+    "neural correlates"
+   ]
+  },
+  {
+   "id": "neuroscience",
+   "label": "Neuroscience",
+   "atlas": "neuroscience",
+   "description": "Neuroscience studies the nervous system. On this site it is the home of questions about which neural processes accompany conscious experience, and of the competing theories that try to say.",
+   "aliases": [
+    "brain",
+    "brains",
+    "cortex",
+    "neural",
+    "neuron",
+    "neurons",
+    "neuroscience"
+   ]
+  },
+  {
+   "id": "perception",
+   "label": "Perception",
+   "atlas": "perception",
+   "description": "Perception is how organisms take in and interpret the world. Questions here include how conscious perception differs from unconscious processing, which is a test case for theories of consciousness.",
+   "tcDescription": "Processing of sensory input.",
+   "aliases": [
+    "perceive",
+    "perceives",
+    "perception",
+    "seeing",
+    "sensory",
+    "vision",
+    "visual"
+   ]
+  },
+  {
+   "id": "personal-identity",
+   "label": "Personal identity",
+   "atlas": null,
+   "description": null,
+   "aliases": [
+    "continuity",
+    "persist",
+    "personal identity",
+    "same person",
+    "sense of self over time"
+   ]
+  },
+  {
+   "id": "prediction",
+   "label": "Prediction",
+   "atlas": null,
+   "description": null,
+   "tcDescription": "Generation and updating of predictions about incoming signals.",
+   "aliases": [
+    "predict",
+    "prediction",
+    "predictive",
+    "predictive processing"
+   ]
+  },
+  {
+   "id": "reasoning",
+   "label": "Reasoning",
+   "atlas": "reasoning",
+   "description": "Reasoning is the drawing of conclusions from information. The archive asks whether machine reasoning can become functionally comparable to human reasoning, and what such a comparison would show.",
+   "aliases": [
+    "inference",
+    "logic",
+    "reason",
+    "reasoning"
+   ]
+  },
+  {
+   "id": "recurrent-processing",
+   "label": "Recurrent processing",
+   "atlas": null,
+   "description": null,
+   "tcDescription": "Feedback activity within and between processing stages.",
+   "aliases": [
+    "feedback processing",
+    "recurrence",
+    "recurrent processing"
+   ]
+  },
+  {
+   "id": "responsibility",
+   "label": "Responsibility",
+   "atlas": null,
+   "description": null,
+   "aliases": [
+    "accountability",
+    "accountable",
+    "blame",
+    "liable",
+    "responsibility",
+    "responsible"
+   ]
+  },
+  {
+   "id": "self",
+   "label": "Self & Selfhood",
+   "atlas": "self",
+   "description": "The self is the sense of being one continuous someone. Here it covers how the brain might construct that sense, how it relates to self-awareness, and whether an AI system could represent itself.",
+   "aliases": [
+    "self",
+    "self & selfhood",
+    "selfhood",
+    "sense of self"
+   ]
+  },
+  {
+   "id": "self-awareness",
+   "label": "Self-awareness",
+   "atlas": null,
+   "description": null,
+   "aliases": [
+    "aware of itself",
+    "aware of oneself",
+    "self aware",
+    "self awareness",
+    "self-awareness"
+   ]
+  },
+  {
+   "id": "self-modeling",
+   "label": "Self-modeling",
+   "atlas": null,
+   "description": null,
+   "tcDescription": "A system's internal model of itself or of its own processes.",
+   "aliases": [
+    "model of itself",
+    "representation of itself",
+    "self model",
+    "self modeling",
+    "self representation",
+    "self-modeling"
+   ]
+  },
+  {
+   "id": "subjective-experience",
+   "label": "Subjective experience",
+   "atlas": null,
+   "description": null,
+   "tcDescription": "What it is like, from the inside, to perceive, think, and feel.",
+   "atlasNear": "consciousness",
+   "aliases": [
+    "experience",
+    "experiences",
+    "phenomenal",
+    "qualia",
+    "subjective experience",
+    "what it is like"
+   ]
+  },
+  {
+   "id": "substrate",
+   "label": "Physical substrate",
+   "atlas": null,
+   "description": null,
+   "aliases": [
+    "biological",
+    "biological brain",
+    "independent of the brain",
+    "non biological",
+    "nonbiological",
+    "physical substrate",
+    "silicon",
+    "substrate",
+    "without a brain"
+   ]
+  },
+  {
+   "id": "understanding",
+   "label": "Meaning & Understanding",
+   "atlas": "understanding",
+   "description": "Understanding asks whether grasping meaning differs from producing fitting outputs. Turing's imitation game and Searle's argument frame the debate, and the question remains contested.",
+   "aliases": [
+    "comprehend",
+    "comprehension",
+    "grasp",
+    "meaning",
+    "meaning & understanding",
+    "understand",
+    "understanding",
+    "understands"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "a": "consciousness",
+   "b": "subjective-experience",
+   "kind": "near"
+  },
+  {
+   "a": "consciousness",
+   "b": "awareness",
+   "kind": "near"
+  },
+  {
+   "a": "machine-consciousness",
+   "b": "consciousness",
+   "kind": "near"
+  },
+  {
+   "a": "machine-consciousness",
+   "b": "ai",
+   "kind": "near"
+  },
+  {
+   "a": "self-awareness",
+   "b": "self-modeling",
+   "kind": "near"
+  },
+  {
+   "a": "self-awareness",
+   "b": "awareness",
+   "kind": "near"
+  },
+  {
+   "a": "self",
+   "b": "self-awareness",
+   "kind": "near"
+  },
+  {
+   "a": "identity",
+   "b": "personal-identity",
+   "kind": "same"
+  },
+  {
+   "a": "memory",
+   "b": "personal-identity",
+   "kind": "near"
+  },
+  {
+   "a": "digital-records",
+   "b": "archives",
+   "kind": "near"
+  },
+  {
+   "a": "digital-records",
+   "b": "personal-identity",
+   "kind": "near"
+  },
+  {
+   "a": "moral",
+   "b": "moral-consideration",
+   "kind": "same"
+  },
+  {
+   "a": "accountability",
+   "b": "responsibility",
+   "kind": "same"
+  },
+  {
+   "a": "ethics",
+   "b": "moral-consideration",
+   "kind": "near"
+  },
+  {
+   "a": "ethics",
+   "b": "responsibility",
+   "kind": "near"
+  },
+  {
+   "a": "mind",
+   "b": "consciousness",
+   "kind": "near"
+  },
+  {
+   "a": "neuroscience",
+   "b": "neural-activity",
+   "kind": "near"
+  },
+  {
+   "a": "understanding",
+   "b": "language",
+   "kind": "near"
+  },
+  {
+   "a": "learning",
+   "b": "ai",
+   "kind": "near"
+  },
+  {
+   "a": "intelligence",
+   "b": "ai",
+   "kind": "near"
+  },
+  {
+   "a": "reasoning",
+   "b": "intelligence",
+   "kind": "near"
+  },
+  {
+   "a": "digital",
+   "b": "digital-records",
+   "kind": "same"
+  },
+  {
+   "a": "method",
+   "b": "measurement",
+   "kind": "near"
+  }
+ ],
+ "atlasLinks": [
+  [
+   "ai",
+   "consciousness"
+  ],
+  [
+   "ai",
+   "cognition"
+  ],
+  [
+   "ai",
+   "language"
+  ],
+  [
+   "ai",
+   "memory"
+  ],
+  [
+   "ai",
+   "identity"
+  ],
+  [
+   "ai",
+   "culture"
+  ],
+  [
+   "consciousness",
+   "cognition"
+  ],
+  [
+   "consciousness",
+   "identity"
+  ],
+  [
+   "memory",
+   "identity"
+  ],
+  [
+   "memory",
+   "archives"
+  ],
+  [
+   "archives",
+   "culture"
+  ],
+  [
+   "language",
+   "culture"
+  ],
+  [
+   "attention",
+   "consciousness"
+  ],
+  [
+   "attention",
+   "neuroscience"
+  ],
+  [
+   "attention",
+   "cognition"
+  ],
+  [
+   "attention",
+   "perception"
+  ],
+  [
+   "self",
+   "identity"
+  ],
+  [
+   "self",
+   "memory"
+  ],
+  [
+   "self",
+   "consciousness"
+  ],
+  [
+   "self",
+   "mind"
+  ],
+  [
+   "reasoning",
+   "intelligence"
+  ],
+  [
+   "reasoning",
+   "ai"
+  ],
+  [
+   "reasoning",
+   "cognition"
+  ],
+  [
+   "reasoning",
+   "understanding"
+  ],
+  [
+   "moral",
+   "ethics"
+  ],
+  [
+   "moral",
+   "consciousness"
+  ],
+  [
+   "moral",
+   "ai"
+  ],
+  [
+   "digital",
+   "identity"
+  ],
+  [
+   "digital",
+   "memory"
+  ],
+  [
+   "digital",
+   "ai"
+  ],
+  [
+   "digital",
+   "archives"
+  ],
+  [
+   "computing",
+   "ai"
+  ],
+  [
+   "computing",
+   "language"
+  ],
+  [
+   "computing",
+   "understanding"
+  ],
+  [
+   "emergence",
+   "consciousness"
+  ],
+  [
+   "emergence",
+   "mind"
+  ],
+  [
+   "emergence",
+   "neuroscience"
+  ],
+  [
+   "accountability",
+   "ethics"
+  ],
+  [
+   "accountability",
+   "ai"
+  ],
+  [
+   "accountability",
+   "moral"
+  ],
+  [
+   "neuroscience",
+   "cognition"
+  ],
+  [
+   "neuroscience",
+   "consciousness"
+  ],
+  [
+   "neuroscience",
+   "memory"
+  ],
+  [
+   "neuroscience",
+   "perception"
+  ],
+  [
+   "mind",
+   "consciousness"
+  ],
+  [
+   "mind",
+   "identity"
+  ],
+  [
+   "mind",
+   "understanding"
+  ],
+  [
+   "mind",
+   "neuroscience"
+  ],
+  [
+   "perception",
+   "consciousness"
+  ],
+  [
+   "perception",
+   "cognition"
+  ],
+  [
+   "learning",
+   "ai"
+  ],
+  [
+   "learning",
+   "language"
+  ],
+  [
+   "learning",
+   "cognition"
+  ],
+  [
+   "intelligence",
+   "ai"
+  ],
+  [
+   "intelligence",
+   "cognition"
+  ],
+  [
+   "intelligence",
+   "consciousness"
+  ],
+  [
+   "understanding",
+   "language"
+  ],
+  [
+   "understanding",
+   "ai"
+  ],
+  [
+   "ethics",
+   "ai"
+  ],
+  [
+   "ethics",
+   "identity"
+  ],
+  [
+   "ethics",
+   "culture"
+  ],
+  [
+   "ethics",
+   "consciousness"
+  ],
+  [
+   "method",
+   "consciousness"
+  ],
+  [
+   "method",
+   "neuroscience"
+  ],
+  [
+   "method",
+   "archives"
+  ],
+  [
+   "method",
+   "ai"
+  ]
+ ],
+ "subjects": [
+  "Consciousness",
+  "Artificial Intelligence",
+  "Neuroscience",
+  "Cognition",
+  "Philosophy",
+  "Memory",
+  "Identity",
+  "Ethics"
+ ]
+}
