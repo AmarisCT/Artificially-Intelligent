@@ -51,6 +51,12 @@
     "note": "Indexed"
    },
    {
+    "name": "Listening Room recordings (Published Audio only)",
+    "active": false,
+    "records": 0,
+    "note": "No recording has been approved and published yet"
+   },
+   {
     "name": "Learning Institute lessons (published courses only)",
     "active": true,
     "records": 16,

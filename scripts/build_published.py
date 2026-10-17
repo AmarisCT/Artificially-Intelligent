@@ -12,6 +12,7 @@ import html
 import json
 import pathlib
 import re
+import sys
 import xml.etree.ElementTree as ET
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -48,7 +49,11 @@ def esc(value: str) -> str:
 def slugify(title: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", title.lower()).strip("-")
 
-def webpage(*, title: str, description: str, url: str, root_rel: str, content: str, schema=None) -> str:
+LISTEN_CSS = (".listen-cta{margin:-24px 0 34px;max-width:790px}.listen-cta a{display:inline-block;border:1px solid var(--mint);color:var(--mint);padding:11px 18px;text-decoration:none;font:600 .95rem system-ui,sans-serif}"
+              ".listen-cta a:hover{background:#b9ffde14}.listen-cta span{display:block;margin-top:9px;color:var(--muted);font:.82rem system-ui,sans-serif}")
+
+
+def webpage(*, title: str, description: str, url: str, root_rel: str, content: str, schema=None, extra_css: str = "") -> str:
     script = ""
     if schema is not None:
         serialized = json.dumps(schema, ensure_ascii=False).replace("<", chr(92) + "u003c")
@@ -70,7 +75,7 @@ def webpage(*, title: str, description: str, url: str, root_rel: str, content: s
 <meta property="og:url" content="{esc(url)}">
 <meta name="twitter:card" content="summary">
 {script}
-<style>{CSS}</style>
+<style>{CSS}{extra_css}</style>
 </head>
 <body>
 <header><div class="page top">
@@ -120,7 +125,39 @@ def infer_topics(identifier: str, title: str, excerpt: str, article_html: str):
     scored.sort(key=lambda item: (-item[0], item[1]))
     return [topic for _, topic in scored[:5]], "keyword"
 
+def published_audio() -> dict:
+    """Recordings that have been approved and released, by article slug.
+
+    The rule is the same in the Listening Room page, the research index and here: a recording is public only when its
+    library record says Published Audio (or Revision Required after approval) AND carries a release date. Unreviewed,
+    in-production and never-approved recordings are never returned, so an article page can only link to audio that
+    visitors can actually play."""
+    lib = ROOT / "listening-room" / "data" / "audio-library.json"
+    if not lib.exists():
+        return {}
+    try:
+        items = json.loads(lib.read_text(encoding="utf-8")).get("items", [])
+        return {r["source"]["slug"]: r for r in items if r.get("status") in ("published", "revision-required") and r.get("releaseDate")}
+    except Exception as exc:   # a hand-edited record with a typo must never stop the article pages from building
+        print(f"WARNING: listening-room/data/audio-library.json could not be read ({exc}); article pages are built without audio links.", file=sys.stderr)
+        return {}
+
+
+def listen_cta(rec: dict, root_rel: str) -> str:
+    n = rec["narration"]
+    who = "Narrated by " + esc(n["narrator"]) + ("" if n["type"] == "human" else " (synthetic voice, reviewed and approved)")
+    return (f'<p class="listen-cta"><a href="{root_rel}listening-room/#listen-{esc(rec["id"])}">Listen to This Essay →</a>'
+            f'<span>{who} · about {max(1, round(rec["audio"]["durationSec"] / 60))} minutes · full transcript</span></p>')
+
+
+def audio_schema(rec: dict) -> dict:
+    sec = int(round(rec["audio"]["durationSec"]))
+    return {"@type": "AudioObject", "name": rec["title"] + " (audio)", "contentUrl": rec["audio"]["url"] if rec["audio"]["url"].startswith("https://") else SITE + "listening-room/" + rec["audio"]["url"],
+            "encodingFormat": rec["audio"]["format"], "duration": f"PT{sec // 60}M{sec % 60}S", "inLanguage": "en"}
+
+
 def make():
+    audio = published_audio()
     tree = ET.parse(FEED)
     channel = tree.getroot().find("channel")
     if channel is None:
@@ -168,12 +205,17 @@ def make():
         }
         if article["date"]:
             schema["datePublished"] = article["date"]
+        arec = audio.get(article["slug"])
+        if arec:
+            schema["audio"] = audio_schema(arec)
         page = '<main class="page"><article>'
         page += f'<p class="eyebrow">Published Research / {esc(article["category"])}</p>'
         page += f'<h1>{esc(article["title"])}</h1>'
         page += f'<p class="deck">{esc(article["description"])}</p>'
         if article["date_label"]:
             page += f'<p class="meta"><time datetime="{article["date"]}">{esc(article["date_label"])}</time></p>'
+        if arec:
+            page += listen_cta(arec, "../../../")   # placed BEFORE .article-body: the narrated text must never include it
         page += f'<div class="article-body">{article["body"]}</div></article>'
         page += '<section class="links" aria-label="Related articles"><p class="eyebrow">Continue exploring</p>'
         page += related or '<p><a href="../">Browse published research ↗</a></p>'
@@ -182,7 +224,8 @@ def make():
         file = OUTPUT / article["slug"] / "index.html"
         file.parent.mkdir(parents=True, exist_ok=True)
         file.write_text(webpage(title=article["title"], description=article["description"],
-                                url=article["url"], root_rel="../../../", content=page, schema=schema), encoding="utf-8")
+                                url=article["url"], root_rel="../../../", content=page, schema=schema,
+                                extra_css=LISTEN_CSS if arec else ""), encoding="utf-8")
     cards = ""
     for article in articles:
         cards += f'<a class="card" href="{esc(article["slug"])}/">'
@@ -216,6 +259,8 @@ def make():
     (OUTPUT / "manifest.json").write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     urls = [SITE, SITE + "intelligence-index/", SITE + "interactives/consciousness-map.html",
             SITE + "research/published/", SITE + "research-atlas/", SITE + "theory-chamber/", SITE + "museum/", SITE + "unanswered-archive/", SITE + "research-observatory/", SITE + "search/", SITE + "inquiry-engine/", SITE + "lexicon/"] + [x["url"] for x in articles]
+    if audio:
+        urls.append(SITE + "listening-room/")   # only when at least one recording is Published Audio; never for an empty room
     li_urls = ROOT / "learning-institute" / "data" / "sitemap-urls.json"
     if li_urls.exists():
         # published Learning Institute pages only (the list is written from the published courses; planned courses are never in it)

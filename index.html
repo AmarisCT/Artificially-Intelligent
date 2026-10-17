@@ -1520,6 +1520,10 @@ function renderDossiers(el){
    <p class="note">Dossiers are assembled from this site's own essays, concept descriptions, and Consciousness Map. They are not literature reviews. Where the archive has little to say, the dossier says so.</p></div>
    <div class="dgrid">${CONCEPTS.map(c=>{const s=dossierStats(c.id);return `<a class="dcard" style="--c:${c.color}" href="#dossier-${c.id}"><i aria-hidden="true"></i><h3>${esc(c.name)}</h3><p>${esc(c.description.split(". ")[0])}.</p><span class="cov">${s.cl.length} classified passage${s.cl.length===1?"":"s"} · ${s.arts.length} published essay${s.arts.length===1?"":"s"} · ${s.mp.length} Map perspective${s.mp.length===1?"":"s"}${s.dev.length?` · ${s.dev.length} in development`:""}</span></a>`}).join("")}</div></div>`;
 }
+let LISTEN_P=null;
+function listenRecs(){if(!LISTEN_P)LISTEN_P=Promise.all(["listening-room/data/audio-library.json","listening-room/data/audio-queue.json"].map(u=>fetch(u,{cache:"no-cache"}).then(r=>r.ok?r.json():{items:[]}).catch(()=>({items:[]})))).then(([l,q])=>{const qs=new Map(q.items.filter(i=>i.recordingId).map(i=>[i.recordingId,i.status]));return l.items.filter(r=>{const st=qs.get(r.id)||r.status;return (st==="published"||st==="revision-required")&&!!r.releaseDate})});return LISTEN_P}
+function fillListen(cid){listenRecs().then(recs=>{const m=recs.filter(r=>(r.concepts||[]).includes(cid)),el=document.getElementById("dos-listen");if(!m.length||!el)return;
+  el.innerHTML=`<h3 style="margin-top:18px">Listen</h3><div class="linklist">${m.map(r=>`<a href="listening-room/#listen-${encodeURIComponent(r.id)}"><span>${esc(r.title)}</span><small>Audio essay · ${Math.max(1,Math.round(r.audio.durationSec/60))} min · with transcript</small></a>`).join("")}</div>`})}
 function renderDossier(el,cid){
   const c=CBY[cid];if(!c){go("dossiers");return}
   const s=dossierStats(cid),by=t=>s.cl.filter(x=>t.includes(x.t)),ex=(arr,msg)=>arr.length?`<div class="two">${arr.map(x=>claimCard(x)).join("")}</div>`:`<div class="empty">${msg}</div>`;
@@ -1542,9 +1546,10 @@ function renderDossier(el,cid){
     <section><h2>Unanswered questions</h2>${qs.length||by(["open"]).length?`${qs.length?`<ul class="qlist">${qs.map(x=>`<li>${esc(x.q)} <button class="chip" data-inq="${MAP2INQ[x.k]}">Explore</button></li>`).join("")}</ul>`:""}${by(["open"]).length?ex(by(["open"]),""):""}`:`<div class="empty">No unanswered questions are recorded for ${esc(c.name)} yet.</div>`}</section>
     <section><h2>Published and in development</h2>
       ${s.arts.length?`<div class="linklist">${s.arts.map(a=>`<a href="#read-${a.slug}"><span>${esc(a.title)}</span><small>Published ${fmtDate(a.publishedAt)}</small></a>`).join("")}</div>`:`<div class="empty">No published essay is tagged to ${esc(c.name)} yet.</div>`}
-      ${s.dev.length?`<p class="note">In development, with no text published yet: ${s.dev.map(d=>esc(d.title)).join("; ")}. Their placement here is provisional, by category.</p>`:""}</section>
+      ${s.dev.length?`<p class="note">In development, with no text published yet: ${s.dev.map(d=>esc(d.title)).join("; ")}. Their placement here is provisional, by category.</p>`:""}<div id="dos-listen"></div></section>
     <section><h2>Atlas connections</h2><div class="chips">${nb.map(k=>`<button class="chip" style="--c:${CBY[k].color}" data-dossier="${k}"><i></i>${esc(CBY[k].name)}</button>`).join("")}</div><p class="note">Connections are editorial pathways in the Atlas. They are not citation counts or evidence that two ideas are scientifically linked.</p></section>
    </div></div>`;
+  fillListen(cid);
 }
 
 function renderEvidence(el){
@@ -1625,7 +1630,7 @@ const DESK={items:[],last:null};
 (function(){try{const j=localStorage.getItem("ai_desk_v1");if(j){const o=JSON.parse(j);if(Array.isArray(o.items))DESK.items=o.items.filter(x=>x&&typeof x.k==="string");DESK.last=typeof o.last==="string"?o.last:null}}catch(e){}})();
 const deskSave=()=>{try{localStorage.setItem("ai_desk_v1",JSON.stringify({items:DESK.items,last:DESK.last}))}catch(e){}};
 const deskHas=k=>DESK.items.some(x=>x.k===k);
-function deskToggle(k){const i=DESK.items.findIndex(x=>x.k===k);if(i>=0)DESK.items.splice(i,1);else DESK.items.push({k,note:"",coll:"",t:Date.now()});deskSave()}
+function deskToggle(k){const i=DESK.items.findIndex(x=>x.k===k);if(i>=0){DESK.items.splice(i,1);if(k.startsWith("moment:"))try{const o=JSON.parse(localStorage.getItem("ai_listen_v1")||"null");if(o&&o.moments){delete o.moments[k.slice(7)];localStorage.setItem("ai_listen_v1",JSON.stringify(o))}}catch(e){}}else DESK.items.push({k,note:"",coll:"",t:Date.now()});deskSave()}
 const saveBtn=k=>`<button class="chip pill-save" data-save="${esc(k)}" aria-pressed="${deskHas(k)}">${deskHas(k)?"Saved to Reading Desk":"Save to Reading Desk"}</button>`;
 function markRead(slug){DESK.last=slug;deskSave()}
 document.addEventListener("click",e=>{
@@ -1636,8 +1641,8 @@ document.addEventListener("click",e=>{
 
 const SUPP={tcS:null,tcT:null,uaQ:null,uaS:null,busy:false};
 async function loadSupp(){if(SUPP.busy||SUPP.tcS)return false;SUPP.busy=true;const g=async u=>{try{const r=await fetch(u,{cache:"no-cache"});if(!r.ok)return [];const j=await r.json();return Array.isArray(j.items)?j.items:[]}catch(e){return []}};
-  const [a,b,c,d,e,f]=await Promise.all([g("theory-chamber/data/sources.json"),g("theory-chamber/data/theories.json"),g("unanswered-archive/data/questions.json"),g("unanswered-archive/data/question-sources.json"),g("learning-institute/data/lessons.json"),g("learning-institute/data/courses.json")]);SUPP.tcS=a;SUPP.tcT=b;SUPP.uaQ=c;SUPP.uaS=d;SUPP.liL=e;SUPP.liC=f;SUPP.busy=false;return true}
-const SUPPK=/^(theory|source|cmp|question|lesson|course):/;
+  const [a,b,c,d,e,f,lr1,lr2]=await Promise.all([g("theory-chamber/data/sources.json"),g("theory-chamber/data/theories.json"),g("unanswered-archive/data/questions.json"),g("unanswered-archive/data/question-sources.json"),g("learning-institute/data/lessons.json"),g("learning-institute/data/courses.json"),g("listening-room/data/audio-library.json"),g("listening-room/data/audio-queue.json")]);SUPP.tcS=a;SUPP.tcT=b;SUPP.uaQ=c;SUPP.uaS=d;SUPP.liL=e;SUPP.liC=f;SUPP.lrL=lr1;SUPP.lrQ=lr2;SUPP.busy=false;return true}
+const SUPPK=/^(theory|source|cmp|question|lesson|course|listen|moment):/;
 function suppInfo(t,id){
   if(!SUPP.tcS)return null;
   if(t==="theory"){const x=(SUPP.tcT||[]).find(y=>y.id===id);return x?{title:x.name,sub:"Theory Chamber · theory",open:`<a class="chip" href="theory-chamber/#theory-${esc(id)}">Open in the Theory Chamber</a>`}:null}
@@ -1645,6 +1650,10 @@ function suppInfo(t,id){
   if(t==="lesson"){const x=(SUPP.liL||[]).find(y=>y.id===id);return x?{title:x.title,sub:"Learning Institute · lesson",open:`<a class="chip" href="learning-institute/#lesson-${esc(id)}">Open the lesson</a>`}:null}
   if(t==="course"){const x=(SUPP.liC||[]).find(y=>y.id===id&&y.status==="published");return x?{title:x.title,sub:"Learning Institute · course",open:`<a class="chip" href="learning-institute/#course-${esc(id)}">Open the course</a>`}:null}
   if(t==="question"){const x=(SUPP.uaQ||[]).find(y=>y.id===id);return x?{title:x.title,sub:"The Unanswered Archive · "+x.id,open:`<a class="chip" href="unanswered-archive/#q-${esc(id)}">Open the question</a>`}:null}
+  const lrPlay=r=>{const q=(SUPP.lrQ||[]).find(y=>y.recordingId===r.id),st=q?q.status:r.status;return (st==="published"||st==="revision-required")&&!!r.releaseDate};
+  if(t==="listen"){const x=(SUPP.lrL||[]).find(y=>y.id===id);return x?{title:x.title,sub:"The Listening Room · audio essay",open:lrPlay(x)?`<a class="chip" href="listening-room/#listen-${esc(id)}">Listen</a>`:`<span class="note">Not currently available to play</span>`}:null}
+  if(t==="moment"){const m=/^([A-Za-z0-9]+)@(\d+)$/.exec(id);if(!m)return null;const x=(SUPP.lrL||[]).find(y=>y.id===m[1]);if(!x)return null;const sec=+m[2],ts=Math.floor(sec/60)+":"+String(sec%60).padStart(2,"0");let body="";try{const o=JSON.parse(localStorage.getItem("ai_listen_v1")||"{}");body=((o.moments||{})[id]||{}).text||""}catch(e){}
+    return{title:x.title,sub:"The Listening Room · saved moment at "+ts,body,open:lrPlay(x)?`<a class="chip" href="listening-room/#listen-${esc(m[1])}-t${sec}">Play from ${ts}</a>`:`<span class="note">Not currently available to play</span>`}}
   if(t==="source"){const x=(SUPP.uaS||[]).find(y=>y.id===id)||(SUPP.tcS||[]).find(y=>y.id===id);if(!x)return null;const u=x.doi?"https://doi.org/"+x.doi:x.url;return{title:x.title,sub:"Source · "+(x.year||"n.d.")+" · "+(x.venue||""),open:/^https:\/\//.test(u||"")?`<a class="chip" href="${esc(u)}" target="_blank" rel="noopener noreferrer">Open the source ↗</a>`:""}}
   return null}
 function deskItemInfo(k){
@@ -1663,7 +1672,7 @@ function renderDesk(el){
    <p class="lede">Save essays, passages, theories, sources and questions, group them into collections, and keep private notes. No account is needed.</p>
    <p class="local">Everything here is stored only in this browser on this device. It is never sent anywhere, and clearing your browser's site data removes it. If your browser blocks storage, saving will not persist.</p></div>
    <div class="desk-grid"><div class="dk-list" id="dk-l">
-    ${items.length?items.map(({x,i})=>`<article class="dk-item" data-k="${esc(x.k)}"><span class="note">${esc(i.sub)}</span><h3>${esc(i.title)}</h3>
+    ${items.length?items.map(({x,i})=>`<article class="dk-item" data-k="${esc(x.k)}"><span class="note">${esc(i.sub)}</span><h3>${esc(i.title)}</h3>${i.body?`<p class="note" style="font-style:italic">“${esc(i.body)}”</p>`:""}
       <div class="dk-row"><label class="note" style="flex:1 1 180px">Collection<input type="text" class="dk-coll" value="${esc(x.coll)}" maxlength="40" placeholder="e.g. Memory reading" list="dk-colls"></label></div>
       <label class="note">Private note<textarea class="dk-note" maxlength="1000" placeholder="Your thoughts">${esc(x.note)}</textarea></label>
       <div class="dk-row">${i.open}<button class="chip" data-save="${esc(x.k)}">Remove</button></div></article>`).join(""):`<div class="empty">Nothing saved yet. Use “Save to Reading Desk” on an essay, or on any passage in the Evidence Explorer or Inquiry Room.</div>`}

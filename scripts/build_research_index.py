@@ -130,7 +130,7 @@ CONCEPT_SUBJECT = {
     "ethics": "Ethics", "moral": "Ethics", "moral-consideration": "Ethics", "responsibility": "Ethics", "accountability": "Ethics",
 }
 CATEGORY_SUBJECT = {"human": "Consciousness", "ai": "Artificial Intelligence", "neuro": "Neuroscience", "mind": "Philosophy", "memory": "Memory", "ethics": "Ethics"}
-SOURCE_TYPE = {"article": "Original essay", "source": "External publication", "question": "Site research record", "theory": "Site research record",
+SOURCE_TYPE = {"audio": "Audio essay (narrated)", "article": "Original essay", "source": "External publication", "question": "Site research record", "theory": "Site research record",
                "comparison": "Site research record", "concept": "Site research record", "museum": "Site research record",
                "course": "Learning Institute", "lesson": "Learning Institute"}
 
@@ -463,6 +463,28 @@ def build(root: pathlib.Path, atlas_path: pathlib.Path):
              "attribution": "Artificially Intelligent (original essay)", "reviewStatus": "Published essay; topic tags are editorial",
              "topicSource": a.get("topicSource"), "deskKey": None})
 
+    # ---------------- Listening Room (recordings that are Published Audio only) ----------------
+    # A recording that is awaiting review, in production or was never approved is NOT indexed, so Search and the
+    # Inquiry Engine can never recommend audio that visitors cannot play. No edges are created: the link between an
+    # essay and its recording is the recording's own record, not a claim about the research.
+    lrd = root / "listening-room" / "data"
+    try:
+        _recs = load(lrd / "audio-library.json")["items"] if (lrd / "audio-library.json").exists() else []
+    except Exception as exc:   # a hand-edited record with a typo must not stop the research index from building
+        print(f"WARNING: listening-room/data/audio-library.json could not be read ({exc}); no audio is indexed.", file=sys.stderr)
+        _recs = []
+    if True:
+        for rec in _recs:
+            # same rule as the Listening Room page and the article pages: approved and released, nothing else
+            if not (rec.get("status") in ("published", "revision-required") and rec.get("releaseDate")):
+                continue
+            add({"id": f"audio:{rec['id']}", "type": "audio", "title": rec["title"], "summary": clip(rec.get("description"), 420),
+                 "concepts": list(rec.get("concepts", [])), "url": SITE + f"listening-room/#listen-{rec['id']}", "date": rec.get("releaseDate"),
+                 "durationSec": rec["audio"]["durationSec"], "narration": rec["narration"]["type"],
+                 "attribution": "Artificially Intelligent (recording of an original essay)",
+                 "reviewStatus": "Published audio. A recording presents the essay; it is not additional evidence.",
+                 "narrates": "art:" + rec["source"]["slug"], "deskKey": f"listen:{rec['id']}"})
+
     # ---------------- Learning Institute (published courses and their lessons only) ----------------
     li = root / "learning-institute" / "data"
     if (li / "courses.json").exists() and (li / "lessons.json").exists():
@@ -543,6 +565,7 @@ def adapters(root, counts):
         ("Unanswered Archive questions", "question", "unanswered-archive/data/questions.json", "Archive data"),
         ("Publications (Archive, Theory Chamber, Observatory)", "source", "research-observatory/data/publications.json", "Observatory data"),
         ("Museum of Human Memory rooms", "museum", "museum/data/museum.json", "Museum data"),
+        ("Listening Room recordings (Published Audio only)", "audio", "listening-room/data/audio-library.json", "No recording has been approved and published yet"),
         ("Learning Institute lessons (published courses only)", "lesson", "learning-institute/data/lessons.json", "Learning Institute data"),
         ("Lexicon of Intelligence", None, "lexicon/data/concepts.json", "Not published yet"),
         ("Thinkers Archive", None, "thinkers/data/thinkers.json", "Not published yet"),

@@ -12,7 +12,7 @@ const clip = (s, n) => (s || "").length > n ? s.slice(0, n - 1).trimEnd() + "…
 const enc = q => btoa(unescape(encodeURIComponent(q))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
 const dec = s => { try { s = s.replace(/-/g, "+").replace(/_/g, "/"); while (s.length % 4) s += "="; return decodeURIComponent(escape(atob(s))); } catch (e) { return ""; } };
 
-const TYPES = { concept: "Concept", question: "Open question", theory: "Theory", source: "Publication", article: "Essay", museum: "Museum room", comparison: "Comparison", lesson: "Lesson", course: "Course" };
+const TYPES = { concept: "Concept", question: "Open question", theory: "Theory", source: "Publication", article: "Essay", audio: "Audio essay", museum: "Museum room", comparison: "Comparison", lesson: "Lesson", course: "Course" };
 const EXAMPLES = ["Can intelligence exist without consciousness?", "Can artificial intelligence genuinely understand meaning?", "What makes an experience conscious?", "Can a machine develop self-awareness?", "Is memory necessary for personal identity?", "What distinguishes human cognition from machine learning?", "What would count as evidence of machine consciousness?", "Could consciousness exist independently of a biological brain?"];
 const KIND_LABEL = { editorial: "Editorial link", "verified-metadata": "Verified from publication metadata", preliminary: "Preliminary (automatic)", automatic: "Automatic (from your wording)" };
 
@@ -320,8 +320,10 @@ const STEP = {
   },
   continue(s) {
     const out = [];
+    const aud = s.items.filter(i => i.group === "audio");
     const ess = s.items.filter(i => i.group === "essay"), rooms = s.items.filter(i => i.group === "room"), lessons = s.items.filter(i => i.group === "lesson");
     if (ess.length) { out.push(h("p", { class: "grp" }, "Essays on this site")); ess.forEach(i => out.push(resCard(i.id, { reasons: i.reasons }))); }
+    if (aud.length) { out.push(h("p", { class: "grp" }, "Listen"), h("p", { class: "meta" }, "Recordings of published essays in the Listening Room. A recording presents an essay; it is not additional evidence."), ...aud.map(i => resCard(i.id, { reasons: i.reasons }))); }
     if (lessons.length) { out.push(h("p", { class: "grp" }, "Learn the foundations"), h("p", { class: "meta" }, "Lessons in the Learning Institute that explain ideas behind this question. They explain concepts and do not settle open questions."), ...lessons.map(i => resCard(i.id, { reasons: i.reasons }))); }
     if (rooms.length) { out.push(h("p", { class: "grp" }, "A place to explore")); rooms.forEach(i => out.push(resCard(i.id, { reasons: i.reasons }))); }
     if (s.branches.length) { out.push(h("p", { class: "grp" }, "Questions this one leads to")); s.branches.forEach(b => out.push(resCard(b.id, { reasons: b.reasons, tags: h("span", { class: "tag mint" }, "Editorial link") }))); }

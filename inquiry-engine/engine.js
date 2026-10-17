@@ -218,6 +218,7 @@
       var arts = rank(rec, qs, ["article"]).filter(function (x) { return x.score >= 3; }).slice(0, L.articles);
       var rooms = rank(rec, qs, ["museum"]).filter(function (x) { return x.score >= 3; }).slice(0, L.rooms);
       var lessonsRec = rank(rec, qs, ["lesson"]).filter(function (x) { return x.score >= 4; }).slice(0, 3);
+      var audioRec = rank(rec, qs, ["audio"]).filter(function (x) { return x.score >= 3; }).slice(0, 2);
       var branches = [];
       var seenB = new Set(top.map(function (x) { return x.id; }));
       var brSrc = new Map();
@@ -250,6 +251,7 @@
       if (cmp.length || contested.length) steps.compare = { id: "compare", items: cmp, contested: contested.map(function (x) { return x.id; }) };
       if (unknown.length) steps.unknown = { id: "unknown", items: unknown };
       var cont = []; arts.forEach(function (x) { cont.push({ id: x.id, reasons: x.reasons, group: "essay" }); });
+      audioRec.forEach(function (x) { cont.push({ id: x.id, reasons: x.reasons, group: "audio" }); });
       rooms.forEach(function (x) { cont.push({ id: x.id, reasons: x.reasons, group: "room" }); });
       lessonsRec.forEach(function (x) { cont.push({ id: x.id, reasons: x.reasons, group: "lesson" }); });
       if (cont.length || branches.length || papers.length) steps.continue = { id: "continue", items: cont, branches: branches.map(function (b) { return { id: b.id, reasons: b.reasons }; }), papers: papers };

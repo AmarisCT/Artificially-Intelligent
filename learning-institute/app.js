@@ -272,12 +272,34 @@ function furtherReading(l) {
   return h("div", null, cited.length ? [h("p", { class: "meta" }, "Cited in this lesson"), srcList(cited, 1)] : null, extra.length ? [h("p", { class: "meta" }, "Also recommended"), srcList(extra)] : null,
     h("p", { class: "meta" }, "Each record says how it was checked. A preprint has not been through formal peer review. A source is cited for what it says, and listing it is not a claim that it settles a question."));
 }
+/* The Listening Room: a lesson shows a recording only when a released recording lists the lesson among its related
+   resources. Nothing is shown for unreleased audio, and listening progress is kept separately from lesson progress. */
+let LRP = null;
+function listenData() {
+  if (!LRP) {
+    const g = u => fetch(ROOT + u, { cache: "no-cache" }).then(r => r.ok ? r.json() : { items: [] }).catch(() => ({ items: [] }));
+    LRP = Promise.all([g("listening-room/data/audio-library.json"), g("listening-room/data/audio-queue.json"), g("listening-room/data/audio-relations.json")]).then(([lib, q, rel]) => {
+      const qs = new Map(q.items.filter(i => i.recordingId).map(i => [i.recordingId, i.status]));
+      return lib.items.filter(r => { const st = qs.get(r.id) || r.status; return (st === "published" || st === "revision-required") && !!r.releaseDate; })
+        .map(r => ({ rec: r, lessons: ((rel.items.find(x => x.recordingId === r.id) || { resources: {} }).resources.lessons) || [] }));
+    });
+  }
+  return LRP;
+}
+function fillListen(slot, lessonId) {
+  listenData().then(list => {
+    const m = list.filter(x => x.lessons.includes("lesson:" + lessonId));
+    if (!m.length) return;
+    slot.append(h("div", { class: "cont" }, h("p", { class: "meta" }, "Listen"), m.map(x => h("p", null, h("a", { href: ROOT + "listening-room/#listen-" + encodeURIComponent(x.rec.id) }, x.rec.title + " (audio essay) →"), " A recording that discusses ideas from this lesson. Your lesson progress and your listening progress are kept separately."))));
+  });
+}
 function ending(l, c) {
+  const slot = h("div", { class: "listen-slot" }); fillListen(slot, l.id);
   const s = P(), done = !!s.done[l.id], nx = l.next && lesson(l.next), pv = l.prev && lesson(l.prev);
   const btn = h("button", { class: "btn" + (done ? "" : " primary"), type: "button", "aria-pressed": String(done) }, done ? "Completed. Mark as not complete" : "Mark this lesson complete");
   btn.addEventListener("click", () => { const t = P(); if (t.done[l.id]) { delete t.done[l.id]; delete t.ver[l.id]; } else { t.done[l.id] = Date.now(); t.ver[l.id] = l.version; } save(t); lessonPage(l.id); say(t.done[l.id] ? "Lesson marked complete." : "Lesson marked not complete."); });
   const all = c.lessons.every(x => P().done[x]);
-  return h("div", null, h("div", { class: "openq" }, h("b", null, "Open question"), h("p", null, l.openQuestion.text), h("a", { class: "btn sm", href: url.q(l.openQuestion.id), target: "_blank", rel: "noopener" }, "Explore it in the Unanswered Archive →"), h("p", { class: "meta", style: "margin:10px 0 0" }, "The Archive keeps this question open. Nothing in this lesson resolves it.")),
+  return h("div", null, slot, h("div", { class: "openq" }, h("b", null, "Open question"), h("p", null, l.openQuestion.text), h("a", { class: "btn sm", href: url.q(l.openQuestion.id), target: "_blank", rel: "noopener" }, "Explore it in the Unanswered Archive →"), h("p", { class: "meta", style: "margin:10px 0 0" }, "The Archive keeps this question open. Nothing in this lesson resolves it.")),
     h("div", { class: "row" }, btn, h("a", { class: "btn", href: url.inquiry(l.investigate), target: "_blank", rel: "noopener" }, "Investigate This Further →"), bookmarkBtn("lesson:" + l.id, "Save lesson to Reading Desk")),
     all ? h("div", { class: "cont" }, h("p", null, "You have marked every lesson in this course complete."), h("a", { class: "btn primary", href: "#record-" + c.id }, "View your completion record")) : null,
     h("div", { class: "lessonnav" }, pv ? h("a", { class: "btn", href: "#lesson-" + pv.id }, "← " + pv.title) : h("a", { class: "btn", href: "#course-" + c.id }, "← Course overview"), nx ? h("a", { class: "btn primary", href: "#lesson-" + nx.id }, "Next: " + nx.title + " →") : h("a", { class: "btn primary", href: "#course-" + c.id }, "Back to the course →")));

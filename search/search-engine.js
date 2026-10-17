@@ -8,10 +8,11 @@
   var STOP = new Set(("a an the of to in on at for and or is are be been can could would should do does did it its that this " +
     "what which who whom how why when where with by as from into than then there their they them about over under not no if " +
     "my your our we you i me so such very more most also just").split(" "));
-  var TYPE_ORDER = ["concept", "theory", "article", "course", "lesson", "question", "comparison", "source", "museum"];
-  var TYPE_LABEL = { concept: "Concept", theory: "Theory", article: "Original essay", question: "Open question", comparison: "Theory comparison", source: "Publication", museum: "Museum room", course: "Course", lesson: "Lesson" };
+  var TYPE_ORDER = ["concept", "theory", "article", "audio", "course", "lesson", "question", "comparison", "source", "museum"];
+  var TYPE_LABEL = { concept: "Concept", theory: "Theory", article: "Original essay", audio: "Audio essay", question: "Open question", comparison: "Theory comparison", source: "Publication", museum: "Museum room", course: "Course", lesson: "Lesson" };
   var GROUP_NOTE = {
     article: "Original essays on this site.",
+    audio: "Recordings of published essays, with transcripts. A recording presents an essay; it is not additional evidence.",
     concept: "Short working descriptions of concepts, from the Research Atlas and Theory Chamber.",
     theory: "Theoretical frameworks, awaiting evidence review. Listing a theory is not evidence for it.",
     question: "Unresolved questions and their recorded status. These are open problems, not findings.",
