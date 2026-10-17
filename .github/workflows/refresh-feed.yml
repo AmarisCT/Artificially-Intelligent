@@ -2,6 +2,7 @@ name: Refresh research RSS feed
 on:
   workflow_dispatch:
   push:
+    branches: [main]   # a feature branch must never run, or try to deploy, the production refresh
     paths:
       - "scripts/build_published.py"
       - "scripts/build_research_index.py"
