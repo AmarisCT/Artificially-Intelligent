@@ -1,0 +1,648 @@
+{
+ "id": "LR001",
+ "title": "We Are All Archives Now",
+ "engine": {
+  "name": "CMU Flite",
+  "version": "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers",
+  "voice": "slt",
+  "network": false,
+  "paid": false
+ },
+ "article": {
+  "slug": "we-are-all-archives-now",
+  "bodyHash": "sha256:d0e3e4d21ece507a67c86fb6f5b97b3813818e52473ee2dfed7826af99d3a083",
+  "sourcesHash": "sha256:df76cbcb8ff82a9eca7be006f4dfafaa75cff03ed1ca71b9443090e838a09fb1",
+  "bodyWords": 1453,
+  "publishedAt": "2026-10-07"
+ },
+ "omittedFromSpeech": [
+  {
+   "what": "Citation markers such as [1]",
+   "where": "end of paragraphs that carry them",
+   "shownInTranscript": true
+  },
+  {
+   "what": "The Sources list",
+   "where": "after the essay",
+   "shownInTranscript": true
+  }
+ ],
+ "addedToSpeech": [
+  {
+   "what": "Recording note before the essay and a closing line after it",
+   "reason": "Discloses the synthetic voice inside the audio file itself"
+  }
+ ],
+ "blocks": [
+  {
+   "id": "f-open",
+   "kind": "frame",
+   "sentences": [
+    {
+     "text": "Demonstration recording.",
+     "spoken": "Demonstration recording."
+    },
+    {
+     "text": "This narration uses a synthetic voice and has not been reviewed.",
+     "spoken": "This narration uses a synthetic voice and has not been reviewed."
+    },
+    {
+     "text": "It is not an approved recording.",
+     "spoken": "It is not an approved recording."
+    },
+    {
+     "text": "We Are All Archives Now.",
+     "spoken": "We Are All Archives Now."
+    },
+    {
+     "text": "An essay from Artificially Intelligent, published October 7, 2026.",
+     "spoken": "An essay from Artificially Intelligent, published October seventh, twenty twenty-six."
+    }
+   ]
+  },
+  {
+   "id": "p00",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "Long before a photograph could be stored in the cloud, a human being pressed a mark into clay.",
+     "spoken": "Long before a photograph could be stored in the cloud, a human being pressed a mark into clay."
+    },
+    {
+     "text": "The material was different, but the impulse is familiar: make something endure beyond the moment in which it happened.",
+     "spoken": "The material was different, but the impulse is familiar: make something endure beyond the moment in which it happened."
+    },
+    {
+     "text": "A delivery, an obligation, a name, a story.",
+     "spoken": "A delivery, an obligation, a name, a story."
+    },
+    {
+     "text": "Something needed to remain available after the people who witnessed it had moved on.",
+     "spoken": "Something needed to remain available after the people who witnessed it had moved on."
+    }
+   ]
+  },
+  {
+   "id": "p01",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "We tend to imagine archives as places where history is stored after it has finished happening.",
+     "spoken": "We tend to imagine archives as places where history is stored after it has finished happening."
+    },
+    {
+     "text": "Yet many historical records began as instruments of ordinary life.",
+     "spoken": "Yet many historical records began as instruments of ordinary life."
+    },
+    {
+     "text": "They were made to manage resources, establish ownership, communicate decisions, or settle disputes.",
+     "spoken": "They were made to manage resources, establish ownership, communicate decisions, or settle disputes."
+    },
+    {
+     "text": "Their creators were not always trying to address the future.",
+     "spoken": "Their creators were not always trying to address the future."
+    },
+    {
+     "text": "The future inherited what their present required.",
+     "spoken": "The future inherited what their present required."
+    }
+   ]
+  },
+  {
+   "id": "p02",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "Among the earliest surviving Mesopotamian tablets are economic records.",
+     "spoken": "Among the earliest surviving Mesopotamian tablets are economic records."
+    },
+    {
+     "text": "The Metropolitan Museum of Art describes early tablets, dating to around 3300 BCE, that recorded economic information through pictographs and numerals.",
+     "spoken": "The Metropolitan Museum of Art describes early tablets, dating to around 3300 BCE, that recorded economic information through pictographs and numerals."
+    },
+    {
+     "text": "An account of barley was useful because someone needed to know what had been received or distributed.",
+     "spoken": "An account of barley was useful because someone needed to know what had been received or distributed."
+    },
+    {
+     "text": "Centuries later, the same object could become evidence of how a society organized itself.",
+     "spoken": "Centuries later, the same object could become evidence of how a society organized itself."
+    },
+    {
+     "text": "Its purpose changed as its surroundings disappeared.",
+     "spoken": "Its purpose changed as its surroundings disappeared."
+    }
+   ]
+  },
+  {
+   "id": "p03",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "This is one way a record becomes historical: it outlives the transaction that made it necessary.",
+     "spoken": "This is one way a record becomes historical: it outlives the transaction that made it necessary."
+    },
+    {
+     "text": "But survival alone does not explain an archive.",
+     "spoken": "But survival alone does not explain an archive."
+    },
+    {
+     "text": "Someone must also recover, identify, arrange, interpret, and preserve what remains.",
+     "spoken": "Someone must also recover, identify, arrange, interpret, and preserve what remains."
+    },
+    {
+     "text": "A fragment without context can endure physically while losing much of its meaning.",
+     "spoken": "A fragment without context can endure physically while losing much of its meaning."
+    }
+   ]
+  },
+  {
+   "id": "p04",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "The seventh-century BCE Library of Ashurbanipal at Nineveh offers another route into the past.",
+     "spoken": "The seventh-century BCE Library of Ashur bahnee pahl at Nineveh offers another route into the past."
+    },
+    {
+     "text": "Its surviving clay tablets and fragments bring together scholarly and literary traditions, including texts associated with divination, medicine, and the Epic of Gilgamesh.",
+     "spoken": "Its surviving clay tablets and fragments bring together scholarly and literary traditions, including texts associated with divination, medicine, and the Epic of Gilgamesh."
+    },
+    {
+     "text": "This was a royal collection shaped by particular interests and institutions, rather than a complete account of everyone living in the Assyrian world.",
+     "spoken": "This was a royal collection shaped by particular interests and institutions, rather than a complete account of everyone living in the Assyrian world."
+    },
+    {
+     "text": "The British Museum's ongoing research treats its organization and formation as questions to investigate.",
+     "spoken": "The British Museum's ongoing research treats its organization and formation as questions to investigate."
+    }
+   ]
+  },
+  {
+   "id": "p05",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "A library and an archive are not identical.",
+     "spoken": "A library and an archive are not identical."
+    },
+    {
+     "text": "A library can gather works from many origins; an archive generally preserves records in relation to the people or institutions that produced them.",
+     "spoken": "A library can gather works from many origins; an archive generally preserves records in relation to the people or institutions that produced them."
+    },
+    {
+     "text": "Their histories nevertheless intersect in a larger human activity: arranging traces so that knowledge can travel beyond its original setting.",
+     "spoken": "Their histories nevertheless intersect in a larger human activity: arranging traces so that knowledge can travel beyond its original setting."
+    }
+   ]
+  },
+  {
+   "id": "p06",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "That arrangement is never innocent of perspective.",
+     "spoken": "That arrangement is never innocent of perspective."
+    },
+    {
+     "text": "A collection tells us something about the people who created its contents, but also about those who decided to collect them.",
+     "spoken": "A collection tells us something about the people who created its contents, but also about those who decided to collect them."
+    },
+    {
+     "text": "What survives may reveal an institution's priorities more clearly than the full experience of the society around it.",
+     "spoken": "What survives may reveal an institution's priorities more clearly than the full experience of the society around it."
+    }
+   ]
+  },
+  {
+   "id": "p07",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "Domesday Book makes that relationship visible.",
+     "spoken": "Doomsday Book makes that relationship visible."
+    },
+    {
+     "text": "Produced from the survey of 1086, it records landholding and resources in much of England.",
+     "spoken": "Produced from the survey of ten eighty-six, it records landholding and resources in much of England."
+    },
+    {
+     "text": "The National Archives describes it as a detailed survey and valuation of landed property.",
+     "spoken": "The National Archives describes it as a detailed survey and valuation of landed property."
+    },
+    {
+     "text": "For a modern researcher, it is a major historical source.",
+     "spoken": "For a modern researcher, it is a major historical source."
+    },
+    {
+     "text": "For the government that commissioned it, the information helped make property and obligations legible to authority.",
+     "spoken": "For the government that commissioned it, the information helped make property and obligations legible to authority."
+    }
+   ]
+  },
+  {
+   "id": "p08",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "The record and the person are already separated here.",
+     "spoken": "The record and the person are already separated here."
+    },
+    {
+     "text": "A landholder can appear as an entry within a system, while the fears, attachments, and contradictions of that person's life remain outside its categories.",
+     "spoken": "A landholder can appear as an entry within a system, while the fears, attachments, and contradictions of that person's life remain outside its categories."
+    },
+    {
+     "text": "The document may be accurate about what it was designed to measure and still be radically incomplete as a portrait of being human.",
+     "spoken": "The document may be accurate about what it was designed to measure and still be radically incomplete as a portrait of being human."
+    }
+   ]
+  },
+  {
+   "id": "p09",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "Historical archives take shape through this combination of purpose, survival, and selection.",
+     "spoken": "Historical archives take shape through this combination of purpose, survival, and selection."
+    },
+    {
+     "text": "Some materials are deliberately retained.",
+     "spoken": "Some materials are deliberately retained."
+    },
+    {
+     "text": "Others survive through accident.",
+     "spoken": "Others survive through accident."
+    },
+    {
+     "text": "Still others disappear through destruction, neglect, or exclusion.",
+     "spoken": "Still others disappear through destruction, neglect, or exclusion."
+    },
+    {
+     "text": "Modern archival practice makes selection explicit: the UK's National Archives guides public bodies in identifying records for permanent preservation.",
+     "spoken": "Modern archival practice makes selection explicit: the U K's National Archives guides public bodies in identifying records for permanent preservation."
+    },
+    {
+     "text": "Keeping everything is not the same as preserving a usable historical record.",
+     "spoken": "Keeping everything is not the same as preserving a usable historical record."
+    }
+   ]
+  },
+  {
+   "id": "p10",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "This matters because absence can be mistaken for insignificance.",
+     "spoken": "This matters because absence can be mistaken for insignificance."
+    },
+    {
+     "text": "A person whose voice was not recorded did not live a less meaningful life.",
+     "spoken": "A person whose voice was not recorded did not live a less meaningful life."
+    },
+    {
+     "text": "A community poorly represented in official documents did not lack a history.",
+     "spoken": "A community poorly represented in official documents did not lack a history."
+    },
+    {
+     "text": "What an archive makes visible depends partly on who had access to writing, who possessed institutional authority, and which materials later received care.",
+     "spoken": "What an archive makes visible depends partly on who had access to writing, who possessed institutional authority, and which materials later received care."
+    },
+    {
+     "text": "Reading history requires attention to those limits.",
+     "spoken": "Reading history requires attention to those limits."
+    }
+   ]
+  },
+  {
+   "id": "p11",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "Today, the making of records has moved into the texture of ordinary activity.",
+     "spoken": "Today, the making of records has moved into the texture of ordinary activity."
+    },
+    {
+     "text": "We send messages, upload photographs, save documents, and interact with systems that may log our actions.",
+     "spoken": "We send messages, upload photographs, save documents, and interact with systems that may log our actions."
+    },
+    {
+     "text": "A personal collection grows beside us, distributed across devices and accounts.",
+     "spoken": "A personal collection grows beside us, distributed across devices and accounts."
+    },
+    {
+     "text": "Other records are held by organizations whose purposes differ from our own.",
+     "spoken": "Other records are held by organizations whose purposes differ from our own."
+    }
+   ]
+  },
+  {
+   "id": "p12",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "These traces do not all belong to a single archive.",
+     "spoken": "These traces do not all belong to a single archive."
+    },
+    {
+     "text": "Nor is every trace accessible to an AI system.",
+     "spoken": "Nor is every trace accessible to an A I system."
+    },
+    {
+     "text": "Access depends on the service, its practices, permissions, and the material involved.",
+     "spoken": "Access depends on the service, its practices, permissions, and the material involved."
+    },
+    {
+     "text": "Still, a change in scale is visible: an individual can now produce a volume of recorded expression that would once have required sustained institutional effort to create and maintain.",
+     "spoken": "Still, a change in scale is visible: an individual can now produce a volume of recorded expression that would once have required sustained institutional effort to create and maintain."
+    }
+   ]
+  },
+  {
+   "id": "p13",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "The Library of Congress treats personal digital archiving as a practical preservation problem, offering guidance for photographs, email, websites, and other personal materials.",
+     "spoken": "The Library of Congress treats personal digital archiving as a practical preservation problem, offering guidance for photographs, email, websites, and other personal materials."
+    },
+    {
+     "text": "Its advice also complicates the promise that the internet never forgets.",
+     "spoken": "Its advice also complicates the promise that the internet never forgets."
+    },
+    {
+     "text": "Digital content depends on technologies that keep it readable.",
+     "spoken": "Digital content depends on technologies that keep it readable."
+    },
+    {
+     "text": "Saving a file once does not guarantee that it will remain accessible.",
+     "spoken": "Saving a file once does not guarantee that it will remain accessible."
+    }
+   ]
+  },
+  {
+   "id": "p14",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "We therefore live with two different vulnerabilities.",
+     "spoken": "We therefore live with two different vulnerabilities."
+    },
+    {
+     "text": "Information we wish would disappear may be copied beyond our control.",
+     "spoken": "Information we wish would disappear may be copied beyond our control."
+    },
+    {
+     "text": "Information we desperately want to keep may become inaccessible.",
+     "spoken": "Information we desperately want to keep may become inaccessible."
+    },
+    {
+     "text": "Digital memory can be persistent in one setting and fragile in another.",
+     "spoken": "Digital memory can be persistent in one setting and fragile in another."
+    },
+    {
+     "text": "Neither total permanence nor effortless deletion describes it well.",
+     "spoken": "Neither total permanence nor effortless deletion describes it well."
+    }
+   ]
+  },
+  {
+   "id": "p15",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "The phrase 'we are all archives now' names this condition metaphorically.",
+     "spoken": "The phrase 'we are all archives now' names this condition metaphorically."
+    },
+    {
+     "text": "A person is not literally a repository.",
+     "spoken": "A person is not literally a repository."
+    },
+    {
+     "text": "But increasingly, our lives acquire recorded counterparts that can be searched, rearranged, and interpreted apart from us.",
+     "spoken": "But increasingly, our lives acquire recorded counterparts that can be searched, rearranged, and interpreted apart from us."
+    },
+    {
+     "text": "We are the creators of some records, the subjects of others, and only partial custodians of the whole.",
+     "spoken": "We are the creators of some records, the subjects of others, and only partial custodians of the whole."
+    }
+   ]
+  },
+  {
+   "id": "p16",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "Artificial intelligence introduces another layer into this history.",
+     "spoken": "Artificial intelligence introduces another layer into this history."
+    },
+    {
+     "text": "Some language models are trained on large collections of recorded language.",
+     "spoken": "Some language models are trained on large collections of recorded language."
+    },
+    {
+     "text": "Brown and colleagues' 2020 GPT-3 paper, for example, describes a training mixture that included filtered Common Crawl material, WebText2, books, and Wikipedia.",
+     "spoken": "Brown and colleagues' 2020 GPT-3 paper, for example, describes a training mixture that included filtered Common Crawl material, WebText2, books, and Wikipedia."
+    },
+    {
+     "text": "The model's ability to generate language emerged through training on this selected body of text, rather than through firsthand participation in the lives behind it.",
+     "spoken": "The model's ability to generate language emerged through training on this selected body of text, rather than through firsthand participation in the lives behind it."
+    }
+   ]
+  },
+  {
+   "id": "p17",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "A trained model is not a conventional archive with a reliable catalogue of its sources.",
+     "spoken": "A trained model is not a conventional archive with a reliable catalogue of its sources."
+    },
+    {
+     "text": "It learns statistical relationships in data, and it can sometimes reproduce particular passages, but its generated answers are not guaranteed retrievals of authentic records.",
+     "spoken": "It learns statistical relationships in data, and it can sometimes reproduce particular passages, but its generated answers are not guaranteed retrievals of authentic records."
+    },
+    {
+     "text": "A fluent response can contain invention.",
+     "spoken": "A fluent response can contain invention."
+    },
+    {
+     "text": "Treating it as historical evidence requires checking the underlying sources.",
+     "spoken": "Treating it as historical evidence requires checking the underlying sources."
+    }
+   ]
+  },
+  {
+   "id": "p18",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "The philosophical connection is nevertheless significant.",
+     "spoken": "The philosophical connection is nevertheless significant."
+    },
+    {
+     "text": "Human beings record their interpretations of the world.",
+     "spoken": "Human beings record their interpretations of the world."
+    },
+    {
+     "text": "Machines learn patterns from some of those recordings.",
+     "spoken": "Machines learn patterns from some of those recordings."
+    },
+    {
+     "text": "People then encounter machine-generated language and use it in further writing, decisions, and self-understanding.",
+     "spoken": "People then encounter machine-generated language and use it in further writing, decisions, and self-understanding."
+    },
+    {
+     "text": "Expression becomes training material; generated expression becomes part of the next human environment.",
+     "spoken": "Expression becomes training material; generated expression becomes part of the next human environment."
+    },
+    {
+     "text": "This is a feedback loop, not evidence that a collective consciousness has transferred into a machine.",
+     "spoken": "This is a feedback loop, not evidence that a collective consciousness has transferred into a machine."
+    }
+   ]
+  },
+  {
+   "id": "p19",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "The first essay in Artificially Intelligent asked whether human consciousness is connected to artificial intelligence.",
+     "spoken": "The first essay in Artificially Intelligent asked whether human consciousness is connected to artificial intelligence."
+    },
+    {
+     "text": "This essay approaches that question through what consciousness leaves behind.",
+     "spoken": "This essay approaches that question through what consciousness leaves behind."
+    },
+    {
+     "text": "A letter can communicate grief without containing the experience of grieving.",
+     "spoken": "A letter can communicate grief without containing the experience of grieving."
+    },
+    {
+     "text": "A photograph can preserve an appearance without preserving the person who inhabited it.",
+     "spoken": "A photograph can preserve an appearance without preserving the person who inhabited it."
+    },
+    {
+     "text": "A system that learns from human expression has encountered traces of thought, not demonstrated possession of the subjective lives that produced them.",
+     "spoken": "A system that learns from human expression has encountered traces of thought, not demonstrated possession of the subjective lives that produced them."
+    }
+   ]
+  },
+  {
+   "id": "p20",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "That distinction becomes urgent when a digital representation is mistaken for a complete self.",
+     "spoken": "That distinction becomes urgent when a digital representation is mistaken for a complete self."
+    },
+    {
+     "text": "Records can describe someone at particular moments while fixing them in categories they have since outgrown.",
+     "spoken": "Records can describe someone at particular moments while fixing them in categories they have since outgrown."
+    },
+    {
+     "text": "A profile assembled from old behavior may be useful for a system's purpose without being a fair account of the person today.",
+     "spoken": "A profile assembled from old behavior may be useful for a system's purpose without being a fair account of the person today."
+    },
+    {
+     "text": "The question is not simply how accurately machines remember us.",
+     "spoken": "The question is not simply how accurately machines remember us."
+    },
+    {
+     "text": "It is what kinds of change their representations allow.",
+     "spoken": "It is what kinds of change their representations allow."
+    }
+   ]
+  },
+  {
+   "id": "p21",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "Archives can preserve dignity, recover neglected histories, and make institutions answerable for past actions.",
+     "spoken": "Archives can preserve dignity, recover neglected histories, and make institutions answerable for past actions."
+    },
+    {
+     "text": "They can also expose private lives or give a partial account the authority of permanence.",
+     "spoken": "They can also expose private lives or give a partial account the authority of permanence."
+    },
+    {
+     "text": "Their value depends on how records are contextualized, who can interpret them, and how people represented within them are treated.",
+     "spoken": "Their value depends on how records are contextualized, who can interpret them, and how people represented within them are treated."
+    }
+   ]
+  },
+  {
+   "id": "p22",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "For Artificially Intelligent, the archive is therefore both a subject and a method.",
+     "spoken": "For Artificially Intelligent, the archive is therefore both a subject and a method."
+    },
+    {
+     "text": "The Data Stream brings historical records into conversation with emerging technology, while keeping the difference between evidence and interpretation visible.",
+     "spoken": "The Data Stream brings historical records into conversation with emerging technology, while keeping the difference between evidence and interpretation visible."
+    },
+    {
+     "text": "Its essays are situated attempts to understand a changing world.",
+     "spoken": "Its essays are situated attempts to understand a changing world."
+    },
+    {
+     "text": "Sources allow a reader to question those attempts rather than simply inherit them.",
+     "spoken": "Sources allow a reader to question those attempts rather than simply inherit them."
+    }
+   ]
+  },
+  {
+   "id": "p23",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "The clay tablet and the digital trace are not equivalent technologies.",
+     "spoken": "The clay tablet and the digital trace are not equivalent technologies."
+    },
+    {
+     "text": "Their distance helps us see a recurring problem: human beings create systems to make life legible, then later understand life through what those systems retained.",
+     "spoken": "Their distance helps us see a recurring problem: human beings create systems to make life legible, then later understand life through what those systems retained."
+    },
+    {
+     "text": "What began as an instrument becomes an inheritance.",
+     "spoken": "What began as an instrument becomes an inheritance."
+    }
+   ]
+  },
+  {
+   "id": "p24",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "We are all archives now because traces of our lives increasingly circulate beyond the circumstances that gave them meaning.",
+     "spoken": "We are all archives now because traces of our lives increasingly circulate beyond the circumstances that gave them meaning."
+    },
+    {
+     "text": "Yet the archive remains a record of a life, not its replacement.",
+     "spoken": "Yet the archive remains a record of a life, not its replacement."
+    },
+    {
+     "text": "The responsibility ahead is to preserve what helps us understand one another without allowing what has been recorded to become the limit of who we can be.",
+     "spoken": "The responsibility ahead is to preserve what helps us understand one another without allowing what has been recorded to become the limit of who we can be."
+    }
+   ]
+  },
+  {
+   "id": "f-close",
+   "kind": "frame",
+   "sentences": [
+    {
+     "text": "End of the essay.",
+     "spoken": "End of the essay."
+    },
+    {
+     "text": "The sources are listed in the written article.",
+     "spoken": "The sources are listed in the written article."
+    }
+   ]
+  }
+ ]
+}

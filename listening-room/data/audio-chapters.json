@@ -1,0 +1,270 @@
+{
+ "meta": {
+  "schemaVersion": 1
+ },
+ "items": [
+  {
+   "recordingId": "LR001",
+   "basis": "The published essay has no section headings. These chapters follow its real structure: the essay body and its Sources list, plus the recording's own spoken notes.",
+   "chapters": [
+    {
+     "id": "c-note",
+     "title": "Recording note",
+     "kind": "structure",
+     "approved": true,
+     "start": 0.5,
+     "fromBlock": "f-open",
+     "toBlock": "f-open"
+    },
+    {
+     "id": "c-essay",
+     "title": "The essay",
+     "kind": "structure",
+     "approved": true,
+     "start": 16.77,
+     "fromBlock": "p00",
+     "toBlock": "p24"
+    },
+    {
+     "id": "c-close",
+     "title": "Closing note",
+     "kind": "structure",
+     "approved": true,
+     "start": 610.435,
+     "fromBlock": "f-close",
+     "toBlock": "f-close"
+    },
+    {
+     "id": "c-sources",
+     "title": "Sources",
+     "kind": "structure",
+     "approved": true,
+     "start": null,
+     "fromBlock": "sources",
+     "toBlock": "sources",
+     "note": "Listed in the written article and shown in the transcript. Not read aloud."
+    }
+   ],
+   "proposed": [
+    {
+     "id": "pc01",
+     "title": "A mark pressed into clay",
+     "kind": "editorial",
+     "approved": false,
+     "start": 16.77,
+     "fromBlock": "p00",
+     "toBlock": "p03"
+    },
+    {
+     "id": "pc02",
+     "title": "The Library of Ashurbanipal",
+     "kind": "editorial",
+     "approved": false,
+     "start": 109.711,
+     "fromBlock": "p04",
+     "toBlock": "p06"
+    },
+    {
+     "id": "pc03",
+     "title": "Domesday Book",
+     "kind": "editorial",
+     "approved": false,
+     "start": 179.845,
+     "fromBlock": "p07",
+     "toBlock": "p08"
+    },
+    {
+     "id": "pc04",
+     "title": "What survives, and what is selected",
+     "kind": "editorial",
+     "approved": false,
+     "start": 224.518,
+     "fromBlock": "p09",
+     "toBlock": "p10"
+    },
+    {
+     "id": "pc05",
+     "title": "Records in ordinary life today",
+     "kind": "editorial",
+     "approved": false,
+     "start": 279.783,
+     "fromBlock": "p11",
+     "toBlock": "p15"
+    },
+    {
+     "id": "pc06",
+     "title": "Artificial intelligence and the archive",
+     "kind": "editorial",
+     "approved": false,
+     "start": 391.36,
+     "fromBlock": "p16",
+     "toBlock": "p18"
+    },
+    {
+     "id": "pc07",
+     "title": "Consciousness, records and the self",
+     "kind": "editorial",
+     "approved": false,
+     "start": 474.501,
+     "fromBlock": "p19",
+     "toBlock": "p21"
+    },
+    {
+     "id": "pc08",
+     "title": "The archive as subject and method",
+     "kind": "editorial",
+     "approved": false,
+     "start": 551.167,
+     "fromBlock": "p22",
+     "toBlock": "p24"
+    }
+   ],
+   "proposedStatus": "Draft titles written during the build. They are shown only in preview and only after the author approves them."
+  },
+  {
+   "recordingId": "LR002",
+   "basis": "The published essay has no section headings. These chapters follow its real structure: the essay body and its Sources list, plus the recording's own spoken notes.",
+   "chapters": [
+    {
+     "id": "c-note",
+     "title": "Recording note",
+     "kind": "structure",
+     "approved": true,
+     "start": 0.5,
+     "fromBlock": "f-open",
+     "toBlock": "f-open"
+    },
+    {
+     "id": "c-essay",
+     "title": "The essay",
+     "kind": "structure",
+     "approved": true,
+     "start": 19.348,
+     "fromBlock": "p00",
+     "toBlock": "p104"
+    },
+    {
+     "id": "c-close",
+     "title": "Closing note",
+     "kind": "structure",
+     "approved": true,
+     "start": 1235.8,
+     "fromBlock": "f-close",
+     "toBlock": "f-close"
+    },
+    {
+     "id": "c-sources",
+     "title": "Sources",
+     "kind": "structure",
+     "approved": true,
+     "start": null,
+     "fromBlock": "sources",
+     "toBlock": "sources",
+     "note": "Listed in the written article and shown in the transcript. Not read aloud."
+    }
+   ],
+   "proposed": [
+    {
+     "id": "pc01",
+     "title": "What exactly is consciousness?",
+     "kind": "editorial",
+     "approved": false,
+     "start": 19.348,
+     "fromBlock": "p00",
+     "toBlock": "p05"
+    },
+    {
+     "id": "pc02",
+     "title": "Intelligence is not consciousness",
+     "kind": "editorial",
+     "approved": false,
+     "start": 147.95,
+     "fromBlock": "p06",
+     "toBlock": "p07"
+    },
+    {
+     "id": "pc03",
+     "title": "Turing and the Chinese Room",
+     "kind": "editorial",
+     "approved": false,
+     "start": 188.119,
+     "fromBlock": "p08",
+     "toBlock": "p10"
+    },
+    {
+     "id": "pc04",
+     "title": "Language models and the brain",
+     "kind": "editorial",
+     "approved": false,
+     "start": 244.883,
+     "fromBlock": "p11",
+     "toBlock": "p13"
+    },
+    {
+     "id": "pc05",
+     "title": "Human to machine to human",
+     "kind": "editorial",
+     "approved": false,
+     "start": 312.117,
+     "fromBlock": "p14",
+     "toBlock": "p23"
+    },
+    {
+     "id": "pc06",
+     "title": "The extended mind and cognitive offloading",
+     "kind": "editorial",
+     "approved": false,
+     "start": 427.533,
+     "fromBlock": "p24",
+     "toBlock": "p35"
+    },
+    {
+     "id": "pc07",
+     "title": "Identity and the recursive mirror",
+     "kind": "editorial",
+     "approved": false,
+     "start": 604.751,
+     "fromBlock": "p36",
+     "toBlock": "p53"
+    },
+    {
+     "id": "pc08",
+     "title": "Language is the bridge",
+     "kind": "editorial",
+     "approved": false,
+     "start": 777.056,
+     "fromBlock": "p54",
+     "toBlock": "p66"
+    },
+    {
+     "id": "pc09",
+     "title": "What the evidence supports",
+     "kind": "editorial",
+     "approved": false,
+     "start": 914.267,
+     "fromBlock": "p67",
+     "toBlock": "p78"
+    },
+    {
+     "id": "pc10",
+     "title": "Where does the self end?",
+     "kind": "editorial",
+     "approved": false,
+     "start": 1040.906,
+     "fromBlock": "p79",
+     "toBlock": "p88"
+    },
+    {
+     "id": "pc11",
+     "title": "Something quieter",
+     "kind": "editorial",
+     "approved": false,
+     "start": 1107.683,
+     "fromBlock": "p89",
+     "toBlock": "p104"
+    }
+   ],
+   "proposedStatus": "Draft titles written during the build. They are shown only in preview and only after the author approves them."
+  }
+ ]
+}

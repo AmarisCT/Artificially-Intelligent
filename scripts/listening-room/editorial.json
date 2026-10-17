@@ -1,0 +1,145 @@
+{
+  "meta": {
+    "note": "Human-authored inputs for lr_compile.py. Everything here is an editorial decision or a pointer to a record that already exists. Timings, durations and checksums are never written here; they come from the produced audio.",
+    "reviewState": "All associations below were drafted by the build and are awaiting author review."
+  },
+  "statuses": [
+    {"id": "not-recorded", "label": "Not Yet Recorded", "definition": "The article is published, but no audio version exists.", "playable": false},
+    {"id": "in-production", "label": "In Production", "definition": "Narration is being prepared.", "playable": false},
+    {"id": "awaiting-review", "label": "Awaiting Audio Review", "definition": "A recording exists but requires approval.", "playable": false},
+    {"id": "published", "label": "Published Audio", "definition": "The approved audio version is publicly playable.", "playable": true},
+    {"id": "revision-required", "label": "Revision Required", "definition": "The source article or recording has changed, and the audio needs review.", "playable": false}
+  ],
+  "categories": [
+    {"id": "narrated-research", "label": "Narrated Research", "description": "Audio adaptations of original published research essays."},
+    {"id": "philosophical-reflections", "label": "Philosophical Reflections", "description": "Shorter, carefully written meditations on research questions."},
+    {"id": "human-machine-dialogues", "label": "Human × Machine Dialogues", "description": "Audio presentations of authentic or explicitly labeled illustrative exchanges."},
+    {"id": "research-seminars", "label": "Research Seminars", "description": "Guided examinations of theories, publications, and scholarly disagreements."},
+    {"id": "memory-collection", "label": "The Memory Collection", "description": "A curated audio series exploring memory, archives, identity, and digital preservation."},
+    {"id": "listening-exhibitions", "label": "Listening Exhibitions", "description": "Longer thematic audio experiences that connect multiple research subjects."}
+  ],
+  "narrationTypes": [
+    {"id": "human", "label": "Human narration", "disclosure": "Read aloud by a person named in the credit."},
+    {"id": "synthetic", "label": "Synthetic voice", "disclosure": "This narration uses a synthetic (AI-generated) voice. It was reviewed and approved before release."},
+    {"id": "synthetic-demo", "label": "Synthetic demonstration voice", "disclosure": "This is a demonstration recording with a synthetic voice from an open-source engine. It has not been reviewed and is not an approved narration."}
+  ],
+  "series": [
+    {"id": "consciousness-question", "title": "The Consciousness Question", "description": "Narrated investigations into consciousness and subjective experience."},
+    {"id": "memory-collection", "title": "The Memory Collection", "description": "Essays concerning archives, identity, memory, and digital preservation."},
+    {"id": "human-machine", "title": "Human × Machine", "description": "Philosophical conversations and analyses of artificial intelligence."},
+    {"id": "the-unanswered", "title": "The Unanswered", "description": "Audio investigations inspired by the Unanswered Archive."},
+    {"id": "observatory-notes", "title": "Notes From the Observatory", "description": "Carefully reviewed discussions of emerging scholarly research."}
+  ],
+  "recordings": [
+    {
+      "id": "LR001",
+      "label": "AUDIO ESSAY 001",
+      "slug": "we-are-all-archives-now",
+      "category": "narrated-research",
+      "series": ["memory-collection"],
+      "narration": {
+        "type": "synthetic-demo",
+        "narrator": "Synthetic voice \"slt\" from CMU Flite",
+        "credit": "Speech synthesis: CMU Flite 2.2 (open source), voice \"slt\". Text: Artificially Intelligent."
+      },
+      "status": "awaiting-review",
+      "audioVersion": "0.1.0-demo",
+      "concepts": ["memory", "archives", "culture", "identity", "ai"],
+      "lexicon": ["memory", "artificial-intelligence", "consciousness", "identity"],
+      "relations": {
+        "questions": ["Q016", "Q018", "Q021", "Q020"],
+        "theories": [],
+        "comparisons": [],
+        "museum": ["tablet", "library", "domesday", "selection", "web", "model"],
+        "lessons": ["C002-L05"],
+        "articles": ["is-human-consciousness-connected-to-artificial-intelligence"]
+      },
+      "annotations": [
+        {"block": "p01", "phrase": "archives", "type": "atlas", "id": "archives"},
+        {"block": "p02", "phrase": "Mesopotamian tablets", "type": "museum", "id": "tablet"},
+        {"block": "p04", "phrase": "Library of Ashurbanipal", "type": "museum", "id": "library"},
+        {"block": "p07", "phrase": "Domesday Book", "type": "museum", "id": "domesday"},
+        {"block": "p09", "phrase": "selection explicit", "type": "museum", "id": "selection"},
+        {"block": "p13", "phrase": "personal digital archiving", "type": "museum", "id": "web"},
+        {"block": "p14", "phrase": "Digital memory", "type": "lexicon", "id": "memory"},
+        {"block": "p16", "phrase": "Artificial intelligence", "type": "lexicon", "id": "artificial-intelligence"},
+        {"block": "p17", "phrase": "trained model", "type": "museum", "id": "model"},
+        {"block": "p19", "phrase": "human consciousness", "type": "lexicon", "id": "consciousness"},
+        {"block": "p20", "phrase": "complete self", "type": "question", "id": "Q018"}
+      ],
+      "chapters": {
+        "proposed": [
+          {"title": "A mark pressed into clay", "from": "p00", "to": "p03"},
+          {"title": "The Library of Ashurbanipal", "from": "p04", "to": "p06"},
+          {"title": "Domesday Book", "from": "p07", "to": "p08"},
+          {"title": "What survives, and what is selected", "from": "p09", "to": "p10"},
+          {"title": "Records in ordinary life today", "from": "p11", "to": "p15"},
+          {"title": "Artificial intelligence and the archive", "from": "p16", "to": "p18"},
+          {"title": "Consciousness, records and the self", "from": "p19", "to": "p21"},
+          {"title": "The archive as subject and method", "from": "p22", "to": "p24"}
+        ]
+      }
+    },
+    {
+      "id": "LR002",
+      "label": "AUDIO ESSAY 002",
+      "slug": "is-human-consciousness-connected-to-artificial-intelligence",
+      "category": "narrated-research",
+      "series": ["consciousness-question"],
+      "narration": {
+        "type": "synthetic-demo",
+        "narrator": "Synthetic voice \"slt\" from CMU Flite",
+        "credit": "Speech synthesis: CMU Flite 2.2 (open source), voice \"slt\". Text: Artificially Intelligent."
+      },
+      "status": "awaiting-review",
+      "audioVersion": "0.1.0-demo",
+      "concepts": ["consciousness", "ai", "cognition", "language", "identity"],
+      "lexicon": ["consciousness", "subjective-experience", "understanding", "cognition", "memory", "identity", "artificial-intelligence", "intelligence"],
+      "relations": {
+        "questions": ["Q001", "Q002", "Q007", "Q008", "Q009", "Q012", "Q016", "Q024"],
+        "theories": ["gnwt", "iit", "hot", "rpt", "pp"],
+        "comparisons": ["gnwt-iit"],
+        "museum": [],
+        "lessons": ["C001-L01", "C001-L06", "C001-L07", "C002-L05", "C002-L07"],
+        "articles": ["we-are-all-archives-now"]
+      },
+      "annotations": [
+        {"block": "p00", "phrase": "consciousness", "type": "lexicon", "id": "consciousness"},
+        {"block": "p01", "phrase": "subjective experience", "type": "lexicon", "id": "subjective-experience"},
+        {"block": "p02", "phrase": "Global Neuronal Workspace Theory", "type": "theory", "id": "gnwt"},
+        {"block": "p02", "phrase": "Integrated Information Theory", "type": "theory", "id": "iit"},
+        {"block": "p02", "phrase": "Higher-order theories", "type": "theory", "id": "hot"},
+        {"block": "p02", "phrase": "recurrent processing", "type": "theory", "id": "rpt"},
+        {"block": "p04", "phrase": "adversarial collaboration", "type": "comparison", "id": "gnwt-iit"},
+        {"block": "p06", "phrase": "intelligence and consciousness are not the same thing", "type": "question", "id": "Q007"},
+        {"block": "p07", "phrase": "understanding", "type": "lexicon", "id": "understanding"},
+        {"block": "p09", "phrase": "Chinese Room", "type": "question", "id": "Q008"},
+        {"block": "p22", "phrase": "human cognition", "type": "lexicon", "id": "cognition"},
+        {"block": "p25", "phrase": "Human memory", "type": "lexicon", "id": "memory"},
+        {"block": "p38", "phrase": "Human identity", "type": "lexicon", "id": "identity"},
+        {"block": "p66", "phrase": "subjective awareness", "type": "question", "id": "Q009"},
+        {"block": "p67", "phrase": "AI consciousness", "type": "source", "index": 6}
+      ],
+      "sourceMatches": [
+        {"block": "p04", "source": 0}, {"block": "p09", "source": 1}, {"block": "p09", "source": 2}, {"block": "p24", "source": 3},
+        {"block": "p11", "source": 4}, {"block": "p13", "source": 5}, {"block": "p67", "source": 6}, {"block": "p44", "source": 7},
+        {"block": "p33", "source": 8}, {"block": "p54", "source": 9}, {"block": "p68", "source": 10}
+      ],
+      "chapters": {
+        "proposed": [
+          {"title": "What exactly is consciousness?", "from": "p00", "to": "p05"},
+          {"title": "Intelligence is not consciousness", "from": "p06", "to": "p07"},
+          {"title": "Turing and the Chinese Room", "from": "p08", "to": "p10"},
+          {"title": "Language models and the brain", "from": "p11", "to": "p13"},
+          {"title": "Human to machine to human", "from": "p14", "to": "p23"},
+          {"title": "The extended mind and cognitive offloading", "from": "p24", "to": "p35"},
+          {"title": "Identity and the recursive mirror", "from": "p36", "to": "p53"},
+          {"title": "Language is the bridge", "from": "p54", "to": "p66"},
+          {"title": "What the evidence supports", "from": "p67", "to": "p78"},
+          {"title": "Where does the self end?", "from": "p79", "to": "p88"},
+          {"title": "Something quieter", "from": "p89", "to": "p104"}
+        ]
+      }
+    }
+  ]
+}

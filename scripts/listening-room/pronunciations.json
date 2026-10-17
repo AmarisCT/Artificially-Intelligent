@@ -1,0 +1,28 @@
+{
+  "meta": {
+    "purpose": "Pronunciation brief for narration. 'spoken' is what is given to the speech engine (or to a human narrator as a guide). It changes only how a word is voiced; the transcript always shows the article's own spelling.",
+    "engine": "CMU Flite 2.2, voice slt (demonstration only)",
+    "verification": "Phonemes were read back from the engine (scripts/listening-room/phones.py). Nobody has listened to the recording yet, so every entry needs a human ear before any narration is approved.",
+    "reviewStatus": "Awaiting audio review"
+  },
+  "rules": [
+    {"id": "P01", "match": "\\bAI\\b", "spoken": "A I", "why": "The engine says a single word, 'eye', for 'AI'. Letters are spoken separately.", "engineCheck": "ey ay"},
+    {"id": "P02", "match": "\\bAI's\\b", "spoken": "A I's", "why": "Possessive of P01.", "engineCheck": "ey ay z"},
+    {"id": "P03", "match": "\\bChatGPT\\b", "spoken": "Chat G P T", "why": "Without help the engine spells the whole name letter by letter.", "engineCheck": "ch ae t jh iy p iy t iy"},
+    {"id": "P04", "match": "\\bDomesday\\b", "spoken": "Doomsday", "why": "The standard pronunciation of Domesday Book is 'doomsday'; the engine says 'dum-z-dee'.", "engineCheck": "d uw m z d ey"},
+    {"id": "P05", "match": "\\bAshurbanipal\\b", "spoken": "Ashur bahnee pahl", "why": "Common scholarly pronunciation, ash-er-BAH-ni-pahl. The engine's default stresses the wrong syllable.", "engineCheck": "ae sh er b aa n iy p aa l"},
+    {"id": "P06", "match": "\\b1086\\b", "spoken": "ten eighty-six", "why": "A year, not a quantity.", "engineCheck": "t eh n ey t iy s ih k s"},
+    {"id": "P07", "match": "\\bUK\\b", "spoken": "U K", "why": "Letters spoken separately.", "engineCheck": "y uw k ey"}
+  ],
+  "unchanged_but_listed": [
+    {"term": "Nineveh", "engine": "n ih n ax v ax", "note": "Acceptable: NIN-eh-veh."},
+    {"term": "Mesopotamian", "engine": "m eh s ax p ax t ey m iy ax n", "note": "Acceptable."},
+    {"term": "Gilgamesh", "engine": "g ih l g aa m eh sh", "note": "Acceptable: GIL-ga-mesh."},
+    {"term": "Searle", "engine": "s er l", "note": "Matches 'surl'."},
+    {"term": "Chalmers", "engine": "ch aa m er z", "note": "Acceptable."},
+    {"term": "GPT-3", "engine": "jh iy p iy t iy th r iy", "note": "G P T three."},
+    {"term": "WebText2", "engine": "w eh b t eh k s t t uw", "note": "Web text two."},
+    {"term": "3300 BCE", "engine": "three thousand three hundred B C E", "note": "Spoken in full; 'thirty-three hundred' is an alternative a human narrator might prefer."},
+    {"term": "sycophancy", "engine": "s ih k aa f ax n s iy", "note": "Acceptable."}
+  ]
+}

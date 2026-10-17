@@ -1,0 +1,45 @@
+{
+ "meta": {
+  "schemaVersion": 1,
+  "purpose": "Which published articles have audio, which are waiting for it, and which recordings need review because the article changed.",
+  "rules": [
+   "A new article is never playable until a real, reviewed audio file is published.",
+   "Nothing here creates or approves a recording.",
+   "A change to the narrated text sets Revision Required and leaves the recording untouched."
+  ]
+ },
+ "items": [
+  {
+   "articleId": "2063e8d4-c3e5-4458-a5dc-24c5844bc90b",
+   "slug": "we-are-all-archives-now",
+   "title": "We Are All Archives Now",
+   "url": "https://amarisct.github.io/Artificially-Intelligent/research/published/we-are-all-archives-now/",
+   "publishedAt": "2026-10-07",
+   "readingMinutes": 7,
+   "pageAvailable": true,
+   "bodyHash": "sha256:d0e3e4d21ece507a67c86fb6f5b97b3813818e52473ee2dfed7826af99d3a083",
+   "sourcesHash": "sha256:df76cbcb8ff82a9eca7be006f4dfafaa75cff03ed1ca71b9443090e838a09fb1",
+   "recordingId": "LR001",
+   "status": "awaiting-review",
+   "eligible": false,
+   "flags": [],
+   "notes": []
+  },
+  {
+   "articleId": "5affe752-0d79-40e0-b8b0-c2410aa11a1b",
+   "slug": "is-human-consciousness-connected-to-artificial-intelligence",
+   "title": "Is Human Consciousness Connected to Artificial Intelligence?",
+   "url": "https://amarisct.github.io/Artificially-Intelligent/research/published/is-human-consciousness-connected-to-artificial-intelligence/",
+   "publishedAt": "2026-09-19",
+   "readingMinutes": 13,
+   "pageAvailable": true,
+   "bodyHash": "sha256:9964e29b57a1f58af1454f0ee93a711eac9c7a68570cc9159a36dc8585429ad5",
+   "sourcesHash": "sha256:8bf4ac131d8c47340052923e496f15a46267ad30e4d4e472a2dbda2e6098ab48",
+   "recordingId": "LR002",
+   "status": "awaiting-review",
+   "eligible": false,
+   "flags": [],
+   "notes": []
+  }
+ ]
+}

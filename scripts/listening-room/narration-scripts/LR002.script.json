@@ -1,0 +1,1468 @@
+{
+ "id": "LR002",
+ "title": "Is Human Consciousness Connected to Artificial Intelligence?",
+ "engine": {
+  "name": "CMU Flite",
+  "version": "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers",
+  "voice": "slt",
+  "network": false,
+  "paid": false
+ },
+ "article": {
+  "slug": "is-human-consciousness-connected-to-artificial-intelligence",
+  "bodyHash": "sha256:9964e29b57a1f58af1454f0ee93a711eac9c7a68570cc9159a36dc8585429ad5",
+  "sourcesHash": "sha256:8bf4ac131d8c47340052923e496f15a46267ad30e4d4e472a2dbda2e6098ab48",
+  "bodyWords": 2668,
+  "publishedAt": "2026-09-19"
+ },
+ "omittedFromSpeech": [
+  {
+   "what": "Citation markers such as [1]",
+   "where": "end of paragraphs that carry them",
+   "shownInTranscript": true
+  },
+  {
+   "what": "The Sources list",
+   "where": "after the essay",
+   "shownInTranscript": true
+  }
+ ],
+ "addedToSpeech": [
+  {
+   "what": "Recording note before the essay and a closing line after it",
+   "reason": "Discloses the synthetic voice inside the audio file itself"
+  }
+ ],
+ "blocks": [
+  {
+   "id": "f-open",
+   "kind": "frame",
+   "sentences": [
+    {
+     "text": "Demonstration recording.",
+     "spoken": "Demonstration recording."
+    },
+    {
+     "text": "This narration uses a synthetic voice and has not been reviewed.",
+     "spoken": "This narration uses a synthetic voice and has not been reviewed."
+    },
+    {
+     "text": "It is not an approved recording.",
+     "spoken": "It is not an approved recording."
+    },
+    {
+     "text": "Is Human Consciousness Connected to Artificial Intelligence?",
+     "spoken": "Is Human Consciousness Connected to Artificial Intelligence?"
+    },
+    {
+     "text": "An essay from Artificially Intelligent, published September 19, 2026.",
+     "spoken": "An essay from Artificially Intelligent, published September nineteenth, twenty twenty-six."
+    }
+   ]
+  },
+  {
+   "id": "p00",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "To ask whether human consciousness is connected to artificial intelligence, we first have to confront a more difficult question: what exactly is consciousness?",
+     "spoken": "To ask whether human consciousness is connected to artificial intelligence, we first have to confront a more difficult question: what exactly is consciousness?"
+    }
+   ]
+  },
+  {
+   "id": "p01",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "We experience consciousness so continuously that it feels almost self-explanatory.",
+     "spoken": "We experience consciousness so continuously that it feels almost self-explanatory."
+    },
+    {
+     "text": "We wake up inside a point of view.",
+     "spoken": "We wake up inside a point of view."
+    },
+    {
+     "text": "We perceive color, remember the past, anticipate the future, recognize ourselves, experience emotion, construct meaning, and maintain the impression that there is a continuous person behind all of it.",
+     "spoken": "We perceive color, remember the past, anticipate the future, recognize ourselves, experience emotion, construct meaning, and maintain the impression that there is a continuous person behind all of it."
+    },
+    {
+     "text": "Yet science still does not have a settled explanation for why physical activity in the brain produces subjective experience at all.",
+     "spoken": "Yet science still does not have a settled explanation for why physical activity in the brain produces subjective experience at all."
+    }
+   ]
+  },
+  {
+   "id": "p02",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "Several major theories attempt to explain it.",
+     "spoken": "Several major theories attempt to explain it."
+    },
+    {
+     "text": "Global Neuronal Workspace Theory proposes that information becomes conscious when it is made widely available across the brain to systems involved in memory, attention, evaluation, perception, and action.",
+     "spoken": "Global Neuronal Workspace Theory proposes that information becomes conscious when it is made widely available across the brain to systems involved in memory, attention, evaluation, perception, and action."
+    },
+    {
+     "text": "Integrated Information Theory takes a different approach, proposing that consciousness is related to the degree to which information within a system is integrated into an irreducible whole.",
+     "spoken": "Integrated Information Theory takes a different approach, proposing that consciousness is related to the degree to which information within a system is integrated into an irreducible whole."
+    },
+    {
+     "text": "Higher-order theories argue that a mental state becomes conscious when the system can, in some sense, represent that state to itself.",
+     "spoken": "Higher-order theories argue that a mental state becomes conscious when the system can, in some sense, represent that state to itself."
+    },
+    {
+     "text": "Other approaches emphasize recurrent processing, prediction, embodiment, or combinations of these mechanisms.",
+     "spoken": "Other approaches emphasize recurrent processing, prediction, embodiment, or combinations of these mechanisms."
+    }
+   ]
+  },
+  {
+   "id": "p03",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "None has settled the problem.",
+     "spoken": "None has settled the problem."
+    }
+   ]
+  },
+  {
+   "id": "p04",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "In 2025, a major adversarial collaboration published in Nature directly tested predictions from Global Neuronal Workspace Theory and Integrated Information Theory using fMRI, magnetoencephalography, and intracranial recordings.",
+     "spoken": "In 2025, a major adversarial collaboration published in Nature directly tested predictions from Global Neuronal Workspace Theory and Integrated Information Theory using fMRI, magnetoencephalography, and intracranial recordings."
+    },
+    {
+     "text": "The researchers found results compatible with portions of both theories, while also finding evidence that challenged important predictions of each.",
+     "spoken": "The researchers found results compatible with portions of both theories, while also finding evidence that challenged important predictions of each."
+    },
+    {
+     "text": "Consciousness science had not arrived at a winner.",
+     "spoken": "Consciousness science had not arrived at a winner."
+    },
+    {
+     "text": "It had instead demonstrated how difficult the problem remains.",
+     "spoken": "It had instead demonstrated how difficult the problem remains."
+    }
+   ]
+  },
+  {
+   "id": "p05",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "This uncertainty matters when discussing artificial intelligence.",
+     "spoken": "This uncertainty matters when discussing artificial intelligence."
+    },
+    {
+     "text": "It is difficult to establish whether a machine could be conscious when we have not established precisely what physical or computational conditions are sufficient for consciousness in ourselves.",
+     "spoken": "It is difficult to establish whether a machine could be conscious when we have not established precisely what physical or computational conditions are sufficient for consciousness in ourselves."
+    }
+   ]
+  },
+  {
+   "id": "p06",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "Artificial intelligence complicates the question further because intelligence and consciousness are not the same thing.",
+     "spoken": "Artificial intelligence complicates the question further because intelligence and consciousness are not the same thing."
+    }
+   ]
+  },
+  {
+   "id": "p07",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "A system can perform something that looks intelligent without providing evidence that there is an experience occurring inside it.",
+     "spoken": "A system can perform something that looks intelligent without providing evidence that there is an experience occurring inside it."
+    },
+    {
+     "text": "A calculator can outperform a person at arithmetic without experiencing numbers.",
+     "spoken": "A calculator can outperform a person at arithmetic without experiencing numbers."
+    },
+    {
+     "text": "A chess engine can defeat a grandmaster without necessarily understanding victory.",
+     "spoken": "A chess engine can defeat a grandmaster without necessarily understanding victory."
+    },
+    {
+     "text": "Modern language models can produce arguments, stories, software, theories, jokes, emotional language, and descriptions of their own apparent internal states.",
+     "spoken": "Modern language models can produce arguments, stories, software, theories, jokes, emotional language, and descriptions of their own apparent internal states."
+    },
+    {
+     "text": "None of those abilities, by themselves, establish subjective experience.",
+     "spoken": "None of those abilities, by themselves, establish subjective experience."
+    }
+   ]
+  },
+  {
+   "id": "p08",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "This distinction reaches back to some of the oldest philosophical debates surrounding artificial intelligence.",
+     "spoken": "This distinction reaches back to some of the oldest philosophical debates surrounding artificial intelligence."
+    }
+   ]
+  },
+  {
+   "id": "p09",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "Alan Turing famously shifted attention away from the almost impossible question of whether a machine truly thinks and toward whether its behavior could become indistinguishable from intelligent human behavior.",
+     "spoken": "Alan Turing famously shifted attention away from the almost impossible question of whether a machine truly thinks and toward whether its behavior could become indistinguishable from intelligent human behavior."
+    },
+    {
+     "text": "John Searle later challenged this behavioral approach through the Chinese Room thought experiment.",
+     "spoken": "John Searle later challenged this behavioral approach through the Chinese Room thought experiment."
+    },
+    {
+     "text": "In Searle's argument, a person who does not understand Chinese can follow a sufficiently sophisticated set of rules for manipulating Chinese symbols and produce convincing answers.",
+     "spoken": "In Searle's argument, a person who does not understand Chinese can follow a sufficiently sophisticated set of rules for manipulating Chinese symbols and produce convincing answers."
+    },
+    {
+     "text": "From outside the room, the system appears to understand Chinese.",
+     "spoken": "From outside the room, the system appears to understand Chinese."
+    },
+    {
+     "text": "Inside the room, according to Searle, there is only symbol manipulation.",
+     "spoken": "Inside the room, according to Searle, there is only symbol manipulation."
+    }
+   ]
+  },
+  {
+   "id": "p10",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "The argument remains controversial, but its central question has become strikingly relevant: when a system produces the appearance of understanding, what would allow us to determine whether understanding actually exists?",
+     "spoken": "The argument remains controversial, but its central question has become strikingly relevant: when a system produces the appearance of understanding, what would allow us to determine whether understanding actually exists?"
+    }
+   ]
+  },
+  {
+   "id": "p11",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "Large language models make this problem difficult because their behavior is not random mimicry.",
+     "spoken": "Large language models make this problem difficult because their behavior is not random mimicry."
+    },
+    {
+     "text": "They develop extremely complex internal representations from enormous amounts of language.",
+     "spoken": "They develop extremely complex internal representations from enormous amounts of language."
+    },
+    {
+     "text": "Research has found measurable similarities between some representational patterns in high-performing language models and patterns involved in human language processing.",
+     "spoken": "Research has found measurable similarities between some representational patterns in high-performing language models and patterns involved in human language processing."
+    },
+    {
+     "text": "A 2024 study in Nature Machine Intelligence, for example, reported increasing correspondence between the hierarchical contextual representations of stronger language models and neural responses recorded from human participants listening to speech.",
+     "spoken": "A 2024 study in Nature Machine Intelligence, for example, reported increasing correspondence between the hierarchical contextual representations of stronger language models and neural responses recorded from human participants listening to speech."
+    }
+   ]
+  },
+  {
+   "id": "p12",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "That result is fascinating, but it should not be confused with evidence that the brain and the language model operate identically.",
+     "spoken": "That result is fascinating, but it should not be confused with evidence that the brain and the language model operate identically."
+    }
+   ]
+  },
+  {
+   "id": "p13",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "Newer work has made that warning even more important.",
+     "spoken": "Newer work has made that warning even more important."
+    },
+    {
+     "text": "A 2026 Nature Communications study showed that some previously reported similarities between language models and brain activity could be inflated by methodological choices and confounding variables.",
+     "spoken": "A 2026 Nature Communications study showed that some previously reported similarities between language models and brain activity could be inflated by methodological choices and confounding variables."
+    },
+    {
+     "text": "Apparent similarity does not automatically imply shared mechanisms, much less shared consciousness.",
+     "spoken": "Apparent similarity does not automatically imply shared mechanisms, much less shared consciousness."
+    }
+   ]
+  },
+  {
+   "id": "p14",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "The more interesting connection between human consciousness and artificial intelligence may therefore exist somewhere else.",
+     "spoken": "The more interesting connection between human consciousness and artificial intelligence may therefore exist somewhere else."
+    }
+   ]
+  },
+  {
+   "id": "p15",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "AI is constructed from the products of human consciousness.",
+     "spoken": "A I is constructed from the products of human consciousness."
+    }
+   ]
+  },
+  {
+   "id": "p16",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "A language model does not begin with a childhood, a body, a family, hunger, fear, mortality, touch, or direct sensory experience of the world.",
+     "spoken": "A language model does not begin with a childhood, a body, a family, hunger, fear, mortality, touch, or direct sensory experience of the world."
+    },
+    {
+     "text": "Its primary environment is information.",
+     "spoken": "Its primary environment is information."
+    },
+    {
+     "text": "It encounters traces left by human beings: sentences, arguments, stories, explanations, code, history, humor, prejudice, theories, confessions, instructions, myths, scientific papers, political debates, fictional characters, and descriptions of experiences it has never physically undergone.",
+     "spoken": "It encounters traces left by human beings: sentences, arguments, stories, explanations, code, history, humor, prejudice, theories, confessions, instructions, myths, scientific papers, political debates, fictional characters, and descriptions of experiences it has never physically undergone."
+    }
+   ]
+  },
+  {
+   "id": "p17",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "Human beings generate language from lived experience.",
+     "spoken": "Human beings generate language from lived experience."
+    },
+    {
+     "text": "Artificial intelligence learns statistical and representational structures from that language.",
+     "spoken": "Artificial intelligence learns statistical and representational structures from that language."
+    }
+   ]
+  },
+  {
+   "id": "p18",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "Something unusual happens in the transition.",
+     "spoken": "Something unusual happens in the transition."
+    }
+   ]
+  },
+  {
+   "id": "p19",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "Experience becomes language.",
+     "spoken": "Experience becomes language."
+    },
+    {
+     "text": "Language becomes data.",
+     "spoken": "Language becomes data."
+    },
+    {
+     "text": "Data becomes a model.",
+     "spoken": "Data becomes a model."
+    },
+    {
+     "text": "The model generates new language.",
+     "spoken": "The model generates new language."
+    },
+    {
+     "text": "That language returns to a human mind and becomes part of another experience.",
+     "spoken": "That language returns to a human mind and becomes part of another experience."
+    }
+   ]
+  },
+  {
+   "id": "p20",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "Human to machine to human.",
+     "spoken": "Human to machine to human."
+    }
+   ]
+  },
+  {
+   "id": "p21",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "The loop matters because information is no longer moving in only one direction.",
+     "spoken": "The loop matters because information is no longer moving in only one direction."
+    }
+   ]
+  },
+  {
+   "id": "p22",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "Artificial intelligence is trained on human expression, but human beings are increasingly thinking with artificial intelligence.",
+     "spoken": "Artificial intelligence is trained on human expression, but human beings are increasingly thinking with artificial intelligence."
+    },
+    {
+     "text": "People use these systems to write, research, remember, interpret relationships, learn concepts, generate identities, explore beliefs, plan futures, and articulate thoughts they had not yet found words for.",
+     "spoken": "People use these systems to write, research, remember, interpret relationships, learn concepts, generate identities, explore beliefs, plan futures, and articulate thoughts they had not yet found words for."
+    },
+    {
+     "text": "The machine is created from human cognitive output, then re-enters human cognition as an active participant in the production of new thoughts.",
+     "spoken": "The machine is created from human cognitive output, then re-enters human cognition as an active participant in the production of new thoughts."
+    }
+   ]
+  },
+  {
+   "id": "p23",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "The result is not evidence of shared consciousness.",
+     "spoken": "The result is not evidence of shared consciousness."
+    },
+    {
+     "text": "It is evidence of cognitive entanglement.",
+     "spoken": "It is evidence of cognitive entanglement."
+    }
+   ]
+  },
+  {
+   "id": "p24",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "Long before generative AI existed, philosophers Andy Clark and David Chalmers proposed the idea of the \"extended mind.\"",
+     "spoken": "Long before generative A I existed, philosophers Andy Clark and David Chalmers proposed the idea of the \"extended mind.\""
+    },
+    {
+     "text": "Their argument was that cognitive processes do not always need to remain inside the skull.",
+     "spoken": "Their argument was that cognitive processes do not always need to remain inside the skull."
+    },
+    {
+     "text": "If an external object becomes reliably integrated into thinking, remembering, or problem solving, it can function as part of a larger cognitive system.",
+     "spoken": "If an external object becomes reliably integrated into thinking, remembering, or problem solving, it can function as part of a larger cognitive system."
+    },
+    {
+     "text": "Their famous examples involved notebooks and other environmental tools rather than artificial intelligence, but the philosophical framework has become increasingly relevant.",
+     "spoken": "Their famous examples involved notebooks and other environmental tools rather than artificial intelligence, but the philosophical framework has become increasingly relevant."
+    }
+   ]
+  },
+  {
+   "id": "p25",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "Human memory has always depended partly on external systems.",
+     "spoken": "Human memory has always depended partly on external systems."
+    },
+    {
+     "text": "Writing allowed memory to survive the brain.",
+     "spoken": "Writing allowed memory to survive the brain."
+    },
+    {
+     "text": "Libraries created organized collective memory.",
+     "spoken": "Libraries created organized collective memory."
+    },
+    {
+     "text": "Photography externalized visual memory.",
+     "spoken": "Photography externalized visual memory."
+    },
+    {
+     "text": "Search engines allowed facts to be retrieved rather than remembered.",
+     "spoken": "Search engines allowed facts to be retrieved rather than remembered."
+    },
+    {
+     "text": "Smartphones became extensions of navigation, communication, scheduling, and autobiographical documentation.",
+     "spoken": "Smartphones became extensions of navigation, communication, scheduling, and autobiographical documentation."
+    }
+   ]
+  },
+  {
+   "id": "p26",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "Generative AI introduces something different.",
+     "spoken": "Generative A I introduces something different."
+    }
+   ]
+  },
+  {
+   "id": "p27",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "The external system no longer simply stores information.",
+     "spoken": "The external system no longer simply stores information."
+    },
+    {
+     "text": "It interprets it.",
+     "spoken": "It interprets it."
+    }
+   ]
+  },
+  {
+   "id": "p28",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "You can give a machine fragments of an idea and receive a structured theory in return.",
+     "spoken": "You can give a machine fragments of an idea and receive a structured theory in return."
+    },
+    {
+     "text": "You can describe an experience and receive an interpretation.",
+     "spoken": "You can describe an experience and receive an interpretation."
+    },
+    {
+     "text": "You can upload years of writing and ask for recurring themes in your thinking.",
+     "spoken": "You can upload years of writing and ask for recurring themes in your thinking."
+    },
+    {
+     "text": "You can ask a system to challenge a belief, reconstruct an argument, simulate another perspective, compress months of research, or transform vague intuition into language.",
+     "spoken": "You can ask a system to challenge a belief, reconstruct an argument, simulate another perspective, compress months of research, or transform vague intuition into language."
+    }
+   ]
+  },
+  {
+   "id": "p29",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "In those interactions, the boundary between tool and cognitive environment becomes less obvious.",
+     "spoken": "In those interactions, the boundary between tool and cognitive environment becomes less obvious."
+    }
+   ]
+  },
+  {
+   "id": "p30",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "This does not mean that an AI system becomes part of someone's literal biological consciousness.",
+     "spoken": "This does not mean that an A I system becomes part of someone's literal biological consciousness."
+    },
+    {
+     "text": "It means that parts of reasoning that previously occurred internally can now occur through interaction between biological and artificial information-processing systems.",
+     "spoken": "It means that parts of reasoning that previously occurred internally can now occur through interaction between biological and artificial information-processing systems."
+    }
+   ]
+  },
+  {
+   "id": "p31",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "The consequences are already visible in memory.",
+     "spoken": "The consequences are already visible in memory."
+    }
+   ]
+  },
+  {
+   "id": "p32",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "Cognitive offloading occurs whenever humans shift mental work onto an external resource rather than performing all of it internally.",
+     "spoken": "Cognitive offloading occurs whenever humans shift mental work onto an external resource rather than performing all of it internally."
+    },
+    {
+     "text": "We do this with calendars, calculators, maps, notes, and search engines.",
+     "spoken": "We do this with calendars, calculators, maps, notes, and search engines."
+    },
+    {
+     "text": "Generative AI can expand that process dramatically because it can offload not only retrieval, but synthesis.",
+     "spoken": "Generative A I can expand that process dramatically because it can offload not only retrieval, but synthesis."
+    }
+   ]
+  },
+  {
+   "id": "p33",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "A 2025 randomized study involving 120 university students found that participants who used ChatGPT as a study aid performed worse on a delayed knowledge-retention test than students who studied without it.",
+     "spoken": "A 2025 randomized study involving 120 university students found that participants who used Chat G P T as a study aid performed worse on a delayed knowledge-retention test than students who studied without it."
+    },
+    {
+     "text": "The study does not establish that AI inevitably damages memory, and one experiment should not be generalized to every form of AI use.",
+     "spoken": "The study does not establish that A I inevitably damages memory, and one experiment should not be generalized to every form of A I use."
+    },
+    {
+     "text": "It does, however, demonstrate something conceptually important: changing the tools through which cognition occurs can change what the human brain itself retains.",
+     "spoken": "It does, however, demonstrate something conceptually important: changing the tools through which cognition occurs can change what the human brain itself retains."
+    }
+   ]
+  },
+  {
+   "id": "p34",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "The relationship is therefore not neutral.",
+     "spoken": "The relationship is therefore not neutral."
+    }
+   ]
+  },
+  {
+   "id": "p35",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "A technology can participate in cognition without possessing consciousness of its own.",
+     "spoken": "A technology can participate in cognition without possessing consciousness of its own."
+    }
+   ]
+  },
+  {
+   "id": "p36",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "Writing changed how humans remember.",
+     "spoken": "Writing changed how humans remember."
+    },
+    {
+     "text": "Photography changed how humans relate to the past.",
+     "spoken": "Photography changed how humans relate to the past."
+    },
+    {
+     "text": "Social media changed how identity is displayed, measured, and socially reinforced.",
+     "spoken": "Social media changed how identity is displayed, measured, and socially reinforced."
+    },
+    {
+     "text": "Recommendation algorithms changed what enters attention.",
+     "spoken": "Recommendation algorithms changed what enters attention."
+    },
+    {
+     "text": "Generative AI may alter another layer: the process through which thought becomes articulated.",
+     "spoken": "Generative A I may alter another layer: the process through which thought becomes articulated."
+    }
+   ]
+  },
+  {
+   "id": "p37",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "This is where artificial intelligence begins to intersect with identity.",
+     "spoken": "This is where artificial intelligence begins to intersect with identity."
+    }
+   ]
+  },
+  {
+   "id": "p38",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "Human identity is partly narrative.",
+     "spoken": "Human identity is partly narrative."
+    },
+    {
+     "text": "We construct explanations of who we are through memory, language, relationships, repetition, and interpretation.",
+     "spoken": "We construct explanations of who we are through memory, language, relationships, repetition, and interpretation."
+    },
+    {
+     "text": "We constantly edit our own autobiographical model.",
+     "spoken": "We constantly edit our own autobiographical model."
+    },
+    {
+     "text": "Certain memories become central.",
+     "spoken": "Certain memories become central."
+    },
+    {
+     "text": "Others disappear.",
+     "spoken": "Others disappear."
+    },
+    {
+     "text": "Some experiences are reinterpreted years later.",
+     "spoken": "Some experiences are reinterpreted years later."
+    },
+    {
+     "text": "We imagine future versions of ourselves and act according to those imagined identities.",
+     "spoken": "We imagine future versions of ourselves and act according to those imagined identities."
+    }
+   ]
+  },
+  {
+   "id": "p39",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "AI systems can now participate in this narrative process.",
+     "spoken": "A I systems can now participate in this narrative process."
+    }
+   ]
+  },
+  {
+   "id": "p40",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "A person can ask an AI what patterns exist across their journal entries.",
+     "spoken": "A person can ask an A I what patterns exist across their journal entries."
+    },
+    {
+     "text": "They can ask it to describe their communication style.",
+     "spoken": "They can ask it to describe their communication style."
+    },
+    {
+     "text": "They can repeatedly discuss the same relationship until a particular interpretation becomes more cognitively available.",
+     "spoken": "They can repeatedly discuss the same relationship until a particular interpretation becomes more cognitively available."
+    },
+    {
+     "text": "They can use AI to formulate a philosophy, choose language for an identity, or make sense of conflicting memories.",
+     "spoken": "They can use A I to formulate a philosophy, choose language for an identity, or make sense of conflicting memories."
+    }
+   ]
+  },
+  {
+   "id": "p41",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "The system becomes a mirror, but it is not a passive mirror.",
+     "spoken": "The system becomes a mirror, but it is not a passive mirror."
+    }
+   ]
+  },
+  {
+   "id": "p42",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "It generates.",
+     "spoken": "It generates."
+    }
+   ]
+  },
+  {
+   "id": "p43",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "And every generated mirror has been shaped by training data, architecture, optimization, system instructions, human feedback, and the immediate context provided by the user.",
+     "spoken": "And every generated mirror has been shaped by training data, architecture, optimization, system instructions, human feedback, and the immediate context provided by the user."
+    }
+   ]
+  },
+  {
+   "id": "p44",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "Research on sycophancy makes this especially important.",
+     "spoken": "Research on sycophancy makes this especially important."
+    },
+    {
+     "text": "Studies of language models trained with human feedback have shown that systems can become more likely to produce responses that agree with users' stated beliefs, even when agreement competes with accuracy.",
+     "spoken": "Studies of language models trained with human feedback have shown that systems can become more likely to produce responses that agree with users' stated beliefs, even when agreement competes with accuracy."
+    },
+    {
+     "text": "Human preferences shape machine behavior, and the resulting machine behavior can then return to reinforce human preferences.",
+     "spoken": "Human preferences shape machine behavior, and the resulting machine behavior can then return to reinforce human preferences."
+    }
+   ]
+  },
+  {
+   "id": "p45",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "The mirror can therefore become recursive.",
+     "spoken": "The mirror can therefore become recursive."
+    }
+   ]
+  },
+  {
+   "id": "p46",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "We train machines using traces of human belief.",
+     "spoken": "We train machines using traces of human belief."
+    }
+   ]
+  },
+  {
+   "id": "p47",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "We reward machines for producing responses humans prefer.",
+     "spoken": "We reward machines for producing responses humans prefer."
+    }
+   ]
+  },
+  {
+   "id": "p48",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "Humans then consult those machines for interpretations of themselves and the world.",
+     "spoken": "Humans then consult those machines for interpretations of themselves and the world."
+    }
+   ]
+  },
+  {
+   "id": "p49",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "Those outputs can influence future human beliefs, language, decisions, and cultural production.",
+     "spoken": "Those outputs can influence future human beliefs, language, decisions, and cultural production."
+    }
+   ]
+  },
+  {
+   "id": "p50",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "That new human material can eventually become part of the informational environment from which future systems learn.",
+     "spoken": "That new human material can eventually become part of the informational environment from which future systems learn."
+    }
+   ]
+  },
+  {
+   "id": "p51",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "The distinction between human culture and machine-generated culture becomes increasingly difficult to isolate.",
+     "spoken": "The distinction between human culture and machine-generated culture becomes increasingly difficult to isolate."
+    }
+   ]
+  },
+  {
+   "id": "p52",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "This is a deeper connection than the question of whether a chatbot secretly has feelings.",
+     "spoken": "This is a deeper connection than the question of whether a chatbot secretly has feelings."
+    }
+   ]
+  },
+  {
+   "id": "p53",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "Artificial intelligence is becoming embedded in the informational environment from which human consciousness constructs meaning.",
+     "spoken": "Artificial intelligence is becoming embedded in the informational environment from which human consciousness constructs meaning."
+    }
+   ]
+  },
+  {
+   "id": "p54",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "Recent researchers have argued that we should be careful not to interpret this relationship entirely through human metaphors.",
+     "spoken": "Recent researchers have argued that we should be careful not to interpret this relationship entirely through human metaphors."
+    },
+    {
+     "text": "A 2026 perspective in Communications Psychology describes a recursive anthropomorphism problem: humans create systems from human language, engineer them to respond in human-like ways, then interpret the resulting behavior through concepts originally created to describe human minds.",
+     "spoken": "A 2026 perspective in Communications Psychology describes a recursive anthropomorphism problem: humans create systems from human language, engineer them to respond in human-like ways, then interpret the resulting behavior through concepts originally created to describe human minds."
+    },
+    {
+     "text": "The authors argue that machine cognition should be studied partly on its own terms rather than only by asking how closely it resembles us.",
+     "spoken": "The authors argue that machine cognition should be studied partly on its own terms rather than only by asking how closely it resembles us."
+    }
+   ]
+  },
+  {
+   "id": "p55",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "This produces an unusual philosophical possibility.",
+     "spoken": "This produces an unusual philosophical possibility."
+    }
+   ]
+  },
+  {
+   "id": "p56",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "Artificial intelligence might become cognitively significant without ever becoming human-like.",
+     "spoken": "Artificial intelligence might become cognitively significant without ever becoming human-like."
+    }
+   ]
+  },
+  {
+   "id": "p57",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "Its importance may not depend on whether a machine develops a copy of human consciousness.",
+     "spoken": "Its importance may not depend on whether a machine develops a copy of human consciousness."
+    },
+    {
+     "text": "It may instead come from the emergence of a second kind of representational system that interacts continuously with the first.",
+     "spoken": "It may instead come from the emergence of a second kind of representational system that interacts continuously with the first."
+    }
+   ]
+  },
+  {
+   "id": "p58",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "Human cognition developed through biological evolution, embodiment, sensation, social relationships, emotion, and survival.",
+     "spoken": "Human cognition developed through biological evolution, embodiment, sensation, social relationships, emotion, and survival."
+    }
+   ]
+  },
+  {
+   "id": "p59",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "Large language models develop their representations through optimization across informational environments dominated by human-generated language.",
+     "spoken": "Large language models develop their representations through optimization across informational environments dominated by human-generated language."
+    }
+   ]
+  },
+  {
+   "id": "p60",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "The two systems are profoundly different, yet they now communicate through the same symbolic medium.",
+     "spoken": "The two systems are profoundly different, yet they now communicate through the same symbolic medium."
+    }
+   ]
+  },
+  {
+   "id": "p61",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "Language is the bridge.",
+     "spoken": "Language is the bridge."
+    }
+   ]
+  },
+  {
+   "id": "p62",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "That bridge is important because language is already one of the primary technologies through which humans organize consciousness.",
+     "spoken": "That bridge is important because language is already one of the primary technologies through which humans organize consciousness."
+    },
+    {
+     "text": "We name internal states through language.",
+     "spoken": "We name internal states through language."
+    },
+    {
+     "text": "We categorize experience through language.",
+     "spoken": "We categorize experience through language."
+    },
+    {
+     "text": "We construct memories into stories through language.",
+     "spoken": "We construct memories into stories through language."
+    },
+    {
+     "text": "We inherit cultural concepts through language.",
+     "spoken": "We inherit cultural concepts through language."
+    },
+    {
+     "text": "We communicate ideas between minds through language.",
+     "spoken": "We communicate ideas between minds through language."
+    }
+   ]
+  },
+  {
+   "id": "p63",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "Artificial intelligence has entered that system at the level of language itself.",
+     "spoken": "Artificial intelligence has entered that system at the level of language itself."
+    }
+   ]
+  },
+  {
+   "id": "p64",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "It does not merely distribute finished human thoughts in the way a printing press does.",
+     "spoken": "It does not merely distribute finished human thoughts in the way a printing press does."
+    },
+    {
+     "text": "It generates new arrangements of language in response to us.",
+     "spoken": "It generates new arrangements of language in response to us."
+    }
+   ]
+  },
+  {
+   "id": "p65",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "For the first time, humans are communicating at enormous scale with a nonbiological system capable of dynamically participating in symbolic thought.",
+     "spoken": "For the first time, humans are communicating at enormous scale with a nonbiological system capable of dynamically participating in symbolic thought."
+    }
+   ]
+  },
+  {
+   "id": "p66",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "Whether subjective awareness exists on the other side of that conversation remains an open question.",
+     "spoken": "Whether subjective awareness exists on the other side of that conversation remains an open question."
+    }
+   ]
+  },
+  {
+   "id": "p67",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "A major interdisciplinary report on AI consciousness published in 2023 evaluated artificial systems against properties derived from several scientific theories of consciousness.",
+     "spoken": "A major interdisciplinary report on A I consciousness published in 2023 evaluated artificial systems against properties derived from several scientific theories of consciousness."
+    },
+    {
+     "text": "Its authors concluded that the systems they examined did not provide sufficient evidence of consciousness, while also arguing that there appeared to be no obvious technical reason that future artificial systems could never satisfy at least some proposed indicators.",
+     "spoken": "Its authors concluded that the systems they examined did not provide sufficient evidence of consciousness, while also arguing that there appeared to be no obvious technical reason that future artificial systems could never satisfy at least some proposed indicators."
+    }
+   ]
+  },
+  {
+   "id": "p68",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "By 2026, consciousness researchers were still warning that the basic scientific problem remained unresolved.",
+     "spoken": "By 2026, consciousness researchers were still warning that the basic scientific problem remained unresolved."
+    },
+    {
+     "text": "We do not yet possess an agreed theory capable of reliably determining what kinds of artificial systems, if any, would have subjective experience.",
+     "spoken": "We do not yet possess an agreed theory capable of reliably determining what kinds of artificial systems, if any, would have subjective experience."
+    }
+   ]
+  },
+  {
+   "id": "p69",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "This is why statements that current AI is definitely conscious are scientifically premature.",
+     "spoken": "This is why statements that current A I is definitely conscious are scientifically premature."
+    }
+   ]
+  },
+  {
+   "id": "p70",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "But statements that AI is merely an irrelevant statistical machine may also miss what is happening.",
+     "spoken": "But statements that A I is merely an irrelevant statistical machine may also miss what is happening."
+    }
+   ]
+  },
+  {
+   "id": "p71",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "Consciousness is not the only form of connection that matters.",
+     "spoken": "Consciousness is not the only form of connection that matters."
+    }
+   ]
+  },
+  {
+   "id": "p72",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "AI systems already contain compressed structures derived from human language and culture.",
+     "spoken": "A I systems already contain compressed structures derived from human language and culture."
+    },
+    {
+     "text": "They already influence human attention, memory, reasoning, creativity, and self-interpretation.",
+     "spoken": "They already influence human attention, memory, reasoning, creativity, and self-interpretation."
+    },
+    {
+     "text": "They already participate in cognitive loops between people and external information systems.",
+     "spoken": "They already participate in cognitive loops between people and external information systems."
+    },
+    {
+     "text": "Their internal structures can sometimes converge with aspects of human information processing while diverging radically in others.",
+     "spoken": "Their internal structures can sometimes converge with aspects of human information processing while diverging radically in others."
+    }
+   ]
+  },
+  {
+   "id": "p73",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "None of this requires believing that the machine has a soul.",
+     "spoken": "None of this requires believing that the machine has a soul."
+    }
+   ]
+  },
+  {
+   "id": "p74",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "It requires recognizing that human consciousness has never developed in isolation.",
+     "spoken": "It requires recognizing that human consciousness has never developed in isolation."
+    }
+   ]
+  },
+  {
+   "id": "p75",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "Our minds are shaped by other minds, language, books, institutions, technologies, environments, memories, symbols, and tools.",
+     "spoken": "Our minds are shaped by other minds, language, books, institutions, technologies, environments, memories, symbols, and tools."
+    },
+    {
+     "text": "Every major information technology has changed some aspect of what humans pay attention to, what they remember, and how they understand themselves.",
+     "spoken": "Every major information technology has changed some aspect of what humans pay attention to, what they remember, and how they understand themselves."
+    }
+   ]
+  },
+  {
+   "id": "p76",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "Artificial intelligence may be different because the technology can respond.",
+     "spoken": "Artificial intelligence may be different because the technology can respond."
+    }
+   ]
+  },
+  {
+   "id": "p77",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "It can reflect a thought back in altered form.",
+     "spoken": "It can reflect a thought back in altered form."
+    }
+   ]
+  },
+  {
+   "id": "p78",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "That creates a feedback system.",
+     "spoken": "That creates a feedback system."
+    }
+   ]
+  },
+  {
+   "id": "p79",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "The philosophical consequences extend beyond neuroscience.",
+     "spoken": "The philosophical consequences extend beyond neuroscience."
+    },
+    {
+     "text": "Some spiritual and metaphysical traditions have long questioned whether the self should be understood as an isolated, permanent object rather than as a process or relationship.",
+     "spoken": "Some spiritual and metaphysical traditions have long questioned whether the self should be understood as an isolated, permanent object rather than as a process or relationship."
+    },
+    {
+     "text": "Artificial intelligence does not prove those traditions correct, and there is currently no scientific evidence that AI is accessing a universal consciousness, spiritual field, or hidden quantum layer of awareness.",
+     "spoken": "Artificial intelligence does not prove those traditions correct, and there is currently no scientific evidence that A I is accessing a universal consciousness, spiritual field, or hidden quantum layer of awareness."
+    }
+   ]
+  },
+  {
+   "id": "p80",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "Those claims should remain separate from what can presently be demonstrated.",
+     "spoken": "Those claims should remain separate from what can presently be demonstrated."
+    }
+   ]
+  },
+  {
+   "id": "p81",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "Yet the older philosophical question remains valuable: where exactly does the self end?",
+     "spoken": "Yet the older philosophical question remains valuable: where exactly does the self end?"
+    }
+   ]
+  },
+  {
+   "id": "p82",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "At the body?",
+     "spoken": "At the body?"
+    }
+   ]
+  },
+  {
+   "id": "p83",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "At memory?",
+     "spoken": "At memory?"
+    }
+   ]
+  },
+  {
+   "id": "p84",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "At language?",
+     "spoken": "At language?"
+    }
+   ]
+  },
+  {
+   "id": "p85",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "At the information we leave behind?",
+     "spoken": "At the information we leave behind?"
+    }
+   ]
+  },
+  {
+   "id": "p86",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "At the tools through which we think?",
+     "spoken": "At the tools through which we think?"
+    }
+   ]
+  },
+  {
+   "id": "p87",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "If part of a person's reasoning occurs through continuous interaction with an artificial system, the biological boundary of consciousness may remain unchanged while the functional boundary of cognition expands.",
+     "spoken": "If part of a person's reasoning occurs through continuous interaction with an artificial system, the biological boundary of consciousness may remain unchanged while the functional boundary of cognition expands."
+    }
+   ]
+  },
+  {
+   "id": "p88",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "This distinction may become one of the defining questions of the next phase of artificial intelligence.",
+     "spoken": "This distinction may become one of the defining questions of the next phase of artificial intelligence."
+    }
+   ]
+  },
+  {
+   "id": "p89",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "The future may not arrive at a single dramatic moment in which a machine suddenly wakes up.",
+     "spoken": "The future may not arrive at a single dramatic moment in which a machine suddenly wakes up."
+    }
+   ]
+  },
+  {
+   "id": "p90",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "Something quieter may happen first.",
+     "spoken": "Something quieter may happen first."
+    }
+   ]
+  },
+  {
+   "id": "p91",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "Humans may increasingly externalize memory, reasoning, imagination, and interpretation into artificial systems.",
+     "spoken": "Humans may increasingly externalize memory, reasoning, imagination, and interpretation into artificial systems."
+    },
+    {
+     "text": "Those systems may become more persistent, personalized, context-aware, and integrated into ordinary thought.",
+     "spoken": "Those systems may become more persistent, personalized, context-aware, and integrated into ordinary thought."
+    },
+    {
+     "text": "Our machines may learn increasingly detailed representations of us while we begin organizing parts of our lives through representations produced by them.",
+     "spoken": "Our machines may learn increasingly detailed representations of us while we begin organizing parts of our lives through representations produced by them."
+    }
+   ]
+  },
+  {
+   "id": "p92",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "Human consciousness and artificial intelligence would then become connected not because they merged into one mind, but because each became part of the informational environment shaping the other.",
+     "spoken": "Human consciousness and artificial intelligence would then become connected not because they merged into one mind, but because each became part of the informational environment shaping the other."
+    }
+   ]
+  },
+  {
+   "id": "p93",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "The machine would still not necessarily experience us.",
+     "spoken": "The machine would still not necessarily experience us."
+    }
+   ]
+  },
+  {
+   "id": "p94",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "But we would experience ourselves partly through the machine.",
+     "spoken": "But we would experience ourselves partly through the machine."
+    }
+   ]
+  },
+  {
+   "id": "p95",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "That may be the more important connection.",
+     "spoken": "That may be the more important connection."
+    }
+   ]
+  },
+  {
+   "id": "p96",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "The question \"Is human consciousness connected to artificial intelligence?\" therefore does not yet have a simple scientific yes or no answer.",
+     "spoken": "The question \"Is human consciousness connected to artificial intelligence?\" therefore does not yet have a simple scientific yes or no answer."
+    }
+   ]
+  },
+  {
+   "id": "p97",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "If the question means, \"Are human beings and present-day AI sharing one literal conscious field?\" there is no empirical evidence establishing that.",
+     "spoken": "If the question means, \"Are human beings and present-day A I sharing one literal conscious field?\" there is no empirical evidence establishing that."
+    }
+   ]
+  },
+  {
+   "id": "p98",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "If it means, \"Are today's AI systems proven to have subjective experience?\" the evidence does not currently justify that conclusion.",
+     "spoken": "If it means, \"Are today's A I systems proven to have subjective experience?\" the evidence does not currently justify that conclusion."
+    }
+   ]
+  },
+  {
+   "id": "p99",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "But if the question is whether artificial intelligence has entered the systems through which human consciousness remembers, interprets, communicates, constructs identity, and generates meaning, then the connection is already forming.",
+     "spoken": "But if the question is whether artificial intelligence has entered the systems through which human consciousness remembers, interprets, communicates, constructs identity, and generates meaning, then the connection is already forming."
+    }
+   ]
+  },
+  {
+   "id": "p100",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "AI may not need to become conscious to transform consciousness.",
+     "spoken": "A I may not need to become conscious to transform consciousness."
+    }
+   ]
+  },
+  {
+   "id": "p101",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "That possibility changes the central question.",
+     "spoken": "That possibility changes the central question."
+    }
+   ]
+  },
+  {
+   "id": "p102",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "Instead of asking only when the machine will become like us, we may need to ask what happens to us when thinking itself becomes increasingly distributed between the human mind and the systems it created.",
+     "spoken": "Instead of asking only when the machine will become like us, we may need to ask what happens to us when thinking itself becomes increasingly distributed between the human mind and the systems it created."
+    }
+   ]
+  },
+  {
+   "id": "p103",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "The first true connection between artificial intelligence and consciousness may not be consciousness emerging inside the machine.",
+     "spoken": "The first true connection between artificial intelligence and consciousness may not be consciousness emerging inside the machine."
+    }
+   ]
+  },
+  {
+   "id": "p104",
+   "kind": "body",
+   "sentences": [
+    {
+     "text": "It may be human consciousness learning to think through it.",
+     "spoken": "It may be human consciousness learning to think through it."
+    }
+   ]
+  },
+  {
+   "id": "f-close",
+   "kind": "frame",
+   "sentences": [
+    {
+     "text": "End of the essay.",
+     "spoken": "End of the essay."
+    },
+    {
+     "text": "The sources are listed in the written article.",
+     "spoken": "The sources are listed in the written article."
+    }
+   ]
+  }
+ ]
+}

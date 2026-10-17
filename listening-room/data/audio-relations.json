@@ -1,0 +1,374 @@
+{
+ "meta": {
+  "schemaVersion": 1,
+  "resolve": "ids resolve against inquiry-engine/data/research-index.json and lexicon/data/concepts.json"
+ },
+ "items": [
+  {
+   "recordingId": "LR001",
+   "concepts": [
+    "concept:memory",
+    "concept:archives",
+    "concept:culture",
+    "concept:identity",
+    "concept:ai"
+   ],
+   "lexicon": [
+    "memory",
+    "artificial-intelligence",
+    "consciousness",
+    "identity"
+   ],
+   "resources": {
+    "questions": [
+     "q:Q016",
+     "q:Q018",
+     "q:Q021",
+     "q:Q020"
+    ],
+    "theories": [],
+    "comparisons": [],
+    "museum": [
+     "room:tablet",
+     "room:library",
+     "room:domesday",
+     "room:selection",
+     "room:web",
+     "room:model"
+    ],
+    "lessons": [
+     "lesson:C002-L05"
+    ],
+    "articles": [
+     "art:is-human-consciousness-connected-to-artificial-intelligence"
+    ]
+   },
+   "annotations": [
+    {
+     "block": "p01",
+     "start": 19,
+     "end": 27,
+     "type": "atlas",
+     "id": "concept:archives"
+    },
+    {
+     "block": "p02",
+     "start": 29,
+     "end": 49,
+     "type": "museum",
+     "id": "room:tablet"
+    },
+    {
+     "block": "p04",
+     "start": 24,
+     "end": 47,
+     "type": "museum",
+     "id": "room:library"
+    },
+    {
+     "block": "p07",
+     "start": 0,
+     "end": 13,
+     "type": "museum",
+     "id": "room:domesday"
+    },
+    {
+     "block": "p09",
+     "start": 266,
+     "end": 284,
+     "type": "museum",
+     "id": "room:selection"
+    },
+    {
+     "block": "p13",
+     "start": 31,
+     "end": 57,
+     "type": "museum",
+     "id": "room:web"
+    },
+    {
+     "block": "p14",
+     "start": 189,
+     "end": 203,
+     "type": "lexicon",
+     "id": "memory"
+    },
+    {
+     "block": "p16",
+     "start": 0,
+     "end": 23,
+     "type": "lexicon",
+     "id": "artificial-intelligence"
+    },
+    {
+     "block": "p17",
+     "start": 2,
+     "end": 15,
+     "type": "museum",
+     "id": "room:model"
+    },
+    {
+     "block": "p19",
+     "start": 58,
+     "end": 77,
+     "type": "lexicon",
+     "id": "consciousness"
+    },
+    {
+     "block": "p20",
+     "start": 80,
+     "end": 93,
+     "type": "question",
+     "id": "q:Q018"
+    }
+   ],
+   "citations": [
+    {
+     "block": "p02",
+     "n": 1
+    },
+    {
+     "block": "p04",
+     "n": 2
+    },
+    {
+     "block": "p07",
+     "n": 3
+    },
+    {
+     "block": "p09",
+     "n": 4
+    },
+    {
+     "block": "p13",
+     "n": 5
+    },
+    {
+     "block": "p16",
+     "n": 6
+    }
+   ],
+   "sourceMatches": [],
+   "status": "Associations drafted during the build; awaiting author review."
+  },
+  {
+   "recordingId": "LR002",
+   "concepts": [
+    "concept:consciousness",
+    "concept:ai",
+    "concept:cognition",
+    "concept:language",
+    "concept:identity"
+   ],
+   "lexicon": [
+    "consciousness",
+    "subjective-experience",
+    "understanding",
+    "cognition",
+    "memory",
+    "identity",
+    "artificial-intelligence",
+    "intelligence"
+   ],
+   "resources": {
+    "questions": [
+     "q:Q001",
+     "q:Q002",
+     "q:Q007",
+     "q:Q008",
+     "q:Q009",
+     "q:Q012",
+     "q:Q016",
+     "q:Q024"
+    ],
+    "theories": [
+     "theory:gnwt",
+     "theory:iit",
+     "theory:hot",
+     "theory:rpt",
+     "theory:pp"
+    ],
+    "comparisons": [
+     "cmp:gnwt-iit"
+    ],
+    "museum": [],
+    "lessons": [
+     "lesson:C001-L01",
+     "lesson:C001-L06",
+     "lesson:C001-L07",
+     "lesson:C002-L05",
+     "lesson:C002-L07"
+    ],
+    "articles": [
+     "art:we-are-all-archives-now"
+    ]
+   },
+   "annotations": [
+    {
+     "block": "p00",
+     "start": 21,
+     "end": 34,
+     "type": "lexicon",
+     "id": "consciousness"
+    },
+    {
+     "block": "p01",
+     "start": 421,
+     "end": 442,
+     "type": "lexicon",
+     "id": "subjective-experience"
+    },
+    {
+     "block": "p02",
+     "start": 46,
+     "end": 78,
+     "type": "theory",
+     "id": "theory:gnwt"
+    },
+    {
+     "block": "p02",
+     "start": 251,
+     "end": 280,
+     "type": "theory",
+     "id": "theory:iit"
+    },
+    {
+     "block": "p02",
+     "start": 441,
+     "end": 462,
+     "type": "theory",
+     "id": "theory:hot"
+    },
+    {
+     "block": "p02",
+     "start": 602,
+     "end": 622,
+     "type": "theory",
+     "id": "theory:rpt"
+    },
+    {
+     "block": "p04",
+     "start": 17,
+     "end": 42,
+     "type": "comparison",
+     "id": "cmp:gnwt-iit"
+    },
+    {
+     "block": "p06",
+     "start": 65,
+     "end": 118,
+     "type": "question",
+     "id": "q:Q007"
+    },
+    {
+     "block": "p07",
+     "start": 271,
+     "end": 284,
+     "type": "lexicon",
+     "id": "understanding"
+    },
+    {
+     "block": "p09",
+     "start": 276,
+     "end": 288,
+     "type": "question",
+     "id": "q:Q008"
+    },
+    {
+     "block": "p22",
+     "start": 402,
+     "end": 417,
+     "type": "lexicon",
+     "id": "cognition"
+    },
+    {
+     "block": "p25",
+     "start": 0,
+     "end": 12,
+     "type": "lexicon",
+     "id": "memory"
+    },
+    {
+     "block": "p38",
+     "start": 0,
+     "end": 14,
+     "type": "lexicon",
+     "id": "identity"
+    },
+    {
+     "block": "p66",
+     "start": 8,
+     "end": 28,
+     "type": "question",
+     "id": "q:Q009"
+    },
+    {
+     "block": "p67",
+     "start": 36,
+     "end": 52,
+     "type": "source",
+     "index": 6
+    }
+   ],
+   "citations": [],
+   "sourceMatches": [
+    {
+     "block": "p04",
+     "source": 0,
+     "basis": "Matched by year, venue and subject in the passage. The article does not mark this source inline."
+    },
+    {
+     "block": "p09",
+     "source": 1,
+     "basis": "Matched by year, venue and subject in the passage. The article does not mark this source inline."
+    },
+    {
+     "block": "p09",
+     "source": 2,
+     "basis": "Matched by year, venue and subject in the passage. The article does not mark this source inline."
+    },
+    {
+     "block": "p24",
+     "source": 3,
+     "basis": "Matched by year, venue and subject in the passage. The article does not mark this source inline."
+    },
+    {
+     "block": "p11",
+     "source": 4,
+     "basis": "Matched by year, venue and subject in the passage. The article does not mark this source inline."
+    },
+    {
+     "block": "p13",
+     "source": 5,
+     "basis": "Matched by year, venue and subject in the passage. The article does not mark this source inline."
+    },
+    {
+     "block": "p67",
+     "source": 6,
+     "basis": "Matched by year, venue and subject in the passage. The article does not mark this source inline."
+    },
+    {
+     "block": "p44",
+     "source": 7,
+     "basis": "Matched by year, venue and subject in the passage. The article does not mark this source inline."
+    },
+    {
+     "block": "p33",
+     "source": 8,
+     "basis": "Matched by year, venue and subject in the passage. The article does not mark this source inline."
+    },
+    {
+     "block": "p54",
+     "source": 9,
+     "basis": "Matched by year, venue and subject in the passage. The article does not mark this source inline."
+    },
+    {
+     "block": "p68",
+     "source": 10,
+     "basis": "Matched by year, venue and subject in the passage. The article does not mark this source inline."
+    }
+   ],
+   "status": "Associations drafted during the build; awaiting author review."
+  }
+ ]
+}
