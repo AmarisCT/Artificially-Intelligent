@@ -83,7 +83,7 @@ def webpage(*, title: str, description: str, url: str, root_rel: str, content: s
 </nav>
 </div></header>
 {content}
-<footer><div class="page">Product of Amaris.Studio / Human × Machine Learning</div></footer>
+<footer><div class="page">An <a href="https://amarisct.github.io/Amaris/" style="text-transform:none;text-decoration:none;color:#dcdcda;background:linear-gradient(110deg,#a9a9a7,#f4f4f2 55%,#bdbdbb);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">amaris ct</a> project / Human × Machine Learning</div></footer>
 </body></html>
 """
 
@@ -163,7 +163,7 @@ def make():
             "@context": "https://schema.org", "@type": "Article",
             "headline": article["title"], "description": article["description"],
             "url": article["url"], "mainEntityOfPage": article["url"],
-            "publisher": {"@type": "Organization", "name": "Amaris.Studio"},
+            "publisher": {"@type": "Organization", "name": "amaris ct", "alternateName": "amaris creative tech", "url": "https://amarisct.github.io/Amaris/"},
             "inLanguage": "en"
         }
         if article["date"]:

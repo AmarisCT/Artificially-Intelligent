@@ -2,6 +2,8 @@
 
 **Artificially Intelligent — Human × Machine Learning**
 
+An [amaris ct](https://amarisct.github.io/Amaris/) project (amaris creative tech).
+
 - Official website: <https://amarisct.github.io/Artificially-Intelligent/>
 - Visitor Data Stream: <https://amarisct.github.io/Artificially-Intelligent/#stream>
 - Architect console: <https://artificiallyintelligent.artificiallyint-co.chatgpt.site/architect?return_to=https%3A%2F%2Famarisct.github.io%2FArtificially-Intelligent%2F>
