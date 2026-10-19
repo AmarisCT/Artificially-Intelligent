@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "note": "Written by scripts/build_research_commons.py from the public data files and config. It reports what those contain, nothing else.",
+  "dataAsOf": null,
+  "counts": {
+    "approved": 0,
+    "byType": {
+      "question": 0,
+      "publication": 0,
+      "topic": 0,
+      "perspective": 0
+    },
+    "withdrawn": 0,
+    "collectionsWithMembers": 0
+  },
+  "submissions": {
+    "contributionsOpen": false,
+    "questionsOpen": false,
+    "reason": "No receiving service exists yet, so nothing can be submitted or stored."
+  },
+  "lastSync": null
+}

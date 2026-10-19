@@ -132,7 +132,7 @@ CONCEPT_SUBJECT = {
 CATEGORY_SUBJECT = {"human": "Consciousness", "ai": "Artificial Intelligence", "neuro": "Neuroscience", "mind": "Philosophy", "memory": "Memory", "ethics": "Ethics"}
 SOURCE_TYPE = {"article": "Original essay", "source": "External publication", "question": "Site research record", "theory": "Site research record",
                "comparison": "Site research record", "concept": "Site research record", "museum": "Site research record",
-               "course": "Learning Institute", "lesson": "Learning Institute"}
+               "course": "Learning Institute", "lesson": "Learning Institute", "contribution": "Visitor contribution (approved, not peer reviewed)"}
 
 STOPW = set("a an the of to in on at for and or is are was were be been it its that this with by as from into than then there their they them not no if so such very more most also just which who what when where how why can could would should do does did has have had but about over under between through during while these those his her our your you we i".split())
 
@@ -179,7 +179,7 @@ def enrich(res, vocab, root, uq, theories, manifest, today):
             s = CONCEPT_SUBJECT.get(c)
             if s and s not in subs:
                 subs.append(s)
-        if r["type"] == "question":
+        if r["type"] in ("question", "contribution"):
             s = CATEGORY_SUBJECT.get(r.get("category"))
             if s and s not in subs:
                 subs.insert(0, s)
@@ -210,7 +210,7 @@ def enrich(res, vocab, root, uq, theories, manifest, today):
             r["hasFullText"] = bool(body)
         elif r["type"] == "source":
             body = " ".join([r.get("summary") or "", (r.get("limitations") or "")])
-        elif r["type"] in ("course", "lesson"):
+        elif r["type"] in ("course", "lesson", "contribution"):
             body = r.pop("_body", "")
         if body:
             r["body"] = body_terms(body)
@@ -482,6 +482,28 @@ def build(root: pathlib.Path, atlas_path: pathlib.Path):
                      "objectives": l["objectives"], "attribution": "The Learning Institute, " + c["title"], "reviewStatus": l.get("reviewStatus"), "deskKey": f"lesson:{l['id']}",
                      "_body": re.sub(r"\{\{[a-z]+:[^|}]+\|([^}]+)\}\}", r"\1", re.sub(r"\[@[^\]]+\]", "", text))})
 
+    # ---------------- Research Commons: APPROVED visitor contributions only ----------------
+    # Inert until a contribution has been approved and exported into research-commons/data/. Pending, declined and private material never
+    # reaches this file, and withdrawn records are skipped. A contribution is indexed as what it is: a visitor's text, not research.
+    rcd = root / "research-commons" / "data"
+    if (rcd / "public-contributions.json").exists():
+        sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+        import commons_lib as CL
+        pc = load(rcd / "public-contributions.json")["contributions"]
+        live = [c for c in pc if c.get("status") != "withdrawn"]
+        for c in live:
+            summ = clip(c.get("text") or (c.get("source") or {}).get("title") or c.get("editorialContext") or c["title"], 420)
+            add({"id": f"contrib:{c['id']}", "type": "contribution", "title": c["title"], "summary": summ,
+                 "concepts": sorted({x.split(":", 1)[1] for x in c.get("concepts", []) if x.startswith("concept:")}),
+                 "url": f"{SITE}research-commons/c/{c['id']}/", "date": c.get("publishedOn"), "category": c.get("category"), "contributionType": c["type"],
+                 "attribution": "Visitor contribution, approved for display in the Research Commons",
+                 "reviewStatus": "Approved for display; not peer reviewed", "deskKey": None,
+                 "_body": " ".join(filter(None, [c["title"], c.get("text"), c.get("editorialContext")]))})
+        rel = load(rcd / "contribution-relations.json")["relations"] if (rcd / "contribution-relations.json").exists() else []
+        for e in CL.contribution_edges(pc, rel):
+            if e["a"] in res and e["b"] in res:
+                edge(e["a"], e["b"], e["why"], e["kind"], "research-commons")
+
     # concept resources inherit question concepts for retrieval
     for k, r in res.items():
         r["concepts"] = sorted(set(c for c in r.get("concepts", []) if c))
@@ -544,6 +566,7 @@ def adapters(root, counts):
         ("Publications (Archive, Theory Chamber, Observatory)", "source", "research-observatory/data/publications.json", "Observatory data"),
         ("Museum of Human Memory rooms", "museum", "museum/data/museum.json", "Museum data"),
         ("Learning Institute lessons (published courses only)", "lesson", "learning-institute/data/lessons.json", "Learning Institute data"),
+        ("Research Commons (approved visitor contributions)", "contribution", "research-commons/data/public-contributions.json", "No contribution has been approved yet"),
         ("Lexicon of Intelligence", None, "lexicon/data/concepts.json", "Not published yet"),
         ("Thinkers Archive", None, "thinkers/data/thinkers.json", "Not published yet"),
         ("Human × Machine Dialogues", None, "dialogues/data/dialogues.json", "Not published yet"),

@@ -57,6 +57,12 @@
     "note": "Indexed"
    },
    {
+    "name": "Research Commons (approved visitor contributions)",
+    "active": false,
+    "records": 0,
+    "note": "No contribution has been approved yet"
+   },
+   {
     "name": "Lexicon of Intelligence",
     "active": true,
     "records": 0,

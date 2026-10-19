@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "note": "Public settings. Everything here is safe to publish. Submission stays off until a secure service exists and the owner approves.",
+  "preview": false,
+  "contributionEndpoint": null,
+  "contributionEndpointNote": "https URL of POST /api/public/contributions once it exists. Until then contributions of every type are switched off.",
+  "questionEndpointFallback": "../unanswered-archive/config.json",
+  "questionEndpointFallbackNote": "If contributionEndpoint is null, research questions use the Unanswered Archive's existing question endpoint (same request format), so there is one inbox and one switch for questions.",
+  "statusEndpoint": null,
+  "syncEndpoint": null,
+  "guidelinesApproved": false,
+  "featuredInquiry": {
+    "kind": "editorial-question",
+    "id": "q:Q008"
+  },
+  "substackHome": "https://artificialxintelligence.substack.com/"
+}

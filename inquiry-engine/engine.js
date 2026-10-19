@@ -327,7 +327,7 @@
       var unres = [];
       ids("unknown").forEach(function (u) { var q = R.get(u.id); (u.problems || []).forEach(function (p) { unres.push({ text: p, from: q.title, url: q.url }); }); });
       var reading = [];
-      ids("continue").forEach(function (c) { var r = R.get(c.id); reading.push({ title: r.title, url: r.url, kind: r.type === "article" ? "Essay on this site" : r.type === "lesson" ? "Learning Institute lesson" : "Museum room" }); });
+      ids("continue").forEach(function (c) { var r = R.get(c.id); reading.push({ title: r.title, url: r.url, kind: r.type === "article" ? "Essay on this site" : r.type === "lesson" ? "Learning Institute lesson" : r.type === "contribution" ? "Visitor contribution (not peer reviewed)" : "Museum room" }); });
       var src = ev.map(function (r) { return { title: r.title, authors: (r.authors || []).join(", "), year: r.year, venue: r.venue, doi: r.doi, url: r.url, kind: r.evidenceLabel }; });
       return {
         question: inq.query,

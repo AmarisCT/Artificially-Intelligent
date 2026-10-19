@@ -75,7 +75,7 @@ details.w>summary{cursor:pointer;font-size:13px;color:var(--mut);margin-top:6px}
 .mapctl button{width:40px;height:40px;background:#101416e0;border:1px solid #39423f;color:var(--ink);border-radius:3px;cursor:pointer;font:18px var(--sans)}.mapctl button:hover{border-color:var(--mint)}
 .nd{cursor:pointer}.nd text{font:12.5px var(--sans);fill:#d6d9d3;paint-order:stroke;stroke:#080b0c;stroke-width:3px}
 .nd .sh{fill:#101416;stroke:var(--silver);stroke-width:1.4}
-.nd.concept .sh{stroke:var(--mint)}.nd.theory .sh{stroke:#cfa4f0}.nd.question .sh{stroke:var(--amber)}.nd.source .sh{stroke:#9fc9e8}.nd.article .sh{stroke:#e8c9a0}.nd.museum .sh{stroke:#f4a7a0}
+.nd.concept .sh{stroke:var(--mint)}.nd.theory .sh{stroke:#cfa4f0}.nd.question .sh{stroke:var(--amber)}.nd.source .sh{stroke:#9fc9e8}.nd.article .sh{stroke:#e8c9a0}.nd.museum .sh{stroke:#f4a7a0}.nd.contribution .sh{stroke:#c9d4cf}
 .nd.ask .sh{fill:var(--mint);stroke:var(--mint)}.nd.ask text{fill:var(--mint)}
 .nd.sel .sh{stroke-width:3.2;fill:#1b2a25}.nd:hover .sh,.nd:focus-visible .sh{stroke-width:3}
 .nd.dim{opacity:.35}
