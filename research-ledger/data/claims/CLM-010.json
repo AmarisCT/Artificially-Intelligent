@@ -1,0 +1,28 @@
+{
+ "schema": 1,
+ "id": "CLM-010",
+ "publication": "PUB-002",
+ "explorerId": "capability",
+ "passage": {
+  "snapshot": 1,
+  "index": 7,
+  "text": "A system can perform something that looks intelligent without providing evidence that there is an experience occurring inside it. A calculator can outperform a person at arithmetic without experiencing numbers. A chess engine can defeat a grandmaster without necessarily understanding victory. Modern language models can produce arguments, stories, software, theories, jokes, emotional language, and descriptions of their own apparent internal states. None of those abilities, by themselves, establish subjective experience.",
+  "textHash": "838dc6b5f17d207a"
+ },
+ "classification": "philosophical",
+ "classificationStatus": "draft",
+ "classificationOrigin": {
+  "kind": "evidence-explorer",
+  "id": "capability",
+  "note": "Imported unchanged from the Evidence Explorer's draft classification. No editor has reviewed it."
+ },
+ "concepts": [
+  "ai",
+  "consciousness"
+ ],
+ "sourceLinks": [],
+ "limitation": "The essay argues that capability, by itself, does not establish subjective experience. It does not claim to show that any particular system lacks experience.",
+ "debate": null,
+ "limitationNote": "The limit is the Evidence Explorer's draft wording.",
+ "reviewedOn": null
+}

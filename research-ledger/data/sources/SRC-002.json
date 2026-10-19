@@ -1,0 +1,51 @@
+{
+ "schema": 1,
+ "id": "SRC-002",
+ "citation": {
+  "raw": "[2] British Museum. “What was Ashurbanipal's Library?” Research project. https://www.britishmuseum.org/research/projects/what-was-ashurbanipals-library",
+  "title": "What was Ashurbanipal's Library?",
+  "year": null,
+  "doi": null,
+  "arxiv": null,
+  "url": "https://www.britishmuseum.org/research/projects/what-was-ashurbanipals-library"
+ },
+ "citedBy": [
+  {
+   "publication": "PUB-001",
+   "index": 1,
+   "label": "[2]",
+   "labelInherited": false
+  }
+ ],
+ "verification": {
+  "level": "source-content-inspected",
+  "history": [
+   {
+    "level": "source-content-inspected",
+    "recordedOn": "2026-10-17",
+    "inspectedOn": null,
+    "basis": "Project page read in full.",
+    "extent": "read in full",
+    "origin": {
+     "kind": "museum",
+     "id": "bm-library",
+     "file": "museum/data/museum.json"
+    },
+    "performedBy": "Recorded during site construction with AI assistance. No human editor has re-checked this."
+   }
+  ]
+ },
+ "links": {
+  "museumId": "bm-library"
+ },
+ "retraction": {
+  "status": "not checked",
+  "checkedOn": null
+ },
+ "recordedOn": "2026-10-17",
+ "recordNote": "Citation shown as printed. Inspection notes were copied from records the site already kept, with their origin.",
+ "type": "Institutional page",
+ "limitations": null,
+ "observations": [],
+ "seededOn": "2026-10-17"
+}

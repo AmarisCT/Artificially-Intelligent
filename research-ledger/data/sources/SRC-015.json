@@ -1,0 +1,35 @@
+{
+ "schema": 1,
+ "id": "SRC-015",
+ "citation": {
+  "raw": "Hadidi, N., Feghhi, E., Song, B. H., Blank, I. A., & Kao, J. C. (2026). “Spurious alignment between large language models and brains can emerge from non-robust methods and overlooked confounds.” *Nature Communications, 17*, 5769. DOI: 10.1038/s41467-026-72253-7.",
+  "title": "Spurious alignment between large language models and brains can emerge from non-robust methods and overlooked confounds",
+  "year": 2026,
+  "doi": "10.1038/s41467-026-72253-7",
+  "arxiv": null,
+  "url": null
+ },
+ "citedBy": [
+  {
+   "publication": "PUB-002",
+   "index": 5,
+   "label": null,
+   "labelInherited": false
+  }
+ ],
+ "verification": {
+  "level": "verification-incomplete",
+  "history": []
+ },
+ "links": {},
+ "retraction": {
+  "status": "not checked",
+  "checkedOn": null
+ },
+ "recordedOn": "2026-10-17",
+ "recordNote": "Citation shown as printed. The Ledger has no documented check of this source.",
+ "type": "Journal article",
+ "limitations": null,
+ "observations": [],
+ "seededOn": "2026-10-17"
+}

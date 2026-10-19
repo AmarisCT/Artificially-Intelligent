@@ -1,0 +1,20 @@
+{
+ "schema": 1,
+ "publication": "PUB-002",
+ "slug": "is-human-consciousness-connected-to-artificial-intelligence",
+ "note": "Saved versions of the public text, oldest first. The first entry is a baseline: the text as it stood on the capture date. Earlier edits, if there were any, were not recorded.",
+ "entries": [
+  {
+   "n": 1,
+   "hash": "6f7ed04fce8a3b6ee9a9676f25b687a505bdacd309bbfe602f97ed64c69a4361",
+   "kind": "baseline",
+   "capturedOn": "2026-10-17",
+   "capturedAt": "2026-10-17T14:45:00Z",
+   "file": "v001-6f7ed04fce8a.json",
+   "words": 2668,
+   "paragraphs": 105,
+   "sources": 11
+  }
+ ],
+ "pending": null
+}

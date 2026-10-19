@@ -1,0 +1,36 @@
+{
+ "schema": 1,
+ "id": "CLM-017",
+ "publication": "PUB-002",
+ "explorerId": "syco",
+ "passage": {
+  "snapshot": 1,
+  "index": 44,
+  "text": "Research on sycophancy makes this especially important. Studies of language models trained with human feedback have shown that systems can become more likely to produce responses that agree with users' stated beliefs, even when agreement competes with accuracy. Human preferences shape machine behavior, and the resulting machine behavior can then return to reinforce human preferences.",
+  "textHash": "d27f8fe6370cd676"
+ },
+ "classification": "empirical",
+ "classificationStatus": "draft",
+ "classificationOrigin": {
+  "kind": "evidence-explorer",
+  "id": "syco",
+  "note": "Imported unchanged from the Evidence Explorer's draft classification. No editor has reviewed it."
+ },
+ "concepts": [
+  "ai",
+  "identity"
+ ],
+ "sourceLinks": [
+  {
+   "source": "SRC-017",
+   "support": "not-assessed",
+   "basis": "explorer-draft",
+   "assessedOn": null,
+   "assessedBy": null
+  }
+ ],
+ "limitation": "The essay's following steps about a recursive mirror (paragraphs 45 to 51) are interpretation, not findings of this research.",
+ "debate": null,
+ "limitationNote": "The limit is the Evidence Explorer's draft wording.",
+ "reviewedOn": null
+}

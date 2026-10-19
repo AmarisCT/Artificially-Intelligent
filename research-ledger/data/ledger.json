@@ -1,0 +1,3039 @@
+{
+ "schema": 1,
+ "ledgerAsOf": "2026-10-17",
+ "taxonomy": {
+  "schema": 1,
+  "note": "Controlled vocabularies for the Research Ledger. Labels are shown to visitors; ids are stored in records. Definitions describe what a label means for this site only. None of these labels is a measure of credibility, and none implies external accreditation.",
+  "verificationLevels": [
+   {
+    "id": "verification-incomplete",
+    "rank": 0,
+    "label": "Verification Incomplete",
+    "short": "No documented check",
+    "meaning": "No completed check is recorded in the Ledger, or the information available was not enough to complete one. The source is listed exactly as the publication cites it."
+   },
+   {
+    "id": "metadata-confirmed",
+    "rank": 1,
+    "label": "Metadata Confirmed",
+    "short": "Citation matches a bibliographic record",
+    "meaning": "A bibliographic record (for example from Crossref or DataCite) was retrieved and matches the cited work. This shows that the work exists as cited. It does not show that anyone read it, or that it supports any claim."
+   },
+   {
+    "id": "abstract-reviewed",
+    "rank": 2,
+    "label": "Abstract Reviewed",
+    "short": "Abstract or summary page read",
+    "meaning": "The abstract, summary or catalogue description was read. The body of the work was not."
+   },
+   {
+    "id": "source-content-inspected",
+    "rank": 3,
+    "label": "Source Content Inspected",
+    "short": "Content of the source was read",
+    "meaning": "The content of the source was opened and read, in full or in part (the record says which). This is a reading of the source. It is not yet a check that the publication uses the source correctly."
+   },
+   {
+    "id": "full-source-reviewed",
+    "rank": 4,
+    "label": "Full Source Reviewed",
+    "short": "Whole source reviewed by an editor",
+    "meaning": "The whole source was reviewed by a named editor, and the review is documented. No source has this level yet."
+   },
+   {
+    "id": "editorial-interpretation-reviewed",
+    "rank": 5,
+    "label": "Editorial Interpretation Reviewed",
+    "short": "Use of the source checked",
+    "meaning": "An editor compared how the publication uses this source with the source itself, claim by claim, and documented the outcome. No source has this level yet."
+   }
+  ],
+  "claimClassifications": [
+   {
+    "id": "empirical",
+    "label": "Empirical Claim",
+    "meaning": "Reports a result, measurement or documented record. The label says what kind of statement it is, not whether it is correct."
+   },
+   {
+    "id": "theoretical",
+    "label": "Theoretical Proposal",
+    "meaning": "Describes a proposed explanation or framework, or an assessment built on proposed explanations."
+   },
+   {
+    "id": "philosophical",
+    "label": "Philosophical Argument",
+    "meaning": "Reasoned argument rather than an experimental result."
+   },
+   {
+    "id": "historical",
+    "label": "Historical Claim",
+    "meaning": "A statement about what happened in the past, resting on records or historical scholarship."
+   },
+   {
+    "id": "editorial",
+    "label": "Editorial Interpretation",
+    "meaning": "The publication's own reading or framing of material. It is offered as interpretation."
+   },
+   {
+    "id": "speculative",
+    "label": "Speculative Proposal",
+    "meaning": "A possibility the publication explores without evidence that settles it."
+   },
+   {
+    "id": "open-question",
+    "label": "Open Question",
+    "meaning": "Stated by the publication as unresolved."
+   }
+  ],
+  "explorerClassificationMap": {
+   "empirical": "empirical",
+   "theory": "theoretical",
+   "argument": "philosophical",
+   "open": "open-question",
+   "spec": "speculative"
+  },
+  "claimStatuses": [
+   {
+    "id": "draft",
+    "label": "Draft classification",
+    "meaning": "Proposed during site construction. No editor has reviewed it."
+   },
+   {
+    "id": "reviewed",
+    "label": "Editorially reviewed",
+    "meaning": "An editor reviewed and confirmed or changed the classification. The review is recorded."
+   }
+  ],
+  "supportStatuses": [
+   {
+    "id": "not-assessed",
+    "label": "Support not assessed",
+    "meaning": "Nobody has compared the claim with this source. The source is listed because the publication cites it near the passage."
+   },
+   {
+    "id": "supports",
+    "label": "Source supports the claim",
+    "meaning": "Recorded only after the source was inspected and compared with the passage."
+   },
+   {
+    "id": "partly-supports",
+    "label": "Source partly supports the claim",
+    "meaning": "Recorded only after inspection. The record says what is and is not supported."
+   },
+   {
+    "id": "does-not-support",
+    "label": "Source does not support the claim",
+    "meaning": "Recorded only after inspection."
+   },
+   {
+    "id": "needs-review",
+    "label": "Needs review",
+    "meaning": "A reader or editor raised a question that has not been resolved."
+   }
+  ],
+  "reviewStatuses": [
+   {
+    "id": "awaiting-editorial-review",
+    "label": "Awaiting Editorial Review",
+    "meaning": "No editorial review of this publication has been recorded in the Ledger."
+   },
+   {
+    "id": "source-verification-in-progress",
+    "label": "Source Verification in Progress",
+    "meaning": "An editor has started checking sources. The Source Registry shows which checks are done."
+   },
+   {
+    "id": "editorially-reviewed",
+    "label": "Editorially Reviewed",
+    "meaning": "An editor completed a documented review of sources and claims."
+   },
+   {
+    "id": "revision-requested",
+    "label": "Revision Requested",
+    "meaning": "A review found something to change. The revision has not been published yet."
+   },
+   {
+    "id": "review-completed-with-limitations",
+    "label": "Review Completed With Limitations",
+    "meaning": "A review was completed and the record states what it could not cover."
+   },
+   {
+    "id": "new-evidence-review-pending",
+    "label": "New Evidence Review Pending",
+    "meaning": "Newer evidence was identified and has not been reviewed against this publication yet."
+   }
+  ],
+  "revisionCategories": [
+   {
+    "id": "editorial-revision",
+    "label": "Editorial Revision",
+    "meaning": "Wording, structure or emphasis changed."
+   },
+   {
+    "id": "source-update",
+    "label": "Source Update",
+    "meaning": "A source was added, replaced or updated."
+   },
+   {
+    "id": "research-expansion",
+    "label": "Research Expansion",
+    "meaning": "New research or analysis was added."
+   },
+   {
+    "id": "correction",
+    "label": "Correction",
+    "meaning": "An error was corrected. A matching entry exists in Corrections & Clarifications."
+   },
+   {
+    "id": "interpretive-revision",
+    "label": "Interpretive Revision",
+    "meaning": "The reading or conclusion changed."
+   },
+   {
+    "id": "technical-correction",
+    "label": "Technical Correction",
+    "meaning": "Typography, formatting, links or similar, with no change of meaning."
+   },
+   {
+    "id": "retraction-or-withdrawal",
+    "label": "Retraction or Withdrawal",
+    "meaning": "The publication, or part of it, was withdrawn."
+   }
+  ],
+  "revisionStates": [
+   {
+    "id": "unclassified",
+    "label": "Change detected, not yet classified",
+    "meaning": "The published text differs from the previous saved version. Nobody has yet recorded what changed or why."
+   },
+   {
+    "id": "classified",
+    "label": "Classified",
+    "meaning": "An editor recorded the category and a summary."
+   }
+  ],
+  "correctionKinds": [
+   {
+    "id": "correction",
+    "label": "Correction",
+    "meaning": "Something stated was wrong and is now fixed."
+   },
+   {
+    "id": "clarification",
+    "label": "Clarification",
+    "meaning": "Something was unclear or could be misread. Its meaning is now stated more precisely."
+   },
+   {
+    "id": "retraction-or-withdrawal",
+    "label": "Retraction or Withdrawal",
+    "meaning": "The publication, or part of it, was withdrawn."
+   }
+  ],
+  "policyStatuses": [
+   {
+    "id": "approved",
+    "label": "Approved standard",
+    "meaning": "Approved by the site owner on the date shown."
+   },
+   {
+    "id": "proposed",
+    "label": "Proposed draft, awaiting owner approval",
+    "meaning": "A draft prepared from documented practice. It is not an official standard."
+   },
+   {
+    "id": "needs-decision",
+    "label": "Needs owner decision",
+    "meaning": "The owner has to decide before a draft can be written."
+   }
+  ],
+  "snapshotKinds": [
+   {
+    "id": "baseline",
+    "label": "Baseline",
+    "meaning": "The first version the Ledger captured. It is the text as published on the capture date, not a claim about earlier drafts."
+   },
+   {
+    "id": "detected-change",
+    "label": "Detected change",
+    "meaning": "A later version whose text differs from the previous saved version."
+   }
+  ],
+  "lifeOfAnIdea": [
+   {
+    "id": "published",
+    "label": "Published",
+    "meaning": "When essays addressing the concept were published."
+   },
+   {
+    "id": "sources",
+    "label": "Sources referenced",
+    "meaning": "Which sources those essays cite, and how far each has been checked."
+   },
+   {
+    "id": "theories",
+    "label": "Theories discussed",
+    "meaning": "Which scientific theories the Theory Chamber records as mentioned in those essays."
+   },
+   {
+    "id": "questions",
+    "label": "Open questions",
+    "meaning": "Which unresolved questions the essays state."
+   },
+   {
+    "id": "review",
+    "label": "Editorial review",
+    "meaning": "Whether an editor has reviewed the essays, and what the review covered."
+   },
+   {
+    "id": "revised",
+    "label": "Revised or corrected",
+    "meaning": "Whether the essays changed after publication, and why."
+   },
+   {
+    "id": "newer",
+    "label": "Newer research",
+    "meaning": "Whether newer, reviewed research has prompted a change."
+   }
+  ]
+ },
+ "config": {
+  "schema": 1,
+  "note": "Public Ledger settings. Everything in this file is safe to publish.",
+  "preview": false,
+  "articlePageLinks": false,
+  "articlePageLinksNote": "When true, scripts/build_published.py adds a Research Ledger link to each essay page. It is off until the owner approves changing the published essay pages. Correction notices on essay pages do not depend on this switch: they appear only for an approved, prominent correction.",
+  "concernChannels": {
+   "endpoint": null,
+   "endpointNote": "No secure submission service exists yet, so the Ledger cannot receive reports. It says so on the page.",
+   "githubIssues": {
+    "enabled": false,
+    "repository": "AmarisCT/Artificially-Intelligent",
+    "note": "Public. Switch on only with the owner's approval; anything sent there is visible to everyone."
+   }
+  },
+  "substackHome": "https://artificialxintelligence.substack.com/"
+ },
+ "publications": [
+  {
+   "schema": 1,
+   "id": "PUB-001",
+   "slug": "we-are-all-archives-now",
+   "feedGuid": "2063e8d4-c3e5-4458-a5dc-24c5844bc90b",
+   "title": "We Are All Archives Now",
+   "deck": "Historical archives began with the needs of the living. Today, our messages, photographs, and digital traces create records that circulate beyond us. What changes when artificial intelligence learns from what we leave behind?",
+   "category": "Essay",
+   "author": "Artificially Intelligent (original essay)",
+   "publishedAt": "2026-10-07",
+   "ledgerEntryDate": "2026-10-17",
+   "url": "https://amarisct.github.io/Artificially-Intelligent/research/published/we-are-all-archives-now/",
+   "substack": {
+    "status": "not recorded",
+    "url": null,
+    "note": "No Substack address has been recorded for this publication."
+   },
+   "contextLinks": {
+    "concepts": [
+     "ai",
+     "archives",
+     "culture",
+     "identity",
+     "memory"
+    ],
+    "questions": [],
+    "theories": [],
+    "lexicon": [],
+    "sharedIndexId": "art:we-are-all-archives-now",
+    "conceptsNote": "Topic tags from the shared research index. They are editorial and have not been reviewed."
+   },
+   "recordNote": "Created automatically when the Ledger first saw this publication. Links to other parts of the research archive have not been reviewed.",
+   "sourceIds": [
+    "SRC-001",
+    "SRC-002",
+    "SRC-003",
+    "SRC-004",
+    "SRC-005",
+    "SRC-006",
+    "SRC-007",
+    "SRC-008",
+    "SRC-009"
+   ],
+   "claimIds": [
+    "CLM-001",
+    "CLM-002",
+    "CLM-003",
+    "CLM-004",
+    "CLM-005",
+    "CLM-006",
+    "CLM-007"
+   ],
+   "reviewId": "RVW-001",
+   "revisionIds": [],
+   "correctionIds": [],
+   "versions": [
+    {
+     "n": 1,
+     "hash": "87d3e0aefb3c70a482c0e90b3df4a0daad267856416c1fdc80785ace77e5baeb",
+     "kind": "baseline",
+     "capturedOn": "2026-10-17",
+     "capturedAt": "2026-10-17T14:45:00Z",
+     "file": "v001-87d3e0aefb3c.json",
+     "words": 1453,
+     "paragraphs": 25,
+     "sources": 9
+    }
+   ],
+   "current": {
+    "n": 1,
+    "hash": "87d3e0aefb3c70a482c0e90b3df4a0daad267856416c1fdc80785ace77e5baeb",
+    "words": 1453,
+    "capturedOn": "2026-10-17"
+   },
+   "historyBegins": "2026-10-17",
+   "latestRevisionDate": null,
+   "readingMinutes": 7,
+   "context": {
+    "concepts": [
+     {
+      "id": "ai",
+      "title": "Artificial Intelligence",
+      "url": "https://amarisct.github.io/Artificially-Intelligent/#dossier-ai"
+     },
+     {
+      "id": "archives",
+      "title": "Archives",
+      "url": "https://amarisct.github.io/Artificially-Intelligent/#dossier-archives"
+     },
+     {
+      "id": "culture",
+      "title": "Digital Culture",
+      "url": "https://amarisct.github.io/Artificially-Intelligent/#dossier-culture"
+     },
+     {
+      "id": "identity",
+      "title": "Identity",
+      "url": "https://amarisct.github.io/Artificially-Intelligent/#dossier-identity"
+     },
+     {
+      "id": "memory",
+      "title": "Memory",
+      "url": "https://amarisct.github.io/Artificially-Intelligent/#dossier-memory"
+     }
+    ],
+    "conceptsNote": "Topic tags from the shared research index. They are editorial and have not been reviewed.",
+    "theories": [],
+    "learning": [],
+    "lexicon": [
+     {
+      "id": "memory",
+      "term": "Memory",
+      "url": "https://amarisct.github.io/Artificially-Intelligent/lexicon/#c-memory"
+     },
+     {
+      "id": "identity",
+      "term": "Personal Identity",
+      "url": "https://amarisct.github.io/Artificially-Intelligent/lexicon/#c-identity"
+     }
+    ],
+    "questions": [],
+    "explorer": {
+     "claims": 7,
+     "url": "https://amarisct.github.io/Artificially-Intelligent/#evidence"
+    },
+    "suggestions": [
+     {
+      "observatoryId": "P014",
+      "title": "Planting misinformation in the human mind: A 30-year investigation of the malleability of memory",
+      "year": "2005",
+      "doi": "10.1101/lm.94705",
+      "sharedTags": [
+       "identity",
+       "memory"
+      ],
+      "status": "suggested-unreviewed"
+     }
+    ]
+   }
+  },
+  {
+   "schema": 1,
+   "id": "PUB-002",
+   "slug": "is-human-consciousness-connected-to-artificial-intelligence",
+   "feedGuid": "5affe752-0d79-40e0-b8b0-c2410aa11a1b",
+   "title": "Is Human Consciousness Connected to Artificial Intelligence?",
+   "deck": "What if artificial intelligence is not separate from human consciousness, but a reflection of it? This article explores the relationship between the human mind and intelligent machines, and what that connection could reveal about memory, identity, awareness, and what it means to think.",
+   "category": "Essay",
+   "author": "Artificially Intelligent (original essay)",
+   "publishedAt": "2026-09-19",
+   "ledgerEntryDate": "2026-10-17",
+   "url": "https://amarisct.github.io/Artificially-Intelligent/research/published/is-human-consciousness-connected-to-artificial-intelligence/",
+   "substack": {
+    "status": "not recorded",
+    "url": null,
+    "note": "No Substack address has been recorded for this publication."
+   },
+   "contextLinks": {
+    "concepts": [
+     "ai",
+     "cognition",
+     "consciousness",
+     "identity",
+     "language"
+    ],
+    "questions": [],
+    "theories": [],
+    "lexicon": [],
+    "sharedIndexId": "art:is-human-consciousness-connected-to-artificial-intelligence",
+    "conceptsNote": "Topic tags from the shared research index. They are editorial and have not been reviewed."
+   },
+   "recordNote": "Created automatically when the Ledger first saw this publication. Links to other parts of the research archive have not been reviewed.",
+   "sourceIds": [
+    "SRC-010",
+    "SRC-011",
+    "SRC-012",
+    "SRC-013",
+    "SRC-014",
+    "SRC-015",
+    "SRC-016",
+    "SRC-017",
+    "SRC-018",
+    "SRC-019",
+    "SRC-020"
+   ],
+   "claimIds": [
+    "CLM-008",
+    "CLM-009",
+    "CLM-010",
+    "CLM-011",
+    "CLM-012",
+    "CLM-013",
+    "CLM-014",
+    "CLM-015",
+    "CLM-016",
+    "CLM-017",
+    "CLM-018",
+    "CLM-019",
+    "CLM-020",
+    "CLM-021",
+    "CLM-022",
+    "CLM-023"
+   ],
+   "reviewId": "RVW-002",
+   "revisionIds": [],
+   "correctionIds": [],
+   "versions": [
+    {
+     "n": 1,
+     "hash": "6f7ed04fce8a3b6ee9a9676f25b687a505bdacd309bbfe602f97ed64c69a4361",
+     "kind": "baseline",
+     "capturedOn": "2026-10-17",
+     "capturedAt": "2026-10-17T14:45:00Z",
+     "file": "v001-6f7ed04fce8a.json",
+     "words": 2668,
+     "paragraphs": 105,
+     "sources": 11
+    }
+   ],
+   "current": {
+    "n": 1,
+    "hash": "6f7ed04fce8a3b6ee9a9676f25b687a505bdacd309bbfe602f97ed64c69a4361",
+    "words": 2668,
+    "capturedOn": "2026-10-17"
+   },
+   "historyBegins": "2026-10-17",
+   "latestRevisionDate": null,
+   "readingMinutes": 12,
+   "context": {
+    "concepts": [
+     {
+      "id": "ai",
+      "title": "Artificial Intelligence",
+      "url": "https://amarisct.github.io/Artificially-Intelligent/#dossier-ai"
+     },
+     {
+      "id": "cognition",
+      "title": "Cognition",
+      "url": "https://amarisct.github.io/Artificially-Intelligent/#dossier-cognition"
+     },
+     {
+      "id": "consciousness",
+      "title": "Consciousness",
+      "url": "https://amarisct.github.io/Artificially-Intelligent/#dossier-consciousness"
+     },
+     {
+      "id": "identity",
+      "title": "Identity",
+      "url": "https://amarisct.github.io/Artificially-Intelligent/#dossier-identity"
+     },
+     {
+      "id": "language",
+      "title": "Language",
+      "url": "https://amarisct.github.io/Artificially-Intelligent/#dossier-language"
+     }
+    ],
+    "conceptsNote": "Topic tags from the shared research index. They are editorial and have not been reviewed.",
+    "theories": [
+     {
+      "id": "gnwt",
+      "name": "Global Neuronal Workspace Theory",
+      "abbr": "GNWT",
+      "paragraph": 2,
+      "url": "https://amarisct.github.io/Artificially-Intelligent/theory-chamber/#theory-gnwt"
+     },
+     {
+      "id": "iit",
+      "name": "Integrated Information Theory",
+      "abbr": "IIT",
+      "paragraph": 2,
+      "url": "https://amarisct.github.io/Artificially-Intelligent/theory-chamber/#theory-iit"
+     },
+     {
+      "id": "hot",
+      "name": "Higher-Order Theories of Consciousness",
+      "abbr": "HOT",
+      "paragraph": 2,
+      "url": "https://amarisct.github.io/Artificially-Intelligent/theory-chamber/#theory-hot"
+     },
+     {
+      "id": "rpt",
+      "name": "Recurrent Processing Theory",
+      "abbr": "RPT",
+      "paragraph": 2,
+      "url": "https://amarisct.github.io/Artificially-Intelligent/theory-chamber/#theory-rpt"
+     }
+    ],
+    "learning": [
+     {
+      "id": "C001",
+      "title": "Introduction to Consciousness",
+      "reviewStatus": "Awaiting editorial review",
+      "url": "https://amarisct.github.io/Artificially-Intelligent/learning-institute/#course-C001",
+      "lessons": [
+       {
+        "id": "C001-L01",
+        "title": "Defining consciousness",
+        "url": "https://amarisct.github.io/Artificially-Intelligent/learning-institute/#lesson-C001-L01"
+       },
+       {
+        "id": "C001-L02",
+        "title": "Subjective experience and awareness",
+        "url": "https://amarisct.github.io/Artificially-Intelligent/learning-institute/#lesson-C001-L02"
+       },
+       {
+        "id": "C001-L06",
+        "title": "Major scientific and philosophical theories",
+        "url": "https://amarisct.github.io/Artificially-Intelligent/learning-institute/#lesson-C001-L06"
+       },
+       {
+        "id": "C001-L07",
+        "title": "The limits of current knowledge",
+        "url": "https://amarisct.github.io/Artificially-Intelligent/learning-institute/#lesson-C001-L07"
+       },
+       {
+        "id": "C001-L08",
+        "title": "Final research reflection",
+        "url": "https://amarisct.github.io/Artificially-Intelligent/learning-institute/#lesson-C001-L08"
+       }
+      ]
+     },
+     {
+      "id": "C002",
+      "title": "Foundations of Artificial Intelligence",
+      "reviewStatus": "Awaiting editorial review",
+      "url": "https://amarisct.github.io/Artificially-Intelligent/learning-institute/#course-C002",
+      "lessons": [
+       {
+        "id": "C002-L01",
+        "title": "What artificial intelligence means",
+        "url": "https://amarisct.github.io/Artificially-Intelligent/learning-institute/#lesson-C002-L01"
+       },
+       {
+        "id": "C002-L05",
+        "title": "Language models",
+        "url": "https://amarisct.github.io/Artificially-Intelligent/learning-institute/#lesson-C002-L05"
+       },
+       {
+        "id": "C002-L07",
+        "title": "Intelligence versus consciousness",
+        "url": "https://amarisct.github.io/Artificially-Intelligent/learning-institute/#lesson-C002-L07"
+       },
+       {
+        "id": "C002-L08",
+        "title": "Limitations, risks, and open questions",
+        "url": "https://amarisct.github.io/Artificially-Intelligent/learning-institute/#lesson-C002-L08"
+       }
+      ]
+     }
+    ],
+    "lexicon": [
+     {
+      "id": "consciousness",
+      "term": "Consciousness",
+      "url": "https://amarisct.github.io/Artificially-Intelligent/lexicon/#c-consciousness"
+     },
+     {
+      "id": "cognition",
+      "term": "Cognition",
+      "url": "https://amarisct.github.io/Artificially-Intelligent/lexicon/#c-cognition"
+     },
+     {
+      "id": "identity",
+      "term": "Personal Identity",
+      "url": "https://amarisct.github.io/Artificially-Intelligent/lexicon/#c-identity"
+     }
+    ],
+    "questions": [
+     {
+      "id": "Q001",
+      "title": "What makes an experience conscious?",
+      "url": "https://amarisct.github.io/Artificially-Intelligent/unanswered-archive/#q-Q001",
+      "via": "Learning Institute lesson C001-L01"
+     },
+     {
+      "id": "Q002",
+      "title": "Why does subjective experience exist?",
+      "url": "https://amarisct.github.io/Artificially-Intelligent/unanswered-archive/#q-Q002",
+      "via": "Learning Institute lesson C001-L02"
+     },
+     {
+      "id": "Q003",
+      "title": "Can consciousness be measured objectively?",
+      "url": "https://amarisct.github.io/Artificially-Intelligent/unanswered-archive/#q-Q003",
+      "via": "Learning Institute lesson C001-L02"
+     },
+     {
+      "id": "Q004",
+      "title": "Can consciousness exist independently of a biological brain?",
+      "url": "https://amarisct.github.io/Artificially-Intelligent/unanswered-archive/#q-Q004",
+      "via": "Learning Institute lesson C001-L07"
+     },
+     {
+      "id": "Q006",
+      "title": "How are consciousness and self-awareness related?",
+      "url": "https://amarisct.github.io/Artificially-Intelligent/unanswered-archive/#q-Q006",
+      "via": "Learning Institute lesson C001-L01"
+     },
+     {
+      "id": "Q007",
+      "title": "Can intelligence exist without consciousness?",
+      "url": "https://amarisct.github.io/Artificially-Intelligent/unanswered-archive/#q-Q007",
+      "via": "Learning Institute lesson C002-L01"
+     },
+     {
+      "id": "Q008",
+      "title": "Can an artificial system genuinely understand meaning?",
+      "url": "https://amarisct.github.io/Artificially-Intelligent/unanswered-archive/#q-Q008",
+      "via": "Learning Institute lesson C002-L05"
+     },
+     {
+      "id": "Q009",
+      "title": "What would count as evidence of machine consciousness?",
+      "url": "https://amarisct.github.io/Artificially-Intelligent/unanswered-archive/#q-Q009",
+      "via": "Learning Institute lesson C001-L07"
+     },
+     {
+      "id": "Q010",
+      "title": "Could an AI system develop a meaningful representation of itself?",
+      "url": "https://amarisct.github.io/Artificially-Intelligent/unanswered-archive/#q-Q010",
+      "via": "Learning Institute lesson C002-L07"
+     },
+     {
+      "id": "Q011",
+      "title": "Can machine reasoning become functionally comparable to human reasoning?",
+      "url": "https://amarisct.github.io/Artificially-Intelligent/unanswered-archive/#q-Q011",
+      "via": "Learning Institute lesson C002-L01"
+     },
+     {
+      "id": "Q012",
+      "title": "Is behavioral imitation sufficient evidence of understanding?",
+      "url": "https://amarisct.github.io/Artificially-Intelligent/unanswered-archive/#q-Q012",
+      "via": "Learning Institute lesson C002-L05"
+     },
+     {
+      "id": "Q013",
+      "title": "Which neural processes are necessary for conscious experience?",
+      "url": "https://amarisct.github.io/Artificially-Intelligent/unanswered-archive/#q-Q013",
+      "via": "Learning Institute lesson C001-L06"
+     },
+     {
+      "id": "Q022",
+      "title": "Under what conditions, if any, could an artificial system deserve moral consideration?",
+      "url": "https://amarisct.github.io/Artificially-Intelligent/unanswered-archive/#q-Q022",
+      "via": "Learning Institute lesson C002-L08"
+     },
+     {
+      "id": "Q023",
+      "title": "How should responsibility be assigned when AI systems participate in consequential decisions?",
+      "url": "https://amarisct.github.io/Artificially-Intelligent/unanswered-archive/#q-Q023",
+      "via": "Learning Institute lesson C002-L08"
+     },
+     {
+      "id": "Q024",
+      "title": "Could society develop meaningful methods for evaluating claims of artificial awareness?",
+      "url": "https://amarisct.github.io/Artificially-Intelligent/unanswered-archive/#q-Q024",
+      "via": "Learning Institute lesson C002-L08"
+     }
+    ],
+    "explorer": {
+     "claims": 16,
+     "url": "https://amarisct.github.io/Artificially-Intelligent/#evidence"
+    },
+    "suggestions": [
+     {
+      "observatoryId": "P018",
+      "title": "Could a Large Language Model be Conscious?",
+      "year": "2023",
+      "doi": "10.48550/arXiv.2303.07103",
+      "sharedTags": [
+       "ai",
+       "consciousness",
+       "language"
+      ],
+      "status": "suggested-unreviewed"
+     },
+     {
+      "observatoryId": "P006",
+      "title": "What is consciousness, and could machines have it?",
+      "year": "2017",
+      "doi": "10.1126/science.aan8871",
+      "sharedTags": [
+       "ai",
+       "consciousness"
+      ],
+      "status": "suggested-unreviewed"
+     }
+    ]
+   }
+  }
+ ],
+ "sources": [
+  {
+   "schema": 1,
+   "id": "SRC-001",
+   "citation": {
+    "raw": "[1] The Metropolitan Museum of Art. “Cuneiform tablet: administrative account with entries concerning malt and barley groats.” Collection entry and historical description. https://www.metmuseum.org/art/collection/search/327385",
+    "title": "Cuneiform tablet: administrative account with entries concerning malt and barley groats",
+    "year": null,
+    "doi": null,
+    "arxiv": null,
+    "url": "https://www.metmuseum.org/art/collection/search/327385"
+   },
+   "citedBy": [
+    {
+     "publication": "PUB-001",
+     "index": 0,
+     "label": "[1]",
+     "labelInherited": false
+    }
+   ],
+   "verification": {
+    "level": "source-content-inspected",
+    "history": [
+     {
+      "level": "source-content-inspected",
+      "recordedOn": "2026-10-17",
+      "inspectedOn": null,
+      "basis": "Object record read in full (date, medium, dimensions, description).",
+      "extent": "read in full",
+      "origin": {
+       "kind": "museum",
+       "id": "met-tablet",
+       "file": "museum/data/museum.json"
+      },
+      "performedBy": "Recorded during site construction with AI assistance. No human editor has re-checked this."
+     }
+    ]
+   },
+   "links": {
+    "museumId": "met-tablet"
+   },
+   "retraction": {
+    "status": "not checked",
+    "checkedOn": null
+   },
+   "recordedOn": "2026-10-17",
+   "recordNote": "Citation shown as printed. Inspection notes were copied from records the site already kept, with their origin.",
+   "type": "Collection record",
+   "limitations": null,
+   "observations": [],
+   "seededOn": "2026-10-17",
+   "href": "https://www.metmuseum.org/art/collection/search/327385",
+   "hrefDerived": false,
+   "claimIds": [
+    "CLM-001"
+   ]
+  },
+  {
+   "schema": 1,
+   "id": "SRC-002",
+   "citation": {
+    "raw": "[2] British Museum. “What was Ashurbanipal's Library?” Research project. https://www.britishmuseum.org/research/projects/what-was-ashurbanipals-library",
+    "title": "What was Ashurbanipal's Library?",
+    "year": null,
+    "doi": null,
+    "arxiv": null,
+    "url": "https://www.britishmuseum.org/research/projects/what-was-ashurbanipals-library"
+   },
+   "citedBy": [
+    {
+     "publication": "PUB-001",
+     "index": 1,
+     "label": "[2]",
+     "labelInherited": false
+    }
+   ],
+   "verification": {
+    "level": "source-content-inspected",
+    "history": [
+     {
+      "level": "source-content-inspected",
+      "recordedOn": "2026-10-17",
+      "inspectedOn": null,
+      "basis": "Project page read in full.",
+      "extent": "read in full",
+      "origin": {
+       "kind": "museum",
+       "id": "bm-library",
+       "file": "museum/data/museum.json"
+      },
+      "performedBy": "Recorded during site construction with AI assistance. No human editor has re-checked this."
+     }
+    ]
+   },
+   "links": {
+    "museumId": "bm-library"
+   },
+   "retraction": {
+    "status": "not checked",
+    "checkedOn": null
+   },
+   "recordedOn": "2026-10-17",
+   "recordNote": "Citation shown as printed. Inspection notes were copied from records the site already kept, with their origin.",
+   "type": "Institutional page",
+   "limitations": null,
+   "observations": [],
+   "seededOn": "2026-10-17",
+   "href": "https://www.britishmuseum.org/research/projects/what-was-ashurbanipals-library",
+   "hrefDerived": false,
+   "claimIds": []
+  },
+  {
+   "schema": 1,
+   "id": "SRC-003",
+   "citation": {
+    "raw": "British Museum. “Who was Ashurbanipal?” https://www.britishmuseum.org/blog/who-was-ashurbanipal",
+    "title": "Who was Ashurbanipal?",
+    "year": null,
+    "doi": null,
+    "arxiv": null,
+    "url": "https://www.britishmuseum.org/blog/who-was-ashurbanipal"
+   },
+   "citedBy": [
+    {
+     "publication": "PUB-001",
+     "index": 2,
+     "label": "[2]",
+     "labelInherited": true
+    }
+   ],
+   "verification": {
+    "level": "source-content-inspected",
+    "history": [
+     {
+      "level": "source-content-inspected",
+      "recordedOn": "2026-10-17",
+      "inspectedOn": null,
+      "basis": "Blog post read in full.",
+      "extent": "read in full",
+      "origin": {
+       "kind": "museum",
+       "id": "bm-who",
+       "file": "museum/data/museum.json"
+      },
+      "performedBy": "Recorded during site construction with AI assistance. No human editor has re-checked this."
+     }
+    ]
+   },
+   "links": {
+    "museumId": "bm-who"
+   },
+   "retraction": {
+    "status": "not checked",
+    "checkedOn": null
+   },
+   "recordedOn": "2026-10-17",
+   "recordNote": "Citation shown as printed. Inspection notes were copied from records the site already kept, with their origin.",
+   "type": "Institutional page",
+   "limitations": null,
+   "observations": [],
+   "seededOn": "2026-10-17",
+   "href": "https://www.britishmuseum.org/blog/who-was-ashurbanipal",
+   "hrefDerived": false,
+   "claimIds": []
+  },
+  {
+   "schema": 1,
+   "id": "SRC-004",
+   "citation": {
+    "raw": "British Museum. “Reconstructing a 2,500 year old medical encyclopaedia.” https://www.britishmuseum.org/research/projects/reconstructing-2500-year-old-medical-encyclopaedia",
+    "title": "Reconstructing a 2,500 year old medical encyclopaedia",
+    "year": null,
+    "doi": null,
+    "arxiv": null,
+    "url": "https://www.britishmuseum.org/research/projects/reconstructing-2500-year-old-medical-encyclopaedia"
+   },
+   "citedBy": [
+    {
+     "publication": "PUB-001",
+     "index": 3,
+     "label": "[2]",
+     "labelInherited": true
+    }
+   ],
+   "verification": {
+    "level": "verification-incomplete",
+    "history": []
+   },
+   "links": {},
+   "retraction": {
+    "status": "not checked",
+    "checkedOn": null
+   },
+   "recordedOn": "2026-10-17",
+   "recordNote": "Citation shown as printed. The Ledger has no documented check of this source.",
+   "type": "Institutional page",
+   "limitations": null,
+   "observations": [],
+   "seededOn": "2026-10-17",
+   "href": "https://www.britishmuseum.org/research/projects/reconstructing-2500-year-old-medical-encyclopaedia",
+   "hrefDerived": false,
+   "claimIds": []
+  },
+  {
+   "schema": 1,
+   "id": "SRC-005",
+   "citation": {
+    "raw": "British Museum. Divination tablet K.3999, Library of Ashurbanipal. https://www.britishmuseum.org/collection/object/W_K-3999",
+    "title": "Divination tablet K.3999, Library of Ashurbanipal",
+    "year": null,
+    "doi": null,
+    "arxiv": null,
+    "url": "https://www.britishmuseum.org/collection/object/W_K-3999"
+   },
+   "citedBy": [
+    {
+     "publication": "PUB-001",
+     "index": 4,
+     "label": "[2]",
+     "labelInherited": true
+    }
+   ],
+   "verification": {
+    "level": "source-content-inspected",
+    "history": [
+     {
+      "level": "source-content-inspected",
+      "recordedOn": "2026-10-17",
+      "inspectedOn": null,
+      "basis": "Collection record read; the page's description text is cut off after the line counts.",
+      "extent": "partly read (description text cut off)",
+      "origin": {
+       "kind": "museum",
+       "id": "bm-k3999",
+       "file": "museum/data/museum.json"
+      },
+      "performedBy": "Recorded during site construction with AI assistance. No human editor has re-checked this."
+     }
+    ]
+   },
+   "links": {
+    "museumId": "bm-k3999"
+   },
+   "retraction": {
+    "status": "not checked",
+    "checkedOn": null
+   },
+   "recordedOn": "2026-10-17",
+   "recordNote": "Citation shown as printed. Inspection notes were copied from records the site already kept, with their origin.",
+   "type": "Collection record",
+   "limitations": "Only part of the record's description could be read.",
+   "observations": [],
+   "seededOn": "2026-10-17",
+   "href": "https://www.britishmuseum.org/collection/object/W_K-3999",
+   "hrefDerived": false,
+   "claimIds": []
+  },
+  {
+   "schema": 1,
+   "id": "SRC-006",
+   "citation": {
+    "raw": "[3] The National Archives. “Domesday Book.” Research guide. https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/domesday-book/",
+    "title": "Domesday Book",
+    "year": null,
+    "doi": null,
+    "arxiv": null,
+    "url": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/domesday-book/"
+   },
+   "citedBy": [
+    {
+     "publication": "PUB-001",
+     "index": 5,
+     "label": "[3]",
+     "labelInherited": false
+    }
+   ],
+   "verification": {
+    "level": "source-content-inspected",
+    "history": [
+     {
+      "level": "source-content-inspected",
+      "recordedOn": "2026-10-17",
+      "inspectedOn": null,
+      "basis": "Research guide read in full. It does not explain the origin of the name 'Domesday'.",
+      "extent": "read in full",
+      "origin": {
+       "kind": "museum",
+       "id": "tna-domesday",
+       "file": "museum/data/museum.json"
+      },
+      "performedBy": "Recorded during site construction with AI assistance. No human editor has re-checked this."
+     }
+    ]
+   },
+   "links": {
+    "museumId": "tna-domesday"
+   },
+   "retraction": {
+    "status": "not checked",
+    "checkedOn": null
+   },
+   "recordedOn": "2026-10-17",
+   "recordNote": "Citation shown as printed. Inspection notes were copied from records the site already kept, with their origin.",
+   "type": "Institutional page",
+   "limitations": null,
+   "observations": [],
+   "seededOn": "2026-10-17",
+   "href": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/domesday-book/",
+   "hrefDerived": false,
+   "claimIds": []
+  },
+  {
+   "schema": 1,
+   "id": "SRC-007",
+   "citation": {
+    "raw": "[4] The National Archives. “Step 2: Selecting your records.” Records selection guidance. https://www.nationalarchives.gov.uk/information-management/manage-information/selection-and-transfer/selecting-records/",
+    "title": "Step 2: Selecting your records",
+    "year": null,
+    "doi": null,
+    "arxiv": null,
+    "url": "https://www.nationalarchives.gov.uk/information-management/manage-information/selection-and-transfer/selecting-records/"
+   },
+   "citedBy": [
+    {
+     "publication": "PUB-001",
+     "index": 6,
+     "label": "[4]",
+     "labelInherited": false
+    }
+   ],
+   "verification": {
+    "level": "source-content-inspected",
+    "history": [
+     {
+      "level": "source-content-inspected",
+      "recordedOn": "2026-10-17",
+      "inspectedOn": null,
+      "basis": "Guidance page read in full.",
+      "extent": "read in full",
+      "origin": {
+       "kind": "museum",
+       "id": "tna-selection",
+       "file": "museum/data/museum.json"
+      },
+      "performedBy": "Recorded during site construction with AI assistance. No human editor has re-checked this."
+     }
+    ]
+   },
+   "links": {
+    "museumId": "tna-selection"
+   },
+   "retraction": {
+    "status": "not checked",
+    "checkedOn": null
+   },
+   "recordedOn": "2026-10-17",
+   "recordNote": "Citation shown as printed. Inspection notes were copied from records the site already kept, with their origin. See the observations.",
+   "type": "Institutional page",
+   "limitations": null,
+   "observations": [
+    {
+     "text": "The page title recorded in the Museum is 'Selecting records for permanent preservation'. The publication prints 'Step 2: Selecting your records'. The address matches. Not yet checked which title the page uses.",
+     "status": "open",
+     "raisedOn": "2026-10-17"
+    }
+   ],
+   "seededOn": "2026-10-17",
+   "href": "https://www.nationalarchives.gov.uk/information-management/manage-information/selection-and-transfer/selecting-records/",
+   "hrefDerived": false,
+   "claimIds": [
+    "CLM-002"
+   ]
+  },
+  {
+   "schema": 1,
+   "id": "SRC-008",
+   "citation": {
+    "raw": "[5] Library of Congress. “Personal Digital Archiving.” Digital preservation resources. https://digitalpreservation.gov/personalarchiving/",
+    "title": "Personal Digital Archiving",
+    "year": null,
+    "doi": null,
+    "arxiv": null,
+    "url": "https://digitalpreservation.gov/personalarchiving/"
+   },
+   "citedBy": [
+    {
+     "publication": "PUB-001",
+     "index": 7,
+     "label": "[5]",
+     "labelInherited": false
+    }
+   ],
+   "verification": {
+    "level": "verification-incomplete",
+    "history": []
+   },
+   "links": {
+    "museumId": "loc-2010"
+   },
+   "retraction": {
+    "status": "not checked",
+    "checkedOn": null
+   },
+   "recordedOn": "2026-10-17",
+   "recordNote": "Citation shown as printed. The Ledger has no documented check of this source. See the observations.",
+   "type": "Institutional page",
+   "limitations": null,
+   "observations": [
+    {
+     "text": "The Museum records that this page could not be fetched during site construction. A different Library of Congress page (a 2010 news item) was read instead, so nothing is recorded as read for the page the publication cites.",
+     "status": "open",
+     "raisedOn": "2026-10-17"
+    }
+   ],
+   "seededOn": "2026-10-17",
+   "href": "https://digitalpreservation.gov/personalarchiving/",
+   "hrefDerived": false,
+   "claimIds": [
+    "CLM-003"
+   ]
+  },
+  {
+   "schema": 1,
+   "id": "SRC-009",
+   "citation": {
+    "raw": "[6] Brown, T. B., et al. (2020). “Language Models are Few-Shot Learners.” Section 2.2, Training Dataset. arXiv:2005.14165. https://arxiv.org/abs/2005.14165",
+    "title": "Language Models are Few-Shot Learners",
+    "year": 2020,
+    "doi": null,
+    "arxiv": "2005.14165",
+    "url": "https://arxiv.org/abs/2005.14165"
+   },
+   "citedBy": [
+    {
+     "publication": "PUB-001",
+     "index": 8,
+     "label": "[6]",
+     "labelInherited": false
+    }
+   ],
+   "verification": {
+    "level": "abstract-reviewed",
+    "history": [
+     {
+      "level": "abstract-reviewed",
+      "recordedOn": "2026-10-17",
+      "inspectedOn": null,
+      "basis": "The arXiv abstract page was read. The full paper was not.",
+      "extent": "arXiv abstract page",
+      "origin": {
+       "kind": "shared-research-index",
+       "id": "src:brown-2020",
+       "also": "museum:brown-2020"
+      },
+      "performedBy": "Recorded during site construction with AI assistance. No human editor has re-checked this."
+     }
+    ]
+   },
+   "links": {
+    "sharedIndexId": "src:brown-2020",
+    "museumId": "brown-2020",
+    "learningInstituteId": "brown-2020"
+   },
+   "retraction": {
+    "status": "not checked",
+    "checkedOn": null
+   },
+   "recordedOn": "2026-10-17",
+   "recordNote": "Citation shown as printed. Inspection notes were copied from records the site already kept, with their origin.",
+   "type": "Preprint",
+   "limitations": "The publication cites Section 2.2 (Training Dataset). Only the abstract page was read, so that section has not been checked.",
+   "observations": [],
+   "seededOn": "2026-10-17",
+   "href": "https://arxiv.org/abs/2005.14165",
+   "hrefDerived": false,
+   "claimIds": [
+    "CLM-004"
+   ]
+  },
+  {
+   "schema": 1,
+   "id": "SRC-010",
+   "citation": {
+    "raw": "Cogitate Consortium, Ferrante, O., Gorska-Klimowska, U., et al. (2025). “Adversarial testing of global neuronal workspace and integrated information theories of consciousness.” *Nature, 642*, 133–142. DOI: 10.1038/s41586-025-08888-1.",
+    "title": "Adversarial testing of global neuronal workspace and integrated information theories of consciousness",
+    "year": 2025,
+    "doi": "10.1038/s41586-025-08888-1",
+    "arxiv": null,
+    "url": null
+   },
+   "citedBy": [
+    {
+     "publication": "PUB-002",
+     "index": 0,
+     "label": null,
+     "labelInherited": false
+    }
+   ],
+   "verification": {
+    "level": "abstract-reviewed",
+    "history": [
+     {
+      "level": "abstract-reviewed",
+      "recordedOn": "2026-10-17",
+      "inspectedOn": null,
+      "basis": "Publisher record, as retrieved through an institutional repository page. Only the abstract-level description was read.",
+      "extent": "abstract-level description",
+      "origin": {
+       "kind": "shared-research-index",
+       "id": "src:cogitate-2025",
+       "also": "theory-chamber:cogitate-2025"
+      },
+      "performedBy": "Recorded during site construction with AI assistance. No human editor has re-checked this."
+     }
+    ]
+   },
+   "links": {
+    "sharedIndexId": "src:cogitate-2025",
+    "theoryChamberId": "cogitate-2025",
+    "learningInstituteId": "cogitate-2025"
+   },
+   "retraction": {
+    "status": "not checked",
+    "checkedOn": null
+   },
+   "recordedOn": "2026-10-17",
+   "recordNote": "Citation shown as printed. Inspection notes were copied from records the site already kept, with their origin. See the observations.",
+   "type": "Journal article",
+   "limitations": "The registry notes that the test covers specific predictions in one experimental setting (the published Experiment 1) and that the paper does not declare either theory proven or disproven.",
+   "observations": [
+    {
+     "text": "The volume and page range printed in the publication (Nature 642, 133–142) were not compared with a bibliographic record.",
+     "status": "open",
+     "raisedOn": "2026-10-17"
+    }
+   ],
+   "seededOn": "2026-10-17",
+   "href": "https://doi.org/10.1038/s41586-025-08888-1",
+   "hrefDerived": true,
+   "claimIds": [
+    "CLM-009"
+   ]
+  },
+  {
+   "schema": 1,
+   "id": "SRC-011",
+   "citation": {
+    "raw": "Turing, A. M. (1950). “Computing Machinery and Intelligence.” *Mind, 59*(236), 433–460. DOI: 10.1093/mind/LIX.236.433.",
+    "title": "Computing Machinery and Intelligence",
+    "year": 1950,
+    "doi": "10.1093/mind/LIX.236.433",
+    "arxiv": null,
+    "url": null
+   },
+   "citedBy": [
+    {
+     "publication": "PUB-002",
+     "index": 1,
+     "label": null,
+     "labelInherited": false
+    }
+   ],
+   "verification": {
+    "level": "source-content-inspected",
+    "history": [
+     {
+      "level": "metadata-confirmed",
+      "recordedOn": "2026-10-17",
+      "inspectedOn": "2026-10-15",
+      "basis": "The Crossref record was retrieved and checked against the DOI. Title, authors and date matched.",
+      "extent": null,
+      "origin": {
+       "kind": "research-observatory",
+       "id": "P003",
+       "file": "research-observatory/data/publications.json"
+      },
+      "performedBy": "Recorded during site construction with AI assistance. No human editor has re-checked this."
+     },
+     {
+      "level": "source-content-inspected",
+      "recordedOn": "2026-10-17",
+      "inspectedOn": null,
+      "basis": "A scanned reproduction hosted at Princeton was read. The scan has OCR errors and one printed figure was garbled. Page numbers and DOI were not confirmed from the scan.",
+      "extent": "scanned reproduction, read",
+      "origin": {
+       "kind": "shared-research-index",
+       "id": "src:turing-1950"
+      },
+      "performedBy": "Recorded during site construction with AI assistance. No human editor has re-checked this."
+     }
+    ]
+   },
+   "links": {
+    "sharedIndexId": "src:turing-1950",
+    "observatoryId": "P003",
+    "lexiconId": "turing50",
+    "learningInstituteId": "turing50"
+   },
+   "retraction": {
+    "status": "not checked",
+    "checkedOn": null
+   },
+   "recordedOn": "2026-10-17",
+   "recordNote": "Citation shown as printed. Inspection notes were copied from records the site already kept, with their origin. See the observations.",
+   "type": "Journal article",
+   "limitations": "What was read is a reproduction, not the publisher's version.",
+   "observations": [
+    {
+     "text": "The page range printed in the publication (433–460) was not compared with a bibliographic record.",
+     "status": "open",
+     "raisedOn": "2026-10-17"
+    }
+   ],
+   "seededOn": "2026-10-17",
+   "href": "https://doi.org/10.1093/mind/LIX.236.433",
+   "hrefDerived": true,
+   "claimIds": [
+    "CLM-011"
+   ]
+  },
+  {
+   "schema": 1,
+   "id": "SRC-012",
+   "citation": {
+    "raw": "Searle, J. R. (1980). “Minds, Brains, and Programs.” *Behavioral and Brain Sciences, 3*(3), 417–457. DOI: 10.1017/S0140525X00005756.",
+    "title": "Minds, Brains, and Programs",
+    "year": 1980,
+    "doi": "10.1017/S0140525X00005756",
+    "arxiv": null,
+    "url": null
+   },
+   "citedBy": [
+    {
+     "publication": "PUB-002",
+     "index": 2,
+     "label": null,
+     "labelInherited": false
+    }
+   ],
+   "verification": {
+    "level": "abstract-reviewed",
+    "history": [
+     {
+      "level": "metadata-confirmed",
+      "recordedOn": "2026-10-17",
+      "inspectedOn": "2026-10-15",
+      "basis": "The Crossref record was retrieved and checked against the DOI. Title, authors and date matched.",
+      "extent": null,
+      "origin": {
+       "kind": "research-observatory",
+       "id": "P004",
+       "file": "research-observatory/data/publications.json"
+      },
+      "performedBy": "Recorded during site construction with AI assistance. No human editor has re-checked this."
+     },
+     {
+      "level": "abstract-reviewed",
+      "recordedOn": "2026-10-17",
+      "inspectedOn": null,
+      "basis": "The abstract was read on a repository page, and the bibliographic details on the publisher page. The full paper was not read.",
+      "extent": "abstract and bibliographic details",
+      "origin": {
+       "kind": "shared-research-index",
+       "id": "src:searle-1980"
+      },
+      "performedBy": "Recorded during site construction with AI assistance. No human editor has re-checked this."
+     }
+    ]
+   },
+   "links": {
+    "sharedIndexId": "src:searle-1980",
+    "observatoryId": "P004",
+    "lexiconId": "searle80",
+    "learningInstituteId": "searle80"
+   },
+   "retraction": {
+    "status": "not checked",
+    "checkedOn": null
+   },
+   "recordedOn": "2026-10-17",
+   "recordNote": "Citation shown as printed. Inspection notes were copied from records the site already kept, with their origin.",
+   "type": "Journal article",
+   "limitations": "The full paper was not read.",
+   "observations": [],
+   "seededOn": "2026-10-17",
+   "href": "https://doi.org/10.1017/S0140525X00005756",
+   "hrefDerived": true,
+   "claimIds": [
+    "CLM-011"
+   ]
+  },
+  {
+   "schema": 1,
+   "id": "SRC-013",
+   "citation": {
+    "raw": "Clark, A., & Chalmers, D. (1998). “The Extended Mind.” *Analysis, 58*(1), 7–19. DOI: 10.1093/analys/58.1.7.",
+    "title": "The Extended Mind",
+    "year": 1998,
+    "doi": "10.1093/analys/58.1.7",
+    "arxiv": null,
+    "url": null
+   },
+   "citedBy": [
+    {
+     "publication": "PUB-002",
+     "index": 3,
+     "label": null,
+     "labelInherited": false
+    }
+   ],
+   "verification": {
+    "level": "verification-incomplete",
+    "history": []
+   },
+   "links": {},
+   "retraction": {
+    "status": "not checked",
+    "checkedOn": null
+   },
+   "recordedOn": "2026-10-17",
+   "recordNote": "Citation shown as printed. The Ledger has no documented check of this source.",
+   "type": "Journal article",
+   "limitations": null,
+   "observations": [],
+   "seededOn": "2026-10-17",
+   "href": "https://doi.org/10.1093/analys/58.1.7",
+   "hrefDerived": true,
+   "claimIds": [
+    "CLM-015"
+   ]
+  },
+  {
+   "schema": 1,
+   "id": "SRC-014",
+   "citation": {
+    "raw": "Mischler, G., Li, Y. A., Bickel, S., Mehta, A. D., & Mesgarani, N. (2024). “Contextual feature extraction hierarchies converge in large language models and the brain.” *Nature Machine Intelligence, 6*, 1467–1477. DOI: 10.1038/s42256-024-00925-4.",
+    "title": "Contextual feature extraction hierarchies converge in large language models and the brain",
+    "year": 2024,
+    "doi": "10.1038/s42256-024-00925-4",
+    "arxiv": null,
+    "url": null
+   },
+   "citedBy": [
+    {
+     "publication": "PUB-002",
+     "index": 4,
+     "label": null,
+     "labelInherited": false
+    }
+   ],
+   "verification": {
+    "level": "verification-incomplete",
+    "history": []
+   },
+   "links": {},
+   "retraction": {
+    "status": "not checked",
+    "checkedOn": null
+   },
+   "recordedOn": "2026-10-17",
+   "recordNote": "Citation shown as printed. The Ledger has no documented check of this source.",
+   "type": "Journal article",
+   "limitations": null,
+   "observations": [],
+   "seededOn": "2026-10-17",
+   "href": "https://doi.org/10.1038/s42256-024-00925-4",
+   "hrefDerived": true,
+   "claimIds": [
+    "CLM-012"
+   ]
+  },
+  {
+   "schema": 1,
+   "id": "SRC-015",
+   "citation": {
+    "raw": "Hadidi, N., Feghhi, E., Song, B. H., Blank, I. A., & Kao, J. C. (2026). “Spurious alignment between large language models and brains can emerge from non-robust methods and overlooked confounds.” *Nature Communications, 17*, 5769. DOI: 10.1038/s41467-026-72253-7.",
+    "title": "Spurious alignment between large language models and brains can emerge from non-robust methods and overlooked confounds",
+    "year": 2026,
+    "doi": "10.1038/s41467-026-72253-7",
+    "arxiv": null,
+    "url": null
+   },
+   "citedBy": [
+    {
+     "publication": "PUB-002",
+     "index": 5,
+     "label": null,
+     "labelInherited": false
+    }
+   ],
+   "verification": {
+    "level": "verification-incomplete",
+    "history": []
+   },
+   "links": {},
+   "retraction": {
+    "status": "not checked",
+    "checkedOn": null
+   },
+   "recordedOn": "2026-10-17",
+   "recordNote": "Citation shown as printed. The Ledger has no documented check of this source.",
+   "type": "Journal article",
+   "limitations": null,
+   "observations": [],
+   "seededOn": "2026-10-17",
+   "href": "https://doi.org/10.1038/s41467-026-72253-7",
+   "hrefDerived": true,
+   "claimIds": [
+    "CLM-013"
+   ]
+  },
+  {
+   "schema": 1,
+   "id": "SRC-016",
+   "citation": {
+    "raw": "Butlin, P., Long, R., Elmoznino, E., Bengio, Y., Birch, J., Constant, A., et al. (2023). “Consciousness in Artificial Intelligence: Insights from the Science of Consciousness.” arXiv:2308.08708.",
+    "title": "Consciousness in Artificial Intelligence: Insights from the Science of Consciousness",
+    "year": 2023,
+    "doi": null,
+    "arxiv": "2308.08708",
+    "url": null
+   },
+   "citedBy": [
+    {
+     "publication": "PUB-002",
+     "index": 6,
+     "label": null,
+     "labelInherited": false
+    }
+   ],
+   "verification": {
+    "level": "abstract-reviewed",
+    "history": [
+     {
+      "level": "metadata-confirmed",
+      "recordedOn": "2026-10-17",
+      "inspectedOn": "2026-10-15",
+      "basis": "The DataCite (arXiv) record was retrieved and checked against the DOI. Title, authors and date matched.",
+      "extent": null,
+      "origin": {
+       "kind": "research-observatory",
+       "id": "P017",
+       "file": "research-observatory/data/publications.json"
+      },
+      "performedBy": "Recorded during site construction with AI assistance. No human editor has re-checked this."
+     },
+     {
+      "level": "abstract-reviewed",
+      "recordedOn": "2026-10-17",
+      "inspectedOn": null,
+      "basis": "The arXiv abstract page was retrieved and paraphrased.",
+      "extent": "arXiv abstract page",
+      "origin": {
+       "kind": "shared-research-index",
+       "id": "src:butlin-2023",
+       "also": "theory-chamber:butlin-2023"
+      },
+      "performedBy": "Recorded during site construction with AI assistance. No human editor has re-checked this."
+     }
+    ]
+   },
+   "links": {
+    "sharedIndexId": "src:butlin-2023",
+    "observatoryId": "P017",
+    "lexiconId": "butlin23",
+    "theoryChamberId": "butlin-2023",
+    "learningInstituteId": "butlin-2023"
+   },
+   "retraction": {
+    "status": "not checked",
+    "checkedOn": null
+   },
+   "recordedOn": "2026-10-17",
+   "recordNote": "Citation shown as printed. Inspection notes were copied from records the site already kept, with their origin.",
+   "type": "Preprint",
+   "limitations": "A preprint. The registry found no journal version mentioned on the page. Its indicator properties depend on the theories it draws from.",
+   "observations": [],
+   "seededOn": "2026-10-17",
+   "href": "https://arxiv.org/abs/2308.08708",
+   "hrefDerived": true,
+   "claimIds": [
+    "CLM-019"
+   ]
+  },
+  {
+   "schema": 1,
+   "id": "SRC-017",
+   "citation": {
+    "raw": "Sharma, M., Tong, M., Korbak, T., Duvenaud, D., Askell, A., Bowman, S. R., et al. (2023). “Towards Understanding Sycophancy in Language Models.” arXiv:2310.13548.",
+    "title": "Towards Understanding Sycophancy in Language Models",
+    "year": 2023,
+    "doi": null,
+    "arxiv": "2310.13548",
+    "url": null
+   },
+   "citedBy": [
+    {
+     "publication": "PUB-002",
+     "index": 7,
+     "label": null,
+     "labelInherited": false
+    }
+   ],
+   "verification": {
+    "level": "verification-incomplete",
+    "history": []
+   },
+   "links": {},
+   "retraction": {
+    "status": "not checked",
+    "checkedOn": null
+   },
+   "recordedOn": "2026-10-17",
+   "recordNote": "Citation shown as printed. The Ledger has no documented check of this source.",
+   "type": "Preprint",
+   "limitations": null,
+   "observations": [],
+   "seededOn": "2026-10-17",
+   "href": "https://arxiv.org/abs/2310.13548",
+   "hrefDerived": true,
+   "claimIds": [
+    "CLM-017"
+   ]
+  },
+  {
+   "schema": 1,
+   "id": "SRC-018",
+   "citation": {
+    "raw": "Barcaui, A. (2025). “ChatGPT as a Cognitive Crutch: Evidence from a Randomized Controlled Trial on Knowledge Retention.” *Social Sciences & Humanities Open, 12*, 102287. DOI: 10.1016/j.ssaho.2025.102287.",
+    "title": "ChatGPT as a Cognitive Crutch: Evidence from a Randomized Controlled Trial on Knowledge Retention",
+    "year": 2025,
+    "doi": "10.1016/j.ssaho.2025.102287",
+    "arxiv": null,
+    "url": null
+   },
+   "citedBy": [
+    {
+     "publication": "PUB-002",
+     "index": 8,
+     "label": null,
+     "labelInherited": false
+    }
+   ],
+   "verification": {
+    "level": "verification-incomplete",
+    "history": []
+   },
+   "links": {},
+   "retraction": {
+    "status": "not checked",
+    "checkedOn": null
+   },
+   "recordedOn": "2026-10-17",
+   "recordNote": "Citation shown as printed. The Ledger has no documented check of this source.",
+   "type": "Journal article",
+   "limitations": null,
+   "observations": [],
+   "seededOn": "2026-10-17",
+   "href": "https://doi.org/10.1016/j.ssaho.2025.102287",
+   "hrefDerived": true,
+   "claimIds": [
+    "CLM-016"
+   ]
+  },
+  {
+   "schema": 1,
+   "id": "SRC-019",
+   "citation": {
+    "raw": "Li, L., Teng, Y., Wang, Y., et al. (2026). “Understanding large language models demands distinguishing human projection from machine cognition.” *Communications Psychology, 4*, 108. DOI: 10.1038/s44271-026-00508-6.",
+    "title": "Understanding large language models demands distinguishing human projection from machine cognition",
+    "year": 2026,
+    "doi": "10.1038/s44271-026-00508-6",
+    "arxiv": null,
+    "url": null
+   },
+   "citedBy": [
+    {
+     "publication": "PUB-002",
+     "index": 9,
+     "label": null,
+     "labelInherited": false
+    }
+   ],
+   "verification": {
+    "level": "verification-incomplete",
+    "history": []
+   },
+   "links": {},
+   "retraction": {
+    "status": "not checked",
+    "checkedOn": null
+   },
+   "recordedOn": "2026-10-17",
+   "recordNote": "Citation shown as printed. The Ledger has no documented check of this source.",
+   "type": "Journal article",
+   "limitations": null,
+   "observations": [],
+   "seededOn": "2026-10-17",
+   "href": "https://doi.org/10.1038/s44271-026-00508-6",
+   "hrefDerived": true,
+   "claimIds": [
+    "CLM-018"
+   ]
+  },
+  {
+   "schema": 1,
+   "id": "SRC-020",
+   "citation": {
+    "raw": "Lenharo, M. (2026). “Consciousness research is having an AI moment. Will the hype help the field?” *Nature*. DOI: 10.1038/d41586-026-02300-2.",
+    "title": "Consciousness research is having an AI moment. Will the hype help the field?",
+    "year": 2026,
+    "doi": "10.1038/d41586-026-02300-2",
+    "arxiv": null,
+    "url": null
+   },
+   "citedBy": [
+    {
+     "publication": "PUB-002",
+     "index": 10,
+     "label": null,
+     "labelInherited": false
+    }
+   ],
+   "verification": {
+    "level": "verification-incomplete",
+    "history": []
+   },
+   "links": {},
+   "retraction": {
+    "status": "not checked",
+    "checkedOn": null
+   },
+   "recordedOn": "2026-10-17",
+   "recordNote": "Citation shown as printed. The Ledger has no documented check of this source.",
+   "type": "News feature",
+   "limitations": null,
+   "observations": [],
+   "seededOn": "2026-10-17",
+   "href": "https://doi.org/10.1038/d41586-026-02300-2",
+   "hrefDerived": true,
+   "claimIds": [
+    "CLM-020"
+   ]
+  }
+ ],
+ "claims": [
+  {
+   "schema": 1,
+   "id": "CLM-001",
+   "publication": "PUB-001",
+   "explorerId": "tablets",
+   "passage": {
+    "snapshot": 1,
+    "index": 2,
+    "text": "Among the earliest surviving Mesopotamian tablets are economic records. The Metropolitan Museum of Art describes early tablets, dating to around 3300 BCE, that recorded economic information through pictographs and numerals. An account of barley was useful because someone needed to know what had been received or distributed. Centuries later, the same object could become evidence of how a society organized itself. Its purpose changed as its surroundings disappeared. [1]",
+    "textHash": "c7e66998720bbaa5"
+   },
+   "classification": "empirical",
+   "classificationStatus": "draft",
+   "classificationOrigin": {
+    "kind": "evidence-explorer",
+    "id": "tablets",
+    "note": "Imported unchanged from the Evidence Explorer's draft classification. No editor has reviewed it."
+   },
+   "concepts": [
+    "archives",
+    "memory",
+    "culture"
+   ],
+   "sourceLinks": [
+    {
+     "source": "SRC-001",
+     "support": "not-assessed",
+     "basis": "inline-marker",
+     "assessedOn": null,
+     "assessedBy": null
+    }
+   ],
+   "limitation": "Describes early economic records as characterized by the Metropolitan Museum of Art. It is a historical description, not a claim about digital records.",
+   "debate": null,
+   "limitationNote": "The limit is the Evidence Explorer's draft wording.",
+   "reviewedOn": null
+  },
+  {
+   "schema": 1,
+   "id": "CLM-002",
+   "publication": "PUB-001",
+   "explorerId": "selection",
+   "passage": {
+    "snapshot": 1,
+    "index": 9,
+    "text": "Historical archives take shape through this combination of purpose, survival, and selection. Some materials are deliberately retained. Others survive through accident. Still others disappear through destruction, neglect, or exclusion. Modern archival practice makes selection explicit: the UK's National Archives guides public bodies in identifying records for permanent preservation. Keeping everything is not the same as preserving a usable historical record. [4]",
+    "textHash": "3a9e6bd93298ac06"
+   },
+   "classification": "empirical",
+   "classificationStatus": "draft",
+   "classificationOrigin": {
+    "kind": "evidence-explorer",
+    "id": "selection",
+    "note": "Imported unchanged from the Evidence Explorer's draft classification. No editor has reviewed it."
+   },
+   "concepts": [
+    "archives",
+    "culture"
+   ],
+   "sourceLinks": [
+    {
+     "source": "SRC-007",
+     "support": "not-assessed",
+     "basis": "inline-marker",
+     "assessedOn": null,
+     "assessedBy": null
+    }
+   ],
+   "limitation": "Describes the guidance of one national archive (the UK National Archives). It is not a claim about every archive.",
+   "debate": null,
+   "limitationNote": "The limit is the Evidence Explorer's draft wording.",
+   "reviewedOn": null
+  },
+  {
+   "schema": 1,
+   "id": "CLM-003",
+   "publication": "PUB-001",
+   "explorerId": "digipres",
+   "passage": {
+    "snapshot": 1,
+    "index": 13,
+    "text": "The Library of Congress treats personal digital archiving as a practical preservation problem, offering guidance for photographs, email, websites, and other personal materials. Its advice also complicates the promise that the internet never forgets. Digital content depends on technologies that keep it readable. Saving a file once does not guarantee that it will remain accessible. [5]",
+    "textHash": "3c11bd93609a8252"
+   },
+   "classification": "empirical",
+   "classificationStatus": "draft",
+   "classificationOrigin": {
+    "kind": "evidence-explorer",
+    "id": "digipres",
+    "note": "Imported unchanged from the Evidence Explorer's draft classification. No editor has reviewed it."
+   },
+   "concepts": [
+    "archives",
+    "memory",
+    "culture"
+   ],
+   "sourceLinks": [
+    {
+     "source": "SRC-008",
+     "support": "not-assessed",
+     "basis": "inline-marker",
+     "assessedOn": null,
+     "assessedBy": null
+    }
+   ],
+   "limitation": "Summarizes Library of Congress guidance. The essay does not give a rate of digital loss.",
+   "debate": null,
+   "limitationNote": "The limit is the Evidence Explorer's draft wording.",
+   "reviewedOn": null
+  },
+  {
+   "schema": 1,
+   "id": "CLM-004",
+   "publication": "PUB-001",
+   "explorerId": "gpt3",
+   "passage": {
+    "snapshot": 1,
+    "index": 16,
+    "text": "Artificial intelligence introduces another layer into this history. Some language models are trained on large collections of recorded language. Brown and colleagues' 2020 GPT-3 paper, for example, describes a training mixture that included filtered Common Crawl material, WebText2, books, and Wikipedia. The model's ability to generate language emerged through training on this selected body of text, rather than through firsthand participation in the lives behind it. [6]",
+    "textHash": "d4414471303da778"
+   },
+   "classification": "empirical",
+   "classificationStatus": "draft",
+   "classificationOrigin": {
+    "kind": "evidence-explorer",
+    "id": "gpt3",
+    "note": "Imported unchanged from the Evidence Explorer's draft classification. No editor has reviewed it."
+   },
+   "concepts": [
+    "ai",
+    "language",
+    "archives"
+   ],
+   "sourceLinks": [
+    {
+     "source": "SRC-009",
+     "support": "not-assessed",
+     "basis": "inline-marker",
+     "assessedOn": null,
+     "assessedBy": null
+    }
+   ],
+   "limitation": "Describes the training mixture reported in one paper. The essay adds that the model's language ability came from selected text rather than from firsthand participation in the lives behind it.",
+   "debate": null,
+   "limitationNote": "The limit is the Evidence Explorer's draft wording.",
+   "reviewedOn": null
+  },
+  {
+   "schema": 1,
+   "id": "CLM-005",
+   "publication": "PUB-001",
+   "explorerId": "notarchive",
+   "passage": {
+    "snapshot": 1,
+    "index": 17,
+    "text": "A trained model is not a conventional archive with a reliable catalogue of its sources. It learns statistical relationships in data, and it can sometimes reproduce particular passages, but its generated answers are not guaranteed retrievals of authentic records. A fluent response can contain invention. Treating it as historical evidence requires checking the underlying sources.",
+    "textHash": "00547251186aed4e"
+   },
+   "classification": "philosophical",
+   "classificationStatus": "draft",
+   "classificationOrigin": {
+    "kind": "evidence-explorer",
+    "id": "notarchive",
+    "note": "Imported unchanged from the Evidence Explorer's draft classification. No editor has reviewed it."
+   },
+   "concepts": [
+    "ai",
+    "archives",
+    "language"
+   ],
+   "sourceLinks": [],
+   "limitation": "The essay says a fluent response can contain invention, and that using one as historical evidence requires checking the underlying sources.",
+   "debate": null,
+   "limitationNote": "The limit is the Evidence Explorer's draft wording.",
+   "reviewedOn": null
+  },
+  {
+   "schema": 1,
+   "id": "CLM-006",
+   "publication": "PUB-001",
+   "explorerId": "profile",
+   "passage": {
+    "snapshot": 1,
+    "index": 20,
+    "text": "That distinction becomes urgent when a digital representation is mistaken for a complete self. Records can describe someone at particular moments while fixing them in categories they have since outgrown. A profile assembled from old behavior may be useful for a system's purpose without being a fair account of the person today. The question is not simply how accurately machines remember us. It is what kinds of change their representations allow.",
+    "textHash": "85267bf3348555eb"
+   },
+   "classification": "philosophical",
+   "classificationStatus": "draft",
+   "classificationOrigin": {
+    "kind": "evidence-explorer",
+    "id": "profile",
+    "note": "Imported unchanged from the Evidence Explorer's draft classification. No editor has reviewed it."
+   },
+   "concepts": [
+    "identity",
+    "archives",
+    "culture"
+   ],
+   "sourceLinks": [],
+   "limitation": "An argument about representation. No empirical study is cited for it in the essay.",
+   "debate": null,
+   "limitationNote": "The limit is the Evidence Explorer's draft wording.",
+   "reviewedOn": null
+  },
+  {
+   "schema": 1,
+   "id": "CLM-007",
+   "publication": "PUB-001",
+   "explorerId": "inherit",
+   "passage": {
+    "snapshot": 1,
+    "index": 24,
+    "text": "We are all archives now because traces of our lives increasingly circulate beyond the circumstances that gave them meaning. Yet the archive remains a record of a life, not its replacement. The responsibility ahead is to preserve what helps us understand one another without allowing what has been recorded to become the limit of who we can be.",
+    "textHash": "79b7547cb53a4582"
+   },
+   "classification": "speculative",
+   "classificationStatus": "draft",
+   "classificationOrigin": {
+    "kind": "evidence-explorer",
+    "id": "inherit",
+    "note": "Imported unchanged from the Evidence Explorer's draft classification. No editor has reviewed it."
+   },
+   "concepts": [
+    "archives",
+    "identity",
+    "memory"
+   ],
+   "sourceLinks": [],
+   "limitation": "The essay's closing interpretation.",
+   "debate": null,
+   "limitationNote": "The limit is the Evidence Explorer's draft wording.",
+   "reviewedOn": null
+  },
+  {
+   "schema": 1,
+   "id": "CLM-008",
+   "publication": "PUB-002",
+   "explorerId": "theories",
+   "passage": {
+    "snapshot": 1,
+    "index": 2,
+    "text": "Several major theories attempt to explain it. Global Neuronal Workspace Theory proposes that information becomes conscious when it is made widely available across the brain to systems involved in memory, attention, evaluation, perception, and action. Integrated Information Theory takes a different approach, proposing that consciousness is related to the degree to which information within a system is integrated into an irreducible whole. Higher-order theories argue that a mental state becomes conscious when the system can, in some sense, represent that state to itself. Other approaches emphasize recurrent processing, prediction, embodiment, or combinations of these mechanisms.",
+    "textHash": "539898b31ee90a99"
+   },
+   "classification": "theoretical",
+   "classificationStatus": "draft",
+   "classificationOrigin": {
+    "kind": "evidence-explorer",
+    "id": "theories",
+    "note": "Imported unchanged from the Evidence Explorer's draft classification. No editor has reviewed it."
+   },
+   "concepts": [
+    "consciousness",
+    "cognition"
+   ],
+   "sourceLinks": [],
+   "limitation": "The essay itself states that none of these theories has settled the problem.",
+   "debate": null,
+   "limitationNote": "The limit is the Evidence Explorer's draft wording.",
+   "reviewedOn": null
+  },
+  {
+   "schema": 1,
+   "id": "CLM-009",
+   "publication": "PUB-002",
+   "explorerId": "adversarial",
+   "passage": {
+    "snapshot": 1,
+    "index": 4,
+    "text": "In 2025, a major adversarial collaboration published in Nature directly tested predictions from Global Neuronal Workspace Theory and Integrated Information Theory using fMRI, magnetoencephalography, and intracranial recordings. The researchers found results compatible with portions of both theories, while also finding evidence that challenged important predictions of each. Consciousness science had not arrived at a winner. It had instead demonstrated how difficult the problem remains.",
+    "textHash": "7357f7a1f7f9f0e3"
+   },
+   "classification": "empirical",
+   "classificationStatus": "draft",
+   "classificationOrigin": {
+    "kind": "evidence-explorer",
+    "id": "adversarial",
+    "note": "Imported unchanged from the Evidence Explorer's draft classification. No editor has reviewed it."
+   },
+   "concepts": [
+    "consciousness"
+   ],
+   "sourceLinks": [
+    {
+     "source": "SRC-010",
+     "support": "not-assessed",
+     "basis": "explorer-draft",
+     "assessedOn": null,
+     "assessedBy": null
+    }
+   ],
+   "limitation": "Per the essay, no winner emerged: results were compatible with portions of both theories and challenged important predictions of each.",
+   "debate": "Global Neuronal Workspace Theory versus Integrated Information Theory",
+   "limitationNote": "The limit is the Evidence Explorer's draft wording.",
+   "reviewedOn": null
+  },
+  {
+   "schema": 1,
+   "id": "CLM-010",
+   "publication": "PUB-002",
+   "explorerId": "capability",
+   "passage": {
+    "snapshot": 1,
+    "index": 7,
+    "text": "A system can perform something that looks intelligent without providing evidence that there is an experience occurring inside it. A calculator can outperform a person at arithmetic without experiencing numbers. A chess engine can defeat a grandmaster without necessarily understanding victory. Modern language models can produce arguments, stories, software, theories, jokes, emotional language, and descriptions of their own apparent internal states. None of those abilities, by themselves, establish subjective experience.",
+    "textHash": "838dc6b5f17d207a"
+   },
+   "classification": "philosophical",
+   "classificationStatus": "draft",
+   "classificationOrigin": {
+    "kind": "evidence-explorer",
+    "id": "capability",
+    "note": "Imported unchanged from the Evidence Explorer's draft classification. No editor has reviewed it."
+   },
+   "concepts": [
+    "ai",
+    "consciousness"
+   ],
+   "sourceLinks": [],
+   "limitation": "The essay argues that capability, by itself, does not establish subjective experience. It does not claim to show that any particular system lacks experience.",
+   "debate": null,
+   "limitationNote": "The limit is the Evidence Explorer's draft wording.",
+   "reviewedOn": null
+  },
+  {
+   "schema": 1,
+   "id": "CLM-011",
+   "publication": "PUB-002",
+   "explorerId": "turing",
+   "passage": {
+    "snapshot": 1,
+    "index": 9,
+    "text": "Alan Turing famously shifted attention away from the almost impossible question of whether a machine truly thinks and toward whether its behavior could become indistinguishable from intelligent human behavior. John Searle later challenged this behavioral approach through the Chinese Room thought experiment. In Searle's argument, a person who does not understand Chinese can follow a sufficiently sophisticated set of rules for manipulating Chinese symbols and produce convincing answers. From outside the room, the system appears to understand Chinese. Inside the room, according to Searle, there is only symbol manipulation.",
+    "textHash": "ca1fa0b78170e871"
+   },
+   "classification": "philosophical",
+   "classificationStatus": "draft",
+   "classificationOrigin": {
+    "kind": "evidence-explorer",
+    "id": "turing",
+    "note": "Imported unchanged from the Evidence Explorer's draft classification. No editor has reviewed it."
+   },
+   "concepts": [
+    "ai",
+    "consciousness",
+    "language"
+   ],
+   "sourceLinks": [
+    {
+     "source": "SRC-011",
+     "support": "not-assessed",
+     "basis": "explorer-draft",
+     "assessedOn": null,
+     "assessedBy": null
+    },
+    {
+     "source": "SRC-012",
+     "support": "not-assessed",
+     "basis": "explorer-draft",
+     "assessedOn": null,
+     "assessedBy": null
+    }
+   ],
+   "limitation": "The essay calls this argument controversial (paragraph 10) and does not present the Chinese Room as settled.",
+   "debate": "A behavioural test (Turing) versus the symbol-manipulation objection (Searle)",
+   "limitationNote": "The limit is the Evidence Explorer's draft wording.",
+   "reviewedOn": null
+  },
+  {
+   "schema": 1,
+   "id": "CLM-012",
+   "publication": "PUB-002",
+   "explorerId": "brainmatch",
+   "passage": {
+    "snapshot": 1,
+    "index": 11,
+    "text": "Large language models make this problem difficult because their behavior is not random mimicry. They develop extremely complex internal representations from enormous amounts of language. Research has found measurable similarities between some representational patterns in high-performing language models and patterns involved in human language processing. A 2024 study in Nature Machine Intelligence, for example, reported increasing correspondence between the hierarchical contextual representations of stronger language models and neural responses recorded from human participants listening to speech.",
+    "textHash": "8c08ae349eb0173d"
+   },
+   "classification": "empirical",
+   "classificationStatus": "draft",
+   "classificationOrigin": {
+    "kind": "evidence-explorer",
+    "id": "brainmatch",
+    "note": "Imported unchanged from the Evidence Explorer's draft classification. No editor has reviewed it."
+   },
+   "concepts": [
+    "language",
+    "cognition",
+    "ai"
+   ],
+   "sourceLinks": [
+    {
+     "source": "SRC-014",
+     "support": "not-assessed",
+     "basis": "explorer-draft",
+     "assessedOn": null,
+     "assessedBy": null
+    }
+   ],
+   "limitation": "The essay adds that this should not be confused with evidence that the brain and the language model operate identically.",
+   "debate": "Reported convergence between language models and the brain, versus later methodological caution",
+   "limitationNote": "The limit is the Evidence Explorer's draft wording.",
+   "reviewedOn": null
+  },
+  {
+   "schema": 1,
+   "id": "CLM-013",
+   "publication": "PUB-002",
+   "explorerId": "confound",
+   "passage": {
+    "snapshot": 1,
+    "index": 13,
+    "text": "Newer work has made that warning even more important. A 2026 Nature Communications study showed that some previously reported similarities between language models and brain activity could be inflated by methodological choices and confounding variables. Apparent similarity does not automatically imply shared mechanisms, much less shared consciousness.",
+    "textHash": "2d5f21781d56cb9b"
+   },
+   "classification": "empirical",
+   "classificationStatus": "draft",
+   "classificationOrigin": {
+    "kind": "evidence-explorer",
+    "id": "confound",
+    "note": "Imported unchanged from the Evidence Explorer's draft classification. No editor has reviewed it."
+   },
+   "concepts": [
+    "language",
+    "cognition",
+    "ai"
+   ],
+   "sourceLinks": [
+    {
+     "source": "SRC-015",
+     "support": "not-assessed",
+     "basis": "explorer-draft",
+     "assessedOn": null,
+     "assessedBy": null
+    }
+   ],
+   "limitation": "Per the essay, apparent similarity does not automatically imply shared mechanisms, much less shared consciousness.",
+   "debate": "Reported convergence between language models and the brain, versus later methodological caution",
+   "limitationNote": "The limit is the Evidence Explorer's draft wording.",
+   "reviewedOn": null
+  },
+  {
+   "schema": 1,
+   "id": "CLM-014",
+   "publication": "PUB-002",
+   "explorerId": "entangle",
+   "passage": {
+    "snapshot": 1,
+    "index": 23,
+    "text": "The result is not evidence of shared consciousness. It is evidence of cognitive entanglement.",
+    "textHash": "9245052ebd4eff8a"
+   },
+   "classification": "speculative",
+   "classificationStatus": "draft",
+   "classificationOrigin": {
+    "kind": "evidence-explorer",
+    "id": "entangle",
+    "note": "Imported unchanged from the Evidence Explorer's draft classification. No editor has reviewed it."
+   },
+   "concepts": [
+    "ai",
+    "identity",
+    "memory",
+    "language"
+   ],
+   "sourceLinks": [],
+   "limitation": "This is the essay's own interpretation, offered in contrast to shared consciousness. No cited study tests it.",
+   "debate": null,
+   "limitationNote": "The limit is the Evidence Explorer's draft wording.",
+   "reviewedOn": null
+  },
+  {
+   "schema": 1,
+   "id": "CLM-015",
+   "publication": "PUB-002",
+   "explorerId": "extended",
+   "passage": {
+    "snapshot": 1,
+    "index": 24,
+    "text": "Long before generative AI existed, philosophers Andy Clark and David Chalmers proposed the idea of the \"extended mind.\" Their argument was that cognitive processes do not always need to remain inside the skull. If an external object becomes reliably integrated into thinking, remembering, or problem solving, it can function as part of a larger cognitive system. Their famous examples involved notebooks and other environmental tools rather than artificial intelligence, but the philosophical framework has become increasingly relevant.",
+    "textHash": "60c80b1648ff5ad0"
+   },
+   "classification": "philosophical",
+   "classificationStatus": "draft",
+   "classificationOrigin": {
+    "kind": "evidence-explorer",
+    "id": "extended",
+    "note": "Imported unchanged from the Evidence Explorer's draft classification. No editor has reviewed it."
+   },
+   "concepts": [
+    "cognition",
+    "memory",
+    "identity"
+   ],
+   "sourceLinks": [
+    {
+     "source": "SRC-013",
+     "support": "not-assessed",
+     "basis": "explorer-draft",
+     "assessedOn": null,
+     "assessedBy": null
+    }
+   ],
+   "limitation": "The essay notes that the original examples involved notebooks and other tools, not artificial intelligence.",
+   "debate": null,
+   "limitationNote": "The limit is the Evidence Explorer's draft wording.",
+   "reviewedOn": null
+  },
+  {
+   "schema": 1,
+   "id": "CLM-016",
+   "publication": "PUB-002",
+   "explorerId": "offload",
+   "passage": {
+    "snapshot": 1,
+    "index": 33,
+    "text": "A 2025 randomized study involving 120 university students found that participants who used ChatGPT as a study aid performed worse on a delayed knowledge-retention test than students who studied without it. The study does not establish that AI inevitably damages memory, and one experiment should not be generalized to every form of AI use. It does, however, demonstrate something conceptually important: changing the tools through which cognition occurs can change what the human brain itself retains.",
+    "textHash": "e4bf7f533b555fcc"
+   },
+   "classification": "empirical",
+   "classificationStatus": "draft",
+   "classificationOrigin": {
+    "kind": "evidence-explorer",
+    "id": "offload",
+    "note": "Imported unchanged from the Evidence Explorer's draft classification. No editor has reviewed it."
+   },
+   "concepts": [
+    "memory",
+    "cognition"
+   ],
+   "sourceLinks": [
+    {
+     "source": "SRC-018",
+     "support": "not-assessed",
+     "basis": "explorer-draft",
+     "assessedOn": null,
+     "assessedBy": null
+    }
+   ],
+   "limitation": "Per the essay, the study does not establish that AI inevitably damages memory, and one experiment should not be generalized to every form of AI use.",
+   "debate": null,
+   "limitationNote": "The limit is the Evidence Explorer's draft wording.",
+   "reviewedOn": null
+  },
+  {
+   "schema": 1,
+   "id": "CLM-017",
+   "publication": "PUB-002",
+   "explorerId": "syco",
+   "passage": {
+    "snapshot": 1,
+    "index": 44,
+    "text": "Research on sycophancy makes this especially important. Studies of language models trained with human feedback have shown that systems can become more likely to produce responses that agree with users' stated beliefs, even when agreement competes with accuracy. Human preferences shape machine behavior, and the resulting machine behavior can then return to reinforce human preferences.",
+    "textHash": "d27f8fe6370cd676"
+   },
+   "classification": "empirical",
+   "classificationStatus": "draft",
+   "classificationOrigin": {
+    "kind": "evidence-explorer",
+    "id": "syco",
+    "note": "Imported unchanged from the Evidence Explorer's draft classification. No editor has reviewed it."
+   },
+   "concepts": [
+    "ai",
+    "identity"
+   ],
+   "sourceLinks": [
+    {
+     "source": "SRC-017",
+     "support": "not-assessed",
+     "basis": "explorer-draft",
+     "assessedOn": null,
+     "assessedBy": null
+    }
+   ],
+   "limitation": "The essay's following steps about a recursive mirror (paragraphs 45 to 51) are interpretation, not findings of this research.",
+   "debate": null,
+   "limitationNote": "The limit is the Evidence Explorer's draft wording.",
+   "reviewedOn": null
+  },
+  {
+   "schema": 1,
+   "id": "CLM-018",
+   "publication": "PUB-002",
+   "explorerId": "anthro",
+   "passage": {
+    "snapshot": 1,
+    "index": 54,
+    "text": "Recent researchers have argued that we should be careful not to interpret this relationship entirely through human metaphors. A 2026 perspective in Communications Psychology describes a recursive anthropomorphism problem: humans create systems from human language, engineer them to respond in human-like ways, then interpret the resulting behavior through concepts originally created to describe human minds. The authors argue that machine cognition should be studied partly on its own terms rather than only by asking how closely it resembles us.",
+    "textHash": "c2bcb7972cc85c4d"
+   },
+   "classification": "philosophical",
+   "classificationStatus": "draft",
+   "classificationOrigin": {
+    "kind": "evidence-explorer",
+    "id": "anthro",
+    "note": "Imported unchanged from the Evidence Explorer's draft classification. No editor has reviewed it."
+   },
+   "concepts": [
+    "ai",
+    "language",
+    "cognition"
+   ],
+   "sourceLinks": [
+    {
+     "source": "SRC-019",
+     "support": "not-assessed",
+     "basis": "explorer-draft",
+     "assessedOn": null,
+     "assessedBy": null
+    }
+   ],
+   "limitation": "This is the argument of a perspective article, not an experimental result.",
+   "debate": null,
+   "limitationNote": "The limit is the Evidence Explorer's draft wording.",
+   "reviewedOn": null
+  },
+  {
+   "schema": 1,
+   "id": "CLM-019",
+   "publication": "PUB-002",
+   "explorerId": "report",
+   "passage": {
+    "snapshot": 1,
+    "index": 67,
+    "text": "A major interdisciplinary report on AI consciousness published in 2023 evaluated artificial systems against properties derived from several scientific theories of consciousness. Its authors concluded that the systems they examined did not provide sufficient evidence of consciousness, while also arguing that there appeared to be no obvious technical reason that future artificial systems could never satisfy at least some proposed indicators.",
+    "textHash": "10ad70be39da5fb8"
+   },
+   "classification": "theoretical",
+   "classificationStatus": "draft",
+   "classificationOrigin": {
+    "kind": "evidence-explorer",
+    "id": "report",
+    "note": "Imported unchanged from the Evidence Explorer's draft classification. No editor has reviewed it."
+   },
+   "concepts": [
+    "consciousness",
+    "ai"
+   ],
+   "sourceLinks": [
+    {
+     "source": "SRC-016",
+     "support": "not-assessed",
+     "basis": "explorer-draft",
+     "assessedOn": null,
+     "assessedBy": null
+    }
+   ],
+   "limitation": "The indicators depend on scientific theories that the essay describes as unsettled (paragraphs 3 and 4).",
+   "debate": "Theory-derived indicators versus the unsettled status of the theories they come from",
+   "limitationNote": "The limit is the Evidence Explorer's draft wording.",
+   "reviewedOn": null
+  },
+  {
+   "schema": 1,
+   "id": "CLM-020",
+   "publication": "PUB-002",
+   "explorerId": "unresolved",
+   "passage": {
+    "snapshot": 1,
+    "index": 68,
+    "text": "By 2026, consciousness researchers were still warning that the basic scientific problem remained unresolved. We do not yet possess an agreed theory capable of reliably determining what kinds of artificial systems, if any, would have subjective experience.",
+    "textHash": "c2b74559c219bcbb"
+   },
+   "classification": "open-question",
+   "classificationStatus": "draft",
+   "classificationOrigin": {
+    "kind": "evidence-explorer",
+    "id": "unresolved",
+    "note": "Imported unchanged from the Evidence Explorer's draft classification. No editor has reviewed it."
+   },
+   "concepts": [
+    "consciousness",
+    "ai"
+   ],
+   "sourceLinks": [
+    {
+     "source": "SRC-020",
+     "support": "not-assessed",
+     "basis": "explorer-draft",
+     "assessedOn": null,
+     "assessedBy": null
+    }
+   ],
+   "limitation": "A statement of an unresolved problem. It does not predict how the problem will be resolved.",
+   "debate": null,
+   "limitationNote": "The limit is the Evidence Explorer's draft wording.",
+   "reviewedOn": null
+  },
+  {
+   "schema": 1,
+   "id": "CLM-021",
+   "publication": "PUB-002",
+   "explorerId": "nolink",
+   "passage": {
+    "snapshot": 1,
+    "index": 79,
+    "text": "The philosophical consequences extend beyond neuroscience. Some spiritual and metaphysical traditions have long questioned whether the self should be understood as an isolated, permanent object rather than as a process or relationship. Artificial intelligence does not prove those traditions correct, and there is currently no scientific evidence that AI is accessing a universal consciousness, spiritual field, or hidden quantum layer of awareness.",
+    "textHash": "af8ca05078bd0f0e"
+   },
+   "classification": "speculative",
+   "classificationStatus": "draft",
+   "classificationOrigin": {
+    "kind": "evidence-explorer",
+    "id": "nolink",
+    "note": "Imported unchanged from the Evidence Explorer's draft classification. No editor has reviewed it."
+   },
+   "concepts": [
+    "consciousness",
+    "identity"
+   ],
+   "sourceLinks": [],
+   "limitation": "The essay states that there is currently no scientific evidence for the metaphysical claims it names.",
+   "debate": null,
+   "limitationNote": "The limit is the Evidence Explorer's draft wording.",
+   "reviewedOn": null
+  },
+  {
+   "schema": 1,
+   "id": "CLM-022",
+   "publication": "PUB-002",
+   "explorerId": "boundary",
+   "passage": {
+    "snapshot": 1,
+    "index": 87,
+    "text": "If part of a person's reasoning occurs through continuous interaction with an artificial system, the biological boundary of consciousness may remain unchanged while the functional boundary of cognition expands.",
+    "textHash": "bdaa8a8753ec1228"
+   },
+   "classification": "speculative",
+   "classificationStatus": "draft",
+   "classificationOrigin": {
+    "kind": "evidence-explorer",
+    "id": "boundary",
+    "note": "Imported unchanged from the Evidence Explorer's draft classification. No editor has reviewed it."
+   },
+   "concepts": [
+    "identity",
+    "cognition",
+    "memory"
+   ],
+   "sourceLinks": [],
+   "limitation": "The essay frames this as a conditional possibility (“If part of a person's reasoning…”).",
+   "debate": null,
+   "limitationNote": "The limit is the Evidence Explorer's draft wording.",
+   "reviewedOn": null
+  },
+  {
+   "schema": 1,
+   "id": "CLM-023",
+   "publication": "PUB-002",
+   "explorerId": "answer",
+   "passage": {
+    "snapshot": 1,
+    "index": 98,
+    "text": "If it means, \"Are today's AI systems proven to have subjective experience?\" the evidence does not currently justify that conclusion.",
+    "textHash": "8779c04b8147df84"
+   },
+   "classification": "open-question",
+   "classificationStatus": "draft",
+   "classificationOrigin": {
+    "kind": "evidence-explorer",
+    "id": "answer",
+    "note": "Imported unchanged from the Evidence Explorer's draft classification. No editor has reviewed it."
+   },
+   "concepts": [
+    "consciousness",
+    "ai"
+   ],
+   "sourceLinks": [],
+   "limitation": "Part of the essay's conclusion: it holds that the question has no simple scientific yes or no answer yet (paragraph 96).",
+   "debate": null,
+   "limitationNote": "The limit is the Evidence Explorer's draft wording.",
+   "reviewedOn": null
+  }
+ ],
+ "reviews": [
+  {
+   "schema": 1,
+   "id": "RVW-001",
+   "publication": "PUB-001",
+   "status": "awaiting-editorial-review",
+   "history": [
+    {
+     "status": "awaiting-editorial-review",
+     "on": "2026-10-17",
+     "note": "Initial status when the publication was recorded in the Ledger. No editorial review has been recorded."
+    }
+   ],
+   "reviewer": null,
+   "limitations": null,
+   "nextStep": null
+  },
+  {
+   "schema": 1,
+   "id": "RVW-002",
+   "publication": "PUB-002",
+   "status": "awaiting-editorial-review",
+   "history": [
+    {
+     "status": "awaiting-editorial-review",
+     "on": "2026-10-17",
+     "note": "Initial status when the publication was recorded in the Ledger. No editorial review has been recorded."
+    }
+   ],
+   "reviewer": null,
+   "limitations": null,
+   "nextStep": null
+  }
+ ],
+ "revisions": [],
+ "corrections": [],
+ "timeline": [
+  {
+   "id": "EVT-003",
+   "date": "2026-09-19",
+   "kind": "publication",
+   "publication": "PUB-002",
+   "title": "“Is Human Consciousness Connected to Artificial Intelligence?” published",
+   "text": "Date taken from the publication feed.",
+   "provenance": {
+    "kind": "feed",
+    "ref": "feed.xml pubDate"
+   }
+  },
+  {
+   "id": "EVT-001",
+   "date": "2026-10-07",
+   "kind": "publication",
+   "publication": "PUB-001",
+   "title": "“We Are All Archives Now” published",
+   "text": "Date taken from the publication feed.",
+   "provenance": {
+    "kind": "feed",
+    "ref": "feed.xml pubDate"
+   }
+  },
+  {
+   "id": "EVT-005",
+   "date": "2026-10-15",
+   "kind": "evidence-draft",
+   "publication": null,
+   "title": "Draft passage classifications released in the Evidence Explorer",
+   "text": "The Evidence Explorer first showed draft classifications for passages of both published essays. They are drafts and have not been editorially reviewed.",
+   "provenance": {
+    "kind": "repository-history",
+    "ref": "commit e334974 (2026-10-15)"
+   }
+  },
+  {
+   "id": "EVT-006",
+   "date": "2026-10-15",
+   "kind": "metadata-check",
+   "publication": "PUB-002",
+   "title": "Bibliographic records checked for three sources of “Is Human Consciousness Connected to Artificial Intelligence?”",
+   "text": "The Research Observatory retrieved Crossref and DataCite records for Turing (1950), Searle (1980) and Butlin et al. (2023) and checked them against their DOIs.",
+   "provenance": {
+    "kind": "research-observatory",
+    "ref": "research-observatory/data/status.json"
+   }
+  },
+  {
+   "id": "EVT-002",
+   "date": "2026-10-17",
+   "kind": "baseline",
+   "publication": "PUB-001",
+   "title": "Baseline captured for “We Are All Archives Now”",
+   "text": "The Ledger saved the public text as it stood on this date. This is the earliest version held.",
+   "provenance": {
+    "kind": "ledger-capture",
+    "ref": "snapshots/we-are-all-archives-now/v001-87d3e0aefb3c.json"
+   }
+  },
+  {
+   "id": "EVT-004",
+   "date": "2026-10-17",
+   "kind": "baseline",
+   "publication": "PUB-002",
+   "title": "Baseline captured for “Is Human Consciousness Connected to Artificial Intelligence?”",
+   "text": "The Ledger saved the public text as it stood on this date. This is the earliest version held.",
+   "provenance": {
+    "kind": "ledger-capture",
+    "ref": "snapshots/is-human-consciousness-connected-to-artificial-intelligence/v001-6f7ed04fce8a.json"
+   }
+  },
+  {
+   "id": "EVT-007",
+   "date": "2026-10-17",
+   "kind": "source-import",
+   "publication": null,
+   "title": "Existing source-inspection records imported into the Source Registry",
+   "text": "Notes already kept by the Museum, Theory Chamber, Lexicon and shared research index were copied into the Source Registry with their origin. Sources with no such note were left as Verification Incomplete.",
+   "provenance": {
+    "kind": "ledger-seed",
+    "ref": "scripts/seed_research_ledger.py"
+   }
+  }
+ ],
+ "policies": [
+  {
+   "id": "POL-01",
+   "key": "authorship",
+   "title": "Authorship",
+   "status": "needs-decision",
+   "covers": "Who produces the research, and how authorship and contributions are credited.",
+   "documentedPractice": [
+    {
+     "text": "Published essays are attributed to “Artificially Intelligent (original essay)” in the site's research index.",
+     "provenance": "inquiry-engine/data/research-index.json"
+    },
+    {
+     "text": "The existing Methodology page lists “Who produces the research” as a policy still to be written.",
+     "provenance": "index.html (Methodology)"
+    }
+   ]
+  },
+  {
+   "id": "POL-02",
+   "key": "source-selection",
+   "title": "Source Selection",
+   "status": "proposed",
+   "covers": "What kinds of sources are acceptable for different research purposes.",
+   "documentedPractice": [
+    {
+     "text": "The Source Registry holds journal articles, preprints, institutional pages, collection records and a news feature, and labels each by type.",
+     "provenance": "research-ledger/data/sources"
+    },
+    {
+     "text": "Preprints are labelled as preprints in the shared research index (for example Butlin et al., 2023).",
+     "provenance": "inquiry-engine/data/research-index.json"
+    }
+   ]
+  },
+  {
+   "id": "POL-03",
+   "key": "source-verification",
+   "title": "Source Verification",
+   "status": "proposed",
+   "covers": "How publications and historical materials are checked, and what each verification level means.",
+   "documentedPractice": [
+    {
+     "text": "Six verification levels are defined in the Ledger. Each describes completed work only; a level is not awarded because a script downloaded metadata.",
+     "provenance": "research-ledger/data/taxonomy.json"
+    },
+    {
+     "text": "Every source in the Ledger shows what was actually read and who recorded it. A source with no documented check is listed as Verification Incomplete.",
+     "provenance": "research-ledger/data/sources"
+    }
+   ]
+  },
+  {
+   "id": "POL-04",
+   "key": "evidence-classification",
+   "title": "Evidence Classification",
+   "status": "proposed",
+   "covers": "How empirical claims, theoretical positions, philosophical arguments and speculation are told apart.",
+   "documentedPractice": [
+    {
+     "text": "The Evidence Explorer already classifies passages of both essays. Its classifications are labelled drafts until an editor reviews them.",
+     "provenance": "index.html (Evidence Explorer)"
+    },
+    {
+     "text": "A classification says what kind of statement a passage is. It is not a measure of truth or credibility.",
+     "provenance": "research-ledger/data/taxonomy.json"
+    }
+   ]
+  },
+  {
+   "id": "POL-05",
+   "key": "editorial-review",
+   "title": "Editorial Review",
+   "status": "needs-decision",
+   "covers": "What review steps are required before publication, and who carries them out.",
+   "documentedPractice": [
+    {
+     "text": "No editorial review of either published essay is recorded in the Ledger.",
+     "provenance": "research-ledger/data/reviews"
+    },
+    {
+     "text": "The Ledger does not describe editorial review as peer review. Artificially Intelligent is an independent site and is not affiliated with a university, laboratory, journal or review board.",
+     "provenance": "Ledger design rule"
+    }
+   ]
+  },
+  {
+   "id": "POL-06",
+   "key": "revision-policy",
+   "title": "Revision Policy",
+   "status": "proposed",
+   "covers": "How updates to published work are recorded.",
+   "documentedPractice": [
+    {
+     "text": "The Ledger saves the public text of each essay and compares it with the last saved version. Identical text creates no record.",
+     "provenance": "scripts/capture_public_revisions.py"
+    },
+    {
+     "text": "A detected change is shown as “not yet classified” until an editor records its category and reason.",
+     "provenance": "research-ledger/data/revisions"
+    },
+    {
+     "text": "Version history begins on 17 October 2026. Earlier edits, if there were any, were not recorded.",
+     "provenance": "research-ledger/data/snapshots"
+    }
+   ]
+  },
+  {
+   "id": "POL-07",
+   "key": "correction-policy",
+   "title": "Correction Policy",
+   "status": "proposed",
+   "covers": "How errors are reported, reviewed, corrected and disclosed.",
+   "documentedPractice": [
+    {
+     "text": "Corrections are listed in Corrections & Clarifications and are never removed silently. No formal corrections have been recorded.",
+     "provenance": "research-ledger/data/corrections"
+    },
+    {
+     "text": "Visitors cannot yet send a concern through the site, because no secure submission service exists.",
+     "provenance": "unanswered-archive/SUBMISSIONS.md"
+    }
+   ]
+  },
+  {
+   "id": "POL-08",
+   "key": "research-in-development",
+   "title": "Research in Development",
+   "status": "proposed",
+   "covers": "How unfinished ideas are told apart from completed publications.",
+   "documentedPractice": [
+    {
+     "text": "Entries that are only marked “research in development” are not published research. They are left out of the published pages and have no Ledger record.",
+     "provenance": "scripts/build_published.py"
+    }
+   ]
+  },
+  {
+   "id": "POL-09",
+   "key": "ai-assistance",
+   "title": "AI Assistance",
+   "status": "needs-decision",
+   "covers": "How AI tools may be used in research preparation, editing, source discovery and analysis, and how that use is disclosed.",
+   "documentedPractice": [
+    {
+     "text": "The source notes, claim classifications and Ledger records imported on 17 October 2026 were prepared with AI assistance and have not been re-checked by a human editor.",
+     "provenance": "research-ledger/data/sources"
+    },
+    {
+     "text": "How AI was or was not used to prepare the published essays is not recorded in the Ledger.",
+     "provenance": "Ledger audit"
+    }
+   ]
+  },
+  {
+   "id": "POL-10",
+   "key": "conflicts-of-interest",
+   "title": "Conflicts of Interest",
+   "status": "needs-decision",
+   "covers": "How relevant financial, professional or personal interests are disclosed.",
+   "documentedPractice": [
+    {
+     "text": "No disclosure statement has been written.",
+     "provenance": "Ledger audit"
+    }
+   ]
+  },
+  {
+   "id": "POL-11",
+   "key": "contact",
+   "title": "Contact",
+   "status": "needs-decision",
+   "covers": "How visitors can report a research concern or request clarification.",
+   "documentedPractice": [
+    {
+     "text": "The site has no public contact address and no submission service. The “Report a research concern” panel in the Ledger therefore sends nothing; it prepares a message the visitor keeps.",
+     "provenance": "research-ledger/data/config.json"
+    }
+   ]
+  }
+ ],
+ "integrity": {
+  "publications": 2,
+  "sources": 20,
+  "claims": 23,
+  "claimSourceLinks": 15,
+  "sourcesByLevel": {
+   "verification-incomplete": 9,
+   "metadata-confirmed": 0,
+   "abstract-reviewed": 4,
+   "source-content-inspected": 7,
+   "full-source-reviewed": 0,
+   "editorial-interpretation-reviewed": 0
+  },
+  "claimsByClassification": {
+   "empirical": 9,
+   "theoretical": 2,
+   "philosophical": 6,
+   "historical": 0,
+   "editorial": 0,
+   "speculative": 4,
+   "open-question": 2
+  },
+  "linksBySupport": {
+   "not-assessed": 15,
+   "supports": 0,
+   "partly-supports": 0,
+   "does-not-support": 0,
+   "needs-review": 0
+  },
+  "claimsDraft": 23,
+  "claimsReviewed": 0,
+  "claimsWithoutSource": 9,
+  "reviewsByStatus": {
+   "awaiting-editorial-review": 2,
+   "source-verification-in-progress": 0,
+   "editorially-reviewed": 0,
+   "revision-requested": 0,
+   "review-completed-with-limitations": 0,
+   "new-evidence-review-pending": 0
+  },
+  "editoriallyReviewed": 0,
+  "awaitingReview": 2,
+  "verificationRecords": 14,
+  "snapshots": 2,
+  "revisionsClassified": 0,
+  "changesUnclassified": 0,
+  "corrections": 0,
+  "openObservations": 4,
+  "policiesApproved": 0,
+  "policiesTotal": 11,
+  "ledgerUpdated": "2026-10-17"
+ },
+ "integrations": [
+  {
+   "name": "Evidence Explorer",
+   "state": "connected",
+   "note": "Claims are imported from the Explorer as drafts and link back to it. The Explorer's own text was not changed."
+  },
+  {
+   "name": "Living Archive",
+   "state": "connected",
+   "note": "The Ledger takes publication dates from the same feed. It keeps one set of dates."
+  },
+  {
+   "name": "Published Research",
+   "state": "connected",
+   "note": "Each record links to the essay's page and the essay is linked back after approval."
+  },
+  {
+   "name": "Theory Chamber",
+   "state": "connected",
+   "note": "Shows theories whose records already mention an essay."
+  },
+  {
+   "name": "Learning Institute",
+   "state": "connected",
+   "note": "Shows courses and lessons that already cite an essay."
+  },
+  {
+   "name": "Lexicon of Intelligence",
+   "state": "connected",
+   "note": "Shows entries that share a topic tag with an essay."
+  },
+  {
+   "name": "Research Observatory",
+   "state": "suggestions-only",
+   "note": "Suggests newly found papers for review by shared topic tags. Nobody has judged their relevance."
+  },
+  {
+   "name": "Unanswered Archive",
+   "state": "connected",
+   "note": "Shows questions that Learning Institute lessons already link to an essay. Status changes will be recorded when an editor makes them."
+  },
+  {
+   "name": "Museum of Human Memory",
+   "state": "connected",
+   "note": "Source inspection notes kept by the Museum were imported into the Source Registry with their origin."
+  },
+  {
+   "name": "Thinkers Archive",
+   "state": "not-deployed",
+   "note": "This feature does not exist on the site yet. The Ledger links to nothing there."
+  }
+ ],
+ "site": "https://amarisct.github.io/Artificially-Intelligent/"
+}

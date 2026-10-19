@@ -1,0 +1,17 @@
+--- a/index.html
++++ b/index.html
+@@ -1555,5 +1555,6 @@
+    <p class="lede">Passages from the published essays, each shown beside the sources the essay lists for it, labeled by what kind of statement it is, and paired with what it does not establish.</p>
+    <p><span class="draft">Draft classification · awaiting editorial review</span></p>
+-   <p class="note">Quotations are read directly from the essay text. The labels and the “does not establish” notes are editorial drafts that restate each essay's own cautions. They are not independent verification of the sources, and passages without a listed source are shown as such.</p></div>
++   <p class="note">Quotations are read directly from the essay text. The labels and the “does not establish” notes are editorial drafts that restate each essay's own cautions. They are not independent verification of the sources, and passages without a listed source are shown as such.</p>
++   <p class="note">Source records, verification levels and each essay's version history are kept in the <a href="research-ledger/#evidence">Research Ledger</a>. The classifications on this page are the same drafts the Ledger lists; the Ledger does not replace or overwrite them.</p></div>
+    <div class="legend5">${Object.entries(CTYPES).map(([k,v])=>`<div><span class="ctype t-${k}">${esc(v[0])}</span>${esc(v[1])}</div>`).join("")}</div>
+    <div class="ev-bar">
+@@ -1682,5 +1683,5 @@
+   el.innerHTML=`<div class="wrap"><div class="pagehead"><p class="kicker">The Institute · Living Archive</p><h1 class="h-l">Living Archive</h1>
+    <p class="lede">A record of when research was published. It grows automatically as new essays are added to the site's manifest.</p>
+-   <p class="note">Only dates from the manifest are shown. Revisions, new sources, and expansions are not tracked yet, so none are listed, and none are implied.</p></div>
++   <p class="note">Only dates from the manifest are shown here. Versions, revisions and corrections are recorded in the <a href="research-ledger/#revisions">Research Ledger</a> from October 17, 2026 onward; earlier edits, if any, were not recorded, so none are listed or implied.</p></div>
+    <ol class="tl">${arts.map(a=>`<li><time datetime="${a.publishedAt}">${fmtDate(a.publishedAt)}</time><div><span class="badge pub">Published</span><h3><a href="#read-${a.slug}" style="text-decoration:none">${esc(a.title)}</a></h3><p class="note">${esc(a.excerpt)}</p><p class="note">${(CLAIMS.filter(c=>c.a===a.slug).length)} passages classified in the Evidence Explorer</p></div></li>`).join("")}
+    <li><time>${esc(SITE.snapshot)}</time><div><span class="badge dev">In development</span><h3>${DEV.length} subject${DEV.length===1?"":"s"} planned</h3><p class="note">No text, sources, or conclusions are published for these. They move into the timeline above when they are added to the manifest.</p><a class="chip" href="#stream">Open the Data Stream</a></div></li></ol></div>`;

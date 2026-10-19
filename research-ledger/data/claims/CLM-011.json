@@ -1,0 +1,44 @@
+{
+ "schema": 1,
+ "id": "CLM-011",
+ "publication": "PUB-002",
+ "explorerId": "turing",
+ "passage": {
+  "snapshot": 1,
+  "index": 9,
+  "text": "Alan Turing famously shifted attention away from the almost impossible question of whether a machine truly thinks and toward whether its behavior could become indistinguishable from intelligent human behavior. John Searle later challenged this behavioral approach through the Chinese Room thought experiment. In Searle's argument, a person who does not understand Chinese can follow a sufficiently sophisticated set of rules for manipulating Chinese symbols and produce convincing answers. From outside the room, the system appears to understand Chinese. Inside the room, according to Searle, there is only symbol manipulation.",
+  "textHash": "ca1fa0b78170e871"
+ },
+ "classification": "philosophical",
+ "classificationStatus": "draft",
+ "classificationOrigin": {
+  "kind": "evidence-explorer",
+  "id": "turing",
+  "note": "Imported unchanged from the Evidence Explorer's draft classification. No editor has reviewed it."
+ },
+ "concepts": [
+  "ai",
+  "consciousness",
+  "language"
+ ],
+ "sourceLinks": [
+  {
+   "source": "SRC-011",
+   "support": "not-assessed",
+   "basis": "explorer-draft",
+   "assessedOn": null,
+   "assessedBy": null
+  },
+  {
+   "source": "SRC-012",
+   "support": "not-assessed",
+   "basis": "explorer-draft",
+   "assessedOn": null,
+   "assessedBy": null
+  }
+ ],
+ "limitation": "The essay calls this argument controversial (paragraph 10) and does not present the Chinese Room as settled.",
+ "debate": "A behavioural test (Turing) versus the symbol-manipulation objection (Searle)",
+ "limitationNote": "The limit is the Evidence Explorer's draft wording.",
+ "reviewedOn": null
+}

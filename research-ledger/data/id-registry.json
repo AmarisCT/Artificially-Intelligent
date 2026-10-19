@@ -1,0 +1,72 @@
+{
+ "schema": 1,
+ "note": "Every Ledger id ever issued. Ids are never reused, even if a record is later withdrawn.",
+ "issued": {
+  "publication": [
+   "PUB-001",
+   "PUB-002"
+  ],
+  "source": [
+   "SRC-001",
+   "SRC-002",
+   "SRC-003",
+   "SRC-004",
+   "SRC-005",
+   "SRC-006",
+   "SRC-007",
+   "SRC-008",
+   "SRC-009",
+   "SRC-010",
+   "SRC-011",
+   "SRC-012",
+   "SRC-013",
+   "SRC-014",
+   "SRC-015",
+   "SRC-016",
+   "SRC-017",
+   "SRC-018",
+   "SRC-019",
+   "SRC-020"
+  ],
+  "claim": [
+   "CLM-001",
+   "CLM-002",
+   "CLM-003",
+   "CLM-004",
+   "CLM-005",
+   "CLM-006",
+   "CLM-007",
+   "CLM-008",
+   "CLM-009",
+   "CLM-010",
+   "CLM-011",
+   "CLM-012",
+   "CLM-013",
+   "CLM-014",
+   "CLM-015",
+   "CLM-016",
+   "CLM-017",
+   "CLM-018",
+   "CLM-019",
+   "CLM-020",
+   "CLM-021",
+   "CLM-022",
+   "CLM-023"
+  ],
+  "review": [
+   "RVW-001",
+   "RVW-002"
+  ],
+  "revision": [],
+  "correction": [],
+  "event": [
+   "EVT-001",
+   "EVT-002",
+   "EVT-003",
+   "EVT-004",
+   "EVT-005",
+   "EVT-006",
+   "EVT-007"
+  ]
+ }
+}

@@ -1,0 +1,51 @@
+{
+ "schema": 1,
+ "id": "SRC-005",
+ "citation": {
+  "raw": "British Museum. Divination tablet K.3999, Library of Ashurbanipal. https://www.britishmuseum.org/collection/object/W_K-3999",
+  "title": "Divination tablet K.3999, Library of Ashurbanipal",
+  "year": null,
+  "doi": null,
+  "arxiv": null,
+  "url": "https://www.britishmuseum.org/collection/object/W_K-3999"
+ },
+ "citedBy": [
+  {
+   "publication": "PUB-001",
+   "index": 4,
+   "label": "[2]",
+   "labelInherited": true
+  }
+ ],
+ "verification": {
+  "level": "source-content-inspected",
+  "history": [
+   {
+    "level": "source-content-inspected",
+    "recordedOn": "2026-10-17",
+    "inspectedOn": null,
+    "basis": "Collection record read; the page's description text is cut off after the line counts.",
+    "extent": "partly read (description text cut off)",
+    "origin": {
+     "kind": "museum",
+     "id": "bm-k3999",
+     "file": "museum/data/museum.json"
+    },
+    "performedBy": "Recorded during site construction with AI assistance. No human editor has re-checked this."
+   }
+  ]
+ },
+ "links": {
+  "museumId": "bm-k3999"
+ },
+ "retraction": {
+  "status": "not checked",
+  "checkedOn": null
+ },
+ "recordedOn": "2026-10-17",
+ "recordNote": "Citation shown as printed. Inspection notes were copied from records the site already kept, with their origin.",
+ "type": "Collection record",
+ "limitations": "Only part of the record's description could be read.",
+ "observations": [],
+ "seededOn": "2026-10-17"
+}

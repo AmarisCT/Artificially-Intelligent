@@ -1,0 +1,29 @@
+{
+ "schema": 1,
+ "id": "CLM-005",
+ "publication": "PUB-001",
+ "explorerId": "notarchive",
+ "passage": {
+  "snapshot": 1,
+  "index": 17,
+  "text": "A trained model is not a conventional archive with a reliable catalogue of its sources. It learns statistical relationships in data, and it can sometimes reproduce particular passages, but its generated answers are not guaranteed retrievals of authentic records. A fluent response can contain invention. Treating it as historical evidence requires checking the underlying sources.",
+  "textHash": "00547251186aed4e"
+ },
+ "classification": "philosophical",
+ "classificationStatus": "draft",
+ "classificationOrigin": {
+  "kind": "evidence-explorer",
+  "id": "notarchive",
+  "note": "Imported unchanged from the Evidence Explorer's draft classification. No editor has reviewed it."
+ },
+ "concepts": [
+  "ai",
+  "archives",
+  "language"
+ ],
+ "sourceLinks": [],
+ "limitation": "The essay says a fluent response can contain invention, and that using one as historical evidence requires checking the underlying sources.",
+ "debate": null,
+ "limitationNote": "The limit is the Evidence Explorer's draft wording.",
+ "reviewedOn": null
+}

@@ -1,0 +1,36 @@
+{
+ "schema": 1,
+ "id": "CLM-016",
+ "publication": "PUB-002",
+ "explorerId": "offload",
+ "passage": {
+  "snapshot": 1,
+  "index": 33,
+  "text": "A 2025 randomized study involving 120 university students found that participants who used ChatGPT as a study aid performed worse on a delayed knowledge-retention test than students who studied without it. The study does not establish that AI inevitably damages memory, and one experiment should not be generalized to every form of AI use. It does, however, demonstrate something conceptually important: changing the tools through which cognition occurs can change what the human brain itself retains.",
+  "textHash": "e4bf7f533b555fcc"
+ },
+ "classification": "empirical",
+ "classificationStatus": "draft",
+ "classificationOrigin": {
+  "kind": "evidence-explorer",
+  "id": "offload",
+  "note": "Imported unchanged from the Evidence Explorer's draft classification. No editor has reviewed it."
+ },
+ "concepts": [
+  "memory",
+  "cognition"
+ ],
+ "sourceLinks": [
+  {
+   "source": "SRC-018",
+   "support": "not-assessed",
+   "basis": "explorer-draft",
+   "assessedOn": null,
+   "assessedBy": null
+  }
+ ],
+ "limitation": "Per the essay, the study does not establish that AI inevitably damages memory, and one experiment should not be generalized to every form of AI use.",
+ "debate": null,
+ "limitationNote": "The limit is the Evidence Explorer's draft wording.",
+ "reviewedOn": null
+}

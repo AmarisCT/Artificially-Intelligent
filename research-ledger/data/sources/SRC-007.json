@@ -1,0 +1,57 @@
+{
+ "schema": 1,
+ "id": "SRC-007",
+ "citation": {
+  "raw": "[4] The National Archives. “Step 2: Selecting your records.” Records selection guidance. https://www.nationalarchives.gov.uk/information-management/manage-information/selection-and-transfer/selecting-records/",
+  "title": "Step 2: Selecting your records",
+  "year": null,
+  "doi": null,
+  "arxiv": null,
+  "url": "https://www.nationalarchives.gov.uk/information-management/manage-information/selection-and-transfer/selecting-records/"
+ },
+ "citedBy": [
+  {
+   "publication": "PUB-001",
+   "index": 6,
+   "label": "[4]",
+   "labelInherited": false
+  }
+ ],
+ "verification": {
+  "level": "source-content-inspected",
+  "history": [
+   {
+    "level": "source-content-inspected",
+    "recordedOn": "2026-10-17",
+    "inspectedOn": null,
+    "basis": "Guidance page read in full.",
+    "extent": "read in full",
+    "origin": {
+     "kind": "museum",
+     "id": "tna-selection",
+     "file": "museum/data/museum.json"
+    },
+    "performedBy": "Recorded during site construction with AI assistance. No human editor has re-checked this."
+   }
+  ]
+ },
+ "links": {
+  "museumId": "tna-selection"
+ },
+ "retraction": {
+  "status": "not checked",
+  "checkedOn": null
+ },
+ "recordedOn": "2026-10-17",
+ "recordNote": "Citation shown as printed. Inspection notes were copied from records the site already kept, with their origin. See the observations.",
+ "type": "Institutional page",
+ "limitations": null,
+ "observations": [
+  {
+   "text": "The page title recorded in the Museum is 'Selecting records for permanent preservation'. The publication prints 'Step 2: Selecting your records'. The address matches. Not yet checked which title the page uses.",
+   "status": "open",
+   "raisedOn": "2026-10-17"
+  }
+ ],
+ "seededOn": "2026-10-17"
+}

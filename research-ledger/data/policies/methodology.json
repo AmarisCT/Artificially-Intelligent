@@ -1,0 +1,71 @@
+{
+ "schema": 1,
+ "note": "Editorial Methodology. A section is shown as an approved standard only after the site owner approves it, with a date. Until then it is listed with its status, what it will cover, and the practices already documented on this site. Nothing here describes an institutional process that does not exist.",
+ "approvalRule": "A policy becomes 'approved' only when this file records approvedBy and approvedOn, and carries public text. The Ledger never approves its own policies.",
+ "policies": [
+  {"id": "POL-01", "key": "authorship", "title": "Authorship", "status": "needs-decision",
+   "covers": "Who produces the research, and how authorship and contributions are credited.",
+   "documentedPractice": [
+    {"text": "Published essays are attributed to “Artificially Intelligent (original essay)” in the site's research index.", "provenance": "inquiry-engine/data/research-index.json"},
+    {"text": "The existing Methodology page lists “Who produces the research” as a policy still to be written.", "provenance": "index.html (Methodology)"}
+   ]},
+  {"id": "POL-02", "key": "source-selection", "title": "Source Selection", "status": "proposed",
+   "covers": "What kinds of sources are acceptable for different research purposes.",
+   "documentedPractice": [
+    {"text": "The Source Registry holds journal articles, preprints, institutional pages, collection records and a news feature, and labels each by type.", "provenance": "research-ledger/data/sources"},
+    {"text": "Preprints are labelled as preprints in the shared research index (for example Butlin et al., 2023).", "provenance": "inquiry-engine/data/research-index.json"}
+   ]},
+  {"id": "POL-03", "key": "source-verification", "title": "Source Verification", "status": "proposed",
+   "covers": "How publications and historical materials are checked, and what each verification level means.",
+   "documentedPractice": [
+    {"text": "Six verification levels are defined in the Ledger. Each describes completed work only; a level is not awarded because a script downloaded metadata.", "provenance": "research-ledger/data/taxonomy.json"},
+    {"text": "Every source in the Ledger shows what was actually read and who recorded it. A source with no documented check is listed as Verification Incomplete.", "provenance": "research-ledger/data/sources"}
+   ]},
+  {"id": "POL-04", "key": "evidence-classification", "title": "Evidence Classification", "status": "proposed",
+   "covers": "How empirical claims, theoretical positions, philosophical arguments and speculation are told apart.",
+   "documentedPractice": [
+    {"text": "The Evidence Explorer already classifies passages of both essays. Its classifications are labelled drafts until an editor reviews them.", "provenance": "index.html (Evidence Explorer)"},
+    {"text": "A classification says what kind of statement a passage is. It is not a measure of truth or credibility.", "provenance": "research-ledger/data/taxonomy.json"}
+   ]},
+  {"id": "POL-05", "key": "editorial-review", "title": "Editorial Review", "status": "needs-decision",
+   "covers": "What review steps are required before publication, and who carries them out.",
+   "documentedPractice": [
+    {"text": "No editorial review of either published essay is recorded in the Ledger.", "provenance": "research-ledger/data/reviews"},
+    {"text": "The Ledger does not describe editorial review as peer review. Artificially Intelligent is an independent site and is not affiliated with a university, laboratory, journal or review board.", "provenance": "Ledger design rule"}
+   ]},
+  {"id": "POL-06", "key": "revision-policy", "title": "Revision Policy", "status": "proposed",
+   "covers": "How updates to published work are recorded.",
+   "documentedPractice": [
+    {"text": "The Ledger saves the public text of each essay and compares it with the last saved version. Identical text creates no record.", "provenance": "scripts/capture_public_revisions.py"},
+    {"text": "A detected change is shown as “not yet classified” until an editor records its category and reason.", "provenance": "research-ledger/data/revisions"},
+    {"text": "Version history begins on 17 October 2026. Earlier edits, if there were any, were not recorded.", "provenance": "research-ledger/data/snapshots"}
+   ]},
+  {"id": "POL-07", "key": "correction-policy", "title": "Correction Policy", "status": "proposed",
+   "covers": "How errors are reported, reviewed, corrected and disclosed.",
+   "documentedPractice": [
+    {"text": "Corrections are listed in Corrections & Clarifications and are never removed silently. No formal corrections have been recorded.", "provenance": "research-ledger/data/corrections"},
+    {"text": "Visitors cannot yet send a concern through the site, because no secure submission service exists.", "provenance": "unanswered-archive/SUBMISSIONS.md"}
+   ]},
+  {"id": "POL-08", "key": "research-in-development", "title": "Research in Development", "status": "proposed",
+   "covers": "How unfinished ideas are told apart from completed publications.",
+   "documentedPractice": [
+    {"text": "Entries that are only marked “research in development” are not published research. They are left out of the published pages and have no Ledger record.", "provenance": "scripts/build_published.py"}
+   ]},
+  {"id": "POL-09", "key": "ai-assistance", "title": "AI Assistance", "status": "needs-decision",
+   "covers": "How AI tools may be used in research preparation, editing, source discovery and analysis, and how that use is disclosed.",
+   "documentedPractice": [
+    {"text": "The source notes, claim classifications and Ledger records imported on 17 October 2026 were prepared with AI assistance and have not been re-checked by a human editor.", "provenance": "research-ledger/data/sources"},
+    {"text": "How AI was or was not used to prepare the published essays is not recorded in the Ledger.", "provenance": "Ledger audit"}
+   ]},
+  {"id": "POL-10", "key": "conflicts-of-interest", "title": "Conflicts of Interest", "status": "needs-decision",
+   "covers": "How relevant financial, professional or personal interests are disclosed.",
+   "documentedPractice": [
+    {"text": "No disclosure statement has been written.", "provenance": "Ledger audit"}
+   ]},
+  {"id": "POL-11", "key": "contact", "title": "Contact", "status": "needs-decision",
+   "covers": "How visitors can report a research concern or request clarification.",
+   "documentedPractice": [
+    {"text": "The site has no public contact address and no submission service. The “Report a research concern” panel in the Ledger therefore sends nothing; it prepares a message the visitor keeps.", "provenance": "research-ledger/data/config.json"}
+   ]}
+ ]
+}

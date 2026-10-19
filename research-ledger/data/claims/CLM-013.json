@@ -1,0 +1,37 @@
+{
+ "schema": 1,
+ "id": "CLM-013",
+ "publication": "PUB-002",
+ "explorerId": "confound",
+ "passage": {
+  "snapshot": 1,
+  "index": 13,
+  "text": "Newer work has made that warning even more important. A 2026 Nature Communications study showed that some previously reported similarities between language models and brain activity could be inflated by methodological choices and confounding variables. Apparent similarity does not automatically imply shared mechanisms, much less shared consciousness.",
+  "textHash": "2d5f21781d56cb9b"
+ },
+ "classification": "empirical",
+ "classificationStatus": "draft",
+ "classificationOrigin": {
+  "kind": "evidence-explorer",
+  "id": "confound",
+  "note": "Imported unchanged from the Evidence Explorer's draft classification. No editor has reviewed it."
+ },
+ "concepts": [
+  "language",
+  "cognition",
+  "ai"
+ ],
+ "sourceLinks": [
+  {
+   "source": "SRC-015",
+   "support": "not-assessed",
+   "basis": "explorer-draft",
+   "assessedOn": null,
+   "assessedBy": null
+  }
+ ],
+ "limitation": "Per the essay, apparent similarity does not automatically imply shared mechanisms, much less shared consciousness.",
+ "debate": "Reported convergence between language models and the brain, versus later methodological caution",
+ "limitationNote": "The limit is the Evidence Explorer's draft wording.",
+ "reviewedOn": null
+}

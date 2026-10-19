@@ -1,0 +1,89 @@
+{
+ "schema": 1,
+ "events": [
+  {
+   "id": "EVT-001",
+   "date": "2026-10-07",
+   "kind": "publication",
+   "publication": "PUB-001",
+   "title": "“We Are All Archives Now” published",
+   "text": "Date taken from the publication feed.",
+   "provenance": {
+    "kind": "feed",
+    "ref": "feed.xml pubDate"
+   }
+  },
+  {
+   "id": "EVT-002",
+   "date": "2026-10-17",
+   "kind": "baseline",
+   "publication": "PUB-001",
+   "title": "Baseline captured for “We Are All Archives Now”",
+   "text": "The Ledger saved the public text as it stood on this date. This is the earliest version held.",
+   "provenance": {
+    "kind": "ledger-capture",
+    "ref": "snapshots/we-are-all-archives-now/v001-87d3e0aefb3c.json"
+   }
+  },
+  {
+   "id": "EVT-003",
+   "date": "2026-09-19",
+   "kind": "publication",
+   "publication": "PUB-002",
+   "title": "“Is Human Consciousness Connected to Artificial Intelligence?” published",
+   "text": "Date taken from the publication feed.",
+   "provenance": {
+    "kind": "feed",
+    "ref": "feed.xml pubDate"
+   }
+  },
+  {
+   "id": "EVT-004",
+   "date": "2026-10-17",
+   "kind": "baseline",
+   "publication": "PUB-002",
+   "title": "Baseline captured for “Is Human Consciousness Connected to Artificial Intelligence?”",
+   "text": "The Ledger saved the public text as it stood on this date. This is the earliest version held.",
+   "provenance": {
+    "kind": "ledger-capture",
+    "ref": "snapshots/is-human-consciousness-connected-to-artificial-intelligence/v001-6f7ed04fce8a.json"
+   }
+  },
+  {
+   "id": "EVT-005",
+   "date": "2026-10-15",
+   "kind": "evidence-draft",
+   "publication": null,
+   "title": "Draft passage classifications released in the Evidence Explorer",
+   "text": "The Evidence Explorer first showed draft classifications for passages of both published essays. They are drafts and have not been editorially reviewed.",
+   "provenance": {
+    "kind": "repository-history",
+    "ref": "commit e334974 (2026-10-15)"
+   }
+  },
+  {
+   "id": "EVT-006",
+   "date": "2026-10-15",
+   "kind": "metadata-check",
+   "publication": "PUB-002",
+   "title": "Bibliographic records checked for three sources of “Is Human Consciousness Connected to Artificial Intelligence?”",
+   "text": "The Research Observatory retrieved Crossref and DataCite records for Turing (1950), Searle (1980) and Butlin et al. (2023) and checked them against their DOIs.",
+   "provenance": {
+    "kind": "research-observatory",
+    "ref": "research-observatory/data/status.json"
+   }
+  },
+  {
+   "id": "EVT-007",
+   "date": "2026-10-17",
+   "kind": "source-import",
+   "publication": null,
+   "title": "Existing source-inspection records imported into the Source Registry",
+   "text": "Notes already kept by the Museum, Theory Chamber, Lexicon and shared research index were copied into the Source Registry with their origin. Sources with no such note were left as Verification Incomplete.",
+   "provenance": {
+    "kind": "ledger-seed",
+    "ref": "scripts/seed_research_ledger.py"
+   }
+  }
+ ]
+}

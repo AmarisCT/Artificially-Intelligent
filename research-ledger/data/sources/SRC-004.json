@@ -1,0 +1,35 @@
+{
+ "schema": 1,
+ "id": "SRC-004",
+ "citation": {
+  "raw": "British Museum. “Reconstructing a 2,500 year old medical encyclopaedia.” https://www.britishmuseum.org/research/projects/reconstructing-2500-year-old-medical-encyclopaedia",
+  "title": "Reconstructing a 2,500 year old medical encyclopaedia",
+  "year": null,
+  "doi": null,
+  "arxiv": null,
+  "url": "https://www.britishmuseum.org/research/projects/reconstructing-2500-year-old-medical-encyclopaedia"
+ },
+ "citedBy": [
+  {
+   "publication": "PUB-001",
+   "index": 3,
+   "label": "[2]",
+   "labelInherited": true
+  }
+ ],
+ "verification": {
+  "level": "verification-incomplete",
+  "history": []
+ },
+ "links": {},
+ "retraction": {
+  "status": "not checked",
+  "checkedOn": null
+ },
+ "recordedOn": "2026-10-17",
+ "recordNote": "Citation shown as printed. The Ledger has no documented check of this source.",
+ "type": "Institutional page",
+ "limitations": null,
+ "observations": [],
+ "seededOn": "2026-10-17"
+}

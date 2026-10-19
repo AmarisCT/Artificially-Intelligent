@@ -1,0 +1,35 @@
+{
+ "schema": 1,
+ "id": "SRC-019",
+ "citation": {
+  "raw": "Li, L., Teng, Y., Wang, Y., et al. (2026). “Understanding large language models demands distinguishing human projection from machine cognition.” *Communications Psychology, 4*, 108. DOI: 10.1038/s44271-026-00508-6.",
+  "title": "Understanding large language models demands distinguishing human projection from machine cognition",
+  "year": 2026,
+  "doi": "10.1038/s44271-026-00508-6",
+  "arxiv": null,
+  "url": null
+ },
+ "citedBy": [
+  {
+   "publication": "PUB-002",
+   "index": 9,
+   "label": null,
+   "labelInherited": false
+  }
+ ],
+ "verification": {
+  "level": "verification-incomplete",
+  "history": []
+ },
+ "links": {},
+ "retraction": {
+  "status": "not checked",
+  "checkedOn": null
+ },
+ "recordedOn": "2026-10-17",
+ "recordNote": "Citation shown as printed. The Ledger has no documented check of this source.",
+ "type": "Journal article",
+ "limitations": null,
+ "observations": [],
+ "seededOn": "2026-10-17"
+}

@@ -1,0 +1,33 @@
+{
+ "schema": 1,
+ "id": "PUB-001",
+ "slug": "we-are-all-archives-now",
+ "feedGuid": "2063e8d4-c3e5-4458-a5dc-24c5844bc90b",
+ "title": "We Are All Archives Now",
+ "deck": "Historical archives began with the needs of the living. Today, our messages, photographs, and digital traces create records that circulate beyond us. What changes when artificial intelligence learns from what we leave behind?",
+ "category": "Essay",
+ "author": "Artificially Intelligent (original essay)",
+ "publishedAt": "2026-10-07",
+ "ledgerEntryDate": "2026-10-17",
+ "url": "https://amarisct.github.io/Artificially-Intelligent/research/published/we-are-all-archives-now/",
+ "substack": {
+  "status": "not recorded",
+  "url": null,
+  "note": "No Substack address has been recorded for this publication."
+ },
+ "contextLinks": {
+  "concepts": [
+   "ai",
+   "archives",
+   "culture",
+   "identity",
+   "memory"
+  ],
+  "questions": [],
+  "theories": [],
+  "lexicon": [],
+  "sharedIndexId": "art:we-are-all-archives-now",
+  "conceptsNote": "Topic tags from the shared research index. They are editorial and have not been reviewed."
+ },
+ "recordNote": "Created automatically when the Ledger first saw this publication. Links to other parts of the research archive have not been reviewed."
+}

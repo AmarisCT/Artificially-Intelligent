@@ -1,0 +1,30 @@
+{
+ "schema": 1,
+ "id": "CLM-014",
+ "publication": "PUB-002",
+ "explorerId": "entangle",
+ "passage": {
+  "snapshot": 1,
+  "index": 23,
+  "text": "The result is not evidence of shared consciousness. It is evidence of cognitive entanglement.",
+  "textHash": "9245052ebd4eff8a"
+ },
+ "classification": "speculative",
+ "classificationStatus": "draft",
+ "classificationOrigin": {
+  "kind": "evidence-explorer",
+  "id": "entangle",
+  "note": "Imported unchanged from the Evidence Explorer's draft classification. No editor has reviewed it."
+ },
+ "concepts": [
+  "ai",
+  "identity",
+  "memory",
+  "language"
+ ],
+ "sourceLinks": [],
+ "limitation": "This is the essay's own interpretation, offered in contrast to shared consciousness. No cited study tests it.",
+ "debate": null,
+ "limitationNote": "The limit is the Evidence Explorer's draft wording.",
+ "reviewedOn": null
+}

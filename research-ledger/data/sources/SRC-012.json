@@ -1,0 +1,66 @@
+{
+ "schema": 1,
+ "id": "SRC-012",
+ "citation": {
+  "raw": "Searle, J. R. (1980). “Minds, Brains, and Programs.” *Behavioral and Brain Sciences, 3*(3), 417–457. DOI: 10.1017/S0140525X00005756.",
+  "title": "Minds, Brains, and Programs",
+  "year": 1980,
+  "doi": "10.1017/S0140525X00005756",
+  "arxiv": null,
+  "url": null
+ },
+ "citedBy": [
+  {
+   "publication": "PUB-002",
+   "index": 2,
+   "label": null,
+   "labelInherited": false
+  }
+ ],
+ "verification": {
+  "level": "abstract-reviewed",
+  "history": [
+   {
+    "level": "metadata-confirmed",
+    "recordedOn": "2026-10-17",
+    "inspectedOn": "2026-10-15",
+    "basis": "The Crossref record was retrieved and checked against the DOI. Title, authors and date matched.",
+    "extent": null,
+    "origin": {
+     "kind": "research-observatory",
+     "id": "P004",
+     "file": "research-observatory/data/publications.json"
+    },
+    "performedBy": "Recorded during site construction with AI assistance. No human editor has re-checked this."
+   },
+   {
+    "level": "abstract-reviewed",
+    "recordedOn": "2026-10-17",
+    "inspectedOn": null,
+    "basis": "The abstract was read on a repository page, and the bibliographic details on the publisher page. The full paper was not read.",
+    "extent": "abstract and bibliographic details",
+    "origin": {
+     "kind": "shared-research-index",
+     "id": "src:searle-1980"
+    },
+    "performedBy": "Recorded during site construction with AI assistance. No human editor has re-checked this."
+   }
+  ]
+ },
+ "links": {
+  "sharedIndexId": "src:searle-1980",
+  "observatoryId": "P004",
+  "lexiconId": "searle80",
+  "learningInstituteId": "searle80"
+ },
+ "retraction": {
+  "status": "not checked",
+  "checkedOn": null
+ },
+ "recordedOn": "2026-10-17",
+ "recordNote": "Citation shown as printed. Inspection notes were copied from records the site already kept, with their origin.",
+ "type": "Journal article",
+ "limitations": "The full paper was not read.",
+ "observations": [],
+ "seededOn": "2026-10-17"
+}

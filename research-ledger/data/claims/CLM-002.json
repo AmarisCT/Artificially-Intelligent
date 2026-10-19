@@ -1,0 +1,36 @@
+{
+ "schema": 1,
+ "id": "CLM-002",
+ "publication": "PUB-001",
+ "explorerId": "selection",
+ "passage": {
+  "snapshot": 1,
+  "index": 9,
+  "text": "Historical archives take shape through this combination of purpose, survival, and selection. Some materials are deliberately retained. Others survive through accident. Still others disappear through destruction, neglect, or exclusion. Modern archival practice makes selection explicit: the UK's National Archives guides public bodies in identifying records for permanent preservation. Keeping everything is not the same as preserving a usable historical record. [4]",
+  "textHash": "3a9e6bd93298ac06"
+ },
+ "classification": "empirical",
+ "classificationStatus": "draft",
+ "classificationOrigin": {
+  "kind": "evidence-explorer",
+  "id": "selection",
+  "note": "Imported unchanged from the Evidence Explorer's draft classification. No editor has reviewed it."
+ },
+ "concepts": [
+  "archives",
+  "culture"
+ ],
+ "sourceLinks": [
+  {
+   "source": "SRC-007",
+   "support": "not-assessed",
+   "basis": "inline-marker",
+   "assessedOn": null,
+   "assessedBy": null
+  }
+ ],
+ "limitation": "Describes the guidance of one national archive (the UK National Archives). It is not a claim about every archive.",
+ "debate": null,
+ "limitationNote": "The limit is the Evidence Explorer's draft wording.",
+ "reviewedOn": null
+}

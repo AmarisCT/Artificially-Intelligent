@@ -1,0 +1,35 @@
+{
+ "schema": 1,
+ "id": "CLM-009",
+ "publication": "PUB-002",
+ "explorerId": "adversarial",
+ "passage": {
+  "snapshot": 1,
+  "index": 4,
+  "text": "In 2025, a major adversarial collaboration published in Nature directly tested predictions from Global Neuronal Workspace Theory and Integrated Information Theory using fMRI, magnetoencephalography, and intracranial recordings. The researchers found results compatible with portions of both theories, while also finding evidence that challenged important predictions of each. Consciousness science had not arrived at a winner. It had instead demonstrated how difficult the problem remains.",
+  "textHash": "7357f7a1f7f9f0e3"
+ },
+ "classification": "empirical",
+ "classificationStatus": "draft",
+ "classificationOrigin": {
+  "kind": "evidence-explorer",
+  "id": "adversarial",
+  "note": "Imported unchanged from the Evidence Explorer's draft classification. No editor has reviewed it."
+ },
+ "concepts": [
+  "consciousness"
+ ],
+ "sourceLinks": [
+  {
+   "source": "SRC-010",
+   "support": "not-assessed",
+   "basis": "explorer-draft",
+   "assessedOn": null,
+   "assessedBy": null
+  }
+ ],
+ "limitation": "Per the essay, no winner emerged: results were compatible with portions of both theories and challenged important predictions of each.",
+ "debate": "Global Neuronal Workspace Theory versus Integrated Information Theory",
+ "limitationNote": "The limit is the Evidence Explorer's draft wording.",
+ "reviewedOn": null
+}

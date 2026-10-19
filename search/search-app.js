@@ -135,7 +135,7 @@ function resultCard(x, o) {
     r.summary ? h("p", null, clip(r.summary, 230)) : null,
     why.length ? h("p", { class: "rel" }, h("b", null, "Related because: "), why[0], why.length > 1 ? h("details", { class: "w" }, h("summary", null, "More reasons (" + (why.length - 1) + ")"), h("ul", { class: "why" }, why.slice(1).map(w => h("li", null, w)))) : null) : null,
     h("p", { class: "meta" }, r.attribution + " · " + r.reviewStatus + (r.date && r.type !== "source" ? " · " + r.date : "")),
-    h("div", { class: "row" }, h("button", { class: "btn sm", type: "button", onclick: () => { ST.sel = r.id; renderResults(); const p = $("#pv"); if (p) p.focus({ preventScroll: true }); } }, "Preview"), h("a", { class: "btn sm", href: safeHref(r.url), target: "_blank", rel: "noopener" }, r.type === "source" ? "Original publication ↗" : "Open ↗"), saveBtn(r)));
+    h("div", { class: "row" }, h("button", { class: "btn sm", type: "button", onclick: () => { ST.sel = r.id; renderResults(); const p = $("#pv"); if (p) p.focus({ preventScroll: true }); } }, "Preview"), h("a", { class: "btn sm", href: safeHref(r.url), target: "_blank", rel: "noopener" }, r.type === "source" ? "Original publication ↗" : "Open ↗"), r.ledgerUrl ? h("a", { class: "btn sm", href: safeHref(r.ledgerUrl), target: "_blank", rel: "noopener" }, "View Research Record →") : null, saveBtn(r)));
   return card;
 }
 function preview() {
@@ -153,7 +153,7 @@ function preview() {
   row("Research subjects", (r.subject || []).join(", "));
   row("Source", r.attribution); row("Review status", r.reviewStatus); row("Added to the index", r.added);
   const rel = (S.engine.neighbours(r.id) || []).slice(0, 4);
-  const acts = h("div", { class: "row", style: "margin-top:14px" }, h("a", { class: "btn", href: safeHref(r.url), target: "_blank", rel: "noopener" }, r.type === "source" ? "Original publication ↗" : "Open ↗"), r.type === "question" ? investigateLink(r.title) : null, r.type === "concept" && /#dossier-/.test(r.url) ? h("a", { class: "btn", href: safeHref(r.url), target: "_blank", rel: "noopener" }, "Explore in the Atlas →") : null, saveBtn(r));
+  const acts = h("div", { class: "row", style: "margin-top:14px" }, h("a", { class: "btn", href: safeHref(r.url), target: "_blank", rel: "noopener" }, r.type === "source" ? "Original publication ↗" : "Open ↗"), r.ledgerUrl ? h("a", { class: "btn", href: safeHref(r.ledgerUrl), target: "_blank", rel: "noopener" }, "View Research Record →") : null, r.type === "question" ? investigateLink(r.title) : null, r.type === "concept" && /#dossier-/.test(r.url) ? h("a", { class: "btn", href: safeHref(r.url), target: "_blank", rel: "noopener" }, "Explore in the Atlas →") : null, saveBtn(r));
   return h("aside", { class: "panel pv", id: "pv", tabindex: "-1", "aria-label": "Result preview" }, h("div", { class: "row", style: "justify-content:space-between" }, h("span", { class: "kicker", style: "margin:0" }, "Preview"), h("button", { class: "btn sm", type: "button", onclick: () => { ST.sel = null; renderResults(); } }, "Close")), h("h3", null, r.title), dl,
     rel.length ? h("div", null, h("p", { class: "grp" }, "Linked records"), h("ul", { class: "why" }, rel.map(n => { const o = S.get(n.id); return h("li", { class: n.kind === "preliminary" ? "pre" : "" }, h("a", { href: "#", onclick: e => { e.preventDefault(); ST.sel = n.id; renderResults(); } }, o.title), " · " + (n.kind === "preliminary" ? "unreviewed association" : "editorial link")); }))) : null, acts);
 }

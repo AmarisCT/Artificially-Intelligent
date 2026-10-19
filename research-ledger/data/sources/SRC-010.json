@@ -1,0 +1,59 @@
+{
+ "schema": 1,
+ "id": "SRC-010",
+ "citation": {
+  "raw": "Cogitate Consortium, Ferrante, O., Gorska-Klimowska, U., et al. (2025). “Adversarial testing of global neuronal workspace and integrated information theories of consciousness.” *Nature, 642*, 133–142. DOI: 10.1038/s41586-025-08888-1.",
+  "title": "Adversarial testing of global neuronal workspace and integrated information theories of consciousness",
+  "year": 2025,
+  "doi": "10.1038/s41586-025-08888-1",
+  "arxiv": null,
+  "url": null
+ },
+ "citedBy": [
+  {
+   "publication": "PUB-002",
+   "index": 0,
+   "label": null,
+   "labelInherited": false
+  }
+ ],
+ "verification": {
+  "level": "abstract-reviewed",
+  "history": [
+   {
+    "level": "abstract-reviewed",
+    "recordedOn": "2026-10-17",
+    "inspectedOn": null,
+    "basis": "Publisher record, as retrieved through an institutional repository page. Only the abstract-level description was read.",
+    "extent": "abstract-level description",
+    "origin": {
+     "kind": "shared-research-index",
+     "id": "src:cogitate-2025",
+     "also": "theory-chamber:cogitate-2025"
+    },
+    "performedBy": "Recorded during site construction with AI assistance. No human editor has re-checked this."
+   }
+  ]
+ },
+ "links": {
+  "sharedIndexId": "src:cogitate-2025",
+  "theoryChamberId": "cogitate-2025",
+  "learningInstituteId": "cogitate-2025"
+ },
+ "retraction": {
+  "status": "not checked",
+  "checkedOn": null
+ },
+ "recordedOn": "2026-10-17",
+ "recordNote": "Citation shown as printed. Inspection notes were copied from records the site already kept, with their origin. See the observations.",
+ "type": "Journal article",
+ "limitations": "The registry notes that the test covers specific predictions in one experimental setting (the published Experiment 1) and that the paper does not declare either theory proven or disproven.",
+ "observations": [
+  {
+   "text": "The volume and page range printed in the publication (Nature 642, 133–142) were not compared with a bibliographic record.",
+   "status": "open",
+   "raisedOn": "2026-10-17"
+  }
+ ],
+ "seededOn": "2026-10-17"
+}

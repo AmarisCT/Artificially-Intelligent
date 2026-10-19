@@ -1,0 +1,37 @@
+{
+ "schema": 1,
+ "id": "CLM-015",
+ "publication": "PUB-002",
+ "explorerId": "extended",
+ "passage": {
+  "snapshot": 1,
+  "index": 24,
+  "text": "Long before generative AI existed, philosophers Andy Clark and David Chalmers proposed the idea of the \"extended mind.\" Their argument was that cognitive processes do not always need to remain inside the skull. If an external object becomes reliably integrated into thinking, remembering, or problem solving, it can function as part of a larger cognitive system. Their famous examples involved notebooks and other environmental tools rather than artificial intelligence, but the philosophical framework has become increasingly relevant.",
+  "textHash": "60c80b1648ff5ad0"
+ },
+ "classification": "philosophical",
+ "classificationStatus": "draft",
+ "classificationOrigin": {
+  "kind": "evidence-explorer",
+  "id": "extended",
+  "note": "Imported unchanged from the Evidence Explorer's draft classification. No editor has reviewed it."
+ },
+ "concepts": [
+  "cognition",
+  "memory",
+  "identity"
+ ],
+ "sourceLinks": [
+  {
+   "source": "SRC-013",
+   "support": "not-assessed",
+   "basis": "explorer-draft",
+   "assessedOn": null,
+   "assessedBy": null
+  }
+ ],
+ "limitation": "The essay notes that the original examples involved notebooks and other tools, not artificial intelligence.",
+ "debate": null,
+ "limitationNote": "The limit is the Evidence Explorer's draft wording.",
+ "reviewedOn": null
+}

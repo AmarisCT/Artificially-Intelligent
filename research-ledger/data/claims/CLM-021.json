@@ -1,0 +1,28 @@
+{
+ "schema": 1,
+ "id": "CLM-021",
+ "publication": "PUB-002",
+ "explorerId": "nolink",
+ "passage": {
+  "snapshot": 1,
+  "index": 79,
+  "text": "The philosophical consequences extend beyond neuroscience. Some spiritual and metaphysical traditions have long questioned whether the self should be understood as an isolated, permanent object rather than as a process or relationship. Artificial intelligence does not prove those traditions correct, and there is currently no scientific evidence that AI is accessing a universal consciousness, spiritual field, or hidden quantum layer of awareness.",
+  "textHash": "af8ca05078bd0f0e"
+ },
+ "classification": "speculative",
+ "classificationStatus": "draft",
+ "classificationOrigin": {
+  "kind": "evidence-explorer",
+  "id": "nolink",
+  "note": "Imported unchanged from the Evidence Explorer's draft classification. No editor has reviewed it."
+ },
+ "concepts": [
+  "consciousness",
+  "identity"
+ ],
+ "sourceLinks": [],
+ "limitation": "The essay states that there is currently no scientific evidence for the metaphysical claims it names.",
+ "debate": null,
+ "limitationNote": "The limit is the Evidence Explorer's draft wording.",
+ "reviewedOn": null
+}

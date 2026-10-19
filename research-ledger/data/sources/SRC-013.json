@@ -1,0 +1,35 @@
+{
+ "schema": 1,
+ "id": "SRC-013",
+ "citation": {
+  "raw": "Clark, A., & Chalmers, D. (1998). “The Extended Mind.” *Analysis, 58*(1), 7–19. DOI: 10.1093/analys/58.1.7.",
+  "title": "The Extended Mind",
+  "year": 1998,
+  "doi": "10.1093/analys/58.1.7",
+  "arxiv": null,
+  "url": null
+ },
+ "citedBy": [
+  {
+   "publication": "PUB-002",
+   "index": 3,
+   "label": null,
+   "labelInherited": false
+  }
+ ],
+ "verification": {
+  "level": "verification-incomplete",
+  "history": []
+ },
+ "links": {},
+ "retraction": {
+  "status": "not checked",
+  "checkedOn": null
+ },
+ "recordedOn": "2026-10-17",
+ "recordNote": "Citation shown as printed. The Ledger has no documented check of this source.",
+ "type": "Journal article",
+ "limitations": null,
+ "observations": [],
+ "seededOn": "2026-10-17"
+}

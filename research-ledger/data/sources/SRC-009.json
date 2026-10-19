@@ -1,0 +1,53 @@
+{
+ "schema": 1,
+ "id": "SRC-009",
+ "citation": {
+  "raw": "[6] Brown, T. B., et al. (2020). “Language Models are Few-Shot Learners.” Section 2.2, Training Dataset. arXiv:2005.14165. https://arxiv.org/abs/2005.14165",
+  "title": "Language Models are Few-Shot Learners",
+  "year": 2020,
+  "doi": null,
+  "arxiv": "2005.14165",
+  "url": "https://arxiv.org/abs/2005.14165"
+ },
+ "citedBy": [
+  {
+   "publication": "PUB-001",
+   "index": 8,
+   "label": "[6]",
+   "labelInherited": false
+  }
+ ],
+ "verification": {
+  "level": "abstract-reviewed",
+  "history": [
+   {
+    "level": "abstract-reviewed",
+    "recordedOn": "2026-10-17",
+    "inspectedOn": null,
+    "basis": "The arXiv abstract page was read. The full paper was not.",
+    "extent": "arXiv abstract page",
+    "origin": {
+     "kind": "shared-research-index",
+     "id": "src:brown-2020",
+     "also": "museum:brown-2020"
+    },
+    "performedBy": "Recorded during site construction with AI assistance. No human editor has re-checked this."
+   }
+  ]
+ },
+ "links": {
+  "sharedIndexId": "src:brown-2020",
+  "museumId": "brown-2020",
+  "learningInstituteId": "brown-2020"
+ },
+ "retraction": {
+  "status": "not checked",
+  "checkedOn": null
+ },
+ "recordedOn": "2026-10-17",
+ "recordNote": "Citation shown as printed. Inspection notes were copied from records the site already kept, with their origin.",
+ "type": "Preprint",
+ "limitations": "The publication cites Section 2.2 (Training Dataset). Only the abstract page was read, so that section has not been checked.",
+ "observations": [],
+ "seededOn": "2026-10-17"
+}

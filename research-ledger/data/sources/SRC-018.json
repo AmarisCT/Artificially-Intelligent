@@ -1,0 +1,35 @@
+{
+ "schema": 1,
+ "id": "SRC-018",
+ "citation": {
+  "raw": "Barcaui, A. (2025). “ChatGPT as a Cognitive Crutch: Evidence from a Randomized Controlled Trial on Knowledge Retention.” *Social Sciences & Humanities Open, 12*, 102287. DOI: 10.1016/j.ssaho.2025.102287.",
+  "title": "ChatGPT as a Cognitive Crutch: Evidence from a Randomized Controlled Trial on Knowledge Retention",
+  "year": 2025,
+  "doi": "10.1016/j.ssaho.2025.102287",
+  "arxiv": null,
+  "url": null
+ },
+ "citedBy": [
+  {
+   "publication": "PUB-002",
+   "index": 8,
+   "label": null,
+   "labelInherited": false
+  }
+ ],
+ "verification": {
+  "level": "verification-incomplete",
+  "history": []
+ },
+ "links": {},
+ "retraction": {
+  "status": "not checked",
+  "checkedOn": null
+ },
+ "recordedOn": "2026-10-17",
+ "recordNote": "Citation shown as printed. The Ledger has no documented check of this source.",
+ "type": "Journal article",
+ "limitations": null,
+ "observations": [],
+ "seededOn": "2026-10-17"
+}

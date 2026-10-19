@@ -1,0 +1,68 @@
+{
+ "schema": 1,
+ "id": "SRC-016",
+ "citation": {
+  "raw": "Butlin, P., Long, R., Elmoznino, E., Bengio, Y., Birch, J., Constant, A., et al. (2023). “Consciousness in Artificial Intelligence: Insights from the Science of Consciousness.” arXiv:2308.08708.",
+  "title": "Consciousness in Artificial Intelligence: Insights from the Science of Consciousness",
+  "year": 2023,
+  "doi": null,
+  "arxiv": "2308.08708",
+  "url": null
+ },
+ "citedBy": [
+  {
+   "publication": "PUB-002",
+   "index": 6,
+   "label": null,
+   "labelInherited": false
+  }
+ ],
+ "verification": {
+  "level": "abstract-reviewed",
+  "history": [
+   {
+    "level": "metadata-confirmed",
+    "recordedOn": "2026-10-17",
+    "inspectedOn": "2026-10-15",
+    "basis": "The DataCite (arXiv) record was retrieved and checked against the DOI. Title, authors and date matched.",
+    "extent": null,
+    "origin": {
+     "kind": "research-observatory",
+     "id": "P017",
+     "file": "research-observatory/data/publications.json"
+    },
+    "performedBy": "Recorded during site construction with AI assistance. No human editor has re-checked this."
+   },
+   {
+    "level": "abstract-reviewed",
+    "recordedOn": "2026-10-17",
+    "inspectedOn": null,
+    "basis": "The arXiv abstract page was retrieved and paraphrased.",
+    "extent": "arXiv abstract page",
+    "origin": {
+     "kind": "shared-research-index",
+     "id": "src:butlin-2023",
+     "also": "theory-chamber:butlin-2023"
+    },
+    "performedBy": "Recorded during site construction with AI assistance. No human editor has re-checked this."
+   }
+  ]
+ },
+ "links": {
+  "sharedIndexId": "src:butlin-2023",
+  "observatoryId": "P017",
+  "lexiconId": "butlin23",
+  "theoryChamberId": "butlin-2023",
+  "learningInstituteId": "butlin-2023"
+ },
+ "retraction": {
+  "status": "not checked",
+  "checkedOn": null
+ },
+ "recordedOn": "2026-10-17",
+ "recordNote": "Citation shown as printed. Inspection notes were copied from records the site already kept, with their origin.",
+ "type": "Preprint",
+ "limitations": "A preprint. The registry found no journal version mentioned on the page. Its indicator properties depend on the theories it draws from.",
+ "observations": [],
+ "seededOn": "2026-10-17"
+}

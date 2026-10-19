@@ -1,0 +1,295 @@
+{
+ "schema": 1,
+ "note": "Controlled vocabularies for the Research Ledger. Labels are shown to visitors; ids are stored in records. Definitions describe what a label means for this site only. None of these labels is a measure of credibility, and none implies external accreditation.",
+ "verificationLevels": [
+  {
+   "id": "verification-incomplete",
+   "rank": 0,
+   "label": "Verification Incomplete",
+   "short": "No documented check",
+   "meaning": "No completed check is recorded in the Ledger, or the information available was not enough to complete one. The source is listed exactly as the publication cites it."
+  },
+  {
+   "id": "metadata-confirmed",
+   "rank": 1,
+   "label": "Metadata Confirmed",
+   "short": "Citation matches a bibliographic record",
+   "meaning": "A bibliographic record (for example from Crossref or DataCite) was retrieved and matches the cited work. This shows that the work exists as cited. It does not show that anyone read it, or that it supports any claim."
+  },
+  {
+   "id": "abstract-reviewed",
+   "rank": 2,
+   "label": "Abstract Reviewed",
+   "short": "Abstract or summary page read",
+   "meaning": "The abstract, summary or catalogue description was read. The body of the work was not."
+  },
+  {
+   "id": "source-content-inspected",
+   "rank": 3,
+   "label": "Source Content Inspected",
+   "short": "Content of the source was read",
+   "meaning": "The content of the source was opened and read, in full or in part (the record says which). This is a reading of the source. It is not yet a check that the publication uses the source correctly."
+  },
+  {
+   "id": "full-source-reviewed",
+   "rank": 4,
+   "label": "Full Source Reviewed",
+   "short": "Whole source reviewed by an editor",
+   "meaning": "The whole source was reviewed by a named editor, and the review is documented. No source has this level yet."
+  },
+  {
+   "id": "editorial-interpretation-reviewed",
+   "rank": 5,
+   "label": "Editorial Interpretation Reviewed",
+   "short": "Use of the source checked",
+   "meaning": "An editor compared how the publication uses this source with the source itself, claim by claim, and documented the outcome. No source has this level yet."
+  }
+ ],
+ "claimClassifications": [
+  {
+   "id": "empirical",
+   "label": "Empirical Claim",
+   "meaning": "Reports a result, measurement or documented record. The label says what kind of statement it is, not whether it is correct."
+  },
+  {
+   "id": "theoretical",
+   "label": "Theoretical Proposal",
+   "meaning": "Describes a proposed explanation or framework, or an assessment built on proposed explanations."
+  },
+  {
+   "id": "philosophical",
+   "label": "Philosophical Argument",
+   "meaning": "Reasoned argument rather than an experimental result."
+  },
+  {
+   "id": "historical",
+   "label": "Historical Claim",
+   "meaning": "A statement about what happened in the past, resting on records or historical scholarship."
+  },
+  {
+   "id": "editorial",
+   "label": "Editorial Interpretation",
+   "meaning": "The publication's own reading or framing of material. It is offered as interpretation."
+  },
+  {
+   "id": "speculative",
+   "label": "Speculative Proposal",
+   "meaning": "A possibility the publication explores without evidence that settles it."
+  },
+  {
+   "id": "open-question",
+   "label": "Open Question",
+   "meaning": "Stated by the publication as unresolved."
+  }
+ ],
+ "explorerClassificationMap": {
+  "empirical": "empirical",
+  "theory": "theoretical",
+  "argument": "philosophical",
+  "open": "open-question",
+  "spec": "speculative"
+ },
+ "claimStatuses": [
+  {
+   "id": "draft",
+   "label": "Draft classification",
+   "meaning": "Proposed during site construction. No editor has reviewed it."
+  },
+  {
+   "id": "reviewed",
+   "label": "Editorially reviewed",
+   "meaning": "An editor reviewed and confirmed or changed the classification. The review is recorded."
+  }
+ ],
+ "supportStatuses": [
+  {
+   "id": "not-assessed",
+   "label": "Support not assessed",
+   "meaning": "Nobody has compared the claim with this source. The source is listed because the publication cites it near the passage."
+  },
+  {
+   "id": "supports",
+   "label": "Source supports the claim",
+   "meaning": "Recorded only after the source was inspected and compared with the passage."
+  },
+  {
+   "id": "partly-supports",
+   "label": "Source partly supports the claim",
+   "meaning": "Recorded only after inspection. The record says what is and is not supported."
+  },
+  {
+   "id": "does-not-support",
+   "label": "Source does not support the claim",
+   "meaning": "Recorded only after inspection."
+  },
+  {
+   "id": "needs-review",
+   "label": "Needs review",
+   "meaning": "A reader or editor raised a question that has not been resolved."
+  }
+ ],
+ "reviewStatuses": [
+  {
+   "id": "awaiting-editorial-review",
+   "label": "Awaiting Editorial Review",
+   "meaning": "No editorial review of this publication has been recorded in the Ledger."
+  },
+  {
+   "id": "source-verification-in-progress",
+   "label": "Source Verification in Progress",
+   "meaning": "An editor has started checking sources. The Source Registry shows which checks are done."
+  },
+  {
+   "id": "editorially-reviewed",
+   "label": "Editorially Reviewed",
+   "meaning": "An editor completed a documented review of sources and claims."
+  },
+  {
+   "id": "revision-requested",
+   "label": "Revision Requested",
+   "meaning": "A review found something to change. The revision has not been published yet."
+  },
+  {
+   "id": "review-completed-with-limitations",
+   "label": "Review Completed With Limitations",
+   "meaning": "A review was completed and the record states what it could not cover."
+  },
+  {
+   "id": "new-evidence-review-pending",
+   "label": "New Evidence Review Pending",
+   "meaning": "Newer evidence was identified and has not been reviewed against this publication yet."
+  }
+ ],
+ "revisionCategories": [
+  {
+   "id": "editorial-revision",
+   "label": "Editorial Revision",
+   "meaning": "Wording, structure or emphasis changed."
+  },
+  {
+   "id": "source-update",
+   "label": "Source Update",
+   "meaning": "A source was added, replaced or updated."
+  },
+  {
+   "id": "research-expansion",
+   "label": "Research Expansion",
+   "meaning": "New research or analysis was added."
+  },
+  {
+   "id": "correction",
+   "label": "Correction",
+   "meaning": "An error was corrected. A matching entry exists in Corrections & Clarifications."
+  },
+  {
+   "id": "interpretive-revision",
+   "label": "Interpretive Revision",
+   "meaning": "The reading or conclusion changed."
+  },
+  {
+   "id": "technical-correction",
+   "label": "Technical Correction",
+   "meaning": "Typography, formatting, links or similar, with no change of meaning."
+  },
+  {
+   "id": "retraction-or-withdrawal",
+   "label": "Retraction or Withdrawal",
+   "meaning": "The publication, or part of it, was withdrawn."
+  }
+ ],
+ "revisionStates": [
+  {
+   "id": "unclassified",
+   "label": "Change detected, not yet classified",
+   "meaning": "The published text differs from the previous saved version. Nobody has yet recorded what changed or why."
+  },
+  {
+   "id": "classified",
+   "label": "Classified",
+   "meaning": "An editor recorded the category and a summary."
+  }
+ ],
+ "correctionKinds": [
+  {
+   "id": "correction",
+   "label": "Correction",
+   "meaning": "Something stated was wrong and is now fixed."
+  },
+  {
+   "id": "clarification",
+   "label": "Clarification",
+   "meaning": "Something was unclear or could be misread. Its meaning is now stated more precisely."
+  },
+  {
+   "id": "retraction-or-withdrawal",
+   "label": "Retraction or Withdrawal",
+   "meaning": "The publication, or part of it, was withdrawn."
+  }
+ ],
+ "policyStatuses": [
+  {
+   "id": "approved",
+   "label": "Approved standard",
+   "meaning": "Approved by the site owner on the date shown."
+  },
+  {
+   "id": "proposed",
+   "label": "Proposed draft, awaiting owner approval",
+   "meaning": "A draft prepared from documented practice. It is not an official standard."
+  },
+  {
+   "id": "needs-decision",
+   "label": "Needs owner decision",
+   "meaning": "The owner has to decide before a draft can be written."
+  }
+ ],
+ "snapshotKinds": [
+  {
+   "id": "baseline",
+   "label": "Baseline",
+   "meaning": "The first version the Ledger captured. It is the text as published on the capture date, not a claim about earlier drafts."
+  },
+  {
+   "id": "detected-change",
+   "label": "Detected change",
+   "meaning": "A later version whose text differs from the previous saved version."
+  }
+ ],
+ "lifeOfAnIdea": [
+  {
+   "id": "published",
+   "label": "Published",
+   "meaning": "When essays addressing the concept were published."
+  },
+  {
+   "id": "sources",
+   "label": "Sources referenced",
+   "meaning": "Which sources those essays cite, and how far each has been checked."
+  },
+  {
+   "id": "theories",
+   "label": "Theories discussed",
+   "meaning": "Which scientific theories the Theory Chamber records as mentioned in those essays."
+  },
+  {
+   "id": "questions",
+   "label": "Open questions",
+   "meaning": "Which unresolved questions the essays state."
+  },
+  {
+   "id": "review",
+   "label": "Editorial review",
+   "meaning": "Whether an editor has reviewed the essays, and what the review covered."
+  },
+  {
+   "id": "revised",
+   "label": "Revised or corrected",
+   "meaning": "Whether the essays changed after publication, and why."
+  },
+  {
+   "id": "newer",
+   "label": "Newer research",
+   "meaning": "Whether newer, reviewed research has prompted a change."
+  }
+ ]
+}

@@ -73,6 +73,7 @@ function resCard(id, o) {
   if (r.type === "source") acts.append(h("button", { class: "btn sm", type: "button", onclick: () => inspect(id) }, "Inspect source"));
   if (r.type === "question") acts.append(h("button", { class: "btn sm", type: "button", onclick: () => branch(r) }, "Investigate this question →"));
   acts.append(openLink(r, r.type === "source" ? "Original publication ↗" : "Open ↗"));
+  if (r.ledgerUrl) acts.append(h("a", { class: "btn sm", href: safeHref(r.ledgerUrl), target: "_blank", rel: "noopener" }, "View Research Record →"));
   if (!o.noSave) acts.append(saveBar(r));
   return h("article", { class: "card" }, h("div", null, badge(r.type), o.tags || null, r.type === "source" ? evTags(r) : null, o.preliminary ? h("span", { class: "tag amber dash" }, "Unreviewed association") : null),
     h("h4", null, h("a", { href: safeHref(r.url), target: "_blank", rel: "noopener" }, r.title)),

@@ -455,13 +455,17 @@ def build(root: pathlib.Path, atlas_path: pathlib.Path):
             res[e["b"]]["concepts"] = sorted(set(res[e["b"]]["concepts"] + [cid]))
 
     # ---------------- Published articles (from the public manifest) ----------------
+    ledger_urls = ledger_record_urls(root)
     for a in manifest:
         slug = a["url"].rstrip("/").rsplit("/", 1)[-1]
-        add({"id": f"art:{slug}", "type": "article", "title": a["title"], "summary": clip(a.get("excerpt"), 420),
-             "concepts": list(a.get("topics", [])), "url": a["url"], "date": a.get("publishedAt"),
-             "category": a.get("category"), "readingMinutes": a.get("readingMinutes"),
-             "attribution": "Artificially Intelligent (original essay)", "reviewStatus": "Published essay; topic tags are editorial",
-             "topicSource": a.get("topicSource"), "deskKey": None})
+        rec = {"id": f"art:{slug}", "type": "article", "title": a["title"], "summary": clip(a.get("excerpt"), 420),
+               "concepts": list(a.get("topics", [])), "url": a["url"], "date": a.get("publishedAt"),
+               "category": a.get("category"), "readingMinutes": a.get("readingMinutes"),
+               "attribution": "Artificially Intelligent (original essay)", "reviewStatus": "Published essay; topic tags are editorial",
+               "topicSource": a.get("topicSource"), "deskKey": None}
+        if slug in ledger_urls:
+            rec["ledgerUrl"] = ledger_urls[slug]
+        add(rec)
 
     # ---------------- Learning Institute (published courses and their lessons only) ----------------
     li = root / "learning-institute" / "data"
@@ -529,6 +533,19 @@ def build(root: pathlib.Path, atlas_path: pathlib.Path):
     if missing:
         raise SystemExit("Concept links reference unknown concepts: " + ", ".join(sorted(set(missing))))
     return index, vocab_out
+
+
+def ledger_record_urls(root):
+    """slug -> Research Ledger record address. Empty unless the Ledger page AND its public data are both present,
+    so no link to a Ledger record is ever produced before the Ledger is deployed (the index is unchanged until then)."""
+    page, data = root / "research-ledger" / "index.html", root / "research-ledger" / "data" / "ledger.json"
+    if not (page.exists() and data.exists()):
+        return {}
+    try:
+        pubs = json.load(open(data, encoding="utf-8")).get("publications", [])
+    except (OSError, ValueError):
+        return {}
+    return {x["slug"]: f"{SITE}research-ledger/#publication-{x['id']}" for x in pubs if x.get("slug") and x.get("id") and not x.get("demo")}
 
 
 def adapters(root, counts):

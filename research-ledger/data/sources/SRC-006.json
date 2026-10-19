@@ -1,0 +1,51 @@
+{
+ "schema": 1,
+ "id": "SRC-006",
+ "citation": {
+  "raw": "[3] The National Archives. “Domesday Book.” Research guide. https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/domesday-book/",
+  "title": "Domesday Book",
+  "year": null,
+  "doi": null,
+  "arxiv": null,
+  "url": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/domesday-book/"
+ },
+ "citedBy": [
+  {
+   "publication": "PUB-001",
+   "index": 5,
+   "label": "[3]",
+   "labelInherited": false
+  }
+ ],
+ "verification": {
+  "level": "source-content-inspected",
+  "history": [
+   {
+    "level": "source-content-inspected",
+    "recordedOn": "2026-10-17",
+    "inspectedOn": null,
+    "basis": "Research guide read in full. It does not explain the origin of the name 'Domesday'.",
+    "extent": "read in full",
+    "origin": {
+     "kind": "museum",
+     "id": "tna-domesday",
+     "file": "museum/data/museum.json"
+    },
+    "performedBy": "Recorded during site construction with AI assistance. No human editor has re-checked this."
+   }
+  ]
+ },
+ "links": {
+  "museumId": "tna-domesday"
+ },
+ "retraction": {
+  "status": "not checked",
+  "checkedOn": null
+ },
+ "recordedOn": "2026-10-17",
+ "recordNote": "Citation shown as printed. Inspection notes were copied from records the site already kept, with their origin.",
+ "type": "Institutional page",
+ "limitations": null,
+ "observations": [],
+ "seededOn": "2026-10-17"
+}

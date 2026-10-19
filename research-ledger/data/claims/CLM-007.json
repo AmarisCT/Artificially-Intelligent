@@ -1,0 +1,29 @@
+{
+ "schema": 1,
+ "id": "CLM-007",
+ "publication": "PUB-001",
+ "explorerId": "inherit",
+ "passage": {
+  "snapshot": 1,
+  "index": 24,
+  "text": "We are all archives now because traces of our lives increasingly circulate beyond the circumstances that gave them meaning. Yet the archive remains a record of a life, not its replacement. The responsibility ahead is to preserve what helps us understand one another without allowing what has been recorded to become the limit of who we can be.",
+  "textHash": "79b7547cb53a4582"
+ },
+ "classification": "speculative",
+ "classificationStatus": "draft",
+ "classificationOrigin": {
+  "kind": "evidence-explorer",
+  "id": "inherit",
+  "note": "Imported unchanged from the Evidence Explorer's draft classification. No editor has reviewed it."
+ },
+ "concepts": [
+  "archives",
+  "identity",
+  "memory"
+ ],
+ "sourceLinks": [],
+ "limitation": "The essay's closing interpretation.",
+ "debate": null,
+ "limitationNote": "The limit is the Evidence Explorer's draft wording.",
+ "reviewedOn": null
+}

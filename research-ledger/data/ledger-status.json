@@ -1,0 +1,13 @@
+{
+ "schema": 1,
+ "lastCheckedAt": "2026-10-17T14:45:00Z",
+ "feedItems": 2,
+ "publicationsTracked": 2,
+ "created": 2,
+ "unchanged": 0,
+ "candidateChanges": [],
+ "recordedChanges": 0,
+ "ignored": [],
+ "warnings": [],
+ "note": "Written by capture_public_revisions.py. The time is when the Ledger last compared the public text with its saved versions."
+}

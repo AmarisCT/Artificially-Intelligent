@@ -1,0 +1,37 @@
+{
+ "schema": 1,
+ "id": "CLM-004",
+ "publication": "PUB-001",
+ "explorerId": "gpt3",
+ "passage": {
+  "snapshot": 1,
+  "index": 16,
+  "text": "Artificial intelligence introduces another layer into this history. Some language models are trained on large collections of recorded language. Brown and colleagues' 2020 GPT-3 paper, for example, describes a training mixture that included filtered Common Crawl material, WebText2, books, and Wikipedia. The model's ability to generate language emerged through training on this selected body of text, rather than through firsthand participation in the lives behind it. [6]",
+  "textHash": "d4414471303da778"
+ },
+ "classification": "empirical",
+ "classificationStatus": "draft",
+ "classificationOrigin": {
+  "kind": "evidence-explorer",
+  "id": "gpt3",
+  "note": "Imported unchanged from the Evidence Explorer's draft classification. No editor has reviewed it."
+ },
+ "concepts": [
+  "ai",
+  "language",
+  "archives"
+ ],
+ "sourceLinks": [
+  {
+   "source": "SRC-009",
+   "support": "not-assessed",
+   "basis": "inline-marker",
+   "assessedOn": null,
+   "assessedBy": null
+  }
+ ],
+ "limitation": "Describes the training mixture reported in one paper. The essay adds that the model's language ability came from selected text rather than from firsthand participation in the lives behind it.",
+ "debate": null,
+ "limitationNote": "The limit is the Evidence Explorer's draft wording.",
+ "reviewedOn": null
+}

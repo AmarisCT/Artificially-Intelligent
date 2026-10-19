@@ -1,0 +1,16 @@
+{
+ "schema": 1,
+ "id": "RVW-001",
+ "publication": "PUB-001",
+ "status": "awaiting-editorial-review",
+ "history": [
+  {
+   "status": "awaiting-editorial-review",
+   "on": "2026-10-17",
+   "note": "Initial status when the publication was recorded in the Ledger. No editorial review has been recorded."
+  }
+ ],
+ "reviewer": null,
+ "limitations": null,
+ "nextStep": null
+}

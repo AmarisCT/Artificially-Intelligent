@@ -1,0 +1,43 @@
+{
+ "schema": 1,
+ "id": "SRC-008",
+ "citation": {
+  "raw": "[5] Library of Congress. “Personal Digital Archiving.” Digital preservation resources. https://digitalpreservation.gov/personalarchiving/",
+  "title": "Personal Digital Archiving",
+  "year": null,
+  "doi": null,
+  "arxiv": null,
+  "url": "https://digitalpreservation.gov/personalarchiving/"
+ },
+ "citedBy": [
+  {
+   "publication": "PUB-001",
+   "index": 7,
+   "label": "[5]",
+   "labelInherited": false
+  }
+ ],
+ "verification": {
+  "level": "verification-incomplete",
+  "history": []
+ },
+ "links": {
+  "museumId": "loc-2010"
+ },
+ "retraction": {
+  "status": "not checked",
+  "checkedOn": null
+ },
+ "recordedOn": "2026-10-17",
+ "recordNote": "Citation shown as printed. The Ledger has no documented check of this source. See the observations.",
+ "type": "Institutional page",
+ "limitations": null,
+ "observations": [
+  {
+   "text": "The Museum records that this page could not be fetched during site construction. A different Library of Congress page (a 2010 news item) was read instead, so nothing is recorded as read for the page the publication cites.",
+   "status": "open",
+   "raisedOn": "2026-10-17"
+  }
+ ],
+ "seededOn": "2026-10-17"
+}

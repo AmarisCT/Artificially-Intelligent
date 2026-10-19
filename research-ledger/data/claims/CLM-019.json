@@ -1,0 +1,36 @@
+{
+ "schema": 1,
+ "id": "CLM-019",
+ "publication": "PUB-002",
+ "explorerId": "report",
+ "passage": {
+  "snapshot": 1,
+  "index": 67,
+  "text": "A major interdisciplinary report on AI consciousness published in 2023 evaluated artificial systems against properties derived from several scientific theories of consciousness. Its authors concluded that the systems they examined did not provide sufficient evidence of consciousness, while also arguing that there appeared to be no obvious technical reason that future artificial systems could never satisfy at least some proposed indicators.",
+  "textHash": "10ad70be39da5fb8"
+ },
+ "classification": "theoretical",
+ "classificationStatus": "draft",
+ "classificationOrigin": {
+  "kind": "evidence-explorer",
+  "id": "report",
+  "note": "Imported unchanged from the Evidence Explorer's draft classification. No editor has reviewed it."
+ },
+ "concepts": [
+  "consciousness",
+  "ai"
+ ],
+ "sourceLinks": [
+  {
+   "source": "SRC-016",
+   "support": "not-assessed",
+   "basis": "explorer-draft",
+   "assessedOn": null,
+   "assessedBy": null
+  }
+ ],
+ "limitation": "The indicators depend on scientific theories that the essay describes as unsettled (paragraphs 3 and 4).",
+ "debate": "Theory-derived indicators versus the unsettled status of the theories they come from",
+ "limitationNote": "The limit is the Evidence Explorer's draft wording.",
+ "reviewedOn": null
+}

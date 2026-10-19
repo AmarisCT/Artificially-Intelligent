@@ -1,0 +1,36 @@
+{
+ "schema": 1,
+ "id": "CLM-020",
+ "publication": "PUB-002",
+ "explorerId": "unresolved",
+ "passage": {
+  "snapshot": 1,
+  "index": 68,
+  "text": "By 2026, consciousness researchers were still warning that the basic scientific problem remained unresolved. We do not yet possess an agreed theory capable of reliably determining what kinds of artificial systems, if any, would have subjective experience.",
+  "textHash": "c2b74559c219bcbb"
+ },
+ "classification": "open-question",
+ "classificationStatus": "draft",
+ "classificationOrigin": {
+  "kind": "evidence-explorer",
+  "id": "unresolved",
+  "note": "Imported unchanged from the Evidence Explorer's draft classification. No editor has reviewed it."
+ },
+ "concepts": [
+  "consciousness",
+  "ai"
+ ],
+ "sourceLinks": [
+  {
+   "source": "SRC-020",
+   "support": "not-assessed",
+   "basis": "explorer-draft",
+   "assessedOn": null,
+   "assessedBy": null
+  }
+ ],
+ "limitation": "A statement of an unresolved problem. It does not predict how the problem will be resolved.",
+ "debate": null,
+ "limitationNote": "The limit is the Evidence Explorer's draft wording.",
+ "reviewedOn": null
+}

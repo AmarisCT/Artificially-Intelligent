@@ -1,0 +1,35 @@
+{
+ "schema": 1,
+ "id": "SRC-014",
+ "citation": {
+  "raw": "Mischler, G., Li, Y. A., Bickel, S., Mehta, A. D., & Mesgarani, N. (2024). “Contextual feature extraction hierarchies converge in large language models and the brain.” *Nature Machine Intelligence, 6*, 1467–1477. DOI: 10.1038/s42256-024-00925-4.",
+  "title": "Contextual feature extraction hierarchies converge in large language models and the brain",
+  "year": 2024,
+  "doi": "10.1038/s42256-024-00925-4",
+  "arxiv": null,
+  "url": null
+ },
+ "citedBy": [
+  {
+   "publication": "PUB-002",
+   "index": 4,
+   "label": null,
+   "labelInherited": false
+  }
+ ],
+ "verification": {
+  "level": "verification-incomplete",
+  "history": []
+ },
+ "links": {},
+ "retraction": {
+  "status": "not checked",
+  "checkedOn": null
+ },
+ "recordedOn": "2026-10-17",
+ "recordNote": "Citation shown as printed. The Ledger has no documented check of this source.",
+ "type": "Journal article",
+ "limitations": null,
+ "observations": [],
+ "seededOn": "2026-10-17"
+}

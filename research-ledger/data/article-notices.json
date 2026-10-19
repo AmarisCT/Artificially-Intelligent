@@ -1,0 +1,18 @@
+{
+ "schema": 1,
+ "note": "Read by scripts/build_published.py. Only approved correction records appear here.",
+ "notices": {
+  "we-are-all-archives-now": {
+   "publication": "PUB-001",
+   "ledgerUrl": "https://amarisct.github.io/Artificially-Intelligent/research-ledger/#publication-PUB-001",
+   "reviewStatus": "Awaiting Editorial Review",
+   "correction": null
+  },
+  "is-human-consciousness-connected-to-artificial-intelligence": {
+   "publication": "PUB-002",
+   "ledgerUrl": "https://amarisct.github.io/Artificially-Intelligent/research-ledger/#publication-PUB-002",
+   "reviewStatus": "Awaiting Editorial Review",
+   "correction": null
+  }
+ }
+}

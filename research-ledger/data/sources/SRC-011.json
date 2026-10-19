@@ -1,0 +1,72 @@
+{
+ "schema": 1,
+ "id": "SRC-011",
+ "citation": {
+  "raw": "Turing, A. M. (1950). “Computing Machinery and Intelligence.” *Mind, 59*(236), 433–460. DOI: 10.1093/mind/LIX.236.433.",
+  "title": "Computing Machinery and Intelligence",
+  "year": 1950,
+  "doi": "10.1093/mind/LIX.236.433",
+  "arxiv": null,
+  "url": null
+ },
+ "citedBy": [
+  {
+   "publication": "PUB-002",
+   "index": 1,
+   "label": null,
+   "labelInherited": false
+  }
+ ],
+ "verification": {
+  "level": "source-content-inspected",
+  "history": [
+   {
+    "level": "metadata-confirmed",
+    "recordedOn": "2026-10-17",
+    "inspectedOn": "2026-10-15",
+    "basis": "The Crossref record was retrieved and checked against the DOI. Title, authors and date matched.",
+    "extent": null,
+    "origin": {
+     "kind": "research-observatory",
+     "id": "P003",
+     "file": "research-observatory/data/publications.json"
+    },
+    "performedBy": "Recorded during site construction with AI assistance. No human editor has re-checked this."
+   },
+   {
+    "level": "source-content-inspected",
+    "recordedOn": "2026-10-17",
+    "inspectedOn": null,
+    "basis": "A scanned reproduction hosted at Princeton was read. The scan has OCR errors and one printed figure was garbled. Page numbers and DOI were not confirmed from the scan.",
+    "extent": "scanned reproduction, read",
+    "origin": {
+     "kind": "shared-research-index",
+     "id": "src:turing-1950"
+    },
+    "performedBy": "Recorded during site construction with AI assistance. No human editor has re-checked this."
+   }
+  ]
+ },
+ "links": {
+  "sharedIndexId": "src:turing-1950",
+  "observatoryId": "P003",
+  "lexiconId": "turing50",
+  "learningInstituteId": "turing50"
+ },
+ "retraction": {
+  "status": "not checked",
+  "checkedOn": null
+ },
+ "recordedOn": "2026-10-17",
+ "recordNote": "Citation shown as printed. Inspection notes were copied from records the site already kept, with their origin. See the observations.",
+ "type": "Journal article",
+ "limitations": "What was read is a reproduction, not the publisher's version.",
+ "observations": [
+  {
+   "text": "The page range printed in the publication (433–460) was not compared with a bibliographic record.",
+   "status": "open",
+   "raisedOn": "2026-10-17"
+  }
+ ],
+ "seededOn": "2026-10-17"
+}

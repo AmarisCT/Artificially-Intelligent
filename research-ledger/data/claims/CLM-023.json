@@ -1,0 +1,28 @@
+{
+ "schema": 1,
+ "id": "CLM-023",
+ "publication": "PUB-002",
+ "explorerId": "answer",
+ "passage": {
+  "snapshot": 1,
+  "index": 98,
+  "text": "If it means, \"Are today's AI systems proven to have subjective experience?\" the evidence does not currently justify that conclusion.",
+  "textHash": "8779c04b8147df84"
+ },
+ "classification": "open-question",
+ "classificationStatus": "draft",
+ "classificationOrigin": {
+  "kind": "evidence-explorer",
+  "id": "answer",
+  "note": "Imported unchanged from the Evidence Explorer's draft classification. No editor has reviewed it."
+ },
+ "concepts": [
+  "consciousness",
+  "ai"
+ ],
+ "sourceLinks": [],
+ "limitation": "Part of the essay's conclusion: it holds that the question has no simple scientific yes or no answer yet (paragraph 96).",
+ "debate": null,
+ "limitationNote": "The limit is the Evidence Explorer's draft wording.",
+ "reviewedOn": null
+}

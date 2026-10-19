@@ -1,0 +1,35 @@
+{
+ "schema": 1,
+ "id": "SRC-017",
+ "citation": {
+  "raw": "Sharma, M., Tong, M., Korbak, T., Duvenaud, D., Askell, A., Bowman, S. R., et al. (2023). “Towards Understanding Sycophancy in Language Models.” arXiv:2310.13548.",
+  "title": "Towards Understanding Sycophancy in Language Models",
+  "year": 2023,
+  "doi": null,
+  "arxiv": "2310.13548",
+  "url": null
+ },
+ "citedBy": [
+  {
+   "publication": "PUB-002",
+   "index": 7,
+   "label": null,
+   "labelInherited": false
+  }
+ ],
+ "verification": {
+  "level": "verification-incomplete",
+  "history": []
+ },
+ "links": {},
+ "retraction": {
+  "status": "not checked",
+  "checkedOn": null
+ },
+ "recordedOn": "2026-10-17",
+ "recordNote": "Citation shown as printed. The Ledger has no documented check of this source.",
+ "type": "Preprint",
+ "limitations": null,
+ "observations": [],
+ "seededOn": "2026-10-17"
+}

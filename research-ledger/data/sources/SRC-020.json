@@ -1,0 +1,35 @@
+{
+ "schema": 1,
+ "id": "SRC-020",
+ "citation": {
+  "raw": "Lenharo, M. (2026). “Consciousness research is having an AI moment. Will the hype help the field?” *Nature*. DOI: 10.1038/d41586-026-02300-2.",
+  "title": "Consciousness research is having an AI moment. Will the hype help the field?",
+  "year": 2026,
+  "doi": "10.1038/d41586-026-02300-2",
+  "arxiv": null,
+  "url": null
+ },
+ "citedBy": [
+  {
+   "publication": "PUB-002",
+   "index": 10,
+   "label": null,
+   "labelInherited": false
+  }
+ ],
+ "verification": {
+  "level": "verification-incomplete",
+  "history": []
+ },
+ "links": {},
+ "retraction": {
+  "status": "not checked",
+  "checkedOn": null
+ },
+ "recordedOn": "2026-10-17",
+ "recordNote": "Citation shown as printed. The Ledger has no documented check of this source.",
+ "type": "News feature",
+ "limitations": null,
+ "observations": [],
+ "seededOn": "2026-10-17"
+}

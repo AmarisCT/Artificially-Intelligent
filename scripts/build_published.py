@@ -19,6 +19,7 @@ SITE = "https://amarisct.github.io/Artificially-Intelligent/"
 FEED = ROOT / "feed.xml"
 OUTPUT = ROOT / "research" / "published"
 CONTENT = "{http://purl.org/rss/1.0/modules/content/}"
+LEDGER_DATA = ROOT / "research-ledger" / "data"
 CSS = """
 :root{--bg:#090c0b;--ink:#f2f0e9;--muted:#a4aca5;--line:rgba(255,255,255,.16);--mint:#b9ffde}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,system-ui,-apple-system,sans-serif}
@@ -41,6 +42,25 @@ footer .page{padding-top:23px;padding-bottom:23px}
 @media(max-width:600px){.page{padding-left:18px;padding-right:18px}.top{align-items:flex-start;flex-direction:column}
 main{padding-top:42px!important;padding-bottom:65px!important}nav{gap:13px}.article-body{font-size:1.05rem}.card{padding:22px}}
 """
+
+def load_ledger_notices():
+    """Optional Research Ledger additions for article pages: (notices by slug, whether to show the Ledger link).
+
+    Output is byte-for-byte unchanged unless Ledger data exists. A correction notice appears only for a correction that is
+    approved and marked prominent (build_research_ledger.py writes only those). The general Ledger link appears only when
+    the owner has switched it on (research-ledger/data/config.json: articlePageLinks) and the Ledger page exists.
+    Any missing or unreadable file means no additions; this function never stops publication.
+    """
+    try:
+        notices = json.loads((LEDGER_DATA / "article-notices.json").read_text(encoding="utf-8"))["notices"]
+        cfg = json.loads((LEDGER_DATA / "config.json").read_text(encoding="utf-8"))
+        page_exists = (LEDGER_DATA.parent / "index.html").exists()
+    except (OSError, ValueError, KeyError, TypeError):
+        return {}, False
+    if not isinstance(notices, dict):
+        return {}, False
+    return notices, bool(cfg.get("articlePageLinks")) and page_exists
+
 
 def esc(value: str) -> str:
     return html.escape(str(value or ""), quote=True)
@@ -156,6 +176,7 @@ def make():
     if not articles:
         raise ValueError("No complete published articles. Preserving existing pages and sitemap.")
     OUTPUT.mkdir(parents=True, exist_ok=True)
+    ledger_notices, ledger_link = load_ledger_notices()
     for article in articles:
         others = [x for x in articles if x["slug"] != article["slug"]]
         related = "".join(f'<p><a href="../{esc(x["slug"])}/">{esc(x["title"])} ↗</a></p>' for x in others[:4])
@@ -169,6 +190,13 @@ def make():
         if article["date"]:
             schema["datePublished"] = article["date"]
         page = '<main class="page"><article>'
+        note = ledger_notices.get(article["slug"]) or {}
+        correction = note.get("correction")
+        if correction and correction.get("id"):
+            page += ('<aside class="correction-notice" role="note" aria-label="Correction notice" '
+                     'style="border:1px solid var(--mint);padding:16px 20px;margin:0 0 34px;max-width:790px">'
+                     f'<strong>Correction, {esc(correction.get("date", ""))}.</strong> {esc(correction.get("summary", ""))} '
+                     f'<a href="../../../research-ledger/#correction-{esc(correction["id"])}">See the correction record</a></aside>')
         page += f'<p class="eyebrow">Published Research / {esc(article["category"])}</p>'
         page += f'<h1>{esc(article["title"])}</h1>'
         page += f'<p class="deck">{esc(article["description"])}</p>'
@@ -178,6 +206,9 @@ def make():
         page += '<section class="links" aria-label="Related articles"><p class="eyebrow">Continue exploring</p>'
         page += related or '<p><a href="../">Browse published research ↗</a></p>'
         page += '<p><a href="../../../research-atlas/">Explore the Research Atlas ↗</a></p>'
+        if ledger_link and note.get("publication"):
+            page += (f'<p><a href="../../../research-ledger/#publication-{esc(note["publication"])}">'
+                     'Research Ledger record: sources, revision history and review status ↗</a></p>')
         page += '</section></main>'
         file = OUTPUT / article["slug"] / "index.html"
         file.parent.mkdir(parents=True, exist_ok=True)

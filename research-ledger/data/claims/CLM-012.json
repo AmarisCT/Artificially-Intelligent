@@ -1,0 +1,37 @@
+{
+ "schema": 1,
+ "id": "CLM-012",
+ "publication": "PUB-002",
+ "explorerId": "brainmatch",
+ "passage": {
+  "snapshot": 1,
+  "index": 11,
+  "text": "Large language models make this problem difficult because their behavior is not random mimicry. They develop extremely complex internal representations from enormous amounts of language. Research has found measurable similarities between some representational patterns in high-performing language models and patterns involved in human language processing. A 2024 study in Nature Machine Intelligence, for example, reported increasing correspondence between the hierarchical contextual representations of stronger language models and neural responses recorded from human participants listening to speech.",
+  "textHash": "8c08ae349eb0173d"
+ },
+ "classification": "empirical",
+ "classificationStatus": "draft",
+ "classificationOrigin": {
+  "kind": "evidence-explorer",
+  "id": "brainmatch",
+  "note": "Imported unchanged from the Evidence Explorer's draft classification. No editor has reviewed it."
+ },
+ "concepts": [
+  "language",
+  "cognition",
+  "ai"
+ ],
+ "sourceLinks": [
+  {
+   "source": "SRC-014",
+   "support": "not-assessed",
+   "basis": "explorer-draft",
+   "assessedOn": null,
+   "assessedBy": null
+  }
+ ],
+ "limitation": "The essay adds that this should not be confused with evidence that the brain and the language model operate identically.",
+ "debate": "Reported convergence between language models and the brain, versus later methodological caution",
+ "limitationNote": "The limit is the Evidence Explorer's draft wording.",
+ "reviewedOn": null
+}

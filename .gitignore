@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+# Owner-only: proposed wording for the Research Ledger methodology. This repository is public, so
+# unapproved policy drafts are not committed. They are shown only in the owner's private preview.
+scripts/research-ledger-src/

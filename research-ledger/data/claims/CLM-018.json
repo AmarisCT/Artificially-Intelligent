@@ -1,0 +1,37 @@
+{
+ "schema": 1,
+ "id": "CLM-018",
+ "publication": "PUB-002",
+ "explorerId": "anthro",
+ "passage": {
+  "snapshot": 1,
+  "index": 54,
+  "text": "Recent researchers have argued that we should be careful not to interpret this relationship entirely through human metaphors. A 2026 perspective in Communications Psychology describes a recursive anthropomorphism problem: humans create systems from human language, engineer them to respond in human-like ways, then interpret the resulting behavior through concepts originally created to describe human minds. The authors argue that machine cognition should be studied partly on its own terms rather than only by asking how closely it resembles us.",
+  "textHash": "c2bcb7972cc85c4d"
+ },
+ "classification": "philosophical",
+ "classificationStatus": "draft",
+ "classificationOrigin": {
+  "kind": "evidence-explorer",
+  "id": "anthro",
+  "note": "Imported unchanged from the Evidence Explorer's draft classification. No editor has reviewed it."
+ },
+ "concepts": [
+  "ai",
+  "language",
+  "cognition"
+ ],
+ "sourceLinks": [
+  {
+   "source": "SRC-019",
+   "support": "not-assessed",
+   "basis": "explorer-draft",
+   "assessedOn": null,
+   "assessedBy": null
+  }
+ ],
+ "limitation": "This is the argument of a perspective article, not an experimental result.",
+ "debate": null,
+ "limitationNote": "The limit is the Evidence Explorer's draft wording.",
+ "reviewedOn": null
+}

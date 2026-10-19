@@ -1,0 +1,37 @@
+{
+ "schema": 1,
+ "id": "CLM-003",
+ "publication": "PUB-001",
+ "explorerId": "digipres",
+ "passage": {
+  "snapshot": 1,
+  "index": 13,
+  "text": "The Library of Congress treats personal digital archiving as a practical preservation problem, offering guidance for photographs, email, websites, and other personal materials. Its advice also complicates the promise that the internet never forgets. Digital content depends on technologies that keep it readable. Saving a file once does not guarantee that it will remain accessible. [5]",
+  "textHash": "3c11bd93609a8252"
+ },
+ "classification": "empirical",
+ "classificationStatus": "draft",
+ "classificationOrigin": {
+  "kind": "evidence-explorer",
+  "id": "digipres",
+  "note": "Imported unchanged from the Evidence Explorer's draft classification. No editor has reviewed it."
+ },
+ "concepts": [
+  "archives",
+  "memory",
+  "culture"
+ ],
+ "sourceLinks": [
+  {
+   "source": "SRC-008",
+   "support": "not-assessed",
+   "basis": "inline-marker",
+   "assessedOn": null,
+   "assessedBy": null
+  }
+ ],
+ "limitation": "Summarizes Library of Congress guidance. The essay does not give a rate of digital loss.",
+ "debate": null,
+ "limitationNote": "The limit is the Evidence Explorer's draft wording.",
+ "reviewedOn": null
+}

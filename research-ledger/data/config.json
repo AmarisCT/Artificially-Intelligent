@@ -1,0 +1,13 @@
+{
+ "schema": 1,
+ "note": "Public Ledger settings. Everything in this file is safe to publish.",
+ "preview": false,
+ "articlePageLinks": false,
+ "articlePageLinksNote": "When true, scripts/build_published.py adds a Research Ledger link to each essay page. It is off until the owner approves changing the published essay pages. Correction notices on essay pages do not depend on this switch: they appear only for an approved, prominent correction.",
+ "concernChannels": {
+  "endpoint": null,
+  "endpointNote": "No secure submission service exists yet, so the Ledger cannot receive reports. It says so on the page.",
+  "githubIssues": {"enabled": false, "repository": "AmarisCT/Artificially-Intelligent", "note": "Public. Switch on only with the owner's approval; anything sent there is visible to everyone."}
+ },
+ "substackHome": "https://artificialxintelligence.substack.com/"
+}

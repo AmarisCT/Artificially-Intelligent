@@ -1,0 +1,28 @@
+{
+ "schema": 1,
+ "id": "CLM-008",
+ "publication": "PUB-002",
+ "explorerId": "theories",
+ "passage": {
+  "snapshot": 1,
+  "index": 2,
+  "text": "Several major theories attempt to explain it. Global Neuronal Workspace Theory proposes that information becomes conscious when it is made widely available across the brain to systems involved in memory, attention, evaluation, perception, and action. Integrated Information Theory takes a different approach, proposing that consciousness is related to the degree to which information within a system is integrated into an irreducible whole. Higher-order theories argue that a mental state becomes conscious when the system can, in some sense, represent that state to itself. Other approaches emphasize recurrent processing, prediction, embodiment, or combinations of these mechanisms.",
+  "textHash": "539898b31ee90a99"
+ },
+ "classification": "theoretical",
+ "classificationStatus": "draft",
+ "classificationOrigin": {
+  "kind": "evidence-explorer",
+  "id": "theories",
+  "note": "Imported unchanged from the Evidence Explorer's draft classification. No editor has reviewed it."
+ },
+ "concepts": [
+  "consciousness",
+  "cognition"
+ ],
+ "sourceLinks": [],
+ "limitation": "The essay itself states that none of these theories has settled the problem.",
+ "debate": null,
+ "limitationNote": "The limit is the Evidence Explorer's draft wording.",
+ "reviewedOn": null
+}
