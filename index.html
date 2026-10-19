@@ -90,6 +90,10 @@ section.band{padding-block:clamp(56px,9vw,112px)}
 .question{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(1.3rem,2.4vw,1.85rem);line-height:1.35;color:var(--ink);max-width:22em;padding-left:18px;border-left:1px solid var(--mint)}
 .stage{position:absolute;top:-4%;right:-3%;width:64%;height:108%;z-index:1}
 .stage canvas{width:100%;height:100%;display:block;cursor:default}
+.stage .hero-focus{position:absolute;inset:0;pointer-events:none}
+#hero-canvas{transition:filter .36s ease,opacity .36s ease}
+#hero-canvas.dim{filter:blur(4px);opacity:.55}
+@media (prefers-reduced-motion:reduce){#hero-canvas{transition:none}}
 .enter{position:relative;z-index:2;margin-top:34px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .enter span{font-size:.85rem;color:var(--muted);margin-right:6px}
 @media(max-width:900px){
@@ -782,7 +786,12 @@ function renderHome(el){
 }
 
 function heroCanvas(cv){
-  const ctx=cv.getContext("2d");let W=0,H=0,dpr=Math.min(devicePixelRatio||1,2),raf=0,sc=1,hover=-1,hoverA=-1,mx=-999,my=-999,t0=performance.now();
+  const ctx0=cv.getContext("2d"),ov=document.createElement("canvas"),octx=ov.getContext("2d");let ctx=ctx0;
+  ov.className="hero-focus";ov.setAttribute("aria-hidden","true");cv.after(ov);
+  let W=0,H=0,dpr=Math.min(devicePixelRatio||1,2),raf=0,sc=1,hover=-1,hoverA=-1,mx=-999,my=-999,t0=performance.now();
+  /* Focus: names are hidden until a planet or article point is hovered (mouse) or tapped (touch). The focused item is drawn sharp on an overlay while the rest of the galaxy blurs. */
+  let pin=null,F=null,FT=0,G=null,GT=0,ptype="mouse";const FADE=RM?0:360,HOVER=matchMedia("(hover: hover)").matches;
+  const same=(a,b)=>!!a&&!!b&&a.k===b.k&&a.i===b.i;
   const nodes=CONCEPTS.map((c,i)=>({id:c.id,name:c.name,color:c.color,bx:c.ox/1100,by:(c.oy-40)/620,r:c.r,ph:i*1.7,x:0,y:0}));
   const arts=ARTICLES.map((a,i)=>({a,bx:ARTPOS0[a.id][0]/1100,by:(ARTPOS0[a.id][1]-40)/620,x:0,y:0,ph:3+i}));
   const gr=prng(7),galaxyPts=[],rockPts=[];
@@ -822,46 +831,94 @@ function heroCanvas(cv){
       case"archives":for(const p of rockPts){ctx.fillStyle=p.c;ctx.globalAlpha=.9;ctx.beginPath();ctx.ellipse(x+p.x*r*1.3,y+p.y*r*.5-p.x*r*.2,p.r,p.r*.7,p.a,0,7);ctx.fill()}ctx.globalAlpha=1;break;
     }
   }
-  function size(){const b=cv.getBoundingClientRect();W=b.width;H=b.height;cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0)}
+  function size(){const b=cv.getBoundingClientRect();W=b.width;H=b.height;cv.width=ov.width=W*dpr;cv.height=ov.height=H*dpr;ctx0.setTransform(dpr,0,0,dpr,0,0);octx.setTransform(dpr,0,0,dpr,0,0)}
   function layout(t){
     const narrow=W<560,padX=narrow?.06:.1,padY=.12;sc=Math.max(.55,Math.min(1.6,W/800));
     for(const n of nodes){const dx=RM?0:Math.sin(t/3800+n.ph)*7,dy=RM?0:Math.cos(t/4300+n.ph)*7;n.x=W*(padX+n.bx*(1-padX*2))+dx;n.y=H*(padY+n.by*(1-padY*2))+dy;n.rr=n.r*.42*sc+5}
     for(const a of arts){const dx=RM?0:Math.sin(t/3300+a.ph)*6,dy=RM?0:Math.cos(t/3900+a.ph)*6;a.x=W*(padX+a.bx*(1-padX*2))+dx;a.y=H*(padY+a.by*(1-padY*2))+dy}
   }
+  function linkPath(A,B){if(!A||!B)return;ctx.beginPath();ctx.moveTo(A.x,A.y);ctx.quadraticCurveTo((A.x+B.x)/2-(B.y-A.y)*.08,(A.y+B.y)/2+(B.x-A.x)*.08,B.x,B.y);ctx.stroke()}
+  function drawNode(n,h,t,al){
+    const ex=n.rr*ORB[n.id].ext,g=ctx.createRadialGradient(n.x,n.y,0,n.x,n.y,ex*(h?4:3));
+    g.addColorStop(0,n.color+(h?"55":"2a"));g.addColorStop(1,n.color+"00");ctx.fillStyle=g;ctx.beginPath();ctx.arc(n.x,n.y,ex*(h?4:3),0,7);ctx.fill();
+    heroOrb(n,t);
+    if(h){ctx.globalAlpha=al;ctx.strokeStyle="rgba(181,242,214,.85)";ctx.setLineDash([3,4]);ctx.lineWidth=1.2;ctx.beginPath();ctx.arc(n.x,n.y,ex+7,0,7);ctx.stroke();ctx.setLineDash([]);ctx.globalAlpha=1}
+  }
+  function drawArt(a,h,al){
+    ctx.fillStyle=h?"rgba(181,242,214,.4)":"rgba(181,242,214,.2)";ctx.beginPath();ctx.arc(a.x,a.y,h?13:9,0,7);ctx.fill();ctx.fillStyle="#b5f2d6";ctx.beginPath();ctx.arc(a.x,a.y,h?4.4:3.4,0,7);ctx.fill();
+    if(h){ctx.globalAlpha=al;ctx.strokeStyle="rgba(181,242,214,.9)";ctx.lineWidth=1.2;ctx.beginPath();ctx.arc(a.x,a.y,17,0,7);ctx.stroke();ctx.globalAlpha=1}
+  }
+  const SERIF=fs=>"500 "+fs+"px Newsreader, Georgia, serif",SANS="400 11px Hanken Grotesk, system-ui, sans-serif";
+  function nameTag(n,tap,al){
+    const ex=n.rr*ORB[n.id].ext,fs=Math.round((W<560?16:18)*Math.max(1,Math.min(1.35,sc))),hint=tap?"Tap again to open":"Click to open";
+    ctx.font=SERIF(fs);const w=ctx.measureText(n.name).width;ctx.font=SANS;const w2=ctx.measureText(hint).width;
+    const right=n.x+ex+14+Math.max(w,w2)<=W-8,x=right?n.x+ex+14:n.x-ex-14;
+    const bw=Math.max(w,w2)+18,bx0=right?x-9:x-bw+9,by0=n.y-8-fs*.7-5,bh=fs*.7+30;
+    ctx.globalAlpha=.78*al;ctx.fillStyle="#0a0d0c";ctx.shadowColor="rgba(10,13,12,.9)";ctx.shadowBlur=14;ctx.beginPath();
+    if(ctx.roundRect)ctx.roundRect(bx0,by0,bw,bh,8);else ctx.rect(bx0,by0,bw,bh);ctx.fill();
+    ctx.globalAlpha=al;ctx.textAlign=right?"left":"right";ctx.textBaseline="middle";ctx.shadowColor="rgba(5,8,10,.9)";ctx.shadowBlur=10;
+    ctx.font=SERIF(fs);ctx.fillStyle="#ece9e1";ctx.fillText(n.name,x,n.y-8);
+    ctx.font=SANS;ctx.fillStyle="rgba(181,242,214,.9)";ctx.fillText(hint,x,n.y+12);
+    ctx.shadowBlur=0;ctx.shadowColor="transparent";ctx.textAlign="left";ctx.globalAlpha=1;
+  }
+  function artTag(a,tap,al){
+    ctx.font="500 12.5px Hanken Grotesk, system-ui, sans-serif";
+    const pre=tap?"Tap again to read: ":"Read: ";let title=a.a.title,txt=pre+title,w=ctx.measureText(txt).width;
+    while(w>W-28&&title.length>8){title=title.slice(0,-2).trimEnd();txt=pre+title+"…";w=ctx.measureText(txt).width}
+    const left=a.x+22+w>W-6,bx=Math.max(4,Math.min(W-w-16,left?a.x-22-w-6:a.x+18));
+    ctx.globalAlpha=.85*al;ctx.fillStyle="#0a0d0c";ctx.fillRect(bx,a.y-26,w+12,20);
+    ctx.globalAlpha=al;ctx.fillStyle="#b5f2d6";ctx.textBaseline="middle";ctx.textAlign="left";ctx.fillText(txt,bx+6,a.y-16);ctx.globalAlpha=1;
+  }
   function draw(t){
-    ctx.clearRect(0,0,W,H);layout(t);
+    const now=performance.now(),f=hoverA>=0?{k:"a",i:hoverA}:hover>=0?{k:"n",i:hover}:pin;
+    if(!same(f,F)){if(F&&!f){G=F;GT=now}else G=null;if(f)FT=now;F=f;cv.classList.toggle("dim",!!f)}
+    if(G&&now-GT>=FADE)G=null;
+    const fx=F||G,la=F?(FADE?Math.min(1,(now-FT)/220):1):G?Math.max(0,1-(now-GT)/(FADE*.6)):0,tap=!!fx&&same(fx,pin);
+    layout(t);
     const by=Object.fromEntries(nodes.map(n=>[n.id,n]));
-    ctx.lineWidth=1;
-    for(const [a,b] of LINKS){const A=by[a],B=by[b],on=hover>=0&&(nodes[hover].id===a||nodes[hover].id===b);
-      ctx.strokeStyle=on?"rgba(181,242,214,.85)":"rgba(185,195,191,.2)";ctx.beginPath();ctx.moveTo(A.x,A.y);
-      ctx.quadraticCurveTo((A.x+B.x)/2-(B.y-A.y)*.08,(A.y+B.y)/2+(B.x-A.x)*.08,B.x,B.y);ctx.stroke()}
-    ctx.setLineDash([2,6]);
-    for(const a of arts){for(const tp of a.a.topics){const n=by[tp];if(!n)continue;ctx.strokeStyle="rgba(181,242,214,.28)";ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(n.x,n.y);ctx.stroke()}}
+    /* background layer: the whole galaxy, blurred by CSS while something is in focus */
+    ctx=ctx0;ctx.clearRect(0,0,W,H);
+    ctx.lineWidth=1;ctx.strokeStyle="rgba(185,195,191,.2)";
+    for(const [a,b] of LINKS)linkPath(by[a],by[b]);
+    ctx.setLineDash([2,6]);ctx.strokeStyle="rgba(181,242,214,.28)";
+    for(const a of arts){for(const tp of a.a.topics){const n=by[tp];if(!n)continue;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(n.x,n.y);ctx.stroke()}}
     ctx.setLineDash([]);
-    nodes.forEach((n,i)=>{
-      const h=i===hover,ex=n.rr*ORB[n.id].ext,g=ctx.createRadialGradient(n.x,n.y,0,n.x,n.y,ex*(h?4:3));
-      g.addColorStop(0,n.color+(h?"55":"2a"));g.addColorStop(1,n.color+"00");ctx.fillStyle=g;ctx.beginPath();ctx.arc(n.x,n.y,ex*(h?4:3),0,7);ctx.fill();
-      heroOrb(n,t);
-      if(h){ctx.strokeStyle="rgba(181,242,214,.85)";ctx.setLineDash([3,4]);ctx.lineWidth=1.2;ctx.beginPath();ctx.arc(n.x,n.y,ex+7,0,7);ctx.stroke();ctx.setLineDash([])}
-      ctx.font=(h?"500 ":"400 ")+Math.round((W<560?13:15)*Math.max(1,Math.min(1.45,sc)))+"px Newsreader, Georgia, serif";ctx.fillStyle=h?"#ece9e1":"rgba(236,233,225,.8)";ctx.textBaseline="middle";
-      ctx.fillText(n.name,n.x+ex+10,n.y)});
-    arts.forEach((a,i)=>{const h=i===hoverA;ctx.fillStyle=h?"rgba(181,242,214,.4)":"rgba(181,242,214,.2)";ctx.beginPath();ctx.arc(a.x,a.y,h?13:9,0,7);ctx.fill();ctx.fillStyle="#b5f2d6";ctx.beginPath();ctx.arc(a.x,a.y,h?4.4:3.4,0,7);ctx.fill();
-      if(h){ctx.strokeStyle="rgba(181,242,214,.9)";ctx.lineWidth=1.2;ctx.beginPath();ctx.arc(a.x,a.y,17,0,7);ctx.stroke();
-        ctx.font="500 12.5px Hanken Grotesk, system-ui, sans-serif";const txt="Read: "+a.a.title,w=ctx.measureText(txt).width,left=a.x+22+w>W-6;ctx.fillStyle="#0a0d0c";ctx.globalAlpha=.85;ctx.fillRect(left?a.x-22-w-6:a.x+18,a.y-26,w+12,20);ctx.globalAlpha=1;ctx.fillStyle="#b5f2d6";ctx.textBaseline="middle";ctx.fillText(txt,left?a.x-22-w:a.x+24,a.y-16)}});
-    ctx.font="400 11px Hanken Grotesk, system-ui, sans-serif";ctx.fillStyle="rgba(185,195,191,.6)";ctx.textBaseline="alphabetic";
-    ctx.fillText("Bright points are published articles. Select one to read it.",W*.08,20);
+    nodes.forEach((n,i)=>{if(!(fx&&fx.k==="n"&&fx.i===i))drawNode(n,false,t,1)});
+    arts.forEach((a,i)=>{if(!(fx&&fx.k==="a"&&fx.i===i))drawArt(a,false,1)});
+    /* focus layer: stays sharp above the blur */
+    ctx=octx;ctx.clearRect(0,0,W,H);
+    if(fx){
+      ctx.globalAlpha=la;ctx.lineWidth=1.2;
+      if(fx.k==="n"){const n=nodes[fx.i];ctx.strokeStyle="rgba(181,242,214,.75)";for(const [a,b] of LINKS)if(a===n.id||b===n.id)linkPath(by[a],by[b])}
+      else{const a=arts[fx.i];ctx.setLineDash([2,6]);ctx.strokeStyle="rgba(181,242,214,.65)";for(const tp of a.a.topics){const n=by[tp];if(!n)continue;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(n.x,n.y);ctx.stroke()}ctx.setLineDash([])}
+      ctx.globalAlpha=1;
+      if(fx.k==="n"){const n=nodes[fx.i];drawNode(n,true,t,la);nameTag(n,tap,la)}
+      else{const a=arts[fx.i];drawArt(a,true,la);artTag(a,tap,la)}
+    }
+    ctx.font=SANS;ctx.fillStyle="rgba(185,195,191,.6)";ctx.textBaseline="alphabetic";ctx.textAlign="left";
+    ctx.fillText(HOVER?"Hover over a planet to see its name. Bright points are published articles.":"Tap a planet or bright point to see it. Tap again to open.",W*.08,20);
+    ctx=ctx0;
   }
   function loop(t){draw(t-t0);raf=requestAnimationFrame(loop)}
   function pick(x,y){let best=-1,bd=1e9;nodes.forEach((n,i)=>{const d=Math.hypot(n.x-x,n.y-y);if(d<Math.max(n.rr+26,36)&&d<bd){bd=d;best=i}});return best}
   const pos=e=>{const b=cv.getBoundingClientRect();return[e.clientX-b.left,e.clientY-b.top]};
   const pickA=(x,y)=>arts.findIndex(a=>Math.hypot(a.x-x,a.y-y)<18);
-  const mv=e=>{[mx,my]=pos(e);hoverA=pickA(mx,my);hover=hoverA>=0?-1:pick(mx,my);cv.style.cursor=hover>=0||hoverA>=0?"pointer":"default";if(RM)draw(performance.now()-t0)};
-  const lv=()=>{hover=-1;hoverA=-1;if(RM)draw(0)};
-  const ck=e=>{const[x,y]=pos(e);const ia=pickA(x,y);if(ia>=0){location.hash="read-"+arts[ia].a.slug;return}const i=pick(x,y);if(i>=0){S.atlas.sel={type:"concept",id:nodes[i].id};S.atlas.tab="graph";S.atlas.q="";go("atlas")}};
-  cv.addEventListener("pointermove",mv);cv.addEventListener("pointerleave",lv);cv.addEventListener("click",ck);
+  const hitAt=(x,y)=>{const ia=pickA(x,y);if(ia>=0)return{k:"a",i:ia};const i=pick(x,y);return i>=0?{k:"n",i}:null};
+  const redraw=()=>{if(RM)draw(performance.now()-t0)};
+  const open=h=>{if(h.k==="a"){location.hash="read-"+arts[h.i].a.slug;return}S.atlas.sel={type:"concept",id:nodes[h.i].id};S.atlas.tab="graph";S.atlas.q="";go("atlas")};
+  /* Mouse: hover shows the name, click opens. Touch and pen: first tap shows the name, a second tap on the same point opens it. */
+  const pd=e=>{ptype=e.pointerType||"mouse"};
+  const mv=e=>{if(e.pointerType!=="mouse")return;[mx,my]=pos(e);hoverA=pickA(mx,my);hover=hoverA>=0?-1:pick(mx,my);cv.style.cursor=hover>=0||hoverA>=0?"pointer":"default";redraw()};
+  const lv=e=>{if(e.pointerType!=="mouse")return;hover=-1;hoverA=-1;redraw()};
+  const ck=e=>{const h=hitAt(...pos(e));
+    if(ptype!=="mouse"){if(h&&same(h,pin)){pin=null;open(h);return}pin=h;redraw();return}
+    if(h)open(h)};
+  const away=e=>{if(pin&&e.target!==cv){pin=null;redraw()}};
+  cv.addEventListener("pointerdown",pd);cv.addEventListener("pointermove",mv);cv.addEventListener("pointerleave",lv);cv.addEventListener("click",ck);
+  document.addEventListener("pointerdown",away,true);
   const ro=new ResizeObserver(()=>{size();if(RM)draw(0)});ro.observe(cv);size();
   if(RM)draw(0);else raf=requestAnimationFrame(loop);
-  return()=>{cancelAnimationFrame(raf);ro.disconnect()};
+  return()=>{cancelAnimationFrame(raf);ro.disconnect();document.removeEventListener("pointerdown",away,true)};
 }
 
 /* ---------- STREAM ---------- */
