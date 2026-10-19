@@ -1,0 +1,33 @@
+--- a/.github/workflows/refresh-feed.yml
++++ b/.github/workflows/refresh-feed.yml
+@@ -2,9 +2,13 @@
+ on:
+   workflow_dispatch:
+   push:
++    branches: [main]            # never deploy a feature branch to the live site
+     paths:
+       - "scripts/build_published.py"
+       - "scripts/build_research_index.py"
++      - "scripts/commons_lib.py"
++      - "scripts/build_research_commons.py"
++      - "research-commons/data/**"
+       - ".github/workflows/refresh-feed.yml"
+   schedule:
+     - cron: "17 */6 * * *"
+@@ -34,11 +38,15 @@
+         run: |
+           python3 scripts/build_research_index.py . --atlas scripts/atlas_dump.json
+           cp scripts/pathway-rules.src.json inquiry-engine/data/pathway-rules.json
++      - name: Rebuild Research Commons status and static pages (never imports or publishes anything new)
++        run: |
++          python3 scripts/validate_research_commons.py
++          python3 scripts/build_research_commons.py
+       - name: Commit updated feed and research pages
+         run: |
+           git config user.name "github-actions[bot]"
+           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+-          git add feed.xml sitemap.xml sitemap.txt research/published/ inquiry-engine/data/
++          git add feed.xml sitemap.xml sitemap.txt research/published/ inquiry-engine/data/ research-commons/data/commons-status.json research-commons/c/
+           if ! git diff --cached --quiet; then
+             git commit -m "Refresh published research pages, sitemaps, and RSS feed"
+             git push

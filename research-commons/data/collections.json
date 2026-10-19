@@ -1,0 +1,36 @@
+{
+  "schema": 1,
+  "note": "Curated collections. A collection is filled only with genuine, approved contributions. None has any yet.",
+  "collections": [
+    {
+      "id": "the-consciousness-question",
+      "title": "The Consciousness Question",
+      "description": "Contributions exploring the nature of subjective experience.",
+      "status": "planned"
+    },
+    {
+      "id": "the-digital-self",
+      "title": "The Digital Self",
+      "description": "Questions about memory, online identity, and technological preservation.",
+      "status": "planned"
+    },
+    {
+      "id": "the-meaning-of-intelligence",
+      "title": "The Meaning of Intelligence",
+      "description": "Perspectives on intelligence, learning, understanding, and reasoning.",
+      "status": "planned"
+    },
+    {
+      "id": "human-x-machine",
+      "title": "Human × Machine",
+      "description": "Questions concerning human relationships with intelligent systems.",
+      "status": "planned"
+    },
+    {
+      "id": "the-future-of-research",
+      "title": "The Future of Research",
+      "description": "Ideas about scientific methods, emerging technologies, and unanswered problems.",
+      "status": "planned"
+    }
+  ]
+}

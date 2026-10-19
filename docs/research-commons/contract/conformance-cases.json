@@ -1,0 +1,1095 @@
+{
+ "schema": 1,
+ "note": "Conformance cases for the Research Commons submission service. A real implementation of POST /api/public/contributions and POST /api/public/question-submissions must give these status codes and error codes. 'fields' lists the keys that must appear in error.fields. 'stateful' cases need several requests; see CONTRACT.md. The reference implementation (scripts/commons_contract.py) passes all of them.",
+ "origin": "https://amarisct.github.io",
+ "cases": [
+  {
+   "name": "valid question",
+   "request": {
+    "method": "POST",
+    "path": "/api/public/contributions",
+    "headers": {
+     "Content-Type": "application/json",
+     "Origin": "https://amarisct.github.io"
+    },
+    "body": {
+     "consent": true,
+     "consentVersion": "draft-0",
+     "hp": "",
+     "elapsedMs": 12000,
+     "type": "question",
+     "question": "Could an artificial intelligence system develop an autobiographical sense of self?",
+     "category": "ai",
+     "explanation": "This connects memory research and AI self-models."
+    }
+   },
+   "expect": {
+    "status": 202
+   }
+  },
+  {
+   "name": "valid question through the legacy alias, exactly as the Unanswered Archive form sends it",
+   "request": {
+    "method": "POST",
+    "path": "/api/public/question-submissions",
+    "headers": {
+     "Content-Type": "application/json",
+     "Origin": "https://amarisct.github.io"
+    },
+    "body": {
+     "question": "Could an artificial intelligence system develop an autobiographical sense of self?",
+     "category": null,
+     "consent": true,
+     "hp": "",
+     "elapsedMs": 12345
+    }
+   },
+   "expect": {
+    "status": 202
+   }
+  },
+  {
+   "name": "valid publication with a DOI written as a link",
+   "request": {
+    "method": "POST",
+    "path": "/api/public/contributions",
+    "headers": {
+     "Content-Type": "application/json",
+     "Origin": "https://amarisct.github.io"
+    },
+    "body": {
+     "consent": true,
+     "consentVersion": "draft-0",
+     "hp": "",
+     "elapsedMs": 12000,
+     "type": "publication",
+     "title": "Consciousness in Artificial Intelligence: Insights from the Science of Consciousness",
+     "authors": "Butlin et al.",
+     "year": 2023,
+     "doi": "https://doi.org/10.48550/arXiv.2308.08708",
+     "why": "It covers how large language models reason about their own states and gives a useful measurement framework for this question."
+    }
+   },
+   "expect": {
+    "status": 202
+   }
+  },
+  {
+   "name": "valid publication with only a source link",
+   "request": {
+    "method": "POST",
+    "path": "/api/public/contributions",
+    "headers": {
+     "Content-Type": "application/json",
+     "Origin": "https://amarisct.github.io"
+    },
+    "body": {
+     "consent": true,
+     "consentVersion": "draft-0",
+     "hp": "",
+     "elapsedMs": 12000,
+     "type": "publication",
+     "title": "A report on machine understanding",
+     "url": "https://example.org/report",
+     "why": "It covers how large language models reason about their own states and gives a useful measurement framework for this question."
+    }
+   },
+   "expect": {
+    "status": 202
+   }
+  },
+  {
+   "name": "valid topic proposal",
+   "request": {
+    "method": "POST",
+    "path": "/api/public/contributions",
+    "headers": {
+     "Content-Type": "application/json",
+     "Origin": "https://amarisct.github.io"
+    },
+    "body": {
+     "consent": true,
+     "consentVersion": "draft-0",
+     "hp": "",
+     "elapsedMs": 12000,
+     "type": "topic",
+     "title": "Memory and machine identity",
+     "description": "The relationship between how machines store information and whether anything like a persisting self follows from it. Worth exploring because archives now shape how people are remembered.",
+     "why": "It covers how large language models reason about their own states and gives a useful measurement framework for this question.",
+     "category": "memory"
+    }
+   },
+   "expect": {
+    "status": 202
+   }
+  },
+  {
+   "name": "valid perspective with one reference link",
+   "request": {
+    "method": "POST",
+    "path": "/api/public/contributions",
+    "headers": {
+     "Content-Type": "application/json",
+     "Origin": "https://amarisct.github.io"
+    },
+    "body": {
+     "consent": true,
+     "consentVersion": "draft-0",
+     "hp": "",
+     "elapsedMs": 12000,
+     "type": "perspective",
+     "title": "Understanding is a pattern of behavior across new situations",
+     "text": "I think understanding requires more than producing the right outputs. A system that only maps inputs to outputs can be correct without grasping why the answer is correct, as in Searle's argument about symbol manipulation. But that argument leans on an intuition about what grasping is, and the intuition may not survive a careful account of what human understanding consists of. My view is that the question should be rephrased: what behaviors would a system need to show across new situations for us to say it understands?",
+     "references": "Searle (1980), https://doi.org/10.1017/S0140525X00005756",
+     "category": "mind"
+    }
+   },
+   "expect": {
+    "status": 202
+   }
+  },
+  {
+   "name": "valid perspective with a chosen display name",
+   "request": {
+    "method": "POST",
+    "path": "/api/public/contributions",
+    "headers": {
+     "Content-Type": "application/json",
+     "Origin": "https://amarisct.github.io"
+    },
+    "body": {
+     "consent": true,
+     "consentVersion": "draft-0",
+     "hp": "",
+     "elapsedMs": 12000,
+     "type": "perspective",
+     "title": "Understanding is a pattern of behavior across new situations",
+     "text": "I think understanding requires more than producing the right outputs. A system that only maps inputs to outputs can be correct without grasping why the answer is correct, as in Searle's argument about symbol manipulation. But that argument leans on an intuition about what grasping is, and the intuition may not survive a careful account of what human understanding consists of. My view is that the question should be rephrased: what behaviors would a system need to show across new situations for us to say it understands?",
+     "attribution": {
+      "mode": "display-name",
+      "name": "A. Reader"
+     }
+    }
+   },
+   "expect": {
+    "status": 202
+   }
+  },
+  {
+   "name": "human-machine category is accepted on the all-types endpoint",
+   "request": {
+    "method": "POST",
+    "path": "/api/public/contributions",
+    "headers": {
+     "Content-Type": "application/json",
+     "Origin": "https://amarisct.github.io"
+    },
+    "body": {
+     "consent": true,
+     "consentVersion": "draft-0",
+     "hp": "",
+     "elapsedMs": 12000,
+     "type": "question",
+     "question": "Could an artificial intelligence system develop an autobiographical sense of self?",
+     "category": "human-machine"
+    }
+   },
+   "expect": {
+    "status": 202
+   }
+  },
+  {
+   "name": "human-machine category is refused on the legacy alias",
+   "request": {
+    "method": "POST",
+    "path": "/api/public/question-submissions",
+    "headers": {
+     "Content-Type": "application/json",
+     "Origin": "https://amarisct.github.io"
+    },
+    "body": {
+     "consent": true,
+     "consentVersion": "draft-0",
+     "hp": "",
+     "elapsedMs": 12000,
+     "question": "Could an artificial intelligence system develop an autobiographical sense of self?",
+     "category": "human-machine"
+    }
+   },
+   "expect": {
+    "status": 422,
+    "code": "invalid-field"
+   }
+  },
+  {
+   "name": "question too short",
+   "request": {
+    "method": "POST",
+    "path": "/api/public/contributions",
+    "headers": {
+     "Content-Type": "application/json",
+     "Origin": "https://amarisct.github.io"
+    },
+    "body": {
+     "consent": true,
+     "consentVersion": "draft-0",
+     "hp": "",
+     "elapsedMs": 12000,
+     "type": "question",
+     "question": "Why?"
+    }
+   },
+   "expect": {
+    "status": 422,
+    "code": "invalid-field"
+   },
+   "fields": [
+    "question"
+   ]
+  },
+  {
+   "name": "question too long",
+   "request": {
+    "method": "POST",
+    "path": "/api/public/contributions",
+    "headers": {
+     "Content-Type": "application/json",
+     "Origin": "https://amarisct.github.io"
+    },
+    "body": {
+     "consent": true,
+     "consentVersion": "draft-0",
+     "hp": "",
+     "elapsedMs": 12000,
+     "type": "question",
+     "question": "Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why Why "
+    }
+   },
+   "expect": {
+    "status": 422,
+    "code": "invalid-field"
+   },
+   "fields": [
+    "question"
+   ]
+  },
+  {
+   "name": "question missing",
+   "request": {
+    "method": "POST",
+    "path": "/api/public/contributions",
+    "headers": {
+     "Content-Type": "application/json",
+     "Origin": "https://amarisct.github.io"
+    },
+    "body": {
+     "consent": true,
+     "consentVersion": "draft-0",
+     "hp": "",
+     "elapsedMs": 12000,
+     "type": "question"
+    }
+   },
+   "expect": {
+    "status": 422,
+    "code": "invalid-field"
+   },
+   "fields": [
+    "question"
+   ]
+  },
+  {
+   "name": "question containing a link",
+   "request": {
+    "method": "POST",
+    "path": "/api/public/contributions",
+    "headers": {
+     "Content-Type": "application/json",
+     "Origin": "https://amarisct.github.io"
+    },
+    "body": {
+     "consent": true,
+     "consentVersion": "draft-0",
+     "hp": "",
+     "elapsedMs": 12000,
+     "type": "question",
+     "question": "Is this related to https://spam.example/offer in any way at all?"
+    }
+   },
+   "expect": {
+    "status": 422,
+    "code": "invalid-field"
+   },
+   "fields": [
+    "question"
+   ]
+  },
+  {
+   "name": "question containing an email address",
+   "request": {
+    "method": "POST",
+    "path": "/api/public/contributions",
+    "headers": {
+     "Content-Type": "application/json",
+     "Origin": "https://amarisct.github.io"
+    },
+    "body": {
+     "consent": true,
+     "consentVersion": "draft-0",
+     "hp": "",
+     "elapsedMs": 12000,
+     "type": "question",
+     "question": "Could you answer me at someone@example.com about machine memory?"
+    }
+   },
+   "expect": {
+    "status": 422,
+    "code": "invalid-field"
+   },
+   "fields": [
+    "question"
+   ]
+  },
+  {
+   "name": "question with no words",
+   "request": {
+    "method": "POST",
+    "path": "/api/public/contributions",
+    "headers": {
+     "Content-Type": "application/json",
+     "Origin": "https://amarisct.github.io"
+    },
+    "body": {
+     "consent": true,
+     "consentVersion": "draft-0",
+     "hp": "",
+     "elapsedMs": 12000,
+     "type": "question",
+     "question": "1234567890 1234567890 1234567890"
+    }
+   },
+   "expect": {
+    "status": 422,
+    "code": "invalid-field"
+   },
+   "fields": [
+    "question"
+   ]
+  },
+  {
+   "name": "consent false",
+   "request": {
+    "method": "POST",
+    "path": "/api/public/contributions",
+    "headers": {
+     "Content-Type": "application/json",
+     "Origin": "https://amarisct.github.io"
+    },
+    "body": {
+     "consent": false,
+     "consentVersion": "draft-0",
+     "hp": "",
+     "elapsedMs": 12000,
+     "type": "question",
+     "question": "Could an artificial intelligence system develop an autobiographical sense of self?"
+    }
+   },
+   "expect": {
+    "status": 422,
+    "code": "consent-required"
+   }
+  },
+  {
+   "name": "consent missing",
+   "request": {
+    "method": "POST",
+    "path": "/api/public/contributions",
+    "headers": {
+     "Content-Type": "application/json",
+     "Origin": "https://amarisct.github.io"
+    },
+    "body": {
+     "consentVersion": "draft-0",
+     "hp": "",
+     "elapsedMs": 12000,
+     "type": "question",
+     "question": "Could an artificial intelligence system develop an autobiographical sense of self?"
+    }
+   },
+   "expect": {
+    "status": 422,
+    "code": "consent-required"
+   }
+  },
+  {
+   "name": "unknown field (an email address must never be accepted as a field)",
+   "request": {
+    "method": "POST",
+    "path": "/api/public/contributions",
+    "headers": {
+     "Content-Type": "application/json",
+     "Origin": "https://amarisct.github.io"
+    },
+    "body": {
+     "consent": true,
+     "consentVersion": "draft-0",
+     "hp": "",
+     "elapsedMs": 12000,
+     "type": "question",
+     "question": "Could an artificial intelligence system develop an autobiographical sense of self?",
+     "email": "a@b.co"
+    }
+   },
+   "expect": {
+    "status": 400,
+    "code": "unknown-fields"
+   }
+  },
+  {
+   "name": "invalid type",
+   "request": {
+    "method": "POST",
+    "path": "/api/public/contributions",
+    "headers": {
+     "Content-Type": "application/json",
+     "Origin": "https://amarisct.github.io"
+    },
+    "body": {
+     "consent": true,
+     "consentVersion": "draft-0",
+     "hp": "",
+     "elapsedMs": 12000,
+     "type": "advert",
+     "question": "Could an artificial intelligence system develop an autobiographical sense of self?"
+    }
+   },
+   "expect": {
+    "status": 422,
+    "code": "invalid-type"
+   }
+  },
+  {
+   "name": "a publication sent to the legacy alias is refused",
+   "request": {
+    "method": "POST",
+    "path": "/api/public/question-submissions",
+    "headers": {
+     "Content-Type": "application/json",
+     "Origin": "https://amarisct.github.io"
+    },
+    "body": {
+     "consent": true,
+     "consentVersion": "draft-0",
+     "hp": "",
+     "elapsedMs": 12000,
+     "type": "publication",
+     "title": "A title that is long enough",
+     "why": "It covers how large language models reason about their own states and gives a useful measurement framework for this question."
+    }
+   },
+   "expect": {
+    "status": 422,
+    "code": "invalid-type"
+   }
+  },
+  {
+   "name": "publication with an invalid DOI",
+   "request": {
+    "method": "POST",
+    "path": "/api/public/contributions",
+    "headers": {
+     "Content-Type": "application/json",
+     "Origin": "https://amarisct.github.io"
+    },
+    "body": {
+     "consent": true,
+     "consentVersion": "draft-0",
+     "hp": "",
+     "elapsedMs": 12000,
+     "type": "publication",
+     "title": "A title that is long enough",
+     "doi": "not-a-doi",
+     "why": "It covers how large language models reason about their own states and gives a useful measurement framework for this question."
+    }
+   },
+   "expect": {
+    "status": 422,
+    "code": "invalid-field"
+   },
+   "fields": [
+    "doi"
+   ]
+  },
+  {
+   "name": "publication link must be https",
+   "request": {
+    "method": "POST",
+    "path": "/api/public/contributions",
+    "headers": {
+     "Content-Type": "application/json",
+     "Origin": "https://amarisct.github.io"
+    },
+    "body": {
+     "consent": true,
+     "consentVersion": "draft-0",
+     "hp": "",
+     "elapsedMs": 12000,
+     "type": "publication",
+     "title": "A title that is long enough",
+     "url": "http://example.org/paper",
+     "why": "It covers how large language models reason about their own states and gives a useful measurement framework for this question."
+    }
+   },
+   "expect": {
+    "status": 422,
+    "code": "invalid-field"
+   },
+   "fields": [
+    "url"
+   ]
+  },
+  {
+   "name": "publication link may not point at a private address",
+   "request": {
+    "method": "POST",
+    "path": "/api/public/contributions",
+    "headers": {
+     "Content-Type": "application/json",
+     "Origin": "https://amarisct.github.io"
+    },
+    "body": {
+     "consent": true,
+     "consentVersion": "draft-0",
+     "hp": "",
+     "elapsedMs": 12000,
+     "type": "publication",
+     "title": "A title that is long enough",
+     "url": "https://192.168.0.10/paper",
+     "why": "It covers how large language models reason about their own states and gives a useful measurement framework for this question."
+    }
+   },
+   "expect": {
+    "status": 422,
+    "code": "invalid-field"
+   },
+   "fields": [
+    "url"
+   ]
+  },
+  {
+   "name": "publication link may not be a shortener",
+   "request": {
+    "method": "POST",
+    "path": "/api/public/contributions",
+    "headers": {
+     "Content-Type": "application/json",
+     "Origin": "https://amarisct.github.io"
+    },
+    "body": {
+     "consent": true,
+     "consentVersion": "draft-0",
+     "hp": "",
+     "elapsedMs": 12000,
+     "type": "publication",
+     "title": "A title that is long enough",
+     "url": "https://bit.ly/abc123",
+     "why": "It covers how large language models reason about their own states and gives a useful measurement framework for this question."
+    }
+   },
+   "expect": {
+    "status": 422,
+    "code": "invalid-field"
+   },
+   "fields": [
+    "url"
+   ]
+  },
+  {
+   "name": "publication link may not carry credentials",
+   "request": {
+    "method": "POST",
+    "path": "/api/public/contributions",
+    "headers": {
+     "Content-Type": "application/json",
+     "Origin": "https://amarisct.github.io"
+    },
+    "body": {
+     "consent": true,
+     "consentVersion": "draft-0",
+     "hp": "",
+     "elapsedMs": 12000,
+     "type": "publication",
+     "title": "A title that is long enough",
+     "url": "https://user:pass@example.org/paper",
+     "why": "It covers how large language models reason about their own states and gives a useful measurement framework for this question."
+    }
+   },
+   "expect": {
+    "status": 422,
+    "code": "invalid-field"
+   },
+   "fields": [
+    "url"
+   ]
+  },
+  {
+   "name": "publication reason too short",
+   "request": {
+    "method": "POST",
+    "path": "/api/public/contributions",
+    "headers": {
+     "Content-Type": "application/json",
+     "Origin": "https://amarisct.github.io"
+    },
+    "body": {
+     "consent": true,
+     "consentVersion": "draft-0",
+     "hp": "",
+     "elapsedMs": 12000,
+     "type": "publication",
+     "title": "A title that is long enough",
+     "why": "Good."
+    }
+   },
+   "expect": {
+    "status": 422,
+    "code": "invalid-field"
+   },
+   "fields": [
+    "why"
+   ]
+  },
+  {
+   "name": "perspective too short",
+   "request": {
+    "method": "POST",
+    "path": "/api/public/contributions",
+    "headers": {
+     "Content-Type": "application/json",
+     "Origin": "https://amarisct.github.io"
+    },
+    "body": {
+     "consent": true,
+     "consentVersion": "draft-0",
+     "hp": "",
+     "elapsedMs": 12000,
+     "type": "perspective",
+     "title": "A title that is long enough",
+     "text": "I think so."
+    }
+   },
+   "expect": {
+    "status": 422,
+    "code": "invalid-field"
+   },
+   "fields": [
+    "text"
+   ]
+  },
+  {
+   "name": "perspective with too many reference links",
+   "request": {
+    "method": "POST",
+    "path": "/api/public/contributions",
+    "headers": {
+     "Content-Type": "application/json",
+     "Origin": "https://amarisct.github.io"
+    },
+    "body": {
+     "consent": true,
+     "consentVersion": "draft-0",
+     "hp": "",
+     "elapsedMs": 12000,
+     "type": "perspective",
+     "title": "A title that is long enough",
+     "text": "I think understanding requires more than producing the right outputs. A system that only maps inputs to outputs can be correct without grasping why the answer is correct, as in Searle's argument about symbol manipulation. But that argument leans on an intuition about what grasping is, and the intuition may not survive a careful account of what human understanding consists of. My view is that the question should be rephrased: what behaviors would a system need to show across new situations for us to say it understands?",
+     "references": "https://a.example/1 https://b.example/2 https://c.example/3 https://d.example/4"
+    }
+   },
+   "expect": {
+    "status": 422,
+    "code": "invalid-field"
+   },
+   "fields": [
+    "references"
+   ]
+  },
+  {
+   "name": "display name with no name",
+   "request": {
+    "method": "POST",
+    "path": "/api/public/contributions",
+    "headers": {
+     "Content-Type": "application/json",
+     "Origin": "https://amarisct.github.io"
+    },
+    "body": {
+     "consent": true,
+     "consentVersion": "draft-0",
+     "hp": "",
+     "elapsedMs": 12000,
+     "type": "question",
+     "question": "Could an artificial intelligence system develop an autobiographical sense of self?",
+     "attribution": {
+      "mode": "display-name"
+     }
+    }
+   },
+   "expect": {
+    "status": 422,
+    "code": "invalid-field"
+   },
+   "fields": [
+    "attribution"
+   ]
+  },
+  {
+   "name": "display name containing an email address",
+   "request": {
+    "method": "POST",
+    "path": "/api/public/contributions",
+    "headers": {
+     "Content-Type": "application/json",
+     "Origin": "https://amarisct.github.io"
+    },
+    "body": {
+     "consent": true,
+     "consentVersion": "draft-0",
+     "hp": "",
+     "elapsedMs": 12000,
+     "type": "question",
+     "question": "Could an artificial intelligence system develop an autobiographical sense of self?",
+     "attribution": {
+      "mode": "display-name",
+      "name": "me@example.com"
+     }
+    }
+   },
+   "expect": {
+    "status": 422,
+    "code": "invalid-field"
+   },
+   "fields": [
+    "attribution"
+   ]
+  },
+  {
+   "name": "unknown attribution mode",
+   "request": {
+    "method": "POST",
+    "path": "/api/public/contributions",
+    "headers": {
+     "Content-Type": "application/json",
+     "Origin": "https://amarisct.github.io"
+    },
+    "body": {
+     "consent": true,
+     "consentVersion": "draft-0",
+     "hp": "",
+     "elapsedMs": 12000,
+     "type": "question",
+     "question": "Could an artificial intelligence system develop an autobiographical sense of self?",
+     "attribution": {
+      "mode": "real-name"
+     }
+    }
+   },
+   "expect": {
+    "status": 422,
+    "code": "invalid-field"
+   },
+   "fields": [
+    "attribution"
+   ]
+  },
+  {
+   "name": "submitted too quickly",
+   "request": {
+    "method": "POST",
+    "path": "/api/public/contributions",
+    "headers": {
+     "Content-Type": "application/json",
+     "Origin": "https://amarisct.github.io"
+    },
+    "body": {
+     "consent": true,
+     "consentVersion": "draft-0",
+     "hp": "",
+     "elapsedMs": 400,
+     "type": "question",
+     "question": "Could an artificial intelligence system develop an autobiographical sense of self?"
+    }
+   },
+   "expect": {
+    "status": 400,
+    "code": "too-fast"
+   }
+  },
+  {
+   "name": "elapsedMs is not a number",
+   "request": {
+    "method": "POST",
+    "path": "/api/public/contributions",
+    "headers": {
+     "Content-Type": "application/json",
+     "Origin": "https://amarisct.github.io"
+    },
+    "body": {
+     "consent": true,
+     "consentVersion": "draft-0",
+     "hp": "",
+     "elapsedMs": "12000",
+     "type": "question",
+     "question": "Could an artificial intelligence system develop an autobiographical sense of self?"
+    }
+   },
+   "expect": {
+    "status": 422,
+    "code": "invalid-field"
+   }
+  },
+  {
+   "name": "honeypot filled looks like success and stores nothing",
+   "request": {
+    "method": "POST",
+    "path": "/api/public/contributions",
+    "headers": {
+     "Content-Type": "application/json",
+     "Origin": "https://amarisct.github.io"
+    },
+    "body": {
+     "consent": true,
+     "consentVersion": "draft-0",
+     "hp": "http://bot.example",
+     "elapsedMs": 12000,
+     "type": "question",
+     "question": "Could an artificial intelligence system develop an autobiographical sense of self?"
+    }
+   },
+   "expect": {
+    "status": 202
+   },
+   "note": "Bots must not learn they were detected. A conformance runner can only check the status; the service must store nothing."
+  },
+  {
+   "name": "wrong content type",
+   "request": {
+    "method": "POST",
+    "path": "/api/public/contributions",
+    "headers": {
+     "Content-Type": "text/plain",
+     "Origin": "https://amarisct.github.io"
+    },
+    "body": {
+     "consent": true,
+     "consentVersion": "draft-0",
+     "hp": "",
+     "elapsedMs": 12000,
+     "type": "question",
+     "question": "Could an artificial intelligence system develop an autobiographical sense of self?"
+    }
+   },
+   "expect": {
+    "status": 415,
+    "code": "unsupported-media-type"
+   }
+  },
+  {
+   "name": "body is not JSON",
+   "request": {
+    "method": "POST",
+    "path": "/api/public/contributions",
+    "headers": {
+     "Content-Type": "application/json",
+     "Origin": "https://amarisct.github.io"
+    },
+    "bodyText": "{not json"
+   },
+   "expect": {
+    "status": 400,
+    "code": "bad-json"
+   }
+  },
+  {
+   "name": "body is a JSON array",
+   "request": {
+    "method": "POST",
+    "path": "/api/public/contributions",
+    "headers": {
+     "Content-Type": "application/json",
+     "Origin": "https://amarisct.github.io"
+    },
+    "bodyText": "[1,2,3]"
+   },
+   "expect": {
+    "status": 400,
+    "code": "bad-request"
+   }
+  },
+  {
+   "name": "body too large",
+   "request": {
+    "method": "POST",
+    "path": "/api/public/contributions",
+    "headers": {
+     "Content-Type": "application/json",
+     "Origin": "https://amarisct.github.io"
+    },
+    "bodyText": "{\"consent\": true, \"consentVersion\": \"draft-0\", \"hp\": \"\", \"elapsedMs\": 12000, \"type\": \"question\", \"question\": \"Could an artificial intelligence system develop an autobiographical sense of self?\", \"explanation\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\"}"
+   },
+   "expect": {
+    "status": 413,
+    "code": "too-large"
+   }
+  },
+  {
+   "name": "GET is refused",
+   "request": {
+    "method": "GET",
+    "path": "/api/public/contributions",
+    "headers": {
+     "Content-Type": "application/json",
+     "Origin": "https://amarisct.github.io"
+    }
+   },
+   "expect": {
+    "status": 405,
+    "code": "method-not-allowed"
+   }
+  },
+  {
+   "name": "preflight succeeds for the site's origin only",
+   "request": {
+    "method": "OPTIONS",
+    "path": "/api/public/contributions",
+    "headers": {
+     "Content-Type": "application/json",
+     "Origin": "https://amarisct.github.io"
+    }
+   },
+   "expect": {
+    "status": 204
+   },
+   "headers_expect": {
+    "Access-Control-Allow-Origin": "https://amarisct.github.io"
+   }
+  },
+  {
+   "name": "another origin is refused",
+   "request": {
+    "method": "POST",
+    "path": "/api/public/contributions",
+    "headers": {
+     "Content-Type": "application/json",
+     "Origin": "https://evil.example"
+    },
+    "body": {
+     "consent": true,
+     "consentVersion": "draft-0",
+     "hp": "",
+     "elapsedMs": 12000,
+     "type": "question",
+     "question": "Could an artificial intelligence system develop an autobiographical sense of self?"
+    }
+   },
+   "expect": {
+    "status": 403,
+    "code": "origin-not-allowed"
+   }
+  },
+  {
+   "name": "unknown path",
+   "request": {
+    "method": "POST",
+    "path": "/api/public/everything",
+    "headers": {
+     "Content-Type": "application/json",
+     "Origin": "https://amarisct.github.io"
+    },
+    "body": {
+     "consent": true,
+     "consentVersion": "draft-0",
+     "hp": "",
+     "elapsedMs": 12000,
+     "type": "question",
+     "question": "Could an artificial intelligence system develop an autobiographical sense of self?"
+    }
+   },
+   "expect": {
+    "status": 404,
+    "code": "not-found"
+   }
+  },
+  {
+   "name": "control characters and bidirectional overrides are stripped, not stored",
+   "request": {
+    "method": "POST",
+    "path": "/api/public/contributions",
+    "headers": {
+     "Content-Type": "application/json",
+     "Origin": "https://amarisct.github.io"
+    },
+    "body": {
+     "consent": true,
+     "consentVersion": "draft-0",
+     "hp": "",
+     "elapsedMs": 12000,
+     "type": "question",
+     "question": "Could a‮ machine\u0007 develop a sense of self over time?"
+    }
+   },
+   "expect": {
+    "status": 202
+   }
+  },
+  {
+   "name": "sixth submission in an hour from one sender is rate limited",
+   "request": {
+    "method": "POST",
+    "path": "/api/public/contributions",
+    "headers": {
+     "Content-Type": "application/json",
+     "Origin": "https://amarisct.github.io"
+    },
+    "body": {
+     "consent": true,
+     "consentVersion": "draft-0",
+     "hp": "",
+     "elapsedMs": 12000,
+     "type": "question",
+     "question": "Could an artificial intelligence system develop an autobiographical sense of self?"
+    }
+   },
+   "expect": {
+    "status": 429,
+    "code": "rate-limited"
+   },
+   "stateful": "rate-limit",
+   "note": "Send six different valid questions from one network address within an hour. The sixth must be refused with 429 and a Retry-After header."
+  },
+  {
+   "name": "an identical resubmission is idempotent",
+   "request": {
+    "method": "POST",
+    "path": "/api/public/contributions",
+    "headers": {
+     "Content-Type": "application/json",
+     "Origin": "https://amarisct.github.io"
+    },
+    "body": {
+     "consent": true,
+     "consentVersion": "draft-0",
+     "hp": "",
+     "elapsedMs": 12000,
+     "type": "question",
+     "question": "Could an artificial intelligence system develop an autobiographical sense of self?"
+    }
+   },
+   "expect": {
+    "status": 200
+   },
+   "stateful": "duplicate",
+   "note": "Send the same valid body twice. The second response must say duplicate:true and must not create a second record."
+  }
+ ]
+}

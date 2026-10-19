@@ -8,8 +8,8 @@
   var STOP = new Set(("a an the of to in on at for and or is are be been can could would should do does did it its that this " +
     "what which who whom how why when where with by as from into than then there their they them about over under not no if " +
     "my your our we you i me so such very more most also just").split(" "));
-  var TYPE_ORDER = ["concept", "theory", "article", "course", "lesson", "question", "comparison", "source", "museum"];
-  var TYPE_LABEL = { concept: "Concept", theory: "Theory", article: "Original essay", question: "Open question", comparison: "Theory comparison", source: "Publication", museum: "Museum room", course: "Course", lesson: "Lesson" };
+  var TYPE_ORDER = ["concept", "theory", "article", "course", "lesson", "question", "comparison", "source", "museum", "contribution"];
+  var TYPE_LABEL = { concept: "Concept", theory: "Theory", article: "Original essay", question: "Open question", comparison: "Theory comparison", source: "Publication", museum: "Museum room", course: "Course", lesson: "Lesson", contribution: "Visitor contribution" };
   var GROUP_NOTE = {
     article: "Original essays on this site.",
     concept: "Short working descriptions of concepts, from the Research Atlas and Theory Chamber.",
@@ -19,7 +19,8 @@
     source: "External scholarly publications, with their original links. Not endorsed by this site.",
     museum: "Rooms in the Museum of Human Memory.",
     course: "Published courses in the Learning Institute. Planned courses are not listed.",
-    lesson: "Lessons in the Learning Institute. They explain ideas and do not settle open questions."
+    lesson: "Lessons in the Learning Institute. They explain ideas and do not settle open questions.",
+    contribution: "Approved contributions from visitors, shown in the Research Commons. They are not peer reviewed, are not research findings, and are not the site's own conclusions."
   };
   function norm(s) { return words(s).join(" "); }
   function cstems(s) { return words(s).filter(function (w) { return !STOP.has(w); }).map(stem); }
@@ -175,7 +176,7 @@
       var out = [], seen = new Set();
       function push(o) { var k = o.kind + ":" + (o.id || o.label); if (seen.has(k)) return; seen.add(k); out.push(o); }
       var starts = function (s) { var ns = norm(s); return ns.indexOf(p) === 0 || ns.split(" ").some(function (w, i, a) { return i > 0 && (a.slice(i).join(" ")).indexOf(p) === 0; }); };
-      var pri = { concept: 0, theory: 1, article: 2, question: 3, museum: 4, source: 5, comparison: 6 };
+      var pri = { concept: 0, theory: 1, article: 2, question: 3, museum: 4, source: 5, comparison: 6, contribution: 7 };
       var cands = [];
       recs.forEach(function (d) {
         var r = d.r;

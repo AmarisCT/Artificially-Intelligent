@@ -12,7 +12,7 @@ const clip = (s, n) => (s || "").length > n ? s.slice(0, n - 1).trimEnd() + "…
 const enc = q => btoa(unescape(encodeURIComponent(q))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
 const dec = s => { try { s = s.replace(/-/g, "+").replace(/_/g, "/"); while (s.length % 4) s += "="; return decodeURIComponent(escape(atob(s))); } catch (e) { return ""; } };
 
-const TYPES = { concept: "Concept", question: "Open question", theory: "Theory", source: "Publication", article: "Essay", museum: "Museum room", comparison: "Comparison", lesson: "Lesson", course: "Course" };
+const TYPES = { concept: "Concept", question: "Open question", theory: "Theory", source: "Publication", article: "Essay", museum: "Museum room", comparison: "Comparison", contribution: "Visitor contribution", lesson: "Lesson", course: "Course" };
 const EXAMPLES = ["Can intelligence exist without consciousness?", "Can artificial intelligence genuinely understand meaning?", "What makes an experience conscious?", "Can a machine develop self-awareness?", "Is memory necessary for personal identity?", "What distinguishes human cognition from machine learning?", "What would count as evidence of machine consciousness?", "Could consciousness exist independently of a biological brain?"];
 const KIND_LABEL = { editorial: "Editorial link", "verified-metadata": "Verified from publication metadata", preliminary: "Preliminary (automatic)", automatic: "Automatic (from your wording)" };
 
@@ -372,9 +372,10 @@ const SHAPE = {
   square: () => sv("rect", { x: -10, y: -10, width: 20, height: 20, class: "sh" }),
   page: () => sv("path", { d: "M-9,-12 L4,-12 L9,-7 L9,12 L-9,12Z M4,-12 L4,-7 L9,-7", class: "sh" }),
   tri: () => sv("path", { d: "M0,-13 L13,10 L-13,10Z", class: "sh" }),
+  ring: () => sv("circle", { r: 11, class: "sh", "stroke-dasharray": "3 3" }),
 };
-const NSHAPE = { concept: "circle", question: "diamond", theory: "hex", source: "square", article: "page", museum: "tri", comparison: "hex" };
-const ORDER = ["concept", "question", "theory", "source", "article", "museum", "comparison"], RAD = { concept: 120, question: 185, theory: 190, source: 215, article: 225, museum: 225, comparison: 215 };
+const NSHAPE = { concept: "circle", question: "diamond", theory: "hex", source: "square", article: "page", museum: "tri", comparison: "hex", contribution: "ring" };
+const ORDER = ["concept", "question", "theory", "source", "article", "museum", "comparison", "contribution"], RAD = { concept: 120, question: 185, theory: 190, source: 215, article: 225, museum: 225, comparison: 215, contribution: 235 };
 function mapInit() {
   const g = ENG.graphFor(INQ); MAP = { nodes: new Map(), edges: g.edges.map(e => Object.assign({}, e)), sel: null, hist: [], view: { x: 0, y: 0, k: 1 } };
   const groups = {}; g.nodes.forEach(n => { if (n.id === "ask") MAP.nodes.set("ask", Object.assign({ x: 0, y: 0, a: 0, r: 0 }, n)); else (groups[n.type] = groups[n.type] || []).push(n); });
@@ -403,10 +404,13 @@ function mapExpand(id) {
   say("Added " + nb.length + " connected resources to the map."); paintMap();
 }
 function edgesFor(id) { return MAP.edges.filter(e => e.a === id || e.b === id); }
+function mapLegend() {
+  return h("div", { class: "legend", id: "maplegend" }, ["concept", "question", "theory", "source", "article", "museum", "contribution"].filter(t => t !== "contribution" || MAP.nodes.size && [...MAP.nodes.values()].some(n => n.type === "contribution")).map(t => h("span", null, (() => { const s = sv("svg", { width: 24, height: 24, viewBox: "-16 -16 32 32", "aria-hidden": "true", class: "nd " + t }); s.append(SHAPE[NSHAPE[t]]()); return s; })(), TYPES[t])),
+    h("span", null, sv("svg", { width: 34, height: 10, "aria-hidden": "true" }, sv("line", { x1: 0, y1: 5, x2: 34, y2: 5, class: "ed" })), "Editorial link"), h("span", null, sv("svg", { width: 34, height: 10, "aria-hidden": "true" }, sv("line", { x1: 0, y1: 5, x2: 34, y2: 5, class: "ed auto" })), "Automatic or preliminary"));
+}
 function mapTab() {
   if (!MAP) mapInit();
-  const legend = h("div", { class: "legend" }, ["concept", "question", "theory", "source", "article", "museum"].map(t => h("span", null, (() => { const s = sv("svg", { width: 24, height: 24, viewBox: "-16 -16 32 32", "aria-hidden": "true", class: "nd " + t }); s.append(SHAPE[NSHAPE[t]]()); return s; })(), TYPES[t])),
-    h("span", null, sv("svg", { width: 34, height: 10, "aria-hidden": "true" }, sv("line", { x1: 0, y1: 5, x2: 34, y2: 5, class: "ed" })), "Editorial link"), h("span", null, sv("svg", { width: 34, height: 10, "aria-hidden": "true" }, sv("line", { x1: 0, y1: 5, x2: 34, y2: 5, class: "ed auto" })), "Automatic or preliminary"));
+  const legend = mapLegend();
   const tog = h("div", { class: "row" }, h("button", { class: "btn sm", type: "button", "aria-pressed": String(UI.mapView === "map"), onclick: () => { UI.mapView = "map"; paint(); } }, "Map"), h("button", { class: "btn sm", type: "button", "aria-pressed": String(UI.mapView === "list"), onclick: () => { UI.mapView = "list"; paint(); } }, "List view"),
     h("button", { class: "btn sm", type: "button", "aria-pressed": String(!!MAP.all), onclick: () => { MAP.all = !MAP.all; paint(); } }, MAP.all ? "Showing all links" : "Show all links (" + MAP.edges.length + ")"), h("button", { class: "btn sm", type: "button", onclick: () => { MAP = null; mapInit(); paint(); say("Map reset."); } }, "Reset map"), MAP.hist.length ? h("button", { class: "btn sm", type: "button", onclick: () => { const p = MAP.hist.pop(); mapSelect(p, false); } }, "← Back to previous node") : null);
   const out = [h("p", { class: "note" }, "Every node is a record in the site's index. Each node shows its strongest link to something nearer the centre. Select a node to reveal all of its links and the reason for each, expand it to add its neighbours, or choose “Show all links”. Your question stays at the centre."), legend, tog];
@@ -424,6 +428,7 @@ function fitView() {
 }
 function paintMap() {
   const wrap = $("#mapwrap"); if (!wrap) return; wrap.textContent = "";
+  const lg = $("#maplegend"); if (lg) lg.replaceWith(mapLegend());   // the “Visitor contribution” entry appears only once such a node is on the map
   const sel = MAP.sel, nb = new Set(); if (sel) edgesFor(sel).forEach(e => { nb.add(e.a); nb.add(e.b); });
   const svg = sv("svg", { viewBox: "-500 -320 1000 640", role: "group", "aria-label": "Pathway Map. Use Tab to move between nodes and Enter to select. A list view is available." });
   const vp = sv("g", { id: "vp", transform: `translate(${MAP.view.x} ${MAP.view.y}) scale(${MAP.view.k})` });

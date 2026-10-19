@@ -1,0 +1,186 @@
+{
+  "schema": 1,
+  "note": "Shared vocabulary for the Research Commons. Everything here is safe to publish. Subject ids are the Unanswered Archive's, so a question means the same thing in both places.",
+  "types": [
+    {
+      "id": "question",
+      "label": "Research question",
+      "plural": "Research questions",
+      "short": "Question",
+      "purpose": "A question you think deserves investigation. The more specific it is, the easier it is to investigate."
+    },
+    {
+      "id": "publication",
+      "label": "Publication recommendation",
+      "plural": "Publication recommendations",
+      "short": "Publication",
+      "purpose": "A scholarly source you think belongs in the research conversation: a paper, book, preprint, essay, report or historical document."
+    },
+    {
+      "id": "topic",
+      "label": "Research topic proposal",
+      "plural": "Research topic proposals",
+      "short": "Topic",
+      "purpose": "A broader subject you think is worth exploring, with a short account of why."
+    },
+    {
+      "id": "perspective",
+      "label": "Philosophical perspective",
+      "plural": "Philosophical perspectives",
+      "short": "Perspective",
+      "purpose": "A brief, original, reasoned view on a question this site explores. It is an argument, not a finding."
+    }
+  ],
+  "categories": [
+    {
+      "id": "human",
+      "label": "Human Consciousness"
+    },
+    {
+      "id": "ai",
+      "label": "Artificial Intelligence"
+    },
+    {
+      "id": "neuro",
+      "label": "Neuroscience and Cognition"
+    },
+    {
+      "id": "mind",
+      "label": "Philosophy of Mind"
+    },
+    {
+      "id": "memory",
+      "label": "Memory and Digital Identity"
+    },
+    {
+      "id": "ethics",
+      "label": "Ethics and Society"
+    },
+    {
+      "id": "human-machine",
+      "label": "Human–Machine Relationships",
+      "note": "Added for the Commons. The Unanswered Archive's form does not offer it, and a backend must accept it for contributions."
+    }
+  ],
+  "lifecycle": [
+    {
+      "id": "submitted",
+      "label": "Submitted",
+      "visitorVisible": false,
+      "meaning": "Received by the service. Nothing has been read yet."
+    },
+    {
+      "id": "pending-review",
+      "label": "Pending review",
+      "visitorVisible": false,
+      "meaning": "Waiting for an editor."
+    },
+    {
+      "id": "needs-clarification",
+      "label": "Needs clarification",
+      "visitorVisible": false,
+      "meaning": "An editor needs more information before deciding."
+    },
+    {
+      "id": "accepted-for-consideration",
+      "label": "Accepted for consideration",
+      "visitorVisible": false,
+      "meaning": "Judged suitable to consider. This is not approval to publish."
+    },
+    {
+      "id": "approved-for-public-display",
+      "label": "Approved for public display",
+      "visitorVisible": true,
+      "meaning": "An editor approved this exact text for the public library."
+    },
+    {
+      "id": "declined",
+      "label": "Declined",
+      "visitorVisible": false,
+      "meaning": "Not taken further. Never shown publicly."
+    },
+    {
+      "id": "withdrawn",
+      "label": "Withdrawn",
+      "visitorVisible": true,
+      "meaning": "Removed from public view, at the contributor's request or for a stated reason."
+    }
+  ],
+  "publicStatuses": [
+    {
+      "id": "approved-for-public-display",
+      "label": "Approved for display",
+      "meaning": "An editor approved this text for the library. It has not been answered, investigated or endorsed by Artificially Intelligent."
+    },
+    {
+      "id": "selected-for-investigation",
+      "label": "Selected for further investigation",
+      "meaning": "An editor chose to look into this. Selection is not an answer."
+    },
+    {
+      "id": "incorporated",
+      "label": "Incorporated into other research",
+      "meaning": "An editor used this in another feature of the site, named in the record."
+    },
+    {
+      "id": "withdrawn",
+      "label": "Withdrawn",
+      "meaning": "No longer shown. Only a short notice remains."
+    }
+  ],
+  "attributionModes": [
+    {
+      "id": "anonymous",
+      "label": "Anonymous",
+      "meaning": "No name is shown."
+    },
+    {
+      "id": "display-name",
+      "label": "A name of the contributor's choice",
+      "meaning": "The name the contributor chose is shown. It is not verified, and it need not be a real name."
+    }
+  ],
+  "relationKinds": [
+    {
+      "id": "editorial",
+      "label": "Editorial relationship",
+      "meaning": "Set by an editor who read both records."
+    },
+    {
+      "id": "suggested",
+      "label": "Automated suggestion",
+      "meaning": "Proposed from shared words or tags. No one has reviewed it, and it does not show the two are related in substance."
+    },
+    {
+      "id": "preliminary",
+      "label": "Preliminary link",
+      "meaning": "Assigned from titles and metadata by an automated process, not from reading the work."
+    },
+    {
+      "id": "verified-metadata",
+      "label": "Verified metadata",
+      "meaning": "Matches a bibliographic record, not a reading of the work."
+    }
+  ],
+  "sourceVerification": [
+    {
+      "id": "unverified",
+      "label": "Recommended by a visitor. Not verified.",
+      "meaning": "The details are as the visitor wrote them. No one has checked them."
+    },
+    {
+      "id": "metadata-confirmed",
+      "label": "Bibliographic details match a record",
+      "meaning": "The title, authors and year match a bibliographic record. The work has not been read for this site, and it is not thereby credible or peer reviewed."
+    },
+    {
+      "id": "editor-reviewed",
+      "label": "Reviewed by an editor for relevance",
+      "meaning": "An editor judged it relevant to a topic here. This is not peer review and not an endorsement of its claims."
+    }
+  ],
+  "voices": {
+    "visitor": "Visitor contribution. It is not original research from Artificially Intelligent, it is not peer reviewed, and it is not evidence.",
+    "editorial": "Editorial text by Artificially Intelligent."
+  }
+}

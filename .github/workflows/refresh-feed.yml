@@ -2,9 +2,11 @@ name: Refresh research RSS feed
 on:
   workflow_dispatch:
   push:
+    branches: [main]
     paths:
       - "scripts/build_published.py"
       - "scripts/build_research_index.py"
+      - "scripts/commons_lib.py"
       - ".github/workflows/refresh-feed.yml"
   schedule:
     - cron: "17 */6 * * *"
