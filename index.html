@@ -152,6 +152,9 @@ section.band{padding-block:clamp(56px,9vw,112px)}
 .search{width:100%;max-width:420px;background:var(--panel);border:1px solid var(--line-strong);color:var(--ink);padding:10px 14px;font:inherit;border-radius:3px}
 .search::placeholder{color:var(--muted)}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
+.enter .more-chips{display:none}
+.enter.all .more-chips{display:contents}
+.chip.more{border-style:dashed;color:var(--muted)}
 .chip{background:transparent;border:1px solid var(--line-strong);padding:6px 13px;border-radius:99px;font-size:.86rem;color:var(--silver);display:inline-flex;gap:7px;align-items:center}
 .chip:hover{border-color:var(--mint);color:var(--ink)}
 .chip[aria-pressed="true"],.chip[aria-selected="true"]{background:var(--mint-dim);border-color:var(--mint);color:var(--mint)}
@@ -342,7 +345,7 @@ a.entry:hover{background:var(--panel);color:var(--ink)}
 .ng-b::after{content:"";width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translateY(-2px);opacity:.7}
 .ng-b:hover,.ng.open .ng-b{color:var(--ink);background:var(--panel)}
 .ng.cur .ng-b{color:var(--mint)}
-.ng-m{display:none;position:absolute;top:calc(100% + 6px);left:0;min-width:min(20rem,86vw);background:var(--panel);border:1px solid var(--line-strong);border-radius:4px;padding:6px;z-index:50;box-shadow:0 18px 40px rgba(0,0,0,.5)}
+.ng-m{display:none;position:absolute;top:calc(100% + 6px);left:0;min-width:min(20rem,86vw);max-height:calc(100vh - 96px);max-height:calc(100dvh - 96px);overflow-y:auto;overscroll-behavior:contain;background:var(--panel);border:1px solid var(--line-strong);border-radius:4px;padding:6px;z-index:50;box-shadow:0 18px 40px rgba(0,0,0,.5)}
 .ng.open .ng-m{display:block}
 .nav .ng-m a{text-decoration:none;display:flex;flex-direction:column;gap:2px;padding:10px 12px;border-radius:3px;white-space:normal;font-size:.95rem}
 .nav .ng-m a b{font-weight:500}
@@ -356,10 +359,10 @@ a.entry:hover{background:var(--panel);color:var(--ink)}
   .nav-t{margin-left:auto}
   .nav-t{display:inline-flex}
   .ng-wrap{display:none;flex-direction:column;align-items:stretch;width:100%;order:3;gap:10px;padding-top:10px}
-  .nav.open .ng-wrap{display:flex}
+  .nav.open .ng-wrap{display:flex;max-height:calc(100vh - var(--ng-top,84px) - 20px);max-height:calc(100dvh - var(--ng-top,84px) - 20px);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding-bottom:calc(88px + env(safe-area-inset-bottom,0px))}
   .ng-b{pointer-events:none;padding:4px 0;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
   .ng-b::after{display:none}
-  .ng-m{display:block;position:static;box-shadow:none;border:0;background:transparent;padding:0;min-width:0}
+  .ng-m{display:block;position:static;box-shadow:none;border:0;background:transparent;padding:0;min-width:0;max-height:none;overflow:visible}
   .nav .ext{margin:0;align-self:flex-start}
 }
 /* ---- shared institute bits ---- */
@@ -722,12 +725,15 @@ document.addEventListener("click",e=>{
 const footerNote=()=>`<p class="note" style="margin-top:28px">Relationships shown across this site are editorial or keyword-derived pathways. They are not citation counts, measurements, or evidence that two ideas are scientifically linked.</p>`;
 
 /* ---------- HOME ---------- */
+/* the homepage shows these first; every other concept sits behind "More concepts". Edit this list to change them. */
+const CORE_CONCEPTS=["consciousness","ai","memory","identity","language","cognition"].filter(id=>CBY[id]);
+const CONCEPT_CHIPS=ids=>ids.map(id=>CBY[id]).filter(Boolean).map(c=>`<button class="chip" style="--c:${c.color}" data-concept="${c.id}"><i></i>${esc(c.name)}</button>`).join("");
 function renderHome(el){
   const ways=[
     ["inquiry","Inquiry Room","Start from a question such as “What would count as evidence of machine consciousness?” and follow it through passages, sources, and the next questions.","Quotations read from the published essays"],
     ["stream","Data Stream","Search every research entry, finished or still in development, with the status of each stated plainly.","Reads the repository's published manifest"],
     ["library","Published Research","Finished essays with full text, dates, tags, and numbered sources.",ARTICLES.length+" published articles"],
-    ["atlas","Research Atlas","A map of sixteen concepts and the articles that connect them. Explore as a graph, a timeline, a conceptual map, or a reading path.","Editorial and keyword-derived links"],
+    ["atlas","Research Atlas","A map of "+CONCEPTS.length+" concepts and the articles that connect them. Explore as a graph, a timeline, a conceptual map, or a reading path.","Editorial and keyword-derived links"],
     ["index","Intelligence Index","Enter a question and see real scholarly records, reference articles, and books from Crossref, Wikipedia, and Open Library.","Live external sources, each labeled"],
     ["map","Consciousness Map","Competing explanations of consciousness, kept separate from the Atlas so the debate stays visible.","10 perspectives with an evidence note on each"],
     ["dossiers","Research Dossiers","One page for each concept: definition, theories, research, opposing views, and open questions, with honest gaps.",CONCEPTS.length+" concepts"],
@@ -744,8 +750,8 @@ function renderHome(el){
       <p class="lede">An open research archive on consciousness, machine intelligence, memory, and identity. It keeps evidence, interpretation, and speculation visibly apart.</p>
       <div class="chips"><a class="btn primary" href="#inquiry">Begin an inquiry</a><a class="btn" href="#atlas">Enter the Research Atlas</a><a class="btn" href="#library">Read the research</a><a class="btn" href="https://artificiallyintelligent.artificiallyint-co.chatgpt.site/architect?return_to=https%3A%2F%2Famarisct.github.io%2FArtificially-Intelligent%2F" rel="noopener">Architect login ⌑</a></div>
     </div>
-    <div class="stage" aria-hidden="false"><canvas id="hero-canvas" aria-label="Animated galaxy of the sixteen research concepts. Select a concept to open it in the Research Atlas." role="img"></canvas></div>
-    <div class="enter"><span>Begin from a concept</span>${CONCEPTS.map(c=>`<button class="chip" style="--c:${c.color}" data-concept="${c.id}"><i></i>${esc(c.name)}</button>`).join("")}</div>
+    <div class="stage" aria-hidden="false"><canvas id="hero-canvas" aria-label="Animated galaxy of the ${CONCEPTS.length} research concepts. Select a concept to open it in the Research Atlas." role="img"></canvas></div>
+    <div class="enter" id="enter"><span>Begin from a concept</span>${CONCEPT_CHIPS(CORE_CONCEPTS)}<span class="more-chips" id="more-chips">${CONCEPT_CHIPS(CONCEPTS.map(c=>c.id).filter(id=>!CORE_CONCEPTS.includes(id)))}</span><button class="chip more" type="button" id="more-toggle" aria-expanded="false" aria-controls="more-chips">More concepts (${CONCEPTS.length-CORE_CONCEPTS.length})</button></div>
   </div></section>
 
   <section class="band" style="padding-top:clamp(40px,6vw,72px)"><div class="wrap">
@@ -784,6 +790,8 @@ function renderHome(el){
       <div><b><span class="swatch dot"></span>Provisional</b><p>Used for research in development. Grouped by category only, until real text exists.</p></div>
     </div>
   </div></section>`;
+  const mt=$("#more-toggle"),en=$("#enter");
+  if(mt)mt.addEventListener("click",()=>{const o=en.classList.toggle("all");mt.setAttribute("aria-expanded",String(o));mt.textContent=o?"Show fewer":"More concepts ("+(CONCEPTS.length-CORE_CONCEPTS.length)+")"});
   return heroCanvas($("#hero-canvas"));
 }
 
@@ -1670,7 +1678,9 @@ Object.assign(TITLES,{inquiry:"Inquiry Room",dossiers:"Research Dossiers",eviden
   const nav=$("#nav"),t=$(".nav-t",nav);
   const closeG=()=>$$(".ng.open",nav).forEach(g=>{g.classList.remove("open");$(".ng-b",g).setAttribute("aria-expanded","false")});
   const closeAll=()=>{closeG();nav.classList.remove("open");t.setAttribute("aria-expanded","false")};
-  t.addEventListener("click",()=>{const o=nav.classList.toggle("open");t.setAttribute("aria-expanded",String(o))});
+  const fit=()=>{const w=$("#nav-groups");if(w&&nav.classList.contains("open"))document.documentElement.style.setProperty("--ng-top",Math.ceil(w.getBoundingClientRect().top)+"px")};
+  t.addEventListener("click",()=>{const o=nav.classList.toggle("open");t.setAttribute("aria-expanded",String(o));if(o){fit();$("#nav-groups").scrollTop=0}});
+  addEventListener("resize",fit);addEventListener("orientationchange",fit);
   $$(".ng-b",nav).forEach(b=>b.addEventListener("click",e=>{e.stopPropagation();const g=b.parentElement,o=!g.classList.contains("open");closeG();if(o){g.classList.add("open");b.setAttribute("aria-expanded","true")}}));
   document.addEventListener("click",e=>{if(!e.target.closest(".ng"))closeG()});
   addEventListener("keydown",e=>{if(e.key==="Escape")closeAll()});
