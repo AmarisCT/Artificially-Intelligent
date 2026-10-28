@@ -4,6 +4,7 @@
    only the cases and framing questions live in data/cases.json. */
 const ROOT=window.__TG_ROOT__||"../";
 const SECL={predictions:"Recorded prediction",mechanisms:"Proposed mechanism",criticisms:"Criticism on record",ai:"Conceptual assessment, not experimental evidence",openQuestions:"Open question",evidence:"Supporting evidence",history:"History",foundations:"Foundation",proposition:"Central proposition"};
+const KIND={direct:"Direct evidence",indirect:"Indirect consistency",interpretation:"Theoretical interpretation"};
 const STATUS={pred:"Predictions on record",ai:"Conceptual assessment on record",rel:"Related records",none:"Question only"};
 const symEl=k=>h("span",{class:"sym "+k,"aria-hidden":"true"});
 const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
@@ -79,8 +80,8 @@ function lensCard(t,c,forceOpen){
   const q=cell.asks||c.ask;
   const prop=(lens.from||[]).map(i=>claimIdx[i]).filter(Boolean);
   const claims=(cell.from||[]).map(i=>claimIdx[i]).filter(Boolean);
-  let note=cell.unsettled||c.defaultNote||"";
-  if(!cell.unsettled&&c.useGaps&&(t.gaps||[]).length)note="The Theory Chamber lists these gaps for this theory: "+t.gaps.join("; ")+".";
+  let note=cell.unsettled||c.defaultNote||"",after=cell.unsettled||"";
+  if(!cell.unsettled&&c.useGaps&&(t.gaps||[]).length)note=after="The Theory Chamber lists these gaps for this theory: "+t.gaps.join("; ")+".";
   const used=[...prop.flatMap(x=>x.c.sources),...claims.flatMap(x=>x.c.sources)];
   return h("article",{class:"lens",id:"lens-"+t.id,tabindex:"-1","aria-labelledby":"lh-"+t.id},
     h("header",null,h("span",{class:"badge abbr"},t.abbr),h("h3",{id:"lh-"+t.id},t.name)),
@@ -89,9 +90,9 @@ function lensCard(t,c,forceOpen){
     (cell.asks||!c.ask)?h("p",{class:"asks"},h("span",{class:"lbl"},"The question it raises for this case"),q):null,
     h("details",Object.assign({class:"basis"},wide()||forceOpen?{open:true}:{}),
       h("summary",null,"On file in the Theory Chamber: "+(claims.length||"nothing")),
-      claims.length?h("ul",null,claims.map(x=>h("li",null,h("span",{class:"kind"},SECL[x.sec]||x.sec),x.c.text,srcChips(x.c.sources)))):
+      claims.length?h("ul",null,claims.map(x=>h("li",null,h("span",{class:"kind"},(x.sec==="evidence"&&KIND[x.c.kind])||SECL[x.sec]||x.sec),x.c.text,srcChips(x.c.sources)))):
       h("p",{class:"empty"},"Nothing on file for this pairing."+(note?" "+note:"")+" The question above is this site\u2019s framing, not a published result.")),
-    claims.length&&note?h("p",{class:"unsettled"},note):null,
+    claims.length&&after?h("p",{class:"unsettled"},after):null,
     readList(used),
     h("footer",null,h("span",{class:"badge"},"Awaiting Evidence Review"),
       h("a",{href:ROOT+"theory-chamber/#theory-"+t.id},"Open "+t.abbr+" in the Theory Chamber")));

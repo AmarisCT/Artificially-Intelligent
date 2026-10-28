@@ -18,6 +18,8 @@ def _load(rel):
 TC = _load("theory-chamber/data/theories.json")["items"]
 G = _load("theory-grid/data/cases.json")
 CASES = G["cases"]
+CASE = {c["id"]: c for c in G["cases"]}
+IDX = {c["id"]: i for i, c in enumerate(G["cases"])}
 CLAIMS = {c["id"]: c for t in TC for sec in ("predictions", "mechanisms", "criticisms", "ai", "openQuestions", "evidence") for c in t.get(sec, [])}
 
 
@@ -139,7 +141,7 @@ class GridTests(unittest.TestCase):
 
     def test_14_deep_link_fallback_and_hashchange(self):
         pg = self.page(path="/theory-grid/index.html#case-chatbot")
-        self.assertEqual(pg.inner_text("#case-h"), CASES[3]["name"])
+        self.assertEqual(pg.inner_text("#case-h"), CASE["chatbot"]["name"])
         pg.evaluate("location.hash='#case-thermostat'")
         pg.wait_for_function("document.querySelector('#case-h').textContent.includes('thermostat')")
         pg2 = self.page(path="/theory-grid/index.html#case-nope")
@@ -151,8 +153,8 @@ class GridTests(unittest.TestCase):
     def test_15_overview_buttons_open_the_pairing(self):
         pg = self.page(path="/theory-grid/index.html#case-bat")
         self.assertEqual(pg.locator(".cellbtn").count(), len(CASES) * len(TC))
-        pg.click('.ovt tbody tr:nth-child(1) td:nth-child(5) .cellbtn')   # GNWT x chatbot
-        self.assertEqual(pg.inner_text("#case-h"), CASES[3]["name"])
+        pg.click(f'.ovt tbody tr:nth-child(1) td:nth-child({IDX["chatbot"] + 2}) .cellbtn')   # GNWT x chatbot
+        self.assertEqual(pg.inner_text("#case-h"), CASE["chatbot"]["name"])
         self.assertTrue(pg.eval_on_selector("#lens-gnwt", "e=>e.classList.contains('hl')"))
         self.assertEqual(pg.evaluate("document.activeElement.id"), "lens-gnwt")
         self.assertTrue(pg.eval_on_selector("#lens-gnwt details.basis", "d=>d.open"))
@@ -166,6 +168,8 @@ class GridTests(unittest.TestCase):
         # chatbot column is conceptual only; image/gnwt has predictions
         self.assertTrue(any(l.startswith("GNWT, Seen vs. missed: Predictions on record (3)") for l in labels))
         self.assertTrue(all("Predictions" not in l for l in labels if "A chatbot" in l))
+        self.assertTrue(any(l.startswith("GNWT, Awake vs. asleep: Predictions on record (2)") for l in labels))
+        self.assertTrue(any(l.startswith("IIT, Awake vs. asleep: Related records (1)") for l in labels))
 
     def test_17_source_lists_are_https_links_with_noopener(self):
         pg = self.page(path="/theory-grid/index.html#case-image")
@@ -175,6 +179,24 @@ class GridTests(unittest.TestCase):
         for href, rel, target in links:
             self.assertTrue(href.startswith("https://"), href)
             self.assertIn("noopener", rel); self.assertEqual(target, "_blank")
+
+    def test_17b_sleep_case_quotes_records_and_labels_interpretation(self):
+        pg = self.page(path="/theory-grid/index.html#case-sleep")
+        iit = pg.eval_on_selector("#lens-iit", "e=>e.textContent")
+        self.assertIn("Theoretical interpretation", iit)          # the record's own kind, not "supporting evidence"
+        self.assertIn("This is the author's interpretation", iit)
+        self.assertIn("Nothing on file for this pairing", pg.eval_on_selector("#lens-hot", "e=>e.textContent"))
+        self.assertEqual(pg.locator(".panel > .asks").count(), 1)
+
+    def test_17c_default_note_never_sits_under_a_pairing_that_has_records(self):
+        pg = self.page()
+        for c in CASES:
+            pg.click(f'.case-btn[data-case="{c["id"]}"]')
+            for th in TC:
+                cell = c["cells"][th["id"]]
+                text = pg.eval_on_selector(f"#lens-{th['id']}", "e=>e.textContent")
+                if cell.get("from") and c.get("defaultNote"):
+                    self.assertNotIn(c["defaultNote"], text, f"{c['id']}/{th['id']}")
 
     def test_18_nagel_source_is_listed_for_the_bat(self):
         pg = self.page(path="/theory-grid/index.html#case-bat")
@@ -189,7 +211,10 @@ class GridTests(unittest.TestCase):
         pg.keyboard.press("Enter")
         self.assertEqual(pg.inner_text("#case-h"), CASES[1]["name"])
         self.assertEqual(pg.evaluate("document.activeElement.dataset.case"), "thermostat")   # focus stays put
-        pg.keyboard.press("Tab"); pg.keyboard.press("Tab"); pg.keyboard.press("Tab")
+        for _ in range(len(CASES)):
+            pg.keyboard.press("Tab")
+            if pg.evaluate("document.activeElement.id") == "surprise":
+                break
         self.assertEqual(pg.evaluate("document.activeElement.id"), "surprise")
         before = pg.inner_text("#case-h")
         pg.keyboard.press("Space")
@@ -269,7 +294,8 @@ class GridTests(unittest.TestCase):
 
     def test_29_meta_and_landmarks(self):
         pg = self.page()
-        self.assertIn("noindex", pg.get_attribute('meta[name="robots"]', "content"))   # preview state; flipped at approval
+        robots = pg.get_attribute('meta[name="robots"]', "content")
+        self.assertIn("index", robots); self.assertNotIn("noindex", robots)   # published
         self.assertEqual(pg.locator("h1").count(), 1)
         self.assertEqual(pg.locator("main").count(), 1)
         self.assertEqual(pg.locator("html").get_attribute("lang"), "en")
@@ -304,6 +330,21 @@ class GridTests(unittest.TestCase):
         if not parts:
             self.skipTest("homepage already matches origin/main (change merged)")
         self.assertEqual(parts[:2], ["1", "0"], r.stdout)
+
+    def test_34_sitemaps_and_generator_list_the_grid(self):
+        url = "https://amarisct.github.io/Artificially-Intelligent/theory-grid/"
+        for f in ("sitemap.txt", "sitemap.xml"):
+            with open(os.path.join(ROOT, f), encoding="utf-8") as fh:
+                self.assertEqual(fh.read().count(url), 1, f)
+        with open(os.path.join(ROOT, "scripts/build_published.py"), encoding="utf-8") as fh:
+            self.assertIn('SITE + "theory-grid/"', fh.read())
+
+    def test_35_theory_chamber_links_to_the_grid(self):
+        pg = self.page(path="/theory-chamber/index.html", wait="#f-grid")
+        self.assertTrue(pg.locator("#f-grid").is_visible())
+        pg.click("#f-grid")
+        pg.wait_for_url("**/theory-grid/")
+        pg.wait_for_selector(".lens")
 
     def test_33_grid_links_resolve(self):
         pg = self.page(path="/theory-grid/index.html#case-image")
