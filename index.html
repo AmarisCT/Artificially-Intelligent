@@ -9,7 +9,14 @@
 <meta property="og:title" content="Artificially Intelligent | AI, Consciousness & Digital Identity">
 <meta property="og:description" content="Explore independent research on artificial intelligence, human consciousness, neuroscience, philosophy of mind, memory, digital identity, and culture.">
 <meta property="og:url" content="https://amarisct.github.io/Artificially-Intelligent/">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://amarisct.github.io/Artificially-Intelligent/share/og-home.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Artificially Intelligent: Human × Machine Learning. A network of linked research concepts beside the question: Is human consciousness connected to Artificial Intelligence?">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://amarisct.github.io/Artificially-Intelligent/share/og-home.png">
+<meta name="twitter:image:alt" content="Artificially Intelligent: Human × Machine Learning. A network of linked research concepts beside the question: Is human consciousness connected to Artificial Intelligence?">
 <link rel="canonical" href="https://amarisct.github.io/Artificially-Intelligent/">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Artificially Intelligent","url":"https://amarisct.github.io/Artificially-Intelligent/","description":"Explore independent research on artificial intelligence, human consciousness, neuroscience, philosophy of mind, memory, digital identity, and culture.","inLanguage":"en","publisher":{"@type":"Organization","name":"amaris ct","alternateName":"amaris creative tech","url":"https://amarisct.github.io/Amaris/"}}</script>
 <title>Artificially Intelligent | AI, Consciousness & Digital Identity</title>
@@ -523,6 +530,7 @@ a.entry:hover{background:var(--panel);color:var(--ink)}
 <footer class="ftr"><div class="wrap">
   <div>Artificially Intelligent · Human × Machine Learning<br>An <a href="https://amarisct.github.io/Amaris/" style="text-transform:none;text-decoration:none;color:#dcdcda;background:linear-gradient(110deg,#a9a9a7,#f4f4f2 55%,#bdbdbb);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">amaris ct</a> project</div>
   <nav aria-label="Footer">
+    <a href="research-commons/">Research Commons</a>
     <a href="https://github.com/AmarisCT/Artificially-Intelligent" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
     <a href="https://artificialxintelligence.substack.com/" target="_blank" rel="noopener noreferrer">Substack ↗</a>
     <a href="https://artificiallyintelligent.artificiallyint-co.chatgpt.site/architect?return_to=https%3A%2F%2Famarisct.github.io%2FArtificially-Intelligent%2F" rel="noopener">Architect login ⌑</a>
@@ -748,7 +756,7 @@ function renderHome(el){
       <p class="tagline">Human × Machine Learning</p>
       <p class="question">Is human consciousness connected to Artificial Intelligence?</p>
       <p class="lede">An open research archive on consciousness, machine intelligence, memory, and identity. It keeps evidence, interpretation, and speculation visibly apart.</p>
-      <div class="chips"><a class="btn primary" href="#inquiry">Begin an inquiry</a><a class="btn" href="#atlas">Enter the Research Atlas</a><a class="btn" href="#library">Read the research</a><a class="btn" href="https://artificiallyintelligent.artificiallyint-co.chatgpt.site/architect?return_to=https%3A%2F%2Famarisct.github.io%2FArtificially-Intelligent%2F" rel="noopener">Architect login ⌑</a></div>
+      <div class="chips"><a class="btn primary" href="https://artificialxintelligence.substack.com/subscribe" target="_blank" rel="noopener noreferrer">Get new research by email ↗</a><a class="btn" href="#inquiry">Begin an inquiry</a><a class="btn" href="#atlas">Enter the Research Atlas</a><a class="btn" href="#library">Read the research</a><a class="btn" href="https://artificiallyintelligent.artificiallyint-co.chatgpt.site/architect?return_to=https%3A%2F%2Famarisct.github.io%2FArtificially-Intelligent%2F" rel="noopener">Architect login ⌑</a></div>
     </div>
     <div class="stage" aria-hidden="false"><canvas id="hero-canvas" aria-label="Animated galaxy of the ${CONCEPTS.length} research concepts. Select a concept to open it in the Research Atlas." role="img"></canvas></div>
     <div class="enter" id="enter"><span>Begin from a concept</span>${CONCEPT_CHIPS(CORE_CONCEPTS)}<span class="more-chips" id="more-chips">${CONCEPT_CHIPS(CONCEPTS.map(c=>c.id).filter(id=>!CORE_CONCEPTS.includes(id)))}</span><button class="chip more" type="button" id="more-toggle" aria-expanded="false" aria-controls="more-chips">More concepts (${CONCEPTS.length-CORE_CONCEPTS.length})</button></div>
@@ -1032,7 +1040,7 @@ function renderReader(el,a){
         </div></div>
       <div><h2>Related concepts</h2><div class="chips">${a.topics.map(t=>`<button class="chip" style="--c:${CBY[t].color}" data-concept="${t}"><i></i>${esc(CNAME(t))}</button>`).join("")}</div>
         <p class="note" style="margin-top:12px">Tags are ${a.topicSource==="editorial"?"editorial associations":"suggested by keyword"}, not citation claims.</p></div>
-      <div><h2>Elsewhere</h2><p class="note">Substack publication: <a href="${SUBSTACK}" target="_blank" rel="noopener noreferrer">artificialxintelligence.substack.com ↗</a>. No matching Substack post has been verified for this article.</p></div>
+      <div><h2>Elsewhere</h2><p style="margin-bottom:12px"><a class="btn primary" href="${SUBSTACK}subscribe" target="_blank" rel="noopener noreferrer">Get new research by email ↗</a></p><p class="note">Substack publication: <a href="${SUBSTACK}" target="_blank" rel="noopener noreferrer">artificialxintelligence.substack.com ↗</a>. No matching Substack post has been verified for this article.</p></div>
     </aside></div></div>`;
   if(S.focusPara!=null){const fp=S.focusPara;S.focusPara=null;setTimeout(()=>{const pe=$$("#prose p")[fp];if(pe){pe.classList.add("hl");pe.scrollIntoView({block:"center"})}},90)}
   markRead(a.slug);
@@ -1820,3 +1828,4 @@ Object.assign(TITLES,{desk:"Reading Desk",living:"Living Archive",notes:"Field N
 /* boot */
 refreshDev();rebuildIndex();placeArticles();route();loadManifest();
 </script>
+<script defer src="analytics.js"></script>

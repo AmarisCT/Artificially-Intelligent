@@ -16,6 +16,9 @@ import xml.etree.ElementTree as ET
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 SITE = "https://amarisct.github.io/Artificially-Intelligent/"
+SHARE_IMAGE = SITE + "share/og-home.png"
+SHARE_ALT = "Artificially Intelligent: Human × Machine Learning. A network of linked research concepts."
+SUBSCRIBE = "https://artificialxintelligence.substack.com/subscribe"
 FEED = ROOT / "feed.xml"
 OUTPUT = ROOT / "research" / "published"
 CONTENT = "{http://purl.org/rss/1.0/modules/content/}"
@@ -35,7 +38,11 @@ h1{font:400 clamp(2.6rem,7vw,6rem)/1.05 Georgia,serif;letter-spacing:-.045em;mar
 .article-body p{margin:0 0 1.5em;overflow-wrap:anywhere}.article-body a{color:var(--mint)}
 .cards{display:grid;gap:16px;margin-top:45px}.card{display:block;padding:26px 30px;border:1px solid var(--line);text-decoration:none}
 .card:hover{border-color:var(--mint);background:#b9ffde0a}.card h2{font:400 clamp(1.6rem,4vw,2.4rem) Georgia,serif;margin:10px 0}
-.card p{color:var(--muted);max-width:790px}.links{margin-top:65px;padding-top:24px;border-top:1px solid var(--line)}
+.card p{color:var(--muted);max-width:790px}.subscribe{margin-top:56px;padding:26px 30px;border:1px solid var(--line);display:flex;flex-wrap:wrap;gap:14px 28px;align-items:center;justify-content:space-between}
+.subscribe p{margin:0;max-width:520px;color:#c6cdc6;font:1.08rem/1.6 Georgia,serif}
+.subscribe a.btn{background:var(--mint);color:#06100c;text-decoration:none;font-size:.9rem;padding:11px 18px;border-radius:3px;white-space:nowrap}
+.subscribe a.btn:hover{background:#cdf8e3;color:#06100c}
+.links{margin-top:65px;padding-top:24px;border-top:1px solid var(--line)}
 footer{border-top:1px solid var(--line);font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}
 footer .page{padding-top:23px;padding-bottom:23px}
 @media(max-width:600px){.page{padding-left:18px;padding-right:18px}.top{align-items:flex-start;flex-direction:column}
@@ -68,7 +75,14 @@ def webpage(*, title: str, description: str, url: str, root_rel: str, content: s
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(description[:158])}">
 <meta property="og:url" content="{esc(url)}">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="{SHARE_IMAGE}">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{esc(SHARE_ALT)}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{SHARE_IMAGE}">
+<meta name="twitter:image:alt" content="{esc(SHARE_ALT)}">
 {script}
 <style>{CSS}</style>
 </head>
@@ -84,6 +98,7 @@ def webpage(*, title: str, description: str, url: str, root_rel: str, content: s
 </div></header>
 {content}
 <footer><div class="page">An <a href="https://amarisct.github.io/Amaris/" style="text-transform:none;text-decoration:none;color:#dcdcda;background:linear-gradient(110deg,#a9a9a7,#f4f4f2 55%,#bdbdbb);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">amaris ct</a> project / Human × Machine Learning</div></footer>
+<script defer src="{root_rel}analytics.js"></script>
 </body></html>
 """
 
@@ -175,6 +190,8 @@ def make():
         if article["date_label"]:
             page += f'<p class="meta"><time datetime="{article["date"]}">{esc(article["date_label"])}</time></p>'
         page += f'<div class="article-body">{article["body"]}</div></article>'
+        page += (f'<aside class="subscribe" aria-label="Newsletter"><p>New research, with sources, in your inbox.</p>'
+                 f'<a class="btn" href="{SUBSCRIBE}" target="_blank" rel="noopener noreferrer">Get new research by email ↗</a></aside>')
         page += '<section class="links" aria-label="Related articles"><p class="eyebrow">Continue exploring</p>'
         page += related or '<p><a href="../">Browse published research ↗</a></p>'
         page += '<p><a href="../../../research-atlas/">Explore the Research Atlas ↗</a></p>'
