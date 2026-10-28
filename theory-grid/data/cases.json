@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "version": 1,
+    "generated": "2026-10-28",
+    "note": "Preview data. Cases and framing questions are this site's own wording. Theory conditions, predictions and AI assessments are quoted from the Theory Chamber records (theory-chamber/data), which are all Awaiting Evidence Review. No cell states whether a case is or is not conscious."
+  },
+  "lenses": {
+    "gnwt": {"looksAt": "How content is amplified and broadcast across many processes", "from": ["gnwt.p1"]},
+    "iit":  {"looksAt": "The cause–effect structure of the physical system", "from": ["iit.p1"]},
+    "hot":  {"looksAt": "Whether the system represents its own mental states", "from": ["hot.p1"]},
+    "rpt":  {"looksAt": "Feedback loops within sensory processing", "from": ["rpt.p1"]},
+    "ast":  {"looksAt": "A simplified model of the system’s own attention", "from": ["ast.p1"]},
+    "pp":   {"looksAt": "Prediction and error correction (the authors say it is not, at the outset, a theory of consciousness)", "from": ["pp.p1"]}
+  },
+  "extraSources": [
+    {
+      "id": "nagel-1974",
+      "short": "Nagel 1974",
+      "type": "foundational",
+      "title": "What Is It Like to Be a Bat?",
+      "authors": ["Thomas Nagel"],
+      "year": 1974,
+      "venue": "The Philosophical Review",
+      "volume": "83(4)",
+      "pages": "435–450",
+      "doi": "10.2307/2183914",
+      "url": "https://doi.org/10.2307/2183914",
+      "access": "excerpt",
+      "read": "The passages used here were read in the text.",
+      "description": "Argues that an organism has conscious mental states if and only if there is something that it is like to be that organism, and uses the bat as the example.",
+      "relevance": "Source for the bat case and for the framing of the question.",
+      "limitations": "Only the passages used here were read, not the whole paper.",
+      "retrievedOn": "2026-10-28"
+    }
+  ],
+  "cases": [
+    {
+      "id": "bat",
+      "short": "A bat",
+      "name": "A bat finding its way by echolocation",
+      "description": "A bat that navigates by sending out calls and listening to the echoes. Nagel used it in 1974 to illustrate the claim that an organism has conscious states if and only if there is something it is like to be that organism.",
+      "sourceNote": "Case taken from Nagel’s paper. The grid does not say whether there is something it is like to be a bat.",
+      "sources": ["nagel-1974"],
+      "ask": null,
+      "defaultNote": "The sources read for this site do not apply this theory to bats.",
+      "cells": {
+        "gnwt": {"asks": "When a bat processes an echo, is the resulting representation amplified and made available to many separate processes at once, such as memory, attention and action?"},
+        "iit":  {"asks": "Is the bat’s brain a physical system whose cause–effect structure is irreducible to that of its parts?"},
+        "hot":  {"asks": "Does the bat represent its own perceptual states, and not only the objects and echoes it senses?"},
+        "rpt":  {"asks": "Does the bat’s sensory processing include recurrent feedback, and not only a single feedforward sweep?"},
+        "ast":  {"asks": "Does the bat’s brain build a simplified model of its own attention?"},
+        "pp":   {"asks": "Does the bat’s brain predict incoming echoes and update on the mismatch? And what, on this view, would that tell us about experience?"}
+      }
+    },
+    {
+      "id": "thermostat",
+      "short": "A thermostat",
+      "name": "A simple thermostat",
+      "description": "A device that measures the temperature of a room, compares it with a set value, and switches the heating on or off.",
+      "sourceNote": "A plain description of a device, used as a deliberately simple case. No source is cited for the description, and none of the sources read for this site applies a theory to it.",
+      "sources": [],
+      "ask": null,
+      "defaultNote": "The sources read for this site do not apply this theory to simple control devices.",
+      "cells": {
+        "gnwt": {"asks": "Is any reading amplified and shared with many separate processes? A simple thermostat has a sensor, a comparison and a switch."},
+        "iit":  {"asks": "What is the cause–effect structure of the physical device, and is it irreducible to that of its parts?"},
+        "hot":  {"asks": "Does it represent its own states, as opposed to only the temperature of the room?"},
+        "rpt":  {"asks": "Does it have recurrent processing within a sensory system? Its control loop runs through the room, from heater back to sensor, and whether that counts as recurrence in the theory’s sense is part of the question."},
+        "ast":  {"asks": "Does it model its own attention? It has one input, so there is nothing to select between."},
+        "pp":   {"asks": "Could it be described as predicting its input and correcting errors? A comparison with a set value can be described that way. Whether the description tells us anything about experience is a separate question."}
+      }
+    },
+    {
+      "id": "image",
+      "short": "Seen vs. missed",
+      "name": "An image that is seen, and the same image missed",
+      "description": "A person is shown a brief image. On some trials they report seeing it, and on others they report that they missed it. Researchers compare brain activity between the two kinds of trial. This is a standard laboratory contrast in consciousness research.",
+      "sourceNote": "The contrast between conscious and nonconscious trials is described in the global workspace review cited here. The records shown are the ones each theory’s proponents or reviewers have on file in the Theory Chamber.",
+      "sources": ["mashour-2020"],
+      "ask": "What should differ in the brain between the trial where the image is seen and the trial where it is missed?",
+      "defaultNote": "",
+      "useGaps": true,
+      "cells": {
+        "gnwt": {"from": ["gnwt.pr1", "gnwt.pr2", "gnwt.c3"]},
+        "iit":  {"from": ["iit.pr2", "iit.c2"]},
+        "hot":  {"from": ["hot.m1"]},
+        "rpt":  {"from": ["rpt.m1"]},
+        "ast":  {"from": ["ast.pr1", "ast.pr2"]},
+        "pp":   {"from": []}
+      }
+    },
+    {
+      "id": "chatbot",
+      "short": "A chatbot",
+      "name": "A chatbot built on a large language model",
+      "description": "A trained neural network that takes text as input and produces text as output.",
+      "sourceNote": "The assessments below come from one 2023 report that derived indicator properties from several theories. It is a conceptual analysis, not an experiment, and only its abstract was read for this site.",
+      "sources": ["butlin-2023"],
+      "ask": null,
+      "defaultNote": "",
+      "cells": {
+        "gnwt": {"asks": "Does the system have anything that plays the role of a workspace, where selected content is amplified and shared with many specialized processes?", "from": ["gnwt.a1"]},
+        "iit":  {"asks": "What is the cause–effect structure of the hardware the system runs on, and is it irreducible to that of its parts?", "from": ["iit.a1"]},
+        "hot":  {"asks": "Does the system form representations of its own internal states, and do they play the role the theory requires?", "from": ["hot.a1"]},
+        "rpt":  {"asks": "Does the system have recurrent processing of the kind the theory describes in sensory areas? Which parts of a language model, if any, count as sensory areas is itself part of the question.", "from": ["rpt.a1"]},
+        "ast":  {"asks": "Does the system model its own attention and use that model to control it? In language-model engineering “attention” names a computation, so whether it matches the theory’s notion is a separate question.", "from": ["ast.a1"]},
+        "pp":   {"asks": "Is the system best described as predicting and correcting? A language model is trained to predict text, but whether that is predictive processing in the framework’s sense is a separate question.", "from": ["pp.a1"]}
+      }
+    }
+  ]
+}
