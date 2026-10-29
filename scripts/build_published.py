@@ -16,6 +16,8 @@ import xml.etree.ElementTree as ET
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 SITE = "https://amarisct.github.io/Artificially-Intelligent/"
+# Practical guides (built by scripts/build_guides.py) linked from related essays.
+GUIDE_LINKS = {"we-are-all-archives-now": [("what-ai-remembers-about-you/", "What AI assistants remember about you"), ("griefbots/", "Griefbots and AI versions of people who have died")]}
 FEED = ROOT / "feed.xml"
 OUTPUT = ROOT / "research" / "published"
 CONTENT = "{http://purl.org/rss/1.0/modules/content/}"
@@ -182,6 +184,8 @@ def make():
         page += '<section class="links" aria-label="Related articles"><p class="eyebrow">Continue exploring</p>'
         page += related or '<p><a href="../">Browse published research ↗</a></p>'
         page += '<p><a href="../../../research-atlas/">Explore the Research Atlas ↗</a></p>'
+        for g_href, g_title in GUIDE_LINKS.get(article["slug"], []):
+            page += f'<p><a href="../../../guides/{g_href}">Guide: {esc(g_title)} ↗</a></p>'
         page += '</section></main>'
         file = OUTPUT / article["slug"] / "index.html"
         file.parent.mkdir(parents=True, exist_ok=True)
@@ -219,7 +223,8 @@ def make():
     manifest = {"schemaVersion": 2, "articles": manifest_items}
     (OUTPUT / "manifest.json").write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     urls = [SITE, SITE + "intelligence-index/", SITE + "interactives/consciousness-map.html",
-            SITE + "research/published/", SITE + "research-atlas/", SITE + "theory-chamber/", SITE + "theory-grid/", SITE + "museum/", SITE + "unanswered-archive/", SITE + "research-observatory/", SITE + "search/", SITE + "inquiry-engine/", SITE + "lexicon/"] + [x["url"] for x in articles]
+            SITE + "research/published/", SITE + "research-atlas/", SITE + "theory-chamber/", SITE + "theory-grid/", SITE + "museum/", SITE + "unanswered-archive/", SITE + "research-observatory/", SITE + "search/", SITE + "inquiry-engine/", SITE + "lexicon/",
+            SITE + "guides/", SITE + "guides/what-ai-remembers-about-you/", SITE + "guides/griefbots/"] + [x["url"] for x in articles]
     li_urls = ROOT / "learning-institute" / "data" / "sitemap-urls.json"
     if li_urls.exists():
         # published Learning Institute pages only (the list is written from the published courses; planned courses are never in it)
