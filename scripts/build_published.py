@@ -57,6 +57,10 @@ def webpage(*, title: str, description: str, url: str, root_rel: str, content: s
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<link rel="icon" href="{root_rel}favicon.ico" sizes="32x32">
+<link rel="icon" href="{root_rel}favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="{root_rel}apple-touch-icon.png">
+<link rel="manifest" href="{root_rel}site.webmanifest">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="index,follow">
 <meta name="theme-color" content="#090c0b">

@@ -118,7 +118,7 @@ E_=H.escape
 SRC={s['id']:s for s in sources}
 def page(title,desc,canon,body,ld=None):
     ldt='<script type="application/ld+json">'+json.dumps(ld,ensure_ascii=False).replace("</","<\\/")+'</script>' if ld else ''
-    return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><link rel="icon" href="{'../'*canon.count('/')}favicon.ico" sizes="32x32"><link rel="icon" href="{'../'*canon.count('/')}favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="{'../'*canon.count('/')}apple-touch-icon.png"><link rel="manifest" href="{'../'*canon.count('/')}site.webmanifest"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{E_(title)}</title><meta name="description" content="{E_(desc)}"><link rel="canonical" href="{SITE}{canon}">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&display=swap">
 <link rel="stylesheet" href="{'../'*(canon.count('/')-1)}styles.css">{ldt}</head><body>

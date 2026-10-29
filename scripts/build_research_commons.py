@@ -119,7 +119,7 @@ def render_page(c: dict, tax: dict, colls: dict, index: dict, concept_names: dic
     ld = {"@context": "https://schema.org", "@type": "WebPage", "name": c["title"], "url": url, "inLanguage": "en", "description": desc,
           "isPartOf": {"@type": "WebSite", "name": "Artificially Intelligent", "url": L.SITE}, "datePublished": c["publishedOn"], "dateModified": c["updatedOn"]}
     return f"""<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<html lang="en"><head><meta charset="utf-8"><link rel="icon" href="../../../favicon.ico" sizes="32x32"><link rel="icon" href="../../../favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="../../../apple-touch-icon.png"><link rel="manifest" href="../../../site.webmanifest"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="index,follow">
 <title>{esc(c["title"])} · Research Commons · Artificially Intelligent</title>
 <meta name="description" content="{esc(desc)}">
