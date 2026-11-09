@@ -6,6 +6,11 @@
  "cache": "cached",
  "providers": [
   {
+   "name": "OpenAlex",
+   "state": "failed",
+   "note": "HTTP Error 429: Too Many Requests"
+  },
+  {
    "name": "Crossref",
    "state": "used",
    "note": "16 seed records retrieved and DOI-checked on 2026-10-15."
@@ -14,11 +19,6 @@
    "name": "DataCite (arXiv DOIs)",
    "state": "used",
    "note": "2 preprint records retrieved on 2026-10-15."
-  },
-  {
-   "name": "OpenAlex",
-   "state": "planned",
-   "note": "Rate-limited during development, so no OpenAlex records are included yet. The discovery script queries it."
   },
   {
    "name": "arXiv",
@@ -35,5 +35,6 @@
    "state": "evaluating",
    "note": "Terms and rate limits still to be checked before it is added."
   }
- ]
+ ],
+ "lastAttempt": "2026-11-09"
 }
