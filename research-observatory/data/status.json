@@ -8,7 +8,7 @@
   {
    "name": "OpenAlex",
    "state": "failed",
-   "note": "HTTP Error 429: Too Many Requests"
+   "note": "HTTP Error 503: Service Unavailable"
   },
   {
    "name": "Crossref",
@@ -36,5 +36,5 @@
    "note": "Terms and rate limits still to be checked before it is added."
   }
  ],
- "lastAttempt": "2026-11-18"
+ "lastAttempt": "2026-11-19"
 }
