@@ -700,7 +700,7 @@ function renderHome(el){
     ["map","Consciousness Map","Competing explanations of consciousness, kept separate from the Atlas so the debate stays visible.","10 perspectives with an evidence note on each"],
     ["dossiers","Research Dossiers","One page for each concept: definition, theories, research, opposing views, and open questions, with honest gaps.","8 concepts"],
     ["evidence","Evidence Explorer","Passages from the essays beside their listed sources, labeled by kind, with what each does not establish.","Draft classification"],
-    ["methodology","Methodology","How the archive is organized, how its labels work, and which policies are still to be written.","Unwritten policies are marked"]
+    ["methodology","Methodology","How the archive is organized, how its labels work, how sources are evaluated, and how corrections are handled.","Policies and contact"]
   ];
   el.innerHTML=`
   <section class="hero"><div class="wrap" style="position:relative">
@@ -1474,10 +1474,9 @@ function renderEvidence(el){
 }
 
 function renderMethodology(el){
-  const T=(t,p)=>`<div class="todo"><b>Needs the author's input</b><p><strong>${esc(t)}</strong></p><p>${esc(p)}</p></div>`;
   el.innerHTML=`<div class="wrap">
    <div class="pagehead"><p class="kicker">The Institute · Methodology</p><h1 class="h-l">About the Research &amp; Methodology</h1>
-   <p class="lede">How this archive is organized, how its labels should be read, and which policies are still to be written. Items that only the author can answer are marked rather than invented.</p></div>
+   <p class="lede">How this archive is organized, who produces it, how sources are evaluated, how corrections are handled, and how to reach us.</p></div>
    <div class="meth">
     <section><h2>What this is</h2><p>Artificially Intelligent is an independent research archive on consciousness, machine intelligence, memory, and identity, published by <a href="https://amarisct.github.io/Amaris/">amaris ct</a> (amaris creative tech) under the line “Human × Machine Learning”. Its published essays are listed in a manifest in the site's repository; subjects without published text are shown as In Development.</p></section>
     <section><h2>How to read the labels</h2><ul>
@@ -1487,13 +1486,22 @@ function renderMethodology(el){
       <li>The Consciousness Map keeps competing explanations separate and states the status of the evidence for each.</li>
       <li>The Intelligence Index lists records returned live from Crossref, Wikipedia, and Open Library. Appearing there is not an endorsement.</li></ul></section>
     <section><h2>How the Evidence Explorer and Dossiers are built</h2><p>Quotations are read from the published essay text, and sources are the ones each essay already lists. Nothing is added from outside the archive. Classifications and “does not establish” notes restate cautions the essays state themselves, and are marked as drafts until the author reviews them.</p></section>
-    <section><h2>Policies still to be written</h2>
-      ${T("Who produces the research","Authorship, credentials or affiliations to state, and whether amaris ct should be described further.")}
-      ${T("How sources are evaluated","Which kinds of source count (peer-reviewed papers, preprints, institutional pages, reference works), and how they are checked.")}
-      ${T("Article versus exploratory note","The criteria that make a piece a published essay rather than a shorter note, and how each is labeled.")}
-      ${T("Corrections and revisions","How readers report an error, how changes are recorded, and whether a revision history is published.")}
-      ${T("Contact","The address or channel the author wants readers to use.")}
-    </section>
+    <section><h2>Who produces the research</h2>
+      <p>Artificially Intelligent is an independent project published by amaris ct (amaris creative tech). It is not part of a university, laboratory, or journal, and its essays are not peer reviewed.</p>
+      <p>The essays are research syntheses: they read, summarize, and connect work that others have published. They do not report new experiments or original data.</p>
+      <p>Research and drafting are assisted by AI tools, including Claude, an AI model made by Anthropic. The author reviews each essay before it is published and is responsible for what appears on the site. Essays are published under the project's name, not under an individual byline, and no one writing here claims a credential that is not stated on this page.</p></section>
+    <section><h2>How sources are evaluated</h2>
+      <ul><li><strong>Preferred:</strong> peer-reviewed papers, systematic reviews, and books from established academic presses, read at the source rather than through a summary.</li>
+      <li><strong>Used with a label:</strong> preprints are described as not yet peer reviewed. Institutional, government, and standards-body pages are cited for what they document, such as dates, definitions, and policies. Reference works and encyclopedias are used for orientation, not as evidence for a contested claim.</li>
+      <li><strong>Not relied on:</strong> anonymous posts, content farms, and sources that give no way to trace a claim back to who made it.</li></ul>
+      <p>Each essay lists the sources it draws on. A claim that no listed source supports is presented as interpretation or open question, not as established fact. Where credible sources disagree, the disagreement is stated instead of settled by choosing one side. Appearing in the Intelligence Index or the Atlas is not an endorsement of a source.</p></section>
+    <section><h2>Essays and field notes</h2>
+      <p>A <strong>published essay</strong> has full text, a source list, and a date, and appears in Published Research. A <strong>field note</strong> is shorter and exploratory. It has no formal source list and draws no conclusions, it is labeled as a note, and it is kept apart from Published Research. A subject marked <strong>In Development</strong> has no published text, sources, or conclusions at all.</p></section>
+    <section><h2>Corrections and revisions</h2>
+      <p>If you find an error, report it using the contact details below, and say which essay and passage you mean. A confirmed factual error is corrected promptly, and the correction is noted on the essay with its date. Typos and formatting fixes are made without a note. A change to a claim, a source, or a conclusion is never made silently.</p>
+      <p>The site's files are public on GitHub, so every change to an essay can be seen in the repository's commit history.</p></section>
+    <section><h2>Contact</h2>
+      <p>To report an error, ask a question, or suggest a source, open an issue at <a href="https://github.com/AmarisCT/Artificially-Intelligent/issues" target="_blank" rel="noopener noreferrer">the project's GitHub issues page ↗</a>. A GitHub account is required. Issues are public, so please do not include private information.</p></section>
     <section><h2>Where to go next</h2><div class="chips"><a class="btn" href="#evidence">Evidence Explorer</a><a class="btn" href="#library">Published Research</a><a class="btn" href="#stream">Data Stream</a></div></section>
    </div></div>`;
 }
