@@ -492,7 +492,6 @@ a.entry:hover{background:var(--panel);color:var(--ink)}
         <a href="#methodology" data-nav="methodology"><b>About &amp; Methodology</b><small>How to read this archive</small></a>
         <a href="#notes" data-nav="notes"><b>Field Notes</b><small>Shorter notes, kept apart</small></a>
         <a href="#living" data-nav="living"><b>Living Archive</b><small>When research was published</small></a></div></div>
-      <a class="ext" href="https://artificialxintelligence.substack.com/" target="_blank" rel="noopener noreferrer">Substack ↗</a>
     </div>
   </nav>
 </div></header>
@@ -502,7 +501,6 @@ a.entry:hover{background:var(--panel);color:var(--ink)}
   <nav aria-label="Footer">
     <a href="https://amarisct.github.io/Artificially-Intelligent/" target="_blank" rel="noopener noreferrer">Current live site ↗</a>
     <a href="https://github.com/AmarisCT/Artificially-Intelligent" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-    <a href="https://artificialxintelligence.substack.com/" target="_blank" rel="noopener noreferrer">Substack ↗</a>
   </nav>
 </div></footer>
 
@@ -551,7 +549,6 @@ const CBY=Object.fromEntries(CONCEPTS.map(c=>[c.id,c]));
 CONCEPTS.forEach(c=>{c.ox=c.x;c.oy=c.y});const CNAME=id=>(CBY[id]||{}).name||id;
 const fmtDate=d=>!d?"Date not provided":new Date(d+"T12:00:00Z").toLocaleDateString("en-US",{year:"numeric",month:"long",day:"numeric",timeZone:"UTC"});
 const fmtShort=d=>!d?"No date":new Date(d+"T12:00:00Z").toLocaleDateString("en-US",{year:"numeric",month:"short",day:"numeric",timeZone:"UTC"});
-const SUBSTACK="https://artificialxintelligence.substack.com/";
 let ARTICLE_BY_ID={};const rebuildIndex=()=>{ARTICLE_BY_ID=Object.fromEntries(ARTICLES.map(a=>[a.id,a]))};
 const mapOf={consciousness:"human",ai:"ai",cognition:"cognition",memory:"memory",identity:"identity"};
 const atlasOfMap={human:"consciousness",neuro:"cognition",cognition:"cognition",ml:"ai",ai:"ai",emergence:"consciousness",identity:"identity",spiritual:"consciousness",philosophy:"consciousness",memory:"memory"};
@@ -722,7 +719,6 @@ function renderHome(el){
   <section class="band" style="padding-top:clamp(40px,6vw,72px)"><div class="wrap">
     <h2 class="h-l" style="margin-bottom:34px;max-width:16em">Five ways into the same question</h2>
     <div class="ways">${ways.map(w=>`<a class="way" href="#${w[0]}"><h3>${w[1]}</h3><div><p>${w[2]}</p><span class="src">${w[3]}</span></div><span class="go" aria-hidden="true">→</span></a>`).join("")}</div>
-    <p class="note" style="margin-top:20px">Also on Substack: <a href="${SUBSTACK}" target="_blank" rel="noopener noreferrer">artificialxintelligence.substack.com ↗</a> for subscriptions and newsletter posts.</p>
   </div></section>
 
   <section class="band" style="padding-top:0"><div class="wrap">
@@ -839,7 +835,7 @@ function renderStream(el){
   </div>
   <p class="note" id="s-count" aria-live="polite" style="margin-bottom:10px"></p>
   <div class="stream-list" id="s-list"></div>
-  <p class="note" style="margin-top:26px">${LIVE?"This list was loaded just now from the site's published manifest, so a newly published article appears here without any page edits.":"This preview shows a bundled snapshot of the repository manifest from "+SITE.snapshot+". On the deployed site the list reloads from research/published/manifest.json on every visit."} The hosted backend feed is not used. Substack: the publication is linked above. No per-article Substack link is shown because none has been verified yet.</p>
+  <p class="note" style="margin-top:26px">${LIVE?"This list was loaded just now from the site's published manifest, so a newly published article appears here without any page edits.":"This preview shows a bundled snapshot of the repository manifest from "+SITE.snapshot+". On the deployed site the list reloads from research/published/manifest.json on every visit."} The hosted backend feed is not used.</p>
   </div>`;
   const stat=[["all","All"],["published","Published"],["dev","In development"]];
   function paint(){
@@ -875,7 +871,6 @@ function renderLibrary(el){
   <hr class="rule" style="margin:56px 0 28px">
   <h2 class="h-m" style="margin-bottom:10px">Also in the archive</h2>
   <p class="note">${DEV.length} subjects are in development and are not shown here, because this library lists finished articles only. See them in the <a href="#stream">Data Stream</a>.</p>
-  <p class="note" style="margin-top:14px">Substack: the publication is at <a href="${SUBSTACK}" target="_blank" rel="noopener noreferrer">artificialxintelligence.substack.com ↗</a>. A link to a matching Substack post will appear on an article only after that post is verified.</p>
   </div>`;
 }
 
@@ -926,7 +921,6 @@ function renderReader(el,a){
         </div></div>
       <div><h2>Related concepts</h2><div class="chips">${a.topics.map(t=>`<button class="chip" style="--c:${CBY[t].color}" data-concept="${t}"><i></i>${esc(CNAME(t))}</button>`).join("")}</div>
         <p class="note" style="margin-top:12px">Tags are ${a.topicSource==="editorial"?"editorial associations":"suggested by keyword"}, not citation claims.</p></div>
-      <div><h2>Elsewhere</h2><p class="note">Substack publication: <a href="${SUBSTACK}" target="_blank" rel="noopener noreferrer">artificialxintelligence.substack.com ↗</a>. No matching Substack post has been verified for this article.</p></div>
     </aside></div></div>`;
   if(S.focusPara!=null){const fp=S.focusPara;S.focusPara=null;setTimeout(()=>{const pe=$$("#prose p")[fp];if(pe){pe.classList.add("hl");pe.scrollIntoView({block:"center"})}},90)}
   markRead(a.slug);
@@ -1485,8 +1479,7 @@ function renderMethodology(el){
    <div class="pagehead"><p class="kicker">The Institute · Methodology</p><h1 class="h-l">About the Research &amp; Methodology</h1>
    <p class="lede">How this archive is organized, how its labels should be read, and which policies are still to be written. Items that only the author can answer are marked rather than invented.</p></div>
    <div class="meth">
-    <section><h2>What this is</h2><p>Artificially Intelligent is an independent research archive on consciousness, machine intelligence, memory, and identity, published by <a href="https://amarisct.github.io/Amaris/">amaris ct</a> (amaris creative tech) under the line “Human × Machine Learning”. Its published essays are listed in a manifest in the site's repository; subjects without published text are shown as In Development.</p>
-    <p>A Substack publication exists at <a href="${SUBSTACK}" target="_blank" rel="noopener noreferrer">artificialxintelligence.substack.com ↗</a>. No Substack post has been matched to an essay on this site, so none is linked from the essays.</p></section>
+    <section><h2>What this is</h2><p>Artificially Intelligent is an independent research archive on consciousness, machine intelligence, memory, and identity, published by <a href="https://amarisct.github.io/Amaris/">amaris ct</a> (amaris creative tech) under the line “Human × Machine Learning”. Its published essays are listed in a manifest in the site's repository; subjects without published text are shown as In Development.</p></section>
     <section><h2>How to read the labels</h2><ul>
       <li><strong>Published</strong> means the full text is available on the site. <strong>In Development</strong> means a subject is planned and no text, sources, or conclusions are published.</li>
       <li><strong>Editorial</strong> and <strong>keyword-derived</strong> connections in the Atlas are reading pathways. They are not citation counts or evidence that two ideas are linked.</li>

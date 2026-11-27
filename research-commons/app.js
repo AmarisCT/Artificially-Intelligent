@@ -760,8 +760,7 @@ function about() {
     ["Research Observatory", "A recommended paper could become a candidate for review", "Specified, not built", "An editor would check it first. A recommendation is never treated as peer reviewed."],
     ["Research Ledger", "Documented public outcomes of concerns that lead to corrections", "Specified, not built", "Only the public editorial outcome, never private moderation."],
     ["Learning Institute", "Optional reflective prompts chosen by an editor", "Not built", "Lessons and assessments are never changed automatically."],
-    ["Architect moderation inbox", "Login-only review, approve, decline, publish, withdraw", "Specified, not built", "Uses Architect's existing login. This repository does not contain Architect."],
-    ["Substack", "Links only, by hand", "Link to the publication only", "No contribution is sent to Substack, and no essay link is invented."]];
+    ["Architect moderation inbox", "Login-only review, approve, decline, publish, withdraw", "Specified, not built", "Uses Architect's existing login. This repository does not contain Architect."]];
   return wrapIn(h("p", { class: "kicker" }, "Honest status"), h("h1", { class: "h-l" }, "How the Commons works"),
     h("p", { class: "lede" }, "A curated space, not a forum. There are no likes, followers, rankings or comment threads, and there will not be."),
     h("section", { class: "sec" }, h("h2", null, "The path of a contribution"), h("ol", { class: "life", "aria-label": "Lifecycle" }, C.taxonomy.lifecycle.map(s => h("li", { class: s.id === "declined" || s.id === "withdrawn" ? "end" : "" }, h("span", null, s.label)))),

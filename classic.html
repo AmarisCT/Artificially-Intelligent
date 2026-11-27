@@ -33,9 +33,9 @@
   .article.development{background:#b9ffde05}
     .article.development .date{color:var(--mint)}
     .article.development:hover{background:#b9ffde10}
-    .reader-substack{max-width:760px;margin:35px 0 0;font-size:.75rem;text-transform:uppercase;letter-spacing:.13em}
-    .reader-substack a{display:inline-flex;border:1px solid var(--line);padding:14px 16px;color:var(--mint);text-decoration:none}
-    .reader-substack a:hover,.reader-substack a:focus-visible{border-color:var(--mint)}
+    .reader-link{max-width:760px;margin:35px 0 0;font-size:.75rem;text-transform:uppercase;letter-spacing:.13em}
+    .reader-link a{display:inline-flex;border:1px solid var(--line);padding:14px 16px;color:var(--mint);text-decoration:none}
+    .reader-link a:hover,.reader-link a:focus-visible{border-color:var(--mint)}
     </style>
 </head>
 <body>
@@ -50,7 +50,6 @@
         <div class="choices">
           <a class="choice" id="visitor" href="#stream"><span class="num">01</span><span><strong>Visitor</strong><small>Enter the Data Stream</small></span><span class="arrow">↗</span></a>
           <a class="choice" href="https://artificiallyintelligent.artificiallyint-co.chatgpt.site/architect?return_to=https%3A%2F%2Famarisct.github.io%2FArtificially-Intelligent%2F"><span class="num">02</span><span><strong>Architect</strong><small>Control the archive</small></span><span>⌑</span></a>
-          <a class="choice" href="https://artificialxintelligence.substack.com/"><span class="num">03</span><span><strong>Continue to Substack</strong><small>Read and subscribe</small></span><span class="arrow">↗</span></a>
         </div>
       </div>
     </section>
@@ -83,7 +82,7 @@
     </main>
   </section>
 
-  <dialog id="reader"><div class="reader-head"><span id="reader-id" class="article-id"></span><button class="close" aria-label="Close article">×</button></div><article class="reader-body"><p id="reader-category" class="micro"></p><h2 id="reader-title"></h2><p id="reader-subtitle" class="reader-subtitle"></p><div id="reader-tags" class="tags"></div><div id="reader-copy" class="reader-copy"></div><div id="reader-published" class="reader-substack"></div><div id="reader-substack" class="reader-substack"></div></article></dialog>
+  <dialog id="reader"><div class="reader-head"><span id="reader-id" class="article-id"></span><button class="close" aria-label="Close article">×</button></div><article class="reader-body"><p id="reader-category" class="micro"></p><h2 id="reader-title"></h2><p id="reader-subtitle" class="reader-subtitle"></p><div id="reader-tags" class="tags"></div><div id="reader-copy" class="reader-copy"></div><div id="reader-published" class="reader-link"></div></article></dialog>
 
   <script>
     const API='https://artificiallyintelligent.artificiallyint-co.chatgpt.site/api/public/articles';
@@ -134,23 +133,8 @@
       if(!url)return;
       const a=document.createElement('a');a.href=url;a.textContent='Read the full article on its own page ↗';target.append(a);
     }
-    const substackArticleLinks=new Map();
     let currentReaderArticle=null;
-    function updateSubstackArticleLink(){
-      const target=$('#reader-substack');target.replaceChildren();
-      const url=currentReaderArticle&&substackArticleLinks.get(currentReaderArticle.id);
-      if(!url)return;
-      const a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener noreferrer';a.textContent='Read the corresponding article on Substack ↗';target.append(a)
-    }
-    fetch('substack-import/articles.json',{headers:{Accept:'application/json'}}).then(r=>{if(!r.ok)throw new Error('Manifest unavailable');return r.json()}).then(m=>{
-      if(!Array.isArray(m.articles))return;
-      m.articles.forEach(item=>{
-        if(typeof item.id!=='string'||typeof item.substack_url!=='string')return;
-        try{const u=new URL(item.substack_url);if(u.protocol==='https:'&&u.hostname==='artificialxintelligence.substack.com')substackArticleLinks.set(item.id,u.href)}catch{}
-      });
-      updateSubstackArticleLink()
-    }).catch(()=>{});
-    function openArticle(a){currentReaderArticle=a;updatePublishedArticleLink();updateSubstackArticleLink();$('#reader-id').textContent=a.streamId||'TRANSMISSION';$('#reader-category').textContent=a.category||'Essay';$('#reader-title').textContent=a.title;$('#reader-subtitle').textContent=a.subtitle||'';$('#reader-tags').innerHTML=(a.concepts||[]).map(t=>`<span class="tag">${escapeHTML(t)}</span>`).join('');$('#reader-copy').innerHTML=String(a.body||a.excerpt||'').split(/\n\s*\n/).map(p=>`<p>${escapeHTML(p)}</p>`).join('');reader.showModal()}
+    function openArticle(a){currentReaderArticle=a;updatePublishedArticleLink();$('#reader-id').textContent=a.streamId||'TRANSMISSION';$('#reader-category').textContent=a.category||'Essay';$('#reader-title').textContent=a.title;$('#reader-subtitle').textContent=a.subtitle||'';$('#reader-tags').innerHTML=(a.concepts||[]).map(t=>`<span class="tag">${escapeHTML(t)}</span>`).join('');$('#reader-copy').innerHTML=String(a.body||a.excerpt||'').split(/\n\s*\n/).map(p=>`<p>${escapeHTML(p)}</p>`).join('');reader.showModal()}
     reader.querySelector('.close').onclick=()=>reader.close();reader.onclick=e=>{if(e.target===reader)reader.close()};
     $('#search').oninput=e=>{const q=e.target.value.toLowerCase().trim();render(!q?articles:articles.filter(a=>[a.title,a.subtitle,a.excerpt,a.category,...(a.concepts||[])].join(' ').toLowerCase().includes(q)))};
     $('#nav-index').onclick=()=>$('#search').focus();$('#nav-archive').onclick=()=>window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'});

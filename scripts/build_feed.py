@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build a Substack-importable RSS 2.0 feed from the public article API."""
+"""Build an RSS 2.0 feed from the public article API."""
 import datetime as dt
 import email.utils
 import html
